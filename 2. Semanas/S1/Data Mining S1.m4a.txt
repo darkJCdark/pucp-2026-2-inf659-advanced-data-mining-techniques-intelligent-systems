@@ -1,0 +1,770 @@
+00:00 Speaker 1: La semana pasada nomás hemos terminado el Winter Camp de Inteligencia Artificial,
+00:05 Speaker 2: que
+00:08 Speaker 1: también se ha vuelto algo ya tradicional. Eso comenzó como un... ¿qué diremos? Como un pedido de parte de nuestra asistente que tenemos en el departamento, una de las asistentes de investigación. Un día nos viene y nos dice, César, ¿ahí en el grupo de inteligencia artificial no van a hacer algo en verano? En verano estamos de vacaciones, nosotros
+00:36 Speaker 2: trabajamos.
+00:40 Speaker 1: Pero no tienen que hacer algo porque de inteligencia artificial estamos hablando hace cuatro años más o menos.
+00:45 Speaker 2: Y si tú lo organizas y
+00:51 Speaker 1: nos dices qué día venimos, dictamos y nos vamos, ya pues, no hay problema. Y ella se ganó en este, ¿no? Ella dijo, ya yo lo organizo y ya pues lo organizó. Y en esa primera edición tuvimos más de 300 postulaciones, ¿no? Así que no podemos hacer un campamento de inteligencia artificial para 300 personas, ¿no? Así que tuvimos que hacer una selección de los participantes. Y ahí en la época pues seleccionamos a 40 y fue todo un éxito.
+01:23 Speaker 1: Y ahí nos pidieron repetir, hacer un Summer Camp, repetir un Winter Camp. Y tú lo organizas igual, hermano. Y ahora ya es el cuarto año, si no me equivoco, de lo que estamos haciendo, el Winter Camp, ¿no? Ahí estaba Claudia, ahí está Claudia, que ya estaba participando también de Winter Camp. ¿Qué te parece Claudia? Ella ha estado como tutora, no, ha estado como
+01:51 Speaker 2: estudiante. ¿Tienes solamente en las universidades de la universidad?
+01:57 Speaker 1: Sí, sí, sí.
+01:59 Speaker 2: ¿Tienes también con sus universidades?
+02:01 Speaker 1: Sí. Bueno, sí, es bien chévere, ¿no? Porque vienen de otras universidades y, bueno, siempre hay, siempre hay gente buena en todos lados, ¿no? Así que, siempre
+02:13 Speaker 2: que te haya gustado,
+02:15 Speaker 1: ¿no? Es una buena experiencia. Y sobre todo para los que participan, ¿no?
+02:20 Speaker 2: Porque saben
+02:23 Speaker 1: que acá en la universidad como estamos trabajando en IA, tenemos el grupo, les hablamos mucho de las concentraciones que hay entre grado, en el postgrado, todo. Y creo que en la universidad hemos creado ese ambiente de ser un centro de formación e inteligencia artificial. Por más que no lo tengamos muy propagandizado,
+02:42 Speaker 2: ¿no?
+02:43 Speaker 1: Pero la gente que conoce, sabe, ¿no? Sabe, nos sigue en las redes, todos, estamos tan atentos ahí a cualquier cosa que estamos. Y bueno, siempre que lanzamos algo, creo que tenemos buena convocatoria, ¿no? Así que, así como Claudia, espero que el próximo año, y hay varios, ¿no? Sí, varios que han sido alumnos míos, que ahora están trabajando en la empresa, y de pronto me dicen, profe, ¿puedo estar una charlita en el Winter Camp, en el Summer Camp? En el campo, ¿no? Y muestran su experiencia de lo que están haciendo en su empresa. Entonces, es chévere. Así que, si alguien por ahí está haciendo algo interesante y quiere participar como tutor o expositor en el siguiente Summer Camp, así que me avisan, nos avisan ahí.
+03:31 Speaker 2: Y nos vamos, ¿no?
+03:34 Speaker 1: Ahí Mónica. Pax Summer, ya estás comprometida. Tú tienes mucho que mostrar también. Ahí lo coordinamos. Entonces, lo que les decía, es interesante lo que hemos ido desarrollando y creo que es más interesante porque así como Mónica, como Claudia y no sé quién, varios de ustedes también. que ya van ganando experiencia y tienen varias cosas que transmitir.
+04:05 Speaker 1: Y de pronto no estamos recurriendo a gente de otras universidades o gente del extranjero para que distan curta. Nuestra materia gris sale de acá mismo, de nuestras aulas. Y para nosotros es un honor tener a nuestra misma gente que esté dando amor. Y muchos, yo sé que muchos están dando clases también en otras universidades, muchos que han pasado por el grupo, por la universidad, están dando clases ahora en otras universidades, entonces están en todos estos programas que hay de inteligencia artificial.
+04:42 Speaker 1: Tenemos aún, aunque no ha sido de pregrado nuestro, pero sí ha sido de posgrado, ha colaborado con nosotros en un proyecto, ha estado muy activo con nosotros. Y también está trabajando como director en la competencia, digamos así.
+05:02 Speaker 2: Está
+05:03 Speaker 1: como director. Así que encantadísimo nosotros de tener a gente que ha pasado por nuestras aulas y están afuera ahora. Y no solamente afuera a nivel de Lima, de otras universidades, sino también afuera a nivel internacional. Llevo la semana pasada, vengo del extranjero, estuve por Washington, pasé por Atlanta y en Atlanta me encontré con un alumno que está haciendo un posgrado en Georgia Tech. Y hay profes, siempre por ahí hay gente conocida, por donde uno va. Y es bueno verlos también que están ahí en el extranjero, hay gente que está... Yo que sé, en California, gente que está en Japón, en todos lados. Así que
+05:50 Speaker 2: veo
+05:52 Speaker 1: que muchos de ustedes están jóvenes, así que tienen mucho potencial para poder también seguir esos pasos, ¿no? Así que no tema. Si tienen la oportunidad de postular, mandar su CV, todo por acá, háganme. Y yo sé que tienen potencial para hacerlo. ¿Ok?
+06:14 Speaker 1: Como el semestre pasado, el curso lo comparto junto con el profesor Rodrigo. La mayoría conoce al profesor Rodrigo. ¿Quiénes no conocen al Rodrigo? Tú no conoces al profesor Rodrigo. No, pero si no... Ah, no, no lo conociste.
+06:31 Speaker 2: Tú sí lo conoces. No, profesor, tampoco. Somos privados, profesor. Sí, sí, sí. ¿Machine learning? No, los que han llevado deep learning, machine learning, no llevan. No. Machine learning no llevan.
+06:43 Speaker 1: En verano. ¿Quién ha llevado el Machine Learning en verano? Tú lo has llevado. Así lo conoces, Rodrigo.
+06:49 Speaker 2: Muy bien.
+06:51 Speaker 1: Y Rodrigo también fue alumno nuestro acá, ¿no?
+06:55 Speaker 2: Ya. Sino
+06:56 Speaker 1: que él estaba haciendo un proyecto doctoral muy bueno que comenzó a utilizar las técnicas de Deep Learning muy bien, ¿no?
+07:07 Speaker 2: Y...
+07:08 Speaker 1: Luego fue uno de nuestros mejores alumnos en el posgrado y a cual lo invitamos para que sea participante junto con nosotros. De igual manera, también tuvimos antes un profesor, pero ahorita está en empresa, está trabajando con una empresa norteamericana, está ya como jefe, ya no tiene tiempo. Pero igual, también fue alumno nuestro en la maestría, fue de los mejores alumnos que tuvimos. y luego le invitamos a hacer, a listar cursos y bueno ahorita ya por el tiempo que no dispone ya después de apoyarnos pero igual, más o menos el mismo caso de Rodrigo también así que tuvo una muy buena performance y siempre buscamos a alguien que por ahí nos pueda apoyar y pueda transmitir también el conocimiento que están desarrollando
+08:01 Speaker 1: Las 8 primeras semanas va a estar a mi cargo y veo las siguientes 8 semanas, total son 16 semanas al semestre, estar a cargo de Rodrigo. A partir de la semana 9 entra Rodrigo con la siguiente temática. ¿Qué más? Tenemos ahí los créditos que ya lo conocen ustedes. El horario. ¿Qué más? Para los que están de pregrado, en la semana nueve, que creo que es semana de exámenes también allá, o semana ocho creo que. ¿Cuándo es semana? Semana nueve. Nueve, ¿no? Sí. Ahí también te vamos a tener una pequeña evaluación.
+08:49 Speaker 1: ¿Cómo se hace la evaluación? Después hablaremos
+08:52 Speaker 2: de eso.
+08:54 Speaker 1: Como estemos. ¿Y qué? ¿Cacatón está bien?
+09:19 Speaker 1: pero la idea está en
+09:22 Speaker 2: rescatar
+09:28 Speaker 1: lo que ha hecho que el deep learning tenga tanto el potencial que está teniendo ahora que básicamente cuál es Gracias a qué tenemos Deep Learning, digamos así. ¿No? Al negocio de estas empresas, ¿no?
+09:47 Speaker 2: De Facebook, Google.
+09:50 Speaker 1: ¿Cuál es su negocio? Y ahora también los LLM, ¿no? ¿Cuál es su negocio? De OpenAI, ¿no? De Cloud, de Gemini. ¿Cuál es de ellos? Ellos dicen que, por ejemplo, que mantienen la privacidad de nuestros datos, que todos los PROM que nosotros hacemos lo guardan y no lo reutilizan para su reentrenamiento de sus modelos, pero eso, entre comillas, ¿no? Es claro de que toda la información que nosotros introducimos mediante nuestros PROM, todo ello, ellos lo reutilizan para poder reentrenar sus modelos. Ese es un negocio. Entonces el negocio de ellos justamente es eso, son los datos.
+10:41 Speaker 1: Y como nosotros ya vimos que ese era el negocio que estaban teniendo todas estas empresas, pues la idea está justamente en poder explorar técnicas que
+10:53 Speaker 2: ayuden a
+10:54 Speaker 1: explotar mejor esos
+10:56 Speaker 2: datos.
+10:57 Speaker 1: Porque finalmente, cuando estamos hablando de Machine Learning, estamos hablando de Deep Learning ahora, lo que está por detrás es... técnicas para explotar mejor toda esa información. Y ahí vamos a ver distintas técnicas para distintos tipos de datos.
+11:18 Speaker 1: Tenemos datos que son secuenciales, datos textuales, datos que son de video, de imágenes, datos temporales.
+11:26 Speaker 2: Y
+11:27 Speaker 1: bueno, tenemos bastante información y distintos tipos de datos y también hay distintos modelos para todos esos tipos de datos.
+11:36 Speaker 2: El
+11:37 Speaker 1: otro punto es justamente el incremento del poder computacional. Cada vez tenemos computadores mucho más potentes en el sentido de que pueden procesar mayor cantidad de información a un menor tiempo. Entonces, ese es otro aspecto que también debemos explotarlo. Es decir, las herramientas que tenemos, por ejemplo, con... con todas las librerías que tenemos en PyTorch o en TensorFlow, que son las que vamos a utilizar, pues están adecuadas como para poder explotar mejor todo este hardware que tenemos, la disposición, especialmente los TPUs, los TPUs que los tenemos ahí para poder hacer todo el paralelismo en el entrenamiento de las redes.
+12:29 Speaker 2: Y el otro punto, Que también,
+12:31 Speaker 1: obviamente, que es en sí, también el foco, en verdad, el curso, son
+12:36 Speaker 2: los algoritmos.
+12:37 Speaker 1: Los algoritmos de Deep Learning.
+12:40 Speaker 2: Que cada vez han
+12:42 Speaker 1: ido desarrollándose más.
+12:47 Speaker 2: Por
+12:47 Speaker 1: más que nosotros tengamos, por ejemplo, una simple red convolucional, pero vamos a ver que a partir de esa red convolucional, cómo es que se han ido generando nuevos modelos, nuevas arquitecturas. Y que dentro de su misma constitución misma de esas arquitecturas, pues han ido mejorando también, ¿no? El aprovechamiento del uso del fiero,
+13:09 Speaker 2: diremos. ¿No?
+13:11 Speaker 1: Y un claro ejemplo son los
+13:13 Speaker 2: chinos, ¿no?
+13:16 Speaker 1: ¿Ustedes han visto cuál es el modelo de los chinos?
+13:19 Speaker 2: ¿El diphthik? ¿No?
+13:21 Speaker 1: Aunque ahora creo que ya están teniendo acceso, pero la... por las cuestiones políticas del gobierno norteamericano, prohibió la venta de los chips o de las tarjetas Nvidia a todo gobierno extranjero. Entonces les prohibió, por ejemplo, a los chinos que Nvidia les venda tarjetas al gobierno chino. No hace competencia.
+13:49 Speaker 2: ¿Y qué hicieron los chinos?
+13:52 Speaker 1: cuando salió el Dipsic, el 3.0, si no me equivoco, dijeron que habían entrenado su modelo con el 10% del costo que había costado entrenar el Charged GT. Si el Charged GT costó, me parece, como 100 millones, el Dipsic había costado como 6, 7 millones. En entrenar. Bueno, aunque dicen, ¿no? Por ahí he leído que es propaganda nada más, que en verdad les ha costado más. Pero bueno, al final, ¿cuál era el fondo del asunto? Cuando ellos comienzan a programar sus algoritmos, sus arquitecturas, entran a programar en código máquina,
+14:37 Speaker 2: a center.
+14:40 Speaker 1: ¿Para qué? Para poder explotar mejor las capacidades del hardware limitado que ellos tenían a la disponibilidad. Como no tenían las últimas tarjetas de última generación, entonces se vieron limitados a ciertas tarjetas que tenían disponibles y para hacer un mejor aprovechamiento de esas tarjetas, de ese hardware, se metieron a trabajar en código Assembler para poder optimizar los algoritmos. Obviamente no vamos a llegar a ese nivel, pero a lo que voy es que justamente las arquitecturas, los algoritmos se convierten mucho más eficientes justamente con esas características de poder hacer el entrenamiento de una red neuronal, porque finalmente ese es el objetivo, que el entrenamiento de un modelo de red neuronal se haga en el menor tiempo posible, a un menor costo.
+15:39 Speaker 2: Y eso tienes
+15:41 Speaker 1: que trabajar a ese nivel, ¿no? Nivel de hardware, como decimos, programar a nivel máquina.
+15:53 Speaker 2: Entonces,
+15:54 Speaker 1: dado esos tres aspectos que teníamos, los datos, ¿no? El poder computacional que va mejorando. Y los algoritmos que van apareciendo también, ¿no? Ahora ustedes entran, por ejemplo, en el Jaipe y todo, y cada semana salen nuevos arquitecturas, nuevos datos, y ahí estamos. Es una guerra. Que ya uno queda perdido con todo lo nuevo que está saliendo.
+16:18 Speaker 1: Y bueno, y todo eso hace que esto de la inteligencia artificial haya explotado.
+16:25 Speaker 2: Y el
+16:27 Speaker 1: que comenzó, diremos así, esa explosión de la inteligencia artificial, fue justamente un algoritmo del año 2002. Una arquitectura del año 2002. ¿Qué pasó el año 2012? ¿Alguien sabe?
+16:50 Speaker 2: No sé, en el mundo.
+16:55 Speaker 1: Ah, es 2013.
+16:58 Speaker 2: Creo que sí.
+17:01 Speaker 1: ¿Qué pasó
+17:04 Speaker 2: en 2012?
+17:08 Speaker 1: ¿Qué te ha respondido?
+17:11 Speaker 2: No sé. ¿No sabes? Fin del mundo.
+17:18 Speaker 1: ¿Por qué el año 2012 es importante para ti hablar? Y pregúntale.
+17:23 Speaker 2: ¿Qué le dice? Alex.
+17:32 Speaker 1: Alex.
+17:40 Speaker 2: Vamos a ver más adelante.
+17:51 Speaker 1: Entonces, bueno, para nosotros como grupo de investigación es interesante, digamos, toda esta, toda esta secuencia de eventos que estamos viviendo, porque el grupo, por ejemplo, lo hemos creado en el año 2013, ¿no? Y Alex Ned es el año 2012, ¿no? Cuando creamos el grupo, yo participé de una conferencia, si no me equivoco, fue en Brasil. Y ya se comenzaba a hablar de redes convolucionales, ¿no? O sea, redes convolucionales, y en la época ni siquiera entendíamos que cosa era una red convolucional, ¿no?
+18:28 Speaker 2: Y bueno,
+18:30 Speaker 1: y después poco a poco fuimos entendiendo, entendiendo lo mejor, ¿no? Y efectivamente todo el poder con el que venía por la red convolucional, al menos para lo que es visión artificial, pues te ha dado un vuelco total, ¿no? Yo, por ejemplo, cuando hubiese pensado con ustedes en posgrado, hice el curso de visión artificial. Y el curso de visión artificial era pues los algoritmos de segmentación, detección de rectas, detección de texturas, identificación de color, todos los distintos algoritmos que había para poder identificar todas esas características de una imagen.
+19:09 Speaker 1: Algoritmos, hacíamos transformada de Fourier para identificar texturas, no sé qué, lo otro es más, yo en mi tesis también trabajé con todos esos algoritmos y tuve que estudiar todo ello. Ahora un curso de visión artificial ya no se estudia nada. de eso ya no hay porque justamente vienen las redes convolucionales y te mató todo ese tema y vamos a ver por qué
+19:30 Speaker 2: entonces les
+19:33 Speaker 1: decía de que todos estos Todos estos acontecimientos que están sucediendo son sumamente interesantes para nosotros, para uno como grupo de investigación, porque vemos la evolución, ¿no? Cómo están yendo las cosas, ¿no? Cómo va cambiando,
+19:47 Speaker 2: ¿ok? Y
+19:48 Speaker 1: ustedes mismos, por ejemplo, están viviendo un momento súper simpático, ¿no? Porque los cambios que estamos viviendo a nivel tecnológico son tan rápidos, porque un cambio de un año para otro es demasiado rápido, ¿no? Demasiado rápido. Y hablar simplemente de un cambio tecnológico de 10 años es demasiado rápido. Pero estoy con afortunados de estar viviendo esos cambios. No solamente viviéndolos, sino también estudiándolos.
+20:18 Speaker 2: Creo que
+20:19 Speaker 1: poco lo vamos a estudiar cómo están sucediendo todos los cambios. Bueno, y la idea fue en el curso justamente, ¿no? Como les dije al inicio, tener un curso que vayamos viendo cuáles son las técnicas que están yendo de avanzada, ¿no? Para ver qué se está tratando en el tema de inteligencia artificial. En algún momento, inclusive, dictamos algo de lo que es procesamiento de lenguaje natural como parte del curso, ¿no? Porque vimos que también eso comenzaba a despegar. Y ahora prácticamente procesamiento de lenguaje natural, visión artificial, se ha juntado.
+20:58 Speaker 1: Estamos hablando de lo mismo. Y como moraleja, inclusive de ese tema, es que en el grupo de inteligencia artificial nosotros teníamos proyectos que eran con visión y había proyectos que eran con procesamiento de lenguaje natural. Prácticamente éramos dos grupos, porque la gente que trabajábamos en visión artificial éramos...
+21:22 Speaker 2: y los
+21:23 Speaker 1: que trabajaban en el procesamiento del lenguaje natural prácticamente eran de otro ellos veían otras técnicas otros proyectos y ahí fue cuando
+21:32 Speaker 2: Erasmo
+21:34 Speaker 1: si lo conoce Erasmo trabajó con Arturo por ejemplo Arturo si lo conoce también No. Tú sí lo conoces. Tú sí lo
+21:44 Speaker 2: conoces. Arturo conoces. Mi asesor.
+21:47 Speaker 1: ¿Es tu asesor? A ver si lo conoces. Entonces Arturo fue uno de los primeros que inició la línea también de procesamiento de lenguaje natural aquí, ¿no? Y ahí tiene varios de sus seguidores que, pues uno de ellos es Erasmo, está Marco, y hay varios, ¿no? Y ellos prácticamente eran otro grupo de investigación.
+22:08 Speaker 2: Y bueno.
+22:09 Speaker 1: En algún momento hemos tocado esos temas y luego se ha juntado prácticamente.
+22:16 Speaker 2: Entonces
+22:16 Speaker 1: la idea justamente del curso era ver todos esos temas de avanzada, especialmente los relacionados con lo que son el aprendizaje profundo o deep learning, ver cómo desarrollar las actividades para implementar esas y algunas aplicaciones también relacionadas con el tema, que se aplique deep learning.
+22:37 Speaker 1: Y sobre todo, que ustedes como estudiantes del posgrado, ganen experiencia, expertise, desarrollando o aplicando a todas estas técnicas. Yo sé que la pueden aplicar en varios proyectos y todo. Sé que muchos están haciendo sus tesis, también pueden volcar todas estas técnicas. dentro de sus tesis
+23:05 Speaker 2: no
+23:07 Speaker 1: necesariamente inclusive que estén trabajando en un tema de visión o de NLP sino muchas de estas técnicas dependiendo del tipo de datos que están manejando los pueden volcar también para poder utilizar
+23:28 Speaker 1: en algunos contenidos que hemos ido adelantando,
+23:32 Speaker 2: pero
+23:35 Speaker 1: la idea está en que al final ustedes obtengan el conocimiento y las herramientas para poder desarrollar un proyecto de Deep Learning.
+23:49 Speaker 2: Y también
+23:52 Speaker 1: aprendan ustedes a distinguir que no todo es Deep Learning.
+23:58 Speaker 2: ¿Ya?
+24:00 Speaker 1: El Deep Learning es una herramienta muy potente, pero en la gran mayoría de los casos, diremos así, porque finalmente el Deep Learning es parte del Machine Learning, ¿no? Es una sub-area del Machine Learning. En la gran mayoría de los casos de problemas de Machine Learning, no necesitas utilizar Deep Learning. Tal vez con un simple Random Forest resuelves tu problema. ¿Ya?
+24:25 Speaker 2: Entonces...
+24:25 Speaker 1: Esos aspectos también tienen que ir aprendiendo y cuando se enfrentan a un problema, decir, oye, acá puedo aplicar Deep Learning o no puedo aplicar Deep Learning, tal vez me resuelva un simple Machine Learning, una simple técnica la puedo utilizar y me resuelves todo el asunto.
+24:41 Speaker 2: Entonces,
+24:43 Speaker 1: eso es parte de lo que es la práctica que ustedes tienen que ir ganando para poder distinguir, dado un problema que se les presenta, qué técnica aplico, cómo la resuelvo.
+24:53 Speaker 2: es
+24:53 Speaker 1: necesario un deep learning como les digo es una súper herramienta pero
+25:00 Speaker 2: muchas
+25:01 Speaker 1: veces pues no voy a utilizar como dice coloquialmente no voy a usar un cañón para matar una mosca Luego, también como parte de lo que es nuestro, parte del curso y la formación misma que ustedes vayan obteniendo tanto entre grados como en posgrados, ¿no? Es que, y ahora pues, yo creo que se ha vuelto inclusive mucho más importante, ¿no? Que es el que ustedes desarrollen habilidades de transmisión de las ideas, ¿no?
+25:37 Speaker 2: Ya.
+25:39 Speaker 1: Hasta a veces para nosotros la evaluación se nos ha complicado para los profesores porque ahora la evaluación tenemos que hacerla un poquito mucho más individualizada en el sentido de buscar una forma de que en verdad ustedes hayan entendido y demuestren la temática. No es simplemente dejarles una tarea y a ver, pues lo mando al clavo, me lo resuelve y lo responde.
+26:05 Speaker 1: o mi proyecto final, y bien, yo sé que lo van a utilizar, eso no está prohibido, ¿no? Pero justo en este punto se nos vuelve más importante, que ustedes muestren habilidades de poder transmitir esas ideas que ustedes han investigado, que han desarrollado, y que, digamos, acá al público, en este caso que vamos a tener, el público que son vuestros compañeros. ustedes demuestren que han entendido, han aprendido y lo dominan. Entonces eso se vuelve ahora mucho más importante. Podrían aplicar, utilizar las técnicas, las herramientas que hayan disponibles, eso nadie lo va a negar, tampoco lo voy a prohibir, pero después que ustedes expliquen, lo defiendan, eso es sumamente importante. Por eso la presentación del proyecto final sí tiene un buen peso. Lo otro, el trabajo en equipo también. El trabajo en equipo es súper importante.
+27:06 Speaker 1: Especialmente porque hacer un proyecto de Deep Learning, de Machine Learning, no es de una sola persona. Así que si por ahí ustedes encuentran ahí una búsqueda de un trabajo, se busca, no sé, científico de datos, ¿no? Que sepa hacer tipo un full stack, ¿no? Que sepa hacer...
+27:25 Speaker 2: Ahí... Los
+27:30 Speaker 1: van a explotar.
+27:32 Speaker 2: Ya, los van a
+27:33 Speaker 1: explotar. Tal vez como experiencia buena está bien, pero para hacer algo serio no tanto, ¿no? Entonces, una empresa que en verdad entiende lo que es hacer Machine Learning, Deep Learning o hacer ciencia de datos, en verdad lo que tiene que hacer es constituir un equipo de trabajo. No a una sola persona le va a resolver todo. Y hacer un equipo de trabajo, pues tiene que estar ahí el especialista en los datos, el especialista en las técnicas estadísticas mismas, el especialista en los modelos de Machine Learning como ustedes, ¿no? Entonces, todo es un equipo de trabajo.
+28:02 Speaker 2: Y luego, tiene
+28:03 Speaker 1: que saberse comunicar entre todos. Eso en estos tiempos se vuelve mucho más importante, ¿no? Comunicarse en equipo, trabajo en equipo y todo eso, ¿no? Eso es
+28:13 Speaker 2: sumamente importante. Y
+28:15 Speaker 1: por eso que nosotros también,
+28:17 Speaker 2: justamente
+28:21 Speaker 1: la última, no. Es de que pueden ustedes trabajar en equipo, ¿no? Y al final, el proyecto final que desarrollen, pues sea el trabajo, ¿no? como decía en el curso de Machine Learning, sea un modelo de ensamble. Porque finalmente cada miembro del equipo es como un modelo de aprendizaje automático, o un modelo de Machine Learning, que al final se ensambla y resulta en un proyecto final. Entonces, en un proyecto de Machine Learning o de ciencia de datos, es lo mismo. Cada uno, cada miembro del equipo, es un modelo que al final se ensamblan todos y logran un
+29:09 Speaker 2: resultado. ¿No?
+29:11 Speaker 1: ¿Ok? Entonces, esa es la idea también. ¿Ya? Porque no todos tienen las mismas ideas.
+29:16 Speaker 2: ¿Ya?
+29:17 Speaker 1: Entonces, en cada reunión que ustedes vayan
+29:19 Speaker 2: teniendo, ya van
+29:20 Speaker 1: haciendo, ¿no? Un fine tuning, ¿no? De...
+29:27 Speaker 2: No,
+29:28 Speaker 1: eso es eso. Finalmente se están haciendo un fine tuning de sus ideas para poder llegar a algo final. Un poco familiarizarse con las técnicas que hay de aprendizaje profundo, de las clásicas que se tienen en la materia. Y vamos a ver un poquito cómo es que todo esto ha ido revolucionando hasta llegar a las técnicas, a los modelos generativos que ahora estamos viviendo. Algo de lo que son, no
+30:04 Speaker 2: vamos a estar mucho, aunque estuve
+30:11 Speaker 1: por ahí alguna vez a un par
+30:13 Speaker 2: de alumnos que querían tener esa
+30:15 Speaker 1: elegancia matemática que lo hace rico en verdad todo esto. No vamos a estar mucho en este tema. El curso es nivel intermedio porque tampoco es un curso de... de paquetería nada más, ¿no? Que todo es usar caja negra y ya, ¿no? Vamos a entrar un poquito a lo que es el concepto, vamos a ver algunos aspectos matemáticos, pero tampoco vamos a entrar a la parte de demostración de la matemática, ¿no? Pero vamos a hablar de los fundamentos, ¿no? En los cuales se basan algunos modelos o algunas estrategias, ¿no? Como por ejemplo todo lo que es fine tuning, ¿no? La optimización de las redes neuronales. Tiene un fundamento matemático muy bueno.
+31:02 Speaker 1: Pero lo vamos a pasar así, vamos a ver algo, pero no vamos a... Si no, sería hacer todo un curso solamente, por ejemplo, de modelos de optimización.
+31:11 Speaker 2: ¿Ya?
+31:12 Speaker 1: Modelos de optimización prácticamente sería
+31:14 Speaker 2: todo un curso. Para quien le gusta,
+31:22 Speaker 1: por ahí es un curso muy bueno.
+31:42 Speaker 1: Profesor, entonces el proyecto grupal
+31:46 Speaker 2: y la tarea académica son ambos grupales o son actividades completamente diferentes?
+31:53 Speaker 1: ¿Proyecto final?
+31:54 Speaker 2: Sí, creo que sí. Ajá, proyecto final y carrera académica. Son dos criterios de calificación en este lado, pero estamos abajo.
+32:06 Speaker 1: ¿Estamos abajo? Sí, creo que sí.
+32:08 Speaker 2: A ver.
+32:12 Speaker 1: Bueno, este es un poco de contenido,
+32:14 Speaker 2: lo tenemos acá en semanal.
+32:20 Speaker 1: Hoy día vamos a hacer la parte introductoria, conectarnos luego a ver algo de lo que son fundamentos de las redes neuronales. Luego vamos a hacer la relacionación, justamente los modelos de redes neuronales. Luego entramos ya con las redes convolucionales, o redes convolutivas. vamos a ver algunas de las arquitecturas de las redes neuronales recurrentes un avance también del proyecto Luego vamos a ver antoicodres y modelos generativos, profundos, modelos secuenciales para todos en atención. Esta segunda parte la van a ver con Rodrigo. Y algunas aplicaciones con DITRA. Un poco de contenido que vamos a ver.
+33:31 Speaker 1: La primera parte conmigo vamos a ver un poco más de lo que son redes convolucionales. Aunque no está acá, pero vamos a ver algo de Transfer Learning, las arquitecturas de redes convolucionales que existen y algunas aplicaciones que se tienen ya. Luego, bueno, cayendo un poco lo que tú estás
+33:59 Speaker 2: preguntando.
+34:01 Speaker 1: Jorge. Jorge.
+34:08 Speaker 2: Bueno,
+34:08 Speaker 1: como ustedes ven, estoy grabando la sesión de hoy día. Es una característica que lo hemos tomado después de pandemia porque finalmente
+34:18 Speaker 2: no
+34:22 Speaker 1: nos gusta la virtualidad. Particularmente a mí no me gusta la virtualidad. Pero sí creo que es una buena herramienta como para poder tener la sesión grabada. Para que ustedes puedan repasar posteriormente, ¿no? Betrán dijo una cosa, la otra, papá, lo puedan revisar y todo. Y queda como un material más, ¿no?
+34:42 Speaker 2: Del curso, ¿ya? Así que
+34:44 Speaker 1: solamente lo utilizamos para grabar la sesión y ustedes tengan un material más en el curso,
+34:52 Speaker 2: ¿ya?
+34:53 Speaker 1: O de acá a un año, dos años, no sé cuánto tiempo está disponible ahí en Paidea el material. Si por ahí alguien quiere dar un curso, el otro dice, ah, ya, a ver, hemos hecho algo en el curso de Deep Learning,
+35:07 Speaker 2: ¿no?
+35:08 Speaker 1: O de pronto, ¿no? Los proyectos que ustedes han hecho, dicen, ah, no, es el proyecto de tal grupo, me gustó mucho, voy a ver cómo lo han presentado, voy a revisar lo que han hecho. Entonces, queda con material,
+35:18 Speaker 2: ¿ya?
+35:21 Speaker 1: Salvo excepciones, nada más, por ahí, si alguien, si alguien, alguna vez tuve una alumna que trabaja en una mina, Creo que en mina trabajaba, creo, tres semanas, creo que estaba, una semana venía, creo, una
+35:36 Speaker 2: cosa así. Y bueno,
+35:40 Speaker 1: pues el hecho de que te hagan las clases vía Zoom también, que las grababa yo, ella se conectaba desde la mina y participaba. Para ella era una maravilla que estemos transmitiendo. O que tengamos la sala Zoom. Así que, pero si alguien por ahí no puede venir a alguna de las sesiones, no estoy diciendo que todas, porque finalmente las sesiones son presenciales, porque no me gusta la visualidad, pero puede conectarse. Si hay por ahí alguien no llega, por algún motivo se puede conectar y seguir.
+36:26 Speaker 1: O alguien que tal vez... Como siempre ocurre, ¿no? Algún percance personal, a veces uno se enferma y todo, ya. Ahí tenemos, ¿no?
+36:38 Speaker 2: ¿Qué
+36:38 Speaker 1: más? El... ¿Algunos trabajos grupales? ¿A eso te refieres?
+36:46 Speaker 2: Sí, si es que el proyecto final es igual a la TEA.
+36:51 Speaker 1: No, la TEA generalmente son personales. Ah, ok. Sí, sí. Las tareas académicas, ¿no?
+36:59 Speaker 2: Son personales.
+37:03 Speaker 1: Salvo que por ahí les diga una tarea que sea un poquito más compleja, ya pueden hacerle en grupo ya. Pero generalmente son calificaciones indígenas.
+37:15 Speaker 2: El examen parcial, ¿no? Ya
+37:18 Speaker 1: que vamos a tener la semana 9.
+37:21 Speaker 2: Y luego
+37:23 Speaker 1: el proyecto de curso. Fíjense que el proyecto de curso tiene 50% de la industria. Por eso la importancia para nosotros del trabajo, del proyecto, el trabajo en equipo. ¿Ya?
+37:37 Speaker 2: Porque
+37:37 Speaker 1: es 50% de la industria.
+37:42 Speaker 2: Y
+37:42 Speaker 1: bueno, estas son tareas, ya les dejé una tarea, no sé si ya han visto ya, así que ya tienen ahí en el patio una tarea, como para que entren en calentamiento. ¿Tareas semanales?
+37:51 Speaker 2: Sí, semanal.
+37:55 Speaker 1: Y el examen parcial que es en la semana 9, o en la semana 8, perdón. En la semana 8, el examen parcial. El examen parcial es semana 9, ¿no? En pregrado. Con nosotros va a ser semana 8. Porque conmigo acaban el
+38:15 Speaker 2: parcial, ¿no?
+38:17 Speaker 1: Yo les voy a dar estas dos primeras notas, de la TEA y del examen parcial. Y ahí con Rodrigo van a tener la nota del proyecto. En la segunda parte, sobre todo. Salvo que quieran que les tome un examen final también.
+38:36 Speaker 2: ¿Después de parcial se acaban las tareas? El Rodrigo les puede dejar
+38:41 Speaker 1: tareas. Si el Rodrigo les va a dejar tareas académicas, él ya las va a evaluar junto con el proyecto. Él también va a dar su nombre de tareas académicas. Yo también voy a tomar tareas, así que yo también saco mi nombre de tareas acá.
+39:01 Speaker 2: ¿El examen parcial va a ser un cuestionario o también va a tener una parte práctica?
+39:06 Speaker 1: Tiene práctica. ¿Todo? Sí. Realmente es un cuestionario y una parte. Si el examen lo quieren para casa, para una semana, eso ya lo vamos a discutir en su momento. En la semana 6 y 7 ya comenzamos a comenzar el examen.
+39:38 Speaker 2: ¿El carro? ¿El carro?
+39:41 Speaker 1: ¿El carro? ¿El carro? ¿El carro? También puede ser, ¿no? Creo que lo hemos hecho, ¿no? El semestre pasado, ¿no? Por mayoría quisieron el carro. ¿En qué?
+39:52 Speaker 2: ¿En qué? ¿En qué? ¿En qué?
+39:55 Speaker 1: ¿En qué? Una semana. Sí. Una semana de anticipación.
+40:02 Speaker 2: Esa tarea, profe.
+40:08 Speaker 1: Ah, no, con ustedes tuviese el problema de calificación, creo, ¿no? ¿Verdad?
+40:12 Speaker 2: Se me escapó, ¿verdad? ¿Ah? Creo, ¿no? Por
+40:17 Speaker 1: el tipo de datos, sí, sí.
+40:20 Speaker 2: Es que no
+40:22 Speaker 1: lo califique a tiempo y se me escapó por todo eso. Ya agarré, papá, ya. Después no me escribió, me dijo, ¿qué has equivocado? La verdad, volví a revisar de nuevo y ya. Ah, no,
+40:32 Speaker 2: pues.
+40:35 Speaker 1: Sí, sino que el semestre pasado que hicieron Machine Learning conmigo, el examen parcial fue un desafío en carga. Y ahí, solo que había un... unas consideraciones que algunos no lo habían llevado en consideración. Bueno, es eso. Bueno, creo que la mayoría ya lleva un curso conmigo, así que más o menos la calificación ya la conocen como es. Si es que hacemos algo, un desafío en cargo, también más o menos ya saben cómo va a ser la calificación. Bueno, el otro tema también está respecto a lo que es el proyecto de curso.
+41:27 Speaker 1: Además de lo que les estaba indicando la presentación, que le ponemos bastante énfasis
+41:35 Speaker 2: en esta certificación,
+41:38 Speaker 1: el trabajo en equipo. Para nosotros también el hecho de que ustedes, la forma como presentan su informe. No queremos un informe que sea de
+41:52 Speaker 2: 30,
+41:53 Speaker 1: 40 páginas, sino... Justamente lo que queremos recurrir es también a su poder de síntesis. Que en unas breves 8 o 10 páginas a lo mucho, ustedes puedan volcar todo lo que han desarrollado. Y por eso que les pedimos tipo paper. Un análisis de estado del arte, implementación de línea base, la experimentación. y bueno y la presentación que no
+42:22 Speaker 2: acá y
+42:26 Speaker 1: igualidad lo hagan tipo pey Ah, no, cuando les coloquemos el trabajo final, ahí se les va a quedar las características. Pero ya les voy adelantando que la idea es que el informe lo presente en tipo paper.
+42:58 Speaker 2: Y eso
+43:00 Speaker 1: nos ha dado, también nos resultó bien simpáticos porque algunos han hecho unos trabajos que han ido un poquito más allá de lo que les pedíamos. Y resultaron haciendo algo, un aporte. que luego lo presentamos a una conferencia también
+43:18 Speaker 2: es
+43:21 Speaker 1: una experiencia que vale bastante
+43:26 Speaker 2: justamente
+43:28 Speaker 1: les decía que estuve en Washington la semana pasada por el trabajo de una de nuestras alumnas de la maestría ella comenzó su trabajo de maestría Y bueno, y comenzó y fue adentro, como quien dice, ¿no? En el tema. Y ahí comenzó a obtener resultados bien interesantes. Es más, creo que cuando llevé el curso también hizo algo de lo que estaba trabajando en su tesis. Y su trabajo resultó siendo aceptado a una conferencia en Washington, ¿no? Que eso fuimos justamente a presentarlo. ¿Ya? Y... Y los resultados así tan buenos que ahorita ella está preparándose para poder extender más esos resultados para un journey, ¿no? Para una revista.
+44:14 Speaker 2: Entonces, ese
+44:18 Speaker 1: es un ejemplo, ¿no? Y tenemos varios otros ejemplos.
+44:21 Speaker 2: Así que,
+44:22 Speaker 1: si ustedes están trabajando en algún tema, algo así, y
+44:24 Speaker 2: quieren profundizar, pueden aprovechar este
+44:27 Speaker 1: espacio, ¿no? El espacio del curso me refiero también. para poder profundizar en el tema y tal vez pues hacen algo simpático, ¿no? Hasta de los winter tenemos resultados así, ¿no?
+44:38 Speaker 2: El año pasado un muchacho
+44:40 Speaker 1: de la San Marcos que participó en el Summer School, ¿no? Y el proyectito que hicieron en el Summer School, él profundizó más,
+44:49 Speaker 2: ¿no?
+44:51 Speaker 1: y después me escribió diciendo el profesor estoy en europa presentando la extensión del proyecto que hice en el winter o en el summer camp y
+45:00 Speaker 2: bueno
+45:05 Speaker 1: y siempre siempre hay esas oportunidades y posibilidades así que si alguien por ahí va a profundidades puede pensarlo también para poder presentar en alguna
+45:29 Speaker 1: ¿Preguntas? Respecto a la evaluación,
+45:31 Speaker 2: contenido. En cuanto al proyecto del curso, no sé si mencionó que iba a ser individual o grupal. No, el proyecto es grupal. Ah, ¿de cuántas personas?
+45:42 Speaker 1: Ah, no sé cuántos más tribunales tenemos, creo que tenemos 20 y tantos. Generalmente son de 3. Ah,
+45:48 Speaker 2: claro. Sí, 3. Sí, sí, por supuesto. Algo que sea un super proyecto y ya aceptamos.
+45:59 Speaker 1: Ah, claro. Ah, sí, sí, pues.
+46:01 Speaker 2: O sea, porque imagino que, pues, entre tres personas va a haber siempre una transición entre, ah, yo quiero hacer esta mayor transición.
+46:10 Speaker 1: No sé si... Para mí el número ideal del grupo es tres. Uno, pues, uno no es grupo, no. Dos, ahí es lo que tú dices, ¿no? Ahí puede haber esas discrepancias. Un tercero ya intercede, pues. Ya desbalancea, como dicen, ya hace mayoría, ¿no? Un cuarto ya hace el
+46:33 Speaker 2: café, ¿no?
+46:35 Speaker 1: El quinto ya está organizando la fiesta, ¿no? Así que... Por eso es que para mí, particularmente, creo que el número ideal del grupo es tres. Tres personas. Pero no, si es que se justifica por lo que están haciendo, yo qué sé.
+46:53 Speaker 2: Profesor, entonces el tema del proyecto de curso es a libre elección del grupo. No, eso yo lo vamos a conversar recién con el profesor Rodrigo. Va a proponer
+47:01 Speaker 1: temas. Sí, sí, lo vamos a conversar porque vamos evaluando cada semestre, cada año, de acuerdo a la experiencia que hemos tenido en el anterior semestre. y si continuamos con la misma estrategia o
+47:18 Speaker 2: cambiamos de casualidad nos van a pedir replicar un paper
+47:24 Speaker 1: eso por ejemplo fue una idea que nació hace 2-3 años atrás y nos dio resultados interesantes porque también ya tuvimos la experiencia de que digamos ustedes traigan una propuesta de proyectos que después para conseguir los datos, porque claro, son ideas a veces muy idealistas, ¿no? Pero de pronto tuvimos una experiencia no tan buena que prácticamente el grupo se dedicó a buscar los datos todo el semestre. Así que no había datos. Y en este caso, en este tipo de proyectos, lo importante son los datos.
+48:04 Speaker 2: Profesor, ¿y las tareas académicas? Tenemos plazo, ¿no? Para entregarlo, creo que una semana. Sí, una semana.
+48:14 Speaker 1: No, no son complejas las tareas. Porque ustedes estén en ritmo, ¿no?
+48:25 Speaker 2: Por ejemplo, la caja de esta semana, queda para
+48:28 Speaker 1: la próxima semana. Ahora, si es que no consiguen desarrollar la tarea, o sea, por algún motivo, yo lo recomiendo que terminen, no importa el estilo. Lo suban un día después, pero lo suban. Si no, eso yo considero, digamos... Como que no entregó y es un cero, ¿no? De esa tarea. Ahora, si lo entregas a destiempo, bueno, te va a caer una penalización. No tendrás tu 20, tal vez, pero ya pues tienes un 16, 17, depende, ¿no? Ok.
+49:08 Speaker 1: Tienes penalización. Pero a que te quede sin nota, mejor no importa, un poco tarde lo entrega. Siempre por ahí ocurren cosas que se te pasan, ¿no? Así.
+49:29 Speaker 2: Sí, sí, sí.
+49:33 Speaker 1: No, lo que... Esta semana o la próxima me reúno con el doctor Rodrigo para ver cómo va a ser el proyecto. Y ahí les vamos a colocar, les vamos a dar ya toda la descripción de cómo va a ser el proyecto, con fechas, con todo, ¿no? Entregables, qué fechas van a pegar. Esa primera semana posiblemente sea la presentación de la idea del proyecto que quiero hacer. Ah, la idea. Sí. ¿Una
+50:01 Speaker 2: pregunta? ¿Hay algún formato específico para el informe del proyecto?
+50:09 Speaker 1: Ahí les vamos a ver
+50:10 Speaker 2: también. Como
+50:12 Speaker 1: les dije, es tipo paper. Y un paper tiene una introducción, tiene un análisis del estado del arte, luego viene la descripción de los datos, luego los experimentos que han desarrollado, luego la discusión encima de esos resultados, y luego las conclusiones.
+50:37 Speaker 1: Pero lo que en estos tiempos de día, cuando prácticamente estamos viendo herramientas que nos hacen los papers, es más, en las mismas conferencias ahora se pone mucho énfasis en... ni tanto evaluar, digamos, el paper en su conjunto, sino ya nos estamos concentrando en evaluar la parte experimental propiamente, ¿no?
+51:02 Speaker 2: O sea, ¿qué parte experimental?
+51:04 Speaker 1: ¿Qué es lo que has hecho experimentalmente, no? Eso es lo que interesa, finalmente. Y para los que están haciendo tesis, todo también ahora, ¿no? Después estaba conversando ahí con los profesores de tesis, decían, pero ahora ya, pues, la tesis ya se hace con IA, que el otro por acá, sí, pero ahora... Y lo que en verdad siempre ha sido una investigación es centrarse en la parte experimental.
+51:29 Speaker 1: ¿Cuáles son los experimentos que has hecho? ¿Qué resultados has obtenido? Y
+51:33 Speaker 2: demuestra que has
+51:34 Speaker 1: conseguido esos resultados.
+51:36 Speaker 2: Demuestra. Esa es la idea.
+51:38 Speaker 1: Ya después todo lo otro, el documento, el reporte, claro, ya bueno, mucho de eso se puede apoyar en IA, todo eso sí, ¿no? Por ejemplo, ahorita para hacer todo lo que es la revisión sistemática,
+51:51 Speaker 2: desde la cerramenta ya te lo hacen, ¿no?
+51:55 Speaker 1: Ya, la revisión sistemática que antes te demorabas a hacer un mes, dos meses, es más, había tesis de revisión sistemática, ¿no? Ahora ya no se aceptan tesis de revisión sistemática. En las conferencias tampoco ya te aceptan artículos de revisión sistemática, ya no se reciben. Porque la revisión sistemática ahora lo hace, pues, una IA, ¿no? Entonces, ahora tienes que concentrarte en la parte experimental de tu proyecto. ¿Qué experimentos has hecho? ¿Qué técnicas has utilizado? ¿Cuáles son los resultados que has ido obteniendo? Entonces, todo eso. Es más, en muchas conferencias te están pidiendo tus algoritmos y
+52:32 Speaker 2: tus datos.
+52:35 Speaker 1: ¿Ok? Para ver si en verdad con qué datos estás trabajando, cuáles son los algoritmos. Por eso que ahora en muchas conferencias o muchos artículos, muchas conferencias te piden que acompañes tu dirección del repositorio de tus datos y tus algoritmos. ¿Dónde estás?
+52:52 Speaker 2: ¿Ya?
+52:52 Speaker 1: Para que sea más creíble lo que tú estás presentando.
+52:57 Speaker 2: Entonces, si
+52:58 Speaker 1: ustedes están haciendo experimentación, están haciendo sus test, sus trabajos, todo eso, pongan siempre en un repositorio sus datos, sus datos, están avanzando, todo eso, ¿no? Y si ustedes piensan que a través de trabajo van a presentar un artículo científico y otro, entonces luego ya tienen la herramienta ahí, la dirección, los datos, los algoritmos están en este repositorio, ¿no? Entonces los evaluadores entran y dicen, ah, ya, no, este trabajo sí es serio porque están los datos, los algoritmos, los datos, ¿no? No nos está contando una historia,
+53:31 Speaker 2: ¿no? Ya.
+53:32 Speaker 1: No, en verdad está ahí todo, ¿no? Y en el repositorio nos pueden colocar mucha más información. Entonces ahora eso es lo que está valiendo más en revistas,
+53:43 Speaker 2: en conferencias, ¿no? Conferencias que son de alto impacto.
+53:47 Speaker 1: las revistas ni hablar, las revistas ya están pidiendo el repositor. Entonces, y lo que decía con los profesores de tesis, ¿no? O sea, al menos para lo que somos de ciencias e ingenierías, siempre ha sido un problema escribir la tesis.
+54:05 Speaker 2: Yo
+54:05 Speaker 1: recuerdo cuando yo hacía el posgrado, mis colegas, por ejemplo, de laboratorio, Nuestro orientador le decía, ya muy bien, ya tu resultado bueno, todo ya. Y te daba el pase, ¿no? Ya, puedes escribir la tesis. Pucha, era un dolor de cabeza. Escribir la tesis. Entonces, como somos más del área de ciencias, de ingeniería, no tenemos esas capacidades de escribir como son los de letras, por decir, ¿no? Porque finalmente escribir un reporte, un documento, donde tú tienes que transmitir todo lo que has desarrollado, para que alguien lo lea y lo entienda, también es un arte, ¿no? O sea, escribir, al menos para nosotros que no tenemos mucha práctica, no es tan fácil, ¿no? Entonces, hacer la tesis era un mundo, ¿no? Y yo he visto sufrir a muchos de mis colegas ahí en el posgrado, escribiendo su tesis, demoraban más de medio año escribiendo su tesis, ¿no? Otros ni conseguían terminar. Y nuestro orientador les decía, ya, ¿cómo es? Y era un sufrimiento escribir la tesis. Ahora con las herramientas de guía que tenemos ya se facilita mucho eso. Porque finalmente en la escritura le podemos dar los datos, nos apoya en la escritura, todo ello.
+55:21 Speaker 2: Pero,
+55:22 Speaker 1: por otro lado, la exigencia de centrarnos ahora más en los resultados, pues le toma más atención ahora. finalmente son herramientas y justamente estamos comparando como nuestros papás por ejemplo mi papá mi mamá su tesis que hicieron fue en máquina de escribir
+55:45 Speaker 2: máquina
+55:49 Speaker 1: de escribir y luego cuando apareció la computadora Dijeron, pucha, estos ya se van a volver brutos, no van a saber escribir, ¿no? Porque la computadora se lo va a hacer todo, ¿no? Es más, antes no podías ni equivocarte con la máquina de escribir. Tenías que ser muy preciso. Y ahora con la computadora te puedes equivocar, los borras todo,
+56:11 Speaker 2: los reformas, ya está. Entonces,
+56:13 Speaker 1: y estamos justamente haciendo ese comparativo, ¿no? Entonces, ahora tenemos estas herramientas de IA, ¿no? Generativas. que nos ayuda, pero también
+56:22 Speaker 2: ya
+56:25 Speaker 1: como evaluadores, todo eso, ya ponemos como quien dice el ojo y en otro tema. La
+56:31 Speaker 2: escritura,
+56:32 Speaker 1: por ejemplo, uno de los puntos críticos de revisar una tesis, ¿qué cosa era? Las referencias. Si las referencias estaban bien hechas, o si estaban dentro del texto, toda la bibliografía. Porque ese era un gran problema, ¿no? Y por eso es donde nace el látex también. Porque el problema con el Word, ¿cuál era? Tú borrabas una referencia, un texto donde había una referencia, y te olvidabas de borrar la referencia en tu bibliografía.
+57:02 Speaker 2: ¿No?
+57:03 Speaker 1: O no lo colocabas. Y látex, y las referencias de las imágenes, está bien, ¿no? Tú hacías una imagen... y luego dentro del texto colocas la referencia y de pronto tu asesor te decía, no, bota esta imagen de acá. Botaba la imagen, pues te olvidabas de quitarla de la referencia también, ¿no? O en el índice, ¿no? En el índice, tu índice de imágenes, tu índice de tablas, todo eso, también el otro, y tenías que cambiar toda la pepa, todo un problema, ¿no?
+57:32 Speaker 2: Entonces, LATEX nace ahí como
+57:34 Speaker 1: una herramienta alternativa. Eso porque eso te lo hacía de forma automática. Tú podías borrar la... la imagen, podías borrar
+57:41 Speaker 2: la referencia,
+57:43 Speaker 1: simplemente volvía a compilar todo y te lo reancio. Te olvidabas de estar, si se borró, no se borró la tabla, aunque después el Word, todo eso mejoró mucho. Pero el látex nació justamente en respuesta a eso. Entonces el látex lo hacía mucho, muy bien. Entonces por eso que muchos escribimos en látex nuestros documentos. Porque lo hacen muy bien.
+58:05 Speaker 2: Pero ahora,
+58:07 Speaker 1: Ya no nos preocupamos de eso, ¿no? O sea, viene un documento de tesis, ¿no? Revísame la referencia. Si están bien referenciadas todas, si son las correctas o no, ya está ahí y ya lo hacen.
+58:20 Speaker 2: Entonces, todas esas
+58:23 Speaker 1: cositas operativas ya los pasamos, ¿no?
+58:28 Speaker 2: ¿Ok? Muy bien. ¿Preguntas?
+58:43 Speaker 1: Bien, ¿alguna bibliografía? Un poco, bastante del contenido del curso está basado en este primer libro de Deep Learning, que fue uno de los primeros que salió también. Y es un libro muy simpático, está en línea. También lo tenemos en físico acá en el laboratorio. Pero todo el libro está en línea. Este es el que más utilizamos como base. Lo simpático de ese libro es que también tiene fundamento matemático, pero no llega a un fundamento matemático de demostración. Se dice que la teoría de la matemática es como para que tú tengas la base de dónde vienen las
+59:34 Speaker 2: cosas, pero no llega a ese nivel de un
+59:37 Speaker 1: libro de demostración de matemática. Así que es muy elegante, muy bonito, así que lo recomiendo fuertemente ese libro. Si alguien me quiere decir cuál es el libro principal del pulo, pues sería ese.
+59:50 Speaker 2: Ya.
+59:51 Speaker 1: El de... El de... El de... El de... El de Budumat también.
+01:00:02 Speaker 2: Es... Bueno. Ya. El de Jerón. También un
+01:00:06 Speaker 1: libro súper interesante. Sobre todo porque Jerón...
+01:00:11 Speaker 2: Eh...
+01:00:12 Speaker 1: Tiene un acercamiento más a la parte estadística de las cosas. También digo muy
+01:00:19 Speaker 2: simpático. Aunque queda un poquito
+01:00:22 Speaker 1: despasado porque los algoritmos que acompaña todo eso muchas veces están deprecados. Pero sí
+01:00:31 Speaker 2: funcionan generalmente.
+01:00:33 Speaker 1: Porque también la programación que colocan ahí es una programación muy general. No está tan amarrada a una librería. Y bueno, luego hay cursos que vienen ahí en la
+01:00:50 Speaker 2: web, ¿no?
+01:00:52 Speaker 1: Comenzando el curso de Deep Learning de Andrew, ¿no? Que está en Cursera, o estaba en Cursera, ya no está, me parece. Pero sus videos están ahí disponibles.
+01:01:08 Speaker 2: Luego el de Geoffrey
+01:01:10 Speaker 1: Hinton también. que también sus videos están disponibles y es el curso de redes neuronales porque finalmente el Deep Learning es con redes neuronales ese curso de redes neuronales es muy muy referenciado
+01:01:26 Speaker 2: tanto
+01:01:29 Speaker 1: Yoki
+01:01:32 Speaker 2: Hingong como
+01:01:34 Speaker 1: Yang Lecun y Benjo yo soy yo estamos
+01:01:41 Speaker 2: hablando de yo soy yo
+01:01:43 Speaker 1: yo fui jilton y ya ya me conoce son los ganadores del premio nobel de no
+01:02:00 Speaker 2: de
+01:02:00 Speaker 1: física premio nobel de física del año 2000
+01:02:48 Speaker 1: ¿Cuál fue el premio Nobel de Física de 2024? Ah, el premio... premio Turing han ganado los premios.
+01:02:55 Speaker 2: Pinton,
+01:02:57 Speaker 1: Jan Lecun y Joshua J.
+01:03:03 Speaker 2: Jeffrey Hinton con Hawking ganaron el premio Nobel.
+01:03:11 Speaker 1: Lo curioso es que el premio Nobel de física, ¿no? Porque no existe el premio Nobel de computación. Obvio, porque en la época de Nobel no había computación. Bueno, no era tan extendido, recién nacido. Y le dieron, ¿por qué? Descubrimiento de inversiones fundamentales que permiten la prensa en automático mediante redes neuronales artificiales.
+01:03:45 Speaker 2: Y Yann Lecun,
+01:03:48 Speaker 1: junto también con Hinton y con Benjo, ganaron el premio Turing. Es el
+01:04:06 Speaker 2: equivalente a premio
+01:04:20 Speaker 1: Nobel, pero para el área de computación. El 2018. Y en 2016 estuvimos aquí en la Universidad Jean de Coupe.
+01:04:54 Speaker 1: El 2016 organizamos una conferencia y ahí tuvimos como speaker principal a Jampo. Y dos años después le dieron el premio Turing. En la época ya era famoso.
+01:05:13 Speaker 2: Hasta ahora
+01:05:16 Speaker 1: se acuerdan de esa conferencia. El año pasado fui a Chile a una conferencia de inteligencia artificial. Y un tipo se me presentó así,
+01:05:24 Speaker 2: tú, tú
+01:05:28 Speaker 1: eres el peruano que trajo a Jan Lecun, me fascinó.
+01:05:32 Speaker 2: Yo me quedé sorprendido, me quedé así.
+01:05:35 Speaker 1: Sí, yo fui a la conferencia donde vino Jan Lecun en Perú. Y en la época recién se estaba hablando de redes convolucionales, pues su exposición de Jan fue justamente sobre redes convolucionales, que recién estaba hablando. para noviembre ahora vamos a tener una conferencia que la estamos repotenciando
+01:06:11 Speaker 2: ahorita
+01:06:17 Speaker 1: estamos en plena evaluación de los trabajos Pero ya nos estamos organizando para el 2027 a traer a alguien así de renombre. No podemos anunciar nada mientras no tengamos la seguridad.
+01:06:37 Speaker 2: Pero esta conferencia estamos
+01:06:41 Speaker 1: organizando para noviembre y
+01:06:44 Speaker 2: va
+01:06:48 Speaker 1: a ser publicada.
+01:06:53 Speaker 2: En Springer, en
+01:07:02 Speaker 1: AXA.
+01:07:05 Speaker 2: Y Springer es
+01:07:06 Speaker 1: una editorial de renombre.
+01:07:12 Speaker 2: Le
+01:07:12 Speaker 1: hemos tenido que demostrar que somos una universidad seria, un grupo serio, que tenemos antecedentes de haber organizado cosas para que nos acepten. Así que es un gran logro de que nos hayan aceptado para publicar los artículos que van a ser aceptados en
+01:07:28 Speaker 2: el evento.
+01:07:32 Speaker 1: Así que para el próximo año también vamos a tener obviamente la edición, así que lo queremos hacer con más fuerza, así que también si alguien por ahí está comenzando a hacer un trabajo puede ir pensando en publicarlo. Los trabajos que van a ser aceptados van a estar publicados en Spring. Esas son algunas de las cositas que tenemos desarrollando y que yo espero que ustedes sean partícipes también de varias actividades. Alguien me decía, ¿cómo participo del grupo? Bueno, todos los que trabajan con algún, con alguien del grupo, con algún profesor del grupo, ya pues se participe, por default ya es miembro del grupo.
+01:08:17 Speaker 1: Si están haciendo su test, si trabajan con Don Cevain, ¿no? Que ya es miembro del grupo, ¿no? Ya, dile a Don Cevain nomás, este...
+01:08:24 Speaker 2: ¿Dónde viene? Mi carnet.
+01:08:29 Speaker 1: No, no damos carnet, nada, pero todos aquellos que trabajan con nosotros, con algún profesor, ya es miembro del grupo, ¿no? Si por ahí, digamos, como ocurre también con muchos de nuestros egresados, se van al extranjero, están postulando una maestría o un doctorado, quieren cartas de recomendación, pues también ahí estamos la gente del grupo para darles la carta de recomendación.
+01:09:01 Speaker 1: ¿Preguntas? ¿Más preguntas?
+01:09:12 Speaker 2: ¿El parcial es en la semana 8 y en la semana 9 hay clases? Sí, clases.
+01:09:18 Speaker 1: Ya comienza con el profesor Rodrigo. Salvo que... Bueno, sería cuestión de conversar, ¿no? Salvo que ustedes quieran dar el examen en la semana 9, ¿no? Adelantamos la clase de Rodrigo y la semana 9 me dan el examen conmigo. Si es que se les acomoda a ustedes. Si no que en este caso, justamente
+01:09:45 Speaker 2: estamos hablando de este
+01:09:47 Speaker 1: programa 5 más 1. ¿Han escuchado el 5 más 1?
+01:09:53 Speaker 2: Mónica, ¿entonces el 5 más 1? Es un
+01:09:58 Speaker 1: poco lo que ustedes saben que están haciendo, ¿no? Es, por ejemplo,
+01:10:01 Speaker 2: lo que es transversal.
+01:10:05 Speaker 1: La idea estaba en que con el programa 5 más 1 que la universidad quiere estimular es que muchos de nuestros estudiantes de pregrado ya
+01:10:14 Speaker 2: avancen
+01:10:16 Speaker 1: con cursos de posgrado, así como lo están haciendo ustedes ahora, ¿no? Y bueno, luego hacen un año más y ya salen también con el grado de maestría, ¿no? Es un poco la idea, ¿no? Ese es el programa 5 más 1. Algunos programas están como pilotos,
+01:10:34 Speaker 2: pero
+01:10:36 Speaker 1: bueno, lo que he escuchado es que quieren ampliarlo a otros más programas. Y bueno, y ahí uno de los problemitas justamente es la semana de exámenes. Porque si va a haber alumnos que están en el programa de 5 más 1, justamente en posgrado tomamos examen es más. La calificación la podemos hacer la semana 8, 7, yo que sé, ¿no? Tenemos un poco un libre albedrío ahí, ¿no? Entonces para los alumnos de pregrado eso es un poco que se complica, ¿no? En su calendario.
+01:11:13 Speaker 1: Entonces, pues, están discutiendo si es que en posgrado vamos a tener, si va a haber ese programa de 5 más 1, digamos, para todos, entonces posgrado vamos a tener que alinearlos también a la semana de exámenes de pregrado, ¿no? Para no distorsionar los calendarios. entonces por eso si es que por ahí ustedes me dicen por qué debemos dar el examen la semana 9 entonces yo les pido a rodrigo cd rodrigo la semana 8 ya avanza continúa y la semana 9 tomamos el examen puede ser si les conviene que
+01:11:45 Speaker 2: todo es
+01:11:46 Speaker 1: manejado
+01:11:47 Speaker 2: bueno
+01:11:55 Speaker 1: ya me conocen ya conocen el curso el contenido todo ¿A qué se presenta?
+01:12:31 Speaker 2: Aplicar algún conocimiento de... No, está bien
+01:12:43 Speaker 1: eso, ¿no? Habíamos tenido gente de física también, ¿no? Habían salido buenos proyectos, ¿no? Sí, sí, sí.
+01:12:50 Speaker 2: Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí.
+01:12:55 Speaker 1: Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí. Sí, sí, sí, sí. Sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí,
+01:13:01 Speaker 2: sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí Eso es por mi parte.
+01:13:08 Speaker 1: Bien, Efraín, gracias.
+01:13:11 Speaker 2: Mi nombre es Juan Luis Zavala. Bueno, estoy en pregrado. Acerca de las agrupaciones, bueno, como ya mencionó el profesor, ahora estoy en el grupo de inteligencia artificial. Actualmente estoy con el profesor, se va investigando un poco acerca de estas últimas tendencias de IA, lo que son RAG, agénticos, todo lo que es orquestación, procesamiento de lenguaje natural. Trabajo en Perú Petro. Soy practicante y estoy tratando de llevar ahí también la IA. Estamos tratando de hacer un chatbot institucional de la misma manera con rajagénticos. Buenas noches, soy Jorge Chamorro. Mi asesor es el profesor Ferdinand del Grupo IA. Mi tema es segmentación semántica en la morfología de la trucha y me metí justamente a este curso para querer aplicar lo que voy a ver este ciclo.
+01:14:16 Speaker 2: Mi nombre es Alessandro Santé, también soy de la carrera de informática de empregado. Y bueno, en cuanto a I, ahorita diría que es mi tesis. Estoy con el profesor Edwin Álvarez. Estamos tratando de hacer un modelo para detectar anomalías en series de tiempo multivariadas. Ah, qué bien. Alessandro, ¿no? Sí. Mi nombre es Kevin Alca, también soy de pregrado de informática. Y respecto a IA, lo que tengo más relacionado con mi tesis, estoy con el profesor Ayma, y se basa básicamente en comparación de modelos de Big Derny aplicado en colorimetría e imágenes.
+01:15:01 Speaker 2: Yo soy Luis Miranda, actualmente estoy cursando a otro sitio, estoy por empezar el tratamiento de lo que tendría que ser mi tesis y el objetivo principal por el que presenté el curso es porque me interesa trabajar con grandes volúmenes de datos. lo que se encuentra por ejemplo en las redes sociales, reviews, revistas, comentarios, TikTok, Facebook y múltiples plataformas que se encuentran en la red y armar eso para comprender y sacar las relaciones entradas en el cliente. Eso puede armar como una oferta para diferentes empresas. Entonces lo que quiero aprender son esas técnicas de expresión y cómo condensar la data de una forma óptima, por ejemplo mediante el uso de rags y algoritmos como el A estrella para lo que es dividirlo por segmentos de datos. Entonces es lo que sería hacer un poco más la ciencia porque lo
+01:15:53 Speaker 1: tengo bastante suelto. Está bien. Al final lo
+01:15:56 Speaker 2: que quieres decir es plata. No, está bien. Está bien.
+01:16:05 Speaker 1: Está bien. Tengo varios alumnos que han terminado haciendo trabajo y que al final han hecho una aplicación, han terminado su solución, la han terminado llevando a una empresa.
+01:16:17 Speaker 2: Y les pagan por eso. Bien. Bien, mucho. Mi nombre es Daniel Zapardo. John, soy estudiante de ingeniería informática, que forma parte del grupo de inteligencia artificial, esto porque mi asesor es Pablo Fonseca, con el cual hoy en día estoy haciendo la tesis de un pipeline de extracción de casos clínicos estructurados, estructurando por síntomas, tratamientos, esto con casos oncológicos directamente peruanos. que actualmente también estamos esperando. Yo y mi asesor en el tema del resultado de WayLab, porque él y yo hemos presentado. Y actualmente me encuentro laborando también en una empresa. Naturalmente, todo netamente en la Vigilidad, y estamos en el fin de presentarlo para capaz modelos productivos que puedan ayudar a la empresa, y sobre todo... explotar más el potencial de guía que se tiene del conocimiento.
+01:17:24 Speaker 1: Sí, sí, está bien. Están
+01:17:26 Speaker 2: con buena gente ustedes, ¿no?
+01:17:29 Speaker 1: Explótenlos, ¿no?
+01:17:31 Speaker 2: Explótenlos.
+01:17:33 Speaker 1: Explótenlos ahí. Víctor tiene
+01:17:36 Speaker 2: buena
+01:17:36 Speaker 1: experiencia. Ni hablar ahí. Edwin también. Ni hablar de Ferdinand. Ferdinand Pineda. Sí, buena experiencia.
+01:17:59 Speaker 1: Mi nombre es
+01:18:12 Speaker 2: Cristian, yo
+01:18:13 Speaker 1: también con corta experiencia mío, ese tesis también con Guernal. ponen los mismos temas de expansión de imágenes, modelos para cuantizarlas y describir local, planteo imágenes como generadores de textos, pero alguien expandizado para describir en el full local, con voz training y todo el video, y... y ese es el último personal para acabar la carrera, de terminarlo.
+01:18:37 Speaker 2: Bueno, soy Cristian Taguancho, es mi segundo ciclo de maestría, y bueno, soy mi economía de investigación, con el estudio nuevo, puse un modelo de mi tesis, que es para generar modelos de espacios temporales, de contaminación en todo lo que sería San Miguel, todavía están en la etapa previa, no hay investigación, pero ahí vamos. Y, bueno, me gusta lo que es la estructura práctica en curso de ahí, ¿no? Creo que ahora soy súper atendible.
+01:19:10 Speaker 2: Y tal vez en un futuro cercano, dedicarme a docencia, porque me gusta bastante lo de la gente no conocía en su parte, junto con investigación, ¿no?
+01:19:20 Speaker 1: Mi nombre es Juan Fatama, en realidad tengo un compañero que está en el estudio del segundo ciclo de la maestría de informática y el curso breve. En sí, bueno, experiencia en proyectos pasaron tesis. Bueno, pero eso era antes de eso. Experiencia previa, bueno,
+01:19:38 Speaker 2: más que nada es... ...es unida experiencia trabajando en estos proyectos.
+01:19:44 Speaker 1: Yo tengo los datos solo para explotar.
+01:19:46 Speaker 2: Entonces,
+01:19:48 Speaker 1: ahí se debe ver cuáles serían los modelos para poder... ...cuáles son los modelos para
+01:19:52 Speaker 2: poder... Mi nombre es Cristian Caledón. Estoy
+01:20:00 Speaker 1: empleado en informática. Con un
+01:20:02 Speaker 2: dato curioso quería
+01:20:05 Speaker 1: mencionar que yo había participado en el weblab del año pasado. Sobre un paper sobre la precipitación.
+01:20:14 Speaker 2: ¿Con quién lo trabajaste? Con mi grupo. Bueno,
+01:20:18 Speaker 1: el profesor Llanueva nos mandó un correo para indicarle...
+01:20:33 Speaker 2: Cristian,
+01:20:34 Speaker 1: ¿no? Renato.
+01:20:41 Speaker 2: Álvaro Barrios.
+01:21:02 Speaker 2: Buenas noches, soy Daniel Camarena Estoy trabajando en el área de geografía. Y bueno, estoy viendo ondas de calor marina, o sea, las anomalías térmicas del barco. Y bueno, estoy estudiando ondas de calor marina y posteriormente estoy pensando en implementar algún modelo de pronóstico de ondas de calor marina. ¿Con quién estás trabajando? Bueno, estoy trabajando con Adolfo Chamorro, que es físico y él está en el tratamiento de matemáticas.
+01:21:37 Speaker 1: Sí, sí me han hablado.
+01:21:45 Speaker 2: Hola, ¿qué tal? Yo soy Jotín
+01:21:47 Speaker 1: y bueno, estoy trabajando actualmente en el doctorado en la navegación de un robot agricolano con modelos de Deep Learning,
+01:21:58 Speaker 2: la idea es que tengo integrado. ¿Dónde ya qué es eso? ¿Con Miguel? ¿Estás trabajando? En
+01:22:03 Speaker 1: realidad es
+01:22:04 Speaker 2: el Grupo Albico, ¿no? Donde está Miguel, Celso,
+01:22:07 Speaker 1: también y mi asesor es Elisa Villota.
+01:22:11 Speaker 2: Ah, claro. Claudia. Hola a todos.
+01:22:42 Speaker 2: Bueno, mi nombre es Mónica Barca, soy ingeniería mecatrónica, me he visto hace el primer año del doctorado, me voy a ganar con un profesor, y junto con Cristian estamos en el sistema de calidad del aire, y vamos a restaurar juntos en el proyecto, un proyecto que nos ha dado por su poscociencia para hacer selecciones.
+01:23:08 Speaker 2: que también hay en los amores. Soy estudiante, pero ahora soy estudiante en la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad de Ciencias de la Universidad
+01:23:39 Speaker 1: de
+01:23:43 Speaker 2: Ciencias de la Universidad de ¿Estás trabajando entonces en qué?
+01:23:47 Speaker 1: ¿Ya has iniciado tu trabajo de tesis?
+01:23:56 Speaker 2: Mi nombre es Hernando Orna, soy alumno de la maestría de estadística, estoy bien en el segundo semestre. Me interesa mucho el tema de la maestría de la maestría de la maestría de la maestría de la maestría.
+01:24:27 Speaker 2: ¿Tu
+01:24:28 Speaker 1: nombre era? Armando, ¿no? Muy bien, Armando.
+01:24:31 Speaker 2: Buenas noches, me gustó. Este es mi segundo comentario de la maestría diplomática. Con mi novio, que es el profesor de Soho, nací acá, tiene la comunicación, estoy trabajando con el profesor de Soho en el BSP. Actualmente soy como K&G. donde luego tenemos que entrar con personas agentes, con LMS y todo el sistema de dependencia. Y un poco generalmente sería poder profundizar un poco más ya a nivel de técnico, lo que hay detrás de los modelos y cómo podemos visitarlo. Y también el primero sería poder hacer un poco más de...
+01:25:21 Speaker 2: Te has ido al lado oscuro. En el término
+01:25:30 Speaker 1: más positivo, ¿no? Los que se han ido a hacer el plato, se han ido al lado oscuro, decimos.
+01:25:42 Speaker 2: No, pero
+01:25:43 Speaker 1: es bien gratificante verlos así como despegan y con éxito. Me gusta ver a muchos de los ingresados que están muy bien colocados en las empresas. Están muy bien colocados. Están liderando ya grupos, equipos de trabajo. Y jóvenes, ¿no? Bien
+01:26:05 Speaker 2: jóvenes.
+01:26:08 Speaker 1: Menos de 30 años ya están liderando grupos de trabajo, equipos, proyectos. Y eso es chévere. Siempre me encuentro con muchos de ellos. Y verlos cambiados, ¿no? Porque así vemos las utilidades que nos vemos como estudiantes y todo, ¿no?
+01:26:26 Speaker 2: cambiado ya.
+01:26:27 Speaker 1: Se nota que están ganando plata.
+01:26:31 Speaker 2: Se nota que están ganando plata. Sí, muy bien. Así que,
+01:26:37 Speaker 1: bienvenido.
+01:27:06 Speaker 2: Ahí juega 20 horas y está mal. Pero estamos juntos. Hola a todos, mi nombre es Luisa Corzal, soy estudiante liderado desde un ciclo, y estoy siguiendo la consultación de IA. También mi intenso es el sobre la entrevista artificial convencional más funcionada a NLP, pero estoy llevando este curso también porque me gustaría entender la próxima de lo que hay detrás del modelo.
+01:27:44 Speaker 2: ¿Con quién estás trabajando? Con Andrés. Ah, ya.
+01:27:48 Speaker 1: Andrés ha sido fundadora del grupo.
+01:27:54 Speaker 2: Pero bueno, muy bien.
+01:27:56 Speaker 1: Entonces, hacemos un break de unos
+01:27:58 Speaker 2: 10 minutitos.
+01:28:01 Speaker 1: Una introducción más o menos a lo que es el Big Learning. Empezando, esta imagen siempre me gusta mostrarla, aunque ahora ya es algo muy común, ¿no? Pero cuando salió este aplicativo en el que tú podías generar imágenes, digamos, ¿no? a partir de tus
+01:28:25 Speaker 2: fotos actuales era
+01:28:32 Speaker 1: tan simpático tu recolocabas tus fotos actuales en distintos escenarios de ti recolocabas como unas 20 o 25 fotos Y luego reentrenabas el modelo, ¿no? Porque era un modelito que reentrenábamos. Y luego le pedías al modelito ya entrenado, porque este modelito lo que hacía es extraer tus características de tu rostro, ¿no? Especialmente. Y luego con esas características tú le podías pedir, por ejemplo, dame una foto de cuando era niño, de lo que voy a hacer adulto, o dame una foto... De mi, digamos, estilo, no sé, Harry Potter o estilo, yo qué sé,
+01:29:19 Speaker 1: no sé, dibujo animado, de algún estilo de dibujo animado, ¿no? Entonces, y te da la imagen,
+01:29:26 Speaker 2: ¿no?
+01:29:28 Speaker 1: Pero ahora ya los modelos, no es necesario que tú le pongas 30 fotos o 25 fotos, tampoco es necesario que tú reentrenes el modelo para poder extraer las características de tu rostro en este caso y le pidas una foto, sino ya ahora básicamente es con una sola foto. Si le das una sola foto, le pides que te genere imágenes de cualquier tipo de tu rostro e inclusive puedes pedirle a este que te
+01:29:54 Speaker 2: genere video. Entonces,
+01:29:59 Speaker 1: pero para la época era simpático, era simpático ese tipo de aplicaciones. Y ahí generé esa, que le gustó mucho a mi mamá, me dice, ese sí era cuando yo
+01:30:09 Speaker 2: tenía. Es igual.
+01:30:13 Speaker 1: Y bueno, y luego esa... una idea de poder generar imágenes, otro video muy conocido fue el de Obama en
+01:30:25 Speaker 2: el que hicieron
+01:30:33 Speaker 1: un video de Obama haciendo un discurso que él nunca había hecho un video fake
+01:30:40 Speaker 2: pero no era un video fake
+01:30:42 Speaker 1: generado por un modelo generativo, era un video fake hecho con técnicas de procesamiento de imágenes, procesamiento de video. Y lo que hacían era poder
+01:30:53 Speaker 2: identificar la
+01:30:55 Speaker 1: región donde estaban los labios, la región donde estaban los ojos también, para darle una sensación de movimiento. Y prácticamente lo que hacían era solamente abrir y cerrar los labios, dando la sensación de que estaba hablando.
+01:31:12 Speaker 2: Pero...
+01:31:15 Speaker 1: era un poco para mostrarles la idea cómo es que ha ido evolucionando esto de los modelos generativos de manera que todo comenzó haciendo procesamiento de imágenes detección en este caso de la región de la
+01:31:32 Speaker 2: boca y luego reemplazar también
+01:31:35 Speaker 1: la región de los ojos y reemplazar dándole la idea de que hay un movimiento Entonces, por más que no estaba diciendo, las expresiones de los labios no reflejaban el discurso mismo, pero daba esa sensación de que, ¿no? Como los videos que son, ¿no? Este, digamos, llevados a otro idioma, ¿no? Pero el movimiento de la boca, todo, digamos, es un idioma original, es en inglés, está hablando en inglés, pero si lo llevas a otro idioma, pues... Y alguien que hace lectura de labios, pues no está diciendo en el idioma en español, por decir, lo que en verdad no refleja su labio.
+01:32:16 Speaker 2: Pero es
+01:32:17 Speaker 1: parte de lo que es la evolución que se dio con los modelos generales. Otra aplicación súper conocida es la de la AlphaFold. Inclusive hay una película de esto. ¿Han visto la película?
+01:32:37 Speaker 1: Yo les recomiendo ver la película,
+01:32:39 Speaker 2: en
+01:32:40 Speaker 1: la que muestran como es que Dennis Hassabis, si no me equivoco, que es justamente el
+01:32:47 Speaker 2: autor de este proyecto.
+01:32:51 Speaker 1: Y Dennis Hassabis hasta ahorita está con la idea de que él quiere lograr la inteligencia artificial general, es decir, quiere llegar a desarrollar el algoritmo. que tenga la misma capacidad de inteligencia que nosotros tenemos las personas. Entonces está en esa idea. Es más, en la película él dice que desde niño él ha querido desarrollar la inteligencia artificial general. Y él inclusive asegura que está en ese camino. De acá en algunos años lo va a conseguir. Y justamente uno de los hitos
+01:33:28 Speaker 2: con el que él...
+01:33:31 Speaker 1: Él se hace conocido y también hace conocido esta aplicación, es Alfapot. ¿Qué
+01:33:35 Speaker 2: es
+01:33:37 Speaker 1: lo que hace? Le damos una cadena de aminoácidos, que es la secuencia ACTG de aminoácidos que tenemos en el ADN, y le da una secuencia, a partir de esa secuencia genera la estructura tridimensional de una proteína.
+01:33:59 Speaker 2: Entonces...
+01:34:01 Speaker 1: este aplicativo es muy bueno porque finalmente tú le estás dando una secuencia temporal unidimensional de aminoácidos y que todavía son solamente cuatro letras, ACTG nada más y a partir de esa secuencia te genera una estructura tridimensional esto al menos para la biología es una revolución total
+01:34:27 Speaker 1: Porque encontrar la estructura tridimensional de una proteína y que solamente tú tenías la estructura de ADN, pues antes de esto prácticamente eran tesis doctorales. Una tesis doctoral que se llevaba dos, tres años, cuatro años para poder encontrar la estructura de cómo también ni siquiera era la estructura tridimensional exacta, sino lo
+01:34:55 Speaker 2: que es.
+01:34:56 Speaker 1: más o menos no
+01:34:58 Speaker 2: se
+01:34:59 Speaker 1: asumía cómo era la estructura tridimensional de esas proteínas y etcétera pero ahora eso lo hacen en segundos y manda tomada inclusive lo que está en internet ya está libre no mandas y todos los laboratorios de biología por ejemplo agarran sus estructuras lanzan y ver cuál es la visualizan la estructura 3d
+01:35:24 Speaker 1: Y esto es una revolución, ¿por qué? Porque a partir de esa estructura tú consigues determinar, por ejemplo, antídotos sobre algunas enfermedades, se viene estudiando mejor, por ejemplo, el cáncer, ¿no? A partir de esto, ¿cómo? Y bueno, es una maravilla, en verdad, ¿no? Les ha ahorrado, pues, cientos de horas y horas en laboratorio a los biólogos para poder determinar estructuras. de proteínas y todo entonces ahí lo recomiendo ahí no me acuerdo muy bien la película pero
+01:36:22 Speaker 1: Ah, también ganó el premio Nobel, pero en química. Otro que ni siquiera es químico, pero le han dado el premio Nobel de química.
+01:36:32 Speaker 2: El premio Nobel de química en el 2024.
+01:36:36 Speaker 1: Justamente fue por... por Alfa. ¿No? Ahí está.
+01:36:42 Speaker 2: ¿Impacto Alfa?
+01:36:43 Speaker 1: ¿Logró mapear? Casi 200 millones de proteínas conocidas acelerando en años el trabajo de investigación biológica y médica.
+01:37:26 Speaker 2: Ahí está libre,
+01:37:28 Speaker 1: así que cuando tengan tiempito, vean la app. Y para que vean un poco cómo es que ha comenzado a evolucionar esta idea de poder llegar a este aplicativo, de generar, por ejemplo, estructuras 3D de las proteínas. Todos
+01:37:49 Speaker 2: los
+01:37:51 Speaker 1: fracados que han tenido también, para
+01:37:52 Speaker 2: poder llegar.
+01:37:55 Speaker 1: Después las técnicas que han ido utilizando, aprendizaje por refuerzo o no, para poder el entrenamiento. Interesante.
+01:38:12 Speaker 2: Luego, otro objetivo que fue revolucionario
+01:38:15 Speaker 1: fue el año, o sea, vamos a hablar del año 2014 también, más o menos que todo este año, ¿verdad? ChatGPT ya lo conocíamos, al menos lo que estábamos en la línea, ya habíamos visto el ChatGPT, el 1.0, que era medio punto. era un chatbot normal pero te daba cuenta que era un chatbot al final era unas 5Rs pero ya hacía algo el
+01:38:48 Speaker 2: GPT-2
+01:38:49 Speaker 1: mejoró bastante
+01:38:52 Speaker 2: ya
+01:38:53 Speaker 1: mejoró pero igual te daba cuenta pues que Que era un chavo, ¿no? Que tenía muchas alucinaciones también. Y además que te contestaba una pregunta por otra. Tenía respuestas incoherentes, ¿no? Entonces... Pero ya con el chat GPT, el 3.0, ¿no? Que sale y... Y cuando ya uno lo comienza a utilizar, dice, opa, acá la cosa ya es diferente, ¿no? Este ya no se equivoca tanto, ¿no? No se equivoca y ya me está dando respuestas más coherentes. Entonces se notaba que había una evolución muy, muy buena, ¿no?
+01:39:31 Speaker 1: Pero fue más sorprendente
+01:39:33 Speaker 2: cuando sale Dalí y
+01:39:35 Speaker 1: que tú a partir de darle un texto, que ahora ya es algo muy común, pero en la época tú le dabas un texto, un prompt, y te genera una imagen,
+01:39:43 Speaker 2: ¿no?
+01:39:44 Speaker 1: Te generaba una imagen y entonces uno decía, oye, pero ¿cómo lo estás haciendo? Tú le estás dando un prompt y te está entendiendo el texto, el contexto, lo que tú le estás dando ese prompt y te está generando una imagen a partir de eso.
+01:39:59 Speaker 2: Entonces, eso fue,
+01:40:01 Speaker 1: al menos para los modelos generativos, fue algo revolucionario porque uno se pone a pensar, ¿y cómo lo hace? O sea, al menos... Nosotros que somos del área, oye, ¿cuál es el modelo que funciona detrás de esto? Y el modelo que estaba detrás era el clip, ¿no? El clip que era un modelito que en verdad lo que hacía era, o lo que hace es, ¿no?
+01:40:27 Speaker 2: Como
+01:40:28 Speaker 1: empatar prácticamente espacios vectoriales, ¿no? Lo que vamos a ver, por ejemplo, en el fondo de todos estos modelos generativos, están los espacios vectoriales. Entonces, lo que era, era agarrar, por ejemplo, el PROM, que es un texto, generaba, se iba a un espacio vectorial, y luego compatibilizaba con otro espacio vectorial de las imágenes. Eso lo vamos a ver más adelante también, cómo funciona eso.
+01:40:59 Speaker 2: Pero...
+01:41:01 Speaker 1: Esa idea fue algo muy revolucionario y ahora que los actuales modelos generativos de imágenes, de videos, ahora están utilizando modelos difusos. Que es lo que más utilizan. Flip fue uno de los primeros modelos y ahora lo que más utilizan son los modelos difusos. Pero para la época, pues, la primera vez que al menos yo personalmente utilicé este DALI, puse un pronoun en texto y me generó una imagen y yo me quedé sorprendido. Ya, entonces yo dije, ¿cómo lo están haciendo? Si ya con texto estábamos sorprendidos, cuando se genera la imagen, wow, no es mucho más.
+01:41:51 Speaker 1: Como les había mencionado, el
+01:41:53 Speaker 2: Deep Learning es
+01:41:56 Speaker 1: una sub-área del Machine Learning, que a esta vez es una sub-área de la Inteligencia Artificial.
+01:42:05 Speaker 2: Y no es nuevo, ¿no?
+01:42:08 Speaker 1: Hay muchas de las técnicas, por ejemplo, que en el curso, que el mismo AlexNet, del año 2012, no es que se crea. Finalmente vamos a ver que es una red convolucional, como que una red convolucional que ya existía en el año 14 años atrás.
+01:42:28 Speaker 2: Y solamente
+01:42:31 Speaker 1: que fue revolucionario porque resolvió un problema. Pero las técnicas ya venían de tiempos atrás. Es más, hay mucha discusión entre muchos autores sobre quién es el autor. o creador de las redes convolucionales. Le dan el mérito mucho a Jan Lecun, pero hay un alemán que dice ser el autor de la red convolucional.
+01:42:58 Speaker 2: Hay un japonés también que dice ser
+01:43:00 Speaker 1: el autor de la red convolucional. Pero en verdad, cada uno ha ido estudiando y, bueno, quien se ganó los créditos fue el que la popularizó, ¿no?
+01:43:07 Speaker 2: No,
+01:43:08 Speaker 1: finalmente. Y Jan Lecun fue el que popularizó las redes convolucionales.
+01:43:13 Speaker 2: Pero,
+01:43:14 Speaker 1: muchas de las técnicas que vamos a ver en redes neuronales vienen de los años 80, los 90, ¿no? Ni hablar, ¿no? El algoritmo que está por detrás del entrenamiento de una red neuronal que es el más propagación, que hasta ahora se utilizaba desde el año 86. Entonces, ¿no? O sea, son técnicas que vienen de tiempo, ¿no?
+01:43:34 Speaker 2: Entonces,
+01:43:35 Speaker 1: al menos para nosotros pues sabemos que la inteligencia artificial no es algo nuevo, ¿no? Se ha popularizado recientemente, sí, pero no es algo nuevo.
+01:43:45 Speaker 2: Machine Learning, aunque
+01:43:49 Speaker 1: ahora sea muy popular también, pero el concepto mismo del aprendizaje automático para la programación de una computadora también es algo revolucionario en el sentido de que cuando nosotros programamos una computadora... digamos, tradicionalmente, o cuando programamos nuestros algoritmos tradicionalmente, lo que hacíamos era conseguir el conjunto de datos, ¿no? ¿Ya? Determinar para qué sirve ese conjunto de datos, o sea, qué problema nos va a resolver. Y luego, hacíamos el algoritmo para poder resolver ese problema y obteníamos una solución.
+01:44:30 Speaker 2: ¿Ya? En Machine Learning nos
+01:44:32 Speaker 1: dicen, ¿sabes qué? Tú dame los datos, dame las medidas. Y yo voy a generar el
+01:44:38 Speaker 2: algoritmo,
+01:44:39 Speaker 1: que sería el modelo entrenado. Ese concepto, por ejemplo, bueno, nosotros lo podemos entender, ¿no? Finalmente yo tengo un modelo, tengo los datos, voy a entrenar el modelo, al menos ya han hecho el curso de Machine Learning, ¿no? Sí, dame nomás los datos, entreno el modelo, puedo usar un SPM, una red neuronal, o un simple árbol de decisión, entreno y obtengo el modelo entrenado. Ahí está.
+01:45:06 Speaker 2: ¿Ya?
+01:45:06 Speaker 1: Y comienzo a hacer las predicciones. Porque el objetivo es ese, ¿no? Tú entrenas un modelo para poder hacer las predicciones.
+01:45:15 Speaker 2: Pero, si
+01:45:16 Speaker 1: nosotros conversamos con alguien, digamos, de economía, ¿no? Que hacen sus modelos econométricos. Con los meteorólogos, ahora que estamos, tanto que está de moda el cambio climático y todo, ¿no? Cómo hacen las predicciones de clima, por ejemplo, ¿no?
+01:45:33 Speaker 2: Entonces...
+01:45:34 Speaker 1: Los meteorólogos, por ejemplo, alguien que estudia meteorología, pues los modelos matemáticos que estudian son tremendos. Tienen muchas variables, tienen mucha matemática por
+01:45:47 Speaker 2: detrás, de cálculo y todo ello.
+01:45:50 Speaker 1: Y toda esa matemática que está por detrás, luego lo llevan a un algoritmo, ingresan los datos y el algoritmo calcula de acuerdo a los datos que le estás dando y te da una salida, una predicción.
+01:46:02 Speaker 2: Pero si es que al
+01:46:03 Speaker 1: economista tú le dices, ¿sabes qué? Dame los datos, dame tus salidas y yo voy a hacer un modelo o voy a entrar a un modelo que va a hacer las predicciones. Ese concepto nada más de que lo
+01:46:21 Speaker 2: que yo quiero es tus datos,
+01:46:24 Speaker 1: cuáles han sido las salidas y solamente esa información nada más quiero. para poder encontrar un modelo que haga predicciones. O sea, eso ya es un concepto revolucionario. Y es lo que trajo el machine learning. ¿Por qué? Ya no estamos
+01:46:40 Speaker 2: buscando programar
+01:46:44 Speaker 1: un modelo matemático.
+01:46:46 Speaker 2: ¿Ya?
+01:46:47 Speaker 1: Sino lo que estamos haciendo es simplemente dedicarnos a encontrar los datos. A buscarlos. Por eso que... Machine Learning, y obviamente en Deep Learning, porque es una parte de Machine Learning, lo que interesa son los datos. Datos que sean muy representativos del problema que queremos resolver.
+01:47:09 Speaker 2: Que tengan
+01:47:10 Speaker 1: mínimo de sesgo. Obviamente el sesgo nunca vamos a poder eliminarlo, pero que tengan por lo menos mínimo, sea representativo, de tal manera que nos permita hacer un algoritmo o entrenar un algoritmo que nos permita hacer las predicciones. Entonces, ese concepto ya es revolucionario.
+01:47:32 Speaker 1: Entonces, alguna vez yo conversaba con un amigo que era economista y justamente le pregunté cómo hacían sus
+01:47:38 Speaker 2: predicciones.
+01:47:41 Speaker 1: de econometría que ellos hacían para las bolsas de valores y todo eso también, ¿no? Entonces ellos creaban un modelo matemático y ese modelo matemático lo llevaban a un algoritmo, ¿no?
+01:47:52 Speaker 2: Y bueno,
+01:47:55 Speaker 1: y luego hallaban los resultados. Y cuando yo le conversaba y le decía, no, solamente quiero que me des
+01:48:00 Speaker 2: tus datos y tus salidas,
+01:48:03 Speaker 1: ¿no? Y de ahí vamos a hacer el modelo predictivo. O sea, no entraba en la cabeza. ¿Cómo es que vas a generarme un modelo a partir de los datos? O sea, no entrará en su concepto. Al igual que también más adelante la experiencia que les comentaba, que yo tengo de haber trabajado en visión artificial, por ejemplo, desde que yo era alumno de pregrado, ¿no? Así como ustedes que están ahí, entonces de pregrado, por ejemplo, mi interés era sobre visión artificial. Y todo lo que había trabajado era, pues, en los algoritmos de extracción de características, que es otro por acá, de textura, color, forma, todo ello, ¿no? Y cuando vienen redes convolucionales y te dicen, ya, olvídate de todo eso, no entra en tu cabeza, ¿no? Simplemente no entra en tu cabeza.
+01:48:58 Speaker 1: ¿Cómo va a ser un algoritmo? ¿Cómo va a extraer características, no? Tú que estás tan encuadrado en hacer ese trabajo. Y de pronto te dice alguien, ¿sabes qué? Olvídate de todo eso. Ya no... El algoritmo no va a hacer todo eso.
+01:49:13 Speaker 2: Entonces uno no... ¿No?
+01:49:15 Speaker 1: En tu concepto eso no cabe fácilmente, ¿no? Tu paradigma ahí te quiebra, ¿no? Y algo parecido pasaba con los amigos. Hasta ahora, ¿no? Algunos siempre preguntan muchos... que trabajan tradicionalmente en modelos econométricos, modelos de predicción de clima, o sea, está en su cabeza los modelos matemáticos.
+01:49:41 Speaker 1: Ahí está, justamente hay una imagen acá, así eran los modelos matemáticos, pónganse de predicción de clima, todos esos modelos, por ejemplo, para poder hacer predicción de clima, las ecuaciones que calculaban y todo eso. Y todo eso llevarlo a un algoritmo.
+01:50:02 Speaker 2: En física también no.
+01:50:03 Speaker 1: Hay bastantes de esos modelos, ¿no? Yo me acuerdo que, aunque ahora ya no se tiene, había Legión, creo que había un sistema que se tenía
+01:50:12 Speaker 2: acá.
+01:50:14 Speaker 1: Y todos los modelos físicos los lanzaban ahí, hacían el algoritmo, y muchos, inclusive de informática, comenzaban a trabajar con los colegas físicos para que esos modelos físicos se programasen y se hacía una computación distribuida. y acá los de DIRinfo tenían pues la lesión era como el programa ¿qué se llama? este programita en el cual no sé si todavía existe este de búsqueda de vida extraterrestre
+01:50:48 Speaker 2: el
+01:50:51 Speaker 1: CETI creo que es CETI ¿no? búsqueda de vida extraterrestre ¿En qué consistía ese programa? Que recibía las señales de radio, creo, ¿no? Que vienen del espacio y eran como paquetes de información. Y tú podías instalar el programita, el SETI, en tu computadora. Que ese programita, cuando tu computadora estaba en reposo, se conectaba con el servidor del programa SETI, descargaba un conjunto de datos. Y lo procesaba en tu máquina mientras no estaba en reposo tu máquina.
+01:51:30 Speaker 1: Era como un screensaver, ¿no? Un screensaver ahí. Y comenzaba a procesar tu máquina ese conjunto de datos para buscar algún patrón,
+01:51:38 Speaker 2: ¿no?
+01:51:39 Speaker 1: Y que si, supuestamente que si se encontraba algún patrón en la señal, es que eso era señal de vida inteligente, ¿no? Y bueno, hasta ahora no me encuentro nada. Pero la idea era algo parecido, ¿no? El programa que se tenía acá en Legión era algo parecido, que utilizaban todas las computadoras de la universidad para poder procesar algunas tareas, especialmente los colegas de física, que eran trabajos bastante demandantes de computación, y se hacía de forma distribuida, ¿no? Entonces se mandaban ciertos segmentos de información a los computadores que estaban en reposo y eso era el programa legio. Entonces muchos de esos modelos eran modelos matemáticos.
+01:52:32 Speaker 1: Bueno, ahí tenemos aprendizaje supervisado, aprendizaje no supervisado, aprendizaje con refuerzo, solamente para hacer un recuerdo. Supervisado. La idea es que nosotros tengamos lo que estaba mencionando en el principio.
+01:53:18 Speaker 1: lo que les indicaba para poder hacer nuestro entrenamiento lo que necesitamos son además de los datos sus etiquetas Entonces ahí podemos tener, por ejemplo, imágenes que representan una categoría, en este caso son de perros, imágenes de gatos, o documentos que representan algún tipo también de, digamos en este caso, noticias, que puede ser de tecnología, de deportes, de entretenimiento,
+01:53:46 Speaker 2: pero todos
+01:53:48 Speaker 1: tienen una etiqueta, a veces tienen etiqueta de ser de la categoría de perros, categoría de gatos, categoría de entretenimiento, o sea, la idea es esa, ¿no? El dato y su respectiva etiqueta. Igual también, para hacer la segmentación, tenemos también categorizados qué tipo de, digamos, de parte representa una región de una imagen, ¿no? Para poder hacer el entrenamiento del modelo. Aprender que lo supervisado, más bien, no tenemos la etiqueta. Solamente tenemos los datos. Y por eso que también se denomina como clustering, ¿no? Que es la tarea más, digamos, más conocida de aprendizaje no supervisado. Existen otras tareas de aprendizaje no supervisado,
+01:54:38 Speaker 2: como
+01:54:41 Speaker 1: puede ser reducción de dimensionalidad también, ¿no? Pero la más conocida es clustering, que es agrupamiento,
+01:54:46 Speaker 2: ¿no? Entonces yo tengo un conjunto de datos y
+01:54:49 Speaker 1: lo que decido es poder agruparlos por alguna característica, una métrica, ¿no? Generalmente una métrica de similitud que nos va a dar una medida que nos indique cuán parecidos son dos objetos y de acuerdo a esa similitud voy agrupando los elementos, ¿no? Y ahí tenemos varios algoritmos también que hacen aprendizaje o clases.
+01:55:12 Speaker 1: Luego la aprendizaje por refuerzo que es un mix, diríamos así, ¿no?
+01:55:19 Speaker 2: Que
+01:55:20 Speaker 1: también... Un poco emula lo que es el aprendizaje que nosotros tenemos las personas. De alguna manera cuando tenemos un aprendizaje, es un aprendizaje por refuerzo. A medida que nos vayamos equivocando, después dejamos de equivocarnos, de equivocarnos y vamos mejorando, mejorando. Es como un ciclo.
+01:55:39 Speaker 2: Vamos mejorando, mejorando. Más
+01:55:41 Speaker 1: o menos el aprendizaje por refuerzo también tiene esa idea. Cuando tú tienes una decisión correcta, te recibes como un premio y cuando haces una decisión incorrecta, recibes como un castigo, se establece una política de todo ello y entonces el modelo iterativamente va a ir mejorando o mejorando. El mejor ejemplo más exitoso son los juegos. Los juegos en los cuales se va tomando decisiones, por ejemplo, en un laberinto y luego el juego va tomando, cada vez se equivoca y va tomando mejores decisiones.
+01:56:13 Speaker 1: Exacto, así pues que ahora tenemos programas bajados con aprendizaje por refuerzos que juegan mejor que una persona. Por ejemplo, ¿quiénes son los DOTA? ¿Quiénes juegan DOTA? ¿Los doteros?
+01:56:35 Speaker 2: Ahora
+01:56:35 Speaker 1: la máquina juega mejor que el humano, ¿no es cierto? Creo que ya no se le puede ganar,
+01:56:40 Speaker 2: ¿no? Ajedrez, ajedrez.
+01:56:42 Speaker 1: Ajedrez, bueno, ajedrez es tiempo también, ¿no?
+01:56:46 Speaker 2: El Dota,
+01:56:47 Speaker 1: este... Dota siempre ha sido, ¿no? Que también hay una película sobre eso,
+01:56:54 Speaker 2: también creo. Este...
+01:56:59 Speaker 1: El nivel de decisión que podía tener la máquina, que era tan rápida, que
+01:57:05 Speaker 2: inclusive cuando
+01:57:09 Speaker 1: lo pusieron a competir con el humano, el humano no podía llegar al nivel de velocidad que tenía la máquina. Porque finalmente cuando estás jugando, tus movimientos con el teclado, con el mouse, todo tiene que ser tan rápido. Pero eso, pues, la máquina lo hace milisegundos, ¿no? Entonces, ahí recuerdo que, no sé si fue un documental, sí creo que fue un documental.
+01:57:36 Speaker 2: Tuvieron que ponerle tipo un delay al
+01:57:39 Speaker 1: programa para que tenga la misma velocidad que el humano. Y era una desventaja, pues, la velocidad que tenía la máquina. Tomaba decisiones mucho más rápidas.
+01:57:49 Speaker 2: Yo quería contar que justo lo que menciona, OpenAI me acuerdo que en 2019 puede ser en uno de esos concursos de jugadores que compitieron con la inteligencia artificial que en ese tiempo OpenAI todavía no era tan
+01:58:11 Speaker 1: conocido pero cuando ganó
+01:58:13 Speaker 2: el modelo de inteligencia artificial ahí es donde llamó la atención de varias varias personas, de entre ellos Elon Musk, que fue su principal inversión. Y de ahí es como que, por eso es como que, o sea, ese momento es como conocido, porque de ahí es cuando ya empezó a
+01:58:31 Speaker 1: escalar. A apostar. Sí, y lo otro, por ejemplo, hablando de UFNI y hablando también de aprendizaje por refuerzo,
+01:58:45 Speaker 2: el modelo
+01:58:47 Speaker 1: y el 3.0 cuando salió en verdad el 3.5 salió también pero demoraron
+01:59:08 Speaker 1: Y bueno, salió, pues, después lo indicaron ellos, ¿no? Que el modelo, en verdad, el 3.0 ya había sido entrenado casi un año antes, ¿no? Pero que se demoraron un año, casi un año, se demoraron en sacar la versión ya para el público, ¿no? Pero ¿qué pasó en ese año? ¿No? Lo que ellos estuvieron haciendo era hacer el refinamiento del modelo. ¿Cómo lo hacían? Lo hacían con aprendizaje
+01:59:37 Speaker 2: por refuerzo. Entonces
+01:59:39 Speaker 1: lo que hacían era, su modelo inicialmente entrenado, colocaron a cientos, miles de personas en todo el mundo a interactuar con su modelo.
+01:59:49 Speaker 2: Entonces, por ejemplo, yo
+01:59:52 Speaker 1: me acuerdo de las primeras noticias que salieron
+01:59:54 Speaker 2: de los bots, de estos bots,
+01:59:56 Speaker 1: dice que una persona que por tanto utilizar el chatbot se llegó a suicidar. ¿Ya? Porque el chatbot le dijo cómo podía suicidar si no sé qué el otro por acá. Y en verdad, pues, podía hacer eso. O sea, es decir, tú le pedías decir, no sé, ¿cómo hago una bomba, por ejemplo? Y te decía, no, los pancos, ¿cómo puedo hacer para suicidar? Y te decía, tú puedes suicidar.
+02:00:23 Speaker 1: Entonces, ese tipo de respuestas, digamos, pues, no es que no sean coherentes, pero, digamos, éticamente no eran correctas, ¿no? Entonces el modelo comenzó a, lo que hicieron en OPNA y contrataron miles de personas en todo el mundo y comenzaron a interactuar con su modelo. Y cuando las personas encontraron una respuesta incoherente o no adecuada, el modelo preguntaba, ¿la respuesta que te estoy dando es adecuada? Y la persona decía, no, no es adecuada. Entonces el modelo pregunta, ¿cómo tengo que responder? Tienes que dar la siguiente respuesta, ¿no? O simplemente decir, no, no puedo. O simplemente decir, ¿sabe esto? Me niego a dar esta respuesta, ¿no? Falto de ética, ¿no?
+02:01:05 Speaker 1: Esa retroalimentación que estaba dando la persona, el modelo volvía a reentrenarse, entonces era una aprendizaje por refuerzo, ¿no? Entonces para poder mejorar sus
+02:01:16 Speaker 2: respuestas.
+02:01:18 Speaker 1: Y eso lo hicieron durante casi un año. Por eso que cuando sale ChatGPT, el 3.5 sale tan bien. ¿Cuánto han demorado las otras empresas en tener un modelo del mismo nivel de ChatGPT? Han demorado casi un año también. Porque yo me acuerdo que Microsoft, Google, todos ellos comenzaron a sacar su modelo, pero no llegaban a ese nivel. Pero, ¿por qué? Porque había toda una tarea de refinamiento del modelo que llevó mucho tiempo.
+02:01:56 Speaker 1: Ahora el fine-tuning de esos modelos lo hacen con
+02:01:59 Speaker 2: los propios modelos. Con los propios modelos.
+02:02:05 Speaker 1: Ya no intervienen en el fine-tuning, ya no intervienen. Y también, justo desde lo que les decía, también igual, ¿no? El concepto revolucionario vino, pues, justamente Deep Learning también, ¿no?
+02:02:22 Speaker 2: Y la
+02:02:24 Speaker 1: gente que clásicamente hacíamos el Machine Learning, ¿ya? Si ustedes, por ejemplo, buscan muchos de los trabajos que hacíamos antes en el grupo, era Machine Learning. Y al ser Machine Learning, ¿qué cosa era? Nosotros teníamos un conjunto de datos. Hacíamos un proceso de extracción de características, luego hacíamos el modelo, el entrenamiento del modelo y hacíamos las predicciones. Donde era la mayor chamba que nos llevaba a hacer tiempo, era la extracción de características. Entonces, por ejemplo, ahí tu asesor, él lideró un proyecto que era sobre...
+02:03:07 Speaker 1: determinación de la morfología de hojas de plantas la chamba que hacíamos era poder determinar cuál era la forma de la hoja luego extraer características y para poderlo llevar a un modelo de clasificación y determinar de qué tipo es esa hoja de esa planta
+02:03:30 Speaker 2: Y
+02:03:31 Speaker 1: determinamos la nervadura y todo ello Inclusive creo que Le mandé una foto a Arturo Encontré una
+02:03:42 Speaker 2: foto Ahí en
+02:03:54 Speaker 1: el laboratorio tenemos ¿Qué pasa por el laboratorio? Si vas al laboratorio, hay una foto de tu sector ahí, como fondo, una planta con la nervadura en la planta. Justamente lo que hacíamos era determinar la nervadura y todo ello, la forma que tenían las nervaduras. Todo era un proceso de extracción de características. Igual como cuando hacíamos reconocimiento de rostro. Tienes que identificar los ojos, la nariz, la boca, las orejas y dónde está. Era un algoritmo para identificar ojos. un algoritmo para identificar orejas, un algoritmo para identificar la boca.
+02:04:32 Speaker 2: Y cuando viene Deep Learning,
+02:04:34 Speaker 1: te dice, ¿sabes qué? Olvídate de eso. Y no entra en nuestro paradigma cómo es que va a ser el algoritmo la extracción de características. No
+02:04:52 Speaker 2: cabía.
+02:04:55 Speaker 1: Y ese también es un concepto prácticamente revolucionario. Deja que sea el modelo el que extrae sus características. Y uno siempre, pero uno se pregunta, ¿y cómo extrae la nariz? ¿Cómo extrae la boca? Dentro de tus ideas. Pero vamos a ver más adelante que los modelos van más allá de eso. Y los patrones que extraen son patrones que tú nunca te los ibas a imaginar. Y no solamente te puede extraer una docena de patrones que nosotros... que era lo que generalmente hacemos, ¿no? Una docena, quince, veinte, veinte patrones o veinte características, era bastante, ¿no? Pero con DeepLady puede ser millones de patrones.
+02:05:56 Speaker 2: En las décadas de 1950, los científicos construyeron algunos perceptores funcionales, como se llamaban estos cerebros artificiales, utilizando para explorar el misterioso problema de cómo aprende el cerebro. Este perceptron está siendo entrenado para reconocer la diferencia entre machos y hembras. Es algo que todos podemos hacer fácilmente, pero pocos podemos explicar cómo. para que una ordenadora haga esto y aquella por muchas reglas complejas sobre los rostros y escribir un programa informático. Pero a este perceptón simplemente se le dieron muchísimos ejemplos, incluidos algunos con peinados poco habituales. Pero cuando se trata de un escarabajo, el ordenador se fija en los rasgos faciales y el contorno del pelo y tarda más en aprender lo que le dice el Dr. Taylor. La peluca de Andy Crouchan también provocó un pequeño examen de conciencia.
+02:06:52 Speaker 2: Tras entrenarlo con muchos ejemplos, se le han dado caras nuevas que nunca había visto y es capaz de distinguir con éxito un macho de hembras más. Ha aprendido mucho. Aunque prometedor, este enfoque de la inteligencia artificial prácticamente ha desaparecido.
+02:07:09 Speaker 1: Estamos hablando de los años 50-60, ¿no? Y donde teníamos solamente perceptrones, perceptrones que tenían como salida solamente positivo o negativo, en este caso, si varón o mujer nada más, ¿no?
+02:07:26 Speaker 2: Entonces,
+02:07:27 Speaker 1: y lo que hay que rescatar de ese video es que al haberle dado, después de varias imágenes, todo, ¿no? Comenzó a reconocer rostros de mano mujer, pero en fotos que nunca había visto. Es decir, que no estaban en su conjunto de entrenamiento. Entonces, para la época, eso ya era revolucionario. ¿Cómo lo hace?
+02:07:58 Speaker 1: Lo que les mencionaba, muchas de las técnicas que estamos viendo, vamos a ver, pues no son nuevas, tienen su, tienen este, ¿no? Desde hace buen tiempo ya se vienen estudiando, ¿no?
+02:08:12 Speaker 2: Y los
+02:08:15 Speaker 1: orígenes, digamos así, de las redes neuronales, pues nacen, inclusive esta nacen todavía con este, ¿no? Con... Con Turing, ¿no? Alan Turing es
+02:08:27 Speaker 2: que hay algunos
+02:08:28 Speaker 1: conceptos de que la máquina puede aprender. Alan Turing es el primero que da la idea de la inteligencia artificial, es decir, las máquinas pueden aprender, o van a llegar a poder aprender, lo que él ya decía, predecía eso. Y luego se fueron dando algunos conceptos, como por ejemplo los perceptrones, ¿no?
+02:08:55 Speaker 2: Para
+02:08:56 Speaker 1: poder hacer el entrenamiento. El año 70, pues también con este problema el XOR, pues inicia el invierno de la inteligencia artificial por casi más de una década. Y todo vuelve a renacer en el año 86. Justamente con el ganador del premio Nobel del 2024, con Hinton,
+02:09:18 Speaker 2: que
+02:09:18 Speaker 1: publica el artículo de Astro País, ¿no? Que es el artículo que es la técnica que hasta ahora se utiliza para poder entender un modelo del premio ronaldo, ¿no? Un modelo del biblio ronaldo. Y luego, bueno, vienen
+02:09:34 Speaker 2: las otras
+02:09:36 Speaker 1: técnicas, ¿no?
+02:09:39 Speaker 2: Hasta el año 2012 en el cual tenemos el año 2012.
+02:09:48 Speaker 1: ¿Qué problemas se estaban resolviendo? Pues ahora tenemos... infinidad de aplicaciones, digamos así. Pero los más clásicos con los cuales se comenzó justamente fue el procesamiento de imágenes con visión a la descripción.
+02:10:09 Speaker 2: Para hacer la identificación,
+02:10:12 Speaker 1: por ejemplo, ¿no? Justamente AlexNet lo que hacía era dar a una imagen con un objeto e identificar de
+02:10:19 Speaker 2: qué objeto se trataba.
+02:10:22 Speaker 1: Y para el año 2012 lo que se le dio fue un problema que tenía más de un millón de imágenes y que tenía que distinguir entre mil categorías de distintas imágenes
+02:10:36 Speaker 2: y
+02:10:39 Speaker 1: ellos consiguieron hacerlo a través de una red convolucional. Ya no hacían la extracción de características, no lo hacían a través de una red convolucional. Y luego vinieron otras aplicaciones como por ejemplo ya la localidad. No solamente identificar el objeto, sino identificar en qué parte de la imagen está ese objeto. Y luego para complicar más el problema, ya no tenemos un solo objeto, sino tenemos varios objetos.
+02:11:03 Speaker 2: ¿No?
+02:11:05 Speaker 1: Identifica cuántos objetos y dónde están esos objetos, de qué tipo son esos objetos. Porque fácil,
+02:11:12 Speaker 2: tú podrías mandarle acá una imagen
+02:11:14 Speaker 1: con un objeto y bueno, pues ya te dicen de qué te
+02:11:19 Speaker 2: hace.
+02:11:19 Speaker 1: Otro problema es identificar en qué parte de la imagen está localizado.
+02:11:23 Speaker 2: Y complejo más aún
+02:11:25 Speaker 1: cuando tú tienes varios objetos dentro de la imagen. Y si queremos hacer un poco más complicado, decirle, ¿sabes qué? Identifica plenamente las regiones que componen esos objetos. Estamos hablando ahí ya de segmentación. Entonces
+02:11:39 Speaker 2: fíjense cómo vamos.
+02:11:40 Speaker 1: Ha sido más complejo. Luego,
+02:11:46 Speaker 2: como
+02:11:49 Speaker 1: les dije al inicio, visión computacional y procesamiento del lenguaje natural andaban por sus...
+02:11:58 Speaker 2: Por sus propios lados, ¿no?
+02:12:01 Speaker 1: El procesamiento del lenguaje natural tenía tareas tan conocidas como, por ejemplo, traducción, parsing, generación de conversaciones, los chargos, generación de resúmenes, identificación de entidades, ¿no? Son tareas bien típicas que nacieron con procesamiento del lenguaje natural desde
+02:12:20 Speaker 2: que se tuvo... Un computador,
+02:12:23 Speaker 1: precisamente el lenguaje natural nace justamente con las computadoras, porque cuando las computadoras en los años 70 les comenzamos a dar instrucciones, ¿no? se crean los lenguajes de programación, comenzamos a dar instrucciones, ya no estás haciendo código máquina, ni siquiera estás haciendo mucho menos las tarjetas perforadas que eran los años 60, sino comienzas a darle instrucciones que tienen una estructura de lenguaje natural.
+02:12:53 Speaker 1: Entonces ahí la gente de lingüística comienza a preguntarse, oye, si tú le estás dando instrucciones en lenguaje natural, ¿será que puede entender un texto? ¿Será que podemos hacer un resumen de texto? Y ahí es donde nace toda esta línea del procesamiento del lenguaje natural. Que por años se ha tratado de hacer todas esas tareas. Se han creado igual, como en la línea de visión artificial nosotros creamos algoritmos para identificar ojos, algoritmos para identificar nariz, algoritmos para identificar características en imagen. Igual, en procesamiento de lenguaje natural, un algoritmo para poder hacer la traducción, un algoritmo para poder hacer la identificación de entidades y todo eso. Pero luego, cuando viene en Transformers, todo esto te lo resumo.
+02:13:45 Speaker 1: y luego se extendieron a otro tipo de bueno no solamente tenemos imágenes no solamente tenemos textos bueno también tenemos señales temporales, tenemos videos, que finalmente también es un dato temporal, una secuencia de imágenes, y comenzaron a salir una serie de aplicaciones para la infección de movimiento, esqueletonización, etc. Esto también fue simpático. Estamos hablando del año 2015. Eso fue uno de los primeros trabajos sobre interpretación de imágenes. Es decir, dada una imagen, tú identifica o genera un texto que te esté describiendo esa imagen. Entonces, fíjense, la primera columna son imágenes que tienen una descripción adecuada de la...
+02:14:49 Speaker 2: Bueno,
+02:14:51 Speaker 1: hay un texto que describe adecuadamente a la imagen. Pero a medida que vamos, fíjense, va equivocando ese mal. La última fila son descripciones equivocadas, cerradas.
+02:15:02 Speaker 2: Pero este artículo fue
+02:15:04 Speaker 1: revolucionario en la época porque ya te estaba indicando, oye, mira, ¿sabes qué? podemos llegar a hacer descripción de imágenes. Es algo muy común con los modelos generativos. Esto fue revolucionario. Igual también,
+02:15:20 Speaker 2: por
+02:15:27 Speaker 1: ejemplo, para poder hacer búsqueda de imágenes en el Google, por ejemplo. Ahora ya el Google utiliza modelos generativos para poder hacer sus búsquedas.
+02:15:41 Speaker 2: Y lo que hace el Google es,
+02:15:43 Speaker 1: prácticamente ahora, genera los espacios vectoriales y luego te comienza a buscar las imágenes, porque son más parecidas, ¿no? Encuentra dentro de un espacio vectorial y todo. Pero las primeras versiones de Google, justamente lo que hacían cuando hacías una búsqueda de una imagen, lo que te hacía era la extracción de carácter. Y todo ese concepto que les he mostrado acá, ¿no? Tenían la imagen, hacía extracción de características, luego hacía la clasificación, la búsqueda de la imagen. Imágenes más parecidas, pues usted buscaba aquellas con características más parecidas. Bien, ¿y dónde comienza lo revolucionario? Es justamente gracias a varios factores. Los tres factores más importantes son estos de acá.
+02:16:48 Speaker 2: Yo
+02:16:49 Speaker 1: diría primero los datos,
+02:16:51 Speaker 2: los datos que
+02:16:53 Speaker 1: comenzaron a generarse con bastante velocidad. Luego,
+02:17:00 Speaker 2: el
+02:17:02 Speaker 1: poder computacional. ¿Ya? También comenzó a acelerarse. Pero también los algoritmos, ¿no? Ahí está justamente, va en una parte de una AlexNet, ahí en el fondo. ¿Ya? Y que los modelos también comenzaron a entrar bastante.
+02:17:17 Speaker 2: Estos tres factores más importantes.
+02:17:20 Speaker 1: Y es justamente lo que les decía. AlexNet, el año 2012.
+02:17:25 Speaker 2: Acá en la parte de
+02:17:28 Speaker 1: abajo están ustedes viendo. Año 2012, por ejemplo, se trataba justamente del problema de identificar la clase a la cual pertenecía una imagen. Ahí tenemos una imagen de un carro, tenemos de un hongo, de un perro, etc. La tarea es simple. No sabes qué, te estoy dando imágenes, tú identifícame de qué clase. Si se trata de un perro,
+02:17:49 Speaker 2: si se trata de un mono, si se trata de un hongo, si se trata de un carro.
+02:17:53 Speaker 1: Entonces el modelo tenía que clasificar. El concurso era ese. Es decir, te estoy dando un millón de imágenes, te estoy dando mil categorías y tú encuéntrame tu mejor modelo que haga la clasificación. ¿Dónde estamos? Fíjense, el año 2010.
+02:18:16 Speaker 2: El error estaba
+02:18:18 Speaker 1: por encima del 25 o 26%. El mejor modelo estaba 27% más o menos. El modelo ganador. Pero todos, fíjense, todos los modelos por encima. Hasta 50% de error, 75% de error. O sea, ¿no? Año 2011. Ya consiguieron bajar a... 25 y algo más. Todos estaban por ahí también. Todos han bajado por debajo de 50. Año 2012. Un solo modelo por debajo de 25%. En verdad esto era un 16%. 16.40%. Y todos los demás modelos, o sea, de los otros participantes, por encima de 25. O sea, no habían mejorado mucho con respecto al año anterior.
+02:19:11 Speaker 1: ¿Quién era este modelo ganador?
+02:19:13 Speaker 2: Alex.
+02:19:15 Speaker 1: Y fue el único modelo en ese año que utilizó una red convocional. Todos los demás participantes usaban el machine learning tradicional, extracción de características y
+02:19:28 Speaker 2: luego hacían su modelo
+02:19:31 Speaker 1: de clasificación.
+02:19:33 Speaker 2: Pero la
+02:19:34 Speaker 1: gente de Google fue los únicos que hicieron un modelo convocional que hacían que sea el propio modelo el que extrae sus características. Y por eso las diferencias mismas de más de 10 puntos. Año 2013, oye, dije, oye, ¿qué ha usado a utilizar ese equipo? ¿Qué ha pasado, no? Redes convolucionales. Todo el mundo comenzó a utilizar redes convolucionales, ¿no? Y ahí está, todo el mundo también comenzó a bajar. Año 2014 bajan más, 2015 más, 2016, 2017 ya bajaron el error a menos del 2%. ¿Cuánto fue? 2.25% del error. Fíjense, en cuatro años de un error de 25, Consiguen bajar hasta 2.25.
+02:20:29 Speaker 1: Bueno, y ahora estamos viviendo la era de la idea generativa, ¿no? Les había mencionado que... que Dany 2, Meet Judy, había otras empresas de Meet Judy, creo que no sé si estaba con éxito ahora. Había también el Stable Diffusion, ¿no? Que fueron de los primeros modelos que comenzaron, o las primeras empresas que comenzaron a generarte imágenes a partir de texto, ¿no? Ahora ya te generan videos y todo.
+02:20:59 Speaker 1: La tarea que hace... Bueno, y la tarea de un LLM simple, ¿no? ¿Qué pasa si un LLM predice cuál es la siguiente palabra
+02:21:11 Speaker 2: en una secuencia de texto?
+02:21:17 Speaker 1: Y este problema, por ejemplo, que hacen los exámenes de admisión, nos dicen, ¿cuál es la siguiente palabra? ¿Cuál es la palabra que falta? En la frase. Entonces, ese es un problema clásico de procesamiento del lenguaje natural. De decir cuál es la siguiente palabra o la palabra faltante.
+02:21:36 Speaker 2: Un problema clásico.
+02:21:38 Speaker 1: Y problema clásico lo digo porque este problema nace desde el nacimiento del procesamiento de lenguaje natural. Estamos hablando de los años 70, 60.
+02:21:48 Speaker 2: Y la
+02:21:51 Speaker 1: aproximación, digamos, el modelo que mejor se aproximaba a buscar resolver este problema era justamente las redes recurrentes. Donde cada uno de los tokens era la entrada y se genera un modelo. que buscaba predecir el siguiente token. Y eso lo hacíamos recursivamente. Y por eso que teníamos un modelo recursivo. Desde las redes recurrentes. Y luego, el problema de las redes recurrentes, en términos simples, era de que a medida que nosotros, por ejemplo, íbamos teniendo mayor recurrencia, si queremos llamarla así, mayor cantidad de texto más largo, ¿qué es lo que pasaba? Que
+02:22:39 Speaker 2: perdía precisión
+02:22:43 Speaker 1: en el sentido de que Estas últimas redes, cuando estaba la salida, digamos, la respuesta, dependía más de las anteriores redes, ¿no? Las que tenían más influencia sobre la decisión eran estas acá. Y las primeras, los primeros tokens, digamos, las primeras redes de la secuencia recurrente, pues prácticamente no incluían mucho allá, ¿no? Era un gran problema. Ese se le llama el problema, pues, de la falta de memoria. Y ese ha sido un problema también, de la falta de memoria es un problema, pues, de décadas. ¿Cómo es que tú le introduces memoria a una red recurrente? Y ha habido otra vez toda una secuencia de propuestas y todo ello hasta que
+02:23:19 Speaker 2: se viene a
+02:23:22 Speaker 1: decantar con las redes de atención. en la cual no es más que también encontrar una relación de probabilidad entre tokens, en este caso entre palabras, por ejemplo, cada palabra qué relación tiene o qué influencia tiene con las otras palabras, finalmente es probabilidades, y eso cómo tú lo llevas a una representación.
+02:23:50 Speaker 1: Y las primeras redes de atención tuvieron mucho éxito o comenzaron a tener éxito con traducción de un idioma a otro. Fueron los primeros resultados que se obtenían muy bien con redes de atención.
+02:24:05 Speaker 2: Y luego buscaron llevar este
+02:24:09 Speaker 1: concepto de atención dentro de una red recurrente. Oye, ya que con la red recurrente estamos prediciendo la siguiente palabra. Este concepto de detención lo podemos lanzar dentro también de la red recurrente. El problema es que la red recurrente, por su propio concepto de lo que es una red recurrente, no era fácilmente paralelizable.
+02:24:35 Speaker 1: Ustedes mismos pueden imaginarse cómo paralelizo una recurrencia. Complicado. y el otro era que no funcionaba
+02:24:46 Speaker 2: adecuadamente también está la
+02:24:47 Speaker 1: memoria problema ahí, ¿no? Dos problemas. Hasta que el año 2017, que también otros consideran que es el año de la inteligencia artificial, se propone el modelo dos transformas,
+02:25:01 Speaker 2: ¿no?
+02:25:06 Speaker 1: Salvando las dos características que tenían problemas las redes recurrentes. Uno, que eran totalmente paralelizables, ¿ya?
+02:25:16 Speaker 2: Y lo otro,
+02:25:18 Speaker 1: que gracias a lo que son las... Los multijet de atención, que son
+02:25:24 Speaker 2: capas
+02:25:26 Speaker 1: de atención, ¿no? Pero que los podían paralizar y todo ello, conseguías tener la memoria que le hacía falta a las redes recurrentes. Y otro punto, que ya no eran recurrentes,
+02:25:41 Speaker 2: ¿no?
+02:25:42 Speaker 1: Por eso que el TIP lo dice, ¿no? Atención y soy unido. O sea, solamente necesitas atención. Olvídate de las recurrentes. Se barren también con todo décadas de investigación en el tema de recurrencias y te proponen esto. Pero lo que sí vas a necesitar acá es un buen fiat. Y datos, obviamente. Porque esta red
+02:26:10 Speaker 2: la
+02:26:11 Speaker 1: puedes apilar, apilar, apilar, apilar y apilar dependiendo de la capacidad de computación. No había restricción solamente
+02:26:22 Speaker 2: con capacidad computadora.
+02:26:25 Speaker 1: Y por eso que ahora vemos los grandes centros de computadora que tienen más y más procesadores paralelos para poder seguir apilando más transformers y tengan mayor capacidad de procesamiento. O puedan procesar mayor, digamos, redes más grandes. Aunque esto ya cambió con los últimos modelos.
+02:26:48 Speaker 2: Pero bueno.
+02:26:50 Speaker 1: Eso es lo último que he hecho. Bueno, ahí quería terminar. Y acá hay algo en posición en el encoding. Se generan las materias de atención, pero hay un problema que se tiene. El orden de los tokens. El orden de las palabras. Y acá también hay una elegancia matemática detrás de todo esto. Es una elegancia que se permite justamente mantener el orden
+02:27:17 Speaker 2: de los tokens.
+02:27:31 Speaker 1: No hay una memoria como tal, o si, o sea, porque depende de qué tanto puede procesar, depende de la cantidad de los transformers de la máquina. No utilizo una memoria como tal, ¿no? No, es de la cantidad del transporte. Por eso que también...
+02:28:07 Speaker 1: La evolución, ¿no? GPT-1, 512 tokens. GPT-2, 2024 tokens. GPT-3, 2048 tokens. Cada vez fue aumentado y aumentado. ¿Por qué? Porque fueron aumentando sus arquitecturas, o sea, apilando más transformers. Y el GPT-4, bueno, no sabía cómo estaba estructurada porque nunca lo
+02:28:27 Speaker 2: publicaron, pero...
+02:28:30 Speaker 1: ¿Cuál era? Aumentaba mayor cantidad de apilamiento de Transformers, entonces tenía mayor capacidad de memoria, se puede decir, ¿no? Pero es que las primeras, el GPT-3, por ejemplo, cuando salió, tú le podías poner un documento de una página, dos páginas, como mucho, ¿no? Después el Gemini le salió, dijo que tú podías meterle todo un libro, inclusive, ¿no? O sea, ¿por qué? Por su capacidad de memoria era mayor. O sea, su capacidad de procedimiento de toques era mucho
+02:28:54 Speaker 2: mayor, ¿no? Y
+02:28:56 Speaker 1: ahí fue la competencia, ¿no? ¿Quién tiene más?
+02:29:00 Speaker 2: Al
+02:29:01 Speaker 1: final es la
+02:29:03 Speaker 2: dimensión
+02:29:05 Speaker 1: de la arquitectura. Y luego esto lo llevaron a
+02:29:10 Speaker 2: seguir
+02:29:12 Speaker 1: creciendo en tamaño. Y luego lo que nunca dijeron fue el GPT-4, que nunca dijeron cómo estaba hecho. después de salir la información de que en verdad lo que ellos estaban utilizando era este concepto de MOE que es una mezcla de expertos que en verdad eran modelos paralelos es decir, tipo este de un experto en verdad que estos eran GPT pero especializados
+02:29:48 Speaker 1: Tenías como un orquestador que cuando tú hacías tu consulta sobre un tema, el orquestador era como un clasificador que te mandaba a ser un experto para que él sea el experto que te
+02:29:57 Speaker 2: responda. Y
+02:30:00 Speaker 1: eso como se descubrió con el DeepSync también, ¿no? Porque el DeepSync comenzó a utilizar ese concepto de modelos de expertos.
+02:30:07 Speaker 2: Y
+02:30:08 Speaker 1: ahí fue cuando la gente de OpenAI también dijo aceptó, sí, también estamos usando ese... Esa estrategia, ¿no? Porque era... O sea, que tu modelo lo sigas haciendo crecer ya era, pues, este... No era lógico, ¿no? No era lógico. Y ahorita hay una discusión fuerte sobre eso también porque justamente Jan Lecun es el que defiende esa idea de que los actuales modelos que tenemos, ¿no? De Deep Learning no son los adecuados para poder llegar a la inteligencia artificial general que estamos buscando. Ah, verdad. porque no tiene lógica que nos estemos buscando hacer inteligencia artificial general a incrementar más la capacidad, digamos, el tamaño de nuestros modelos, cuando nosotros, nuestro cerebro no funciona así.
+02:30:59 Speaker 1: Para tener mayor capacidad de conocimiento, no estamos haciendo crecer nuestro cerebro. Entonces, lo que Jan defiende es que se van a tener que crear otros modelos para poder llegar a la calidad
+02:31:12 Speaker 2: del cerebro artificial.
+02:31:14 Speaker 1: Cuando se está actualmente, no. Ese no es el cambio. Así que es un poco redondo. Muy bien.
+  
