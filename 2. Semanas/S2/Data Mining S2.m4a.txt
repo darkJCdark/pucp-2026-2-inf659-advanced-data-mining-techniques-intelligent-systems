@@ -1,0 +1,731 @@
+# DM S2
+
+  Meeting started: 24/8/2026, 10:01:24 p. m.
+  Duration: 137 minutes
+  Participants: Speaker, Speaker 1, Speaker 2
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/6sHNnbcZnQCYeCYvG2LJ?o=txt)
+
+    
+
+  
+
+  
+
+  ## Transcript
+
+  00:00 Speaker 1: Contra el más, contra el más. El ejercicio, entiendo que era básicamente un calculo de matricial, pero en tres librerías. Entonces, bueno, lo que se hizo para Mumbai, bueno, lo que se hace es crear unos arreglos. Esta parte la puse ahí por la experimentación, así prueba y error. Ahí te explico por qué puse eso. Luego le doy este, luego le doy este, luego le doy este, luego revis parido las formas que tenía, calculo, porque acá, bueno, acá tengo uso la respuesta que hice ahí arriba, y luego artículo la fóndula. Me aplico a la inversa y luego le pongo la lista operadora que me enteré ahorita que es el arroba que es multiplicación de matrices. Y luego me sale un 0.154 o 0.184.
+00:53 Speaker 1: Y luego en el software, casi lo mismo. Hago lo mismo que tiene un tipo de operación. Solamente que acá lo convierto a TensorFlow. Yo hago la respuesta, que acá es la función más directa a los goals. Y está en una operación parecida. Las librerías son acá muy parecidas, pero hoy está inversa. Y luego otra multiplicación no es la que sea. El comando es el mismo, así que asumo que el operador funciona polimórficamente. Y bueno, otro resultado. Que tiene ciertas palabras muy cercanas.
+01:28 Speaker 1: He estado también revisando este tema de los más cercanos porque ha sido el tema de minería, por eso, pues acá, este experimento tratando de igualarlos, pero bueno, parece que hay un tema ahí de diferencia de incrementocibería. Y luego, este, PyTorch, este, lo mismo que es igual, pero convierto mis arrays a tensor, luego le hago respuesta, bueno, acá es un poco como que tenemos que definir qué dimensiones van a cambiar, en este caso, dimensión C1 y... con base a eso saca la respuesta y ahí hago lo que hacen parecido con las mismas funciones el lenguaje en teoría es muy similar y bueno al final me sale acá un tensor que bueno da diferencias que acá tiene menos decimales pero para el primer barrio que tiene es prácticamente el mismo valor o sea sale con diferencias por el tema de interpretación pero es el mismo barrio el mismo barrio con tens o plom
+02:29 Speaker 1: es cercano, es cercano, es cercano, es cercano, es cercano, es cercano, Cambio acá, el tensor me vea como 8 decimales.
+02:47 Speaker 2: El looping los decimales están iguales al tensor.
+02:50 Speaker 1: Hasta el
+02:51 Speaker 2: cuarto,
+02:56 Speaker 1: hasta el tercer decimal. Yo creo que si se podía modificar con 1264. Lo que pasa es que yo he visto que en el... Bueno, yo lo estoy un poco de igualar porque he visto que las inversiones se hacen con Flow32. Entonces ahí trata de que sea un... para darle que sea justo. Por ejemplo, también Flow64. Pero si se le dice la prueba, con lo que ya tiene. Porque aparte creo que en un PIB trabaja en Flow64. Yo más bien lo que es el Flow64.
+03:38 Speaker 2: ¿Puede...?
+03:38 Speaker 1: ¿Quién os corría la celda?
+03:41 Speaker 2: Para ver... Ah,
+03:42 Speaker 1: quería ver el resultado de TensorFlow. Ah, ¿recuerda TensorFlow? TensorFlow. Ah,
+03:49 Speaker 2: claro. O sea, la idea es que coincidan, ¿no? Entonces,
+03:51 Speaker 1: está bien, creo. O sea, yo entino que coinciden hasta ciertos números y males. Por lo que he visto... Esto es un poco nuevo, pero lo que he visto parece que es un tema de implementación ahí, ¿no? Yo creo que sí, pero... Yo sí lo hice. 32.
+04:20 Speaker 2: Ah,
+04:23 Speaker 1: no, no, sí, Marcelo.
+04:24 Speaker 2: No, Marcelo, perdón. Sí, está... Ah, lo siento.
+04:27 Speaker 1: Esta persona está conectada. Sí, sí, sí. Pero no me desconecta. El mío va a tardar.
+04:39 Speaker 2: El mío va a tardar en abrir el anacono,
+04:41 Speaker 1: porque no. Si alguien tiene... A ver, a ver.
+05:08 Speaker 1: En el mío, básicamente lo mismo. Y sí veo que están iguales, ¿no? Se puede ver acá el de Naruto, ¿no? Y el de... el de TensorFlow, ¿no? Los valores son exactamente lo mismo. En el PyTorch sí está distinto. Bueno, están los mismos, pero están truncados, ¿no? Ah, ya. Una
+06:00 Speaker 1: de las cositas que me llamó la atención es... Arriba no aparecía, pero busqué un poco y se puede utilizar también, como en Ambi se utiliza la T, ¿no? Para hacer el transport. En PyTorch también se puede usar. Pero cuando ya son más de, cuando la matriz es de mayor rambo ya no recomiendan hacer eso porque hay que decirle exactamente
+06:28 Speaker 2: cuáles vas a hacer el transpose, el
+06:32 Speaker 1: orden del transpose. Cuando es de tres a más ya no es conveniente utilizar el, ni tampoco este en realidad, el transpose ni tampoco este. Y otra cosa que me di cuenta era que esta expresión es la que nos mostró el semestre pasado también, ¿no? En clase, que es la solución de la ecuación lineal, ¿no? Y igual WX más B, ¿no? Y eso también me pareció interesante. En este caso, se puede predecir, acá hay un detalle que es básicamente y igual x, los w van a salir, el w va a salir 1, porque acá está dándole aleatoriamente valores alrededor de y igual x, y el b va a salir 0. Ya se puede predecir y eso es lo que sale al final de cuentas, 0 el
+07:34 Speaker 2: b y
+07:35 Speaker 1: el w. Aproximadamente 1, ¿no? 0.98, ¿no? Es la
+07:51 Speaker 2: ecuación del mínimo cuadrado.
+07:53 Speaker 1: La resolución del mínimo cuadrado.
+08:01 Speaker 2: Sí, justamente el tema de hoy día es ese. Bueno, lo que han hecho Machine Learning va a ser un repaso.
+08:07 Speaker 1: Pero tratándose
+08:10 Speaker 2: de que el Deep Learning es sobre redes neuronales, pues todo comienza justamente con lo que es
+08:18 Speaker 1: la
+08:22 Speaker 2: definición de una aproximación a una solución mediante... Un modelo simple, que en este caso es un modelo lineal. Si yo tengo, por ejemplo, las
+08:46 Speaker 1: funciones...
+09:17 Speaker 1: Bueno, tengo este conjunto de puntos y lo que
+09:20 Speaker 2: quiero es encontrar una forma que,
+09:26 Speaker 1: dado
+09:28 Speaker 2: un nuevo elemento, cada uno de estos conjuntos
+09:33 Speaker 1: tiene su correspondiente.
+10:03 Speaker 2: La pregunta está si yo tengo aquí un, por decir, un valor desconocido para X, porque estamos hablando de X y X. un valor desconocido para un xl, si queremos llamarlo así,
+10:16 Speaker 1: ¿no?
+10:19 Speaker 2: El problema está en determinar quién es su correspondiente, queremos
+10:25 Speaker 1: decir,
+10:26 Speaker 2: y sub n, ¿no? Si yo tengo aquí, yo voy a dejar mi conjunto de puntos, ¿no? x1, y1, ¿no?
+10:36 Speaker 1: x1, y1, ¿no? x1, y1, ¿no?
+10:57 Speaker 2: y de pronto tengo un xn y
+11:01 Speaker 1: quiero saber dónde
+11:04 Speaker 2: está el valor de... hagamos de cuenta que tenemos aquí hasta 1, acá
+11:20 Speaker 1: también tenemos hasta 1, acá tenemos 0, aquí tenemos un 0.5, acá tenemos un 0.5,
+11:29 Speaker 2: ok, aproximadamente, ¿de cuánto es eso?
+11:58 Speaker 2: Este punto, por ejemplo, aproximadamente, ¿cuánto será? Ok, sí, 21, ese primer punto. ¿Qué coordenadas tendré ese punto? Un 0,12
+12:19 Speaker 1: aproximadamente en
+12:21 Speaker 2: X y un 0,12, 27, ¿no? 0,27 en Y,
+12:32 Speaker 1: ¿no?
+12:32 Speaker 2: Estoy chucando, ¿no? Estoy dando balas. Igual, este segundo punto,
+12:37 Speaker 1: por decir, ¿cuántos serán? un 0.2
+12:40 Speaker 2: y será un
+12:44 Speaker 1: 0.3 igual
+12:52 Speaker 2: aquel de otro punto por ejemplo este de aquí será aproximadamente 0
+12:59 Speaker 1: .32 y 0.3
+13:07 Speaker 2: Y cuando doy este valor, Xn,
+13:09 Speaker 1: ¿cuánto es? 0
+13:13 Speaker 2: .67, ¿no? Xn es igual a 0
+13:17 Speaker 1: .67.
+13:19 Speaker 2: ¿Cuánto es su correspondiente?
+13:22 Speaker 1: 0.4, creo. 0.42, 0.48, por ahí. Ah, el n es arriba, ¿no? 0.7. 0.7. 0.7 por acá. ¿Por qué 0.7? Estoy tratando de adivinar un poco y poner un valor entre el rango de 0.5 y 1. ¿Estás integrando ahí? Está
+14:11 Speaker 2: bien, está bien. Ahora, ¿qué es lo interesante de todo esto? El ejercicio que está haciendo Chamorro, lo estás organizando basado en las observaciones que tienes acá, ¿no?
+14:42 Speaker 1: Lo que estamos haciendo, ¿no? O sea, les estoy pidiendo, a ver,
+14:45 Speaker 2: este de aquí, este elemento X en el que es un desconocido,
+14:48 Speaker 1: ¿no?
+14:49 Speaker 2: ¿Ya?
+14:51 Speaker 1: Es nuevo, es
+14:52 Speaker 2: desconocido para la base de datos, pero sabemos su valor en X es 0.67 aproximadamente. pero eso sí no sabemos cuánto vale en el otro despejado.
+15:08 Speaker 1: Estaba interpolando. Puede ser una interpolación. Puede ser una interpolación, podemos hacer,
+15:16 Speaker 2: yo que sé, los puntos más próximos a la izquierda o a la derecha, yo que sé, interpolados. No sé, si queremos tomar acá, o así, se me ocurre, estos dos puntos son los más próximos a él, tanto por izquierda o derecha, y
+15:29 Speaker 1: sacamos el promedio y el promedio de
+15:32 Speaker 2: estos dos más o menos sería por la mitad.
+15:38 Speaker 1: Es una foto.
+15:47 Speaker 2: Pero no siempre es la más adecuada. Entonces, lo otro es que definamos nosotros un modelo. Un modelo que nos permita
+16:05 Speaker 1: introducir
+16:09 Speaker 2: como una variable este valor y el modelo nos responda un valor como salido. Entonces, podemos verificar aquí que este conjunto de puntos, por ejemplo, tiene cierta tendencia, ¿no?
+16:30 Speaker 1: O sea, es una
+16:31 Speaker 2: distribución que guarda cierta tendencia y que yo bien podría representar la medida entera.
+17:03 Speaker 1: Se me ocurre de una recta. Y esta recta,
+17:08 Speaker 2: pues para nosotros es bien conocida.
+17:12 Speaker 1: Porque va a ser... Una simple
+17:17 Speaker 2: ecuación lineal, ¿no? Una simple ecuación lineal, en la cual yo voy a lanzarle el valor de xn, ¿no? El desconocido, y él me va a dar como respuesta, no, se va a hacer el desconocido, y él me va a dar como respuesta el f de x, que sería el f de x o el y, ¿no?
+17:38 Speaker 1: Sería el f de x o el y, que
+17:40 Speaker 2: sería este otro, ¿no?
+17:43 Speaker 1: Este otro.
+17:46 Speaker 2: Entonces, si yo le lanzo a esa función lineal el valor desconocido x de n, entonces ella me va a responder con este valor, ¿no?
+17:58 Speaker 1: ¿Ve? Ese va a hacer la respuesta, ¿no? Para, para, para decir, para decir, ¿no? ¿Ve?
+18:07 Speaker 2: ¿No? Ese sería el f de x de n, ¿no? Entonces, ya no estoy adivinando, ya no estoy haciendo interpolación, sino me baso en una función que la he definido y esa función me va a dar como respuesta, dado una entrada que yo le voy a enviar, me va a dar una respuesta que va a ser la salida en el otro eje.
+18:56 Speaker 2: Bueno, aquí hay un detalle. Yo podría definir, por ejemplo, cuánto creen que sea la inclinación de esta recta. ¿Qué representa A? La pendiente.
+19:11 Speaker 1: ¿Y qué representa B?
+19:14 Speaker 2: A es la pendiente, hemos dicho.
+19:19 Speaker 1: Y B, ¿qué cosa es?
+19:20 Speaker 2: El intercepto, ¿no? Sí. Así es, está bien. Como estamos chutando, estamos dando números. ¿Cuánto creen que sea la pendiente de esta
+19:31 Speaker 1: recta? Un medio. ¿Ah? Un medio.
+19:36 Speaker 2: ¿Cero punto cinco? Ajá.
+19:38 Speaker 1: Más o menos. Más
+19:40 Speaker 2: o menos, por ahí.
+19:42 Speaker 1: Cero cinco.
+19:44 Speaker 2: Cero cinco es la diagonal, ¿no? Creo que es un poquito más abajo, ¿no? No. Vamos a poner un cero punto cuatro.
+20:07 Speaker 2: ¿Cuánto es la pendiente de la diagonal? La diagonal es pendiente 1.
+20:17 Speaker 1: Ah, sí.
+20:20 Speaker 2: Entonces esta no llega a ser la diagonal. O sea, pero bueno, tampoco llega a ser. 0.8. Más
+20:29 Speaker 1: o menos.
+20:31 Speaker 2: ¿Y el intercepto? ¿Cuánto creen que es? 0
+20:36 Speaker 1: .3... No, 0.0...
+20:46 Speaker 2: El intercepto viene a ser este valor, es decir, desde el origen hasta el corte que está realizando la recta en el eje Y.
+21:13 Speaker 2: Entonces, fíjense, ¿qué cosa hemos obtenido con ello? La función. La función que nos va a dar, por ejemplo, aquí, es decir, yo tengo finalmente el f de x, que va a ser igual a un 0.8 por
+21:28 Speaker 1: x,
+21:29 Speaker 2: más 0
+21:31 Speaker 1: .09.
+21:33 Speaker 2: ¿Ya? ¿Cuánto era xn? Xn hemos dicho, ¿cuánto es? 0.67. 0.67. Entonces... F de X
+21:51 Speaker 1: de N será
+21:53 Speaker 2: igual a 0.8 por
+21:56 Speaker 1: 0.67 más 0.09. ¿Esto
+22:02 Speaker 2: cuánto da? Esto será F de X de N será igual a...
+22:09 Speaker 1: ¿Cuánto será? 0.6. ¿0.6? ¿666? 0
+22:13 Speaker 2: .626. Entonces hemos encontrado de que...
+22:26 Speaker 1: ...por la
+22:39 Speaker 2: gráfica no está tan bien. Pero bueno, ahí está la lógica. de por qué nosotros estamos teniendo ahora un modelo que está representando este conjunto de puntos y que nos está facilitando el cálculo de los valores dado nuevos elementos que tengamos.
+24:00 Speaker 2: La pregunta está, ¿no? Este f de x,
+24:03 Speaker 1: f de x igual a x más b, y es igual donde a es igual
+24:10 Speaker 2: a, como he dicho, más 0
+24:12 Speaker 1: .8, y
+24:17 Speaker 2: b es igual a
+24:18 Speaker 1: 0.0.
+24:23 Speaker 2: Con esos valores de A y D. La pregunta está... Bueno, yo he graficado esa, ¿no? Y de pronto a Chamorro me dice, ¿sabes qué? No me gusta esa. ¿Tú dibujas una recta más... ¿Otra?
+24:42 Speaker 1: Más aproximada, ¿eh? Una que
+24:52 Speaker 2: represente mejor a Chamorro. Esa recta que has dibujado no representa, ¿no?
+25:20 Speaker 1: Casi, casi.
+25:42 Speaker 2: Este de f de x, vamos a poner aquí f de x,
+25:45 Speaker 1: f1 de x, y acá vamos a poner un f2 de x, que
+25:50 Speaker 2: va a tener su propio ax más b, o sea, este va a ser
+25:54 Speaker 1: a2b2, o sea.
+25:58 Speaker 2: ¿Cuánto será aproximadamente la pendiente de esta recta negra? Una pendiente menor, ¿no? Una pendiente menor, aproximadamente
+26:09 Speaker 1: un 0.6. ¿Dónde está? 0 .6, si me ocurre.
+26:15 Speaker 2: Tal vez hasta menos. Menos de 0.5. Creo que está en 0.4. 0.4. ¿Y de cuánto es? Ven, así era aumentado.
+26:29 Speaker 1: 0.2.
+26:33 Speaker 2: Entonces fíjense, acá lo interesante está... en los valores de los parámetros de la función. ¿Por qué? Chamorro viene y me dice, ¿sabes qué? No, esa no me gusta. Yo creo que la que yo voy a trazar se aproxima mejor, ¿no? De los puntos.
+26:56 Speaker 1: ¿Ok? Muy bien.
+26:59 Speaker 2: Es lo que él cree, ¿no? Yo también, eso es lo que yo creo, ¿no? No, yo creo que mi ingresa azul es la que mejor se aproxima. Entonces, acá hay una... Hay un dilema, ¿no? ¿Cuál de las dos rectas es mejor? ¿Cuál de las dos rectas se aproxima mejor de
+27:20 Speaker 1: los puntos?
+27:23 Speaker 2: En otras palabras, ¿cuál de las dos rectas es más representativa de esa distribución de puntos?
+27:30 Speaker 1: Esto tal vez va a depender de lo que realmente quieres analizar.
+27:35 Speaker 2: No, lo simple. Yo tengo una distribución de puntos, quiero saber cuál de esas dos rectas es más representativa. Porque recuerden, yo estoy trazando un modelo, este es un modelo, la recta finalmente es un modelo, ¿no? Que estás buscando representar a esta distribución de puntos.
+27:55 Speaker 1: Puedes minimizar... No, mejor.
+27:59 Speaker 2: Tienes la recta de puntos,
+28:01 Speaker 1: entonces hayas el residuo. de cada punto respecto a la recta. Y en principio, la recta que mejor se aproxima, el residuo que queda en restar la recta teórica con los puntos, o sea, los puntos que están más alejados van a generar más residuos, entonces los puntos más cerca van a generar menos residuos, y en principio pues esa es la recta que ajusta mejor a la data. Eso se me ocurre. Ya, a
+28:33 Speaker 2: tratar de interpretarlos ya.
+29:06 Speaker 2: Efraín. Efraín. Lo que Efraín ha manifestado es encontrar los residuos de cada punto hacia la recta. ¿Qué significa? Buscar la distancia. Voy a buscar los residuos de cada punto hacia la recta negra. Calcular estas distancias. Estoy calculando las distancias de cada punto a
+29:41 Speaker 1: la recta. Esos son
+29:46 Speaker 2: los residuos. Y luego calculo la distancia de cada punto hacia la recta azul.
+30:03 Speaker 1: Entonces
+30:25 Speaker 2: tienen ahí los residuos azules y los residuos negros. Sacamos el promedio de los residuos y aquel que tenga el menor promedio es el que se aproxima o representa mejor. ¿Y esto cómo lo hacemos? ¿Bien? ¿Bien? ¿Bien? ¿Bien?
+30:59 Speaker 1: ¿Bien?
+31:03 Speaker 2: i igual a 1 hasta n, donde n representa el número de puntos que tenemos en el conjunto de datos, de el f de
+31:16 Speaker 1: x sub
+31:17 Speaker 2: i.
+31:20 Speaker 1: ¿Quién es el f de x sub i?
+31:22 Speaker 2: Es lo que nos va a dar como respuesta la función. Menos...
+31:48 Speaker 1: Y hemos
+31:57 Speaker 2: dicho el promedio de todos esos residuos, vamos a dividirlo entre m. Entonces, estamos calculando, fíjense, el f de x sub i, hagamos con este primer punto. Acá tenemos el x1, ¿no? f de x1, ¿quién es el f de x1 con la recta azul, por decirlo? El f de x1 viene a ser este valor. Aquí viene a ser el f de x1. ¿No? Ya. Menos y sub i. Y sub 1 en esta ocasión. Y sub 1 es este de aquí. F de X 1 menos Y sub 1 viene a ser esta distancia. ¿No? Esa distancia. Y eso vamos a hacer con cada uno de los puntos. Y igual a 1 hasta M donde M es el número de puntos. Calculamos todos los residuos y luego dividimos entre m.
+33:04 Speaker 2: Pero aquí hay un problema. Por ejemplo, este dflx sub 1 menos y sub 1 es un resultado positivo o negativo.
+33:17 Speaker 1: F de X sub 1. Negativo.
+33:20 Speaker 2: Negativo, ¿verdad?
+33:21 Speaker 1: Negativo.
+33:22 Speaker 2: En el caso del 2,
+33:24 Speaker 1: por ejemplo, en el caso del 2,
+33:26 Speaker 2: el F de X sub 1, eh... ¿El valor? Acá el 2, perdón, acá el 2, ¿no? Está bien. F de X sub 1, no, 2, perdón. F de X sub 2 va a ser mayor a Y sub 2, entonces el resultado va a ser
+33:40 Speaker 1: positivo. ¿No? Podría que sea el valor absoluto. Valor absoluto.
+33:46 Speaker 2: Puede ser valor absoluto. O también elevarlo al cuadrado.
+33:52 Speaker 1: Elevarlo al cuadrado.
+33:54 Speaker 2: Y esto lo que nos da es lo
+33:56 Speaker 1: que conocemos el error cuadrado.
+34:00 Speaker 2: Este es lo que conocemos como el famoso MSEQ. El error medio cuadrado.
+34:10 Speaker 1: ¿Ya? El error medio cuadrado.
+34:13 Speaker 2: Es la medida que nos permite calcular el promedio de los residuos, pero elevado. Elevado al cuadrado cumple inclusive hasta dos funciones, ¿no?
+34:31 Speaker 1: ¿Recuerdan? ¿Qué
+34:32 Speaker 2: funciones cumplía elevado al cuadrado esta diferencia? Primero, positivizar. Perfecto. Uno, positivizarlo.
+34:42 Speaker 1: ¿Y el otro?
+34:45 Speaker 2: Penalizador, ¿no? Como un penalizador. Es decir, si esta diferencia es grande, elevamos al cuadrado, se hace más grande. Entonces vamos a penalizar a aquella recta o aquel modelo que está teniendo residuos grandes, lo vamos a penalizar más. Y por una convención que más adelante nos va a servir, cuando hagamos descenso por gradiente, generalmente se divide entre 2M, que en verdad acá no le hace nada.
+35:24 Speaker 1: No, no le hace nada.
+35:26 Speaker 2: Y vamos a ver por qué 2M pasa adelante. Y es esencial el error medio cuadrado. Entonces calculamos error medio cuadrado para el modelo recta azul, calculamos error medio cuadrado para el modelo recta negra, ¿Cuál de los dos promedios? ¿Cuál de los dos error medio cuadrado es menor? Y ahí decimos, ¿sabes qué? Tal recta o tal modelo es mejor que el otro. El que tenga es menor error medio cuadrado.
+36:09 Speaker 2: Hasta ahí hemos identificado que podemos representar un conjunto de puntos
+36:18 Speaker 1: mediante
+36:22 Speaker 2: un modelo simple, mediante un modelo lineal. También hemos verificado de que podría haber otro modelo mejor que el otro. Y tenemos una estrategia, una forma de poder identificar entre dos modelos quién es el mejor. Pero la cuestión está en que yo puedo trazar infinitas rectas. Simplemente hago una pequeña variación a la pendiente y ya tengo otra red. O hago una variación al intercepto por una milésima y ya tengo otra red. Puede ser que este error medio cuadrado aumenta o disminuye, pero ya tengo otra red. Y puedo estar haciendo variaciones a los parámetros, bien sea el intercepto o bien sea la pendiente. una millonésima de, digamos así, de valor, y ya tengo otra recta, y voy a tener otro error medio cuadrado.
+37:30 Speaker 1: Y voy a tener infinitas rectas.
+37:33 Speaker 2: La cuestión está, ¿cómo determino cuál es la mejor recta que representa este conjunto de puntos? ¿No?
+37:56 Speaker 1: Me paro un poco por el tema de la división entre dos. He visto que, de forma estadísticamente, no se hace la división entre dos, pero que en la Chilean me declara que es la división entre dos. ¿Eso por qué se debe? No, la verdad que me voy a perder ahí. Lo
+38:14 Speaker 2: vamos a aplicar allá cuando hagamos de cien su pobre ediente.
+38:17 Speaker 1: Ah, ok. Sí.
+38:20 Speaker 2: Sí, cuando hagamos de cien su pobre ediente, ahí vamos a
+38:23 Speaker 1: ver este. Ah, ok. Gracias.
+38:30 Speaker 2: Bueno, entonces, ¿cómo encontramos la mejor recta?
+38:37 Speaker 1: Minimizando el error.
+38:41 Speaker 2: Minimizando el error, ya, muy bien.
+38:43 Speaker 1: Minimizando este error.
+38:52 Speaker 2: Bueno.
+38:54 Speaker 1: Tal vez puedo usar otra función, no necesariamente una recta de línea.
+38:58 Speaker 2: No, estamos usando una recta. Ah, ok. solamente para podremos nosotros hacer esta función f de x es igual a x más b podríamos representarla mediante una función de hipótesis un h de x que vendría a ser podemos representar mediante un beta sub cero más un beta sub uno x
+39:34 Speaker 2: Y encontrar la mejor recta, ¿qué cosa va a significar?
+39:39 Speaker 1: Encontrar los valores más
+39:41 Speaker 2: adecuados para los parámetros A y B, ¿correcto? De tal manera que los parámetros minimicen este error medio cuadrado. Entonces acá tenemos, ¿cómo era la función que quedó como tarea? Me ayudan, por favor.
+40:11 Speaker 1: X por... Por... X encuesta. Por Y. Por Y.
+40:29 Speaker 2: Eso es lo que han hecho ustedes en la tarea. Y esta es la ecuación de menos cuadrados. Y esta es la ecuación que nos va a encontrar los
+40:41 Speaker 1: betas.
+40:44 Speaker 2: ¿Los betas quiénes son? Este beta viene a ser el beta sub cero y el beta sub cero. Entonces, aquella ecuación que ustedes han programado, los mismos cuadrados, nos deberían dar como resultado los valores óptimos para beta sub 0 y beta sub 1, de tal manera que minimicen el error medio cuadrado.
+41:24 Speaker 2: Trasladando, ¿pero cuántos tenemos acá?
+41:26 Speaker 1: Vamos a hacer nuestro... Vamos
+42:20 Speaker: a completar nuestro cuadrado. 0.32, el
+42:28 Speaker 2: tercero, 0 .32, el cuarto, 0.32, 0.3, el cuarto, que en verdad es el tercero. 0.25 y 0
+42:40 Speaker 1: .40. 0.25.
+43:04 Speaker 2: y 0.45 y 0.5 y 0.5 y
+43:08 Speaker 1: 0.5 y 0 .5 lo que está en 0.6
+43:33 Speaker 2: vamos a ponerle 0
+43:35 Speaker 1: .2 0.6 y el otro que tenemos el otro punto está en 0.5 y
+43:59 Speaker 2: Y el último, más o menos en 0.9 y
+44:03 Speaker 1: 0.7. 0.9 y 0.7.
+44:10 Speaker 2: Ok, aquí están los,
+44:12 Speaker 1: 1, 2, 3, 4, 7, 8, 9, 9, 9.
+44:29 Speaker 2: Bien, tenemos que determinar quién es la matriz X, qué es la matriz Y y la matriz X.
+44:44 Speaker 1: ¿Quién es la matriz X?
+44:53 Speaker 2: Y la matriz Y está acá.
+45:14 Speaker 2: Entonces, ¿la matriz X de qué dimensión es allá?
+45:25 Speaker: 9 por 1. Vamos a trabajar con M. M por
+45:39 Speaker 2: 1. La matriz X es de dimensión M
+45:44 Speaker 1: por 1.
+45:46 Speaker 2: ¿La transpuesta de qué dimensión será? M por
+45:58 Speaker 1: 2 en la tarea
+46:00 Speaker 2: M
+46:02 Speaker 1: por 2 en la tarea M por 2 en la tarea M por 2 en la tarea M por 2 en la tarea M por 2 en la tarea M por
+46:20 Speaker 2: 2 en la
+46:23 Speaker 1: tarea
+46:28 Speaker 2: Porque tenía yo un b sub cero, x sub cero, más un beta sub uno, x sub cero. ¿X sub cero cuánto equivale?
+46:42 Speaker 1: ¿Cuánto vale? X sub cero.
+46:48 Speaker 2: X uno ya sabemos que es la variable, ¿no? Sí. ¿Y x sub cero?
+46:54 Speaker 1: Cero uno, supongo. Cero uno. Uno o cero. Ajá.
+47:09 Speaker 2: en verdad este viene a representar x1 y aquí vamos a ver que ha dicho nada el
+47:18 Speaker 1: x0
+47:18 Speaker 2: estos dos de su conjunto hacen la matriz x
+47:23 Speaker 1: ¿correcto? y este
+47:26 Speaker 2: x0 ¿cuánto es?
+47:31 Speaker 1: 0 a 1 porque
+47:37 Speaker 2: si no lo coloco es lo mismo 1 Entonces ahí estamos, ahí tenemos la explicación por qué la tarea
+47:56 Speaker 1: tenía una columna 1.
+48:01 Speaker 2: Y eso tiene sentido, porque recuerden ustedes que vamos a calcular dos valores betas, ¿no? El beta sub 0 y el beta sub 0. Entonces, aquí... En la tarea, ¿qué dimensión tenía? ¿Cuál era el shape de la matriz X?
+48:33 Speaker 1: 100 por 2. ¿100 por 2 o 2 por 100? 100 por 2. ¿100 por 2?
+48:42 Speaker 2: Ya. A ver, yo creo que nomás la llamamos 2, por ejemplo,
+48:55 Speaker 1: m por 2,
+48:57 Speaker 2: por la transpuesta,
+48:59 Speaker 1: 2 por m.
+49:02 Speaker 2: Esto me va a resultar
+49:06 Speaker 1: en
+49:09 Speaker 2: una matriz de m por m.
+49:11 Speaker 1: Creo que la fórmula inicial está un poco mal. Primero es x transpuesta por x. A ver. ¿Cuál es la fórmula? O sea, está bien, solamente dentro del paréntesis cambia. Es X transpuesta y luego X. No, X transpuesta está bien. Vamos
+49:42 Speaker 2: a tener entonces la transpuesta. Se viene a ser 100 por M por 100. M por 2 por 2. Transpuesta 2 por M.
+49:52 Speaker 1: Y acá.
+49:56 Speaker 2: Acá sí me va a dar una resultante de 2 por 2,
+49:59 Speaker 1: ¿correcto? ¿No?
+50:02 Speaker 2: La inversa de ese 2 por 2, ¿cuánto será? ¿De qué dimensión será?
+50:08 Speaker 1: Lo mismo, 1 por 2.
+50:10 Speaker 2: 2 por 2 también. Acá la transpuesta es 2 por M.
+50:17 Speaker 1: ¿No?
+50:18 Speaker 2: Esta resultante será
+50:20 Speaker 1: 2 por M.
+50:24 Speaker 2: ¿Y de qué dimensión es Y?
+50:29 Speaker 1: M por 1. M por 1.
+50:33 Speaker 2: Y la resultante será 2
+50:36 Speaker 1: por 1.
+50:38 Speaker 2: Y efectivamente lo que estamos buscando, ¿no? Es decir, acá tíguese el beta, beta sub 3 es una matriz de 2 por 1, ¿no? Entonces, lo que ustedes han programado, en verdad, es la ecuación de mínimos cuadrados que me va a dar como resultado los valores de los parámetros beta sub 0 y beta sub 1, o los valores de los parámetros A
+51:09 Speaker 1: y B.
+51:11 Speaker 2: Y esos parámetros, o esos valores de esos parámetros, me va a determinar la
+51:18 Speaker 1: recta que
+51:19 Speaker 2: me va a dar el menor error medio cuadrado. Entonces, cuando ustedes llaman a una regresión lineal en un programa estadístico,
+51:39 Speaker 1: en
+51:41 Speaker 2: verdad lo que está desarrollando es esta ecuación. Y les está dando como respuesta los
+51:51 Speaker 1: valores
+51:52 Speaker 2: de los parámetros. ¿Cómo le llaman en la estadística?
+52:03 Speaker 1: Los coeficientes.
+52:12 Speaker 2: Pero en aprendizaje automático le llamamos los parámetros. Entonces, ya hemos resuelto el problema. Hemos encontrado la fórmula para poder determinar los valores ideales de los parámetros que nos permite determinar la recta que
+52:40 Speaker 1: va
+52:41 Speaker 2: a conseguir el menor error medio cuadrado. Ahora, y lo que estamos hablando al inicio, ¿no? Esos serán los valores...
+53:00 Speaker 1: reales.
+53:05 Speaker 2: ¿Qué pasa si aumenta mi conjunto de datos?
+53:09 Speaker 1: Ah, ya. Ya es... se vuelve...
+53:17 Speaker 2: ¿Qué tal si tengo más puntos? O sea, la fórmula va a funcionar. Va a funcionar. Igual voy a tener una tabla de mayor
+53:26 Speaker 1: número
+53:30 Speaker 2: de elementos. Cuando hago mi cálculo, igual va a funcionar la transpuesta. Tal vez los valores no sean los mismos que cuando tenía solamente este número de valores, de datos. Acá tenía 9, de pronto tengo 100 puntos, ¿no? Los valores van a ser diferentes, pero no tan lejanos. Pero, ¿qué es lo que está pasando? Que a medida que yo estoy obteniendo mayor cantidad de elementos de mi conjunto de datos, ¿no? Esos valores se van aproximando, ¿no? A
+54:04 Speaker 1: ciertos valores, ¿no? A ciertos puntos.
+54:09 Speaker 2: Van convergiendo, diríamos de alguna manera. ¿Ya? Pero siempre van a hacer una aproximación. O sea, no es que va a haber cuál es la mejor recta
+54:20 Speaker 1: que represente dos puntos. No lo sé.
+54:23 Speaker 2: Así que vamos a tener una aproximación.
+54:47 Speaker: Ok. Esto inclusive hasta lo podemos
+54:51 Speaker 2: hacer manualmente. Podemos hacer los cálculos manuales. Las operaciones con matriz. Cuando tenemos pocos puntos. Solamente tenemos una variable. X1 solamente. Ya. pero qué sucede cuando yo tengo por ejemplo un millón de puntos y no solamente tengo una variable sino tengo 10 20 100 variables
+55:37 Speaker 2: Tengo 100 variables y tengo un millón de
+55:45 Speaker 1: puntos.
+55:47 Speaker 2: ¿Cómo es la dimensión del X transpuesta? El X transpuesta será
+55:53 Speaker 1: 100. Por un millón. No.
+56:05 Speaker 2: Multiplicado por X que es un millón. Por cien. ¿Cuál será el resultado de esta?
+56:13 Speaker 1: Va a ser una matriz de cien.
+56:15 Speaker 2: Por cien. ¿Verdad? Una matriz de cien por cien.
+56:21 Speaker 1: Y
+56:22 Speaker 2: luego tengo que calcular la inversa de esta matriz. que por cierto sea también cien por cien la sumo porque es cuadrada cien por cien luego multiplico por la transpuesta que es
+56:36 Speaker 1: cien por un millón
+56:38 Speaker 2: esta resultante va a ser cien por
+56:43 Speaker 1: un millón y
+56:46 Speaker 2: multiplico por
+56:47 Speaker 1: un millón
+56:52 Speaker 2: ¿Cuánto sería?
+56:53 Speaker 1: Por 1, ¿no? Por 1.
+56:56 Speaker 2: Y acá ya va a resultar en una matriz de 100 por 1. Y ahí están los 100 betas, los 100 coeficientes, ¿no? Ok, de esa, para cada variable. ¿Ya? Entonces, hacer estos cálculos de matrices ya compromete mucho la memoria del computador.
+57:23 Speaker 1: Es más,
+57:25 Speaker 2: este cálculo de la inversa de una matriz cuadrada,
+57:28 Speaker 1: computacionalmente
+57:32 Speaker 2: es caro también, carísimo. Entonces, cuando tengo un problema con altas dimensiones, Esta ecuación de mínimos cuadrados me compromete mucho costo computacional. Demasiado caro. El computador puede estar ahí procesando, procesando y procesando.
+58:39 Speaker 1: Vamos a hacer lo que hemos estado viendo, hemos visto la recta. Hemos visto ahí que podemos tener la recta.
+59:04 Speaker 2: ¿Qué es lo interesante de todo esto? Quédense, ¿no? Estamos calculando los betas, estamos calculando un modelo lineal, ¿no? que sea representativo. Lo interesante es que todos esos cálculos, fin y seis, están saliendo a partir del conjunto de datos. Yo tengo un conjunto de datos con sus respectivas etiquetas, ¿no? Aplico la fórmula de mínimos cuadrados, pues, y calculo los betas, ¿no? Calculo los parámetros, ¿ya? Y por eso que acá, fin y seis, puedo tener aquí mi conjunto de datos, Tengo mi modelo, voy a
+59:51 Speaker 1: calcular
+59:53 Speaker 2: los parámetros y luego tengo
+59:56 Speaker 1: una
+59:59 Speaker 2: función que me permite saber qué tan buena es esa recta que está siendo determinada. Hemos visto aquí que la recta también depende de... De variar los parámetros, en este caso por ejemplo si es una recta, variamos tanto la pendiente como el intercepto y vamos buscando aquella recta que sea mejor representativa
+01:00:27 Speaker 1: desde el principio.
+01:00:30 Speaker 2: Ahí hemos visto que justamente para poder determinar qué recta es mejor, calculamos la pérdida. Donde cada una de las distancias viene a ser el error que está teniendo esa recta. Y ello nos lleva al error medio cuadrado, que también la conocemos como una función de pérdida. En inglés es más conocido como h.
+01:01:01 Speaker 1: Como los... La función de pérdida.
+01:01:10 Speaker 2: Pero yo creo que también lo podemos representar como una L, ¿no? Como una L. Dos funciones, ¿no? Que viene a ser justamente f de i sub i menos i sub i al cuadrado sumatoria de 1 hasta m y todo sobre 2 e. Es lo mismo. Ok, ahí tenemos nuestra
+01:01:29 Speaker 1: función de pérdida.
+01:01:37 Speaker 2: Ok, hemos visto que aquella función de mínimos cuadrados es computacionalmente cara, así que buscamos otra estrategia que nos permita encontrar también los valores de los parámetros, en este caso los parámetros beta sub
+01:02:01 Speaker 1: 0 y beta sub 0.
+01:02:18 Speaker 2: Fíjense que si es que nosotros trazamos una
+01:02:21 Speaker 1: recta aquí, es... ¿Qué
+01:02:26 Speaker 2: tiene pendiente? ¿Cuánto de pendiente tiene esta recta?
+01:02:30 Speaker 1: Cero.
+01:02:32 Speaker 2: Pendiente cero. Está encima del eje X. ¿Cuánto será su error? El error es calcular las distancias. Y
+01:02:46 Speaker 1: fíjense que nos está dando un error de 0.20.
+01:02:53 Speaker 2: La función tiene pendiente 0 y además intercepto 0. ¿Qué quiere decir? Que pasa por el origen. Entonces, siempre nos va a dar respuesta 0. Cuando x igual a 0.2, salida 0. Cuando x sea el valor que nos traigamos x,
+01:03:10 Speaker 1: salida 0. Entonces, simplemente vamos a tener
+01:03:11 Speaker 2: ahí una salida constante. Y ahí nos está cuando hagamos el cálculo del error, nos va a dar una pérdida de este punto de vista. Si modificamos, fíjense, si trazamos en otro gráfico esta representación del valor que estamos teniendo para la pendiente, porque aquí hemos hecho pendiente igual a cero, el
+01:03:46 Speaker 1: intercepto también igual a cero,
+01:03:50 Speaker 2: Si nosotros trazamos en otro gráfico las variantes que vamos a hacer con la pendiente, es decir, por ejemplo, el valor de A, ¿ya? Aquí le dimos 0, ¿no? Nos dio un error de 0.25. Entonces,
+01:04:05 Speaker 1: en este otro eje tenemos
+01:04:08 Speaker 2: la pérdida que hemos obtenido, ¿no? Y ahí tenemos 0.25. Entonces mantenemos el intercepto en cero y modificamos el valor de A. Fíjense que el valor de A en este
+01:04:32 Speaker 1: caso es de 0.5.
+01:04:37 Speaker 2: A igual a 0.5. B se mantiene en cero. y tenemos una pérdida de 0.094 lo cual es lógico que la recta anterior cuando A igual a 0 estaba aquí encima ahora con 0.5 la recta tiene una inclinación mayor y eso hace que se esté aproximando más de los puntos y por ende el error es menor un error de 0
+01:05:12 Speaker 1: .094
+01:05:14 Speaker 2: Trazamos ese punto 0.5 y nos da como respuesta 0.90. Vamos
+01:05:32 Speaker 1: a trazar una recta. Vamos
+01:05:37 Speaker 2: a mantener B igual a 0. Luego A.
+01:05:44 Speaker 1: Y aquí vamos a tener el 2.
+01:05:47 Speaker 2: Cuando A igual a 0, el
+01:05:49 Speaker 1: 2 era de 0.25.
+01:05:53 Speaker 2: Cuando A igual a 0.5, el
+01:05:57 Speaker 1: 2 necesitaba 0.094.
+01:06:05 Speaker 2: Ahora tenemos un valor de A igual a 1. a 1 y nos da un LOD menor 0
+01:06:18 Speaker 1: .019 esta
+01:06:25 Speaker 2: mas cerca y dice que esta mas cerca de los puntos y
+01:06:32 Speaker 1: mejor del LOD y acá
+01:06:35 Speaker 2: tenemos Fíjense, cuando tenemos
+01:06:47 Speaker 1: 1.5, el
+01:06:59 Speaker 2: error es 0
+01:06:59 Speaker 1: .027. Cuando es 2,
+01:07:08 Speaker 2: el error es 0.12. Cuando es 2.4. El error es de
+01:07:17 Speaker 1: 0.20.
+01:07:21 Speaker 2: Fíjense, con 2.4 conseguimos el mismo error que cuando teníamos 0.
+01:07:30 Speaker 1: Con 1
+01:07:33 Speaker 2: .5 tenemos un error ya un poquito mayor cuando era 1.
+01:07:54 Speaker 2: ¿A dónde vamos? Fíjense, hemos ido variando el valor del parámetro A, hemos mantenido el parámetro B en C, es decir, todas las rectas pasan por el origen, solamente para demostrar cómo es que va variando el error. Fíjense que a medida que vamos aumentando el valor de A, va recreciendo el error, pero llega un momento en que comienza a aumentar el error. Y eso nos lleva a que esa función de pérdida,
+01:08:27 Speaker 1: más
+01:08:29 Speaker 2: o menos, finalmente tiene esa función de pérdida, o sea, este MSE, generalmente, tiene un comportamiento, o es una función convexa. Es una función convexa.
+01:09:01 Speaker 1: ¿Qué
+01:09:02 Speaker 2: significa que tenga una función convexa?
+01:09:05 Speaker 1: Tiene mínimo. ¿Tiene mínimo o tiene máximo?
+01:09:11 Speaker 2: Tiene un solo mínimo.
+01:09:13 Speaker 1: Un óptimo. Solo mínimo global.
+01:09:22 Speaker 2: Tiene un solo mínimo global. Y para nosotros ese mínimo global, ¿qué cosa va a representar? Ese mínimo global va a representar. El punto donde se obtiene la menor pérdida, ¿no? Está la menor pérdida. Entonces, este punto donde está la menor pérdida, para nosotros va a ser el punto donde el valor de A viene a ser el más
+01:10:02 Speaker 1: óptimo.
+01:10:07 Speaker 2: En teoría, este valor de A, donde estamos obteniendo la menor pérdida, es lo que nos está dando esta ecuación de mínimos cuadrados. Pero para nosotros al descubrir que esta es una función convexa, es decir, que tiene un mínimo global, y ese mínimo global nos va a determinar el punto donde obtenemos la menor pérdida. Para nosotros decimos, bingo, entonces podemos obtener o poder buscar aproximarnos a ese mínimo global.
+01:10:45 Speaker 1: Podemos aproximarnos.
+01:11:11 Speaker 2: Muy bien, tenemos la función que es allá, nuestra función de error medio cuadrado. Sabemos que esa función de error medio cuadrado es una función convexa. Luego, al ser una función convexa, sabemos que tiene un solo mínimo global. Y nos interesa encontrar ese mínimo global porque ese es el punto donde vamos a tener
+01:11:41 Speaker 1: la menor
+01:11:42 Speaker 2: pérdida, menor error. Entonces, podríamos nosotros determinar una forma
+01:11:54 Speaker 1: que
+01:11:57 Speaker 2: computacionalmente sea mucho más barata. Para poder llegar a aproximarnos a ese mínimo global, ¿no? Es decir, la lógica es bien sencilla, ¿no? Yo puedo asignarle al valor de A, por ejemplo, un valor aleatorio cualquiera, ¿ya? Le doy un punto por acá, por decir, al
+01:12:23 Speaker 1: valor de A.
+01:12:25 Speaker 2: Y luego desciendo, ¿no? En esa curva. Voy descendiendo. Comienzo en este punto y voy descendiendo hasta poder llegar a este mínimo global.
+01:12:48 Speaker 1: Hago el descenso.
+01:12:51 Speaker 2: Es como que le doy a un cieguito, le pongo por ejemplo en una montaña y le digo, desciende hasta el punto más bajo. Desciende hasta el punto cieguito, agarra y va calculando y va descendiendo.
+01:13:08 Speaker 1: Voy descendiendo, voy descendiendo.
+01:13:12 Speaker 2: Solo que matemáticamente, ¿cómo lo podemos hacer? Dado ese punto inicial, calculamos la gradiente de la función de pérdida, el error medio cuadrado en este caso, en ese punto, y damos un salto en sentido contrario a esa gradiente. En este caso, ¿la gradiente es positiva o negativa? Positiva, ¿no? Entonces voy a dar un salto en sentido contrario a esa. Doy un salto determinado, ¿no? Luego, en este nuevo punto, calculo también la gradiente, otra vez, de la función de pérdida, ¿no? Y doy un salto en sentido contrario a esa gradiente. Otra vez calculo la gradiente en ese nuevo punto y otra vez doy un salto y así se siente, ¿no? Voy calculando gradiente. de la función de pérdida en ese punto y voy dando saltos contrares y así voy descendiendo voy descendiendo hasta el mínimo hasta que llegue un punto en que yo haya
+01:14:23 Speaker 1: convertido
+01:14:30 Speaker 2: bueno, matemáticamente nuestro 2, calculamos el gradiente,
+01:14:38 Speaker 1: y acá, ¿no?
+01:14:41 Speaker 2: Matemáticamente, ese, ¿no? Ese cálculo de la gradiente, y luego el salto al sentido contrario, ¿no? Lo podemos presentar aquí. Tenemos acá la gradiente de la función de pérdida en el 2,
+01:14:58 Speaker 1: ¿no? ¿Ok?
+01:15:00 Speaker 2: Respecto, en este caso, a la variable A. Y luego multiplico por un valor que va a ser el salto que voy a dar. En este caso es el learning rate. Y luego actualizo el valor B. Y voy a actualizarlo. Si este yo tengo aquí, por ejemplo, ¿no? Si este resultado de la realidad es positivo, el R y R, por ejemplo, tengo un valor determinado que les puedo asignar, multiplicado por el R y R va a ser negativo, entonces voy a restar al valor actual de A. Es decir, voy a hacer que A sea menor. Entonces voy en este sentido.
+01:16:04 Speaker 2: Ahora, si es que el punto de inicio está por aquí, yo
+01:16:07 Speaker 1: puedo dar un punto
+01:16:09 Speaker 2: aleatorio inicial para el valor real. Entonces por aquí yo puedo tener el valor real inicial. Calculo la gradiente. En este caso la gradiente es positiva y negativa en este caso. Voy a tener como si hay una gradiente negativa. Y al multiplicarse por el regnidio por negativo va a ser positiva. Entonces aquí en vez de restar el valor real va a sumar. Entonces, ¿qué va a hacer? Que el valor de A va a saltar hacia esta dirección. Entonces, cuando yo estoy aquí, gradiente negativa, doy un salto en este sentido. Otra vez, gradiente negativa, doy un salto en este sentido. Gradiente negativa, doy un salto en este sentido. Y así se hace. ¿No?
+01:16:56 Speaker 2: Este proceso de estar calculando la gradiente, estar dando un salto en sentido contrario a esa gradiente, ese salto determinado por este LR, que es el learning rate, es lo que conocemos como el descenso por gradiente.
+01:17:18 Speaker 2: Y a diferencia de la ecuación de los mínimos cuadrados,
+01:17:23 Speaker 1: esta
+01:17:25 Speaker 2: estrategia es mucho más
+01:17:27 Speaker 1: barata
+01:17:29 Speaker 2: computacionalmente.
+01:18:01 Speaker: ¿Preguntas? Profesor,
+01:18:16 Speaker 1: ¿el valor de la tasa de aprendizaje oscila entre un rango en particular?
+01:18:24 Speaker 2: Ese es uno de los hiperparámetros
+01:18:26 Speaker 1: que tienen que ser calculados o
+01:18:29 Speaker 2: determinados, determinados por tipo. Ahora, ¿cuánto es ese valor? Porque si le doy un valor chiquitito, ¿qué va a pasar? Voy a estar demorándome, ¿no? Si le doy un valor chiquitito, voy a demorar. Voy a demorarme, voy a llegar hasta acá. Voy a tener que hacerle cierto número de iteraciones. Si le pongo un valor de 0.00001 y hago un millón de iteraciones, capaz llego por acá nada más. No voy a llegar hasta este
+01:19:24 Speaker 1: punto.
+01:19:25 Speaker 2: Tal vez voy a tener que hacer otro millón de iteraciones más. Si le pongo un valor grande, también puede ocurrir de que de pronto salto aquí, salto aquí, salto aquí, salto aquí. En vez de convertir, diversa, ¿no? Ya, y nunca voy a llegar a... Salto, salto, salto. Entonces, hay que hacer la experimentación para poder encontrar aquel valor más adecuado para el learning rate, ¿no? Cuál va a ser la distancia que se va a dar, ¿no? En ese learning rate.
+01:20:18 Speaker 2: Pero generalmente es un 0.01, ¿no? Se coloca, se estira a colocar. 0.01, ¿por qué? 0 .01 es lo que se estira a colocar. pero de qué depende ese valor también Aquí estamos hablando de una sola variable, ¿no?
+01:21:01 Speaker 1: ¿Ya?
+01:21:02 Speaker 2: Y fíjense que en este caso, si estoy tomando en consideración este valor de x, ¿no? ¿Ya? Este valor de x estoy considerándolo, ¿no? Los valores oscilan entre 0 y 1,
+01:21:13 Speaker 1: ¿no?
+01:21:14 Speaker 2: ¿Ya? Están ahí. Entonces, yo me puedo asegurar de que, pues bueno, entonces yo voy a tener aquí los saltos de 0.01 o van a estar en ese rango, ¿no? Pero, ¿qué pasa si es que los valores de mis datos, por ejemplo, estuviesen entre 0 y 100, por decirlo? ¿No? Su rango de valores. Esa tasa de aprendizaje va a quedar demasiado pequeñita, ¿no? Para poder estar dando saltos en ese espacio de datos. Y peor, si es que nosotros hacemos más complejo el problema, no tengo solamente una variable, puedo tener más variables. Puedo tener X1, X2, puedo tener 10, 20, 30 variables. Donde X1 puede variar entre 0 y 1, X2 puede variar entre 0 y 100, X3 puede variar entre 5 y 10, por decirlo. Entonces en rangos diferentes.
+01:22:21 Speaker 2: Y recuerden que yo voy a ir calculando, como dice acá, voy a ir calculando la gradiente de la función de pérdida respecto a cada uno de los
+01:22:32 Speaker 1: parámetros.
+01:22:38 Speaker 2: Entonces ahí voy a tener que ir haciendo
+01:22:40 Speaker 1: mis
+01:22:42 Speaker 2: cálculos en cada una de las dimensiones. Y si las variables están en rangos diferentes, pues
+01:22:50 Speaker 1: todo va a ser un desastre.
+01:22:54 Speaker 2: Por eso que
+01:22:54 Speaker 1: paso
+01:22:56 Speaker 2: importante antes de aplicar recenso por gradiente o inclusive antes de aplicar una red neuronal, que es lo que se hace. Normalizar los datos. ¿No? Normalizar los datos. Es decir, colocamos todos nuestros datos entre 0 y 1, entre menos 1 y más 1, pero pónganlo en el mismo rango. ¿Ya? De tal manera que cuando ustedes definen un learning rate, pues se mueva, ese learning rate se mueva o les permita moverse en ese espacio de
+01:23:25 Speaker 1: datos.
+01:23:26 Speaker 2: ¿No? Y vaya de forma homogénea.
+01:23:30 Speaker 1: ¿Ok?
+01:23:34 Speaker 2: si no nunca va a llegar a comer ok
+01:24:10 Speaker 2: preguntas todavía no hemos respondido el 2 hacemos un break
+01:24:25 Speaker: Estamos hablando del proceso conveniente. Y vamos a tratar
+01:24:31 Speaker 2: solamente con una variable, nada más. Y solo por cuestión didáctica, ¿no? Es decir, en la escuadra vamos a tener una función con
+01:24:44 Speaker 1: un vector que
+01:24:46 Speaker 2: nos asegura que tenemos un mínimo global. Y nosotros vamos a buscar... descender hasta ese mismo global. Estamos conversando solamente con una sola variable nada más, en esta representación.
+01:25:03 Speaker 1: Si
+01:25:04 Speaker 2: aumentamos la dimensión
+01:25:06 Speaker 1: del
+01:25:10 Speaker 2: problema, es decir, recuerden que para esta gráfica irá la función que teníamos f de x igual a x.
+01:25:23 Speaker 1: Para esta gráfica, mantener
+01:25:28 Speaker 2: B en cero,
+01:25:29 Speaker 1: ¿verdad? Es lo que hemos dicho. Hemos
+01:25:32 Speaker 2: dicho que todas las rectas que vayamos a trazar pasan por el origen. Y solamente vamos a variar el parámetro A, lo que hemos
+01:25:40 Speaker 1: obtenido. Pero también
+01:25:45 Speaker 2: podríamos variar el parámetro B, es decir, Podríamos hacer que el parámetro B también comience a cambiar. Podemos ir normando los valores
+01:25:56 Speaker 1: del parámetro B.
+01:25:57 Speaker 2: Y vamos a obtener una función, en este caso con una representación tridimensional, que también va a ser convencida, que va a tener un mínimo global.
+01:26:09 Speaker 1: ¿Verdad? Un
+01:26:11 Speaker 2: mínimo global. Y la idea va a ser, dado un punto cualquiera, cuando yo comienzo aquí, la idea es poder descender.
+01:26:19 Speaker 1: ¿no? hasta ese mínimo global ¿ok?
+01:26:24 Speaker 2: entonces aquí fíjense que en el punto aleatorio que yo voy a dar de inicio como semilla voy a calcular la gradiente de la función de pérdida ¿no? respecto al parámetro A
+01:26:38 Speaker 1: y respecto al parámetro B yo
+01:26:41 Speaker 2: podría tener respecto al parámetro A la gradiente en este sentido respecto al parámetro B podría tener la gradiente en este sentido la resultante de esas dos voy a tener algo así y voy a ir en sentido contrario
+01:26:53 Speaker 1: a esas latinas ¿no?
+01:26:57 Speaker 2: y ahí que nosotros indicamos de que la
+01:26:59 Speaker 1: importancia de que los
+01:27:04 Speaker 2: valores de nuestras variables estén
+01:27:06 Speaker 1: normalizados ¿no? porque va
+01:27:09 Speaker 2: a depender mucho ahí también de que los valores de estos parámetros ¿ya? y al estar normalizados yo puedo determinar un learning rate ¿no? más o menos que tiene el rango de los valores de tal manera que no que el descenso sea homogéneo ¿no? en todos los
+01:27:33 Speaker 2: en todas las dimensiones de alguna manera
+01:27:34 Speaker 1: pero
+01:27:36 Speaker 2: bueno no siempre pasa, ese es un mundo ideal porque si nosotros vamos incrementando por ejemplo más variables obviamente ya no podemos visualizar y
+01:27:49 Speaker 1: cuando
+01:27:51 Speaker 2: veamos redes neuronales más adelante pues vamos a ir haciendo todo un complejo de funciones que que en ese espacio viene a dimensionar, vamos a tener muchos mínimos
+01:28:07 Speaker 1: locales.
+01:28:08 Speaker 2: Y encontrar el mínimo global, tranquilamente va a ser una tarea de ilusión imposible. Entonces lo único que vamos a buscar siempre va a ser una aproximación. Una aproximación a
+01:28:21 Speaker 1: ese mínimo global.
+01:28:23 Speaker 2: Tal vez nunca lo lleguemos a encontrar. Tenemos nuestra función, nuestro modelo. que es un modelo bien simple, que es una línea, ¿no? Es una línea, una recta. Tenemos otra función de costo, que es el error medio cuadrado, que nos va a calcular los residuos, elevamos al cuadrado, sacamos el promedio de esos residuos y dividimos, ¿no? Calculamos el promedio, ¿no? Pero recuerden que nosotros, nuestro descenso por gradiente consistía en calcular,
+01:29:31 Speaker 1: dado
+01:29:32 Speaker 2: un punto de inicio, calcular la gradiente de la función de pérdida en ese punto respecto a cada uno de los parámetros. Entonces aquí debemos calcular
+01:29:46 Speaker 1: la
+01:29:50 Speaker 2: gradiente de
+01:29:51 Speaker 1: la función de pérdida
+01:29:52 Speaker 2: respecto a la gradiente de la
+01:29:56 Speaker 1: función de pérdida respecto a. Acá
+01:30:05 Speaker 2: tenemos la gradiente de la función de pérdida respecto a.
+01:30:10 Speaker 1: Y la
+01:30:16 Speaker 2: gradiente de la función de pérdida respecto a. que lo que estamos haciendo derivada, ¿no? Entonces, nos está calculando la derivada de la función de P respecto a A, la derivada de la función de P respecto a B.
+01:30:45 Speaker 1: ¿Ok?
+01:30:46 Speaker 2: Hacemos las descomposiciones necesarias al final y obtenemos esta resultante. Esta sería la gradiente de la función de P respecto a A y esta sería la gradiente
+01:31:00 Speaker 1: de la función de P respecto a B. ¿Ok?
+01:31:10 Speaker 2: Acá sí, ¿no? ¿Para qué sirve el 2M? Para
+01:31:15 Speaker 1: ayudar
+01:31:20 Speaker 2: en la parte de lo que es la derivación. Un simple artículo. Oye, para quienes están, este...
+01:32:23 Speaker 2: Bueno, acá encontré esta página de cómo hacer la derivada parcial. Empecé a poner ahí en caso de dos variables.
+01:32:37 Speaker 1: Alguien
+01:32:38 Speaker 2: colocó acá su duda desde que ha comenzado su curso en Machine Learning y le dijo primero que la primera ecuación que vio ha sido esta reunión. Y él quiere saber cómo se hace la
+01:32:49 Speaker 1: derivación de todas esas
+01:32:50 Speaker 2: funciones. Bueno, acá hay
+01:32:53 Speaker 1: todo
+01:32:57 Speaker 2: el procedimiento para poder hacer nuestra derivada parcial. Y llegamos acá a esta... Eso respecto a...
+01:33:12 Speaker 1: En este caso,
+01:33:16 Speaker 2: teta sub cero sería b, ¿no? Y acá, esto respecto a teta sub uno, que sería a. Y en cuenta esta cero, que es la misma, ¿no?
+01:33:54 Speaker 2: ¿Por qué hacemos este procedimiento? Porque las resultantes que estamos teniendo acá de las derivadas, de la función del costo respecto a A y respecto a B, ya las podemos programar. Porque la idea es ¿cómo programamos esto? ¿Cómo programamos esta derivada? ¿Cómo lo programamos? Entonces, hacemos la parte analítica, calculamos las resultantes y
+01:34:25 Speaker 1: esto sí lo podemos poner.
+01:34:27 Speaker 2: No es más que una simple sumatoria. de las diferencias de los fx respecto a las etiquetas multiplicado por hacia atrás y acá también igual aunque prácticamente viene a ser lo mismo ¿por qué? porque recuerden que el x el x sub cero aquí es igual aquí
+01:34:48 Speaker 1: era igual a x sub cero no le borramos era uno ¿no?
+01:34:54 Speaker 2: o sea prácticamente lo mismo ¿no? ¿ok?
+01:35:10 Speaker: y ahí tenemos nuestras películas ahí en el video les he dejado un ejemplito es un
+01:35:38 Speaker 2: poco lo que hemos visto acá en el material también acá unos puntos generados aleatoriamente que
+01:35:44 Speaker 1: son 100 puntos y
+01:35:48 Speaker 2: luego acá mantenemos a B en 0 y aquí podemos ir haciendo
+01:36:34 Speaker 2: Fíjense que nuestra función de pérdida es fácil de ser implementada. Esta es nuestra función de pérdida. Y en código acá lo tenemos. Retornamos la diferencia entre lo que nos está dando la función y las etiquetas reales. Le llevamos un cuadrado, sacamos el
+01:36:54 Speaker 1: promedio
+01:36:57 Speaker 2: y tenemos el 2.
+01:37:02 Speaker 1: Y ya estamos, esto es todo
+01:37:03 Speaker 2: Nuestra función también Acá está nuestra función
+01:37:09 Speaker 1: Modelo
+01:37:11 Speaker 2: AX más B
+01:37:12 Speaker 1: Simplemente
+01:37:15 Speaker 2: Retornamos la función AX más B Aquí estamos, tenemos nuestro Y Acá están nuestras predicciones del modelo Y lo que vamos a ver aquí También son esas diferencias
+01:37:44 Speaker 2: Podemos ir variando, digamos, el valor de la pendiente, el valor del intercepto, y nos
+01:37:51 Speaker 1: vamos calculando aquí, ¿no?
+01:37:54 Speaker 2: El error. Está un error de 0.0. Bueno, creo que sí incrementamos un
+01:38:01 Speaker 1: poquito el intercepto.
+01:38:05 Speaker 2: Ah, mejoró un poquito, ¿no?
+01:38:08 Speaker 1: Matamos un poquito el intercepto.
+01:38:23 Speaker 2: Hemos visto que la función de pérdida es una función convexa.
+01:38:29 Speaker 1: Lo
+01:38:30 Speaker 2: multiplicamos ello. Y luego calculamos las gradientes. La gradiente respecto a A, la gradiente respecto a B.
+01:38:39 Speaker 1: Y
+01:38:40 Speaker 2: esto lo hemos calculado como resultante de... ¿no? de la eficiencia de los niños a la futana cerebral analíticamente y acá tenemos ¿no? la granita respecto a y la granita respecto a B acá tenemos también el código ¿no? las variantes que es respecto a y respecto a B y estamos retornando las variantes Luego, con las funciones ya definidas, hemos definido ya nuestro modelo, definimos nuestro punto de pérdida, hemos definido la función que calcula las gradientes, ahora podemos hacer nuestro procedimiento de descenso por gradientes. ¿Definimos acá valores iniciales para B? No. Tenemos un learning rate de 0.1, acá tenemos más o menos unas 50 iteraciones que vamos a dar.
+01:39:51 Speaker 1: Y,
+01:39:53 Speaker 2: fíjense, lo primero que hacemos es calcular las predicciones del modelo. Y luego calculamos la pérdida.
+01:40:06 Speaker 1: La pérdida.
+01:40:09 Speaker 2: Esa pérdida la vamos acumulando en un vectorcito, en este 12, vamos acumulándolo. Y luego calculamos las gradienes. Las gradientes, para las gradientes nosotros necesitamos las entradas, las etiquetas y
+01:40:27 Speaker 1: las predicciones.
+01:40:30 Speaker 2: Y nos retorna la gradiente respecto a A, la gradiente respecto a B. Y con las gradientes, ¿qué es lo que hacemos? La actualización de
+01:40:41 Speaker 1: los parámetros. Aquí
+01:40:43 Speaker 2: actualizamos el parámetro A y aquí actualizamos el parámetro B.
+01:40:50 Speaker 1: Y eso es lo que hemos visto aquí. Nuestro algoritmo es esto correcto.
+01:40:56 Speaker 2: Calculamos la gradiente. y actualizamos el tratamiento y el tratamiento. Con un learning rate. Y esto lo hacemos iterativamente, en este caso lo hacemos por 50 veces, fíjense. Y al cabo de 50 iteraciones, conseguimos un valor de 0.991 para A y 0.21 para B, lo cual nos da un loss de 0
+01:41:26 Speaker 1: .031.
+01:41:35 Speaker 2: Este gráfico es importante, ¿por qué? Porque justamente son estos los que estamos nosotros acumulando. Es decir, es el historial de cómo el los se ha ido comportando. Y acá vemos, por ejemplo, que comenzó con un los alto, y en cada iteración ha ido decreciendo, decreciendo, decreciendo, decreciendo, y llega un punto que también comienza a convertir. O sea, ya no se crece mucho.
+01:42:05 Speaker 1: Entonces,
+01:42:06 Speaker 2: cuando vemos que nuestra función de costo, o nuestro loss, perdón, la curva de la función de
+01:42:15 Speaker 1: loss,
+01:42:18 Speaker 2: Tiene este comportamiento que en cada iteración va descendiendo, va descendiendo, va descendiendo, va descendiendo, ¿no? ¿Qué quiere decir? Que el modelo siempre está mejorando, ¿no? Que los parámetros que están actualizándose, el parámetro A y B, ¿no? Cada actualización que está haciendo es para mejor,
+01:42:39 Speaker 1: ¿no?
+01:42:40 Speaker 2: Porque el 2 va decayendo, va decayendo, va decayendo.
+01:42:44 Speaker 1: Y eso es bueno, ¿no?
+01:42:46 Speaker 2: Porque eso nos da a entender de que el modelo está aprendiendo. ¿Ya? De ahí que decimos, ¿no? Cuando vemos de que el comportamiento, la pérdida, va decayendo, va decayendo la pérdida, entonces quiere decir de que el modelo va mejorando, va mejorando, va mejorando. Y cuando algo va mejorando, es como cuando ustedes, por ejemplo, a ver, cuando vayan a un trabajo nuevo, ¿no? ¿Qué es lo que hacen las primeras semanas?
+01:43:20 Speaker 1: Inducción, ¿no?
+01:43:21 Speaker 2: Inducción y todo, te dicen, ¿cómo vas a hacer esto, esto, esta vez? Haces todo, ¿no?
+01:43:26 Speaker 1: Y la
+01:43:28 Speaker 2: primera vez que lo haces, tal vez
+01:43:29 Speaker 1: cometes error, yo qué sé, o lo haces
+01:43:32 Speaker 2: mucho tiempo, ¿no? Después, siguiente, iteración, ¿no? Vas mejorando, vas mejorando, vas mejorando, vas mejorando. ¿Qué es lo que estás haciendo? Estás disminuyendo error,
+01:43:43 Speaker 1: ¿no?
+01:43:44 Speaker 2: Y en otras palabras, estás
+01:43:45 Speaker 1: aprendiendo. ¿No?
+01:43:50 Speaker 2: Lo mismo pasa con el modelo. Vamos mejorando y cada iteración va mejorando, va disminuyendo el error, va disminuyendo el error, va disminuyendo el error, va mejorando.
+01:44:00 Speaker 1: Y para
+01:44:01 Speaker 2: nosotros el modelo está aprendiendo. Al igual que el comportamiento que nosotros tenemos en un trabajo. Cada vez nos volvemos más especialistas, más especialistas. Hacemos las tareas mucho mejor, con menor error, entonces hemos aprendido.
+01:44:15 Speaker 1: Por eso también tiene ese comportamiento. Este
+01:44:26 Speaker 2: es el mismo ejemplito, solamente con una base de datos de casas. La idea está en que tenemos la variable de entrada, que son metros cuadrados, y la variable de salida, la etiqueta, que es el precio. Como lo habíamos indicado,
+01:44:44 Speaker 1: siempre es bueno
+01:44:45 Speaker 2: normalizar nuestros datos.
+01:44:48 Speaker 1: El
+01:44:48 Speaker 2: precio está en miles. metros cuadrados está en el valor de centenas, ¿no? Ya, esto es lo que está haciendo, una normalización de esos datos. Este es un troteo, y aquí tenemos la... Ah, bueno, esto es como tarjeta, lo que tenemos.
+01:45:18 Speaker 1: Y
+01:45:19 Speaker 2: ahí está el valor, por ejemplo, acá en este caso que calculamos para A y para B. Tenemos el coeficiente 0.52 para la X. Y el intercepto, 12.01. Nos está dando un 2 de 0.0534. Estos son los puntos de las casas. Y esta sería la recta más aproximada.
+01:45:49 Speaker 1: Esto con el conjunto de entrenamiento y esto con el conjunto de validación.
+01:45:54 Speaker 2: Y acá tenemos la curva del 2, ¿no? Y vemos que también tiene un comportamiento muy
+01:46:00 Speaker 1: bueno.
+01:46:01 Speaker 2: Bueno, parece que él ha puesto 10.000 iteraciones, lo cual parece ser mucho, pero con 1.000 iteraciones creo que ya está más que suficiente, ¿no? Acá vienen los impactos, ¿no? Y es que hemos estado hablando solamente con una variable, pero los problemas en Machine Learning, ¿no?
+01:46:26 Speaker 1: Y generalmente,
+01:46:29 Speaker 2: pues, no son con una variable, ¿no? Tenemos más de una variable. 5, 10, 15, 20, 100. ¿No? Y si estamos hablando de imágenes, de videos, pues tenemos cantidad de entradas, ¿no?
+01:46:49 Speaker 1: Bueno,
+01:46:51 Speaker 2: entonces nosotros podemos tener una representación multivariada. ¿Ok? Una revisión lineal multivariada. Fíjense que acá tengo
+01:47:06 Speaker 1: mi
+01:47:10 Speaker 2: ecuación ax más bx más c.
+01:47:14 Speaker 1: ¿Correcto?
+01:47:17 Speaker 2: Y acá está, ¿no? En código. ax más 1, a por x1 más b por x2 más c. Entonces ya tengo ahí dos variables. Lo simpático de todo ello es que nosotros podemos generalizar, ¿no? Es decir, podemos generalizar todo lo que hemos hecho, lo podemos generalizar. Que bueno, es un troteo. Y acá está, ¿no? tenemos nuestro modelo que es multivariado tenemos dos variables ahora tenemos nuestra función de costo o función de pérdida que prácticamente viene a ser la misma esa no ha variado nada porque fíjense calcular estos errores
+01:48:21 Speaker 2: si yo lo llevo a un espacio tridimensional Bueno, está aquí. Tengo un espacio tridimensional, los puntos tienen dos, tres
+01:48:44 Speaker 1: coordenadas.
+01:48:46 Speaker 2: Ya no voy a tener una recta como en este caso, sino voy a tener un hiperplano. Un plano en este caso. Un plano. Y cuando voy a querer calcular el error medio cuadrado, voy a calcular la distancia que hay de cada punto a ese plano. ¿No? Así como he calculado aquí estas distancias a la recta, allá voy calculando
+01:49:09 Speaker 1: la distancia al cuadrado. ¿No?
+01:49:12 Speaker 2: ¿Ok? Y ese cálculo de distancias finalmente me va a dar el número real. ¿No? Es un número, es un solo valor. Entonces, sea la dimensión que sea de mis datos, Cuando yo voy a calcular el error medio cuadrado, el resultado va a ser un solo valor número. Un solo valor número.
+01:49:34 Speaker 1: No es un
+01:49:36 Speaker 2: vector, no es un solo valor número. Entonces, ahí no hay problema en el cálculo de mi función de terapia. Lo que sí cambia son el cálculo de gradientes. Recuerden que tenemos que calcular la gradiente respecto a cada uno de los parámetros. Ahora son tres parámetros. Los dos primeros que corresponden a las variables y el tercer parámetro que corresponde al intercepto. Entonces calculo la gradiente respecto al parámetro A, la gradiente respecto al parámetro B y la gradiente respecto al parámetro C. Entonces acá tengo las derivadas parciales. Me están calculando la gradiente. Acá tengo la representación en códigos. Y ya tengo la salida y las gradientes. Y luego puedo desarrollar también el algoritmo de descenso por gradiente, ¿no? Considerando ahora dos variables.
+01:50:54 Speaker 1: Entonces,
+01:50:55 Speaker 2: voy a inicializar A, B y C. A y B con 1, C igual a 0, learning rate de 0.1, acá estoy teniendo 10.000. 10.000 iteraciones, tengo mi vectorcito de la función de pérdida, y comienzo, ¿no? Calculo acá las predicciones, calculo la pérdida, luego adiciono esa pérdida a mi vector de pérdidas, y calculo las gradientes, y las gradientes, ¿no? Que son la verdad, que son la... digamos el valor sagrado importante en el descenso por variante porque son ellos los que nos van a permitir actualizar los valores de los parámetros y
+01:51:40 Speaker 1: eso lo hacemos iterativa
+01:51:45 Speaker 2: Luego que hemos terminado las 10.000 iteraciones, llegamos a unos valores aproximados de 1 para A, 2.1 para B y
+01:51:57 Speaker 1: 0.95 para C,
+01:51:59 Speaker 2: lo cual nos da un error de 0.41. Fíjense que la diferencia que teníamos aquí, acá nos está dando un error de 1.6. Esto era para A1, para B1 y para
+01:52:14 Speaker 1: C0. Ese era el hiperplano,
+01:52:16 Speaker 2: obviamente está un poquito alejado de
+01:52:18 Speaker 1: la
+01:52:19 Speaker 2: distribución, pero con los valores calculados, el plano busca ser más representativo
+01:52:35 Speaker 1: de la distribución de los puntos. Lo cual vemos que el descenso por
+01:52:42 Speaker 2: gradiente está funcionando.
+01:52:46 Speaker 1: Porque nos está consiguiendo valores
+01:52:50 Speaker 2: de A y B y C, de tal manera que está
+01:52:54 Speaker 1: minimizando el
+01:52:56 Speaker 2: error o la pérdida. Aquí está la pérdida de la curva de Lowe, con cual también 10.000 interacciones eran demasiadas, con 1.000 ya era más que suficiente. Y aquí tenemos la versión multivariada, pero para el problema de casas. Acá también tenemos el precio, igual solamente que ahora tenemos más variadas. Ya no tenemos solamente metros cuadrados, sino también el número de cuartos, el número de baños y metros cuadrados construidos.
+01:53:50 Speaker 2: Bueno, ahí queda como tareita para que ustedes desarrollen, porque ahora la ecuación ya no es con dos, sino con uno, dos, tres, cuatro variables, y el intercepto. Al final, ustedes van a calcular 0.64 para A, menos 0.14 para B, menos 0.01 para C, menos 0.02 para D,
+01:54:22 Speaker 1: y 12.69
+01:54:24 Speaker 2: para el intercepto.
+01:54:27 Speaker 1: Eso nos da un loss en el poquito de entrenamiento de 0.05
+01:54:32 Speaker 2: y 0.03 en el valor de D.
+01:56:17 Speaker 2: Hemos hecho el cálculo de la gradiente, ¿no? La función de pérdida respecto a cada una de las variables, ¿no? Y en el caso de casas, por ejemplo, lo que ustedes van a tener que hacer son cuatro variables. Es decir, vamos a tener que hacer la gradiente respecto de la función de pérdida respecto a A, respecto a B, respecto a C, respecto a D, respecto a E. Entonces,
+01:56:43 Speaker 2: vamos a tener que hacer el código, pero esto...
+01:56:48 Speaker 1: no es
+01:56:53 Speaker 2: correcto porque voy a tener que estar manipulando el código cada vez que estoy cambiando la dimensión de mis bases de datos y lo simpático de todo esto es que nosotros podemos
+01:57:10 Speaker 1: hacer que el que
+01:57:14 Speaker 2: todo este procedimiento de cálculo de descenso por galliente y todo simplemente lo podemos hacer a través de matrices ya nuestro f de x
+01:57:33 Speaker 1: igual a x más b.
+01:57:42 Speaker 2: ¿A qué es igual finalmente? ¿A
+01:58:06 Speaker 2: qué es igual? Si yo tengo acá
+01:58:07 Speaker 1: una
+01:58:14 Speaker 2: representación, yo puedo tener mi representación de
+01:58:18 Speaker 1: a
+01:58:25 Speaker 2: y
+01:58:26 Speaker 1: b,
+01:58:38 Speaker 2: luego tengo x. Donde X voy a tener a X sub 0 y a X sub 1. Y allí X sub 0 va a ser 1, 1, 1. Y allá X sub 1 va a tener sus valores respectivos.
+01:59:07 Speaker 1: X sub 1, 1. X sub 1, 2. X sub 1, 3. Y así es.
+01:59:16 Speaker 2: Y hago esta multiplicación de matrices. Eso me va a dar como resultado. ¿Qué me va a dar?
+01:59:24 Speaker 1: ¿Qué me va a dar como resultado?
+01:59:30 Speaker 2: La multiplicación de las entradas por los parámetros.
+01:59:34 Speaker 1: ¿Qué va a dar? F de X. Me va a dar el
+01:59:41 Speaker 2: F de X, ¿no? Y el F de X, ¿de qué dimensión será? Me va a dar el Y, el Y prima en este caso, ¿no? Que van a ser las predicciones, ¿no? ¿Qué va a ser? ¿No? Y prima 1, el Y
+01:59:55 Speaker 1: prima 2, y así es así.
+01:59:57 Speaker 2: Y prima M. Entonces, es lo que yo voy a obtener aquí. Fíjense que yo puedo obtener este y prima a través de una multiplicación de matrices. ¿Y qué pasa si yo tengo una ecuación multivariada, un f
+02:00:17 Speaker 1: de x igual a ax más bx, bueno, x1, x2, cx3, más bx4, más bx4, ¿no?
+02:00:35 Speaker 2: Yo voy a tener aquí mi
+02:00:41 Speaker 1: X, que
+02:00:43 Speaker 2: va a estar constituido por X1, X2,
+02:00:46 Speaker 1: X3, X4.
+02:00:50 Speaker 2: Ah, me olvidé del X0.
+02:00:54 Speaker 1: 0, x1, x2, x3 y x4.
+02:00:59 Speaker 2: x0 vale 1, 1, 1, 1, 1. Y x1 y x2 van a tener sus respectivos valores. Que eso va a ser multiplicado por el vector de parámetros. Voy a tener A, B, C, D, E. Y esto me va a dar como resultado. ¿Qué va a dar como resultado?
+02:01:21 Speaker 1: El Y'.
+02:01:23 Speaker 2: Voy a tener Y1, Y2,
+02:01:26 Speaker 1: Y3.
+02:01:29 Speaker 2: Las previsiones. entonces fíjense, yo puedo tener mi matriz de entrada, mi matriz X de datos de la dimensión que yo quiera voy a tener mi vector de parámetros hago la multiplicación de esos las dos matrices y obtengo
+02:01:52 Speaker 1: mi modelo
+02:01:55 Speaker 2: o sea, mis predicciones
+02:01:57 Speaker 1: ¿ok?
+02:02:00 Speaker 2: Entonces, esa misma estrategia de multiplicación de matrices, la aplico para calcular también las
+02:02:13 Speaker 1: gradientes.
+02:02:14 Speaker 2: Ya no voy a estar calculando gradientes
+02:02:16 Speaker 1: por
+02:02:18 Speaker 2: separado. No hago directo a la práctica de gradientes
+02:02:22 Speaker 1: o matrices.
+02:02:27 Speaker 2: aquí está justamente lo que hemos
+02:02:30 Speaker 1: visto mi función
+02:02:33 Speaker 2: para multivariada por cálculo de matrices
+02:02:39 Speaker 1: bueno
+02:02:42 Speaker 2: acá lo está separando el intercepto ya lo hemos juntado
+02:02:45 Speaker 1: dentro de la matriz le hemos colocado el 0
+02:02:47 Speaker 2: acá lo está separando pero es lo mismo ya
+02:02:53 Speaker 1: que más tenemos aquí y
+02:02:55 Speaker 2: acá calculamos acá el nombre Luego calculamos... La función de pérdida no hay ningún problema, no tiene ninguna variación, porque finalmente yo tengo aquí mis etiquetas reales, ¿verdad? Mis valores de Y reales. Y la salida que me va a devolver el modelo, sea la dimensión que sea, va a ser también un vector de la misma dimensión.
+02:03:23 Speaker 1: ¿Verdad?
+02:03:24 Speaker 2: Es que van a ser las predicciones. Entonces, mi función de pérdida, ¿qué es lo que va a tomar? Las etiquetas reales, los y, más los y primas, que son las predicciones, y calcula, ¿no? El error medio polar. Ahí no hay variación. Las gradientes, sí, ¿no? De las gradientes estamos calculando, ¿no? La transpuesta de x, o
+02:03:51 Speaker 1: sea, que es
+02:03:52 Speaker 2: aquella matriz de entrada. Multiplicado por la diferencia entre las predicciones y las etiquetas reales. ¿No? ¿Ok? Dividido entre...
+02:04:07 Speaker 1: ¿Ok? Porque ya se puede ustedes que nuestra función...
+02:04:11 Speaker 2: Nuestro... No, aquí estamos. Salud. Vamos a tener aquí, que es la sumatoria de
+02:04:27 Speaker 1: las diferencias de las
+02:04:29 Speaker 2: previsiones de las etiquetas reales,
+02:04:33 Speaker 1: explicado por lo que
+02:04:34 Speaker 2: estamos teniendo en el código. Y todo por una multiplicación. Estamos calculando las gradientes por una simple multiplicación de matrices. Ahí es donde vamos a estar haciendo un cálculo de gradiente para cada dimensión.
+02:04:59 Speaker 1: Si no,
+02:05:00 Speaker 2: todo en un cálculo de gradiente. Entonces ahora tenemos... la facilidad de que sea el tamaño que tenga mi base de datos, sea el tamaño que tenga las dimensiones de esa base de datos de entrada de mis X. Ahora simplemente lo voy a hacer de multiplicación de matrices.
+02:05:21 Speaker 1: Y eso me facilita todo, ¿no?
+02:05:25 Speaker 2: Y acá está mi descenso por variante con multiplicación por matrices. Fíjense ustedes aquí. Estamos inicializando. Todos los pesos, todos los B dobles, es decir, todos los parámetros, todos estos parámetros de aquí, que vendrían a ser los B dobles, todos estos de aquí,
+02:05:52 Speaker 1: los está inicializando con 1.
+02:05:56 Speaker 2: Y el intercepto, que debería ser este último, bueno, ya le está poniendo B, está inicializando con 0.
+02:06:03 Speaker 1: ¿Ok? Es lo que estamos haciendo. Todos los
+02:06:06 Speaker 2: parámetros en 1, en 0, acá tenemos el learning rate, 10.000 pasos. Tenemos la función, el vectorcito para las pérdidas en el conjunto de entrenamiento, conjunto de validación. Y luego lo mismo, ¿no? Es decir, calculamos las predicciones, llamamos al modelo, le mandamos el conjunto de entrenamiento. Luego, una vez que hemos calculado las predicciones, calculamos la pérdida. Para la pérdida hemos visto que lo único que necesitamos son las predicciones que nos está dando el modelo, más las etiquetas.
+02:06:41 Speaker 2: Ah, no. Estas son las etiquetas reales del conjunto de entrenamiento y las tradiciones que nos está dando el modelo. Y luego, para el conjunto de validación, tenemos lo mismo, que tenemos acá las etiquetas reales del validación y las tradiciones que nos va a dar el modelo, ¿no? Con el conjunto de validación. Eso lo adicionamos a los textos del 2. Me encanta los impactos, ¿no? Llamamos a la función de cálculo de gradientes, le mandamos el conjunto de X, le mandamos las etiquetas y las predicciones. Y calcula el momento allá arriba cómo calcula las gradientes y nos devuelve la matriz de gradientes y la gradiente del intercepto. Actualizamos los pesos también aquí de todos los parámetros y luego actualizamos el intercepto, el parámetro del intercepto.
+02:07:41 Speaker 2: Y eso lo hacemos iterativamente hasta que concreta, ¿no? Para este ejemplo, que son 1, 2, 3, 4 variables, 0, 64, 0, 14, 0,
+02:07:58 Speaker 1: 01, 0, 02,
+02:08:00 Speaker 2: 12, 69, un error de 0,05 con el train, y 0,03 con el validecho.
+02:08:21 Speaker 2: Bueno, ahí tienen un... Pueden, para que se diviertan, con un... Otro conjunto de datos de diabetes. Que tiene... Uno, dos, tres,
+02:08:33 Speaker 1: cuatro, cinco, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis,
+02:08:39 Speaker 2: seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis, seis,
+02:10:13 Speaker 2: seis, seis, seis, seis, seis esta función la podemos hacer también mediante una representación
+02:10:28 Speaker 1: de grafo donde vamos
+02:10:44 Speaker: a tener la entrada x1 y la entrada x2 y luego todas ellas
+02:10:56 Speaker 2: se conectan y este es el x0 que viene a ser el intercepto y todas ellas se conectan a una salida
+02:11:29 Speaker 1: Donde vamos a tener aquí el peso A, el peso B, el peso C, el peso D.
+02:11:35 Speaker 2: Y este de intercepto es el D.
+02:11:37 Speaker 1: Recuerden que X0
+02:11:38 Speaker 2: aquí es igual a 1,
+02:11:42 Speaker 1: ¿verdad?
+02:11:43 Speaker 2: Es igual a 1. Entonces, acá tenemos las tres representaciones. Tenemos la función, tenemos la representación por matrices, tenemos la representación por trámite.
+02:11:55 Speaker 1: ¿No?
+02:11:56 Speaker 2: Vamos a tener aquí una sumatoria que finalmente cada entrada se va a multiplicar por el peso que le estamos dando aquí. Y aquí vamos a tener una sumatoria. Y esa va a ser la salida FD. La
+02:12:16 Speaker 1: salida FD.
+02:12:21 Speaker 2: Entonces, ya estamos imaginando que viene a representar a una neurona. Un perceptron.
+02:12:32 Speaker 1: Un perceptron.
+02:12:40 Speaker 2: Entonces, fíjense, todo lo que hemos visto el día de hoy, que hemos comenzado por una cinta en línea recta, que es por acá, hemos buscado cuál es la mejor línea recta que busca representar un conjunto de puntos, ¿no? Y para poder identificar cuál es la mejor recta, hemos visto una función de pérdida, ¿ya? Y luego hemos visto que a través de la ecuación de mínimos cuadrados podríamos encontrar los mejores valores de los parámetros. de la función, ¿no?
+02:13:11 Speaker 1: La función
+02:13:11 Speaker 2: lineal, ¿no? A y B, podemos encontrar los mejores parámetros de A y B, los valores de esos parámetros A y B, ¿no? Y de tal manera que minimice esta función de pérdida. pero hemos visto que esa ecuación era muy costosa computacionalmente y hemos visto la otra forma que es a través de descenso por un galiente que por aproximación y calculando las galientes en cada punto de la función de pérdida respecto a cada uno de los parámetros podemos ir minimizando y buscando el mínimo global de tal manera que va a disminuir a
+02:13:51 Speaker 1: esta
+02:13:51 Speaker 2: función de pérdida que finalmente después es una función de optimización es un problema de optimización porque estamos buscando minimizar esta pérdida ajustando los parámetros que comprenden la función del
+02:14:09 Speaker 1: modelo
+02:14:13 Speaker 2: Entonces, fíjense, todos estamos viendo la cuestión. Podemos verlo a través de una versión multivaria, de la cual podemos llevar para poder calcular la representación en código a través de matrices. Y podemos ver que todo esto representa a una neurona. Todo lo que hemos visto allí representa a una neurona.
+02:14:34 Speaker 2: El problema que hemos visto ahora es para poder hacer o para poder resolver un problema de regresión. Hemos comenzado diciendo punto, punto, punto aquí y muy bien, traza una línea y vamos a buscar un modelo que se aproxime a esa distribución de puntos.
+02:14:58 Speaker 2: ¿Qué pasa si es que yo tengo ahora clases? Tengo un conjunto de puntos que representan clases. Un conjunto de puntos, pero un subconjunto es de una clase y el otro subconjunto es de otra clase. ¿No? ¿Será que puedo aplicar la estrategia también de una función lineal para poder separar esas dos clases?
+02:15:47 Speaker 1: Entonces, una recta. Pero la
+02:15:54 Speaker 2: lógica acá estaba de que, oye, ¿sabes qué? Acá tengo que buscar una recta que se aproxime de la distribución. Y vamos a calcular los
+02:16:04 Speaker 1: errores
+02:16:08 Speaker 2: que hay en la distancia. Aquí ya no podemos hacer eso. La lógica es diferente. Eso vamos a ver en la próxima sesión.
+02:16:15 Speaker 1: Pero igual, sigue siendo una
+02:16:18 Speaker 2: línea y esa línea también tiene
+02:16:21 Speaker 1: una
+02:16:22 Speaker 2: forma, es una función lineal finalmente, solo que vamos a hacer ahí un artificio para poder convertir esta ecuación que nos resuelve un problema de... de regresión para utilizarlo en un problema de clasificación ¿verdad? pero en el fondo igual sigue siendo una neurona en la próxima sesión vamos a ver cómo nos conectamos todo eso con las raíces neuronales por eso era importante esta clasecita de ahora para saber la raíz de todo
+  

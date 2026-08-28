@@ -1,11 +1,52 @@
-. {
-	. {
-		. 
+. Regresión Lineal Simple{
+	. x,y
+	. x es una matriz 2xm
+	. x =[x_0, x_1] =[
+						[1, 0.12],
+						[1,0.2],
+						[1,0.32],
+						...
+	]
+	. x_0 = 1
+	. x_t es una matriz mx2
+	. y es una matriz mx1
+	. (2xm)(mx2) = 2x2
+	. (2x2)^(-1) = 2x2
+	. (2x2)(2xm) = 2xm
+	. (2xm)(mx1) = 2x1
+	. Formula es para obtner el "beta = [beta_0, beta_1] = (x_t * x)^(-1) * x_t * y" de una regresión lineal
+	
+	. Si m=100 y hay 1 millon de parametros, esto es muy caro y el procesador demora
+	. Optimizacion: Gradient descent{
+		. Se calcula la gradiente en el punto
+		. Se salta al lado contrario para descender al minimo hasta que se converja a un optimo global
+		. Esta estrategia es mas barata computacionalmente hablando
+		. lr: Taza de aprendizaje es un hiperaparametro que tiene que ser calculado por la persona
+		. lr muy grande hace saltar mucho
+		. lr muy pequeño provoca que se demore
+		
+		. lr -> 0.01
+		. a: Punto en la funcion desde donde te vas moviendo
+		
+		. Antes de tocar la gradiente se normaliza los datos para que el lr se mueva en ese espacio de datos
+		
+		. 2m es un artificio que se usa al calcular la gradiente descendente: https://math.stackexchange.com/questions/70728/partial-derivative-in-gradient-descent-for-two-variables
+		
+		. Derivada parcial de la L respecto "a"
+		. Derivada parcial de la L respecto "b"
+		. Se calcula la gradiente para actualizar los parametros "a" y "b"
 	}
 }
 
-. {
-	. {
-		. 
-	}
+. CODIGO{
+	. El calculo de gradientes tmb se puede hacer con matrices
+	. f(x) = a * x1 + b * x2 + c
+	. y' = x * betha
+	. y': Predicciones = [y1, y2, y3]
+	
+	. Sea cual sea el tamaño lo hago con matrices
 }
+
+. La multiplicacion de matrices te lleva a un perceptron
+
+. La clasificacion en 2 clases sigue siendo una neurona
