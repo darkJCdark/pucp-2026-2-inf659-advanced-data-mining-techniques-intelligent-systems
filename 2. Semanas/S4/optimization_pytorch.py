@@ -860,6 +860,7 @@ train_losses, test_losses, train_accuracies, test_accuracies = train_model(
 )
 
 # Mostrar gráficos y resultados finales
+model_adv.eval()
 show_results(model_adv, train_losses, test_losses, train_accuracies, test_accuracies)
 
 import math
@@ -905,6 +906,7 @@ train_losses_fm, test_losses_fm, train_accuracies_fm, test_accuracies_fm = train
 )
 
 # Evaluar de forma independiente para Fashion MNIST
+model_fm.eval()
 with torch.no_grad():
     x_test_tensor = torch.tensor(x_test_fm, dtype=torch.float32)
     y_test_tensor = torch.tensor(y_test_fm, dtype=torch.int64)

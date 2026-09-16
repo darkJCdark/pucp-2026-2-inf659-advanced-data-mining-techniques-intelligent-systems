@@ -2342,11 +2342,15 @@ df = pd.read_csv("faults.csv")
 X = df.iloc[:, :27].values
 Y = df.iloc[:, 27:].values
 
-# Es vital normalizar X para que la red converja de forma estable
-X = (X - X.mean(axis=0)) / (X.std(axis=0) + 1e-8)
-
-# Dividimos en train y validation
+# Dividimos en train y validation (sin normalizar aún)
 x_train, x_val, y_train, y_val = train_test_split(X, Y, test_size=0.2, random_state=42)
+
+# Ajustamos la normalización SOLO con estadísticas del set de entrenamiento
+mean = x_train.mean(axis=0)
+std = x_train.std(axis=0)
+
+x_train = (x_train - mean) / (std + 1e-8)
+x_val = (x_val - mean) / (std + 1e-8)
 
 # Convertimos los datos a tensores de PyTorch
 x_train_t = torch.tensor(x_train, dtype=torch.float32)
