@@ -1,0 +1,42 @@
+#Dado la celda 1:
+# El modelo (a) ya tiene cargados los pesos de su mejor época (por evaluar en P2)
+ULTIMA_CONV = "conv3d_2"      # última capa convolucional del modelo base
+
+prob = model.predict(ds_test, verbose=0).ravel()
+pred = (prob > 0.5).astype(int)
+conf = np.where(pred == 1, prob, 1 - prob)           # confianza en la clase predicha
+
+ok  = np.where(pred == y_test)[0]
+mal = np.where(pred != y_test)[0]
+def top(idx, n=1):
+    return list(idx[np.argsort(-conf[idx])][:n])
+
+casos = [("Acierto", i) for i in top(ok[y_test[ok] == 1]) + top(ok[y_test[ok] == 0])] \
+      + [("Error",   i) for i in top(mal, 2)]
+
+fig, axes = plt.subplots(len(casos), 3, figsize=(10, 3.3 * len(casos)))
+for fila, (tipo, i) in enumerate(casos):
+    vol = x_test[i]
+    cam = grad_cam_3d(model, vol, ULTIMA_CONV, class_index=int(pred[i]))
+    zmax = int(cam.sum(axis=(0, 1)).argmax())
+    # porcentaje del mapa de calor que cae en el borde (15 % exterior) de cada corte
+    borde = np.zeros(cam.shape, bool); m = int(0.15 * width)
+    borde[:m] = borde[-m:] = True; borde[:, :m] = borde[:, -m:] = True
+    print(f"{tipo} idx={i} real={y_test[i]} pred={pred[i]} p={prob[i]:.2f} "
+          f"corte_max={zmax} calor_en_borde={cam[borde].sum() / cam.sum():.0%}")
+    for col, z in enumerate([16, 32, zmax]):
+        ax = axes[fila, col]
+        ax.imshow(vol[:, :, z], cmap="gray", vmin=0, vmax=1)
+        ax.imshow(cam[:, :, z], cmap="jet", alpha=0.4, vmin=0, vmax=1)
+        ax.set_title(f"{tipo} | real={y_test[i]} pred={pred[i]} | corte {z}", fontsize=9)
+        ax.axis("off")
+plt.tight_layout(); plt.show()
+
+#Se obtuvo estos resultados 1:
+ Acierto idx=5 real=1 pred=1 p=0.99 corte_max=40 calor_en_borde=11%
+Acierto idx=13 real=0 pred=0 p=0.15 corte_max=51 calor_en_borde=52%
+Error idx=11 real=0 pred=1 p=0.88 corte_max=51 calor_en_borde=46%
+Error idx=2 real=0 pred=1 p=0.77 corte_max=29 calor_en_borde=52%
+
+
+# En el resultado 1, se obtuvo el grafico que se encuentra en el archivo llamado 'P4.png' en la ruta 'D:\pucp-2026-2-inf659-advanced-data-mining-techniques-intelligent-systems\5. Examen Parcial\P4'

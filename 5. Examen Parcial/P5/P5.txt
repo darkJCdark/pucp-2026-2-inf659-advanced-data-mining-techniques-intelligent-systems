@@ -1,0 +1,46 @@
+#Dado la celda 1:
+from math import sqrt
+
+def wilson(k, n, z=1.96):
+    p = k / n
+    den = 1 + z**2 / n
+    centro = (p + z**2 / (2 * n)) / den
+    mitad = z * sqrt(p * (1 - p) / n + z**2 / (4 * n**2)) / den
+    return centro - mitad, centro + mitad
+
+n = len(y_test)
+for nombre, r in resultados.items():
+    k = round(r["val_acc"] * n)
+    lo, hi = wilson(k, n)
+    print(f"{nombre:24s} acc={r['val_acc']:.3f}  IC95%=[{lo:.3f}, {hi:.3f}]  ({k}/{n})")
+
+#Se obtuvo estos resultados 1:
+a_base                   acc=0.700  IC95%=[0.521, 0.833]  (21/30)
+b_residual               acc=0.500  IC95%=[0.332, 0.668]  (15/30)
+c_gap                    acc=0.667  IC95%=[0.488, 0.808]  (20/30)
+tl_feature_extraction    acc=0.867  IC95%=[0.703, 0.947]  (26/30)
+tl_finetuning            acc=0.967  IC95%=[0.833, 0.994]  (29/30)
+
+
+
+#Dado la celda 2:
+def metricas_clinicas(modelo, nombre):
+    prob = modelo.predict(ds_test, verbose=0).ravel()
+    pred = (prob > 0.5).astype(int)
+    tn, fp, fn, tp = confusion_matrix(y_test, pred).ravel()
+    prec = tp / (tp + fp) if (tp + fp) else 0.0
+    print(f"{nombre:22s} recall(anormal)={tp/(tp+fn):.2f}  especificidad={tn/(tn+fp):.2f}  "
+          f"precision={prec:.2f}  F1={f1_score(y_test, pred):.2f}  "
+          f"AUC={roc_auc_score(y_test, prob):.2f}  FN={fn}  FP={fp}")
+
+modelos = [("a_base", model), ("b_residual", model_res), ("c_gap", model_gap)]
+if "model_fe" in globals(): modelos += [("tl_feature_extraction", model_fe), ("tl_finetuning", model_ft)]
+for nombre, m in modelos:
+    metricas_clinicas(m, nombre)
+
+#Se obtuvo estos resultados 2:
+a_base                 recall(anormal)=0.87  especificidad=0.53  precision=0.65  F1=0.74  AUC=0.85  FN=2  FP=7
+b_residual             recall(anormal)=0.00  especificidad=1.00  precision=0.00  F1=0.00  AUC=0.47  FN=15  FP=0
+c_gap                  recall(anormal)=0.93  especificidad=0.40  precision=0.61  F1=0.74  AUC=0.71  FN=1  FP=9
+tl_feature_extraction  recall(anormal)=0.87  especificidad=0.87  precision=0.87  F1=0.87  AUC=0.86  FN=2  FP=2
+tl_finetuning          recall(anormal)=0.93  especificidad=1.00  precision=1.00  F1=0.97  AUC=0.97  FN=1  FP=0

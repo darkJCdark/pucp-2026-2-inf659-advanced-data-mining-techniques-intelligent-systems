@@ -1,0 +1,265 @@
+#Dado la celda 1:
+import glob
+resultados = {}
+
+def entrenar(modelo, nombre, epochs=10):
+    # Mismas condiciones que P1: Adam, mismo ExponentialDecay, misma EarlyStopping
+    lr = ExponentialDecay(0.0001, decay_steps=85, decay_rate=0.90)
+    modelo.compile(optimizer=Adam(learning_rate=lr),
+                   loss="binary_crossentropy", metrics=["acc"])
+    ckpt = ModelCheckpoint(f"{nombre}.weights.h5", monitor="val_acc", mode="max",
+                           save_best_only=True, save_weights_only=True)
+    es = EarlyStopping(monitor="val_acc", patience=8, mode="max")
+    log = modelo.fit(ds_train, epochs=epochs, callbacks=[ckpt, es], validation_data=ds_test)
+    show_results(log)
+    return log
+
+def evaluar(modelo, ruta_pesos, log, nombre):
+    modelo.load_weights(ruta_pesos)   # mejor checkpoint, no la última época
+    prob = modelo.predict(ds_test, verbose=0).ravel()
+    pred = (prob > 0.5).astype(int)
+    resultados[nombre] = {
+        "params": modelo.count_params(),
+        "val_acc": float((pred == y_test).mean()),
+        "val_f1": float(f1_score(y_test, pred)),
+        "epocas": len(log.history["loss"]),
+        "mejor_epoca": int(np.argmax(log.history["val_acc"]) + 1),
+    }
+    print(nombre, resultados[nombre])
+    print(confusion_matrix(y_test, pred))
+
+# (a) Base: usa el modelo y el log de P1 (si no reiniciaste el entorno)
+mejor = int(np.argmax(log.history["val_acc"]) + 1)
+ruta_base = max(glob.glob(f"base-{mejor:02d}-*.weights.h5"), key=os.path.getmtime)
+print(ruta_base)   # debe coincidir con la mejor época de tu log de P1
+evaluar(model, ruta_base, log, "a_base")
+
+#Se obtuvo estos resultados 1:
+base-07-0.700.weights.h5
+a_base {'params': 2450881, 'val_acc': 0.7, 'val_f1': 0.7428571428571429, 'epocas': 10, 'mejor_epoca': 7}
+[[ 8  7]
+ [ 2 13]]
+
+
+
+#Dado la celda 2:
+def residual_block_3d(x, filters):
+    atajo = x
+    if x.shape[-1] != filters:                       # proyección 1x1x1 si cambian los canales
+        atajo = Conv3D(filters, 1, padding="same")(atajo)
+    y = Conv3D(filters, 3, padding="same")(x)
+    y = BatchNormalization()(y)
+    y = Activation("relu")(y)
+    y = Conv3D(filters, 3, padding="same")(y)
+    y = BatchNormalization()(y)
+    y = Add()([y, atajo])                            # salida = F(x) + x
+    return Activation("relu")(y)
+
+K.clear_session()
+inputs = Input(shape=(width, height, depth, 1))
+x = Conv3D(16, 3, activation="relu")(inputs); x = MaxPool3D(2)(x); x = BatchNormalization()(x)
+x = residual_block_3d(x, 32); x = MaxPool3D(2)(x)
+x = residual_block_3d(x, 32); x = MaxPool3D(2)(x)
+x = Flatten()(x)
+x = Dense(64, activation="relu")(x)
+x = Dropout(0.3)(x)
+outputs = Dense(1, activation="sigmoid")(x)
+model_res = Model(inputs, outputs)
+model_res.summary()
+
+log_res = entrenar(model_res, "res")
+evaluar(model_res, "res.weights.h5", log_res, "b_residual")
+
+#Se obtuvo estos resultados 2:
+ Model: "functional"
+
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)        ┃ Output Shape      ┃    Param # ┃ Connected to      ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+│ input_layer         │ (None, 128, 128,  │          0 │ -                 │
+│ (InputLayer)        │ 64, 1)            │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ conv3d (Conv3D)     │ (None, 126, 126,  │        448 │ input_layer[0][0] │
+│                     │ 62, 16)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ max_pooling3d       │ (None, 63, 63,    │          0 │ conv3d[0][0]      │
+│ (MaxPooling3D)      │ 31, 16)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ batch_normalization │ (None, 63, 63,    │         64 │ max_pooling3d[0]… │
+│ (BatchNormalizatio… │ 31, 16)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ conv3d_2 (Conv3D)   │ (None, 63, 63,    │     13,856 │ batch_normalizat… │
+│                     │ 31, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ batch_normalizatio… │ (None, 63, 63,    │        128 │ conv3d_2[0][0]    │
+│ (BatchNormalizatio… │ 31, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ activation          │ (None, 63, 63,    │          0 │ batch_normalizat… │
+│ (Activation)        │ 31, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ conv3d_3 (Conv3D)   │ (None, 63, 63,    │     27,680 │ activation[0][0]  │
+│                     │ 31, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ batch_normalizatio… │ (None, 63, 63,    │        128 │ conv3d_3[0][0]    │
+│ (BatchNormalizatio… │ 31, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ conv3d_1 (Conv3D)   │ (None, 63, 63,    │        544 │ batch_normalizat… │
+│                     │ 31, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ add (Add)           │ (None, 63, 63,    │          0 │ batch_normalizat… │
+│                     │ 31, 32)           │            │ conv3d_1[0][0]    │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ activation_1        │ (None, 63, 63,    │          0 │ add[0][0]         │
+│ (Activation)        │ 31, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ max_pooling3d_1     │ (None, 31, 31,    │          0 │ activation_1[0][… │
+│ (MaxPooling3D)      │ 15, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ conv3d_4 (Conv3D)   │ (None, 31, 31,    │     27,680 │ max_pooling3d_1[… │
+│                     │ 15, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ batch_normalizatio… │ (None, 31, 31,    │        128 │ conv3d_4[0][0]    │
+│ (BatchNormalizatio… │ 15, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ activation_2        │ (None, 31, 31,    │          0 │ batch_normalizat… │
+│ (Activation)        │ 15, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ conv3d_5 (Conv3D)   │ (None, 31, 31,    │     27,680 │ activation_2[0][… │
+│                     │ 15, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ batch_normalizatio… │ (None, 31, 31,    │        128 │ conv3d_5[0][0]    │
+│ (BatchNormalizatio… │ 15, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ add_1 (Add)         │ (None, 31, 31,    │          0 │ batch_normalizat… │
+│                     │ 15, 32)           │            │ max_pooling3d_1[… │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ activation_3        │ (None, 31, 31,    │          0 │ add_1[0][0]       │
+│ (Activation)        │ 15, 32)           │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ max_pooling3d_2     │ (None, 15, 15, 7, │          0 │ activation_3[0][… │
+│ (MaxPooling3D)      │ 32)               │            │                   │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ flatten (Flatten)   │ (None, 50400)     │          0 │ max_pooling3d_2[… │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ dense (Dense)       │ (None, 64)        │  3,225,664 │ flatten[0][0]     │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ dropout (Dropout)   │ (None, 64)        │          0 │ dense[0][0]       │
+├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+│ dense_1 (Dense)     │ (None, 1)         │         65 │ dropout[0][0]     │
+└─────────────────────┴───────────────────┴────────────┴───────────────────┘
+
+ Total params: 3,324,193 (12.68 MB)
+
+ Trainable params: 3,323,905 (12.68 MB)
+
+ Non-trainable params: 288 (1.12 KB)
+
+Epoch 1/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 39s 345ms/step - acc: 0.5059 - loss: 2.0675 - val_acc: 0.5000 - val_loss: 0.6949
+Epoch 2/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 342ms/step - acc: 0.4941 - loss: 0.7307 - val_acc: 0.5000 - val_loss: 0.6962
+Epoch 3/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 330ms/step - acc: 0.5000 - loss: 0.6932 - val_acc: 0.4333 - val_loss: 0.6949
+Epoch 4/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 331ms/step - acc: 0.5118 - loss: 0.7050 - val_acc: 0.5000 - val_loss: 0.6931
+Epoch 5/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 336ms/step - acc: 0.5000 - loss: 0.6932 - val_acc: 0.5000 - val_loss: 0.6931
+Epoch 6/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 328ms/step - acc: 0.5000 - loss: 0.6932 - val_acc: 0.5000 - val_loss: 0.6931
+Epoch 7/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 330ms/step - acc: 0.5000 - loss: 0.6932 - val_acc: 0.5000 - val_loss: 0.6931
+Epoch 8/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 336ms/step - acc: 0.5000 - loss: 0.6932 - val_acc: 0.5000 - val_loss: 0.6931
+Epoch 9/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 328ms/step - acc: 0.5000 - loss: 0.6932 - val_acc: 0.5000 - val_loss: 0.6931
+b_residual {'params': 3324193, 'val_acc': 0.5, 'val_f1': 0.0, 'epocas': 9, 'mejor_epoca': 1}
+[[15  0]
+ [15  0]]
+
+# En el resultado 2, se obtuvo el grafico que se encuentra en el archivo llamado 'P2-1.png' en la ruta 'D:\pucp-2026-2-inf659-advanced-data-mining-techniques-intelligent-systems\5. Examen Parcial\P2'
+
+#Dado la celda 3:
+from tensorflow.keras.layers import GlobalAveragePooling3D
+
+K.clear_session()
+inputs = Input(shape=(width, height, depth, 1))
+x = Conv3D(16, 3, activation="relu")(inputs); x = MaxPool3D(2)(x); x = BatchNormalization()(x)
+x = Conv3D(32, 3, activation="relu")(x);      x = MaxPool3D(2)(x); x = BatchNormalization()(x)
+x = Conv3D(32, 3, activation="relu")(x);      x = MaxPool3D(2)(x); x = BatchNormalization()(x)
+x = GlobalAveragePooling3D()(x)
+outputs = Dense(1, activation="sigmoid")(x)
+model_gap = Model(inputs, outputs)
+model_gap.summary()
+
+log_gap = entrenar(model_gap, "gap")
+evaluar(model_gap, "gap.weights.h5", log_gap, "c_gap")
+
+#Se obtuvo estos resultados 3:
+ Model: "functional"
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ input_layer (InputLayer)        │ (None, 128, 128, 64,   │             0 │
+│                                 │ 1)                     │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv3d (Conv3D)                 │ (None, 126, 126, 62,   │           448 │
+│                                 │ 16)                    │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling3d (MaxPooling3D)    │ (None, 63, 63, 31, 16) │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ batch_normalization             │ (None, 63, 63, 31, 16) │            64 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv3d_1 (Conv3D)               │ (None, 61, 61, 29, 32) │        13,856 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling3d_1 (MaxPooling3D)  │ (None, 30, 30, 14, 32) │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ batch_normalization_1           │ (None, 30, 30, 14, 32) │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv3d_2 (Conv3D)               │ (None, 28, 28, 12, 32) │        27,680 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling3d_2 (MaxPooling3D)  │ (None, 14, 14, 6, 32)  │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ batch_normalization_2           │ (None, 14, 14, 6, 32)  │           128 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ global_average_pooling3d        │ (None, 32)             │             0 │
+│ (GlobalAveragePooling3D)        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 1)              │            33 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+
+ Total params: 42,337 (165.38 KB)
+
+ Trainable params: 42,177 (164.75 KB)
+
+ Non-trainable params: 160 (640.00 B)
+
+Epoch 1/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 35s 330ms/step - acc: 0.5765 - loss: 0.6683 - val_acc: 0.5000 - val_loss: 0.9643
+Epoch 2/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 325ms/step - acc: 0.5765 - loss: 0.6490 - val_acc: 0.5000 - val_loss: 1.5471
+Epoch 3/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 333ms/step - acc: 0.6588 - loss: 0.6447 - val_acc: 0.5000 - val_loss: 1.9452
+Epoch 4/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 330ms/step - acc: 0.6353 - loss: 0.6528 - val_acc: 0.5000 - val_loss: 1.7534
+Epoch 5/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 332ms/step - acc: 0.6118 - loss: 0.6335 - val_acc: 0.5000 - val_loss: 1.6884
+Epoch 6/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 328ms/step - acc: 0.5882 - loss: 0.6539 - val_acc: 0.5000 - val_loss: 1.0423
+Epoch 7/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 343ms/step - acc: 0.6471 - loss: 0.6323 - val_acc: 0.5000 - val_loss: 0.9317
+Epoch 8/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 27s 322ms/step - acc: 0.6353 - loss: 0.6182 - val_acc: 0.6667 - val_loss: 0.6789
+Epoch 9/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 324ms/step - acc: 0.6353 - loss: 0.6594 - val_acc: 0.6333 - val_loss: 0.5860
+Epoch 10/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 328ms/step - acc: 0.6941 - loss: 0.6117 - val_acc: 0.6000 - val_loss: 0.6135
+c_gap {'params': 42337, 'val_acc': 0.6666666666666666, 'val_f1': 0.7368421052631579, 'epocas': 10, 'mejor_epoca': 8}
+[[ 6  9]
+ [ 1 14]]
+
+
+# En el resultado 3, se obtuvo el grafico que se encuentra en el archivo llamado 'P2-2.png' en la ruta 'D:\pucp-2026-2-inf659-advanced-data-mining-techniques-intelligent-systems\5. Examen Parcial\P2'

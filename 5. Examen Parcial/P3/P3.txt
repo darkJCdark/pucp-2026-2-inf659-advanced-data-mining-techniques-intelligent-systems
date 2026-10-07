@@ -1,0 +1,125 @@
+#Dado la celda 1:
+model_fe, base_fe = construir_slicewise()
+model_fe.summary()
+print("Entrenables:", n_entrenables(model_fe))   # esperado: 2049 (solo la cabeza)
+
+log_fe = entrenar_lr(model_fe, "tl_fe", lr0=1e-3)    # solo la cabeza se entrena; lr mayor por las pocas épocas
+evaluar(model_fe, "tl_fe.weights.h5", log_fe, "tl_feature_extraction")
+
+#Se obtuvo estos resultados 1:
+ Model: "functional_3"
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ input_layer_6 (InputLayer)      │ (None, 128, 128, 64,   │             0 │
+│                                 │ 1)                     │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ lambda_4 (Lambda)               │ (None, 16, 128, 128,   │             0 │
+│                                 │ 1)                     │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ lambda_5 (Lambda)               │ (None, 16, 128, 128,   │             0 │
+│                                 │ 3)                     │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ time_distributed_2              │ (None, 16, 2048)       │    23,587,712 │
+│ (TimeDistributed)               │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ global_average_pooling1d_2      │ (None, 2048)           │             0 │
+│ (GlobalAveragePooling1D)        │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_2 (Dropout)             │ (None, 2048)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_3 (Dense)                 │ (None, 1)              │         2,049 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+
+ Total params: 23,589,761 (89.99 MB)
+
+ Trainable params: 2,049 (8.00 KB)
+
+ Non-trainable params: 23,587,712 (89.98 MB)
+
+Entrenables: 2049
+Epoch 1/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 197s 849ms/step - acc: 0.5176 - loss: 0.9335 - val_acc: 0.6667 - val_loss: 0.6004
+Epoch 2/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 30s 350ms/step - acc: 0.6765 - loss: 0.6610 - val_acc: 0.7333 - val_loss: 0.5166
+Epoch 3/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 332ms/step - acc: 0.6176 - loss: 0.7183 - val_acc: 0.6000 - val_loss: 0.7481
+Epoch 4/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 334ms/step - acc: 0.6941 - loss: 0.6053 - val_acc: 0.7000 - val_loss: 0.6023
+Epoch 5/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 31s 362ms/step - acc: 0.6882 - loss: 0.5630 - val_acc: 0.8333 - val_loss: 0.4865
+Epoch 6/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 28s 334ms/step - acc: 0.6765 - loss: 0.6146 - val_acc: 0.8333 - val_loss: 0.4747
+Epoch 7/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 345ms/step - acc: 0.6882 - loss: 0.5933 - val_acc: 0.8333 - val_loss: 0.4638
+Epoch 8/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 30s 355ms/step - acc: 0.7059 - loss: 0.5654 - val_acc: 0.8667 - val_loss: 0.4467
+Epoch 9/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 344ms/step - acc: 0.6824 - loss: 0.5976 - val_acc: 0.8000 - val_loss: 0.4917
+Epoch 10/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 339ms/step - acc: 0.7294 - loss: 0.5331 - val_acc: 0.8333 - val_loss: 0.4414
+tl_feature_extraction {'params': 23589761, 'val_acc': 0.8666666666666667, 'val_f1': 0.8666666666666667, 'epocas': 10, 'mejor_epoca': 8}
+[[13  2]
+ [ 2 13]]
+
+# En el resultado 1, se obtuvo el grafico que se encuentra en el archivo llamado 'P3-1.png' en la ruta 'D:\pucp-2026-2-inf659-advanced-data-mining-techniques-intelligent-systems\5. Examen Parcial\P3'
+
+
+
+
+#Dado la celda 2:
+model_ft, base_ft = construir_slicewise()
+model_ft.load_weights("tl_fe.weights.h5")        # parte de la cabeza ya entrenada
+
+base_ft.trainable = True
+for capa in base_ft.layers:
+    if isinstance(capa, tf.keras.layers.BatchNormalization):
+        capa.trainable = False                    # BN siempre congelada (estadísticas de ImageNet)
+    else:
+        capa.trainable = capa.name.startswith("conv5_")   # solo el último bloque
+print("Entrenables:", n_entrenables(model_ft))
+
+log_ft = entrenar_lr(model_ft, "tl_ft", lr0=1e-4)    # 10 veces menor que en feature extraction
+evaluar(model_ft, "tl_ft.weights.h5", log_ft, "tl_finetuning")
+
+#Se obtuvo estos resultados 2:
+ Entrenables: 14955521
+Epoch 1/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 206s 872ms/step - acc: 0.5353 - loss: 0.7990 - val_acc: 0.6333 - val_loss: 0.6198
+Epoch 2/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 31s 360ms/step - acc: 0.6353 - loss: 0.6489 - val_acc: 0.7000 - val_loss: 0.5530
+Epoch 3/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 31s 366ms/step - acc: 0.6941 - loss: 0.5881 - val_acc: 0.8667 - val_loss: 0.4303
+Epoch 4/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 31s 361ms/step - acc: 0.7000 - loss: 0.5082 - val_acc: 0.9000 - val_loss: 0.3654
+Epoch 5/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 31s 359ms/step - acc: 0.7706 - loss: 0.4643 - val_acc: 0.9333 - val_loss: 0.4296
+Epoch 6/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 30s 351ms/step - acc: 0.8176 - loss: 0.4182 - val_acc: 0.7333 - val_loss: 0.4278
+Epoch 7/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 30s 348ms/step - acc: 0.8529 - loss: 0.4116 - val_acc: 0.7667 - val_loss: 0.3890
+Epoch 8/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 345ms/step - acc: 0.8765 - loss: 0.3246 - val_acc: 0.8667 - val_loss: 0.3533
+Epoch 9/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 29s 338ms/step - acc: 0.9000 - loss: 0.2820 - val_acc: 0.8333 - val_loss: 0.3908
+Epoch 10/10
+85/85 ━━━━━━━━━━━━━━━━━━━━ 31s 361ms/step - acc: 0.9118 - loss: 0.2160 - val_acc: 0.9667 - val_loss: 0.2025
+tl_finetuning {'params': 23589761, 'val_acc': 0.9666666666666667, 'val_f1': 0.9655172413793104, 'epocas': 10, 'mejor_epoca': 10}
+[[15  0]
+ [ 1 14]]
+
+
+# En el resultado 2, se obtuvo el grafico que se encuentra en el archivo llamado 'P3-2.png' en la ruta 'D:\pucp-2026-2-inf659-advanced-data-mining-techniques-intelligent-systems\5. Examen Parcial\P3'
+
+
+#Dado la celda 3:
+for k, v in resultados.items():
+    print(f"{k:24s} params={v['params']:>10,}  acc={v['val_acc']:.3f}  f1={v['val_f1']:.3f}  mejor_ep={v['mejor_epoca']}")
+
+#Se obtuvo estos resultados 3:
+a_base                   params= 2,450,881  acc=0.700  f1=0.743  mejor_ep=7
+b_residual               params= 3,324,193  acc=0.500  f1=0.000  mejor_ep=1
+c_gap                    params=    42,337  acc=0.667  f1=0.737  mejor_ep=8
+tl_feature_extraction    params=23,589,761  acc=0.867  f1=0.867  mejor_ep=8
+tl_finetuning            params=23,589,761  acc=0.967  f1=0.966  mejor_ep=10
