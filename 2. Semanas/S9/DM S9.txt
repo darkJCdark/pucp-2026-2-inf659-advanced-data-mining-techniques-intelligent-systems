@@ -1,0 +1,778 @@
+# DM S9
+
+  Meeting started: 13/10/2026, 1:02:19 p. m.
+  Duration: 181 minutes
+  Participants: Speaker, Speaker 1, Speaker 2
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/wMBfbTfxMNys6jZIFJBk?o=txt)
+
+    
+
+  
+
+  
+
+  ## Transcript
+
+  00:00 Speaker 1: Pero todavía no viene Claudia, sí, que el sitio es tuyo. Pero todavía no viene Claudia. Para que no se vea esto, para que yo no se vea. Aquí es mi sitio. Vuelta por ti. Vuelta por ti, si tienes un proyecto de... Marito. Gracias. Gracias.
+01:13 Speaker 2: Muy bien, vamos a empezar la clase del día de hoy. Bienvenidos a todos, yo soy el profesor River. Para los que no me conocen, yo soy especializado más en el tema de Airfreezer. Bienvenida. Veo un poco más el tema detrás de esta parte numérica. Aparte, me he pensado en temas de inteligencia artificial que me han esperado aquí en la Católica. Estos temas me gustan bastante. A mí en lo personal me gusta enseñar. He escuchado una pequeña novela de ciencia ficción que justamente habla de inteligencia artificial y de un futuro catastrófico o no catastrófico.
+02:05 Speaker 1: Entonces, normalmente no hay una primera carta
+02:07 Speaker 2: declarada,
+02:09 Speaker 1: etc. Pero tengo
+02:12 Speaker 2: entendido que el día de hoy tienen un entregable importante. ¿Es así? Hay un problema, miren. Antes de ir con la cláusula, ¿no?
+02:36 Speaker 1: y y y Entonces, la primera pregunta realmente es para
+02:54 Speaker 2: presentar, van a comentar un poco cómo les está yendo. Podemos pasarse a la siguiente semana. El problema de pasarlo a la siguiente semana es que no tenemos por un
+03:04 Speaker 1: problema de esto seguro. Puedes
+03:22 Speaker 2: darles un feedback. Sí, eso es una buena idea
+03:55 Speaker 1: Ok,
+03:59 Speaker 2: entonces vamos Hacerlo de repente un poco rápido. ¿Ya? Hámoslo como parte de la clase del viernes.
+04:05 Speaker 1: ¿Ok?
+04:08 Speaker 2: ¿Cuántos grupos son más o menos? ¿Cuántas personas son por grupo? Dos.
+04:15 Speaker 1: ¿Cuántas personas son por grupo?
+04:18 Speaker 2: Ya, perfecto.
+04:19 Speaker 1: Son cinco grupos. Son
+04:21 Speaker 2: cinco grupos. Perfecto. Ya, creo que lo que vamos a ver es lo siguiente. ¿Ya? Vamos a hacer la clase... Tocaría la siguiente semana. Y
+04:35 Speaker 1: hoy
+04:36 Speaker 2: vamos a la clase la siguiente semana. Y la siguiente semana ustedes van a prestar sus trabajos.
+04:42 Speaker 1: ¿Ya?
+04:42 Speaker 2: ¿Tendrá tiempo en una semana? Porque... Puede ser dos semanas. Ah, déjenme pensar un poquito.
+04:50 Speaker 1: No, no, no. No, no. No, no. No, no. No, no. No, no. No, no. No,
+04:54 Speaker 2: no. No, no. No, no. No, no. No, no. No, no. No, no. No, no. No, no. Yo entiendo que no han tenido mucho tiempo, ¿no?
+05:00 Speaker 1: Así que... Y
+05:03 Speaker 2: así yo creo que voy a hacer hasta dos semanas, que recién hacíamos... Sentar un poco más en el país, con el cual hay algunos
+05:08 Speaker 1: trabajos iniciales.
+05:12 Speaker 2: Ya, hagámoslo de esa forma más,
+05:13 Speaker 1: y vamos a continuar con el final de esto. ¿Ya preguntas?
+05:19 Speaker 2: Una pregunta.
+05:23 Speaker 1: que no tendrían resultados finales, ¿qué reportarían? El registro
+05:27 Speaker 2: del póster es el título y una descripción. Entonces no tienen que tener
+05:34 Speaker 1: un
+05:36 Speaker 2: detalle muy grande. Sin embargo, es un problema si no hay feedback. De repente tienen ideas muy locas y ha pasado en varios cursos.
+05:46 Speaker 1: Y lo importante del feedback es autorizar un poco sus ideas
+05:48 Speaker 2: y ver qué tan manejables son. En lo que no quisiéramos, se registren posters y al final no lo quisiéramos. ¿Ok? Quejada en el curso, por eso. Hay que acordarse que este trabajo tiene, me parece, un puntaje doble. Así que hay que darle bastante importancia. Y el trabajo es también importante porque justamente muestra un poco lo que ustedes... Tal vez la mitad del curso. ¿Por qué es importante? Porque es un trabajo de verdad. Muy bien, entonces vamos a hacer eso. Voy a querer que ustedes se presenten. Yo me he presentado
+06:39 Speaker 1: rápidamente.
+06:44 Speaker 2: Algunos los conozco, otros no. Así que esto es un poco para que se presente y también me den el feedback. Ahora, vean lo que están pensando en sus trabajos dos partes. ¿Ok? Y así podemos conversar sobre eso, para que ustedes puedan presentar al final de esta semana el trabajo. Y algunos grupos se van a poder quedar al final de esta clase para conversar un poco sobre el trabajo. Pero todos los grupos que vean son más extremóticos en sus institutos. Muy bien, vamos a empezar entonces con tu elegir, por favor. Sí, por favor. Invitamos todos a aplaudir, por favor, al compañero que se pare.
+07:24 Speaker 1: Bueno, bienvenido a todos. Mi nombre es Juan Diego Sabana Lecardo. Algo personal sobre mí. Me gusta bastante la idea. La aplicación de agente. Actualmente estoy trabajando en parte de investigaciones con Keystone, Inteligencia Artificial. Bueno, bastante en esa parte de investigación. Algo interesante hasta ahora, ¿qué es el concurso?
+07:48 Speaker 2: El concurso, lo que he visto hasta ahora.
+07:50 Speaker 1: El curso. Ah, bueno. Bueno, sobre el curso, la principal razón, digamos, por la que entré fue porque estaba, aparte de Deep Learning, estábamos viendo, también vi que se iba a tomar parte de las arquitecturas de Transformers, y me llamó mucho la atención esa parte, sobre todo porque a mí me gustaría ser AI Engineer. Bueno, me trajo el grupo. Lo que hemos planteado hasta ahora era, primero tuvimos muchas discusiones, no sabíamos realmente, más que nada nuestras propuestas estaban yendo por el procesamiento del lenguaje natural y no era lo que queríamos, o creo que no es lo que se espera en el curso. De ahí nos pusimos a pensar, ¿no? Si vamos a hacer un trabajo que es algo que apoya a nuestro país y basado en la realidad del país. En ese sentido, la realidad que estamos sufriendo ahora es que estamos en olas de calor frente al fenómeno del niño. Creo que su efecto también que causa es que el mar, digamos, se evapore y genere lluvias intensas que terminan en inundaciones en el país. Entonces nosotros dijimos, ¿qué podemos hacer para apoyar eso? Y vimos que un modelo de los plantios era el SAM, que era prompt, o sea, básicamente buscar dentro de una imagen con un prompt lo que se quiera en ese momento. Entonces nosotros buscamos datasets, qué era lo que había, y encontramos que había datasets sobre inundaciones. Entonces, hicimos juntarnos estas dos partes, la realidad que tenemos y que vamos a sufrir dentro de estos días, que es la realidad del fenómeno del niño,
+09:12 Speaker 2: con las
+09:14 Speaker 1: inundaciones que se vienen próximas. Entonces,
+09:16 Speaker 2: encontramos un dataset de 2017,
+09:18 Speaker 1: que eran inundaciones,
+09:20 Speaker 2: o sea, partes fluid, creo que se llaman, fluid,
+09:22 Speaker 1: en cierta parte del país, y la idea era comparar antes contra ahora, y ver que este modelo SAR nos diga en qué parte era inundado, por así decirlo, y compararlo contra CELS. Y Letterflute, que es un modelo ya especializado. Básicamente esa es la propuesta del proyecto. Entonces,
+09:41 Speaker 2: ¿tiene nombre o todavía no tiene nombre específico?
+09:43 Speaker 1: Como tal, no. Simplemente digamos que es un ajuste a la parte de encoding del modelo de SAP.
+09:51 Speaker 2: Listo. Muchas gracias. Ahora vamos a darle la palabra.
+09:54 Speaker 1: Un
+09:54 Speaker 2: aplauso, por favor.
+10:00 Speaker 1: Buenas noches, soy Jorge Chamorro, algo sobre mí, que ahorita estoy haciendo mi tesis con análisis de imágenes y cruchas. Mi asesor es el profesor Finera, bueno, algunos ya lo sacarán, creo que la mayoría son del grupo de guía. Y bueno, lo que me interesa en el curso es porque justamente mi tema de tesis estaba relacionado con el análisis de imágenes y por eso mismo me matriculé en el curso. Yo actualmente estoy en un curso de carrera de grado, y este es el primer curso de carrera. Con respecto al trabajo grupal, hemos elegido el proyecto de detección de deepfakes. Estuvimos revisando, como acababa y Cristian, básicamente. Bueno, el tema, creo que es una competencia de carril de 70 años. Es uno de los que trabajan con bastante tipo de data, creo que 96 gigas de debilidad. Y básicamente ahorita hemos definido la propuesta, el tema, el deeplock, creo en... Ayuda en el entrenamiento autoscúrbico utilizado a detectar V-Fates en incendios reales. Se planea usar como modelos este Dino versión 2 y entre otros. Muy básicamente eso.
+11:07 Speaker 2: ¿Hay más del grupo?
+11:11 Speaker 1: ¿No? Bien. Se quedan para conversar. Para
+11:19 Speaker 2: conversar.
+11:20 Speaker 1: Y adelante.
+11:22 Speaker 2: Aplausos por favor.
+11:26 Speaker 1: Mi nombre es Cristian Rosales, actualmente alumno de primer grado y estoy acabando. Este es mi último curso de ciclo. Yo hice tesis con Rosalía Nueva. Hicimos temas de detección de enfermedades dentales y luego cuantizaciones de modelos para meterlos inclusive en móviles. Algo personal sobre mí, me gusta bastante lo que es la lectura. También se relaciona un poco con la gestión del EP y todo eso. Y algo que he visto en el curso es Transformers. Todo lo que es la atención, cómo se relaciona con mis imágenes actuales. Entonces también cómo se cuantizan, ¿no? Cómo se puede llegar a despegar varios modelos. Y con respecto al trabajo de grupo, similar a lo que me hizo mi compañero Juan, estamos viendo Sam, pero donde me enfoque lo que es la parte del prompting, ¿no? Porque ahí la problemática es que es el mismo trabajo, no es otro, sino que en nuestro trabajo es más orientado a la parte de cómo depende mucho del prompting. O sea, queremos ver qué tan lejos se puede llegar sin un prompting exacto. Y estamos trabajando ahorita con varios datasets. Y esa es la problemática que siento. Estar lejos o tener un buen trabajo y llegar a presentarlo bien. Tanto para el windout como para el cursor. Y eso sería por el problema y se queda el uso.
+12:36 Speaker 2: Adelante, vamos. Con todo, les agradezco a un carguancho. Algo que más de mí, Dr. Ross, la primera súper relacionada al curso. Me gusta mucho lo que es el minimalismo. En general, me encanta. Siempre veo en temas de diseño, por tratar de tener todo lo más posible, me gusta bastante. Ahora lo relacionado al curso, me gusta bastante los temas relacionados a inteligencia artificial, tanto con machine learning, deep learning.
+13:05 Speaker 1: En general, me quiero... No, no,
+13:07 Speaker 2: no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no pero todavía normalmente no tengo la propuesta de la de hacer una estría. Es relacionado a series temporales, a la predicción de... Y bueno, es un reto, pero vamos a ver qué tal sale. Y no solo me gusta lo que es parte de la inteligencia artificial, sino también me gusta enseñarla. Entonces, me gusta bastante lo que hablamos de la inteligencia de algunos años, y también he editado cursos para...
+13:40 Speaker 1: y bueno, esta
+13:42 Speaker 2: semana es mi última clase y está fluyendo bastante bien y bueno, sobre el trabajo Rupal justo lo que comentaron estamos viendo lo de Vino Veroz y tuvimos unos pequeños problemas con la exploración inicial como tenemos un difícil día en el Vino Drive pero estamos ahí avanzando
+14:01 Speaker 1: gracias por
+14:03 Speaker 2: favor
+14:06 Speaker 1: Buenas noches a todos, mi nombre es Jorge Fatama, soy estudiante en la Universidad de Climática. Algo interesante sobre mí, bueno, al igual que mi compañero Cristiano, me gusta la docencia. Con respecto a lo que es
+14:19 Speaker 2: trabajo,
+14:21 Speaker 1: me interesa más que nada lo que es el presidente de la hoja natural y que tiene toda parte de Disney, por eso ponerme aquí a este curso. Algo interesante es hablar del curso más que en el parcial de ahí. Fue algo desafiante poder resumir, o sea, explicar todo en diez minutos, ¿no? Y tuve... Realicé a mis épocos cuando... Ni soy un profesor youtuber de la milicia. Tenía que preparar guiones, preparar, grabar a cada rato. No, es... Que en sí fue como... Como... ¿Cómo la preparación y todo eso? Todo lo que tenés que escuchar. Pero fue algo gratificante, creo yo. Ahora, con respecto a mi compañero, comparto la idea de que puse a prender mi máquina, con esos 100, bueno, la descargué solamente el 10%, en el trasero, como 100 GB, y ahí teníamos un problema con el drive, que sale mi correo corporativo que tiene dos telas. Con eso ya lo solucionamos.
+15:35 Speaker 2: Super. En el caso de su trabajo, bueno, para varios grupos hay muchas veces este tipo de problemas. Por ejemplo, reconocer que es falso un texto de chat. ¿Largo? Un poco difícil hoy en día. Y mi feeling es que con los deepkits no va a ser algo similar, ¿no? Por ahí luego conversamos un poco más en detalle porque no te han hecho pasar cosas. Muy bien. Muchas gracias, Carlos. También, por favor. ¿Qué tal? ¿Qué tal es Joaquín?
+16:11 Speaker 1: Algo sobre mí. Bueno, yo soy guanuqueño, soy guanujo, tengo tres hijos, me gusta la playa,
+16:19 Speaker 2: me gusta la playa, ahora que también hay más
+16:21 Speaker 1: calor que lo normal. Bueno, tengo un interés en parte para el curso, desde que estoy haciendo mi tesis de doctorado, en realidad antes también ya había llevado a la maestría algunos selectivos de la maestría de informática, porque yo tengo base mecatrónica. Y bueno, en realidad mi base de base, digamos, de pregrado es de electrónico. Entonces ya en la maestría me interesaban un poco los temas.
+16:46 Speaker 2: Y bueno,
+16:48 Speaker 1: ¿cómo va el grupo? Es un tema relacionado a lo que estamos proponiendo, que también tiene que ver un poco con lo que trabajo ahora, que es los cultivos de fresa, ¿no? La defección. Básicamente para navegar en mis cultivos de fresa, que son como hileras, digamos, hay... hay una línea que hay que seguir, ¿no? Entonces, la idea que hemos planteado es que como modelo de tensión, o sea, un transformer, poder hacer segmentación semántica, ¿ya? De tal forma que podamos obtener el surco, y con ese surco obtener la línea donde... Es un surco de...
+17:25 Speaker 2: Están haciendo tu tesis en el siglo pasado, ese es el Salto Sur. Ah, no, ese es el Salto Sur, ¿no?
+17:30 Speaker 1: O sea, tiene que ver, pero en realidad ahora es como modelo de atención. El semestre pasado tratamos de divisar las herramientas que teníamos en ese entonces, ¿no? Pero creo que esto es más apropiado, digamos, para
+17:44 Speaker 2: ese problema. Exacto, no, está muy bien. Muchas gracias. Por favor.
+17:55 Speaker 1: Buenas noches, mi nombre es Gustavo. Algo perdón sobre mí. Llegando con la guitarra, junto con mi compañero de febrero, sigo acá en la colección de febrero. Bueno, también me gusta leer, leo temas académicos, también ya fuera de técnico, académico, de literatura también me gusta. Sobre el curso, bueno, yo en el trabajo más que todo hago modelos, desde modelos básicos, por así decirlo, hasta modelos LLM. Pero como la parte del cliente, ¿no? No tanto interactuando o modificando el modelo. Y también el curso anterior me estoy dando bastante. Bueno, a pesar de que ya he llevado cursos de learning en el pregrado. Poder adentrarme más y entenderlo más, ¿no? Poder modificarlo y ya saber qué está haciendo. Y al mismo tiempo estoy aprovechando para ver cuál es mi tema de tesis.
+18:50 Speaker 2: Y bueno, con respecto al trabajo de grupo, lo
+18:52 Speaker 1: que nosotros estamos haciendo es... explorar el modelo Foundation Dinov3 para, en este caso, ponerlo otro dominio. Ese es Sam. Lo que nosotros estamos haciendo es con Dinov3. Es otro proyecto.
+19:10 Speaker 2: ¿Qué están haciendo con Dinov3?
+19:12 Speaker 1: Nosotros estamos... Bueno, lo que hemos visto, Dinov2 y Dinov3 sirven para segmentación de imágenes. No es tanto un modelo que clasifica. Entonces vamos a cambiar el dominio. Hoy estamos explorando, estamos viendo una vez de datos que se llama AI for Mars, que son imágenes de terreno de Marte. Con eso se van a poder usar ese mismo y hacer fine tuning o electronic.
+19:37 Speaker 2: Muchas
+19:39 Speaker 1: gracias.
+19:45 Speaker 2: Ahora aquí, por favor.
+19:50 Speaker 1: Buenas noches a todos. Mi nombre es Claudia. Algo sobre mí es que yo soy de Cusco. Los dos últimos años me he dedicado a la docencia de A y algo personal también sobre mí es que me gusta entender cómo funcionan los algoritmos. Me gusta darle seguimiento y hacer que mis alumnos se entiendan porque de por sí hoy día la inteligencia artificial no simplifica todo, pero muchas veces nuestros alumnos no conocen qué es realmente lo que hace el algoritmo. También me gusta investigar y bueno, soy alumna de doctorado. Mi línea de investigación son los sistemas de recomendación basados en explicabilidad. Y bueno, en explicabilidad estoy viendo muchos de estos modelos convulsionales, los grafos neuronales, etc. Entonces es por eso también que decidí llevar el curso. Y bueno, también estoy
+20:38 Speaker 2: trabajando con Joaquín.
+20:40 Speaker 1: La línea es segmentación de imágenes agrícolas. Espero que los conocen más oportunidades un día de la elección haciendo respeto. Gracias.
+20:48 Speaker 2: Gracias. Aplausos, por favor.
+20:57 Speaker 1: Bueno, ¿qué tal? Mi nombre es Marshall. Bueno, ya lo conozco de aprendizaje. Bueno, yo estoy en la investigación de informática, algo sobre mí. Bueno, yo trabajo como ingeniero de datos, así que... Y también me gustan los videojuegos, pero en parte lo que quiero decir es que me gustan los temas de data y me gusta analizarle las cosas, darle vueltas a las cosas. Bueno, no estaría un tema en este vídeo aún, pero en estas últimas dos semanas me he puesto a investigar y como que he encontrado un punto en el que estoy partido, como que entra a aplicar la guía a temas de data, no sé, data centric se lo puede llamar ahí, temas de computer vision. Entonces ahí estoy en una especie de selección final ya para ver qué trabajo hago, y hablar con alguien a ver qué ocurre, pero creo que ahorita ya, y si entra este curso también es un poco porque quieren reforzar los conocimientos que ya tenían, ya que me parece interesante, y eso también entra en la parte de curso, muy interesante, ¿no? Y también, bueno, como yo soy malos aplicados, entonces la gente que es aplicada, entonces generalmente yo veo el resultado primero, y luego entiendo las cosas, ¿no? Entonces entiendo las cosas cuando... toda la teoría atrás, ¿no? Entonces, es un poco una forma de aprendizaje que tengo, ¿no? Me gusta manejar cosas así, y bueno, creo que me ha servido, ¿no? Y bueno, con respecto al trabajo grupal, también estoy trabajando con aquí, que ya dio la idea bastante bien, porque es de lo que sabía, y bueno, esperemos que vaya bien con eso.
+22:19 Speaker 2: Excelente, muchas gracias. Un aplauso, por favor.
+22:25 Speaker 1: Buenas noches. Me llamo Feris Schwangbe. Soy de Alemania. Soy un estudiante de Anover, norte de Alemania. Estoy aquí por un semestre de intercambio. Tuve clase de español en el colegio, pero estaba muy malo. Y tuve clase otra vez en la universidad. A veces es un poco difícil entenderlo, pero a la mayoría funciona muy bien. Puede entenderlo. Sí, sí, ahí. Información es bastante importante. Por favor, me escribe como fechas de exámenes o algo. Me gustaría soldar. Me gustaría los sistemas operativos y la gestión de memoria. Y también, a veces, algo más simple como aplicaciones web. Y sobre el curso, es que en Alemania no tuve clases o cursos sobre la inteligencia artificial. Y entonces aquí son las primeras veces donde esto entiendo cómo funciona. Y si inteligente o artificial es una técnica muy disruptiva, es muy importante si conoces cómo funciona, ¿no? Y vale, es muy interesante. Con el grupo,
+23:39 Speaker 2: ojalá,
+23:39 Speaker 1: voy a decir correctamente. La idea es que usamos el Dino. con imágenes de satellite y cómo funciona la degradación de imágenes, la degradación de resolución o con noise. Es una ciencia con un nuevo grupo. Es con Álvaro, Cristian y Efraín.
+24:11 Speaker 2: Ok, es como que la eficiencia de vino en imágenes escritores.
+24:15 Speaker 1: Sí, por ejemplo. No tenemos un nombre. Te quedan también.
+24:23 Speaker 2: Bien. Muchas gracias, Felipe. Ahora, aplausos, por favor.
+24:33 Speaker 1: Mi nombre es Mónica Barca. Mi vestimenta de vengo de jugar fútbol en la Copa PUC de los trabajadores. Algo interesante sobre mí personal es que juego fútbol toda mi vida. Sé que soy bastante deportista. Bueno, ahorita estoy yo cursando el doctorado, con Claudia somos de la misma promoción de la beca doctoral de la universidad, ambas en ingeniería y de hecho trabajamos con el mismo asesor que es el profesor Villanueva, y con él estoy trabajando en modelos de fusión espacial-temporal para poder generar predicciones de calidad del aire en base a redes civiles de monitoreo, equipos fijos y móviles que colocamos. en la ciudad para generar datos de calidad del aire y con eso hacer estas predicciones. Y para eso, el ciclo pasado llevé el curso de Machine Learning y ahora estamos acá en el curso de Deep Learning, haciendo grupos con Marshall, Claudia y Joaquín. También vamos a trabajar en el tema que fue lo que ha propuesto el aire.
+25:38 Speaker 2: Muchas gracias, aplausos por favor.
+25:45 Speaker 1: Hola, mi nombre es Álvaro. Bueno, actualmente me encuentro estudiando sobre competición cuántica, es un mejor que me ha entrado. Sobre el curso, bueno, lo que me gustó fue la última parte del trabajo con páginas, es algo que nunca había hecho antes. Y sobre el trabajo del grupo, bueno, estamos en el grupo con Ferris, con Efraín y con Lucia. Estamos haciendo sobre la degradación de resolución y ruido en el modelo de Dino B2 con imágenes satelitales. Y bueno, no sé.
+26:22 Speaker 2: Bueno, muchas gracias.
+26:24 Speaker 1: Un
+26:25 Speaker 2: aplauso.
+26:30 Speaker 1: Mi nombre es John Alfa Palo, algo personal sobre mí, considero una persona
+26:34 Speaker 2: extrovertida, la cual es muy proactiva.
+26:38 Speaker 1: Y anteriormente llevé curso de PLN, de pregrado, con el profesor Erasmus por San Boroya, lo cual me hizo querer llevar el curso de Data Mining acá en Progrado, el cual me gustó mucho el tema de todas las redes, todas las redes normales, porque en PLN vimos una manera muy generalizada. todo lo que es e-learning y pues la mayor profundidad me hace tener más inclinación a netamente cosas de ella, ¿no? Nuestro trabajo en grupo ahorita es hacer, ver, vamos a decirlo, adicimos agarrar un tema de mayor interés, lo cual ahorita es el fenómeno del niño, en el cual es ver, usando SAM, ver si las imágenes satelitales, tanto del antes o después, qué tal lo aborda, ¿no? Si puede identificar bien las zonas que son inundadas o no, para poder, capaz, con ello, tener algo de impacto y poder, capaz, prevenir, es algo preventivo.
+27:36 Speaker 2: Sí,
+27:38 Speaker 1: otro del grupo, con Juan Sabal.
+27:40 Speaker 2: Listo, muchas gracias. Un plato, por favor. Hola, buenas noches. Mi
+27:48 Speaker 1: nombre es Lin Miranda. Algo sobre mí es que vengo también de llevar el grupo, bueno, el curso de PLN con justamente el equipo de producción con estos trabajos de un chatbot conversacional. Y una de las cosas que me gustó mucho fue la parte del diseño
+28:04 Speaker 2: de la arquitectura para optimizar, por ejemplo,
+28:07 Speaker 1: tanto el tiempo de respuesta como la eficiencia. Al no delegarle todo, por ejemplo, a un NLLM que es lo que se suele hacer. Entonces tratar, por ejemplo, no solo con lo
+28:15 Speaker 2: que vendría a ser la metodología del RAF,
+28:17 Speaker 1: sino también con cosas como el uso de expresiones regulares para mapear solicitudes y así tener un modelo menos costoso y que pueda responder en base al ganché cargado. Y gracias a todo eso y a la pequeña parte de
+28:31 Speaker 2: Deep Learning que abordamos justamente entre
+28:34 Speaker 1: los capítulos de Speech to Text y... optimizadores y parámetros con el profesor Erasmo que me llamó la atención del curso y de matricularme.
+28:42 Speaker 2: ¿Has escuchado de Jeff?
+28:44 Speaker 1: Ah, sí. Sí, sí. Súper.
+28:49 Speaker 2: No, excelente. Muchas gracias.
+28:55 Speaker 1: Buenas, soy Kevin Alca. Algo sobre mí es que desde siempre me ha gustado jugar el ajedrez. Llegué a competir de manera profesional, por así decirlo, pero ya 10 años lo dejé. Y bueno, ahora sigo jugando, pero por hobby más que todo. Algo interesante del curso. Bueno, los temas en sí ya los había visto en los cursos relacionados a inteligencia artificial. Pero lo que rescato más es el parcial, debido a que fue la primera vez en la que en colapse me reiniciaba por las épocas que le daban. ¿Estás en ningún grupo con el virtual coaching? No, estoy de SAM para imágenes médicas. ¿Ya han dicho? Sí, pero estamos en el grupo 3. Bien,
+29:45 Speaker 2: se quedan. Muy bien, una pregunta para todos. Muchas gracias. con la clase del día de hoy y vamos a comenzar con un pequeño repaso y un pequeño juego bueno, antes de empezar con el pequeño juego y esa es un poco la estructura de las clases que normalmente vamos a hacer el comienzo de las clases cualquier pregunta, cualquier consulta vamos a dar un máximo de 10 minutos y no hay muchas preguntas o no hay muchas consultas Vamos de ahí a pasar a lo que vamos a llamar el Bi-Quest. De ahí vamos a hablar qué es el Bi-Quest. Todavía no les voy a comentar. Algunos que han llevado el curso pasado ya lo saben. Otros todavía. Y de ahí vamos a hablar de la parte teórica. Vamos a conversar unos 45 minutos sobre la clase. Y normalmente vamos a hacer un pequeño break. Bueno, un pequeño break. Vamos a continuar con la clase. Vamos a hacer ejercicios dinámicas. Vamos a mantener muchas veces... Con la clase teórica. Y al final de todas las clases. Vamos a dar las preguntas del bike.
+30:53 Speaker 1: ¿Ok? Y esas preguntas del bike, pues. Es las que van a tener
+30:57 Speaker 2: que presentar al comienzo de la siguiente clase. ¿Ya? Y eso es lo que vamos a hacer durante las siguientes ocho semanas.
+31:03 Speaker 1: ¿Ya?
+31:06 Speaker 2: Todos se preguntarán.
+31:07 Speaker 1: ¿Qué es el bike?
+31:08 Speaker 2: ¿Qué es el bike? ¿Alguien lo ha escuchado? ¿Sí? ¿Sí? ¿Qué es Vibe Cover? ¿Qué me puede decir?
+31:18 Speaker 1: Es como si surfeas en una ola, ¿sí? Con un vibe muy bien, ¿sí? Mejor con un drink. Y dices a Claude o a Gemini, hoy quiero hacer una aplicación de dating de caballos. Gracias. Una excelente explicación. Entonces,
+31:47 Speaker 2: el bytecoding es eso, básicamente, ¿no? Al punto de que
+31:50 Speaker 1: empezó
+31:52 Speaker 2: no hace mucho con un pequeño tweet de
+31:55 Speaker 1: esta
+31:56 Speaker 2: persona bastante conocida en términos de investigación de inteligencia artificial, Andrew Capati. Él fue el primero que habló del bytecoding, ¿no? ¿Cuál es este tweet? Y poco después... Este blitz ya se volvió un término que hoy en día se está utilizando y ya todos lo van conociendo. Al comienzo, cuando yo hacía esta clase, nadie sabía que era bytecoding. Hoy en día ya todo el mundo está empezando a entender esto. Así que de repente no voy a necesitar esta presentación. Bycoding, para los que todavía no lo saben, básicamente es producir software usando Inteligencia Digital. Ya es bastante sencillo. Lo pueden hacer incluso, no, escolares. que no tienen todavía habilidades de programación, ¿no? Porque es algo bastante sencillo de hacer, muchas veces sin la necesidad de saber programar, lo cual es muy útil y fácil, ¿ya? Vamos a pasar el demo, ¿ya? Si tenemos tiempo al final de la clase, vamos a hacer un pequeño demo, con los que no están seguros cómo hacerlo el coding, se pueden acercar al final de la clase, ¿no? Y les puedo mostrar cómo hacerlo, ¿ya? Entonces, ¿qué es el ByQuest? El ByQuest va a ser básicamente una serie de preguntas. Voy a mostrarles el ByQuest del día de hoy. El ByQuest es una serie de preguntas.
+33:15 Speaker 1: Una
+33:16 Speaker 2: serie de preguntas y son preguntas abiertas. ¿Qué quiere decir esto? Que estas preguntas no tienen una sola respuesta. Pueden tener muchas respuestas.
+33:25 Speaker 1: La
+33:26 Speaker 2: idea del ByQuest es que ustedes elijan solamente
+33:29 Speaker 1: una de estas preguntas.
+33:32 Speaker 2: Solamente una de estas preguntas y vayan a su cloud, a ChatGPT, y empiecen a preguntarle. Oye, esto. Y empiecen a indagar. Empiecen a indagar con ChatGPT. Y al final, lo que yo quiero que me muestre la siguiente clase es una aplicación interactiva.
+33:51 Speaker 1: ¿Ok?
+33:52 Speaker 2: ¿Qué quiere decir? Que ustedes le van a decir no solamente. Ok, ya entiendo. ¿Qué quiere decir, por ejemplo, esto de aquí? No, necesito que me hagas una explicación interactiva.
+34:01 Speaker 1: ¿Para qué?
+34:02 Speaker 2: Para mostrarle la siguiente clase a todos los compañeros. ¿Ya? Algo bien cortito, no más de dos minutos, en donde ustedes tienen que presentar. En mi Byquest, yo encontré la relación bayesiana entre PCA y aquí podemos ver cómo la relación bayesiana cambia y cuando tenemos mayor cantidad de datos, tenemos una mayor certeza, algo así. ¿Ok? Muy sencillo, muy corto. ¿Ya? Y que intente iluminar a la clase. ¿Ok? Que todos los que hagan su bike quest muestren, ok, esto lo hiciste y lo puedes defender. ¿Ya? Yo les puedo preguntar, oye, ¿y esto de dónde salió? Y si ustedes no me responden, ¿de dónde salió? Ah, ok. La inteligencia artificial lo hizo.
+34:49 Speaker 1: Error.
+34:50 Speaker 2: ¿Ya? Tu bike quest cancelado. ¿Ok? Ustedes tienen... que poder defender todo lo que presentan. Porque ustedes son los dueños, o básicamente los dueños detrás del código
+35:02 Speaker 1: y todo trabajo que presentan.
+35:05 Speaker 2: ¿Ya? Si ustedes no lo pueden defender, lo siento. ¿Ok? Muy bien. Preguntas de lo que es el Bi-Quest. ¿Queda claro qué es lo que van a hacer la siguiente semana? ¿Cuál es la idea del Bi-Quest? La idea del Bi-Quest es reforzar el tema de la clase. Nos vamos a abrir y hacer una clase. Vamos a terminar la clase y el bypass ayuda a reforzar los temas. En la siguiente clase, cada uno viene con su bypass y ayuda a recordar la clase pasada. Entonces es un poco la función del bypass. ¿Preguntas? ¿Alguna pregunta sobre el bypass? ¿Queda clara? ¿Alguna pregunta?
+35:42 Speaker 1: ¿Es necesario material así como BP?
+35:46 Speaker 2: De preferencia, un notebook interactivo. ¿Qué es un notebook interactivo? Van a abrir su notebook en donde tiene palanquitas, ¿no? Palanquitas en donde cambian un variable y ven cómo cambia el resultado. ¿Sí? Para mostrar un efecto, para mostrar alguna relación, para mostrar algo interesante. Ya tiene que ser interesante para que no todos nos aburramos y decir que yo hice esto de aquí, mira, aquí está el código. No. ¿Ok? Vamos directo a lo importante, a lo interesante, para que todos podamos aprovechar de todo el tiempo que ustedes han pasado Con su agente, tratando de entender este concepto, lo muestran de manera sencilla. Muy bien. Preguntas. ¿Será claro? Sí, voy a cargar una pequeña tarea que diga ByQuest. Ahí todos cargan su ByQuest. Y al momento del comienzo de la siguiente clase, se conectan y presentan su ByQuest.
+36:44 Speaker 1: Muy bien.
+36:46 Speaker 2: Preguntas. No quiero luego sorpresas. ¿Sí? ¿Todo queda claro? ¿Concillo? ¿No es difícil?
+36:56 Speaker 1: Muy bien.
+37:03 Speaker 2: Ok, ahora sí vamos a comenzar con la clase del día de hoy. Y vamos a empezar con un pequeño juego. Esto va a ser el siguiente. Voy a darles tres números, porque hay unas cuentas. Y ustedes tienen que reconocer qué regla obedece esa secuencia. Es una secuencia que yo tengo en la mente. Tengo que descubrir cuál es esa regla. Para eso, ¿qué tienen que hacer? Primero, van a hacer tres pasos. Tienen que proponer un conjunto de tres números adicionales que cumplen la regla.
+37:48 Speaker 1: Yo
+37:49 Speaker 2: les voy a decir si cumple o no cumplen la regla que yo tengo en mente, y luego ustedes pueden adivinar cuál es la regla. ¿Sí? Esa pequeña dinámica, porque vamos a hacer un pequeño repaso ahorita de todo lo que es un poco estadística, ¿ya? Porque vamos a hablar mucho de estadística, yo soy geoestadista,
+38:04 Speaker 1: ¿ya?
+38:05 Speaker 2: Y yo entiendo que muchas veces hay deficiencias en la estadística. Así que yo hago un pequeño recordatorio de varios temas un poco rápido. ¿Ya? Para luego poder usar estos temas estadísticos después. ¿Ya? Que puedan entender mejor las cosas. Vamos a empezar con el juego. La secuencia inicial es 2, 4, 8. ¿Ya? ¿Alguien tiene tres números que quieran proponer? Que también siga esa regla. ¿Sí, Mónica?
+38:30 Speaker 1: 3, 6, 12.
+38:32 Speaker 2: 3, 6, 2. Cumple la regla. ¿Cuál es la regla? Por 2. Esa no es la regla. 3, 9, 8, 1. 3, 9, 8, 1. Cumple la regla. ¿Cuál es la regla?
+38:51 Speaker 1: Exponente más 1.
+38:52 Speaker 2: Exponente más 1. No, esa no es la regla.
+38:57 Speaker 1: 16, 32, 64.
+39:00 Speaker 2: 16, 32, 64. Cumple la regla. ¿Cuál es la regla?
+39:09 Speaker 1: Exponente En base 2
+39:12 Speaker 2: No es la regla A ver, ¿qué más? Proponer un serie Todos cumplen la regla
+39:23 Speaker 1: Piénselos
+39:29 Speaker 2: bien A veces es más importante los casos negativos que no cumplen la regla que
+39:44 Speaker 1: los positivos. En fin.
+40:11 Speaker 2: ¿Sí? ¿Cómo?
+40:13 Speaker 1: 4, 8, 14.
+40:15 Speaker 2: 4, 8, 14. Cumplo la regla. ¿Cuál es la regla?
+40:19 Speaker 1: Que la secuencia de segundo nivel, cada una la voy sumando más dos. O sea, dos más dos, cuatro. Más otros dos, ocho. Y más otros dos, catorce.
+40:29 Speaker 2: Secuencia de segundo nivel, sumarle dos, pues no es la regla.
+40:31 Speaker 1: Sí, sí.
+40:32 Speaker 2: ¿Cómo voy a intentar ir?
+40:34 Speaker 1: Uno, dos, sí.
+40:35 Speaker 2: Ah, bien. Uno, dos, dos. Uno, dos, dos. No cumple la regla.
+40:54 Speaker 1: ¿Seguro qué dice?
+40:56 Speaker 2: A ver, repetimos. 3, 6, 12. 3, 9, 81. 16, 32, 64. 4, 8, 14. Y 1, 2, 3.
+41:08 Speaker 1: ¿La regla puede incluir números iniciales? Sí.
+41:13 Speaker 2: Un ejemplo primero.
+41:16 Speaker 1: 32. 256. 256. 8106.
+41:24 Speaker 2: 8106. ¿Cómo se ve la regla?
+41:26 Speaker 1: La regla es los dos primeros números. O sea, los dos primeros números son los iniciales. ¿Cuánto? Esa es la regla.
+41:37 Speaker 2: Está en internet. Fue un internet interesante.
+41:48 Speaker 1: Está en la regla.
+41:59 Speaker 2: Pero son ideas muy claves, son muy inteligentes las que están haciendo.
+42:06 Speaker 1: ¿Cuatro ocho seis cumple?
+42:08 Speaker 2: ¿Cuatro ocho seis sí cumple? ¿Cuál es la regla?
+42:12 Speaker 1: Ah, no, cuatro ocho seis, disculpa.
+42:13 Speaker 2: No cumple. Ajá. Bueno, ¿qué ejemplos que no cumple?
+42:21 Speaker 1: Creo que quizá la suma de los dos números nuevos sea mayor.
+42:26 Speaker 2: Que la suma de los dos primeros no sea mayor que siete, esa no es la verdad. Pero igual está, estamos acercándolo, estamos acercándolo, muy bien, a ver. Estamos cerca, vamos. ¿Pueden decir cualquier conjunto de números?
+42:54 Speaker 1: 4, 2, 8.
+42:55 Speaker 2: 4, 2, 8. 4, 2, 8 no cumple la regla.
+43:02 Speaker 1: 2, 4, 10. 2,
+43:06 Speaker 2: 4, 10. Sí cumple la regla.
+43:09 Speaker 1: La regla. Los números son ascendentes.
+43:21 Speaker 2: Era moraleja.
+43:25 Speaker 1: Todo esto
+43:28 Speaker 2: es un análogo para cómo funciona la ciencia. La ciencia recolecta datos y información. Y las teorías vienen a ser como
+43:40 Speaker 1: nuestras reglas.
+43:42 Speaker 2: Proponemos teorías que tienden a funcionar hasta que encontramos un caso en que no.
+43:50 Speaker 1: Entonces, eso es muy
+43:52 Speaker 2: importante. Eso es lo que llaman el problema de instrucción. Entonces, si tenemos solamente un cisne que es negro, ya no podemos afirmar que todos los cisnes son blancos.
+44:06 Speaker 1: Ojalá
+44:06 Speaker 2: un caso que no cumple la regla, nuestra regla ya no va a importar. Nuestra hipótesis, nuestro modelo,
+44:15 Speaker 1: deja
+44:17 Speaker 2: de funcionar.
+44:19 Speaker 1: Deja de ser federal.
+44:22 Speaker 2: Esto es muy importante. ¿Por qué? Porque esta es la base de los llamados modelos científicos. Hablamos que las teorías científicas nunca vamos a poder probarlas. Y ese es un primer concepto que mucha gente, por alguna razón, no lo tiene claro. Muchas personas, incluso estudiantes del doctorado con los que he conversado, ellos piensan... que las teorías científicas sí se prueban. Voy a probar mi teoría científica. Voy a afirmar que mi teoría científica es correcta. Sin embargo, eso es científicamente imposible. Porque lo único que puedo hacer con las teorías es lo que se llama, pueden ser falseadas. Eso es lo que llaman el criterio de Cooper. No podemos nunca,
+45:09 Speaker 1: o nunca vamos a poder
+45:10 Speaker 2: realmente probar una teoría científica. Lo cual es... bastante interesante. ¿Ya? Si te ponen a analizarlos, te
+45:18 Speaker 1: van a reflexionar.
+45:21 Speaker 2: Por eso es que se dice que la ciencia, a comparación de otro tipo de creencias humanas, como por ejemplo la religión, es una ciencia, es una creencia que se basa básicamente en lo que son las evidencias. Si las evidencias cambian, si los datos cambian, nuestras teorías científicas también deberían de cambiar.
+45:42 Speaker 1: ¿Ok?
+45:43 Speaker 2: Si la información nos dice algo distinto, esto debe de cambiar. Entonces... Y eso es importante. ¿Qué hacemos para nosotros probar científicamente un modelo? Porque hablamos de modelos, ustedes conocen de modelos de Machine Learning, conocen modelos ya de los MLP, las redes neuronales. Son modelos inmensos, son modelos muy grandes, requieren muchos datos. Pero antes de hablar de esos modelos grandes que requieren muchos datos, vamos a hablar de los modelos... originales, los modelos tradicionales, los modelos científicos. ¿Qué hacen los microcientíficos cuando tienen pocos datos? ¿Quién sabe? ¿Quién tiene alguna idea? Pero no hay suficientes datos, porque ¿cuántos datos tiene un científico? ¿Dos?
+46:31 Speaker 1: ¿Cinco? ¿Diez?
+46:32 Speaker 2: ¿Pierto? No hay más.
+46:35 Speaker 1: Simulan nuevos datos. Generan nuevos datos.
+46:39 Speaker 2: Sin embargo, si un doctor te dice, acá está mi estudio, y simulé mis datos, va a decir, oh, no, eso es tan raro, ¿no? En algunos campos sí, correcto, pero eso es algo más moderno. Pero tradicionalmente hay otro enfoque. Porque simular datos crea ese sesgo, ¿no? Estoy inyectando información que no es propia de mis datos. Pero si es un approach válido,
+47:06 Speaker 1: en
+47:07 Speaker 2: cierto contexto, pero no es el approach original. Porque originalmente, si tú le decías un estadístico, hoy estoy simulando mis datos, te decís,
+47:14 Speaker 1: no, no, no, no, ¿qué estás haciendo?
+47:17 Speaker 2: No es correcto.
+47:19 Speaker 1: ¿Por qué?
+47:20 Speaker 2: ¿Cuál es la forma correcta de hacer un modelo como fue pasado? ¿Quién lo recuerdo?
+47:25 Speaker 1: Experimentar. Experimentar, obtienes los datos.
+47:28 Speaker 2: ¿Cómo creas? ¿Qué modelo es el correcto?
+47:31 Speaker 1: Montecarro. ¿Cómo? Montecarro.
+47:33 Speaker 2: Montecarro sin hulas. Inventas. A veces.
+47:38 Speaker 1: ¿La extracción de información de la población? ¿De
+47:41 Speaker 2: información de la población?
+47:42 Speaker 1: ¿Cuál es la información de la población?
+47:46 Speaker 2: O sea, probamos experimentos con pocos datos. Tenemos una población, una población sí, pero tenemos pocos datos en la población. Lo han hecho de repente en pregrado. Algunos han hecho tesis. Ajá, vamos por ahí. Muy bien. ¿Qué tipo de distribución?
+48:05 Speaker 1: La distribución de datos. Así es.
+48:10 Speaker 2: ¿Recuerdan cómo se llama esta famosa prueba?
+48:17 Speaker 1: La
+48:17 Speaker 2: distribución gaussiana. La prueba es la prueba de la... La hipótesis. ¿Cuál es eso? La hipótesis test. Prueba de hipótesis, el test student, todo esto de estadística. Algunos han olvidado, otros no, etc. ¿Por qué esto es importante? ¿Y por qué lo menciono? ¿Por qué? Porque uno de los cuales es el gran problema con los modelos de Machine Learning, con los modelos de redes neuronales. Gran, gran problema. Son muy grandes, no los entendemos. ¿Qué modelos sí entendemos?
+48:58 Speaker 1: Estadísticas y estadísticas.
+49:00 Speaker 2: Por eso quiero hacer un pequeño repaso de estadísticas. Porque a partir de la estadística vamos a intentar entender un poco estos modelos. Entonces hablamos justamente de eso. Tengo que hacer modelos estadísticos. Tenemos una mina. Tenemos el oro minado. Tenemos el tiempo. Y la pregunta es, ¿cuánto oro queda para seguir minando? ¿Qué podemos hacer en este caso? Podríamos decir, ok, hay que querer moverlo. Eso viene después. Vamos a poco. Volvamos a lo anterior. Era el tema probabilístico. ¿Cómo podemos afirmar algo? Hablamos de la distribución normal. Hablamos de la estadística. Pero hay algo importante. ¿Qué nos da la estadística para poder afirmar o entender algo? ¿Qué era la distribución normal?
+50:15 Speaker 1: ¿Una prueba?
+50:16 Speaker 2: ¿Una prueba? No. Interesante.
+50:21 Speaker 1: Cuando
+50:21 Speaker 2: nosotros hacemos una distribución normal, tenemos pocos datos,
+50:25 Speaker 1: decimos,
+50:27 Speaker 2: acá hay unos datos. Dato 1, dato 2,
+50:34 Speaker 1: dato 3,
+50:35 Speaker 2: dato 4, decimos, ¡ajá! Vamos a hacer nuestra distribución normal. ¿Se acertó? Y decimos nuestra distribución normal, ya está, no necesitamos más. Con esto es suficiente. ¿Por qué?
+50:56 Speaker 1: Y
+50:57 Speaker 2: recuerda que va en este eje de la distribución normal.
+51:03 Speaker 1: ¿Sí? No. Probabilidad. Ah, así es. Probabilidad.
+51:10 Speaker 2: ¿Por qué es la probabilidad importante? ¿Qué pasaría si yo les digo? ¿Ya? Pues la chance,
+51:17 Speaker 1: ¿ok?
+51:17 Speaker 2: Pues la probabilidad, ¿ya? De encontrarse, de encontrar oro, por ejemplo, volviendo al caso del oro, cuando hacemos un taladro en el suelo. Y no sabemos nada. Yo soy geólogo Hablo del oro ¿Cuál es la probabilidad? Si no saben nada
+51:46 Speaker 1: ¿No?
+51:49 Speaker 2: ¿Cincuenta a cincuenta?
+51:54 Speaker 1: ¿No? ¿Cómo?
+51:59 Speaker 2: Tienen una buena base, una mejor base que... La idea es esa, miren, me voy a hacer un pequeño videito.
+52:18 Speaker 1: Bien, Sheldon. ¿Por qué no viene citante? Está equivocado. Jeff, ¿usted cómo sabe que hay un Dios? Y yo les digo, son simples matemáticas. ¿Dios existe o no existe? Siendo incrédulos, el peor escenario es una probabilidad de 50-50. Y es una ecuación interesante. Está equivocado. Sheldon, baja la mano. Lo siento, por favor continúe. Descuidame, Rey. ¿Eres Sheldon, verdad? Sí, señor. Bien, Sheldon, ¿por qué no vienes y me dices por qué me equivoco? No, ok. Vamos a dar un aplauso. ¿Qué está pasando? Shell se lo comerá vivo. Bien, ¿qué decías? Está confundiendo posibilidades con probabilidades. Según su analogía, hoy podría encontrar un millón de dólares sobre mi cama, o tal vez no. ¿En qué universo eso es 50-50? ¿Cuáles crees que sean las probabilidades de que Dios exista? Yo creo que son cero.
+53:24 Speaker 2: Porque yo cre... Así es. Entonces... ¿Ya? Esto es importante. Ustedes me alegra que tengan, digamos, un mejor conocimiento o idea de la diferencia entre probabilidades. Pero eso es un error bien común. ¿Ya? Me encuentro mucha gente que no puede diferenciar entre posibilidades de probabilidades. ¿Ok? Entonces, hay que tener muy claro eso, porque esto es al final lo que nos da la explicabilidad. Si poder entender algo, al final va a depender de qué tanto podemos medir la probabilidad, no la posibilidad. ¿Ok? Muy diferente. Entonces la pregunta es, ¿qué es probabilidad? ¿Alguien recuerda qué era probabilidad? ¿Cómo definíamos probabilidad? Si nos es importante, hay que recordar, hay que recordarnos qué es probabilidad. Vamos a hablar un poco de esto luego en el curso, así que vamos a ir pasando. Y recuerda qué es probabilidad.
+54:23 Speaker 1: Sí, vamos por ahí.
+54:28 Speaker 2: Exacto, los casos a favor, ¿no? Sobre los casos totales, ¿no? Y si tenemos un dado...
+54:35 Speaker 1: Sí, adelante. No, yo voy a decir lo del dado. Lo del dado, ya está. Lo probable es que esté en un número.
+54:41 Speaker 2: Así es, si tenemos un dado, tenemos seis posibilidades, ¿sí, acuerdo? De las cuales decimos que una de esas posibilidades...
+54:49 Speaker 1: Entonces, lo que tenemos que hacer son los resultados deseados
+54:52 Speaker 2: entre los resultados totales. De la forma clásica... De definir probabilidad Dentro de esta forma clásica Tenemos reglas Que no voy a tener mucho detalle Como si son eventos independientes Probabilidad O eventos mutuamente excluyentes ¿No? En caso de la probabilidad, por ejemplo De sacar un valor 6 Dado que el primer valor salga 2 ¿Cuánto creen que es esa probabilidad? Bien Hay un total de 36 posibilidades ¿Ya? Cuestan todos los 36 ¿Cuál es la probabilidad de sacar un valor de 6 dado que el primer valor salga 2?
+55:37 Speaker 1: ¿Un sexo? ¿Un sexo? ¿Por qué?
+55:41 Speaker 2: Son eventos independientes. ¿Son eventos independientes? Ok. Y gráficamente, ¿cuál es la probabilidad de sacar un valor de 6?
+55:58 Speaker 1: El primer lado sea dos. Solo es tres. ¿De verdad?
+56:04 Speaker 2: ¿Son independientes? Sí. Pero por eso a gente se llama
+56:07 Speaker 1: probabilidad disponible. ¿Ya?
+56:12 Speaker 2: Dado, pues la probabilidad de un evento dado que otro evento generoso.
+56:17 Speaker 1: ¿Ya? Un
+56:18 Speaker 2: poco más tricky. ¿Ya? Entiendo que es... Que se complica, pero eso lo pongo como el ejemplo, ¿ya? Entonces, todo esto es importante porque esta es la base de la ciencia. La base de los modelos probabilísticos es esto. Si queremos encontrar explicabilidad en algo, tenemos que hablar en el lenguaje de la probabilidad. ¿Ok? No hay otro lenguaje para entender los eventos. ¿Ya? Para entender qué es lo que está pasando. ¿Ok?
+56:46 Speaker 1: ¿Bien?
+56:47 Speaker 2: Es tricky. Ya no es tan sencillo entender a veces la probabilidad. Le vamos a tratar de explicarlo sencillo y le vamos a explicar cómo se explica algunos casos. Sin embargo, como es trígico, es un poco complicado a veces hablar de probabilidades. Hay otra forma de ver el mismo problema. ¿Cuál es la otra forma? Es a través de la teoría de la información. La teoría de la información dice, bueno,
+57:16 Speaker 1: esto de las probabilidades...
+57:20 Speaker 2: Es interesante y todo, pero
+57:22 Speaker 1: yo
+57:24 Speaker 2: creo que FASF
+57:25 Speaker 1: no funciona.
+57:26 Speaker 2: ¿Por qué? Porque dices, ok, si la probabilidad de sacar un 6 es un sexto, y la probabilidad de sacar un 2 dado, que ya saqué un 6, es un treinta y seisado, no tiene sentido. Porque es 6 veces menos probable. ¿Entienden? Si son dos eventos, como ustedes dicen, son independientes. ¿Cierto? Entonces debería ser el doble de difícil... Porque la probabilidad es lo que nos quiere decir normalmente. La probabilidad nos quiere decir una especie de certeza, ¿cierto? De incertidumbre. Es la certeza de que algo pase. Sin embargo, las magnitudes propiamente de la probabilidad
+58:06 Speaker 1: son
+58:07 Speaker 2: magnitudes que muchas veces no son muy fáciles de tratar de entender qué está pasando. ¿Ya? Tratar de captar. ¿Qué diferencia es un 36avos de un 20avos, de un 50avos, de uno entre 10?
+58:23 Speaker 1: ¿Ya? Entonces,
+58:24 Speaker 2: lo que ha hecho la teoría de la información es decir, bueno, vamos a cambiar un poco esto. Y en vez de usar la probabilidad propiamente, vamos a crear una nueva variable. ¿Ya? Esta variable la vamos a llamar información. ¿Ok? Y vamos a decir que la información va a ser el logaritmo de la inversa de la probabilidad. ¿Ok? ¿Y por qué? Porque es conveniente.
+58:49 Speaker 1: Punto.
+58:50 Speaker 2: ¿Ya? No vamos a entrar en más detalles. Es conveniente. Vamos a hablar de esas conveniencias. Por ejemplo, si hablamos de la probabilidad de un insecto, ¿Ya? Que es como un poco abstracto, ¿No? Cero punto... Vamos a ni siquiera hacer... ¿Cuánto será? ¿Ya? Si lo hacemos como el logaritmo, ¿Ya? Usamos esta... Esta ecuación. Vamos a ver que este es igual a 2.58. Ok, bits es la unidad de la información, porque no tiene nada que ver con los bits informáticos, por si acaso. Por otro lado, vamos a decir, en el caso del 36, si hacemos la ecuación de 5 puntos, es el doble.
+59:27 Speaker 1: Ah,
+59:28 Speaker 2: ok. Hace más sentido coloquial, si uno es el doble que el otro, más que 6 veces más. Y no solo eso, sino es muy conveniente para tratar de entender qué está pasando. Si la probabilidad es 100%, ¿ok? Decimos siempre, ¿ya? Siempre pasa cuando la probabilidad es 100%, ¿cuánto es la información que me da, la información que me genera algo que siempre pasa? Entonces uno sobre uno sería el logaritmo,
+01:00:02 Speaker 1: pero uno sobre uno es cero.
+01:00:05 Speaker 2: ¿Qué quiere decir eso? Que no me sorprende, ¿no? Esta información también le llaman la sorpresa. No me aporta ningún tipo de información porque sabemos que siempre va a pasar. El 100% de probabilidad.
+01:00:17 Speaker 1: ¿Ya?
+01:00:18 Speaker 2: Entonces, la información que me va a generar estos datos es cero. ¿Ok? Porque siempre iba a pasar lo mismo. No importa nada. Entonces, no gano ningún tipo de información o no me sorprende.
+01:00:32 Speaker 1: ¿Ok?
+01:00:33 Speaker 2: Tiramos una mano al aire. En la probabilidad de 50-50. Esta típica forma de decir, oh, es 50-50. ¿Cuánto es el bit? Es 50-50, si hacemos el logaritmo, nos va a dar un bit. Ok, entonces 0 me va a decir, oh, no me sorprende, no
+01:00:50 Speaker 1: sirve. 1 es
+01:00:52 Speaker 2: 50-50. ¿Y qué pasa si nunca pasa? Si nunca pasa, vamos a hacer infinito bit.
+01:01:00 Speaker 1: ¿Qué quiere
+01:01:02 Speaker 2: decir esto? Quiere decir que en tanto más grande sea la cantidad de bits de manera lineal, tú vas a tener una mayor sorpresa. ¿Ya? Y eso también es una propiedad bien conveniente. ¿Ya? Vamos a ver un poco por qué. Sobre todo cuando entrenamos modelos de inteligencia artificial. ¿Por qué? Porque un modelo de inteligencia artificial, ¿cómo lo entrenan normalmente? Para entrenar un modelo en métrica... ¿Ya? Comparan el resultado del modelo con el deseado. ¿Cómo se llama eso? El costo, ¿cierto? La pérdida. ¿Cierto? Si la pérdida solamente va entre 0 y 1. ¿Ya? El modelo no va a aprender mucho.
+01:01:48 Speaker 1: ¿Cierto?
+01:01:50 Speaker 2: No puede haber probabilidad más de 100%. No puede haber probabilidad menos de 0. Pero si tenemos esto de infinito. Entonces va a ser conveniente poder hacer una pérdida asociada justamente a la teoría de bioinformación. Porque tanto más grande sea, voy a tener una mayor pérdida y la voy a aprender más. Para reducir ese gap, para reducir esa diferencia, voy a poder ser más preciso. Es por eso que no solamente hay información como un solo evento, Si no, tenemos otro concepto de la teoría de la información, que es el llamado entropía. ¿Qué es la entropía? La entropía es una sorpresa, una información promedio. ¿Qué quiere decir esto? Si cogemos la información que se está aquí y lo multiplicamos directamente por su probabilidad, vamos a hallar el promedio ponderado de la información. ¿Ok? ¿Y esto por qué es útil? Porque nos va a ayudar a entender... ¿Cuál de estas distribuciones, por ejemplo, tiene mayor o menor entropía? Como la de las dos, esta o esta, tiene una mayor o una menor entropía. La izquierda es mayor. ¿Por qué es mayor? Y me voy a decir por qué es menor. Porque todos los valores son iguales. Todos los valores son iguales probables. ¿Y aquí por qué sería menor?
+01:03:31 Speaker 1: ¿Cómo cambiar
+01:03:33 Speaker 2: los datos? Claro. Entonces... Aquí cambian mucho los datos. ¿Por qué? Porque todos tienen la misma probabilidad. Como si fuera un dado. Todos tienen igual chance. Entonces, esto de aquí es muy caótico. ¿Ok? Tenemos mucha más entropía.
+01:03:51 Speaker 1: Pero esto es que aquí,
+01:03:53 Speaker 2: ¿ya? Vamos a tener menos entropía porque los datos mayormente van a ser similares al valor intermedio, ¿cierto? A ver menor variación. ¿Ok? Entonces, vamos, más entropía, menos entropía. ¿Ok? ¿Y por qué eso es importante? Ok. Ahora vamos a llegar a lo bueno. ¿Ustedes han escuchado lo que es la entropía cruzada? ¿Cierto? ¿Cierto? ¿Ya han entrenado y han visto modelos de entropía cruzada? ¿No? ¿Sí o no? ¿Se acuerdan? ¿Han visto el ejemplo de los pétalos? ¿Cierto? ¿Me han mostrado esto antes de pasear? ¿Cierto? ¿Y alguien se preguntó por qué utilizan entropía cruzada? ¿Cuál es la razón detrás de esa entropía cruzada? Ah, interesante. Ahora lo voy a explicar. Ahora queremos un poco más la entropía. Esta entropía cruzada es interesante porque la entropía cruzada va a ser un valor comparativo. Va a ser una entropía entre los datos y las probabilidades que quisiéramos que los datos tengan. ¿Qué quiere decir esto? Lo siguiente.
+01:05:10 Speaker 1: Cuando nosotros tenemos... Muchos datos que
+01:05:16 Speaker 2: son muy
+01:05:18 Speaker 1: caóticos,
+01:05:18 Speaker 2: que tienen mucha variación, y no se acercan a la creencia o la probabilidad que nosotros pensamos que tienen los datos, la probabilidad que usaba va a ser muy grande. Sin embargo, si es que los datos se acercan a la probabilidad que le asignamos, o a la creencia, Esto de aquí va a ser chiquito. Por ejemplo, ¿ya? Nosotros tenemos dos casos bien sencillos, ¿ya? Los pétalos. Los pétalos creo que eran tres casas, ¿cierto? O eran tres... ¿Qué hacían para los pétalos? Al momento de generar un código de referencia. Eran estos...
+01:06:06 Speaker 1: ¿No?
+01:06:08 Speaker 2: Eran tres valores, ¿cierto? y las etiquetas que utilizaban para cada una de esas que era Era como que
+01:06:33 Speaker 1: etiqueta 1, 2, 3.
+01:06:37 Speaker 2: Esta de aquí era 1, 0, 0. ¿Cierto? Si no era 1, 0, 0 o 1, 0, 0. Y el modelo nos botaba supuestamente las probabilidades. ¿No? 0.8, 0.1 y 0.1. Que dicen, ah, esta tiene la mayor probabilidad. ¿Cierto? ¿Cuál es eso?
+01:07:02 Speaker 1: ¿No? ¿Por qué?
+01:07:06 Speaker 2: ¿Qué es lo que está pasando atrás? Es muy interesante. Lo que pasa es lo siguiente. Nosotros asignamos... ¿Cómo se llama este tipo de clasificación directa con uno de la clase?
+01:07:23 Speaker 1: ¿El OneHot Encoding?
+01:07:24 Speaker 2: ¿Cierto?
+01:07:28 Speaker 1: ¿El OneHot Encoding? va
+01:07:33 Speaker 2: a funcionar como una creencia. En donde, por ejemplo, vamos a decir que tenemos tres clases. Vamos a decir a la cetona,
+01:07:44 Speaker 1: cetona,
+01:07:47 Speaker 2: cetona, no recuerdo los nombres.
+01:07:52 Speaker 1: Pero, si
+01:07:54 Speaker 2: nosotros teníamos una imagen de cierta flor, que era una acetona, nosotros les decíamos, ok, el one-hotel es uno,
+01:08:05 Speaker 1: cero, cero.
+01:08:06 Speaker 2: ¿Qué es lo que pasa al comienzo del modelo? ¿Qué pasaría si el modelo siempre reconoce bien la acetona y genera uno, cero, cero? ¿Cuál sería la entropía en este caso? Siempre... ¿Cuánto? Cajísima, ¿cierto? Cero. Entonces la pérdida aquí, para entender este modelo, ¿cuánto es? Cero. ¿Cierto? El modelo intenta reducir la pérdida. Entonces esto es deseable. Pero el modelo al comienzo no va a hacer esto. El modelo al comienzo dice cualquier cosa, ¿cierto? Entonces el modelo... Lo que va a hacer al comienzo es, bueno, aquí vamos a ponerle 0.1, 0.2, y aquí se me dio la gana de poner 0.7 porque tengo que ponerlo.
+01:09:02 Speaker 1: ¿Cierto?
+01:09:04 Speaker 2: Lo que va a pasar,
+01:09:05 Speaker 1: ya,
+01:09:07 Speaker 2: es que hacemos el cross entropy con esta creencia. Esto va a ser muy aleatorio. ¿Cierto? Se va a alejar bastante. Va a ser muy diferente a lo que queremos. O a la creencia. Entonces, si esto va a tener una mayor o una menor entropía. Mayor. Si es totalmente aleatorio la respuesta que me da el modelo y no se acerca a nuestra creencia, entonces va a ser súper grande. Va a ser inmensa. Acuérdense. Ah, entonces por eso es que el cross-entropy es una señal excelente del modelo para
+01:09:45 Speaker 1: que intente
+01:09:46 Speaker 2: conocer cuál es la probabilidad,
+01:09:49 Speaker 1: ¿no? De, ¿no hay más? ¿Ya?
+01:09:55 Speaker 2: Por eso funciona ahí. Y exactamente este es el principio de la teoría de la información.
+01:10:03 Speaker 1: ¿Ya?
+01:10:04 Speaker 2: Nuestra Gracie es un one-hot encoding. ¿Ya? Y los datos son la probabilidad de ser baja la entropía. Otro ejemplo, utilizamos esto. No sé si lo han visto en Bradford Learning, parece que no.
+01:10:18 Speaker 1: Han escuchado esto
+01:10:22 Speaker 2: de los modelos...
+01:10:27 Speaker 1: Modelo
+01:10:29 Speaker 2: maestro, modelo hijo, modelo estudiante.
+01:10:34 Speaker 1: Destilación.
+01:10:35 Speaker 2: Destilación, sí. ¿Han visto destilación?
+01:10:41 Speaker 1: Ok.
+01:10:42 Speaker 2: Entonces, un modelo de destilación, para los que no lo han visto, es un modelo que un estudiante, un modelo más pequeño, un modelo paralelo, solamente se alimenta del output del modelo grado. Nunca sabemos los pesos, solamente se alimenta del output. ¿Y por qué funciona?
+01:11:02 Speaker 1: Porque utilizan concentros.
+01:11:05 Speaker 2: Que intentan alinear las respuestas del modelo grande con las respuestas del modelo chico a través de...
+01:11:11 Speaker 1: Por ejemplo,
+01:11:13 Speaker 2: lo mismo. La diferencia es que el modelo grande, que no me va a dar uno, sino que sí me va a dar una serie de probabilidades. 0.8, 0.1, de cualquier cosa. Y como me da una serie de probabilidades y en mi quiera hacer,
+01:11:24 Speaker 1: entonces yo puedo hacer,
+01:11:27 Speaker 2: no sé, entre otros, y entregar un modelo. Y hacer esta destilación. Y lo interesante es... Esta destilación funciona no solo como modelos pequeños, sino como modelos grandes, como LLX. Hoy he escuchado a Cloud que están destilando, a ChatGPT saben que lo destilan. ¿Cómo pueden destilar a todo el mundo si no tienen el código? Y no tienen los pesos. Cross-Central. Mismo principio matemático-proquisiturístico. Te lo dejo para los que quieran averiguar más. Interesante. Esto nos lleva a todos estos tipos de distribuciones. De probabilidad.
+01:12:03 Speaker 1: Que
+01:12:04 Speaker 2: pueden existir. Ya hablamos un poco del más normal. Que es justamente la distribución rociana. Podemos tener directas y indirectas. Y esto es importante porque esta es la base. De estas distribuciones. Otra cosa interesante. Que hacen las distribuciones por nosotros. Y era un poco el caso anterior. Tenemos unos 3, 4 datos. Y yo, ok, acá hay una distribución gaussiana. Una distribución normal. ¿Por qué? ¿No? Cuando decimos esto, decimos suficiente. Ya estamos bien, tenemos nuestra distribución normal. No tuvo un 15% en 100%. Un testigo excelente. Ya hemos entendido por completo. Hablando de... Hablando de...
+01:13:02 Speaker 1: De
+01:13:03 Speaker 2: justamente entender estos modelos. Comprender. ¿Por qué es suficiente esto? Y decimos ya está. ¿Alguien tiene alguna idea? Porque ese es el gol, el estándar dorado, gol del estándar de todo tipo de interpretabilidad. Lo que usamos desde la ciencia más tradicional es hasta hoy en día. ¿Qué quiere decir con eso? ¿Qué quiere decir con eso? Gustavo, ¿cierto?
+01:13:39 Speaker 1: Los datos iban a formar la distribución y de ahí ya no se quedó ahí con más datos.
+01:13:45 Speaker 2: Entonces, lo que está diciendo, Gustavo, es que con estos datos vamos a entender la distribución. ¿Y por qué entender la distribución es suficiente para decirlo? Con esto entendemos todo. ¿Por qué la distribución es ese golden standard? Es decir, que tengo una distribución, listo, se acabó, y no hay más que saber, no hay más que estudiar. La distribución probabilística es suficiente. ¿No hay ninguna idea?
+01:14:10 Speaker 1: Esta muestra representa a toda la población.
+01:14:14 Speaker 2: Vamos por ahí. Entonces, otra forma de decirlo, lo mismo que dice Joaquín,
+01:14:19 Speaker 1: es la
+01:14:21 Speaker 2: distribución va a representar el proceso. La distribución va a representar la realidad. Los datos con las muestras van a ser partes que nos van a ayudar a representar la población o el proceso. Y si nosotros llegamos a encontrar la distribución probabilística, ya entendemos el proceso en su completitud. Podemos incluso simular el proceso. Podemos crear nuevos datos justamente porque tenemos la confianza estadística que el proceso ha sido replicado. El proceso ha sido entendido solo con unas cuantas muestras. Y no necesitamos. ¿Ok? Esto es muy importante. Es muy importante. Porque si nosotros. Logramos. Que un modelo. De inteligencia artificial. Pueda. Entender esto. Va a ser genial. ¿No? Otra cosa interesante. Es cuántos datos. ¿Ya? Me puede generar esto. Si tenemos la distribución probabilística, ¿ya? Les digo, con la distribución probabilística podemos crear nuevos datos porque entendemos tanto el proceso, entendemos cómo funciona exactamente. ¿Cuántos datos podríamos simular o crear a partir de esta distribución probabilística? ¿Entiendes? Por último, más que crear, si nosotros seguimos obteniendo datos, obteniendo información, ¿qué es lo que vamos a hacer? Vamos a seguir acá, ¿cierto? Otra acá, otra acá, otra acá, y así. Entonces, si tenemos más datos, nos ayudará, vamos a obtener una mayor información, vamos a obtener algo nuevo. Seguimos recolectando datos, una vez ya tenemos una distribución probabilística definida. ¿Servirá de algo tener más datos? Más datos siempre es mejor Más datos Creo más datos ¿Esto será suficiente? Sí, será suficiente. Porque no importa cuántos datos más obtenemos, van a seguir cayendo dentro de la distribución probabilística. ¿Cuántos datos van
+01:16:54 Speaker 1: a
+01:16:55 Speaker 2: ser suficientes para definir la distribución probabilística? ¿Cuántos números? Es una normal simila. Una distribución normal que
+01:17:16 Speaker 1: la destine.
+01:17:18 Speaker 2: ¿Cuántos números? ¿Qué números son?
+01:17:23 Speaker 1: ¿Cuántos números son?
+01:17:25 Speaker 2: Dos números. ¿Cierto? Solo con dos números puedo tener todas las distribuciones normales existentes. Entonces, una distribución normal, una distribución en general, va a ser un proceso de compresión. A partir de muchos datos, mucha información, yo voy a poder comprimirla a su mínima expresión para entender la realidad, para comprender la realidad. Si logramos hacer que nuestros modelos de inteligencia artificial se parezca a una distribución probabilística, van a comprimir esa realidad, vamos a lograr el sueño de la interpretabilidad. Que hasta ahora, en lo que han venido estudiando, no lo han podido hacer. ¿Cierto? ¿Cuál es el modelo más avanzado que han estudiado?
+01:18:29 Speaker 1: Las redes convolucionales,
+01:18:34 Speaker 2: ¿cierto? De malo, las redes convolucionales no han hecho la gran revolución, ¿cierto? De la inteligencia artificial. ¿Por qué? Porque esas redes, a pesar de que sean muy buenas para muchas cosas, no llegan a semejarse a lo que hace una distribución. Y vamos a ver que otras arquitecturas, los transformadores, se van a acercar más, pero eso es un spoiler alert para las siguientes clases. Por eso es importante, de nuevo, recalcar por qué las distribuciones probabilísticas son importantes, qué es lo que hace que las distribuciones probabilísticas tengan esta magia que
+01:19:13 Speaker 1: desde las
+01:19:13 Speaker 2: épocas científicas originales nos permite que sea nuestro estándar dorado en términos de prestabilidad.
+01:19:23 Speaker 1: Muy bien.
+01:19:28 Speaker 2: Entonces, vamos a pasar a este ejemplo rápido. Modelos. Cuando hacemos un modelo, dirían que ese modelo está bien o no está bien. En este caso, tenemos una cantidad de oro. Si hacemos un modelo para esta cantidad de oro, ¿será este modelo un modelo adecuado? Bien, siguen mis datos. ¿Qué piensan? ¿Será bueno o no será bueno? ¿Será ideal? Vamos a ver cuánto lo queda, una cantidad de oro que se está minando, que se ha minado, y el tiempo. ¿Es ideal o no es ideal?
+01:20:11 Speaker 1: Creo que hay modelos que representan mejor lo que está ocurriendo ahí.
+01:20:16 Speaker 2: ¿Y por qué ese modelo no es ideal?
+01:20:19 Speaker 1: Al menos la forma de esas, digamos, de esa forma, de la curva de pasar y de lo denominado, me parece que sigue una forma geométrica que no está cumpliendo con... que en un punto se va a alejar de esa recta.
+01:20:34 Speaker 2: Un punto se va a alejar de esa recta. Pero esta no es la mejor respuesta. Geométricamente no se ve bien.
+01:20:42 Speaker 1: Ok, ya. Entonces replanteando. Replanteando.
+01:20:47 Speaker 2: Un poquito crítico.
+01:20:49 Speaker 1: Ya, replanteando. Hay este... O sea, digamos que por las características que yo tengo ahí, eventualmente, eventualmente está... Eso tiene un límite. Exacto.
+01:21:14 Speaker 2: El oro no va a ser por siempre, ¿cierto? Este modelo va a decir que el oro es infinito. Sin embargo, eso no es cierto. Otro problema con los modelos. ¿Qué tal este modelo? ¿Será llegar? Sigue la geometría, sigue la geometría, sigue los datos. ¿Por qué no? ¿Quién no me puede decir? Porque la cantidad de
+01:21:41 Speaker 1: oro no llega. Ahí está.
+01:21:44 Speaker 2: La cantidad de oro no puede ser. Tiempo negativo, se va hacia arriba.
+01:21:51 Speaker 1: Ahí está.
+01:21:54 Speaker 2: ¿Será llegar? Eso es un crash course de modelamiento. ¿Será este modelo una idea o no sería?
+01:22:05 Speaker 1: Yo creo que sí decide un parte de cómo se los datos, porque los recursos normalmente son utilizados.
+01:22:17 Speaker 2: ¿Alguien más tiene alguna idea? Yo tengo una idea, pero no sé si explicas el caso. El minero está rompiendo la mina y no encuentra nada, no encuentra nada, como que después de un tiempo se rinde, pero son cosados al oro. Claro, el tiempo puede ser que pasa un largo tiempo en el plano y justo por una pequeña unidad más, una hora, por ejemplo, va, sube. Perfecto, totalmente válido.
+01:22:43 Speaker 1: Entonces,
+01:22:44 Speaker 2: no necesariamente. Entonces, ¿cuál es el momento correcto?
+01:23:13 Speaker 1: All models are wrong,
+01:23:16 Speaker 2: but some are useful. Todos los modelos se equivocan. Todos los modelos se equivocan. Pero algunos son útiles. Eso quiere decir que cuando ustedes hagan su trabajo, cuando ustedes hagan modelos, no busquen
+01:23:33 Speaker 1: un
+01:23:35 Speaker 2: modelo que funcione al 100%. Porque probablemente un modelo va a estar equivocado. No siempre el objetivo es buscar un modelo que sea útil.
+01:23:46 Speaker 1: Para algo específico.
+01:23:48 Speaker 2: Y siempre van a haber limitaciones. Porque todos los modelos.
+01:23:52 Speaker 1: Se equivocan. Muy bien.
+01:23:57 Speaker 2: Entonces si quieren ver más. Porque esta es una versión comprimida. Pero yo siempre. Hago con ustedes los más interesados. En todo el tema del modelamiento. Acá hay un libro que se los dejo. Que se llama Modeling Mindsets. nos explica un poco mucho de las culturas al momento del modelado. Porque lo que pasa, bien típico, es que una persona que viene de una rama de las estadísticas se pelea con alguien que viene de la rama de Machine Learning. Y ambos no se entienden. ¿Por qué? Porque cada uno tiene un modelo, una forma de pensar distinto. Que les den un ejemplo. Después de hace un año, se acerca un alumno y me dice... Yo sé que estudiante hace geostadística, ¿no? Y tengo un problema que también podría aplicar geostadística. Ahora sí, se puede hacer esto, aquello. Pero ¿cómo valida el modelo? No, el estadístico no valida el modelo. No hay set de validación. ¿Qué? Dijo, ¿cómo es posible que no haya set de validación? Sí. Ustedes han hecho estadísticas. Lo único que hacemos es reducir el MC. ¿Qué? Usan todos los datos. Por otro lado, el estadístico dice, oye, ¿y por qué no haces ningún tipo de concepto detrás de qué estás modelando? ¿Cómo modelas así a los asociados? Tampoco tiene sentido.
+01:25:22 Speaker 1: Entonces
+01:25:22 Speaker 2: hay una gama de distintas formas y todas no son, digamos, excluyentes. ¿Ok? Y si a ustedes les interesa entrar más en el tema del modelamiento, este libro es muy bueno porque les da una perspectiva de todos los tipos de formas de modelar o de pensar sobre los modelos. Esto quiere decir que ustedes no necesariamente la forma de pensar en Machine Learning va a ser la correcta. Hay veces en que usar modelos estadísticos es mejor. Hay veces en que usar modelos bayesianos va a ser también mejor. Hay veces que usar modelos
+01:26:00 Speaker 1: no
+01:26:02 Speaker 2: supervisados va a ser mejor. Entonces, todos los que les interesa un poco ahondar más, yo les recomiendo encarecidamente este libro, es bastante bueno. Me va a dar una perspectiva más amplia sobre todo lo que son temas de modelamiento. Muy bien. Voy a hacer una pequeña introducción. Para los que no tienen muy claro, modelamiento estadístico es lo que hemos hablado un poco sobre las distribuciones probabilísticas. Sin embargo, el modelamiento estadístico no es el único. Todos, de alguna forma, hemos crecido, hemos sido formados por lo que llaman el modelamiento estadístico frecuentista. Cuando hablamos de hipótesis, distribuciones probabilísticas y el ejemplo del dado. Sin embargo... Si yo les doy un dado, y ustedes piensan que es un sexto de probabilidad de obtener un 6, ¿qué pasaría si yo empiezo a tener el dado? Y ese dado empieza a darme 6 todo el tiempo. ¿Será posible? ¿Qué dicen los apostadores? ¿Cuándo pasa eso? ¿Cómo? No, sin racha. Pasa siempre, siempre. No, necesitas racha. ¿Qué dicen los tramposos?
+01:27:25 Speaker 1: ¿Cómo se llaman esos dados?
+01:27:27 Speaker 2: Ahí están, dados cargados, ¿no? Se ponen una carga. Son bien... Muy inocentes, está bien. Una carga, un peso, y eso hace que cosa que cuando salga el dado tenga más chance de que salga un 6.
+01:27:42 Speaker 1: ¿Ven?
+01:27:44 Speaker 2: Ahora la pregunta es si ustedes tienen un dado cargado y un dado normal y lo ven, se ven iguales. Así que, ¿qué pasó con la estadística frecuentista? ¿Qué pasó con ese sexo y todas las continuidades? Los bayesianos, que es otra rama estadística, dicen, ok, la forma de nosotros entender la probabilidad no es correcta. Hemos sido engañados. Y los bayesianos dicen, nosotros tenemos que hacer experimentos y actualizar nuestras creencias o nuestra probabilidad. para hallar la probabilidad real. ¿Ya? Y hay toda una rama de estadísticas que buscan modelos valencianos.
+01:28:25 Speaker 1: ¿Ya?
+01:28:28 Speaker 2: Si hubo una pelea o no pelea, ¿ya? Entre valencianos y frecuentistas,
+01:28:33 Speaker 1: pero si están interesados.
+01:28:35 Speaker 2: También les dejo un pequeño libro sobre
+01:28:39 Speaker 1: el
+01:28:41 Speaker 2: culto valenciano. Tiene sus ideas y todo, que es bastante valiente. Por otra parte está el pensamiento o el cambio de paradigma de Machine Learning, que tiene en común el Bayesian y el frecuentista, que ambos hablan como el máximo exponente de la probabilidad. Ambos quieren, para poder entender qué está pasando, entender cómo está la probabilidad de lo que está pasando. Sin embargo, Machine Learning dice, olvidémonos de todo esto. Toda esta discusión sobre la probabilidad, que es la estadística tradicional, No lleva a ningún sitio. ¿Qué es lo que hace? Puede ser el pensamiento de Machine Learning. Puede ser el estándar dorado de Machine Learning. ¿Cómo ustedes saben qué es un modelo que ha hecho bien? Un estadístico es la probabilidad. La probabilidad me dice, la probabilidad se basa en los datos. Pero ustedes no piensan así. Ustedes han sido formados de esta manera
+01:29:39 Speaker 1: mayormente.
+01:29:42 Speaker 2: ¿Ustedes cómo saben que su modelo está bien?
+01:29:45 Speaker 1: ¿Pero de qué? Ahí está. Entonces,
+01:29:55 Speaker 2: nuestro estándar dorado, a diferencia de los estadísticos,
+01:30:00 Speaker 1: es
+01:30:00 Speaker 2: justamente poder hacer nuestro trading test. Si nuestro test data firma, la firmamos. Punto. Nunca entramos en el tema de teoría. ¿Cierto? Y esa es una de las grandes diferencias del pensamiento
+01:30:20 Speaker 1: tradicional.
+01:30:22 Speaker 2: Que nosotros, como Machine Learning, son los que tenemos en los resultados. Estas son las herramientas para llegar a los resultados. Ok. Vamos a un breve break de 10 minutos. ¿Quieres venir a conversar? ¿Están viniendo? Gracias.
+01:31:31 Speaker 1: Gracias. ¡Gracias! ¡Suscríbete!
+01:32:34 Speaker 2: ¡Apá!
+01:32:45 Speaker 1: Bueno, yo no lo he probado en mi computadora, digamos. Y en el otro me salían 5.000. No, eso es 5.000. En eso no lo he probado. La segmentación. Gracias. Gracias. Ese es el detalle. Yo lo que tengo data es... Porque sin los datos tendríamos que etiquetar, ¿no? Lo que tengo etiquetado es en segmentación. Por eso es una de las razones. Bueno, sumamente todo, más o menos... De profundidad, no tengo el que tal, pero eso creo que hay que seguir. Pero de segmentación
+01:34:09 Speaker 2: sí tengo, de segmentación sí tengo. Pero
+01:34:11 Speaker 1: hay herramientas que te ayudan, ¿no?
+01:34:17 Speaker 2: Pero lo que
+01:34:23 Speaker 1: sí tengo es segmentación, por eso es que iba por eso. Sí, se nota. Acá esto tiene profundidad, ¿no? Es otro nivel. Es más profundo y esto es más levantado. Muy poco. No sé. No sé. No sé. No sé. No sé. No sé. No
+01:35:22 Speaker 2: sé. No sé. No sé. No sé. No
+01:35:24 Speaker 1: sé. O sea, que esos dos querían.
+01:35:30 Speaker 2: Que solamente lo haces sin
+01:35:33 Speaker 1: solo un modelo preentrenado. Claro.
+01:35:35 Speaker 2: Preentrenado. Claro. Está preentrenado y puede generar. Claro.
+01:35:40 Speaker 1: Claro. Según lo
+01:35:49 Speaker 2: que he revisado... Para autos autónomos.
+01:35:52 Speaker 1: Para autos autónomos.
+01:35:53 Speaker 2: No, para este ejemplo. Puedo utilizar uno que
+01:35:56 Speaker 1: se para... Sí, justo el C-Pormer está... Bueno, en realidad no es para autos autónomos.
+01:36:01 Speaker 2: Es general. Y seguramente hay algún submodelo o algún C-Pormer entrenado
+01:36:07 Speaker 1: en este domingo.
+01:36:10 Speaker 2: Eso no es el de cero. Yo creo que va a ser un camino propuesto. O sea, van a entender algo,
+01:36:17 Speaker 1: ¿ya?
+01:36:18 Speaker 2: Pero, tal vez que eso, van a ser muy bajas,
+01:36:21 Speaker 1: ¿ya? Como que no hay un resultado, porque
+01:36:22 Speaker 2: creo que sea algo
+01:36:23 Speaker 1: bueno. Es bien un buen resultado.
+01:36:27 Speaker 2: ¿Qué de Roma Correa sería un
+01:36:30 Speaker 1: buen resultado?
+01:36:31 Speaker 2: Depende mucho del dominio, ¿no? O sea, yo esperaría que sea algo que pueda ver la imagen donde se lavaría. Pero, o sea, mi feeling, obviamente, es un feeling nada más. Yo no te controlo un transformador, y vamos a jugar durante las clases siguientes. De cero,
+01:36:49 Speaker 1: como se forma un cambiador, está mucho mejor. El transformador está mucho mejor.
+01:36:57 Speaker 2: Claro. El transformador está con
+01:37:00 Speaker 1: 20K, más de 20K, o así, este tiene como 20 y algo, 20.
+01:37:05 Speaker 2: Imágenes generales. Imágenes
+01:37:07 Speaker 1: generales de segmentación. Sí,
+01:37:11 Speaker 2: podría funcionar. ¿Ya? Pero si encuentro algo que ya está hecho para algo similar,
+01:37:19 Speaker 1: pienso que
+01:37:20 Speaker 2: puede usar mejor. ¿Ya?
+01:37:25 Speaker 1: En realidad,
+01:37:27 Speaker 2: justo lo estoy probando y
+01:37:29 Speaker 1: la pura sí me salió más de 90. Con 750 imágenes.
+01:37:35 Speaker 2: ¿Cuántos eran? ¿De
+01:37:37 Speaker 1: cero? No, no, no. Con congelado. Solamente cambiar la cabeza.
+01:37:45 Speaker 2: ¿Y se expone con A?
+01:37:49 Speaker 1: Yo no sabía que estaba con A. Luego lo investigué y ya había sido entrenado con A. Sí, pero la idea me dijo que estaban haciendo fuga de datos.
+01:38:00 Speaker 2: Ah, pues sí.
+01:38:02 Speaker 1: Sí, porque lo que pasa es que mis videos... Ese es un problema, ¿no? Mis videos... Ajá, son tres videos nada más.
+01:38:10 Speaker 2: Eran videos e imágenes.
+01:38:12 Speaker 1: O sea, eran tres videos, pero...
+01:38:14 Speaker 2: Eso sí
+01:38:16 Speaker 1: es
+01:38:18 Speaker 2: un gran...
+01:38:20 Speaker 1: Claro, pero ahí lo que me sugirió fue que cogiera, digamos, como que cogiera... No consecutivo, sino que para el test, coja un poquito de cada uno.
+01:38:39 Speaker 2: Tienes tres videos, ¿no? Tienes tres videos. Lo que sí podrías hacer es
+01:38:47 Speaker 1: entrenar con estos dos videos.
+01:38:51 Speaker 2: ¿Por qué? Porque ya el video tiene muchas características, estás asesgando.
+01:38:59 Speaker 1: ¿No? ¿No entiendes?
+01:39:01 Speaker 2: Entonces, si el otro video es muy distinto,
+01:39:06 Speaker 1: es un camino que
+01:39:07 Speaker 2: sí va a servir como test, que no tiene las mismas características,
+01:39:12 Speaker 1: ok, todavía estoy diciendo esto. ¿Ya?
+01:39:15 Speaker 2: Entonces son dos videos para entrenar y un video. Obviamente no es ideal,
+01:39:19 Speaker 1: ¿no? Pero
+01:39:20 Speaker 2: si lo entrenas en algo de este video, dices, ah, estas son las características de este camino.
+01:39:25 Speaker 1: ¿Ya?
+01:39:27 Speaker 2: Está básicamente cerrando Un
+01:39:29 Speaker 1: video está
+01:39:31 Speaker 2: como que parte de nosotros Exacto, miren Imaginemos Este es el camino Entonces, si este es el camino Tengo una imagen acá Son
+01:39:47 Speaker 1: prácticamente las mismas Exacto ¿Entiendes?
+01:39:53 Speaker 2: va a usar lo que ya aprendió específico, muy específico, el terreno,
+01:39:57 Speaker 1: en los que,
+01:39:58 Speaker 2: ¿no? Entonces, si te acuerdas, solamente generalizaba, y lo que hubiera sido también, si no, de esa película, una de esas características.
+01:40:08 Speaker 1: O sea, podría ser con la imagen tomada, digamos, de otro
+01:40:11 Speaker 2: grupo, ¿no? Sí,
+01:40:15 Speaker 1: eso sería lo mejor.
+01:40:16 Speaker 2: Sí, pero el recomiendo de Camino también.
+01:40:19 Speaker 1: ¿Sí? ¿Por qué?
+01:40:20 Speaker 2: Joder tiene tres videos. Ah,
+01:40:23 Speaker 1: no. O sea, son los... Bueno, esos son los tres videos que están etiquetados. Sí. Pero es un problema real, ¿no? Porque difícilmente...
+01:40:34 Speaker 2: No, el problema está genial. Los problemas son los datos.
+01:40:36 Speaker 1: Y el tiempo, ¿verdad? Pero, o sea, ¿por qué serían,
+01:40:43 Speaker 2: bueno, claro,
+01:40:44 Speaker 1: 700? Yo, por ejemplo, pienso que si lo probamos en el otro video y sale bien,
+01:40:51 Speaker 2: debería, o
+01:40:52 Speaker 1: sea, un video con una resolución distinta, ¿no?
+01:40:56 Speaker 2: En un video que tiene profundidad. Claro, el problema, lo que entiendo es lo que estoy entendiendo mal, es que tiene solamente...
+01:41:09 Speaker 1: digamos cuatro
+01:41:11 Speaker 2: cuatro vídeos vamos
+01:41:14 Speaker 1: a revolucionar tengo tres de profundidad y tengo tres de estos digamos etiquetados por lo menos
+01:41:22 Speaker 2: entonces tienen seis vídeos y entrenan con estos bueno igual estos no tienen profundidad tienen que juntar multimodales tienen toda la comunidad
+01:41:41 Speaker 1: Ya, miren. Sencillo.
+01:41:42 Speaker 2: Solo con los tres videos. Aquí el problema es que es necesario, ¿no? Que no pueden... Si lo único correcto, si este video es muy distinto, un camino distinto, es solo un iconotec. Lo tienen dos videos, pero no. Mi feeling es que esto no va a funcionar.
+01:42:05 Speaker 1: Pero, ¿qué es funcional?
+01:42:08 Speaker 2: Es la métrica. Si dices, ah, 90% yo lo hice, lo hiciste bien, ah, ok, funciona ahí. Lo han probado, funciona bien, perfecto.
+01:42:17 Speaker 1: Porque justamente es lo que mencionaba, ¿no? Que, o
+01:42:21 Speaker 2: sea... Claro,
+01:42:24 Speaker 1: pero siempre vas a necesitar un montón de datos, ¿no?
+01:42:27 Speaker 2: Claro.
+01:42:30 Speaker 1: O sea, la idea un poco yo la veía como que las features que tengas incluso se forman ni siquiera con vehículos autóricos, pero que las features que sacas como que te sirvan para que funcione con una data, ¿no? Que es la idea del Tramperler para que hagas el resultado. Y es más, y para profundidad, también pensaba básicamente lo mismo, o sea.
+01:42:55 Speaker 2: O sea, no, este es mi fin. Puede que eso funcione. Y justamente las características, ya, transformador es muy bueno.
+01:43:05 Speaker 1: ¿Cómo podría decir que no funciona? Por ejemplo, lo de los 90%, ¿cómo podría decir que no funciona?
+01:43:13 Speaker 2: Porque Vickage, ¿no? Obviamente se hizo Trump aquí.
+01:43:19 Speaker 1: Claro. Pero en este caso, por ejemplo, incluso se dice así, ¿no? Esto de jalar un poquito de acá, jalar un poquito de acá. Digamos, el video tiene... Si jala es parte
+01:43:28 Speaker 2: de tu validación de lo que ha aprendido Instagram.
+01:43:31 Speaker 1: O sea, si jala es parte de aquí, incluso... O sea, ponga si tienes un video, no sé, de 10 minutos. Cojo los dos minutos de acá, cojo una parte de acá, y digamos que cojo de aquí una parte de acá.
+01:43:45 Speaker 2: El modo de aprender esta parte que de repente es similar a esta. Entonces, ya esta información le
+01:43:53 Speaker 1: sopla.
+01:43:53 Speaker 2: Ve que chévere lo que está soplando. De todo tipo de test, el principio del test sea lo más increíble. El modelo no prenda las características
+01:44:08 Speaker 1: particulares. Y para hacer entonces transfer leer mínimo cuánta data.
+01:44:14 Speaker 2: O sea, realmente sí podrías hacerlo. un poco de problemas como estos dos son tan similares son muy son dos nomás yo pienso que no vas a tener suficientes variedades para que transforme mi función de bien de repente me equivoco ¿ya? porque no hay forma de saberlo si no es así ¿cómo
+01:44:33 Speaker 1: lo podría saber? digamos ¿no?
+01:44:36 Speaker 2: o sea lo que dice estar bien lo único que tiene que asegurar es que no hay este mucho como por ejemplo así lo que digo ¿no? empiezas con esto
+01:44:43 Speaker 1: cualidad
+01:44:47 Speaker 2: Y por ejemplo, para validar cuánta data,
+01:44:51 Speaker 1: me diría como para decir... O sea, aquí podría ser todo, ¿no? Por ejemplo, esas que sean unas imágenes de 256 por 256, ¿no? Y tengo otra imagen de, qué sé yo, 1024, 1024, en otro campo de cultivo totalmente diferente. ¿Cuánta data me necesitaría de esta de acá, que sería, digamos, mi test? Para decir que estoy generalizando lo suficiente.
+01:45:21 Speaker 2: Normalmente, me espera que si entrenas con mil datos, ¿no?
+01:45:37 Speaker 1: Porque 100 o 200 es poco, ¿no?
+01:45:41 Speaker 2: Es que es un test.
+01:45:42 Speaker 1: Lo importante del test es
+01:45:43 Speaker 2: que sea incisgado, ¿no? Que no esté soplando. Porque si sopla es como que en el fondo no está. O sea, el test es una forma de sinistrar también.
+01:45:54 Speaker 1: No sirve.
+01:45:57 Speaker 2: No sirve.
+01:45:59 Speaker 1: Mostrar que sí está perdiendo. Si quieren seguir haciendo eso. Yo sí, yo sí. Gracias.
+01:46:41 Speaker 2: Y... Ustedes van a presentar un póster, ¿no? Y van a hacer la defensa del póster. ¿Ya? Ustedes van a hacer, ¿ya? Y presentan lo que tiene Lata
+01:46:50 Speaker 1: Lipich. ¿Ya? Como que va a hacer una defensa muy pobre.
+01:46:55 Speaker 2: Probablemente van a dejar la
+01:46:56 Speaker 1: defensa, ¿no?
+01:46:58 Speaker 2: Entonces hay una consecuencia. ¿No? De hacer el trabajo realmente. Pero al
+01:47:02 Speaker 1: hacer eso yo no voy a tratar.
+01:47:05 Speaker 2: Otro caso. Si lo hacen así, ¿ya? Y presentan... Métricas al 40%. ¿Ya? Donde hay un camino que se va por otra lado. También no hay consecuencia de hacerlo. Realmente no va a haber planteado.
+01:47:23 Speaker 1: Yo sí tengo una certeza.
+01:47:29 Speaker 2: Sí. Yo lo que podría hacer,
+01:47:34 Speaker 1: ¿ya?
+01:47:36 Speaker 2: No es en su caso. Es un plan un poco distinto. No lo alcanza. Es interesante todo esto. De repente podrían aspirar a llegar a
+01:47:53 Speaker 1: hacer esto.
+01:47:55 Speaker 2: Pero deberían tener un plan B. Como quien dice, antes es un problema. Podría, de repente, presentar una graza de... No. Está bien, es un problema porque ya debería haber esperado...
+01:48:23 Speaker 1: Yo
+01:48:25 Speaker 2: voy a dejar ya a Joaquín que haga su primera prueba sin
+01:48:29 Speaker 1: Natalicich.
+01:48:30 Speaker 2: A ver qué sabe. O sea, cuando... en verdad yo lo he probado y así, ¿no? Con este... Pero,
+01:48:37 Speaker 1: ¿qué va a jugar? ¿Qué va a ser por el lado? O sea, incluso... Ese es ahí, ahí... Si es que lo calo así, ya no hay datan. Claro, por eso me hace.
+01:48:50 Speaker 2: Este segundo, antes de que... Lo voy a aprender. Es muy similar al segundo siguiente. Sí.
+01:49:01 Speaker 1: Pero esto de coger así, pero eso lo puedo hacer rápido.
+01:49:09 Speaker 2: Exacto.
+01:49:13 Speaker 1: Bueno, porque en realidad este grupo de alumnos, bueno, de maestría, cuando hizo esto, ya lo hizo por UNED. Y le salía, pues, más de 80. Con las mismas imágenes. Yo te digo que no lo voy a hacer, ¿no? Porque no estoy haciendo como usted, yo estoy haciendo como...
+01:49:37 Speaker 2: ¿Y él hizo la telecatch?
+01:49:39 Speaker 1: Ay, no sé. Creo que sí. Quizás, quizás. Es probable, ¿no? Es probable. Es probable, puede ser.
+01:49:49 Speaker 2: Entonces, igual es un tema científico, ¿no? Y es algo que pasa bien como un encuentro de datos. Es muy fácil hacer un modelo, pero
+01:49:57 Speaker 1: no
+01:49:58 Speaker 2: lo creamos. Y obviamente la falta ética de grabar nuestros proyectos es automáticamente... ¿Qué? Sí, que Joaquín, por lo menos. Y si no se puede,
+01:50:19 Speaker 1: simplemente...
+01:50:56 Speaker 2: Entonces
+01:50:58 Speaker 1: lo
+01:50:59 Speaker 2: que pueden hacer es tener imágenes en donde... que no dé el resultado de dónde va el rebote y lo que voy a hacer es hacer un modelo como ya les había dicho estos modelos
+01:51:20 Speaker 1: no hay nombre y una cilada va a ser eso y si
+01:51:28 Speaker 2: no tienen datos voy
+01:51:29 Speaker 1: a ir a hacer
+01:51:29 Speaker 2: pequeñas simulaciones o así simulaciones Incluso puede ser el chat que hagan. Hoy es genial. Hacen modelos 3D. Pueden hacer una especie de inundaciones en 3D.
+01:51:49 Speaker 1: Pero con grandes.
+01:51:55 Speaker 2: Tienen muchas inundaciones de robots. Y aparte añaden.
+01:52:01 Speaker 1: Y diferentes. Exacto. Pueden variar cinco cuestiones. O sea, en base a... Exacto. Exacto. Exacto. Haz una imagen como esta. Claro. ¿Pueden hacer
+01:52:37 Speaker 2: muchas evaluaciones?
+01:52:57 Speaker 1: ¡Suscríbete! ¿Qué?
+01:53:36 Speaker 2: ¿Qué? ¿Qué
+01:53:39 Speaker 1: pasa?
+01:53:54 Speaker 2: No,
+01:53:59 Speaker 1: es que... ¿De qué te digo? Simulado.
+01:54:49 Speaker 2: Muy bien, vamos a continuar la clase.
+01:55:15 Speaker 1: muy bien
+01:55:16 Speaker 2: afortunadamente hoy en día para usar métodos de machine learning tenemos
+01:55:24 Speaker 1: muchos datos mucha
+01:55:26 Speaker 2: información
+01:55:27 Speaker 1: pero
+01:55:31 Speaker 2: cuáles creen que es el problema de tener muchos datos mucha importancia Es bacán, tenemos muchos datos, pero también es un problema. ¿Por qué es un problema?
+01:55:46 Speaker 1: La computación es muy cara.
+01:55:48 Speaker 2: Computación.
+01:55:49 Speaker 1: Uno.
+01:55:50 Speaker 2: ¿Qué más? Hay otro problema. Ligado a esta idea, ¿no? Tener muchos datos y insertar ruido. Ruido adicional.
+01:56:06 Speaker 1: ¿Cuál
+01:56:07 Speaker 2: es el problema del ruido?
+01:56:11 Speaker 1: deja
+01:56:12 Speaker 2: de volverse interpretable. Dejamos de entender qué está pasando. Tenemos muchas variantes, mucho ruido entre las variables. Entonces, ¿qué método? Eso es lo que llaman la mansión de la dimensionalidad. Cuando tenemos demasiados datos, no solamente tenemos mucho ruido y es difícil poder entender qué está tocando, sino... para poder estadísticamente entender el fenómeno y poder obtener suficiente información con más dimensiones se va creciendo exponencialmente por ejemplo un ejemplo bien sencillo si tenemos una sola dimensión en donde tenemos los 10 posibles valores ok vamos a ponerle mejor 3 posibles valores ok Con sólo obtener dos valores, y vamos a tener ¿qué porcentaje? El total de posibilidades. Vamos a tener un... 2 sobre 3, ¿cierto? 2 tercios. Sin embargo, si tenemos dos variables... dos variables, el espacio se va a volver, ya no tres, sino se va a volver nueve. Y para obtener los dos tercios que teníamos antes, yo voy a hacer dos muestras, sino vamos a necesitar... 2, 4, 6 muestras.
+01:57:49 Speaker 1: Entonces,
+01:57:51 Speaker 2: cuando tenemos más dimensiones, cuando tenemos más datos, la cantidad de información que necesitamos para
+01:57:57 Speaker 1: obtener el
+01:57:58 Speaker 2: mismo número de resultados, para poder muestrear la misma cantidad de densidad bastante a 100. Y esto también se vuelve un problema. Entonces, ¿cómo podemos reducir la dimensionalidad? ¿Qué herramientas conocen? para reducir la dimensionalidad.
+01:58:17 Speaker 1: Pese a rescate.
+01:58:19 Speaker 2: Pese a rescate. Entonces, hay métodos que han conocido, entonces esto lo voy a pasar un poco rápido. Esa es la parte final del recordatorio. Hay unas técnicas que ayudan a manejar esa dimensionalidad. ¿De acuerdo? Pese a esta técnica no supervisada, que básicamente lo que hacía... era reducir las dimensiones tenemos dos dimensiones vamos a tener una dimensión de mayor variabilidad y esa mayor variabilidad vamos a tomarla como una dirección principal y el resto vamos a decir que es ruido nuestra especie de alguna forma esta dimensión quita el ruido vamos a intentar poder entender mejor que está pasando un pequeño recordatorio
+01:59:11 Speaker 1: matemático
+01:59:14 Speaker 2: Es que PCA, matemáticamente hablando, no es más que una proyección. ¿Qué quiere decir que es una proyección? Quiere decir que si tenemos una cantidad de datos, X, y X podría ser, por ejemplo, X1, X2, X3, hasta donde Xn. Yo para proyectarlo, ¿ok? A un hiperplano, si no lo recuerdan, yo lo tenía que multiplicar por una matriz,
+01:59:50 Speaker 1: ¿cierto? UT.
+01:59:52 Speaker 2: UT era la proyección. Esto tiene N dimensiones. Esta es una matriz de 1 por N, ¿cierto? ¿Recuerdan eso? O N por 1, ya no me acuerdo. N por 1. N por 1, ¿no? Gracias. Entonces, n por 1. Entonces, si yo quiero multiplicarlo, si yo quiero proyectar estas variables a mi plano,
+02:00:24 Speaker 1: yo
+02:00:25 Speaker 2: lo iba a multiplicar por una matriz U. Y esa matriz U, ¿qué dimensiones iba a tener? Y encima tendría, miren, el plano, ¿ya? Mi respuesta. ¿Ok? Va a ser mi vector Z, que van a ser los valores del
+02:00:47 Speaker 1: plano proyectados.
+02:00:53 Speaker 2: ¿Ya? Y estos valores, si tenemos aquí N datos, pueden tener que también tener N datos. ¿Ok? Hay otro detalle adicional que se me está pasando aquí. Ese detalle adicional es que esto si fuera solamente una dimensión. Como son de dimensiones, voy a poner por de dimensiones. Esto va a ser hasta x11 hasta un x1d. ¿Ya? Y mi matriz resultante, al momento yo de proyectar, voy a tener también N datos, ¿ok? Pero yo no voy a tener N dimensiones,
+02:01:40 Speaker 1: sino voy a tener M
+02:01:43 Speaker 2: dimensiones. ¿Ok? Y N por M, bueno, o la inversa, M por N. Entonces aquí yo voy a tener que tener una matriz de M por N, ¿no? Que va a ser mi matriz U, como lo voy a llamar. Y este va a ser Z. Z1 hasta Zn. Zn hasta Zn. Entonces, PCA no es más que una predicción lineal de los datos. Y la forma, ya, y de nuevo esto es un recordatorio. de entrenar o de poder hacer esta proyección, se basaba en dos criterios de optimización.
+02:02:40 Speaker 1: Uno,
+02:02:40 Speaker 2: minimizar el error de reconstrucción. Y dos, maximizar la varianza de los vectores. ¿Ok? Maximizando la varianza de los vectores, hacíamos que PCA obtenga justamente lo que nos interesaba. Y si mal no recordar,
+02:02:56 Speaker 1: ¿no?
+02:02:56 Speaker 2: Seguimos recordando. Estos dos criterios, el de aumentar la varianza, y la reconstrucción de los errores eran criterios equivalentes a optimizarse. Entonces, si nosotros queríamos maximizar la varianza, era lo mismo que minimizar la reconstrucción de error. Entonces... Eso era básicamente lo que hacía PCA, matemáticamente hablado. PCA, justamente debido a que es relativamente sencillo, no es más que una proyección lineal de un espacio a otro espacio, bajo un tema de optimización específico, es relativamente activo. PCA se inventó en 1901. Entonces hoy en día, PCA, PCA, PCA, PCA es básicamente ancestral. Anual. Ok.
+02:03:53 Speaker 1: Y
+02:03:54 Speaker 2: supuestamente ayudaba. Sin embargo. Bien. Bueno, el PC funciona con varias cosas. Recordatorios. Rostros. Poder reconocer números. Optimización de imágenes. Reducción del tamaño de imágenes. Compresión. Entonces, PCA tiene un lugar, ¿ok? Tiene cierto sentido. Nos ayuda a formalizar esta idea de reducción de dimensionalidad, reduciendo el error de la reconstrucción y todo eso. Sin embargo, cabe la pregunta, ¿podemos hacer algo distinto a PCA? Para justamente tratar esta cantidad de datos inmensa. ¿No? Acuérdense. Ahora vamos a entrar poquito a poquito a Deep Learning. Ya estamos acabando el recordatorio. Donde PCA es la forma clásica de manejar muchas dimensiones. Sin embargo, ustedes ya han aprendido. Son los ML clubs. ¿Qué es un MLP? Muy
+02:05:00 Speaker 1: bien. ¿Y cómo
+02:05:05 Speaker 2: se expresa matemáticamente en ML?
+02:05:10 Speaker 1: Es una
+02:05:11 Speaker 2: regresión. No tiene un conjunto de pesos. Esos pesos son usados para... Como si fuera una ecuación de regla. Multiplica pesos por entrada. Más un sesgo. Y todo eso entra en una función de activación. Y esa es la salida del concepto.
+02:05:31 Speaker 1: Perfecto. 10. Bien. Entonces...
+02:05:39 Speaker 2: De manera sencilla, tenemos todas las neuronas de entrada, todos los perceptrones, todos los perceptrones de salida,
+02:05:47 Speaker 1: y
+02:05:48 Speaker 2: básicamente la salida de aquí va a ser la, el perceptron de aquí multiplicado por el exésimo, el peso de aquí, más el peso de aquí, más el peso de aquí, ¿ya? Y eso matemáticamente puede escribir de la siguiente forma,
+02:06:04 Speaker 1: ¿ya? Vamos a escribir de doble,
+02:06:07 Speaker 2: W que es una matriz de pesos. W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1,
+02:06:19 Speaker 1: W1, W1, W1,
+02:06:20 Speaker 2: W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1, W1 un x1 hasta un xn y como son estos x pueden ser varias variables podríamos ponerlo hasta un xd todo
+02:06:47 Speaker 1: esto es un xnd y
+02:06:51 Speaker 2: esto va a dar una salida esa salida le vamos a llamar hierro y ese hierro le vamos a aplicar una función de activación Y esa función de activación va a ser la salida de nuestra MLP. Matemáticamente, un MLP sencillo es por una función lineal. Sin embargo, no es una función lineal. ¿Por qué no es una función lineal?
+02:07:19 Speaker 1: Así es.
+02:07:20 Speaker 2: Por la función de activación. Y no, sería una función lineal. ¿Puede haber funciones de activación lineales?
+02:07:28 Speaker 1: Sí.
+02:07:29 Speaker 2: Entonces, podría ser una MLP. Entonces, volviendo a nuestra pregunta, hay algo un poco sospechoso entre esto y esto, ¿cierto? ¿Qué es lo sospechoso entre la definición de PCA con la definición de un MLP?
+02:08:04 Speaker 1: Quedamos reducir la dimensión realidad.
+02:08:08 Speaker 2: Es algo más importante.
+02:08:12 Speaker 1: Cambian la
+02:08:13 Speaker 2: dimensionalidad. Son, miren, m por n, m por n, n por d, n por i. Son matemáticamente
+02:08:24 Speaker 1: iguales.
+02:08:26 Speaker 2: Es una multiplicación de matrices ambos. Entre un x en la entrada y, en el caso del PCA, volumen de la transformación, en el caso del... Y una red neuronal por VWP. La única diferencia es que una red neuronal o NLP tiene esta función de activación. Pero si la función de activación fuera lineal, ambos serían matemáticamente igual.
+02:08:59 Speaker 1: Ajá.
+02:09:01 Speaker 2: Ok.
+02:09:02 Speaker 1: Es lo que quiere decir.
+02:09:05 Speaker 2: Quiere decir que nosotros podemos crear. una red neural, un MLP diseñado de tal forma que intente de alguna forma reproducir matemáticamente lo mismo que hacemos con PCR este tipo de red neural es lo que vamos a llamar un autoencoder ¿por qué le llamamos un autoencoder? Porque lo que vamos a hacer es una especie de cuello de botella. En donde vamos a tener un input, una entrada, un código vector, o la reducción de la dimensionalidad,
+02:09:46 Speaker 1: y vamos a tener un proceso de reconstrucción.
+02:09:49 Speaker 2: Un proceso de reducción de la dimensionalidad y un proceso de reconstrucción. Lo mismo que teníamos en PCA, entre la proyección y la reconstrucción. De la parte de la proyección, o de la reducción de la dimensionalidad, le vamos a llamar el encoder. o el codificador y la reconstrucción la vamos a llamar el decoder o el decodificador Entonces, esto similar a lo que sea, nos ayuda a mafiar datos de alta dimensionalidad. Aprendemos estas características abstractas de manera no supervisada. Y cuando utilizamos autoencoders lineales, o básicamente autoencoders con funciones de activación de lineales, nosotros podemos escribir la ecuación directa de este autoencoder lineal como un... Un BW1 por X es Z.
+02:10:49 Speaker 1: Y
+02:10:49 Speaker 2: BW2 por Z. Va a ser el X reconstruido. Entonces mi X reconstruido. Va a ser igual a BW2 por BW1 por
+02:10:59 Speaker 1: X. Y hasta aquí.
+02:11:01 Speaker 2: Como noto en cuadro lineal. Aquí va a ser una función. Y. En caso. ya, K sea mucho menor que B,
+02:11:15 Speaker 1: vas a decir que
+02:11:19 Speaker 2: este autoencoder lineal, cuando nosotros optimizamos, bajo el mismo proceso de optimización, va a ser idéntico a PC. Ustedes pueden hacer la prueba, pueden crear un modelo, un MLP, el PyTorch,
+02:11:36 Speaker 1: que se llama un autoencoder lineal,
+02:11:38 Speaker 2: lo entrenan por unas 100 épocas, Y lo compara con PCA. ¿Ya? Yo lo he hecho. Yo lo hago con varios alumnos. Y la respuesta es idéntica. Idéntica. ¿Por qué? Porque PCA es la solución correcta de este modelo lineal. Y un autoencoder, cuando lo optimizamos bajo la misma función de pérdida o de optimización, nos va a dar el mismo resultado. ¿Ok? Entonces esto es muy interesante. ¿Por qué es muy interesante? Porque esto nos da una herramienta adicional. Hasta ahora ustedes siempre que han pensado, oye, ¿cómo vamos a reducir la dimensionalidad de nuestro problema? Todos en su mente decían PCA. PCA, PCA, PCA es lo que todos siempre piensan. Yo de ahora en adelante quiero que ustedes vayan un paso más allá. Y en sus mentes, ok, podemos empezar con un autónomo de línea. ¿Cuál es la ventaja de usar un autoencoder versus PSA? ¿Quién me puede decir? ¿Por qué un autoencoder tenía mucho mejor que PSA?
+02:13:02 Speaker 1: Este era el lineal.
+02:13:05 Speaker 2: Exacto. Mi maravilloso encuadre. ¿Qué les dije? Aquí nosotros podemos tener una función de activación lineal. Pero podríamos no tenerlo lineal. Ah, vamos a tener muchas más opciones. Sí, exactamente. Vamos a tener la misma representación de baja dimensionalidad. Sí, exactamente. Y lo vamos a tener con mejores métricas, mejor representatividad, mejor todo. Exactamente. Hacer autoencoders nos da mucha más flexibilidad que hacer solamente PSA. Cuando hacen PSA, es PSA y punto. No hay más que hacer. PSA, ya este es PSA. Ok, todos entienden. Pero PSA muchas veces tiene problemas. Muchas veces no funciona bien. A veces no se ven los datos correctamente. Pero queremos mejorar eso. De hoy en adelante, si hacen PSA lineal, va a ser lo mismo que... Si hacen un autoencoder lineal, Va a ser exactamente igual a PCA. Entonces ya pueden sacar de su cabeza PCA. Pueden decir, ok, hagamos un autoencoder lineal. Queremos mejorarlo. Probemos funciones de activación. Probemos mayor cantidad de capas. Probemos otras métricas. Otras funciones de pérdida. Esto les va a dar muchas herramientas. Y es una de las grandes magias que tiene hacer este aprendizaje profundo. Cuando vayamos viendo otras arquitecturas. Muchas de las arquitecturas nos van a dar esa flexibilidad. Y aprender distintos tipos de arquitecturas nos van a ayudar a resolver estos tipos de problemas porque distintas redes son flexibles a distintos problemas. La primera que estamos aprendiendo ahora es los autoencoders. ¿Por qué? Porque los autoencoders es algo que han ido aprendiendo con PCA y ahora van a aprender que los autoencoders pueden hacer mucho más de lo que puede hacer PCA. Porque justamente, no solamente vamos a tener un trincóder lineal, sino que podemos tener un trincóder no lineal. En donde aquí decimos, bueno, si esto fuera pese a, nosotros teníamos una línea recta. Como vemos, un trincóder no lineal, podemos cambiar la representación de la línea a una línea que no sea una línea, pero no sea recta. Una línea no recta.
+02:15:25 Speaker 1: ¿Cierto?
+02:15:26 Speaker 2: Pero no tenemos trincóder de esta forma. Y cada dimensión, cada unidad va a ser la dimensión de esta representación que se acerca a todos. Vamos a comparar. En el caso de una compresión, decíamos PCEA funciona bien para esto. Este es el caso de PCEA con 30 dimensiones. Este es el caso de un encoder profundo con 30 dimensiones. Pueden ver claramente que el autocoder profundo para hacer una reconstrucción y una compresión es bastante superior.
+02:16:06 Speaker 1: Pero eso es
+02:16:07 Speaker 2: simplemente PCEA. No solamente eso. Pueden utilizar PSA para autoencoders no lineales para hacer una separación de las distintas características de manera mucho más natural, de manera mucho más diferenciada. Y esto puede llegar bastante para lo que es el aprendizaje no centralizado, por ejemplo. Entonces, hacer autoencoders puede ser muy interesante. La forma de pensar en estos autoencoders, la forma tradicional es justamente eso. Tenemos los datos originales, podría ser una imagen, podría ser un set de datos, colección de información, lo que tenemos. Vamos a pasarlo por una red, podría ser un MNP, podría ser una red convocional, podría ser otro tipo de arquitectura, en donde lo que va a ser el autoencoders es en burgo. Vamos a tener una reducción de la dimensionalidad hacia este bottleneck, o este huella de botella, en donde vamos a tener una compresión de baja dimensionalidad que va a representar nuestros datos. Y luego vamos a tener un decoder, que va a intentar reconstruir en base a esta baja dimensionalidad. En este caso, si tenemos una imagen, por ejemplo, de 32x32 píxeles, ¿Cuánto son la cantidad de dimensiones del input aquí? ¿Qué me puede decir? ¿Cuánto es el input? Una imagen, ¿no? Píxeles. En una red neuronal, cada píxel es una dimensión. ¿Cierto? ¿Cuántos píxeles tenemos en una imagen? 1024. Entonces, en 1024, ya, este era nuestro input, nosotros podemos bajarlo, por ejemplo, a 100. Una compresión casi de 10 veces, ¿no? Una compresión de 10 veces y podemos reconstruirlos. Solamente con 10 valores, ya no con 1024, solamente con 100 valores podríamos
+02:18:36 Speaker 1: reconstruir este valor.
+02:18:39 Speaker 2: Tenemos una compresión, una reducción de la dimensión, una reducción de los números necesarios para generar estimación. ¿Cómo qué? ¿Cómo qué se parece esta idea de reducción? Lo que hemos hablado hasta ahora, que tradicionalmente funciona. ¿Qué se parece esta idea de reducción de la dimensión realidad?
+02:19:09 Speaker 1: ¿Qué se parece? Hoy hemos hablado
+02:19:12 Speaker 2: a partir de muchos datos.
+02:19:15 Speaker 1: Al PULI. Al PULI.
+02:19:18 Speaker 2: Al PULI. Al PULI es una operación para reducir datos. Pero esta clase del día de hoy, ¿no? Hemos hablado de un modelo que es muy útil, ¿no? Para muchos científicos. Porque también hace lo mismo, reducía los datos. ¿Qué modelo eres? Decíamos que ese era el estándar dorado de la interpretabilidad. ¿Quién recuerda? Ahí está, muy bien, la distribución normal. Pues la distribución normal, ¿qué era lo que hacía? Cogía los datos, muchos datos, y los reducía a cuántas dimensiones. A dos dimensiones. Si uno te encoder, hace algo similar. Porque a partir de muchos datos, va a reducirlos a menos datos. No es solamente dos, puede ser más, 50, 20, pero... En principio,
+02:20:14 Speaker 1: si
+02:20:15 Speaker 2: cada uno de estos datos puede crear algún tipo de interpretabilidad, de repente el autoencoder se vuelve nuestra forma de interpretar redes neuronales, de crear interpretabilidad. ¿No? Similar a una distribución normal. Y por eso podemos ir a ver, por fin hemos conseguido el salto brial. Y hay algunos modelos matemáticos. ¿Ya? Que intentan hacer esto. Miren. Este es un ejemplo. ¿Ya? De lo que llaman un autoencoder variacional. Este es un modelo. También es un autoencoder. Que añade principios variacianos. Estadísticos. ¿Ya? En donde. La parte del espacio latente. La parte del código. La parte comprimida. ¿Ya? Debido a que tiene principios estadísticos, te da cierta interpretabilidad. ¿Ya? Se arma este espacio de tal forma que cada punto, ¿Ya? Son dos variables nomás. ¿Ya? En este caso no es la media y la división estándar, sino las dos variables que están mapeadas a distintos tipos de figuras. ¿No? Las figuras del rombo vienen por acá, las figuras del círculo vienen por acá, los cuadrados vienen por acá, los triángulos vienen por acá. Y lo interesante de esto es un tricoder. es que nosotros podemos jugar con los valores que se encuentran en el vector Z o en el espacio latente y poder hacer cosas en internet y saber qué pasa. Lo interesante es que el modelo efectivamente ha fundido cierta representatividad de las figuras, en donde en tanto vamos moviendo en el espacio latente, en los dos valores, el resultado del decoder nos va generando figuras intermedias. Va transformando de una figura a otra. Todo esto es interesante porque hace que el autoencoder pueda funcionar similar a una distribución probabilística. Nosotros podemos interpretar qué es lo que está codificando en su espacio latente o en esas dimensiones reducidas. Llegar a esto sería el salto ideal. Queremos poder entender qué está pasando dentro del modelo. Cómo está llegando a comprimir la realidad a sus
+02:22:47 Speaker 1: partes más principales. un pequeño ejemplo en
+02:22:57 Speaker 2: donde vamos a entrenar un autoencoder vamos a ver efectivamente cómo el autoencoder va o no va a funcionar para comprimir esa realidad aquí tenemos un pequeño ejemplo en donde vamos a entrenar un autoencoder en base a un dataset de
+02:23:23 Speaker 1: robot.
+02:23:32 Speaker 2: El dataset al que vamos a entrenar, el Eugen Cohen, no es un dataset de números. Es un dataset que se llama Fashion Mist. Es una serie de
+02:23:43 Speaker 1: distintos tipos de ropa donde
+02:23:46 Speaker 2: el modelo va a comprimir con menos dimensiones y de ahí lo va a descomprimir. Y lo que nosotros esperaríamos es que esa compresión, esas dos dimensiones, esas cinco dimensiones, sean interpretables, que el modelo pueda generar algún tipo de interpretabilidad que nos ayude a decir, ok, el modelo ha podido cumplir correctamente en estas dimensiones inferiores. Vamos a ver qué es lo que pasa para entrenar el modelo. Estamos llevando el modelo que es 28 por 28, que está aquí, hacia...
+02:24:41 Speaker 1: Estamos
+02:24:52 Speaker 2: llevando las 32 dimensiones. 32 dimensiones porque 28 por 28
+02:24:59 Speaker 1: son
+02:25:02 Speaker 2: un total de... 784 dimensiones. De 784 dimensiones, 32 dimensiones serán suficientes para poder reconstruir las imágenes de las propias que dicen.
+02:25:19 Speaker 1: ¿Sí?
+02:25:19 Speaker 2: ¿No?
+02:25:20 Speaker 1: ¿Quizás?
+02:25:22 Speaker 2: ¿Qué pasará?
+02:25:26 Speaker 1: Ah, miren.
+02:25:30 Speaker 2: Estas son las imágenes de la ropa original. ¿Ya? Están abajo. Son las imágenes del AutoCoder. Funciona. Hasta cierto punto. Lo que está pasando. El AutoCoder. Está ignorando ciertos detalles. Si se dan cuenta. Por ejemplo. Aquí la camisa tiene
+02:25:50 Speaker 1: cuadrados.
+02:25:52 Speaker 2: Aquí no. Entonces no tiene espacio suficiente. Para poder comprimir. Para poder tener las dimensiones necesarias. Para representar todos los detalles. En las imágenes originales. Sin embargo, crea cierta compresión, es útil, funciona y comprime. Ahora lo que vamos a hacer es ver las dimensiones. Vamos a probar las dimensiones. Aquí podemos ver. Por ejemplo, tenemos un zapato. ¿Ves el zapato? ¿Qué números tienen esas 32 dimensiones? Bueno, acá están las 32 dimensiones. Y nosotros podemos mover, si mirar el ejemplo que les había pasado, el espacio latente, las dimensiones que le hemos de lo entrenado, para ver qué pasa, qué representa cada dimensión. Por ejemplo, el Z0, que está en 6.27, lo puedo aumentar. Y miren. Está cambiando la imagen. Está volviendo un tacón parece, ¿no? Está volviendo un zapato roto. Entonces parece que este es... Miren, más fuera a la izquierda, hay bastante ruido, ¿no? ¿Qué pasa con el Z1? Miren, el Z1 también representa algo. Miren, pasa de botín a
+02:27:22 Speaker 1: zapato,
+02:27:24 Speaker 2: parece que hay una sombra asociada a cierta dimensión. Y también no es tan claro, ¿cierto? No es tan predecido. Vamos a ver otro ejemplo. Mal ejemplo. Otro ejemplo. Tenemos un pantalón. ¿Qué pasa si del pantalón cambiamos el Z4? Se va volviendo...
+02:27:51 Speaker 1: Ah, miren.
+02:27:51 Speaker 2: Una especie de vestido, ¿no? Un vestido. Parece que esto muestra el vestido. ¿Qué pasa con el Z3? La luz parece, ¿no? No es tan bonito, tan fácil. ¿Cuántas dimensiones podemos reducir el entrenamiento?
+02:28:13 Speaker 1: ¿Cuántas dimensiones creen que esto
+02:28:16 Speaker 2: pueda seguir funcionando? ¿Qué dicen? ¿Cuánto mucho entrenamos este modelo? De ellos es mucho, es muy difícil. ¿Funcionará con dos dimensiones? ¿Qué dice? ¿Dos dimensiones, tres dimensiones? Vamos a hacerlo con dos dimensiones, ¿ya? Podemos representar toda la ROPAC, todas las imágenes de ROPAC con dos dimensiones. ¿Me sigue entrenando? ¿Ocho o diez?
+02:29:50 Speaker 1: Gracias.
+02:29:56 Speaker 2: Bien, miren, dos dimensiones. Ok, está siguiendo, sigue habiendo pantalón, sigue habiendo los chancresas. Y aquí se parecen demasiado. ¿Cómo estará esta dimensión en la gente? Con dos dimensiones, ¿qué pasará? Vamos a ver las dimensiones de la gente. Miren, solo tenemos dos dimensiones. Z0 y Z1. Vamos a ver qué pasa si volvemos ZC. Bueno, miren, parece que le estamos viendo más botín, ¿no? Más botín, nada, un taco. Y de ahí,
+02:30:40 Speaker 1: ven los patatas.
+02:30:43 Speaker 2: ¿Pasó? No sé qué pasó. Y para la izquierda, ¡ops! ¿Qué es esto? ¡Oh! No sé, no tengo algo. ¿Qué pasa cuando saltó uno? No sé, patillo. ¿Y qué pasa con la ropa? ¿Dónde está la ropa? Ah, no, la ropa estaba... Tenías que poner 5 y 4.
+02:31:03 Speaker 1: Ok.
+02:31:06 Speaker 2: 30 y 26. Ah, ahí están los pantalones. Ok. ¿Qué pasa si bajo el Z1? Ah, va a cambiar a un cuadrado. Ah, qué extraño. Entonces los autoencoders, a pesar que están reduciendo la dimensionalidad, no están pudiendo hacerlo de forma interpretada. A pesar que nos gustaría, nos encantaría que el autoencoder... puede interpretar directamente estas dimensiones que estamos comprobando que el autoincorner no lo está haciendo entonces con esto acabamos de dar la lección del día de hoy los dejo un poco con la duda ¿ya? para que ustedes
+02:31:47 Speaker 1: puedan... las...
+02:31:59 Speaker 2: 24 por 24. Se entrena. Se entrena, de 32 por 32, de 24 por 24 pasa a 2, y de 2 pasa de nuevo a esto, a 24 por 24, y con eso se hacen 2. Una vez se entrena, nosotros recogamos solo el centro y podemos variar los números. Con lo que ya se entrenó, ver qué genera. Ahí saben los esos. No. Bien, bien interesante la pregunta.
+02:32:33 Speaker: Ya. Bien.
+02:32:37 Speaker 2: Tenemos los siguientes.
+02:32:38 Speaker 1: Solamente vamos a ver tres.
+02:32:40 Speaker 2: Tres, uno. Este es un otro color, digamos, sencillo. Y aquí tenemos dos cosas. Tenemos uno de los datos con los que entrenamos el modelo. Y vamos a asumir que los datos son, por ejemplo, cinco, seis, ocho. ¿Ya? Los datos.
+02:33:00 Speaker 1: ¿Ya?
+02:33:01 Speaker 2: Va a entrar el modelo y el modelo va a cambiar sus pesos. Vamos a ver que mi puntuación es 1,
+02:33:06 Speaker 1: 1, 1. Todos los pesos van a
+02:33:10 Speaker 2: ser 1, para no complicarnos. Muy bien. Si todos los pesos son 1, y aquí voy a ponerle 2, en fin. ¿Ya? ¿Cuánto es el valor que va a ser aquí con estos datos de entrada? Pero la suma. ¿Cuánto va a ser este valor de salida? Este de aquí va a ser
+02:33:39 Speaker 1: 38.
+02:33:42 Speaker 2: Y este de aquí va a ser 19. Pues obviamente hizo un mal proceso de reconstrucción. Porque el 19 no es igual al 8. Y el 38 no es igual al 6. Y el 19 no es igual al 5. Entonces este modelo no está bien entrenado.
+02:33:59 Speaker 1: Vamos a entrenarlo.
+02:34:01 Speaker 2: Al entrenarlo, lo que vamos a hacer es básicamente cambiar los pesos. Vamos a hacer trampa. Vamos a hacer lo siguiente. Vamos a poner aquí 9. 9 para que acá salga 20. Ponemos un número redondo. Entonces, para que aquí salga 5, aquí necesitaríamos que el peso sea ¿cuánto? Un cuarto, ¿cierto? Aquí necesitaríamos que el peso sea... Vamos a poner un cuarto nada más. Y aquí vamos a poner un medio. Entonces, esta reconstrucción se acerca más.
+02:34:37 Speaker 1: No es perfecta,
+02:34:39 Speaker 2: pero se acerca más original. Ahora ya tenemos el modelo entrenado. Pero lo que estoy haciendo al momento de hacer el espacio latente, el espacio latente es este. Es el 20. Si el modelo está entrenado, los pesos están definidos. Si lo he entrenado, el proceso va a ser el Autocoder. Este 20 yo lo puedo variar. Yo le puedo poner 10. ¿Ya? Si le pongo 10, me va a dar otros resultados. Me va a dar 5. Aquí me va a dar 2.5 y 2.5. Entonces, lo que yo estoy haciendo es que al momento de cambiar estas variables, estoy cambiando estos valores. Y no es lo mismo que cambiar los pesos. Porque los pesos ya se van a definir y no entrenamos. Pero una vez ya esté entrenado el autoencoder, yo puedo cambiar los valores. ¿no? del espacio latente que son básicamente los valores que van las capas intermedias son capas más delgadas y esos valores me van a generar solamente una parte del decoder ¿ya? por eso es como que esto funciona como una especie de distribución solamente no puedo generar nuevos datos a través solamente de cambiar los valores que se encuentran en esta dimensión ¿me entiendes eso mejor? Bien, ¿más preguntas? Tengo dos preguntas. La primera es, si es que al momento de usar los tengores, que son redes neuronales, hay los conceptos de overpins. pero yo creo que no se han comentado esto sería algo muy impactante muy impactante lo vamos a ver cuando hagamos el LMS porque todos los modelos que han visto hasta ahora son modelos grandes o pequeños
+02:36:32 Speaker 1: ¿Qué es grande?
+02:36:34 Speaker 2: ¿Qué es pequeño? ¿Un millón de parámetros?
+02:36:39 Speaker 1: ¿Qué es lo
+02:36:42 Speaker 2: que pasa? El Machine Learning tradicional, que es lo que han aprendido antes, el overfitting es el paradigma. Todo el tiempo no efectivamente está mal, los modelos grandes, los modelos con muchos parámetros. van a verificiar. Sin embargo, en Deep Learning, la cosa cambia. ¿Por qué? Porque lo que se ha descubierto, de manera empírica, cuando un modelo tiene muchos parámetros, ¿bien? Empieza a decir, ¿no? Este es el train, no, este es el validation,
+02:37:21 Speaker 1: y este es el train. ¿Bien?
+02:37:26 Speaker 2: Entonces, ¿aquí qué es lo que dicen? ¿Cierto? Eso es lo que les han enseñado todo el tiempo. ¿Qué es lo que pasa con modelos con muchos parámetros? ¿Ya? Hay un proceso interesante con modelos bien diseñados. Se llama la curva del doble decaimiento. Y es esto que cae en un momento y luego esto vuelve a caer. ¿Ok? Entonces las redes de modelos profundas de muchos parámetros que se encuentran bien diseñadas son básicamente modelos que no van a overfitear. Porque va a ser más difícil que overfitear. Por eso es que hoy en día tenemos modelos con billones o miles de millones de parámetros que los entrenan por meses. Bajó una cantidad de datos inmensa. ¿Por qué no estaba perfiteando? Mi respuesta es no. Siempre he aprendido nuevas cosas. Estoy aprendiendo. ¿No? ¿Por qué sigue aprendiendo y no perfitea? Porque las redes neuronales profundas,
+02:38:38 Speaker 1: con
+02:38:39 Speaker 2: muchos parámetros bien diseñadas, tienen
+02:38:43 Speaker 1: estos
+02:38:46 Speaker 2: comportamientos... emergentes, que estamos creyendo. Y realmente pueden aprender de estos patrones de manera eficiente. Lo cual es raro. ¿Y por qué pasa eso? Bueno, hay toda una teoría que está interesada que se llama la hipótesis de la escala de las redes neuronales. En donde se habla un poco más al detalle. Pero todas son teorías empíricas. A ciencia cierta, lo único que tenemos claro es que, bueno, como nuestro cerebro funciona con muchas neuronas, estos mismos procesos ocurren con este tipo de neuronas artificiales. Con la analogía que hacemos. Pero más allá de eso, y no sabemos. No sé si me responde la pregunta. ¿Hay otra pregunta? La otra
+02:39:42 Speaker 1: es...
+02:39:44 Speaker 2: No sé si es que, o sea, si usamos dos datos diferentes, dos diferentes problemas, misma la direccionalidad, ¿no? Por ejemplo, para PSA no tendría sentido porque solamente se usa para un conjunto de datos y se usa la direccionalidad, pero si lo usas para otro, no tiene
+02:39:58 Speaker 1: sentido. Pero acá haciendo redes neuronales y
+02:40:02 Speaker 2: ya con concepto de transfer learning y todo eso que hemos visto, tendría sentido aplicar, es un autoencoder para un problema diferente. Este es un genial pensamiento, porque eso es lo que hacemos. Lo vamos a hacer luego.
+02:40:17 Speaker 1: Y
+02:40:18 Speaker 2: estos autoencoders, porque hoy en día les he mostrado el caso mal. Los autoencoders no funcionan para aprender esas características interesantes. Porque si aprendemos estas características propias de los datos, una distribución probabilística, tenemos características dimensionales que se pueden aplicar a todo. ¿Ya? Y eso tiene un concepto en Deep Learning que le llaman Embeddings. No sé si no han escuchado ese término. ¿Ya? Los Embeddings es eso. Son una relación de dimensionalidad representativa. ¿Ya? Y eso vamos a hallar luego. ¿Ya? Pero por ello va ese camino. ¿Es así? ¿Es así? ¿Es así? ¿Sí?
+02:40:56 Speaker 1: ¿Ya? ¿Había una pregunta más? Sí. ¿Lo son? ¿Es así? ¿Es así? ¿Es así?
+02:41:05 Speaker 2: No, ambos. Para hacer backpropagation necesitas básicamente todo. Entrada, salida, comparas entrada con salida y backpropaguea.
+02:41:18 Speaker 1: Hay muchas formas de hacerlo,
+02:41:20 Speaker 2: pero las más básicas. ¿Una otra pregunta? Muy bien. Seguimos las preguntas. Se van a hacer las preguntas para que ustedes puedan revisar. ¿Cómo podemos interpretar el espacio latente de un autoencoder? ¿Cómo podemos medir la función de pérdida? ¿Cuantificar la incertidumbre? Todos interesantes para que vayan revisándolos para la siguiente semana. Muy bien. Entonces, eso sería la clase de día de hoy. Les agradezco por su atención y nos vemos la siguiente semana. Estos grupos, por favor, se pueden acercar para conversar con nosotros. ¿Quieren hacer experimentos? A mí me preocupa.
+02:42:32 Speaker 1: ¿Por
+02:42:33 Speaker 2: qué me preocupa? Porque los
+02:42:35 Speaker 1: modelos... Es súper sencillo. Por eso es que... Incluso si quito mi video, yo creo que va a salir altísimo. Va a salir más desde ahí. Yo creo que haría que cerrar. O sea, yo creo que estamos en un terreno un poco rígoso. Haz algo que me olvide comentar. ¿Tiene un problema que se forma en Tierra? Sí, no. Sin este... Y sin hacer transferencia.
+02:43:30 Speaker 2: Reconocer propiamente. Para que
+02:43:33 Speaker 1: en mis test pruebe con las pacientes sin hacer nada. Y la cura se instale más de esa pena. Pero ¿cómo has postulado? Me interesa. Es muy bien. O sea. sin hacer transferir y detecta más del 70%. O sea, el problema es fácil, por eso digo. No sé si...
+02:44:14 Speaker 2: O sea...
+02:44:16 Speaker 1: ¿El setformer?
+02:44:18 Speaker 2: No,
+02:44:21 Speaker 1: primero, sin transformar ni sin nada. El setformer solito. El método de... El setformer. El setformer. Entonces, ese modelo de entrenado, yo tengo que siempre... Le meto esas 700 imágenes que tengo etiquetado. Sin entrenar, así como el pre-entrenado. ¿Cuál es el apureo? ¿Será más de 70%? Entonces... ¿Qué tipo de datos? ¿Qué tipo de datos? ¿Qué tipo de datos? ¿Qué tipo de datos? ¿Qué tipo de datos? ¿Qué tipo de datos? ¡Sí! No, no, no,
+02:45:39 Speaker 2: no. ¡Gracias!
+02:46:12 Speaker 1: No importa qué detención es el número de cámaras. No es tan fácil. Me parece que sea un video de una hora, sino que sea... ¿Tú qué opinas de eso? Yo creo que es bien fácil el problema. Entonces, quizás... Eso no me voy a olvidar. La data que está así por defecto es pre-entrenado. O sea, de por ejemplo, tiene siempre... No, claro. ¡Suscríbete! No he leído mucho eso. Ese no he visto. Vale. No, yo también tengo... A que... Sí, así es. Pero lo que sí está público, sí que vea que aquí está enfermo. Bueno, enfermo no, o sea, que... O también este... O también este... ¡Gracias!
+02:49:57 Speaker 2: ¿Tenemos que hablar con
+02:49:59 Speaker 1: el postre? ¿El documento también? ¿O no? Ok, ok. Mejor si tú hablas, ¿no? No, no, no. No se vuelve a conocer nada. ¿Dónde? Gracias por ver el video. Gracias por ver el video. Es una opción. Básicamente para... ¿Está bien?
+02:53:11 Speaker 2: ¿Está bien?
+02:53:40 Speaker 1: ¿Cómo? ¿Cómo? ¿Cómo? ¿Cómo? ¿Cómo? ¡Gracias! ¡Gracias!
+02:54:50 Speaker 2: Yo no diría,
+02:54:52 Speaker 1: ¿cuál es el rato? No, obviamente. Para fresas. Y esa es la idea para fresas. ¡Gracias! ¡Gracias!
+02:56:44 Speaker 2: Gracias
+02:56:45 Speaker 1: por ver el video. El póster del Biblia es el 16 de diciembre. ¿Cuál es el segundo? ¿Quién fue? Ah, porque mira Se va a aparecer al frente ¿Qué hacen? ¿Te preocupa que el correo es o no? No, no, no. ¡Gracias! ¡Suscríbete! ¿Pero es otro problema? ¿Pero entran en Stinker? No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, Gracias. ¡Suscríbete! ¿Puedes entrar en tu API? ¿Puedes entrar en tu API? ¿Puedes entrar en tu API? ¿Puedes entrar en tu API? ¿Puedes entrar
+03:01:27 Speaker 2: en tu API?
+03:01:35 Speaker 1: ¿Puedes entrar en tu API? Pero ahí, o sea, me refiero a esa persona que ha hecho. Entonces, ¿cuál es el tipo de pagación de la demanda? ¡Suscríbete! Gracias.
+  

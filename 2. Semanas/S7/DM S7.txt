@@ -1,0 +1,1028 @@
+# DM S7
+
+  Meeting started: 13/10/2026, 5:08:53 p. m.
+  Duration: 141 minutes
+  Participants: Speaker 1, Speaker 2
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/JVLxSRJmNk8EeauJ6fPj?o=txt)
+
+    
+
+  
+
+  
+
+  ## Transcript
+
+  00:00 Speaker 1: La práctica de mecánicos... La computación cuántica es... Y hoy vamos a continuar con
+00:15 Speaker 2: la parte de lo que son convolutores.
+00:20 Speaker 1: Y
+00:21 Speaker 2: cómo es que se han ido dando distintas optimizaciones, no las
+00:27 Speaker 1: optimizaciones que nos hemos visto en lo que son, por ejemplo,
+00:34 Speaker 2: las estrategias para poder visualizar los pesos con
+00:38 Speaker 1: las
+00:40 Speaker 2: mismas funciones de optimización sino
+00:45 Speaker 1: a partir de las estructuras y
+00:49 Speaker 2: tradicionales
+01:04 Speaker 1: con Pablo. Pablo fue también profesor en el curso.
+01:07 Speaker 2: Ahora está terminando su doctorado en Reino Unido.
+01:11 Speaker 1: Y bueno,
+01:12 Speaker 2: esperamos que en algún momento regrese. No sé si lo conoces a Pablo y a alguien que lo conoces con él.
+01:20 Speaker 1: No, estoy en Reino Unido. Y ya está.
+01:44 Speaker 2: Y bueno, vamos a ir un poquito de repaso que hemos ido viendo. Y cómo es que llegamos, por ejemplo, hasta aplicaciones como certificación semántica y certificación de ofechas. Son dos aplicaciones importantísimas en el
+02:00 Speaker 1: servicio de computación. A ver, acá tenemos
+02:07 Speaker 2: una
+02:09 Speaker 1: preguntita, ¿no?
+02:15 Speaker 2: Tenemos ahí esa imagen de entrada, o este bloque de entrada, digamos así,
+02:19 Speaker 1: y luego
+02:20 Speaker 2: le aplicamos nosotros aquí una convolución de 2D, 16 filtros, ¿no? De uno por uno, activación relook paren de save, ¿cuál sería el shape resultante? ¿Cuál sería el resultado?
+03:11 Speaker 1: ¿La D?
+03:14 Speaker 2: ¿O la D?
+03:27 Speaker 1: ¿6.2 de uno por uno? ¿La D? D. ¿Por qué la C? A él.
+04:12 Speaker 2: Si yo tengo un bloque, ¿no? Bloque, en este caso, es el bloque que está llegando, 64 por 64,
+04:22 Speaker 1: y tiene una profundidad, ¿no?
+04:27 Speaker 2: De 8. ¿Ok? Entonces, estaremos viendo de que están llegando acá.
+04:35 Speaker 1: 8
+04:35 Speaker 2: mapas de activación, si queremos llamarlo así, de dimensión 64.
+04:43 Speaker 1: Luego a
+04:46 Speaker 2: este le aplicamos un filtro de 1. Le aplicamos un filtro de 1 por 1. ¿Cuál es el efecto que va a tener aquí? Para comenzar, ¿podría aplicar el circuito de uno por uno aquí?
+05:14 Speaker 1: Por la dimensión de 8. Entonces puede alinear.
+05:20 Speaker 2: Tiene que tener
+05:21 Speaker 1: profundidad 8.
+05:26 Speaker 2: Entonces ahí sí puedo fijar. Es decir, este filtro, por ejemplo, de
+05:32 Speaker 1: 1x1,
+05:34 Speaker 2: profundidad 8, lo coloco aquí la
+05:39 Speaker 1: primera vez, tiene profundidad 8.
+05:44 Speaker 2: Y lo que voy a hacer es multiplicar
+05:46 Speaker 1: justamente aquí cuántos valores tengo en
+05:48 Speaker 2: este filtro de 1 por 1.
+05:52 Speaker 1: Tengo ocho valores. Los
+05:55 Speaker 2: ocho valores van a multiplicar a los ocho valores que tenemos aquí en esta primera ubicación
+05:59 Speaker 1: de profundidad. Entonces va a
+06:02 Speaker 2: hacerse la convolución. ¿Y cuál va a ser el resultado? Voy
+06:06 Speaker 1: a
+06:08 Speaker 2: tener aquí la resultante. La resultante, por lo que me dije ya, para indexé.
+06:22 Speaker 1: y el
+06:23 Speaker 2: resultante va a ser esta primera
+06:25 Speaker 1: liga luego hago
+06:31 Speaker 2: el recorrido para la siguiente posición igual tengo la siguiente aplico
+06:37 Speaker 1: el filtro de
+06:39 Speaker 2: uno por uno en esta en esta siguiente posición y luego tengo el
+06:46 Speaker 1: siguiente y así se cierre Ahora, fíjense que al aplicar un filtro de uno por uno,
+06:56 Speaker 2: he obtenido un mapa de activación de 64 por 64, profundidad. Y acá me dicen que estoy aplicando, debo
+07:10 Speaker 1: aplicar 16 filtros de
+07:12 Speaker 2: convolución de uno por uno. Entonces...
+07:17 Speaker 1: voy a tomar un
+07:22 Speaker 2: segundo filtro igual hago el mismo procedimiento y
+07:35 Speaker 1: me
+07:36 Speaker 2: va a comenzar a generar
+07:42 Speaker 1: Segundo más paréntesis.
+07:44 Speaker 2: Y luego así.
+07:47 Speaker 1: Tengo. ¿Cuántos filtros estoy? Este.
+07:50 Speaker 2: Dice uno por uno. Acá de ocho va a ser dieciséis filtros.
+07:56 Speaker 1: Dieciséis. Dieciséis filtros. Dieciséis filtros.
+07:58 Speaker 2: ¿Ya? ¿Y aquí cuánto me va a dar?
+08:01 Speaker 1: Dieciséis. Ahora dieciséis filtros. 16 16 entonces
+08:12 Speaker 2: yo voy a obtener aquí
+08:13 Speaker 1: un
+08:17 Speaker 2: che de 64 por 64 profundidad
+08:21 Speaker 1: y ya va a ser
+08:37 Speaker 2: ¿Entendió cómo funciona el filtro 1 por 1? Recuerden que cuando nosotros definimos una convolución de 16 filtros de 1, no estamos especificando la profundidad. Ya, internamente, la librería, ¿no? En este caso, lo que agarra es, ¿cuánto es el bloque que está entrando? Y a este filtro le coloca esa profundidad. Entonces, decidimos uno, uno, uno, y ahí, defendiendo de la profundidad
+09:09 Speaker 1: del bloque que está llegando,
+09:10 Speaker 2: también le define la
+09:12 Speaker 1: profundidad. No especificamos. Depende de cómo está llegando el bloque. Ok. Y tenemos otro. ¿Cuál es el shape de cada filtro? ¿Cuál es el shape de cada uno? Uno, uno, ocho.
+09:43 Speaker 2: ¿Cuántos filtros de uno por uno por ocho
+09:45 Speaker 1: se están aplicando?
+10:33 Speaker 2: ¿Cuál
+10:34 Speaker 1: es el shape in average? y cuál es el resultado
+11:15 Speaker 2: Estamos aplicando prácticamente el
+11:18 Speaker 1: promedio a todos, no solo,
+11:21 Speaker 2: y nos va a haber conocido un
+11:23 Speaker 1: solo valor.
+11:24 Speaker 2: Y la profundidad se garantiza.
+11:51 Speaker 1: ¿Estamos capaces de hacer algo?
+12:03 Speaker 2: Aquí tenemos una... Bueno, acá está
+12:05 Speaker 1: sencillo. ¿Cuál es la capa resultante?
+12:11 Speaker 2: Y cuál
+12:14 Speaker 1: es el año 7. Aquí tenemos 7. Aquí tenemos el año 6. Aquí tenemos el año 8.
+12:21 Speaker 2: Y aquí tenemos cuál sería el resultante
+12:23 Speaker 1: de Max Cooling de 4. ¿Cómo hacemos clasificación? Si tiene una
+12:42 Speaker 2: capa totalmente conectada.
+12:53 Speaker 1: Control Dot, por ejemplo. ¿Por qué no usamos todas las conexiones de una capa Control Dot, no? No, pero sí. Ah, sí. Ah, ok.
+13:17 Speaker 2: El draw power lo aplicamos sobre las capas fully con las capas de, pero te reduce el número de conexiones. En este caso, está pidiendo eliminar
+13:32 Speaker 1: las capas.
+13:43 Speaker 2: Si es que recordamos, a ver.
+14:33 Speaker 1: ¿Cuántos
+14:34 Speaker 2: pesos tenía la LENET? ¿Saben?
+14:58 Speaker 1: 60.000. 60.000 parámetros. 60.000 pesos. Luego, vamos, AlexNet.
+15:21 Speaker 2: 62 millones de
+15:26 Speaker 1: parámetros. ¿No? 62 millones.
+15:37 Speaker 2: ¿Dónde creen que está la mayor cantidad de
+15:40 Speaker 1: parámetros en esta configuración?
+15:43 Speaker 2: Acá tenemos la punta. ¿Dónde creen que está la mayor cantidad? Si nosotros simplemente
+16:00 Speaker 1: vemos aquí 4
+16:03 Speaker 2: .096 tenemos acá y esos 4.096 están yendo a una siguiente capa también de 4.096.
+16:12 Speaker 1: ¿Cuántos parámetros tenemos?
+16:14 Speaker 2: 4.096 por 4.096. 16 millones.
+16:37 Speaker 1: ¿No? 16 millones.
+16:40 Speaker 2: Y esos 16 millones por... No, no serían.
+16:46 Speaker 1: 96 por 96.
+16:49 Speaker 2: Y luego más... ¿Cuánto está llegando acá? Mil.
+16:54 Speaker 1: 1096 por mil
+16:56 Speaker 2: serían unos 4 millones. ¿Está? 4 millones más los 16 millones.
+17:02 Speaker 1: Tenemos más de 20 millones ahí.
+17:11 Speaker 2: Y aparte lo que está llegando aquí, imagino que el Platin se está haciendo acá y llega acá, bueno, ahí nomás, ¿no? El Platin y llegar a las Fully Connected, ahí también hay un gran chat. Más del 50% de los parámetros están en las Fully Connected,
+17:29 Speaker 1: ¿no? En las capas Fully Connected.
+17:32 Speaker 2: ¿Ya? Acá igual, si nosotros hacemos, por ejemplo, dice 60.000, ¿no?
+17:37 Speaker 1: Acá no más cuántos tenemos.
+17:40 Speaker 2: Recuerden que acá ocurrió un flatten, ¿no? Un flatten acá, que
+17:43 Speaker 1: tenemos de 5
+17:47 Speaker 2: por 5, me parece que tenemos...
+17:50 Speaker 1: 5 por 5,
+17:52 Speaker 2: me parece que eran 800, ¿no? 800, 800 por 120.
+18:00 Speaker 1: Cientos por ciento veinte. Más.
+18:07 Speaker 2: 120
+18:08 Speaker 1: por ciento cuatro. Más ciento veinte por ochenta y cuatro. Más. Cuatro por diez. Más. Cuatro. Y acá no estoy funcionando el día. O sea, solamente.
+18:33 Speaker 2: 2.000 más de 60.000
+18:36 Speaker 1: 60.000
+18:49 Speaker 2: Acá está dando la descripción. 60.000 el total. Aquí está bien. Tenemos acá 5% para la
+18:57 Speaker 1: capa 5 convolucional.
+18:59 Speaker 2: 48.000. Fíjense. Por la capa 5, 48.120 mapas.
+19:07 Speaker 1: Acá tengo el 10.000. Y la capa.
+19:11 Speaker 2: Solamente entre la capa 5 y la capa 6 tenemos 48,
+19:16 Speaker 1: 50 y 45 mil. ¿No? Capas 5 y 6. ¿No? Entonces,
+19:30 Speaker 2: el gran dilema era ese, ¿no? Es decir, fíjense ustedes acá, tanto de NET, Alex NET y algunas arquitecturas como también en
+19:39 Speaker 1: BGG, porque los BGG,
+19:41 Speaker 2: ¿cuántos tenemos acá? Fíjense.
+19:43 Speaker 1: ¿No? Fully Connected, Fully Connected, Fully Connected, Fully Connected. Y BGG, ¿cuántas palabras tenían? BGG. BGG tiene 138
+19:59 Speaker 2: millones de palabras. La hermana mayor tiene 144 millones de parques.
+20:08 Speaker 1: Y fíjense que del BGG de 16 al
+20:12 Speaker 2: BGG de 19,
+20:14 Speaker 1: no hay mucha diferencia.
+20:18 Speaker 2: Ustedes pueden apreciar aquí, ese
+20:20 Speaker 1: es el 16, ese es el 19.
+20:22 Speaker 2: Se está aumentando capas convolucionales. Pero las fully connected se mantienen. Y no hay mucha diferencia, ¿no? De 138 millones a 144. El gran problema está aquí, de
+20:39 Speaker 1: nuevo, ¿no? En las Fully Connect. Ah, la capa Fully Connect. 4 millones.
+20:48 Speaker 2: La capa Fully Connect de 1, fíjense, la Fully Connect de 1 tiene 102 millones. La funiconector 2 tiene 16 minutos. Y la funiconector 3 tiene 4 minutos.
+21:01 Speaker 1: Fíjense,
+21:02 Speaker 2: la gran mayoría de parámetros están en la funiconector. Entonces, ahí es donde viene, ¿no?
+21:13 Speaker 1: La pregunta. ¿Cómo hacemos clasificación si es una capa totalmente
+21:19 Speaker 2: conectada? ¿Por qué viene esta pregunta? Porque se identifica de que justamente es en las capas fully connected.
+21:26 Speaker 1: ¿Están los mayores números de parámetros? ¿Oye,
+21:28 Speaker 2: será que podemos conviar a estar fully connected en las capas densas y solamente hacer convolución con
+21:35 Speaker 1: capas, ojalá, solamente hacer clasificación con capas
+21:38 Speaker 2: convolucionales? ¿Cuál sería?
+21:44 Speaker 1: ¿Cuál sería la cuestión
+21:48 Speaker 2: a seguir? Ahora, ¿cuáles son las ventajas de una red totalmente convolucional?
+21:52 Speaker 1: Eso lo vamos a seguir. Acá está.
+21:55 Speaker 2: Aquí tenemos la fúlica negra, ¿correcto? Acá vienen las convoluciones, luego al final hacemos un flate y hacemos la
+22:06 Speaker 1: salida fúlica negra. La idea está en obviar estas capas tensas y solamente tener salidas
+22:16 Speaker 2: directas de clasificación solamente a partir de convolución. Y ahí nos ayuda el Global Average Pulling. ¿Qué es lo que tenemos acá?
+22:43 Speaker 1: ¿Cuántos Global Average Puging estamos aplicando?
+22:46 Speaker 2: Depende de la cantidad de
+22:48 Speaker 1: elementos
+22:53 Speaker 2: o de
+22:54 Speaker 1: clases que tenemos en el programa.
+22:57 Speaker 2: Entonces, en vez de estar teniendo una salida para cada una de las clases,
+23:03 Speaker 1: simplemente a partir de obviamos estas Puging Connected y vamos a...
+23:10 Speaker 2: para aplicar la palabra escurina encima de
+23:13 Speaker 1: las capas convolucionales y de
+23:16 Speaker 2: la última capa convolucional que está llegando y tenemos razón. ¿Quién aplicó esta estrategia?
+23:41 Speaker 1: Buenas tardes.
+23:49 Speaker 2: Fíjese, Resne 50 solo
+23:51 Speaker 1: tiene 25 millones. A diferencia de Alex Ney, Alex
+23:55 Speaker 2: Ney tenía 60 millones.
+23:58 Speaker 1: BGG tenía más de 100 millones. Y Resne tiene 25 millones. O sea, 50.
+24:09 Speaker 2: Resne 101 y Resne 152 tienen 44 millones y 60 millones.
+24:16 Speaker 1: Y estas son
+24:17 Speaker 2: 152
+24:19 Speaker 1: capas.
+24:21 Speaker 2: Y BGG era de 19 capas. Y la cantidad de parámetros es mucho menor.
+24:36 Speaker 1: ¿Y dónde está la diferencia?
+24:50 Speaker 2: Está en la red.
+24:54 Speaker 1: Fíjense que tenemos convoluciones, bloques convoluciones, bloques
+24:59 Speaker 2: convoluciones, bloques convoluciones.
+25:01 Speaker 1: ¿Qué tenemos acá? Average.
+25:05 Speaker 2: Ya lo tenemos público.
+25:08 Speaker 1: Average pulling de frente a las líneas. Qué salida, ¿no? Porque son big clases. Tiene ese problema, ¿no? Que tenemos del English Net, ¿no? Y de frente ahí, software.
+25:26 Speaker 2: y en todo el número de capas convocionales y
+25:55 Speaker 1: se aplican los capítulos de
+25:57 Speaker 2: 1 por 3
+26:01 Speaker 1: por 3 por 1 ellas
+26:05 Speaker 2: son bloques grandes 2 por 6 por
+26:07 Speaker 1: 3 por 4 por 3 acá por 23 Entonces acá,
+26:32 Speaker 2: vamos a responder estas dos preguntas. ¿Cómo hacemos clasificación si es una capa totalmente conectada? Haciendo un global average pooling encima del último bloque que está llegando. ¿Qué ventajas tiene de una red totalmente convolucionada? ¿Cuáles son las
+26:51 Speaker 1: ventajas de una red totalmente como la
+26:55 Speaker 2: red?
+26:59 Speaker 1: Tiene mucho menos parámetros.
+27:02 Speaker 2: Más rápido, más fácil de entrenarlo. Acá tenemos el global average
+27:16 Speaker 1: pooling. Simplemente le aplicamos acá, por ejemplo, 6.6,
+27:23 Speaker 2: de profundidad 3,
+27:25 Speaker 1: le aplicamos el global average
+27:26 Speaker 2: pooling y tenemos la salida de texto. Y ahí lo podemos identificar como que cada uno de ellos pertenece a una clase. ¿Qué quiere decir? Que cuando yo tengo, por ejemplo, aquí, ¿no? Si yo tengo acá 10 clases, entonces este bloque que va a estar, va a llegar a tener una profundidad de 10 también, ¿no? Y eso es sencillo de hacerlo, ¿no?
+27:56 Speaker 1: Para hacerlo acá.
+28:08 Speaker 2: Claro, así un globo de la Average Pooling sobre mil y hasta ahí tiene las mil salidas. Entonces,
+28:31 Speaker 1: les indicaba, ¿no? Tenemos acá las convoluciones, convoluciones,
+28:35 Speaker 2: convoluciones, convoluciones y el último bloque debe tener la misma cantidad de clases
+28:45 Speaker 1: que yo tengo el problema. En el globo de la Average Pooling tengo ahí
+28:49 Speaker 2: las salidas para cada una de las clases. ¿Qué es lo interesante? Si es que nosotros conseguimos verificar, por ejemplo, ¿no? En cada uno de estos últimos... Porque finalmente,
+29:02 Speaker 1: esta última cámara que está llegando, ¿qué cosa es?
+29:05 Speaker 2: Son mapas de activación. Y si conseguimos visualizar cada una, ¿qué es? ¿No? Vamos a estar identificando, por ejemplo, cómo es que la red convolucional está concentrándose en ciertas áreas. Y es un poco lo que ya conocemos como un motor que está poniendo mayor atención,
+29:25 Speaker 1: ¿no? La red.
+29:28 Speaker 2: ¿Ya? A la clase 1, fíjense por acá, le ponen atención. A la clase 2, le está poniendo atención más para aquí. A
+29:34 Speaker 1: la clase N,
+29:35 Speaker 2: más atención para acá. Dependiendo,
+29:37 Speaker 1: pues, del tipo de clases.
+29:39 Speaker 2: Entonces, ahí vamos viendo, ¿no? Que
+29:41 Speaker 1: a la red, al opcionarse, y darle así, este último
+29:44 Speaker 2: bloque composicional,
+29:47 Speaker 1: sobre el cual vamos a aplicar luego a la Sputnik, va a comenzar como mapas de activación donde la red, por ejemplo, es la opcionación, por las ciertas regiones, ¿no?
+30:08 Speaker 2: Bueno, ahí tenemos distintas
+30:10 Speaker 1: arquitecturas que se han ido dando. Y siempre buscando disminuir,
+30:18 Speaker 2: ¿no? Fíjense acá tenemos arquitecturas que son las más pesadas, las BGG,
+30:22 Speaker 1: ¿no? Las más pesadas. Y luego poco a poco se han ido...
+30:28 Speaker 2: Buscando determinar, especialmente, por ejemplo,
+30:33 Speaker 1: toda la idea de
+30:34 Speaker 2: poder lanzar estas arquitecturas
+30:38 Speaker 1: dentro de dispositivos móviles. Por ejemplo, tenemos esta MobileNet.
+30:45 Speaker 2: La MobileNet tiene una...
+30:51 Speaker 1: La MobileNet es muy interesante. Para recordar.
+31:53 Speaker 2: Fíjense, la moda LED
+31:55 Speaker 1: utiliza esta estrategia, ¿no? Un DeepWise Convolutional Filters
+32:04 Speaker 2: y otro que es el
+32:06 Speaker 1: de, ¿sí acá, no?
+32:10 Speaker 2: El PointWise Convolutional
+32:13 Speaker 1: Filters.
+32:17 Speaker 2: Y ahí ya tenemos, por ejemplo, los filtros convolucionales normales. Entonces, ¿qué sucede? Yo tengo, por ejemplo, un bloque que está llegando. 64, 64, y tengo una profundidad, yo que sé,
+33:13 Speaker 1: y 8.
+33:15 Speaker 2: Y le aplico... Le aplico...
+33:24 Speaker 1: Si me ocurre, le aplico... 32. 32.
+33:37 Speaker 2: Y le aplico... Filtros.
+33:45 Speaker 1: de 3x3 y
+33:48 Speaker 2: le aplico 8 filtros 8 filtros de 3x3 8
+33:58 Speaker 1: filtros de 3x3
+34:07 Speaker 2: va a ser el resultado y le pongo acá el par
+34:12 Speaker 1: y el diseño también tiene que ser el mismo tamaño el resultado voy a tener como
+34:55 Speaker 2: ya tiene filtros
+34:59 Speaker 1: Cuando hacemos nuestra convolución normal de ayer, ¿no? Nuestra convolución
+35:03 Speaker 2: normal, ¿qué hacemos nuestro, no? Nuestra convolución al 2D, ¿cuánto serían? 8 de 3 por 3, ¿no?
+35:15 Speaker 1: Y es
+35:16 Speaker 2: porque tendrán 32.
+35:18 Speaker 1: 32.
+35:20 Speaker 2: Y así también va a tener 32. Acabamos de ver una resultante para el índice, hemos dicho, acertamente. 64 por
+35:35 Speaker 1: 64. Bien. Pensaba que el perin resulta el tamaño a, en ese caso, 62 más y 62. Claro, estamos poniendo el pan dulce.
+36:06 Speaker 2: O sea, que mantenga el tamaño.
+36:12 Speaker 1: Vamos pidiendo que mantenga el tamaño.
+36:19 Speaker 2: Ahora, la pregunta es, ¿cuántas operaciones hemos
+36:25 Speaker 1: hecho?
+36:37 Speaker 2: Solamente aquí, por ejemplo. ¿Cuántas tenemos aquí? 3 por 3 por 32.
+36:41 Speaker 1: ¿No? 3 por 3 por 32.
+36:46 Speaker 2: Y ya lo vamos a recorrer. ¿No? ¿Lo vamos a recorrer cuántas veces?
+36:58 Speaker 1: Lo vamos a recorrer.
+37:05 Speaker 2: Por sesenta y cuatro, ¿no? Por sesenta y cuatro. Por sesenta y cuatro.
+37:11 Speaker 1: Por sesenta y cuatro. ¿Y eso? ¿Cuántos minutos? ¿Por ocho? ¿Y cuánto la misma? ¿Nueve millones? ¿Nueve millones? ¿Cuánto? ¿Cuánto? ¿Cuánto? ¿Cuánto?
+37:44 Speaker 2: ¿Cuánto? ¿Cuánto? Habrá una forma
+37:56 Speaker 1: de
+37:58 Speaker 2: llegar al mismo resultado, bueno, no al mismo resultado, obviamente no es el mismo resultado, me refiero al mismo shape como resultante,
+38:06 Speaker 1: pero
+38:08 Speaker 2: con una menor cantidad de
+38:09 Speaker 1: operaciones. es lo que nos dice este artículo de MobileNet primero hacemos un LeapWise Convolutional y luego un PointWise Convolutional
+38:38 Speaker 2: Tenemos el blog que está llegando de la
+38:41 Speaker 1: profundidad
+38:49 Speaker 2: de la profundidad de
+38:51 Speaker 1: la
+38:51 Speaker 2: profundidad. Dice que le ha aplicado su Deep White
+38:59 Speaker 1: Convolutional Experience.
+39:06 Speaker 2: Es lo que dice acá.
+39:13 Speaker 1: Fíjense, allá estamos aplicando,
+39:15 Speaker 2: el D sub K era 3 por 3, 3 por 3 aplicábamos normal. Acá nos dice que apliquemos filtros de 3 por 3, pero de profundidad 1. Y aplicamos tantos filtros como
+39:38 Speaker 1: es
+39:39 Speaker 2: la profundidad del bloque que está llegando.
+39:43 Speaker 1: En otras palabras, vamos a aplicar un
+39:46 Speaker 2: filtro de 3x3. Acá tenemos 32, 32, ya.
+39:51 Speaker 1: 32, 32 mapas de activación.
+39:54 Speaker 2: Entonces vamos a aplicar 32 filtros de
+39:58 Speaker 1: 3x3, ya. 3x3, profundidad. Uno.
+40:09 Speaker 2: Pero encima de
+40:11 Speaker 1: cada mapa de activación.
+40:13 Speaker 2: Encima de él. O sea, el primero vamos a aplicarlo encima de este
+40:18 Speaker 1: primer mapa.
+40:19 Speaker 2: El segundo. También profundidad uno.
+40:26 Speaker 1: Aplicamos sobre
+40:28 Speaker 2: el segundo.
+40:29 Speaker 1: O sea, aplicamos como ya profundidad.
+40:32 Speaker 2: Esto no tiene profundidad. Vamos aplicando filtros encima de cada mapa.
+40:37 Speaker 1: De cada uno. ¿Ya? ¿Y esto qué nos va a dar como resultado? Ya tenemos treinta y dos. Treinta y dos. ¿Qué nos va a dar como resultado? ¿Qué nos va a dar? Treinta y dos. También nos va a dar treinta y dos. 64, 64 y también está 30. Ahora, sobre esta resultante, ya vamos a obtener esto de acá,
+41:19 Speaker 2: ahí aplicamos
+41:20 Speaker 1: Point-Wise Convolution, es decir,
+41:23 Speaker 2: filtros de uno por uno de profundidad n.
+41:32 Speaker 1: y en
+41:33 Speaker 2: el filtro de 1 por 1 de profundidad en
+41:37 Speaker 1: en qué cosa es digamos aquí aplicamos filtro de
+41:56 Speaker 2: 1x1 profundidad de 4 y qué profundidad va a tener este de acá
+42:00 Speaker 1: 32 y
+42:04 Speaker 2: luego otra vez aplicamos filtro de 1x1
+42:08 Speaker 1: profundidad 32 y así tenemos acá cuántos filtros que hemos aplicado 8. ¿Cuál va a ser el resultado que tenemos aquí?
+42:28 Speaker 2: 64.
+42:30 Speaker 1: 64.
+42:31 Speaker 2: 64. Profundidad.
+42:34 Speaker 1: 8. Es el mismo resultado que estamos teniendo.
+42:43 Speaker 2: El mismo resultado del shape. ¿Ya? Ojo, no son los mismos valores ¿No?
+42:50 Speaker 1: Pero en shape es el
+42:52 Speaker 2: mismo bloque La pregunta viene ¿Cuántas operaciones estamos haciendo?
+43:02 Speaker 1: Y tres por tres tenemos, ¿no? Tres por tres. Tres por tres.
+43:11 Speaker 2: Con sesenta y cuatro por sesenta y cuatro,
+43:14 Speaker 1: ¿verdad? Tres por tres por sesenta y cuatro por sesenta y cuatro por sesenta y cuatro por sesenta y cuatro.
+43:32 Speaker 2: ¿Y por cuántos tenemos acá?
+43:50 Speaker 1: 32. No, dos veces 32. Son 32 filtros. Sí, y el tamaño del input también. ¿Cuántos tenemos? Uno por uno, más uno por uno,
+44:31 Speaker 2: por oportunidad,
+44:33 Speaker 1: un por dos. ¿No falta un treinta y dos? Un por
+44:46 Speaker 2: uno por treinta y dos, y acá tenemos...
+44:51 Speaker 1: ¿Cuánto por 34? Sí, creo que la profundidad. A ver, 32 por el número de filtros y 32 por la profundidad. ¿La primera? Sí.
+45:09 Speaker 2: ¿La profundidad? No, pero estamos aplicando un filtro encima del primero.
+45:19 Speaker 1: No estamos aplicando a todas.
+45:22 Speaker 2: Este tiene profundidad 1.
+45:27 Speaker 1: Tiene profundidad 1. Lo aplicamos al primer mapa.
+45:34 Speaker 2: Este segundo se aplica al segundo.
+45:38 Speaker 1: Son 32. No le estamos aplicando a la profundidad.
+45:52 Speaker 2: y ahí tenemos bien a este de aquí y
+45:57 Speaker 1: uno por uno
+46:06 Speaker 2: Y por 64 por 64, ¿está bien? Por 8.
+46:11 Speaker 1: Y por 8. A ver, ¿cuánto habrá? Tengo que equivocar, pero a ver que esa... ¿2 millones? ¿Cuánto da?
+46:31 Speaker 2: ¿Aquí cuánto da? 3 por 3 por 24, 64 1
+46:45 Speaker 1: .179.348 1.179 .348 1.179.348 más FH 1.148.148.148. Dos millones doscientos
+47:20 Speaker 2: veinte mil.
+47:21 Speaker 1: Dos millones doscientos veinte mil. Dos millones doscientos veinte mil. Doscientos veinte mil. Doscientos veinte mil. Doscientos veinte cuatro.
+47:28 Speaker 2: Doscientos veinte cuatro. Doscientos veinte cuatro.
+47:32 Speaker 1: Dos millones.
+47:36 Speaker 2: O perdón, de 9 millones, es una reducida a
+47:40 Speaker 1: 2 millones. Por eso se llama mobile net, ¿no? Ya.
+47:50 Speaker 2: Las convoluciones tradicionales que se hacen es
+47:54 Speaker 1: conseguir a través de esa estrategia, ¿no? Producir prácticamente algo. Ya. Y...
+48:07 Speaker 2: Y claro que pierde algo de precisión, pero no pierde mucho. Pierde un punto.
+48:25 Speaker 1: Entonces ya,
+48:27 Speaker 2: por ejemplo, una arquitectura de dos millones de parámetros, que
+48:33 Speaker 1: más o menos serán dos megas, ya podríamos lanzarla
+48:38 Speaker 2: dentro de un móvil net,
+48:40 Speaker 1: de un
+48:40 Speaker 2: dispositivo móvil, mucho más,
+48:42 Speaker 1: menos pesado.
+49:05 Speaker 2: Entonces fíjense que la,
+49:07 Speaker 1: la, si
+49:08 Speaker 2: está por acá.
+49:13 Speaker 1: A ver,
+49:17 Speaker 2: MobileNet, MobileNet,
+49:19 Speaker 1: 16 megas. Y el top
+49:26 Speaker 2: 1 accuracy 0.70 y el top 5 0.79. Frente a una red
+49:35 Speaker 1: de 50, fíjense, no es, bueno,
+49:38 Speaker 2: es 0.74, 0.92.
+49:41 Speaker 1: Frente a una red de 0.71, 0.92, o sea, una BGG que tiene
+49:46 Speaker 2: 549 megas a
+49:48 Speaker 1: 16 megas.
+49:52 Speaker 2: Y la posición no es bastante.
+50:05 Speaker 1: En el segundo, está mejorada a 14 megas. Está esperado. ¿Preguntas? ¿Un mobilet?
+51:13 Speaker 2: Bueno, ya habíamos visto que
+51:16 Speaker 1: ResNet era la que introduje lo que son las Stiff Connections, ¿no?
+51:21 Speaker 2: Y esta estrategia, pues,
+51:24 Speaker 1: que es la de poder vivir los
+51:29 Speaker 2: residuos y los sumando más adelante con el fin de que no exista desvanecimiento, ¿no? de las activaciones, y por ende no existe un desvanecimiento de las
+51:40 Speaker 1: gradientes,
+51:43 Speaker 2: al momento de hacer Back Compagation. No llegamos ahora hacia
+51:48 Speaker 1: un... ¿no? Hacia... algo
+51:52 Speaker 2: más, ¿no? Es decir, hacemos una Skip
+51:54 Speaker 1: Connection de capas encima de... Se
+51:59 Speaker 2: tienen skip conexiones
+52:01 Speaker 1: L más L más 1 y P2.
+52:04 Speaker 2: Tienen una caza con todas sus subsecuentes. Es decir, no solamente hacemos skip conexiones con las 7, sino con las subsecuentes. Y esta es la que se conoce también como la Densnet, ¿no?
+52:16 Speaker 1: Capadense.
+52:21 Speaker 2: Y en verdad lo que está
+52:23 Speaker 1: haciendo en el fondo son concatenaciones.
+52:32 Speaker 2: unos mapas de activación en este, en
+52:35 Speaker 1: esta capa y
+52:37 Speaker 2: luego prácticamente lo que está haciendo es lanzar todo este bloque
+52:40 Speaker 1: hacia adelante. Todo este bloque, todo este bloque, ya lo que produce esta es la conexión. Las conexiones que se están haciendo de una capa frente a todas las que están hacia adelante.
+53:06 Speaker 2: Y esta...
+53:07 Speaker 1: Acá la red LED.
+53:13 Speaker 2: No, fíjense, no es tan pesada.
+53:18 Speaker 1: Una LED de 521, 33 MB. Una LED de 169,
+53:26 Speaker 2: una LED de 201, 80 MB.
+53:37 Speaker 1: Tenemos la entrada y justamente haciendo las promociones, las callos bloggers denso, sobre la distribución, incluyen los detestos.
+53:48 Speaker 2: Ahora, ¿cómo fluye la gradiente? Igual, ¿no? Tenemos acá la salida y comienza a hacer el flujo de la gradiente por cada una de todas las áreas. Ahora tenemos ResNet versus Dense.
+54:03 Speaker 1: Fíjense ustedes acá, tenemos el
+54:06 Speaker 2: número de parámetros versus el error de validación.
+54:16 Speaker 1: Las
+54:16 Speaker 2: densas tienen un menor número de parámetros, pero este error es un poquitito más. Tenemos acá una Resne de 152 y una Desne de 161. El error está más o menos próximo. Una Resne de 50 frente a
+54:41 Speaker 1: una Desne de 169. Menos número de parámetros,
+54:48 Speaker 2: un poquito menos de 2, pero la realidad también tiene 121.
+54:55 Speaker 1: Y tenemos el cadente de
+54:58 Speaker 2: 121, 0
+55:01 Speaker 1: ,75, 20. El cadente de 151, 0,75. 2, la veintitrés, la veintidós, la veintitrés.
+55:32 Speaker 2: Tenemos un... Tenemos las concatenaciones que llegan, que es de convoluciones, llega la concatenación de las capas anteriores, tenemos un probloque de convolución, que concatena estos dos,
+55:48 Speaker 1: hace un batch normalización, una activación
+55:53 Speaker 2: reloj,
+55:54 Speaker 1: y al final, un global average pooling,
+55:58 Speaker 2: la misma estrategia que Resnet. Y luego las audiciones. Igual, cuando vamos a verificar, como estamos utilizando un global average pooling, podemos ir verificando, como habíamos mencionado aquí,
+56:30 Speaker 1: de esta capa final
+56:33 Speaker 2: de salida que estamos teniendo de convoluciones, podemos ir verificando encima de dónde, de qué regiones de la imagen va tomando
+56:43 Speaker 1: la atención la red.
+56:51 Speaker 2: Sobre esta imagen, tenemos acá un mapa de calor donde podemos ver
+56:58 Speaker 1: que hay regiones donde toma mejor... Yo qué sé, los valores son más concentrados, más altos.
+57:06 Speaker 2: Se puede tomar como un indicativo que son esas regiones donde la red está poniendo más atención
+57:11 Speaker 1: para explicar a esta imagen. En detección
+57:34 Speaker 2: de ofertas lo usan como parte, vamos a verlo más allá.
+57:38 Speaker 1: Parte de todo un modelo. No,
+58:44 Speaker 2: AMBA se está terminando
+58:45 Speaker 1: con un global average pooling. AMBA. Igual, la estrategia final de
+58:51 Speaker 2: salida es con global average pooling. Lo que estamos reiterando, que está
+59:00 Speaker 1: llegando, podemos averiguar,
+59:04 Speaker 2: podemos ver, por ejemplo, la red luego de ser enterada, porque recuerda que aquí están, miren que estamos llegando a la salida del número de
+59:12 Speaker 1: clases que tenemos.
+59:14 Speaker 2: Y ahí, como cada uno de estos mapas de activación que está llegando
+59:18 Speaker 1: representa una clase,
+59:20 Speaker 2: podríamos nosotros ver cómo es que la red está aprendiendo a tomar. atención en
+59:25 Speaker 1: las regiones de la insulina. Sin interpretación. Pero en ambos casos, ambos usan global aberration.
+59:41 Speaker 2: Bueno, ya la que fue pionera en colocar esa estrategia fue RESTLE.
+59:48 Speaker 1: RESTLE fue después.
+01:00:06 Speaker 2: Hacemos un break de 10 minutos para
+01:00:08 Speaker 1: entrar a
+01:00:09 Speaker 2: los temas de segmentación.
+01:01:04 Speaker 1: Bien, vamos a ver lo que son la aplicación de segmentación, segmentación semántica.
+01:01:13 Speaker 2: Bueno, lo estamos viendo en esta imagen.
+01:01:16 Speaker 1: La idea es identificar ciertas regiones
+01:01:19 Speaker 2: que, digamos, pertenecen a un determinado objeto. Por
+01:01:25 Speaker 1: ejemplo, tenemos vehículos, tenemos la parte de la acera,
+01:01:29 Speaker 2: la parte de la pista,
+01:01:31 Speaker 1: con los riesgos, la parte del
+01:01:34 Speaker 2: cielo. La idea está en poder separar,
+01:01:40 Speaker 1: segmentar cada una de esas regiones que pertenecen.
+01:01:46 Speaker 2: a los objetos. En el fondo es un problema de clasificación de cada píxel de una imagen en una serie de clases. Me agarré un píxel, digamos, de esta región que pertenece a una clase que es un vehículo y, bueno, tengo que hacer la clasificación justamente, ¿no? Identificando ese píxel que pertenece a
+01:02:09 Speaker 1: esa región de esa clase vehículo.
+01:02:12 Speaker 2: Yo tomo un píxel aquí de esta región que pertenece a la clase pista y, bueno, me deben clasificar
+01:02:20 Speaker 1: a ese píxel como siempre usaba. ¿No?
+01:02:23 Speaker 2: O la acera, me tomo acá la acera, igual también, ¿no?
+01:02:29 Speaker 1: o un pixel aquí que
+01:02:31 Speaker 2: pertenece a un objeto que es una persona
+01:02:33 Speaker 1: y es el pixel dentro de esa clase de personas varias
+01:02:41 Speaker 2: los píxeles
+01:02:43 Speaker 1: que pertenece a las reacciones
+01:03:00 Speaker 2: Especialmente en lo que es conducción autónoma.
+01:03:32 Speaker 1: Nuevo Lister Glaze con ácido hialurónico. Hidratación hasta por 24 horas. De Mavenitt, New York. Mucha. Este mes no la hago. Gracias. Gracias.
+01:03:52 Speaker 2: Es una de las aplicaciones donde más se busca tener, diríamos, más precisión en la segmentación, pues es en los cargos autónomos. Identificar, por ejemplo, cuáles son las regiones de la pista, si hay personas, etcétera, etcétera. Todavía hasta ahorita es un... Un problema que se ha ido refinando,
+01:04:16 Speaker 1: sí, ¿no?
+01:04:18 Speaker 2: Pero siempre hay casos
+01:04:21 Speaker 1: fuera de lo común. Aunque ya no he escuchado ya problemas
+01:04:28 Speaker 2: con los carros autónomos últimamente, ¿no? Cuando salieron el ISO que ha tenido
+01:04:32 Speaker 1: accidentes, qué sé.
+01:04:35 Speaker 2: Pero a la última no estoy escuchando ya. Las saludos ya han refinado bastante.
+01:04:43 Speaker 1: hay
+01:04:44 Speaker 2: una empresa de un amigo mío
+01:04:47 Speaker 1: aquí para el tráfico de vida ¿Qué pasa?
+01:05:03 Speaker 2: Arturo Dessa.
+01:05:06 Speaker 1: Yo creo que hace
+01:05:08 Speaker 2: unas semanas yo organizo un evento así con peruanos que están en el extranjero, que están trabajando
+01:05:15 Speaker 1: con inteligencia. ¿Qué es Arturo? ¿Qué es la empresa? Artificial. Bueno, la idea de él es que,
+01:05:52 Speaker 2: igual, ¿no? Igual como aquel país también de
+01:05:55 Speaker 1: Chile, donde está también Omar, un amigo mío también, Omar
+01:06:00 Speaker 2: Flores, que están haciendo el EPT de la
+01:06:05 Speaker 1: tarde,
+01:06:06 Speaker 2: que supuestamente, pues, no, y es verdad, ¿no? Por ejemplo, muchos de los modelos que vienen
+01:06:13 Speaker 1: están
+01:06:13 Speaker 2: entrenados con información que no es de la región. Y la idea es introducir la información típica de acá de
+01:06:25 Speaker 1: la región, de los documentos, las
+01:06:29 Speaker 2: jergas, las formas de hablar, toda esa
+01:06:31 Speaker 1: documentación lúdica que hay de Latinoamérica. Y hacer un poquito más representativo de su modelo.
+01:06:37 Speaker 2: El caso de Arturo es algo parecido, solamente que es con sistemas de visión para carros autónomos. La lógica de decir, yo pongo un carro autónomo acá, ¿a quién?
+01:06:48 Speaker 1: el vehículo simplemente no funciona, ¿no? No
+01:06:52 Speaker 2: funciona porque esos vehículos han sido entrenados y los algoritmos con, pues, en ciudades donde menos se respeta las clientes. ¿No? Claro que cada vez el analista está recibiendo un buen financiamiento.
+01:07:06 Speaker 1: Hasta unos minutos. Sigue trabajando. Bueno,
+01:07:32 Speaker 2: cuando estaba iniciando, él venía gratis.
+01:07:34 Speaker 1: Una vez lo limité al curso, porque
+01:07:37 Speaker 2: él trabajaba en el MIT. Estaba haciendo un postdoc en el MIT. Y alguna vez vino a visitarnos. Y ahora le he dicho, oye,
+01:07:46 Speaker 1: ¿cuánto vas a hacer una charla? ¿Cuánto pagan? Ya está apoyando. Ya se olvidó. Ya no es humilde.
+01:07:56 Speaker 2: Ok. También tenemos, obviamente, una de las aplicaciones más
+01:08:01 Speaker 1: donde se
+01:08:05 Speaker 2: busca bastante la segmentación, pues son las imágenes médicas.
+01:08:10 Speaker 1: Y también tenemos imágenes satelitales. Y luego tenemos otras tareas relacionadas como son la detección de objetos, las segmentas. Tenemos acá la detección de objetos, la
+01:08:29 Speaker 2: segmentación semántica,
+01:08:31 Speaker 1: la segmentación de
+01:08:35 Speaker 2: objetos, de segmentación de objetos.
+01:08:40 Speaker 1: Más o menos. Por ejemplo, aquí
+01:08:52 Speaker 2: tenemos segmentación semántica, qué regiones pertenecen al
+01:08:59 Speaker 1: globo.
+01:09:00 Speaker 2: Y acá tenemos la segmentación por instancia, en la cual estamos diferenciando cada objeto.
+01:09:09 Speaker 1: Indica lo que es lo que decía ahora.
+01:09:11 Speaker 2: Detección de objetos y además segmentación. La detección, la suma de segmentación, la
+01:09:19 Speaker 1: segmentación de la cifra.
+01:09:26 Speaker 2: Aplicaciones que tenemos para lo que es entendimiento de escenas,
+01:09:30 Speaker 1: el vehículo, la persona.
+01:09:35 Speaker 2: En Remote Sensing, igual. Tenemos imágenes satelitales, podemos diferenciar por aquí.
+01:09:42 Speaker 1: Esferas, cuerpos de agua,
+01:09:45 Speaker 2: acá tenemos edificios,
+01:09:48 Speaker 1: tenemos zonas verdes, que
+01:09:51 Speaker 2: pertenecen a vegetación. Tenemos en aplicaciones médicas. Acá tenemos una etiqueta
+01:10:08 Speaker 1: que es el experto y lo que es un modelo automático como UNED. Y bueno, y vamos a decir, ¿no? El primero, creo, ¿no?
+01:10:23 Speaker 2: Bueno, que es el uso de segmentación. Fue la arquitectura UNED.
+01:10:30 Speaker 1: Y...
+01:10:32 Speaker 2: Y también muy parecido a lo que es la
+01:10:34 Speaker 1: AlexNet, bueno,
+01:10:36 Speaker 2: pero en el ambiente médico, porque también tenía que abrir un concurso así para poder
+01:10:40 Speaker 1: segmentar imágenes médicas, pues UNED, la que consiguió ganar en el
+01:10:47 Speaker 2: año 2000. Tiene operaciones básicas, ¿no? Por ejemplo, convoluciones de 3x3 y luego Red. Luego tenemos un copy y un crop. Es más o menos el equivalente. Es tipo
+01:11:07 Speaker 1: común. Lo que utilicen las capas densas.
+01:11:15 Speaker 2: Como un skip connection. luego tenemos max pooling de 2x2 luego un app convolucional
+01:11:23 Speaker 1: 2x2 tenemos
+01:11:27 Speaker 2: convoluciones de 1x1 Tenemos acá, fíjense, una primera entrada de una imagen que sería de 572 x 572, luego le pasamos una convolución de 3 x 3,
+01:11:43 Speaker 1: ¿no? Agarrando 1,
+01:11:45 Speaker 2: 64 convoluciones, 4 kernels, que nos van a dar 570, 64 mapas
+01:11:58 Speaker 1: de activación de 570 x 570.
+01:12:01 Speaker 2: Aquí no estamos utilizando
+01:12:03 Speaker 1: PADI, ¿no? Estamos reduciendo aquí 72 a aquí 72. No hay PADI.
+01:12:13 Speaker 2: Igual acá otras 64 convoluciones sin
+01:12:17 Speaker 1: PADI. Y esto está reduciendo aquí 68. Luego, ¿qué tenemos acá? Un max pooling.
+01:12:26 Speaker 2: El resultante,
+01:12:27 Speaker 1: tenemos un max pooling de
+01:12:30 Speaker 2: 568 por 568,
+01:12:32 Speaker 1: vamos a 284 por 285.
+01:12:41 Speaker 2: ¿Cuál será la profundidad de acá? 64, ¿no? Esos 64 vienen y luego a esos 64 le aplicamos 128 kernels, ¿no? También de 3x3, igual otra vez 128 kernels de 3x3, normal 282 y 280.
+01:13:01 Speaker 1: Otra vez un max pooling, en otro 80,
+01:13:04 Speaker 2: tenemos 140, y luego convoluciones de 256 convoluciones, otra
+01:13:11 Speaker 1: vez 256 convoluciones,
+01:13:14 Speaker 2: otra vez tenemos un max pooling, eso nos lleva de 136 a 68,
+01:13:20 Speaker 1: luego
+01:13:20 Speaker 2: convolución 512 filtros, nos lleva 66 por 66, otra vez 512 filtros, nos lleva 74 por 55. De nuevo tenemos otro más pulling.
+01:13:35 Speaker 1: Luego tenemos 32,
+01:13:37 Speaker 2: convolución 1024, convolución 1054 también. Y ahí realizamos un half
+01:13:45 Speaker 1: convolucional. No, dos puntos. En vez de reducir,
+01:13:50 Speaker 2: ahora tenemos el
+01:13:51 Speaker 1: paso contrario.
+01:13:56 Speaker 2: Estamos yendo sin este de... de 28 por 28 que tenemos 1024 vamos
+01:14:04 Speaker 1: a
+01:14:04 Speaker 2: a convolucional tenemos a 56 por 56 luego
+01:14:08 Speaker 1: a eso le aplicamos 512 512 y luego hacemos tipo un skip con un flop el flop era antes y es decir que la convocada es como aplicar el texto de llevarnos todos en lo que son
+01:14:59 Speaker 2: Aquí decimos la reducción de 512 a 32.
+01:15:03 Speaker 1: Y la convolutiva es llevar, no llega nada de cero, simplemente es como evitar filtros de uno por uno para
+01:15:11 Speaker 2: poderlo llevar a un mayor tamaño.
+01:15:16 Speaker 1: Gracias. con un
+01:15:22 Speaker 2: pooling lo que hacemos es la reducción es
+01:15:25 Speaker 1: llevarle
+01:15:32 Speaker 2: la imagen a una mayor dimensión
+01:15:35 Speaker 1: no está
+01:15:42 Speaker 2: llenando de cero
+01:15:48 Speaker 1: Acá tenemos de nuevo también la concatenación, ¿no? Bueno, entonces el
+01:16:13 Speaker 2: app convolucional de la misma... El mismo tamaño que tenemos acá, que es de 64
+01:16:20 Speaker 1: x 34, y de
+01:16:22 Speaker 2: 512, lo mandamos para que tenga IDA. Y se conecta aquí, ¿no? Con
+01:16:36 Speaker 1: esa capa de aquí. Cuánto es el
+01:16:40 Speaker 2: incremento del tamaño. para que con el objetivo de que es como
+01:16:46 Speaker 1: un skip connection tipo como las densas de esta parte de la capa que están viniendo esto
+01:16:54 Speaker 2: con el objetivo de que cuando tú hagas la el
+01:16:58 Speaker 1: más propagation pues también está estos
+01:17:02 Speaker 2: elementos de aquí no se no se le graben muy
+01:17:08 Speaker 1: parecido a lo que son los Esa es la arquitectura
+01:17:22 Speaker 2: UNED.
+01:17:23 Speaker 1: Bueno, UNED,
+01:17:24 Speaker 2: lógico, viene de...
+01:17:27 Speaker 1: está formando el tipo una urla.
+01:17:31 Speaker 2: Esta primera parte la podemos entender como si fuese un encoder, la segunda parte del decoder,
+01:17:38 Speaker 1: y en
+01:17:42 Speaker 2: su conjunto podemos entenderlo como si fuese un
+01:17:46 Speaker 1: autoencoder.
+01:17:48 Speaker 2: Estamos teniendo acá las convoluciones y estamos disminuyendo. Y podemos tener aquí una representación
+01:17:55 Speaker 1: vectorial y como una representación espacial.
+01:18:07 Speaker 2: Bueno, ya habíamos visto las convoluciones de uno por uno. Hemos visto que las convoluciones de uno por uno también lo que
+01:18:30 Speaker 1: permiten es hacer de tipo un disminuir el volumen,
+01:18:39 Speaker 2: diríamos así, por el bloque que está llegando. Aquí tenemos, por ejemplo, una convolución de uno por uno de la profundidad del mismo bloque. Tenemos acá uno, dos,
+01:18:48 Speaker 1: tres, cuatro, cinco.
+01:18:51 Speaker 2: Hemos visto que nos viene allá. Un mapa de activación. De profundidad 1. Luego aplicamos otro filtro de 1x1. Nos genera 1s, 1s y así. Igual, eso se aplica sobre los pesos y también sobre los vías. Hay que sumar los vías. Siempre hay que olvidar. En los cálculos que hicimos nos hemos olvidado de los vías.
+01:19:21 Speaker 1: Son los mismos pesos. Pero bueno.
+01:19:35 Speaker 2: La idea está cómo funciona el UNET. Si yo tengo, por ejemplo, yo
+01:19:47 Speaker 1: tengo
+01:19:56 Speaker 2: esta imagen
+01:19:58 Speaker 1: de entrada y quiero lograr
+01:20:02 Speaker 2: una salida humana.
+01:20:08 Speaker 1: Si yo estoy teniendo tipo un autoencoder, ¿no? Que hemos visto, ¿no?
+01:20:13 Speaker 2: La idea está en que si yo
+01:20:15 Speaker 1: tengo aquí una imagen de entrada, una imagen, yo que sé, médica,
+01:20:21 Speaker 2: ¿allá qué es lo que quiero obtener?
+01:20:23 Speaker 1: Quiero obtener, como estamos teniendo aquí,
+01:20:27 Speaker 2: como hemos dicho, la idea es obtener la misma entrada que teníamos, ¿no? Es decir, el autoencoder busca obtener como salida entrada original. ¿Va? Y me meto aquí la foto de un cerebro, por ejemplo,
+01:20:46 Speaker 1: genera el espacio latente y a partir de
+01:20:48 Speaker 2: ese espacio latente quiero recuperar la imagen de entrada original.
+01:20:54 Speaker 1: Los
+01:20:54 Speaker 2: pesos acá se van a ajustar como para poder hacer la recuperación a partir de este
+01:21:00 Speaker 1: vector y recuperar la entrada original.
+01:21:05 Speaker 2: Pero en vez de recuperar la entrada original,
+01:21:10 Speaker 1: más bien
+01:21:10 Speaker 2: recupera una versión segmentada de
+01:21:16 Speaker 1: esa entrada original.
+01:21:18 Speaker 2: Eso es lo que voy, ¿no?
+01:21:19 Speaker 1: Yo tengo aquí la
+01:21:21 Speaker 2: imagen original y tengo aquí la imagen segmental.
+01:21:25 Speaker 1: ¿No?
+01:21:27 Speaker 2: ¿Qué le puedo decir a la red?
+01:21:29 Speaker 1: ¿Sabes qué?
+01:21:33 Speaker 2: No me obtengas la imagen original, sino su versión segmental. Entonces lo que la red va a aprender es justamente a
+01:21:42 Speaker 1: generar. un
+01:21:46 Speaker 2: vector latente que va a ser este de aquí y a partir de este vector latente comienza el proceso
+01:21:52 Speaker 1: de decoder para
+01:21:56 Speaker 2: poder llegar a
+01:21:58 Speaker 1: la representación
+01:21:59 Speaker 2: segmentada de la imagen original dentro
+01:22:10 Speaker 1: Y es ahí como la imagen aprende, ¿no? El proceso de segmentación.
+01:22:16 Speaker 2: Y esta UNELT ha
+01:22:19 Speaker 1: sido una de las más populares también, ¿no? Porque es segmentación. Porque aplicaciones, cuando se quiere hacer segmentación, es típico. Es UNELT que se tiene que utilizar como primera
+01:22:30 Speaker 2: arquitectura de base. Tenemos acá la entrada. Tenemos aquí la versión etiquetada, segmentada. Y esta es la predicción que realiza el mismo. Yo le voy a decir que toma esta entrada y obtén esta salida. Entonces, para entrenar mi modelo, yo tengo que tener mi base de datos. Tengo mis máquinas originales y debo tener sus etiquetas, que son las
+01:23:12 Speaker 1: segmentadas. Y la red va a comenzar a entrenar.
+01:23:18 Speaker 2: Ahora, ¿cómo hacemos esta segmentación? Ya he tenido varios alumnos que han hecho tesis
+01:23:31 Speaker 1: sobre segmentación.
+01:23:34 Speaker 2: Y el mayor sufrimiento ha sido justamente en encontrar la versión segmentada de
+01:23:43 Speaker 1: la data. En muchos
+01:23:53 Speaker 2: casos, en la mayoría de casos, Prácticamente este etiquetado se tiene que hacer de forma. Y si es que el etiquetado lo haces utilizando métodos clásicos como banco base.
+01:24:09 Speaker 1: ¿Qué tan bueno o mal ves?
+01:24:15 Speaker 2: Si es que estás trabajando en algún problema específico. Si tienes al experto del lado que te va a validar esa segmentación. Generalmente, quien debería hacer esta segmentación es el experto, ¿no? En el dominio que estás trabajando. Si es en imágenes médicas, pues tiene que ser un medio. Yo alguna vez trabajé con imágenes médicas, con el médico a mi lado, y pues para nosotros pues es... Todas esas imágenes son iguales, ¿no? Pero ellos ya contienen identificar, ¿no? De regiones, de formaciones.
+01:24:54 Speaker 1: Y a ellos son los expertos que se han entrenado. Ahí viene la continuación.
+01:25:02 Speaker 2: ¿Quién te valida esas imágenes? Esos son el método que tú quieras. Pero ¿quién te valida eso? Especialmente cualquier problema tan específico es así, ¿no? Como medicina, tal vez en algunos tipos de dominios,
+01:25:22 Speaker 1: por ejemplo, yo qué sé.
+01:25:25 Speaker 2: En imágenes satelitales, identificación de edificios, pero bueno, eso sí tal vez lo podemos hacer. Especialmente bosques, no, de eso sí lo podemos hacer. Pero cuando son dominos muy específicos,
+01:25:43 Speaker 1: es ahí.
+01:25:45 Speaker 2: ¿Alguna vez trabajé, por ejemplo, con gente del INE que era sobre células cancerígenas? Para mí todas eran células.
+01:25:58 Speaker 1: Yo sabía.
+01:25:59 Speaker 2: Salud. Ellos, como son especialistas, distinguían no solamente cuál era cancerígeno y no cancerígeno, sino qué tipo de célula cancerígena.
+01:26:16 Speaker 1: Lo hemos sufrido para que
+01:26:17 Speaker 2: los médicos hagan el etiquetado, ¿no?
+01:26:23 Speaker 1: En contra de que tengan tiempo para ser etiquetado. Por auto. Por etiquetarlo cuando podían.
+01:26:48 Speaker 2: Bueno, acá porque nosotros conoces un vehículo, esto también es un árbol, esto lo podemos hacer, ¿no?
+01:26:55 Speaker 1: Nosotros lo podemos hacer, pero se
+01:26:57 Speaker 2: refiere a los niños que son tan especializados en imágenes
+01:27:00 Speaker 1: médicas, especiales en imágenes médicas. Nos vamos a meter. Sí, trabajé con Bosch en Alemania para etiquetar las imágenes, por exacto ese caso, para aparcar los coches y para controlar a la gente y el trabajo de India. Pero solo me quieren pagar salario mínimo y no es suficiente.
+01:27:27 Speaker 2: Ah, bueno, hay toda una industria detrás de esto, ¿no? De etiquetado. Sí. Hay gente que... Muchísimo
+01:27:33 Speaker 1: trabajo para tener un dataset suficiente para entrenar. Sí, sí, sí.
+01:27:38 Speaker 2: Inclusive hay dos problemas porque la
+01:27:41 Speaker 1: gente... O sea, si pagos bien miserables
+01:27:44 Speaker 2: si queremos llamarles así para que sean etiquetados.
+01:27:47 Speaker 1: Ajá. Y ahí,
+01:27:48 Speaker 2: pues, este...
+01:27:51 Speaker 1: Si hacen faltas en etiquetar, entrenan los modelos con faltas, ¿no? Así es.
+01:28:02 Speaker 2: Y la cuestión también después, ¿cómo valía si se etiquetaba?
+01:28:09 Speaker 1: que eran etiquetados, que eran sobre digitación de
+01:28:14 Speaker 2: encuestas, algo muy parecido, y tenemos un pool de digitadores de encuestas que
+01:28:20 Speaker 1: tenían que ingresar la data, que venía de campo, pero no
+01:28:26 Speaker 2: todos los digitadores eran precisos, tenían
+01:28:29 Speaker 1: que digitar. Ahí creamos una
+01:28:33 Speaker 2: otra capa de validación. A nuestros mejores digitadores, digamos, tenemos unos 15 digitadores ya, porque ya no somos tres,
+01:28:43 Speaker 1: a los mejores,
+01:28:45 Speaker 2: para que hagan aleatoriamente, también digiten de nuevo los formularios que ya habían sido digitados. Y ahí encontramos un índice de error de los digitadores.
+01:28:57 Speaker 1: ¿Cuántos equivocamos?
+01:29:00 Speaker 2: Y ahí, por ejemplo, para nosotros era importante que la información sea preciosa. Que por lo menos haya 1 o 2% de error, digamos, en información
+01:29:10 Speaker 1: ingresada.
+01:29:11 Speaker 2: Pero tenemos digitales que tenían 5% de error, a eso ya los despedíamos. Oye, ¿sabes qué?
+01:29:17 Speaker 1: Una semana estás ingresándome mal en
+01:29:20 Speaker 2: información. No mejoran, lo siento mucho.
+01:29:24 Speaker 1: Ese es el mismo problema.
+01:29:26 Speaker 2: O sea, digamos, tienes gente full
+01:29:29 Speaker 1: que está siendo etiquetada, pero ¿cómo validas eso? Y es lo mismo, igual, hay capas, ¿no? De validación.
+01:29:37 Speaker 2: Justamente para poder medir eso, ¿no?
+01:29:41 Speaker 1: Tenemos medidas, ¿no?
+01:29:43 Speaker 2: Más métricas. Por ejemplo, si un modelo de segmentación que también está segmentado, que es lo cual
+01:29:51 Speaker 1: también podemos aplicarlo justamente sobre los etiquetadores.
+01:29:55 Speaker 2: Y esta es la
+01:29:57 Speaker 1: expresión sobre lo mío. Si yo tengo, por ejemplo, ¿no?
+01:30:05 Speaker 2: Tengo aquí la reacción que es el ground truth. De verdad, debía ser la respuesta. Acá tengo la predicción que me está dando. Entonces yo voy a tener una intersección. Y luego divido entre la unífotera y ambas regiones. Es decir, lo que debió ser unido a lo que me está dando la predicción. Esa... Ese índice es lo que
+01:30:33 Speaker 1: conocemos como intersección sobre un índice. Tenemos el área en el que se está... Bueno, concuerda.
+01:30:48 Speaker 2: Si se concuerdan totalmente, pues... Ya por ejemplo tenemos un IOU de 0.4, que lo consideramos pobre. Acá un 0.73, que ya es muy bueno. Y acá 0.92 IOU es excelente. Tenemos un ejemplo.
+01:31:12 Speaker 1: Este es nuestro... lo que debe ser, ¿no?
+01:31:19 Speaker 2: Esta es la predicción que nos está dando el modelo. Aquí tenemos la intersección de ambos.
+01:31:27 Speaker 1: Esta recta.
+01:31:30 Speaker 2: Aquí tenemos la unión de
+01:31:33 Speaker 1: estos dos, ¿no? De los dos principios. ¿Cuántos tenemos? Es la idea. ¿Puedes calcular el
+01:31:46 Speaker 2: tío? Ahí tenemos unas bases de datos
+01:31:54 Speaker 1: que ya hay, ¿no?
+01:31:57 Speaker 2: Y
+01:31:57 Speaker 1: que esto
+01:32:06 Speaker 2: ha salido inclusive para poder entrenar varios modelos.
+01:33:28 Speaker 1: Gracias por ver el video.
+01:33:58 Speaker 2: una base de datos ya con versiones segmentadas que puede servir para poder hacer el entrenamiento de los modelos y muchos modelos por eso que he
+01:34:06 Speaker 1: visto que entrenada está
+01:34:10 Speaker 2: financiado o esponsoreado por
+01:34:12 Speaker 1: Microsoft Facebook y
+01:34:16 Speaker 2: que muchos de los modelos de ellos han sido entrenados en esta base entonces tenemos para que son distintas tareas detección y
+01:34:37 Speaker 1: y
+01:35:00 Speaker 2: Bueno, ya hemos estado viendo lo que es
+01:35:01 Speaker 1: clasificación,
+01:35:04 Speaker 2: pero dentro de clasificación, nosotros tenemos acá una imagen, por ejemplo, que contiene un objeto, y yo puedo tomar como el objeto y encontrar, por ejemplo, esa imagen que objeto representa,
+01:35:23 Speaker 1: la imagen.
+01:35:26 Speaker 2: Luego yo puedo solicitar, por ejemplo, si es que hay un objeto en esa imagen, cuál es la región que delimita ese objeto. Ahora, puedo tener
+01:35:37 Speaker 1: múltiples objetos y al final puedo hacer
+01:35:41 Speaker 2: segmentación de instancia de ese objeto. Entonces, yo tengo acá una entrada, una imagen,
+01:35:53 Speaker 1: y lo que puedo buscar es hacer una clasificación. Entonces,
+01:36:00 Speaker 2: la idea es también que yo voy a buscar lo que tengo por la distribución de píxeles, etc. ¿No? De que posiblemente se
+01:36:10 Speaker 1: trate de qué clase o qué
+01:36:12 Speaker 2: categoría. Y lo otro es poder encontrar las regiones que
+01:36:17 Speaker 1: delimitan
+01:36:21 Speaker 2: a
+01:36:22 Speaker 1: cada uno de los objetos. Tenemos dos objetos, el perro, por ejemplo, y delimitar cuáles son las regiones.
+01:36:34 Speaker 2: ¿Qué retos tenemos? ¿Necesidad de diferenciar objetos de la misma clase cuando existe oclusión? Por ejemplo, acá.
+01:36:41 Speaker 1: Un problema
+01:36:43 Speaker 2: que siempre fue difícil de resolver. Ahora creo que ya está casi resuelto. Número de variables de predicciones. ¿Cuántos elementos tenemos? Se necesita mayor resolución y colegios librenos de memoria asociados, igual, ¿no? Si yo quiero tener una mejor identificación de las características, aumenta la
+01:37:08 Speaker 1: resolución de las imágenes, pero eso implica también un mayor trabajo a nivel de memoria. Y bueno, y la clasificación podemos hacerla a partir de algo bien sencillo, ¿no? Es decir, yo tengo acá un imagen y,
+01:37:23 Speaker 2: bueno, le aplico yo convoluciones y obtengo, por ejemplo, la clase a la cual pertenece, ¿no? Y ahí yo voy a hacer, por ejemplo, también
+01:37:32 Speaker 1: puedo aplicar la
+01:37:34 Speaker 2: localización,
+01:37:36 Speaker 1: ¿no? Y designarle,
+01:37:39 Speaker 2: por ejemplo, acá, ¿no? Las coordenadas, el disco mayor, que es el inicio,
+01:37:44 Speaker 1: luego el ancho y el alto. de la región.
+01:37:49 Speaker 2: Acá tengo dos objetivos. Uno es determinar la clase a la
+01:37:55 Speaker 1: cual pertenece ese objeto y
+01:37:57 Speaker 2: lo otro es identificar, o sea, predecir la localización del bóndigo. Bueno, acá tenemos clasificación. Y acá está localización. ¿Qué tipo de problema sería? Para poder identificar la región del bonde. Regresión. Son valores, ¿no? X, Y, B, W, H
+01:38:39 Speaker 1: son valores reales. Son numéricos, por favor.
+01:38:46 Speaker 2: Valores numéricos y vamos a utilizar una regresión para poder
+01:38:49 Speaker 1: predecir esa regla.
+01:38:53 Speaker 2: Y bueno, eso necesitamos lo mismo, ¿no? Es decir, cuando vamos a realizar nuestro entrenamiento, necesitamos tener también el bonding box, ¿no? Como etiqueta. Y la red va a comenzar a aprender, ¿no? No
+01:39:12 Speaker 1: solamente a clasificar, sino también a identificar la
+01:39:15 Speaker 2: región que rodea, el bonding box que rodea a la gente. ¿Qué pasa si nosotros tenemos varios
+01:39:29 Speaker 1: objetos? Acá es fácil, fácil entre comillas, ¿no?
+01:39:35 Speaker 2: Tengo un solo objeto, defino su bonding
+01:39:37 Speaker 1: box y ya puedo entrenar la red. Pero sí tengo varios objetos.
+01:39:54 Speaker 2: Tengo acá uno, dos, tres,
+01:39:56 Speaker 1: cuatro, cinco, seis, tengo varios, ¿o qué?
+01:40:02 Speaker 2: Lo que podemos hacer es hacer una estrategia, es hacer el recorrido de una ventanita, le aplicamos esta
+01:40:11 Speaker 1: estrategia,
+01:40:13 Speaker 2: pique la clase y además también pique el punto. Y vamos, ¿no? Por ejemplo, acá si está en esta región, la clasificamos, ¿qué objeto es? Acá también,
+01:40:28 Speaker 1: muy bueno, vamos recorriendo, recorriendo, y hasta que nos
+01:40:32 Speaker 2: ubicamos aquí, el Bondi Boss está, digamos,
+01:40:36 Speaker 1: tenemos una persona que está dentro del Bondi Boss, y...
+01:40:40 Speaker 2: Lo identificamos como si fuese una persona.
+01:40:42 Speaker 1: Luego recorremos a una persona, etc. Y vamos identificando las regiones donde
+01:40:51 Speaker 2: han sido
+01:40:51 Speaker 1: detectadas las personas. En este caso, como personas. Entonces, para entrenar el simbuelo que se ha permitido en este lugar, está con unas cajitas que yo he imaginado.
+01:41:09 Speaker 2: ¿Cómo determinar? Ah, obviamente, sí.
+01:41:12 Speaker 1: Obviamente, este es el mismo. para la imagen y digamos
+01:41:23 Speaker 2: el bonding pop como etiqueta
+01:41:25 Speaker 1: el modelo tiene que aprender a ajustar y identificar
+01:41:29 Speaker 2: no solamente qué clase es sino también la región donde está el
+01:41:35 Speaker 1: objeto igual
+01:41:49 Speaker 2: También tenemos cantidad de posibles posiciones, ¿no? Si el W y el H están definidos, es decir,
+01:41:55 Speaker 1: picos, ¿no? Pero también el
+01:41:58 Speaker 2: W y el H pueden variar, ¿no? Es decir, podemos tener objetos con
+01:42:03 Speaker 1: bonding boxes variables.
+01:42:08 Speaker 2: ¿Y esto por qué? Porque con todas las imágenes,
+01:42:12 Speaker 1: todos los objetos...
+01:42:14 Speaker 2: son del mismo tamaño, por
+01:42:16 Speaker 1: ejemplo. En este caso teníamos objetos
+01:42:21 Speaker 2: de menor tamaño
+01:42:22 Speaker 1: a este de aquí. El problema con esta estrategia
+01:42:47 Speaker 2: era que cuántos bonding boxes generamos, ¿no? Luego, ¿cuál va a ser el tamaño? Por ejemplo, para una imagen de 800 por 600 era como llamar 58 millones de veces a una red convolucional. El otro, la otra cuestión es, ¿no? Esta arquitectura de red, ¿qué red sería?
+01:43:23 Speaker 1: Finalmente es un placer de ahorro.
+01:43:29 Speaker 2: Generalmente lo que utilizaba era una red.
+01:43:33 Speaker 1: Hemos visto por qué.
+01:43:35 Speaker 2: Tiene un número de
+01:43:36 Speaker 1: parámetros
+01:43:38 Speaker 2: y también tiene una alta efectividad. Entonces, ahí tenemos, por ejemplo, Se puede hacer un resize de la imagen, por ejemplo, acá de 224. ¿Por qué se está utilizando una CNN similar a la que se utilizó? Bueno, una REST, ¿no? Recuerden ustedes que para poder hacer una...
+01:44:08 Speaker 1: se
+01:44:11 Speaker 2: utilizaba imágenes centrales de 224 por 224. ¿Por qué? Si era 224 por 224. Así es. Nos vamos. Igual, en todo caso, los otros modelos.
+01:45:20 Speaker 1: Tenemos un... 19. Igual.
+01:45:28 Speaker 2: 24 por 24. Por eso que cuando hacemos un transfer learning de los modelos, ¿no? Lo utilizamos, pues, hacemos un resize de las entradas y un resize a 224 por fin.
+01:45:45 Speaker 1: Un resize
+01:45:49 Speaker 2: a 224 por fin.
+01:46:02 Speaker 1: y decimos
+01:46:03 Speaker 2: también la localización igual con la misma estrategia hacemos lo mismo con el otro
+01:46:09 Speaker 1: podemos
+01:46:13 Speaker 2: usar en teoría ventanitas de distintos tamaños que al final vamos a Hacer un redimensionamiento a 224 x 224. Porque vamos a usar una red pre-entrenada,
+01:46:25 Speaker 1: ¿no? Una red pre-entrenada, una BGG.
+01:46:27 Speaker 2: Bueno, BGG no, porque es pesada.
+01:46:29 Speaker 1: La más popular siempre es la red pre-entrenada.
+01:46:33 Speaker 2: Ahora, el problema está en que esto de estar haciendo el sliding, ¿no? Muy pesado, ¿ya?
+01:46:43 Speaker 1: Y hacer,
+01:46:45 Speaker 2: estar haciendo llamadas al modelo, fíjense cuántas llamadas, nada más para aquí, ¿no? 50 millones de llamadas, pues llamada al modelo,
+01:46:52 Speaker 1: tantas, muy pesado.
+01:46:55 Speaker 2: Pero su estrategia es poder disminuir ese número de llamadas
+01:46:59 Speaker 1: haciendo una segmentación semántica previa. Es un trabajo que utilizamos.
+01:47:09 Speaker 2: Previamente hace una segmentación por regiones
+01:47:11 Speaker 1: y utiliza algo simple, ¿no? Una segmentación bien sencilla.
+01:47:16 Speaker 2: Y luego determina las regiones, ¿no?
+01:47:19 Speaker 1: Segmentadas y las utiliza como entradas.
+01:47:25 Speaker 2: No está haciendo un sliding. Sino que ya
+01:47:29 Speaker 1: consigue determinar regiones para poder las clasificarse. Bueno, acá tenemos, hay un problema.
+01:47:46 Speaker 2: Yo estoy teniendo, por ejemplo, no tengo varias regiones que estoy llevando,
+01:47:50 Speaker 1: estoy determinando como
+01:47:52 Speaker 2: candidatas. Y tengo aquí, por ejemplo, uno, dos, tres.
+01:47:58 Speaker 1: Tres regiones que me están dando que se trata de un objeto auto.
+01:48:07 Speaker 2: El problema está en que las tres regiones que me están dando, que es un auto, se están refiriendo al mismo auto. Como determino, ¿no? ¿Cuál es la región? ¿Con cuál de las regiones me quedo finalmente? A esta estrategia la denominamos
+01:48:34 Speaker 1: como normal expression, ¿no?
+01:48:37 Speaker 2: Es algo bien simple,
+01:48:39 Speaker 1: fíjense ustedes, ¿no?
+01:48:41 Speaker 2: Tengo aquí,
+01:48:42 Speaker 1: uno, dos, tres, cuatro, ¿no? Cuatro cajitas que están identificando a
+01:48:50 Speaker 2: lo que se llamaría un pingüino.
+01:48:53 Speaker 1: Tenemos un pingüino.
+01:48:56 Speaker 2: La probabilidad, por ejemplo, de la cajita roja, la que se trata de un pingüino, es del 90%. La
+01:49:03 Speaker 1: amarilla, que está identificando que sea
+01:49:05 Speaker 2: un pingüino, pero no está identificando
+01:49:06 Speaker 1: totalmente, es una parte nada más, el 80%. La azul con
+01:49:15 Speaker 2: un 75%, que inclusive está, no solamente está este pingüino de acá, sino también parte del otro, inclusive esta parte del tercer
+01:49:25 Speaker 1: pingüino, porque la aleta está por ahí.
+01:49:28 Speaker 2: Y el verde nos da un 0.70%. Primero hacemos, fíjense, ¿no? Entre las cajas hacemos, ¿no? Calculamos el IOU, ¿no? Entre estas dos cámitas. Y nos da un 0.86. ¿Ya? Si, por ejemplo, tenemos un ticho de 0.7, ¿no? Nos quedaríamos solamente con... ¿Con cuál de los dos nos quedaríamos? ¿Qué es el resultado? Pone que te está dando el modelo de los módipos.
+01:50:23 Speaker 1: No sé. Y te has aplicado a ver ventanitas aquí ahí. Y te estás quedando con los memores, ¿no? Creo que te está dando un invitation de 0.70.
+01:50:38 Speaker 2: 70 para arriba te quedas. Pero ¿qué sucede? Que hay cajitas que están como sobrantes en tu día de día.
+01:50:45 Speaker 1: Azul, sería amarillo con la ropa, ¿no? Que está tratado de identificar al mismo. ¿No?
+01:50:54 Speaker 2: Bien, tenemos el amarillo con el
+01:50:56 Speaker 1: rojito, ¿no?
+01:51:00 Speaker 2: Estamos obteniendo un IOU de 0.86.
+01:51:04 Speaker 1: Entonces acá nos
+01:51:05 Speaker 2: quedamos con el que tiene mayor probabilidad. ¿Quién tiene mayor probabilidad? El rojito. Y eliminamos el amarillo. Aquí, por ejemplo.
+01:51:19 Speaker 1: Tenemos el rojito
+01:51:22 Speaker 2: con el azul. ¿Qué dice? .io de 0.5. ¿Eliminamos alguno de ellos o lo dejamos?
+01:51:54 Speaker 1: Cero. No hay intersección.
+01:52:00 Speaker 2: Recuerden que el IOU primera la
+01:52:02 Speaker 1: intersección sobre la unión.
+01:52:06 Speaker 2: Como no hay intersección, vamos a hacer. Y ahí tenemos los tres que finalmente quedan. Los tres bonding
+01:52:16 Speaker 1: boxes.
+01:52:18 Speaker 2: Y solamente hemos eliminado a este
+01:52:20 Speaker 1: amarillo, ¿no? Que estaba en conflicto con el rojo.
+01:52:24 Speaker 2: ¿Por qué en conflicto? Porque están buscando identificar al mismo objeto.
+01:52:30 Speaker 1: Y es ahí como nosotros terminamos quedándonos solamente con el mismo objeto.
+01:52:39 Speaker 2: Pues imagínense si
+01:52:42 Speaker 1: hubiésemos hablado así como esto.
+01:52:48 Speaker 2: Y hay muchos, muchos bonding boxes que están identificando a un
+01:52:53 Speaker 1: solo objeto. Esta estrategia,
+01:52:57 Speaker 2: ¿no? Para quedarnos con los bonding boxes finales que identifican a cada
+01:53:03 Speaker 1: bonding box que identifica a un solo objeto. Bueno, en el spot es el entorno. Sí.
+01:53:23 Speaker 2: Bueno, todas las estrategias fueron colocadas también dentro de lo que es la familia de la PCNN.
+01:53:48 Speaker 1: Y comenzó a aplicar todo lo que hemos pasado, ¿no?
+01:53:51 Speaker 2: Primera, por ejemplo, no tenemos aquí una...
+01:53:54 Speaker 1: Tenemos acá
+01:53:58 Speaker 2: un algoritmo que era de propuesta de regiones. Tenemos acá un CNN preentrenado que podría ser, pues, un... Generalmente es una red de... Luego se hacía un fine tuning de las características de la región. Y luego se lanzaba para poder identificar qué objeto es. Y luego
+01:54:27 Speaker 1: calcular el bond default.
+01:54:36 Speaker 2: Luego viene FAS
+01:54:37 Speaker 1: RCNN.
+01:54:48 Speaker 2: Ah, ya. La diferencia está aquí en que tiene que ser que tenía prácticamente acá dos, ¿no? Independientemente era la clasificación como también la regresión. Y aquí lo hacen uno solo, ¿no? Prácticamente. Y hace mucho más
+01:55:03 Speaker 1: rápido esa clasificación.
+01:55:06 Speaker 2: Prácticamente en el mismo modelo. Luego viene el faster rcnn.
+01:55:17 Speaker 1: Que
+01:55:19 Speaker 2: primero lanza lo que es una
+01:55:21 Speaker 1: red
+01:55:24 Speaker 2: convolucional y luego trabaja encima de la salida que estaba consiguiendo la red convolucional para poder encontrar las regiones
+01:55:32 Speaker 1: de la propuesta de reacción. ¿Y qué
+01:55:39 Speaker 2: es lo que pasa? Que aquí todavía la propuesta de reacción era entre comillas. Pero esa propuesta aquí ya es automatizada. Está en el terrorismo de RPN, que obviamente
+01:55:52 Speaker 1: es una
+01:55:56 Speaker 2: red que se entrena en recomendar las regiones de segmentación. Ya coloca dentro de lo que es el mismo modelo el cálculo de las regiones
+01:56:11 Speaker 1: a recomendar las propuestas. Y luego voy a continuar.
+01:56:15 Speaker 2: Y luego, a partir de esto,
+01:56:18 Speaker 1: también se hace el cristiano. Lo que es la segmentación
+01:56:29 Speaker 2: de la
+01:56:34 Speaker 1: región, ¿no? De constituyente al objeto.
+01:56:37 Speaker 2: Ya tenemos aquí, todos estos tres han sido básicamente para la detección de los objetos
+01:56:42 Speaker 1: y sus respectivos bonding boxes. Y aquí este más,
+01:56:46 Speaker 2: adicionalmente lo que hace es
+01:56:47 Speaker 1: la
+01:56:52 Speaker 2: predicción de la
+01:56:53 Speaker 1: región, ¿no? Es decir, la segmentación.
+01:56:56 Speaker 2: Aquí une lo que es no solamente detección, sino también segmentación. Y también lo que han ido viendo es también un poco reduciendo los tiempos, ¿no? Fíjense que los tiempos cada vez eran mucho más rápidos porque ese era uno de los problemas.
+01:57:21 Speaker 1: Esa, ¿no? Es una de las primeras versiones del PAS de RCNN. Se sigue proponiendo las regiones de interés por el método de Selective Search. Se
+01:57:38 Speaker 2: aprovechan los cálculos,
+01:57:43 Speaker 1: la limitación sigue presente, Selective Search,
+01:57:46 Speaker 2: que no tiene de aprendizaje.
+01:57:48 Speaker 1: Es un algoritmo...
+01:57:50 Speaker 2: Separados, se puede decir.
+01:57:57 Speaker 1: Calentada, el CDP search, acá está la propuesta, que es un proceso
+01:58:01 Speaker 2: separado y eso va a la
+01:58:02 Speaker 1: detección. El FASTER, ¿no?
+01:58:11 Speaker 2: RCNN, ¿no?
+01:58:13 Speaker 1: Usan Selective Search para las propuestas de regiones de interés, ¿no? RCNN y el FASTER RCNN.
+01:58:20 Speaker 2: Este más bien lo que hace es incorporar, ¿no?
+01:58:24 Speaker 1: Un algoritmo de... Es una red prácticamente, una red de interés que hace,
+01:58:30 Speaker 2: que busca determinar o proponer cuáles son las regiones de interés.
+01:58:38 Speaker 1: Y además
+01:58:39 Speaker 2: aprovecha esta detección de objetos para incorporar la segmentación.
+01:59:00 Speaker 1: Y bueno, esa es la evolución de la familia de RCN.
+01:59:04 Speaker 2: No solamente fueron mejorando, sino también
+01:59:06 Speaker 1: fueron viendo la
+01:59:09 Speaker 2: reducción del tiempo. Y en medio de unas
+01:59:14 Speaker 1: comparaciones. Excepción,
+01:59:17 Speaker 2: excepción versión 3, el mobile app que habíamos visto. Bueno, y ahí tienen también las familias de Yolo. Bueno, creo que tengo... ¿Yolo cuándo tenemos ahí? ¿Yolo 8, creo?
+01:59:37 Speaker 1: ¿O más, no? ¿22? Ya perdí. Ya perdí la cuenta de Yolo. Este ya optimiza, ¿no?
+01:59:51 Speaker 2: Toda esa estrategia de... Los códigos ahora son cerrados, no
+02:00:02 Speaker 1: estoy seguro.
+02:00:03 Speaker 2: Se vuelve a comerciar, ¿no? Comenzó como
+02:00:07 Speaker 1: un
+02:00:07 Speaker 2: algoritmo de código abierto, después ya lo
+02:00:10 Speaker 1: cerramos. y bueno yo utilizo todas las optimizaciones
+02:00:32 Speaker 2: que hemos visto
+02:00:42 Speaker 1: Bueno, es lo que quería presentarles.
+02:00:47 Speaker 2: Quería aprovechar ahora, no sé si ya se han dado cuenta, hemos colgado ya la
+02:00:58 Speaker 1: descripción del proyecto para trabajar. Bueno,
+02:01:16 Speaker 2: a diferencia, a ver, para serles sinceros,
+02:01:21 Speaker 1: el proyecto inicial que estamos
+02:01:26 Speaker 2: pensando con Rodrigo, pues ahora con un agente, creo que ya... Pues la idea ahora es probar, igual no deja de ser casi un proyecto muy similar a lo anterior, es decir, tomar un modelo base, probarlo, experimentarlo, todo, ¿no? Igual pueden hacer uso de un cloud para poder
+02:01:52 Speaker 1: trabajar encima.
+02:01:55 Speaker 2: Pero la idea está un poquito de entender por dentro qué es lo que pasa. lo que tenemos definido acá tres fases uno es poder hacer definir el modelo base ustedes van a buscar también un paper Que pueden utilizarlo. Generalmente tienen siempre su kit. Todos estos modelos. Tienen el
+02:02:22 Speaker 1: paper.
+02:02:24 Speaker 2: Luego. Ustedes hacen algún tipo de intervención. Dentro del modelo. Para poder. Ahí abajo les ponemos. Finalmente. Que es lo que ustedes quieren hacer. Y luego. El uso final del modelo que ustedes pueden usar como pre-entrenamiento, para poder aplicarlo a algún otro problema.
+02:02:54 Speaker 1: ¿Dónde están los centrales?
+02:03:05 Speaker 2: ¿Ustedes pueden utilizar
+02:03:06 Speaker 1: modelos pre-entrenados?
+02:03:17 Speaker 2: y acá hemos colocado un poco los modelos que tienen por ejemplo la gente de meta que está libre Por ejemplo, estos modelos están entrenados con Coco, con la base de datos que hemos visto. Pueden introducir otro dataset. Y que justamente en Meta existen varios datasets. Ustedes pueden descargar varios
+02:04:29 Speaker 1: datasets. son mapas de
+02:05:02 Speaker 2: transporte
+02:05:05 Speaker 1: y me equivoco muchos de ellos tienen yo
+02:05:10 Speaker 2: les recomiendo un
+02:05:12 Speaker 1: data set que tenga su Bien, si ustedes desean poder utilizar los modelos de herramienta de Facebook, que también está en High Base. Bueno, High Base va a encontrar varios otros modelos.
+02:06:56 Speaker 2: Bueno, aquí es lo que les he indicado. Ustedes tienen que elegir una de estas preguntas que van a responder.
+02:07:03 Speaker 1: Usted, por ejemplo, se llama Morro.
+02:07:06 Speaker 2: ¿Quiere resolver un problema para
+02:07:08 Speaker 1: responder
+02:07:12 Speaker 2: a esta pregunta? ¿Si sirven las características de la lectura Dino fuera de Image?
+02:07:18 Speaker 1: ¿No están buenas? Luego, este...
+02:07:25 Speaker 2: Hacer el posto del ROM, por ejemplo, en la arquitectura sample. ¿No? Usted es de los detectores de Facebook. Sí.
+02:07:42 Speaker 1: Entonces tenemos que elegir entre los tres, cuatro, cinco temas.
+02:07:48 Speaker 2: Uno, dos, tres, cuatro, cinco, seis. Sí.
+02:07:55 Speaker 1: Estos serían como los temas.
+02:08:12 Speaker 2: Del 18 al 20 tenemos un workshop de IA.
+02:08:19 Speaker 1: No, no viernes. No, no viernes. No, no viernes. Y bueno, yo creo que todos van a ser buenos trabajos. Así que para presentar ahí. ¿En dónde, profe? Acá.
+02:08:44 Speaker 2: Es un workshop que estamos organizando acá. Sí. La idea es que ustedes lo presenten en vuestros proyectos como póster, ¿no? Es que van a hacer una presentación de
+02:09:21 Speaker 1: horario, un póster.
+02:09:29 Speaker 2: Lo tenemos para el 12, más o menos, lo que es la
+02:09:32 Speaker 1: propuesta, ¿no?
+02:09:37 Speaker 2: Y esa propuesta, registrarla, ¿no? Porque hasta el 16
+02:09:42 Speaker 1: se tiene para poder registrar los pósteres.
+02:09:46 Speaker 2: Y luego le trae el trabajo el 16 de noviembre, dos días antes de ir a la temporada. Y el 30 es el informe final. Pueden usar todas las sillas que hay por ahí, especialmente
+02:10:27 Speaker 1: Cloud.
+02:10:37 Speaker 2: Bueno, crear un repositorio en GitHub, luego hacer el documento, la aplicación, etc.
+02:10:44 Speaker 1: La idea es que ustedes
+02:10:50 Speaker 2: demuestren, digamos, que han entendido el crema.
+02:10:55 Speaker 1: Ahora no sería
+02:10:58 Speaker 2: ilógico decir no lo sería.
+02:11:35 Speaker 1: Y
+02:11:37 Speaker 2: explicar
+02:11:38 Speaker 1: cambios.
+02:11:46 Speaker 2: Si estás usando una idea, debes entender por qué estás haciendo eso.
+02:11:51 Speaker 1: Los cambios. Bueno, yo
+02:11:59 Speaker 2: entiendo que ustedes van a mandarlo y a ver qué van a pedir, qué es lo que hacen.
+02:12:14 Speaker 1: Sobre el 10% la próxima semana. No, la próxima semana.
+02:12:19 Speaker 2: Sí, la verdad es otro punto. Una semana exacta.
+02:12:25 Speaker 1: ¿Cómo va a ser? ¿Parciales? Increíble.
+02:12:47 Speaker 2: Bueno, lo que yo estaba era por darles un cuaderno, usted lo resuelve, puede
+02:12:54 Speaker 1: ser virtual también.
+02:12:56 Speaker 2: Y luego un video
+02:12:58 Speaker 1: de explicación. Puede ser eso.
+02:13:12 Speaker 2: Veamos en ese entorno.
+02:13:15 Speaker 1: ¿Cuánto tiempo sería la entrega? En las tres horas, pues. En las tres horas se incluye el video. El cable. A ver, este... Encuesta. Encuesta. Encuesta. Encuesta. Encuesta.
+02:13:51 Speaker 2: Puede ser un problema que les doy y lo resuelven.
+02:13:54 Speaker 1: Por su video. Por su video y con un canal. Yo creo que es un canal. Yo creo que es un canal. Es el otro tema. Es el
+02:14:08 Speaker 2: otro tema. Yo creo que en ambos casos tendré que recreatarlo ya.
+02:14:13 Speaker 1: Mañana.
+02:14:30 Speaker 2: Algo que el video me lo entreguen posterior, ¿no? O sea, ese rato no les voy a pedir que hagan. Digamos, el próximo lunes en las tres horas resuelven el problema, ¿no? Y después...
+02:14:41 Speaker 1: Pues
+02:14:44 Speaker 2: al día siguiente jueguen el video.
+02:14:46 Speaker 1: Hola. puede ser creo que es la mejor opción no,
+02:14:55 Speaker 2: virtual puede colgar ahí va
+02:14:59 Speaker 1: a ser virtual y al
+02:15:02 Speaker 2: día siguiente colguen el video de explicación puede pedirme esas tres horas que hagan video
+02:15:06 Speaker 1: semana nueve semana
+02:15:09 Speaker 2: nueve ya viene Rodrigo
+02:15:23 Speaker 1: ¿Tienes tesis? Sí.
+02:15:33 Speaker 2: La semana 9 ya viene Rodrigo.
+02:15:36 Speaker 1: Un cagol con entrega la semana 9.
+02:15:43 Speaker 2: ¿Qué pasa sufrimiento?
+02:15:47 Speaker 1: Toda la semana va a ser sufrimiento. Hasta la
+02:15:54 Speaker 2: semana. Mejor de preparar, de las tres horas ya hay un account.
+02:16:01 Speaker 1: Sí, sí. Sí, correcto. Jorge, entonces sería de las 7 hasta las 10 de la noche y la persona se va complicando. Sí. ¿Bien? ¿Bien? ¿Bien? ¿Bien? ¿Bien? ¿Bien? ¿Bien? Conversación. La próxima semana tenemos examen. Sí, dos minutos.
+02:16:34 Speaker 2: Les voy a dejar un problema. Si puede ser virtual, ustedes pueden trabajar en casa, donde estén. Y las tres horas nos resuelven. Y luego, al día siguiente, van a subir un video de explicación de sus otros.
+02:16:49 Speaker 1: Ok. ¿Vas a subir un examen por ejemplo? Ah, un ejemplo para practicar. Ok, es mejor si sabemos qué tipos de tareas son. Perfecto.
+02:17:13 Speaker 2: Lucho, me manda un mensajito.
+02:17:20 Speaker 1: ¿Puede ser la segmentación? Sí, puede ser, sí. Bueno, tengo varios casos, ¿no? Cualquiera puede ser. ¿Cómo es?
+02:17:34 Speaker 2: Segmentación, detección.
+02:17:38 Speaker 1: Agua só para resolver un problema.
+02:17:40 Speaker 2: Sí, sí. Una base de datos.
+02:17:46 Speaker 1: No va a ser.
+02:17:51 Speaker 2: Ahora, en el trabajo,
+02:17:53 Speaker 1: generalmente, bueno,
+02:17:56 Speaker 2: las recomendaciones que utilizan en
+02:17:58 Speaker 1: el cable, ¿no? Creo que tiene mejor restricción. ¿La está acá abajo? Bueno, cable. Ah, gracias.
+02:18:12 Speaker 2: Me parece que es mejor que el cola. Tiene mejores que PG también, me parece.
+02:18:28 Speaker 1: Depende si es muy nuevo. Ah, bueno, también.
+02:18:40 Speaker 2: Entonces, para el
+02:18:44 Speaker 1: examen final solo se debe subir el código. Claro.
+02:18:54 Speaker 2: Ya sé que van a usar, pues, este, yo sé, ¿no? Un poco lo puedo prohibir.
+02:18:59 Speaker 1: Por eso el video, ¿no?
+02:19:13 Speaker 2: Sí, bueno, eso ya lo
+02:19:15 Speaker 1: voy a explicar en todo caso. ¿Más preguntas? ¿Cuándo se puede coger el tema? No sé. Pero no tengo que presentar ya. Bueno, yo por correo propio. No, acá hay que pensar en el vaso propio. Se comenzaron. Voy a
+02:19:52 Speaker 2: colgar el este, obviamente. Voy a abrir la tarea ahí. Su tema elegido en la...
+02:20:01 Speaker 1: Voy a abrir la pantalla para
+02:20:03 Speaker 2: el 12 y
+02:20:06 Speaker 1: luego para el final. Sobre el examen, tal vez podría
+02:20:16 Speaker 2: subir la base de datos antes. Por ejemplo, a veces yo trabajo en Polaris,
+02:20:21 Speaker 1: en mi cuelga,
+02:20:23 Speaker 2: y no quiero a veces trabajar en local, que la otra vez, como
+02:20:25 Speaker 1: un perdida, por ejemplo, estás cargando la base de datos,
+02:20:27 Speaker 2: como una hora nomás me emboré. No sé si podría subirlo tal vez antes. Ya.
+02:20:33 Speaker 1: Para ir conteniendo. Bien, voy a asegurarme.
+02:20:46 Speaker 2: Sí, solo que a veces como el de donde descarga, como que limitan el descarga, entonces demora un montón en descarga. Sí, ya tuve un problema en un laboratorio en 3 grados.
+02:20:58 Speaker 1: Tuve que cancelar el laboratorio porque el problema era el descarga del lugar. Bien, entonces, nos vemos ya en el examen.
+02:21:21 Speaker 2: ¿Hay la gente de la nube alguna pregunta?
+02:21:30 Speaker 1: Sí, sí, sí. Pero también el presente, ¿no? El examen también el presente, ¿no?
+02:21:40 Speaker 2: Voy a hacerlo virtual.
+02:21:42 Speaker 1: ¿Solo virtual? Ah, ok. Ok,
+02:21:50 Speaker 2: vamos cerrando entonces.
+02:21:52 Speaker 1: Bien, entre la nube. Nos vemos.
+  

@@ -1,0 +1,1285 @@
+# DM S3
+
+  Meeting started: 13/10/2026, 5:27:57 p. m.
+  Duration: 141 minutes
+  Participants: Speaker, Speaker 1, Speaker 2
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/0Albk7CfMLyVYVyY1GjP?o=txt)
+
+    
+
+  
+
+  
+
+  ## Transcript
+
+  00:00 Speaker 2: A ver, en esa tarea
+00:02 Speaker 1: que dejamos, era
+00:08 Speaker 2: un ejemplo de
+00:10 Speaker 1: lo
+00:11 Speaker 2: que es la regresión lineal. es poder
+00:27 Speaker 1: trabajar
+00:32 Speaker 2: en un problema de clasificación. ¿Ok? O sea, la que se pasa ya hemos visto
+00:37 Speaker 1: regresión.
+00:39 Speaker 2: No, el problema de regresión es
+00:40 Speaker 1: predecir un valor numérico.
+00:43 Speaker 2: Y ahora vamos a trabajar en un problema de clasificación que es predecir una clase. Un valor numérico es un valor nominal que
+00:52 Speaker 1: es una clase. Pero no... Lo interesante que queremos hacer es poder
+00:58 Speaker 2: utilizar la regresión lineal para poder
+01:04 Speaker 1: resolver un problema de gestión. No, porque hemos hecho la regresión anterior para resolver un problema de gestión.
+01:22 Speaker 2: Ya habíamos visto esto, ¿no? El floteo, cómo es que a través de regresión con descenso por gradiente conseguimos encontrar la
+01:33 Speaker 1: recta
+01:35 Speaker 2: de menor costo. También la forma que toma la
+01:41 Speaker 1: función
+01:46 Speaker 2: de pérdida. Encontramos gradientes. Ahí recibí un correo. No sé quién fue el que me escribió, pero me dicen que en esta fórmula hay un error.
+02:12 Speaker 1: ¿Tú me escribiste? Está faltando
+02:19 Speaker 2: acá uno sobre él. Eso lo podemos escribir. Ahora sí, ¿no?
+03:19 Speaker 1: Ahora sí está bien.
+03:21 Speaker 2: Y va de acuerdo también con lo que está
+03:23 Speaker 1: siendo implementado aquí, ¿no? Es decir,
+03:26 Speaker 2: estamos sacando la media, ¿no? Bueno, encontramos los gradientes y desarrollamos el descenso por gradiente, ¿no? Y nos encuentra, ¿no? Los valores, de tal manera que nos determina una pérdida mínima, ¿no? Esta curva es importante porque nos está demostrando cómo es que el modelo ha ido aprendiendo, ¿no? En las primeras iteraciones tenía un valor alto y ha ido decreciendo, decreciendo, decreciendo y hasta que...
+04:05 Speaker 1: Este es
+04:16 Speaker 2: un ejemplo con las casas. Bueno, es el mismo. Y luego el ejemplo con... Bueno, acá está el ajuste que hace. Acá de regresión lineal
+04:30 Speaker 1: múltiple.
+04:40 Speaker 2: Igual acá el error.
+04:44 Speaker 1: Acá tenemos error.
+05:04 Speaker 2: Como son tres, dos
+05:06 Speaker 1: variables y más el... ¿Cuántos variables son? ABC y el sesgo, claro.
+05:14 Speaker 2: Están los cuatro o los tres gradientes. Y luego hacemos el descenso por gradiente. Como diríamos, manualmente. Es decir, actualizando los pesos, calculando el gradiente para cada uno. Y luego lo que habíamos visto era poder, bueno, estas casas múltiple también, igual, son los trabajos bastante parecidos. Solamente que acá son 1, 2, 3, 4, 4
+05:45 Speaker 1: variables más el sesgo.
+05:53 Speaker 2: Aquí desarrollamos el descenso por gradiente, manualmente,
+05:57 Speaker 1: digamos así, y encontramos, ¿no? El
+06:02 Speaker 2: kit aquí estaba poder utilizar matrices, que era lo que nos interesaba, ¿no? Porque todo este trabajo de estar realizando las operaciones manuales, calcular y actualizar los pesos manualmente,
+06:15 Speaker 1: pues,
+06:17 Speaker 2: es, digamos así, no es este... Al menos desde el punto de vista de código,
+06:24 Speaker 1: no es una
+06:27 Speaker 2: buena forma, ¿no? Entonces, las matrices nos permiten ahorrarnos todo ello, ¿no? Fíjense, definimos acá la función como una multiplicación de matrices.
+06:41 Speaker 1: Luego,
+06:42 Speaker 2: definimos también aquí el conjunto de... Bueno, ya tenemos acá el 2, que sigue igual. Y lo interesante es que el cálculo de las gradientes también es una multiplicación de matrices. Luego, el procedimiento también de descenso por gradiente, también hacemos los llamados y simplemente también las actualizaciones de
+07:11 Speaker 1: los pesos es
+07:13 Speaker 2: a través de matrices. Entonces acá ya no nos estamos fijando cuál es la dimensión del conjunto de datos. Viene la matriz del conjunto de datos y multiplicación de matrices.
+07:26 Speaker 1: Y eso nos ahorra mucho, nos ahorra bastante.
+07:32 Speaker 2: No solamente en la cuestión de código, sino también en la cuestión del procesamiento mismo, porque como habíamos mencionado, la multiplicación de matrices es una operación ad hoc para poder paralelizarla.
+07:47 Speaker 1: Y de ahí de que
+07:49 Speaker 2: los GPUs también se vuelven muy adecuados para poder hacer ese tipo de operaciones.
+08:00 Speaker 1: Y aquí el ejercicio con diabetes, ¿no? Para hacer datos,
+08:07 Speaker 2: son 296. En total son 442 registros. Se está separando para entrenamiento y para validación. Definimos el modelo. Las gradientes. Y desarrollamos el descenso por el año. ¿No? Aquí vemos un poco los valores reales de cada uno del conjunto de
+08:40 Speaker 1: entrenamiento,
+08:42 Speaker 2: me parece, ¿sí? Y las predicciones, ¿no? Y acá no está dando el error. ¿Alguna pregunta respecto a esa carita?
+09:26 Speaker 1: Siento que el candidato era un tipo de datos. Y no hay veras en cuenta. El Rayver.
+09:36 Speaker 2: El Rayver, el Rayver.
+09:39 Speaker 1: ¿Cómo es abajo? Este.
+09:41 Speaker 2: Sí, este. Y abajo también lo vuelvo a usar.
+09:43 Speaker 1: Y eso es lo que no entendíamos que era lo que hacía. Acá. Sí.
+10:18 Speaker 2: Creo que lo que está haciendo, déjame ver aquí.
+10:25 Speaker 1: A ver, el Fx estamos viendo. El retorno de este f de x,
+11:26 Speaker 2: ¿no? De todas estas operaciones, al final es una matriz. ¿Pero de cuántos lm?
+11:40 Speaker 1: Claro.
+11:42 Speaker 2: Pero lo que queremos es que sea un valor numérico.
+11:45 Speaker 1: Porque finalmente lo
+11:47 Speaker 2: que está haciendo es R y B,
+11:49 Speaker 1: no.
+11:52 Speaker 2: Es como que te está dando el vector, pero numérico. Ya no te está dando una matriz. El resultado que estás
+11:59 Speaker 1: obteniendo es una matriz.
+12:02 Speaker 2: Que es muy diferente a una estructura de un vector.
+12:07 Speaker 1: Lo que hace Rival es eso.
+12:11 Speaker 2: Porque finalmente, acá este f de x lo que tenemos son valores numéricos.
+12:17 Speaker 1: ¿Dónde vamos a utilizar este f de x? Ahora vamos a ir con la carta.
+12:26 Speaker 2: Aquí, pues, ¿no? Ya estamos llamando.
+12:31 Speaker 1: Entonces, aquí, lo que vamos a obtener
+12:35 Speaker 2: como resultado son valores numéricos, ¿no? Entonces, o buscamos que sean valores numéricos que se van a asignar a este vector.
+12:47 Speaker 1: Esa es la idea.
+12:50 Speaker 2: Entonces, como que está haciendo una transformación de lo que son matrices
+12:53 Speaker 1: a valores numéricos, a un vector explicitado.
+12:57 Speaker 2: es lo que dice acá también acá
+12:59 Speaker 1: dice que está haciendo tipo un flateo tipo un flateo en todo caso sería como que a
+13:08 Speaker 2: ver yo tengo Tengo una matriz de 2, 4,
+13:16 Speaker 1: 5.
+13:17 Speaker 2: Y convertirla en un plateo vendría a ser 2,
+13:21 Speaker 1: 2, 4, 5. No, pero
+13:28 Speaker 2: que nos está regresando,
+13:30 Speaker 1: ¿no? No es obviamente bidimensionado. Me
+13:34 Speaker 2: parece que es un M por 1,
+13:38 Speaker 1: ¿cierto? Por 1.
+13:41 Speaker 2: Para hacerle un planteo, te lo está cometiendo un vector.
+13:48 Speaker 1: Porque la escultura de una matriz,
+13:50 Speaker 2: internamente con la relación, por más que tú tengas una matriz M por 1,
+13:56 Speaker 1: esta también puede ser, no es un vector. ¿Otra pregunta? ah no estaba compartiendo o si estaba compartiendo entonces nuestro
+15:18 Speaker 2: nuestro modelo que hemos desarrollado nosotros buscaba determinar
+15:35 Speaker 1: una solución de
+15:36 Speaker 2: tal manera, a través de una línea recta, de tal manera que esa línea recta se aproxime de la distribución de los puntos que tengo, vamos, de la base 2. ¿Ya? ¿Qué pasa si yo tengo...
+16:08 Speaker 1: la distribución como esta donde
+16:25 Speaker 2: este es mi equis, que podría representar una característica, por ejemplo yo puedo decir tamaño,
+16:32 Speaker 1: tamaño del tubo, y aquí, si es que es 0, y por acá tengo que es 1,
+16:43 Speaker 2: que puede ser 0, 0 puede representar benigno, último benigno,
+16:50 Speaker 1: y 1 último maligno. Entonces, fíjense.
+17:04 Speaker 2: Emulando más o menos esta distribución
+17:05 Speaker 1: con el mismo, tenemos los elementos que tienen esta forma. Pero
+17:11 Speaker 2: aquí, los elementos, vemos que por
+17:14 Speaker 1: acá hay un conjunto y
+17:15 Speaker 2: por acá hay otro conjunto.
+17:24 Speaker 1: ¿Será que yo puedo
+17:25 Speaker 2: desarrollar una representación
+17:27 Speaker 1: lineal o
+17:29 Speaker 2: generar un modelo lineal que
+17:32 Speaker 1: me represente a esta distribución?
+17:37 Speaker 2: de la forma como hemos hecho aquí, ¿no? Es decir, yo agarro, trazo una reta, después le aplico descenso por el ambiente para poder hacer los ajustes y tener a la menor pedra y todo eso. ¿Será que puedo hacerlo?
+17:55 Speaker 1: ¿Por qué no?
+17:58 Speaker 2: No es ideal, porque
+18:00 Speaker 1: la disimulación es la mejor para explicar eso.
+18:05 Speaker 2: Está bien, pero sí se puede. ¿Y cómo sería más o menos eso?
+18:17 Speaker 1: Algo así se me puede. Y todo bien, ¿no?
+18:26 Speaker 2: Tengo esa aproximación que se está ajustando,
+18:29 Speaker 1: digamos decir, a este conjunto de datos.
+18:33 Speaker 2: Pero lo que tengo aquí no es un problema de regresión.
+18:36 Speaker 1: Lo que tengo aquí es un problema de
+18:38 Speaker 2: clasificación. Es decir,
+18:40 Speaker 1: tengo un grupo que
+18:42 Speaker 2: como salida tiene 0 y
+18:45 Speaker 1: tengo otro grupo que
+18:46 Speaker 2: como salida tiene 1. ¿No? Entonces yo puedo decir, oye, ¿sabes qué? Los de este grupo, sus
+18:52 Speaker 1: características, sus salidas son 0,
+18:54 Speaker 2: y los de este grupo, sus ejercicios son
+18:56 Speaker 1: 1. ¿Y qué características tiene acá este tamaño de tu mora? Entonces yo puedo
+19:00 Speaker 2: decir que más o menos a partir de este
+19:02 Speaker 1: punto, ¿no?
+19:05 Speaker 2: Ya, hacia la izquierda
+19:07 Speaker 1: son de la
+19:09 Speaker 2: clase 0,
+19:10 Speaker 1: y hacia la derecha son de la clase 1.
+19:14 Speaker 2: ¿Ya? Y si queremos hacerlo en, este, ¿no? Si queremos hacerlo utilizando la salida,
+19:24 Speaker 1: es decir, el f de x,
+19:26 Speaker 2: pues yo puedo decir, por ejemplo, si el
+19:31 Speaker 1: f de x es,
+19:36 Speaker 2: digamos así, si estoy divisiendo este punto fino, más o menos, el tamaño, y el f de x irá a esta posición, más o menos,
+19:44 Speaker 1: con
+19:45 Speaker 2: 0.15. Entonces yo puedo decir, si fdx es mayor a 0.5, entonces, ¿de qué clase será? 1. Ajá.
+19:58 Speaker 1: Entonces clase 1. Si no, entonces clase 0. ¿De acuerdo? Todo bien por ahí porque, fíjense, la regresión
+20:22 Speaker 2: lineal, es decir, la línea, me está sirviendo para poder resolver un problema de clasificación.
+20:30 Speaker 1: Oye, mía, ¿sabes qué? A partir de si el f de x es mayor 0
+20:34 Speaker 2: .5 es de la clase 1, y no clase 0. Bueno, está sirviendo.
+20:43 Speaker 1: Aquí tenemos un problemita que se nos puede cuestionar. ¿Qué pasa si vuelvo a
+20:52 Speaker 2: recoger más
+20:53 Speaker 1: datos y
+20:56 Speaker 2: de pronto encuentro, digamos, otra muestra de tumores más grandes y me dicen, ¿sabes qué? Hay tumores más grandes todavía que se presentan.
+21:03 Speaker 1: ¿Ya? Y, ¿qué es lo que va a suceder? Va a alterar mi...
+21:11 Speaker 2: probablemente yo tengo una recta
+21:15 Speaker 1: digamos algo así
+21:19 Speaker 2: está provocando la modificación de mi recta y
+21:26 Speaker 1: eso a su vez también me provoca
+21:31 Speaker 2: La modificación, por decir,
+21:34 Speaker 1: de este corte,
+21:36 Speaker 2: ya no será 0.5, sino, digamos aquí,
+21:41 Speaker 1: 0.3. Yo diré,
+21:44 Speaker 2: siempre x es mayor a 0.3, es de la clase 1, sino de la clase 0.
+21:52 Speaker 1: Entonces, acá tenemos un problema.
+21:55 Speaker 2: Si vamos a ir reconectando
+21:57 Speaker 1: tantos y
+21:59 Speaker 2: conjuntos de datos, y si este corte que nos permite tomar la decisión, lo vamos a ir calculando cada vez que tengamos un
+22:09 Speaker 1: nuevo conjunto de datos. No
+22:13 Speaker 2: es un corte constante.
+22:17 Speaker 1: Lo voy a tener que ir calculando cada vez que tengo un conjunto de datos.
+22:22 Speaker 2: Y lo cual tampoco es una buena práctica. Lo ideal sería que ese corte siempre
+22:30 Speaker 1: sea constante. No se mueva.
+22:33 Speaker 2: ¿Qué otro problema tenemos? Si es que yo, por ejemplo, tengo
+22:39 Speaker 1: un conjunto aquí.
+22:54 Speaker 2: Pero entonces esta estrategia me sirve, ¿no? En el sentido que yo presento un nuevo elemento, yo digo
+23:00 Speaker 1: por acá, ah mira, tenemos un nuevo elemento acá, ¿no?
+23:05 Speaker 2: Te lo lanzo de tamaño X5 acá, ¿no? Lo lanzo y le mando al FDX, ¿no? FDX, y el FDX en el caso del azul, viene por acá, ¿no?
+23:18 Speaker 1: Pues
+23:19 Speaker 2: el azul lo va a categorizar por uno. De clase 0. ¿Es menor a 0.3? Sí es menor. No, no, no. Así es mayor a 0. Es mayor a 0.3.
+23:28 Speaker 1: Es mayor. Entonces es de la clase 1. Entonces este
+23:30 Speaker 2: elemento que estoy ingresándole para probar.
+23:32 Speaker 1: Lo voy a clasificar como clase 1.
+23:38 Speaker 2: ¿Qué pasa si yo tengo acá un punto?
+23:41 Speaker 1: Un tubo pequeñito. ¿No?
+23:44 Speaker 2: Y lo lanzo al modelo. Y me responde.
+23:48 Speaker 1: Por ejemplo. Con un valor
+23:50 Speaker 2: negativo.
+23:53 Speaker 1: Un valor negativo.
+23:55 Speaker 2: Aunque es el menos 0,1.
+23:58 Speaker 1: Con la respuesta a este valor.
+24:01 Speaker 2: Entonces preguntamos. Si fx es mayor a 0,5. No, es negativo. Ah, entonces es de la clase 0.
+24:09 Speaker 1: ¿Lo puede? ¿No? ¿Está
+24:12 Speaker 2: bien por esta misma?
+24:13 Speaker 1: ¿Está bien? ¿Y si me usa un valor alto por acá? Por acá.
+24:19 Speaker 2: Oye, dime, tengo
+24:20 Speaker 1: un tumor de este tamaño, ¿de qué clase? Ah, ya. Y me manda un valor por
+24:29 Speaker 2: encima de uno.
+24:30 Speaker 1: Ya, me manda uno y tanto, por eso.
+24:33 Speaker 2: Fdx es mayor a 0.5, claro, ¿verdad? Entonces es de la clase 1. Entonces tenemos dos problemas. El primero que hayamos indicado. de que este lineal, este corte,
+24:50 Speaker 1: vamos a tener que ir determinando dependiendo del conjunto de datos que se nos presenta. ¿Ya?
+24:58 Speaker 2: Peor todavía si es que tenemos un conjunto de datos desbalanceado. ¿Y qué es un conjunto de datos desbalanceado? ¿Una clase 1? Hay diferencias. Como más o menos ya lo vemos viendo aquí, ¿no? Por ejemplo, la clase 1 tiene más elementos que la clase 0.
+25:15 Speaker 1: Y puede ocurrir, ¿no?
+25:17 Speaker 2: Casos en los cuales hay una clase que tenga, digamos, 90% más que la otra clase.
+25:22 Speaker 1: Si nos caen, desbalance. ¿Ya?
+25:26 Speaker 2: Entonces, cuando tenemos ese tipo de problemas, peor aún.
+25:32 Speaker 1: Segundo problema. ¿Qué significa?
+25:39 Speaker 2: Por ejemplo, cuando yo le doy este tumor de este tamaño y me da una respuesta encima de uno.
+25:48 Speaker 1: O cuando le doy un tumor pequeñito
+25:51 Speaker 2: me da una respuesta negativa.
+25:56 Speaker 1: ¿Cómo es que yo
+25:57 Speaker 2: encuentro el significado
+26:00 Speaker 1: de esos resultados?
+26:02 Speaker 2: Siempre en matemática, en estadística, se busca encontrar qué significan los resultados que estamos obteniendo de los modelos. ¿No?
+26:11 Speaker 1: Ese es otro. ¿Ya?
+26:15 Speaker 2: Entonces,
+26:16 Speaker 1: para el primer caso,
+26:19 Speaker 2: para no estar tratando de, o buscando calcular los lineares cada vez que tengamos un nuevo conjunto de datos, o cada vez que estemos modificando el conjunto de datos,
+26:33 Speaker 1: ¿No? Debemos buscar que esa línea o ese corte sea constante. Que sea constante. Que no esté cambiando.
+26:45 Speaker 2: ¿Y para eso qué es lo que necesitamos? Y eso va en relación con la otra pregunta, ¿no? Por ejemplo, cuando tenemos acá la salida está encima de 1, acá tenemos salidas negativas, ¿no?
+26:55 Speaker 1: Entonces tenemos, digamos,
+26:59 Speaker 2: seguimos variando los tamaños aquí. Podemos tener valores que están por encima de 1
+27:03 Speaker 1: y no tenemos un 0 significado.
+27:07 Speaker 2: La idea sería de que nuestras salidas estén acotadas a
+27:12 Speaker 1: un rango de datos.
+27:14 Speaker 2: ¿Ya? Por ejemplo, si yo... Digo, ¿sabes qué? Mis salidas van a estar entre 2 y 4. ¿Cuál sería la media o el corte? 3 y 4.
+27:27 Speaker 1: ¿Ya? Entonces, si yo busco que
+27:31 Speaker 2: mis salidas estén acotadas entre 0 y
+27:35 Speaker 1: 1, ¿cuál sería mi corto? 0.0. Entonces, busquemos una forma en que las
+27:47 Speaker 2: salidas de esta misfunción
+27:49 Speaker 1: lineal
+27:50 Speaker 2: estén acotadas entre 0 y 1, de tal manera que
+27:55 Speaker 1: ahí si no tengo chance,
+27:57 Speaker 2: no. En el modelo no tiene chance de cambiarme el corte, sino el corte siempre va a ser constante 0 por 5. Porque las salidas del modelo siempre van a estar entre 0 y 1.
+28:13 Speaker 1: ¿Cómo hacemos desde este punto? ¿Cómo hacemos? y
+28:41 Speaker 2: cuando son mayores a 1
+28:47 Speaker 1: si es
+28:51 Speaker 2: 1.5 le pongo 1 y
+28:54 Speaker 1: si es negativo 0 puede
+28:59 Speaker 2: ser una solución La otra vez que lo lancemos dentro de una función. Si estamos diciendo, por ejemplo, si buscamos tener salidas entre 0 y 1,
+29:27 Speaker 1: ¿qué función nos
+29:29 Speaker 2: da ese resultado?
+29:31 Speaker 1: Una función como esta, por ejemplo. ¿Por qué necesita? ¿Por qué necesita? ¿Por qué necesita? ¿Por qué necesita? Es
+30:08 Speaker 2: una G de X. ¿Cómo sería X, no? G de Z. Que sería igual.
+30:16 Speaker 1: ¿Cómo está definida una sismo? A1 sobre 1 más E a la menos Z. ¿Está bien?
+30:26 Speaker 2: ¿Qué característica tiene esta función?
+30:29 Speaker 1: Que cuando la entrada Z tiende
+30:38 Speaker 2: al infinito, la salida G de Z se aproxima
+30:43 Speaker 1: de 1.
+30:44 Speaker 2: Nunca llega a ser 1, pero se aproxima de 1. Y cuando la entrada Z es menos infinito, El Q de Z se aproxima de 0.
+30:57 Speaker 1: Nunca llega a ser 0, pero se aproxima de 0. Entonces,
+31:05 Speaker 2: ¿cómo es que ahora hacemos esta, no?
+31:10 Speaker 1: ¿Cómo hacemos la acordación de aquella función
+31:12 Speaker 2: lineal en una de estas sigmoes grandes? Recordemos que mi f de X, ¿no? Recordemos que mi f de X...
+31:41 Speaker 1: Considerando que F de X es igual a F de X. A los pesos,
+31:49 Speaker 2: por las entradas,
+31:51 Speaker 1: más F de X.
+31:55 Speaker 2: Generalizando nuestras funciones, ¿no?
+31:57 Speaker 1: Nuestras funciones.
+31:59 Speaker 2: Pesos más F por entrada, más F de X.
+32:02 Speaker 1: Entonces,
+32:03 Speaker 2: esto nos representa aquella función lineal.
+32:06 Speaker 1: Ahora, ¿cómo es que transformamos esta función lineal en una simbolidad? Con la composición, ¿no?
+32:27 Speaker 2: De funciones, ¿no? Cocinamos si Z
+32:32 Speaker 1: es
+32:32 Speaker 2: igual a este de X, o sea, la salida de este de X van a ser los Z,
+32:39 Speaker 1: ¿para qué? Entonces, G de Z es igual a
+32:46 Speaker 2: 1 sobre 1 más
+32:48 Speaker 1: E a la menos Z, ¿no?
+32:51 Speaker 2: Esto va a ser igual a 1.
+32:54 Speaker 1: Sobre. 1 más.
+32:56 Speaker 2: E. A la menos.
+32:59 Speaker 1: F de X. L. F de X. Ser igual a. 1. Sobre. 1 más.
+33:22 Speaker 2: E. A la menos.
+33:24 Speaker 1: F de X. Y este de x quito acá. Entonces esto va a ser igual a 1 sobre 1 más e a la menos de
+33:41 Speaker 2: doble de x.
+33:49 Speaker 1: Entonces nuestra
+33:50 Speaker 2: función lineal que es de doble de x más
+33:56 Speaker 1: b. que está,
+34:01 Speaker 2: prácticamente estamos componiendo dentro de
+34:03 Speaker 1: otra función, que es la función movida.
+34:07 Speaker 2: Entonces, de esta manera, estamos obligando a que esta función lineal,
+34:12 Speaker 1: sus salidas, estén agotadas. Y como ahora lo estamos agotando, a través de esta composición
+34:22 Speaker 2: lo estamos agotando, entonces ahora sí podemos decir que el corte que
+34:27 Speaker 1: vamos a utilizar es, 0.5 o mejor lo colocamos un poquito 0.5.
+34:40 Speaker 2: Y esto sí me va a permitir decir, ah, entonces,
+34:43 Speaker 1: sí,
+34:44 Speaker 2: el g de
+34:46 Speaker 1: x, el g de x, el g de x, el g de x,
+34:51 Speaker 2: el g de x, mayor a 0.5, constante, ¿no? Entonces, decimos
+35:01 Speaker 1: que se trata de la clase 1. ¿Correcto? Si no, entonces,
+35:10 Speaker 2: clase C. ¿Ok? Y ahora sí
+35:18 Speaker 1: conseguimos tener un modelo
+35:21 Speaker 2: basado en las regresiones lineales,
+35:25 Speaker 1: ¿ya? Solo que lo estamos componiendo, lanzándonos dentro de un asismo y tal,
+35:30 Speaker 2: de tal manera que me está permitiendo
+35:32 Speaker 1: clasificar entre
+35:34 Speaker 2: dos clases. ¿Ya?
+35:41 Speaker 1: Hemos encontrado un clasificador que ustedes tienen.
+35:48 Speaker 2: ¿Es un clasificador o no es un clasador?
+35:54 Speaker 1: ¿O sigue siendo un
+35:55 Speaker 2: regresor? Claro, porque nos está resolviendo un problema que
+36:13 Speaker 1: va a decidir entre una u otra clase.
+36:16 Speaker 2: Si es clase 1 o clase 0. ¿Cómo se le llama a este clasificador?
+36:28 Speaker 1: Binario.
+36:29 Speaker 2: Es un clasificador binario.
+36:31 Speaker 1: Muy bien. Pero también se le conoce como clasificador o clasificación por regresión logística.
+36:52 Speaker 2: Aunque suene medio contradictorio, ¿no? Tenemos un
+36:56 Speaker 1: clasificador
+36:58 Speaker 2: basado en regresión
+37:00 Speaker 1: logística. Este famoso clasificador de reacción autística. Una vez que teníamos nuestro modelo, ¿no? Teníamos nuestro modelo, contamos,
+38:17 Speaker 2: ¿qué es lo que calculamos? ¿Cuál era nuestro objetivo, así, calcular? El objetivo calculado era dos parámetros, ¿verdad? Dos parámetros. ¿Ya? Y los parámetros los hacemos calculando
+38:37 Speaker 1: descenso por dentro.
+38:40 Speaker 2: Pero para hacer el descenso por dentro, ¿qué necesitamos?
+38:46 Speaker 1: Pero ahora, ¿el hipótesis que más necesitamos hacer el
+38:48 Speaker 2: equivalente?
+38:50 Speaker 1: ¿De la parábola?
+38:55 Speaker 2: No, pero la derivada de... ¿A qué función derivada? En función de los pesos, ¿no?
+39:05 Speaker 1: La función de ese parábola. ¿Se acuerda? De error. Exacto. ¿No?
+39:16 Speaker 2: El LOS. Y acá tenemos los parámetros.
+39:23 Speaker 1: Acá tenemos los B2.
+39:25 Speaker 2: Los B2. Y hacemos el descenso. En el caso de la dirección lineal. Que genera nuestra función LOS.
+39:34 Speaker 1: LOS era. Igual a. De 1. De 1 hasta M. f de x y menos entonces
+40:02 Speaker 2: tengo la función sigmoidal tengo mi regresión logística sigmoidal tengo
+40:11 Speaker 1: aquí Mi función, ¿no? Ahora mismo, ¿no? La sigmoidal, con la recta logística de control. La recta logística, cada
+40:41 Speaker 2: definida por ejemplo, t
+40:43 Speaker 1: de f de x, igual a 1 sobre 1 más b,
+40:50 Speaker 2: elevado a la,
+40:51 Speaker 1: pero a los dobles de x más b, todo eso. ¿Todo esto?
+41:02 Speaker 2: Puedo aplicarle también la función de pérdida.
+41:05 Speaker 1: Para
+41:06 Speaker 2: poder... ¿Con qué objetivo? Para poder calcular también el descenso por la dieta. ¿Cómo le hace eso? ¿Cuál era el objetivo de esta función?
+41:26 Speaker 1: ¿Cómo trabajaba esta función? ¿Se acuerdan?
+41:28 Speaker 2: Era calculando las distancias de cada punto a la recta.
+41:35 Speaker 1: Y calculaba
+41:37 Speaker 2: promedios. Si aplicamos esa misma lógica en esta función, y recuerden que esta función es más o menos de este tipo.
+41:52 Speaker 1: ¿Ok?
+41:53 Speaker 2: Por este tipo. Si yo voy a tener, si yo voy a tener mis puntos por acá, yo tengo.
+42:02 Speaker 1: ¿Ustedes creen que funcione la
+42:04 Speaker 2: misma lógica? Es decir, yo calculo las distancias a la
+42:08 Speaker 1: curva, pues ya no es recta, ¿no? Ya no es recta. Calculo la
+42:13 Speaker 2: distancia, ya encuentro el promedio y ese va a ser mi menor error. Para comenzar aquí ya me sumé recta.
+42:26 Speaker 1: Entonces, esta
+42:27 Speaker 2: función, si yo aplico la
+42:29 Speaker 1: función de error medio cuadrado
+42:31 Speaker 2: encima de esta, con esta función,
+42:33 Speaker 1: ustedes van a tener una curva más o menos de peso.
+42:38 Speaker 2: Miren ustedes aquí los pesos,
+42:40 Speaker 1: tienen la función de pérdida, que van a obtener algo así.
+43:05 Speaker 2: Esta es una función
+43:06 Speaker 1: conversa, ¿no?
+43:09 Speaker 2: Esta es una función no
+43:11 Speaker 1: conversa. Esta convexa, ¿por qué es convexa?
+43:19 Speaker 2: Porque tiene un solo mínimo y
+43:22 Speaker 1: ese mínimo es el mínimo global. Aquí tiene varios mínimos y
+43:28 Speaker 2: tiene un mínimo global.
+43:30 Speaker 1: Probablemente sí tenga un mínimo. Pero tiene varios mínimos
+43:33 Speaker 2: locales. ¿Por qué es un problema los mínimos locales? Ya, pero cuando empiezo la prueba, ¿para qué
+43:48 Speaker 1: tengo? ¿Para qué estábamos buscando tener un
+43:50 Speaker 2: mínimo, un solo mínimo local? Para poder hacer mi descenso por 20. Lanzo un
+43:56 Speaker 1: punto cualquiera de las puntas y voy
+43:59 Speaker 2: a tener la seguridad que voy a ir caiendo.
+44:02 Speaker 1: Mientras que aquí lanzo
+44:04 Speaker 2: un punto cualquiera por acá. Y hago descenso por la gente y voy a caer. Voy a caer.
+44:10 Speaker 1: Otro punto cualquiera por acá. Ah, por aquí. Hago descenso por la gente y la
+44:15 Speaker 2: toro.
+44:16 Speaker 1: No llegó al mínimo que va. ¿Verdad? No voy a caer.
+44:23 Speaker 2: Entonces, ¿cuál es la cuestión?
+44:29 Speaker 1: Cambiar de función de perdón. ¿No? Porque esa no me gusta. Ay, me parece que se vaya calando.
+45:18 Speaker 2: Todo lo que hemos estado conversando tiene que ser el de la regresión lineal, obviamente, la regresión,
+45:23 Speaker 1: hasta los problemas de regresión.
+45:25 Speaker 2: Y cuando hemos tratado el tema de lo que es la
+45:28 Speaker 1: regresión logística,
+45:30 Speaker 2: hemos, creo, alguien por ahí dijo que es un problema, ¿no?, de certificación binaria. ¿Por qué binaria? Que solamente tenemos dos clases, ¿no?
+45:40 Speaker 1: Dos clases. Uno o cero.
+45:43 Speaker 2: Positivo o negativo.
+45:45 Speaker 1: ¿No? Falso, verdadero.
+45:48 Speaker 2: Pero tenemos solo dos tipos de respuestas. Y de ese tipo de
+45:56 Speaker 1: problemas tenemos infinidad
+45:59 Speaker 2: de ejemplos. Estamos hablando de si es un tumor
+46:02 Speaker 1: benigno o maligno.
+46:05 Speaker 2: Si tenemos, por ejemplo, correos que nos
+46:07 Speaker 1: digan spam o no spam. Si se trata del rostro de una persona o no el rostro de una persona. Aquí tenemos, por ejemplo, un like o un dislike en los comentarios. Tenemos muchos ejemplos que son
+46:20 Speaker 2: de tipo de clasificación binaria. Y justo hasta acá, ¿no? Entonces, si nosotros aplicamos nuestro
+46:43 Speaker 1: algoritmo, nuestra función de pérdida
+46:47 Speaker 2: en el error medio cuadrado encima de la función de regresión logística,
+46:52 Speaker 1: ¿ok? O sea, ahí está nuestra función de regresión logística, es lo que vamos a tener aquí una curva de pérdida como esta. Una función no convencional.
+47:04 Speaker 2: ¿Ya? Ahí necesitamos cambiar de función de
+47:09 Speaker 1: cosa. Función de perda.
+47:13 Speaker 2: Y para la revisión logística es
+47:16 Speaker 1: una composición de función. Dos funciones. Uno para la clase 1 y otro para la clase 0.
+47:24 Speaker 2: En el caso de clase 1 tenemos menos logaritmo de
+47:27 Speaker 1: la
+47:30 Speaker 2: función de hipótesis. Y en el caso de la clase 0, tenemos el complemento
+47:36 Speaker 1: de esto, ¿no? Sería menos logaritmo de 1, menos la
+47:42 Speaker 2: salida de la
+47:43 Speaker 1: función micrófono. Si tomamos, por ejemplo,
+47:48 Speaker 2: el caso de la clase 1, y
+47:50 Speaker 1: si ponemos Y igual a 1, y aplicamos aquí, si la salida H de X
+48:01 Speaker 2: fuese igual a 1, ¿cuánto se ve el logaritmo? menos logaritmo de 1
+48:55 Speaker 1: Así es.
+48:59 Speaker 2: Estoy equivocando.
+49:03 Speaker 1: Si es que la
+49:05 Speaker 2: función hipótese tiende a ser 1,
+49:07 Speaker 1: el logaritmo va a ser 0. O sea, la función de costo nos está retornando 0. ¿Verdad?
+49:14 Speaker 2: ¿Eso qué quiere decir? De que el modelo nos está retornando un buen valor. ¿Por qué? Porque ese modelo, la salida de ese modelo es... Igual a
+49:25 Speaker 1: la etiqueta real. ¿Ok?
+49:27 Speaker 2: Los congresos modelos están en los valores iguales a la etiqueta real, entonces el costo es 0. ¿Ya? ¿Qué pasa si es que el modelo comienza a dar resultados en sentido contrario? Es decir, se va acercando o alejando
+49:41 Speaker 1: de uno, acercándose a C. Un poco hace que el congresismo lo
+49:45 Speaker 2: va a ir con el 0.5 de un medio. ¿Cuánto será?
+50:05 Speaker 1: El error comienza a aumentar.
+50:08 Speaker 2: Y a medida que nos vamos aproximando de cero, el error cada vez es mayor, tanto así que cuando sea cero es un error infinito. Cuando tenemos aquí el caso que sea...
+51:47 Speaker 1: Fíjense ahora que estemos cuando
+51:49 Speaker 2: el caso es la etiqueta 0,
+51:51 Speaker 1: ¿no?
+51:53 Speaker 2: Si la etiqueta real es 0 y el h de x que me está dando el modelo es 0,
+51:58 Speaker 1: ¿no? Hacemos el complemento, ¿no? Fíjense 1 menos el valor que me está dando el
+52:07 Speaker 2: modelo, es decir, 0, 1 menos 0 va a ser
+52:12 Speaker 1: 1, lo valimos de esto va a ser 0, entonces el costo va a ser 0.
+52:16 Speaker 2: ¿No? ¿Ok? Nos vamos alejando de este valor.
+52:21 Speaker 1: Nos vamos alejando de cero. Nos vamos
+52:23 Speaker 2: acostumbrando a uno.
+52:24 Speaker 1: Cada vez el
+52:25 Speaker 2: costo va aumentando hacia el ingenio. Entonces tenemos dos funciones, dos partes.
+52:38 Speaker 1: Entonces, ¿qué sucede si es que nosotros juntamos esas dos, esas dos partes?
+52:48 Speaker 2: Siguiente, tenemos acá, en el caso de que la etiqueta sea uno, y
+52:52 Speaker 1: aquí tenemos en el caso de que la etiqueta sea tres.
+52:55 Speaker 2: Juntamos entre las dos partes,
+52:57 Speaker 1: ¿qué es lo que tenemos? ¿Qué es lo que tenemos? Exacto. ¿No? Tenemos una función con B. ¿No? Una función con B.
+53:08 Speaker 2: Entonces acá sí podemos aplicar lo que queremos. Es decir,
+53:12 Speaker 1: el descenso por Daniel.
+53:14 Speaker 2: ¿No? Damos un punto cualquiera y comenzamos a hacer
+53:17 Speaker 1: nuestro descenso por Daniel. ¿Ok?
+53:26 Speaker 2: Entonces ya hemos encontrado
+53:28 Speaker 1: una forma.
+53:31 Speaker 2: En la zona, en un segundo lado, estamos verificando que la función de costo, ¿no?
+53:39 Speaker 1: Que está
+53:39 Speaker 2: determinada aquí,
+53:42 Speaker 1: se aplica bien a
+53:44 Speaker 2: la regresión logística. Si queremos aplicarla a todo el conjunto de entrenamiento,
+54:05 Speaker 1: tenemos nuestra función de costo, que básicamente estaría dada por esta
+54:09 Speaker 2: composición de funciones. La sumatoria de 1 hasta n, que es donde m tenemos
+54:17 Speaker 1: el conjunto de todos los valores, multiplicado por y, que son las etiquetas
+54:21 Speaker 2: reales, y luego tenemos la
+54:24 Speaker 1: función de costo que hemos
+54:28 Speaker 2: visto, que está dada como una sola.
+54:34 Speaker 1: con una sola función.
+54:36 Speaker 2: Esa es nuestra función de costo, eso lo vamos a dividir en el pendiente,
+54:40 Speaker 1: y al
+54:42 Speaker 2: igual que lo hicimos en regresión lineal,
+54:44 Speaker 1: nuestro objetivo, ¿cuál va a ser?
+54:47 Speaker 2: Va a ser minimizar esa
+54:49 Speaker 1: función de costo
+54:50 Speaker 2: respecto a cada uno de los parámetros que tenemos, ¿no?
+54:54 Speaker 1: ¿Ya? Considerando que tenemos como...
+54:57 Speaker 2: Como función hipótesis, o como modelo, la regresión. Para poder encontrar, para poder programar,
+55:34 Speaker 1: la función de costo,
+55:37 Speaker 2: encontrar las herramientas, todo. Aquí tenemos, al igual que, fíjense, tenemos acá la función de costo que hemos visto. Aquí tenemos nuestra función de hipótesis, que es regresión logística. Ahora la función de costo como una sola función, que también está ahí.
+56:23 Speaker 1: Esa función de costo vamos a tratar de minimizarla,
+56:25 Speaker 2: y encontrar la minimización sería encontrar la derivada de esa función de costo respecto a cada uno de sus parámetros. Aquí está toda la parte analítica, o sea, las derivadas que se hacen. Para quien quiera divertirse, ¿no? Lo valida, por favor.
+56:47 Speaker 1: Y aquí está el resultado, ¿no? Este es el resultado.
+56:55 Speaker 2: Ese iba a ser la pregunta. ¿Es casi igual o es igual?
+57:02 Speaker 1: Lo he borrado.
+57:04 Speaker 2: Lo he borrado. Acá está, ¿no? A ver, acá está. Justo habíamos corregido nuestras derivadas. Habíamos encontrado error incluso en nuestras derivadas.
+57:23 Speaker 1: Lentita, ¿qué ha pasado?
+57:42 Speaker 2: que han cambiado hasta más lento, creo, ¿no? Han cambiado diciendo para que los vecinos no entren, dice, a la red de la PUC. Pero creo que ahora entran más todavía.
+57:52 Speaker 1: Aquí está.
+57:53 Speaker 2: Nuestras gradientes, fíjense. ¿No?
+57:58 Speaker 1: Y...
+57:59 Speaker 2: Esas son nuestras gradientes de regresión lineal, ¿no? Y esta es la gradientes de regresión logística.
+58:12 Speaker 1: ¿Es la misma o no?
+58:16 Speaker 2: ¿Es la misma?
+58:17 Speaker 1: A ver, acá está.
+58:24 Speaker 2: ¿Es la misma o no es la misma? Sí, es la misma, ¿no?
+58:36 Speaker 1: Es la misma.
+58:51 Speaker 2: Las gradientes,
+58:52 Speaker 1: la
+58:55 Speaker 2: derivación analítica que hemos visto a partir de
+58:57 Speaker 1: lo que es la función
+59:01 Speaker 2: de costo
+59:02 Speaker 1: de regresión
+59:03 Speaker 2: logística, prácticamente viene a tener la misma forma que las gradientes derivadas a partir de la función de costo de regresión lineal.
+59:17 Speaker 1: ¿Qué es lo que les diferencia? No, pero acá... No,
+59:28 Speaker 2: o sea, la forma es la misma,
+59:29 Speaker 1: pero no son las mismas.
+59:35 Speaker 2: En las formas son lo mismo, pero no son lo mismo. Acá hay una diferencia entre lo
+59:40 Speaker 1: que es, ¿no? Por ejemplo, ¿no? En el caso del
+59:46 Speaker 2: error medio cuadrado, tenemos que, en
+59:50 Speaker 1: el caso de regresión notíquica, la diferencia está en el HDX,
+01:00:05 Speaker 2: ¿verdad? El HDX en, pues, es negación lineal. En lineal, el h de x es igual a un wx.
+01:00:19 Speaker 1: Y en
+01:00:22 Speaker 2: el caso de la opística, el h de x es
+01:00:26 Speaker 1: igual a 1 sobre
+01:00:27 Speaker 2: 1 más e a la menos
+01:00:31 Speaker 1: wx menos b. Esta es la letra. El HD es igualito por sí, pero en verdad la función de hipótesis es diferente.
+01:00:51 Speaker 2: Pero la forma de las derivadas
+01:00:53 Speaker 1: es diferente.
+01:00:55 Speaker 2: Es decir, nosotros podemos usar el mismo algoritmo de descenso por gradiente, solamente cambiamos el algoritmo de descenso por gradiente.
+01:01:04 Speaker 1: Podemos calcular, por un lado,
+01:01:06 Speaker 2: la función de hipótesis para revisión lineal,
+01:01:10 Speaker 1: y la función de hipótesis para revisión logística, y luego invocamos al algoritmo de descenso por gradiente en el mismo algoritmo. Ok,
+01:01:35 Speaker 2: hasta ahí hemos hablado con lo que es binario. ¿Será que podemos
+01:01:39 Speaker 1: generalizar esta estrategia para una
+01:01:42 Speaker 2: regresión multinomial? O perdón, regresión logística multinomial. ¿Qué cosa es regresión logística multinomial?
+01:01:58 Speaker 1: O multiclase, ¿no?
+01:02:00 Speaker 2: Multinomial, multiclase.
+01:02:09 Speaker 1: Y sí puedo conocerlo, ¿no? Porque...
+01:02:21 Speaker 2: Ustedes se dan cuenta que nosotros tenemos,
+01:02:23 Speaker 1: por ejemplo,
+01:02:27 Speaker 2: varias funciones logísticas. E elevado a la
+01:02:30 Speaker 1: regreso lineal, E elevado a la regreso lineal.
+01:02:33 Speaker 2: En el caso de que tengamos los pesos de la clase
+01:02:36 Speaker 1: 1, la clase 2, etc. Al final esto es considerado como si fuese un cálculo de probabilidades condicionales. Nosotros vamos a averiguar que este
+01:02:47 Speaker 2: dado, una entrada X. ¿Cuál es la probabilidad que pertenezca esa entrada de X a la clase 1? ¿Cuál es la probabilidad de que esa clase X pertenece
+01:02:55 Speaker 1: a la clase 2? ¿Qué es el segmento?
+01:02:58 Speaker 2: Tipos como probabilidades. Y eso lo hacemos en función de las regresiones logísticas. Y al final es una, ¿no?
+01:03:06 Speaker 1: Es
+01:03:07 Speaker 2: una normalización, digamos así, de todos esos logics que estamos encontrando, ¿no? Divididos por la sumatoria de todos ellos mismos. Ustedes se dan cuenta que es la sumatoria de
+01:03:18 Speaker 1: todos ellos.
+01:03:25 Speaker 2: Entonces, si nosotros simplificamos esta función,
+01:03:29 Speaker 1: vamos a tener los logics,
+01:03:32 Speaker 2: por esta parte de aquí, y luego la sumatoria de todos
+01:03:36 Speaker 1: ellos va a dividir a cada uno. A esa estrategia la
+01:03:43 Speaker 2: conocemos como regresión
+01:03:44 Speaker 1: logística multinomial, o también en
+01:03:48 Speaker 2: el mundo del machine learning,
+01:03:49 Speaker 1: conocido como la función SOFMA.
+01:04:09 Speaker 2: Ahora, si tenemos una función, un modelo, multinomial,
+01:04:18 Speaker 1: para problemas
+01:04:19 Speaker 2: multiclares, que podemos llamar la función, ¿cuál es la función de costo? Porque fíjense, cada modelo necesita una función de costo. Para regresión lineal,
+01:04:31 Speaker 1: su función de costo. Para regresión logística, su función de costo. Ahora tenemos softmax,
+01:04:36 Speaker 2: ¿no? Multinomial, necesita su función de costo. A partir de la
+01:04:43 Speaker 1: función de costo de regresión
+01:04:47 Speaker 2: logística, que es esto de acá, vamos a hacer las derivaciones, generalizaciones
+01:04:52 Speaker 1: y vamos a obtener una representación de este.
+01:04:57 Speaker 2: Que si ustedes se dan cuenta, más o menos tiene la forma del cálculo de la entropía. Y por eso que el nombre de esta
+01:05:15 Speaker 1: función
+01:05:19 Speaker 2: de Costco se denomina como entropía cruzada. Finalmente vamos a tener esta sumatoria, donde tenemos
+01:05:31 Speaker 1: que son
+01:05:33 Speaker 2: las etiquetas reales, o no, las predicciones del modelo, y las etiquetas reales.
+01:05:40 Speaker 1: Cuarta vez. vamos a ver las etiquetas reales y estas son las probabilidades que necesitan una probabilidad de crear un elemento especial en la clase de especies Bien, entonces, fíjense,
+01:06:12 Speaker 2: todo lo que ha provocado una simple
+01:06:15 Speaker 1: función lineal,
+01:06:18 Speaker 2: ¿no? Una simple función lineal,
+01:06:22 Speaker 1: a partir de ella,
+01:06:23 Speaker 2: que era para la regresión, ahora la hemos
+01:06:25 Speaker 1: llevado para un problema de clasificación, estamos comenzando con la clasificación binaria,
+01:06:29 Speaker 2: y eso nos ha permitido definir una
+01:06:32 Speaker 1: nueva función de hipótesis,
+01:06:34 Speaker 2: nos ha permitido definir una función de costo, ¿no? Luego lo hemos extendido, ¿no?
+01:06:40 Speaker 1: Para
+01:06:41 Speaker 2: clasificación, que es de su logística.
+01:06:44 Speaker 1: Luego extendimos esa red para lo que es multiclase, que es el softmax, ¿ya?
+01:06:49 Speaker 2: Y ese softmax nos lleva también a
+01:06:52 Speaker 1: tener que buscar una función
+01:06:53 Speaker 2: de costo, que es clóset.
+01:07:55 Speaker 1: Esto lo podemos llevar a quien sea un...
+01:08:00 Speaker 2: a un framework de
+01:08:02 Speaker 1: aprendizaje, donde nuestras
+01:08:05 Speaker 2: centradas van a ser el
+01:08:09 Speaker 1: conjunto de características independientes,
+01:08:14 Speaker 2: que son las X,
+01:08:15 Speaker 1: o el set de conjunto X,
+01:08:19 Speaker 2: y la variable independiente, que son las etiquetas. El conjunto de variables independientes... Nos va a servir para poder generar nuestro modelo. Este modelo nos va a dar un resultado. Y vamos a comparar si el resultado de este modelo, cuánto se aproxima a la etiqueta real. ¿Va? Esa aproximación la vamos a hacer a partir de una función de pérdida,
+01:08:43 Speaker 1: función de costo,
+01:08:45 Speaker 2: que nos va a dar un resultado. Y ese resultado nos va a servir para poder hacer off-in.
+01:08:52 Speaker 1: ¿Va? Entonces...
+01:08:56 Speaker 2: Lo que hemos visto es
+01:08:57 Speaker 1: que, si
+01:08:59 Speaker 2: se trata, por ejemplo, de una función lineal, ¿no? Eso no puede, acá creo que es característica, ¿no? Hemos visto
+01:09:06 Speaker 1: en el note, hemos visto que todo lo podemos hacer por
+01:09:13 Speaker 2: multiplicación de matrices, ¿no? Es lo bueno que tenemos acá,
+01:09:18 Speaker 1: todo es multiplicación de matrices, ¿ya? Calculamos función de costo.
+01:09:24 Speaker 2: Luego hacemos el descenso por gradiente.
+01:09:27 Speaker 1: Hemos visto cómo lo hacemos, ¿no? Tenemos la función de hipótesis, la función de costo, calculamos las gradientes.
+01:09:32 Speaker 2: Acá hay un arco también, le está faltando el 1 por n, ¿verdad? Tiene detalles. Y luego las gradientes nos sirven para poder actualizar el valor de los parámetros. ¿Ok? Y eso lo hacemos iterativamente.
+01:09:50 Speaker 1: Y acá tenemos.
+01:09:52 Speaker 2: Completamos, ¿no? Para el caso de regresión lineal tenemos la función de hipótesis, la función de teoría y el descenso formaliente nos sirve para poder hacer, ¿no?
+01:10:03 Speaker 1: La optimización. Ahora tenemos, hemos
+01:10:12 Speaker 2: visto que además de regresión tenemos clasificación y también tenemos supervisado, ¿no? Solo un poco para comparar, ¿no?
+01:10:22 Speaker 1: En regresión buscábamos un modelo
+01:10:24 Speaker 2: que se aproxime a la distribución.
+01:10:26 Speaker 1: En clasificación buscamos más bien separar, ¿no? En el espacio, en el inmediato. ¿Ya? Tomemos como ejemplo esta
+01:10:44 Speaker 2: base de datos bien sencillita que se trata de identificar
+01:10:51 Speaker 1: a tres tipos de flores de iris. y las características que se están extrayendo son
+01:11:06 Speaker 2: las medidas del pétalo y del séparo. El ancho y largo del pétalo y el ancho y largo del séparo.
+01:11:15 Speaker 1: Por ejemplo, hay una flor que tiene
+01:11:18 Speaker 2: largo del séparo 4.6, ancho del séparo 3.6, largo del pétalo 1.0 y ancho del pétalo 0.2.
+01:11:28 Speaker 1: Y así por acá abajo vamos extrañando.
+01:11:30 Speaker 2: Y vamos imitando de qué tipo es, ¿no? Por ejemplo,
+01:11:33 Speaker 1: acá es el primer registro, ¿no?
+01:11:38 Speaker 2: Se trata de una flor de iris que se tosa. Y vamos a querer que nos diga, vamos a querer un modelo que
+01:11:46 Speaker 1: nos pediga de esa clase.
+01:11:55 Speaker 2: Aquí teníamos una representación, ¿no? Podríamos nosotros, por ejemplo, decir que cetosa va a ser cero, versículo uno,
+01:12:04 Speaker 1: y virgínica dos. Pero,
+01:12:08 Speaker 2: mejor encontramos otra representación, donde, por ejemplo, tenemos cetosa.
+01:12:19 Speaker 1: Va a ser representada por
+01:12:21 Speaker 2: uno, cero, cero. El archipolo. Representada por cero, uno, cero.
+01:12:33 Speaker 1: Y mi límita.
+01:12:38 Speaker 2: representada por 001
+01:12:40 Speaker 1: esto
+01:12:46 Speaker 2: con qué objetivo con el objetivo de que cada una de estas sea una salida de la pena
+01:12:51 Speaker 1: eso
+01:12:53 Speaker 2: me facilita en vez de estar teniendo una sola salida acá voy a tener tres salidas Entonces voy a buscar tener una función, una función lineal, específicamente que vamos a tener la entrada de los datos y los pesos. Finalmente fui transitado lineal. Si tenemos acá, por ejemplo,
+01:13:33 Speaker 1: las entradas,
+01:13:34 Speaker 2: tenemos las salidas, ¿no? Las entradas son de 4 por n.
+01:13:39 Speaker 1: ¿4 por qué? Porque son 4 caracterizantes, ¿verdad? n,
+01:13:42 Speaker 2: número de elementos, ¿ya? Y las salidas, ¿por qué es de 3?
+01:13:51 Speaker 1: Son tres clases, además hemos dicho que son de este tipo, ¿no?
+01:13:54 Speaker 2: En el caso dice 2, hace 1, 0, 0, ¿no? O sea, tenemos 1, 2, 3. ¿Ya? ¿Y por qué n? Porque vamos a tener una salida para cada uno de los elementos que tiene la base rata, ¿no?
+01:14:07 Speaker 1: ¿Ya? Entonces, ¿de qué dimensión será la matriz de peso?
+01:14:17 Speaker 2: Si esto es 4 por n, por la salida
+01:14:19 Speaker 1: es 3 por n, n, p, y eso es 3. 4 por 3. 3x2, 3x4, 3x2, 3x4, 3x4, 3x4, 3x4, 3x4.
+01:14:55 Speaker 2: Y no olvidemos siempre el baile.
+01:15:00 Speaker 1: La idea, digamos, en esas expansiones
+01:15:02 Speaker 2: dimensionales, es que nosotros busquemos hiperplanos, porque son funciones lineales, finalmente, lo que estábamos desarrollando. Busquemos hiperplanos que busquen separar a cada una de las casas.
+01:15:14 Speaker 1: Un hiperplano para cada otra. Algo así, ¿no?
+01:15:23 Speaker 2: Esto es aquí considerando solamente de las cuatro características, solamente las dos primeras, el X1 y el X2.
+01:15:30 Speaker 1: ¿Ya? Hemos visto que estas son cuatro características, ¿no?
+01:15:35 Speaker 2: Pero acá estamos para replicar finalmente
+01:15:37 Speaker 1: en bidimensionales.
+01:15:39 Speaker 2: Bueno, vamos a terminar el resto. La entrada y la salida. O cada elemento con
+01:15:49 Speaker 1: su etiqueta. ¿Ya está? Y tenemos nuestro modelo, es decir,
+01:15:58 Speaker 2: tenemos nuestro modelo que es una regresión lineal, nos va a dar una salida, esa salida tenemos que buscar que sea lo próxima o lo más próxima a
+01:16:08 Speaker 1: la etiqueta real.
+01:16:14 Speaker 2: ¿Qué hacemos con módulos?
+01:16:17 Speaker 1: Le asignamos unos valores aleatorios.
+01:17:06 Speaker 2: Aquí quería tener que ustedes tomen un poco de atención. Cuando estamos hablando de regresión lineal. ¿Verdad? Y acá prácticamente es una representación por matriz. ¿Verdad?
+01:17:24 Speaker 1: ¿Cómo demostramos que se está en la regresión
+01:17:27 Speaker 2: lineal? Fíjense, si nosotros tomamos, ¿y por qué están con colorcito? ¿Por qué están con colorcito?
+01:17:47 Speaker 1: Muy bien.
+01:17:50 Speaker 2: Si nosotros hacemos la representación, fíjense, tenemos acá el W11, si queremos
+01:17:56 Speaker 1: llamarlo así, W12, W13,
+01:18:01 Speaker 2: W14. Aquí tenemos nuestras entradas, queremos llamarle
+01:18:09 Speaker 1: LX1, LX2, LX3, LX4.
+01:18:15 Speaker 2: Y este es nuestro valla, si queremos llamarlo el B1, si queremos llamarlo así.
+01:18:21 Speaker 1: Y esta sería nuestra salida, que sería nuestro Y,
+01:18:25 Speaker 2: nuestro Y sombrerito 1. ¿Verdad?
+01:18:31 Speaker 1: ¿Cómo obtenemos o cómo resulta
+01:18:34 Speaker 2: este Y sombrerito 1?
+01:18:36 Speaker 1: Este Y sombrerito 1
+01:18:38 Speaker 2: sale de la multiplicación de esta primera fila de la matriz de pesos con las entradas.
+01:18:47 Speaker 1: ¿Correcto?
+01:18:49 Speaker 2: Entonces vamos a tener, por ejemplo, ¿no? AX1, AX2,
+01:18:55 Speaker 1: AX3 y AX4. que se va a multiplicar, x1 se multiplica con w11, pues se suma a la multiplicación
+01:19:07 Speaker 2: de w12 por x2,
+01:19:09 Speaker 1: w12, pues se suma a
+01:19:13 Speaker 2: la multiplicación de w13
+01:19:15 Speaker 1: por x3, w13, y eso se suma a la
+01:19:20 Speaker 2: multiplicación de w14 por x4,
+01:19:23 Speaker 1: w14, y ese es el submarco a...
+01:19:28 Speaker 2: B1, ¿cierto? A B1. ¿Ok? O sea, esta salida, Y sombrerito 1,
+01:19:36 Speaker 1: viene a ser el resultado de esa operación. ¿Correcto?
+01:19:41 Speaker 2: ¿No? ¿Y qué cosa es esta operación?
+01:19:47 Speaker 1: Es un proceso escalar.
+01:19:48 Speaker 2: Es un proceso escalar. Pero es una regresión lineal.
+01:19:52 Speaker 1: ¿Verdad?
+01:19:53 Speaker 2: Es una regresión lineal multivariada.
+01:19:56 Speaker 1: Y fíjense lo bonito de todo. O sea, yo todo estoy
+01:19:59 Speaker 2: diciendo, esto es una regresión lineal.
+01:20:01 Speaker 1: O un conjunto de regresiones lineales. ¿Verdad?
+01:20:05 Speaker 2: Porque si nosotros hacemos el cálculo
+01:20:06 Speaker 1: idéntico, por ejemplo, ahora ponemos también uno de
+01:20:09 Speaker 2: los colores. Pero bueno, acá tenemos aquí el...
+01:20:14 Speaker 1: ¿No? El W21, W22,
+01:20:18 Speaker 2: W23, W24. Igual, acá tenemos el W2 y aquí tenemos el sombrerito, ¿no?
+01:20:26 Speaker 1: El 10
+01:20:27 Speaker 2: sombrerito 2.
+01:20:29 Speaker 1: ¿Correcto? Entonces, el 10 sombrerito 2,
+01:20:36 Speaker 2: igual. Las entradas siguen siendo las mismas.
+01:20:46 Speaker 1: Pero los pesos cambian porque ahora
+01:20:48 Speaker 2: son los pesos de la segunda fila, ¿no?
+01:20:50 Speaker 1: El W21 más la
+01:20:54 Speaker 2: multiplicación con el W22 más
+01:20:57 Speaker 1: la
+01:20:57 Speaker 2: multiplicación con el W33 más el 24 y más el sesgo el
+01:21:03 Speaker 1: 2, el W2.
+01:21:05 Speaker 2: Que es otra regresión lineal multivariada. Y hacemos lo mismo para el
+01:21:12 Speaker 1: 10 sombrerito 3.
+01:21:15 Speaker 2: y es un relito 3
+01:21:17 Speaker 1: y es un verito 3 y 3
+01:21:25 Speaker 2: 1 3
+01:21:27 Speaker 1: 3
+01:21:28 Speaker 2: 4 igual las entradas son las mismas
+01:21:41 Speaker 1: Y así
+01:21:43 Speaker 2: ya tiene otros pesos.
+01:21:45 Speaker 1: Para la otra función,
+01:21:47 Speaker 2: BW32, BW33, BW34 y más el B3.
+01:22:00 Speaker 1: Entonces, fíjense. Acá tenemos tres
+01:22:04 Speaker 2: representaciones de
+01:22:07 Speaker 1: este modelo. ¿No?
+01:22:10 Speaker 2: En forma de función, que ya lo hemos ido viendo, f de x igual a la multiplicación de los pesos por las entradas más el sesgo.
+01:22:18 Speaker 1: ¿Ya? Con una función.
+01:22:20 Speaker 2: Lo hemos visto como una matriz, fíjense, ¿no? Acá está
+01:22:23 Speaker 1: la matriz, la matriz de peso,
+01:22:26 Speaker 2: por la matriz de entrada, más la matriz de sesgo, y nos da una matriz de salida.
+01:22:33 Speaker 1: Y acá estamos extendiendo cómo es que
+01:22:35 Speaker 2: matemáticamente representa cada una de las cosas.
+01:22:52 Speaker 1: Y habíamos dicho, ¿no? De que nuestro objetivo en
+01:22:55 Speaker 2: las funciones lineales es encontrar los pesos adecuados, los valores adecuados de estos pesos, perdón.
+01:23:03 Speaker 1: Ese es el objetivo.
+01:23:05 Speaker 2: Que ya hacemos un descenso con el aviento y todo.
+01:23:13 Speaker 1: ¿Cebre, no? Sí, claro. Por primera pregunta. ¿Son diferentes pesos?
+01:23:20 Speaker 2: ¿Se me ha dado una pregunta? Sí. Porque son tres funciones lineales, ¿vale?
+01:23:31 Speaker 1: Cada clase...
+01:23:32 Speaker 2: No es que cada clase, sino digamos... Sí,
+01:23:37 Speaker 1: pues también con los... Cada clase, finalmente... Y esto estaba acá, ¿no? Acá. En este
+01:23:51 Speaker 2: gráfico, cada clase,
+01:23:53 Speaker 1: más o menos, tiene su espacio. Está por acá, por allá, por allá. ¿No es todo?
+01:23:57 Speaker 2: Está en medio. No, está por allá, por allá. Entonces, no pueden ser iguales los pesos, porque cada clase es una función lineal
+01:24:04 Speaker 1: en este espacio, en el dimensional, pero que está en otro lado. Esa es la función lineal, y en este otro lado, está en otra función lineal. Bueno, no las clases, ¿no?
+01:24:15 Speaker 2: Las funciones lineales van a ser
+01:24:16 Speaker 1: las regiones de separación en este caso.
+01:24:19 Speaker 2: ¿Ya? Pero van a estar por dos, ¿verdad?
+01:24:22 Speaker 1: Por dos, ¿verdad? Como pueden ser la misma.
+01:24:25 Speaker 2: ¿Ya? Entonces, si tienes
+01:24:26 Speaker 1: 20, 30 clases, entonces tienes... Tantas funciones lineales como clases. Y en el momento de hacer la predicción no es que vas a correr las 20. En
+01:24:43 Speaker 2: teoría si las corremos las 20.
+01:24:46 Speaker 1: Encontramos, estamos haciendo el perro en paralelos.
+01:24:51 Speaker 2: Mira, es una matriz de pesos. Donde la primera fila corresponde a los pesos de la función de la primera clase. La segunda
+01:24:59 Speaker 1: fila, los pesos de la función de la segunda clase. Es más,
+01:25:04 Speaker 2: esto nosotros podemos hacer de que este vayas también lo conloquemos dentro de mí.
+01:25:10 Speaker 1: ¿No? Dentro de esta matriz. ¿Cómo lo
+01:25:11 Speaker 2: colocamos dentro de esta matriz?
+01:25:13 Speaker 1: ¿Alguien me dice?
+01:25:16 Speaker 2: lo que hemos hecho, ¿no? Podemos adicionar aquí, ¿no?
+01:25:21 Speaker 1: Una
+01:25:21 Speaker 2: columna adelante donde vamos a tener el B1, el B2 y el B3,
+01:25:29 Speaker 1: ¿no? Y aquí colocamos un
+01:25:32 Speaker 2: elemento adicional que puede ser el X0 que va a tener valor
+01:25:36 Speaker 1: 1.
+01:25:39 Speaker 2: Y así nos anulamos esto,
+01:25:42 Speaker 1: ¿no? Nos anulamos y
+01:25:44 Speaker 2: ya tenemos Una simple multiplicación de más. Y ya encontramos directamente uno. ¿Pregunta? ¿Puedo borrar esto?
+01:26:26 Speaker 1: Yo les pido una representación por un grafo. ¿Cómo la representaría? ¿Cómo sería? ¿Quiénes serían estos señores?
+01:26:57 Speaker 2: X1, exacto, X2,
+01:26:59 Speaker 1: X3, X4. ¿Puesto?
+01:27:03 Speaker 2: ¿Y quiénes serían
+01:27:05 Speaker 1: estos tres señores?
+01:27:10 Speaker 2: Las salidas, ¿no? Las salidas serían Y'1,
+01:27:16 Speaker 1: Y'2, Y'3. O sea, esto sería 1. 1.
+01:27:27 Speaker: 3. ¿Ya?
+01:27:29 Speaker 1: ¿Cómo tenemos esta línea? Bueno, es una conexión.
+01:27:34 Speaker 2: Esta es de aquí,
+01:27:36 Speaker 1: de aquí, de aquí.
+01:27:39 Speaker 2: ¿Quiénes son ellos?
+01:27:42 Speaker 1: ¿Quiénes son esas conexiones?
+01:27:45 Speaker 2: Esta de acá, ¿no? Habíamos dicho que es el
+01:27:47 Speaker 1: W11, W12, W13,
+01:27:52 Speaker 2: W14. ¿Quién es ese 1, 1? Aquí
+01:27:56 Speaker 1: están los W11, W12, W13,
+01:28:00 Speaker 2: W14.
+01:28:03 Speaker 1: ¿No es todo? ¿No?
+01:28:07 Speaker 2: ¿Y qué cosa es esta
+01:28:08 Speaker 1: multiplicación?
+01:28:10 Speaker 2: Es lo que hemos hecho antes, ¿no? Yo no he borrado, pero bueno, el 10'1 es igual a la multiplicación de
+01:28:17 Speaker 1: X.
+01:28:19 Speaker 2: Ponernos
+01:28:20 Speaker 1: aquí.
+01:28:25 Speaker 2: Así, parte del sesgo, vamos a ponerlo acá. El B1. Entonces tenemos acá a X1,
+01:28:36 Speaker 1: X2, X3, X4. Multiplicado por
+01:28:43 Speaker 2: W11 más
+01:28:45 Speaker 1: W12 más
+01:28:48 Speaker 2: W13 más W14.
+01:28:52 Speaker 1: Y más. Y este de aquel.
+01:29:04 Speaker 2: ¿Verdad? O sea, esa función. Ya tenemos cuatro representaciones.
+01:29:09 Speaker 1: Forma matricial. La forma de gráfico de matrices. La forma de función.
+01:29:14 Speaker 2: Y la forma de gráfico.
+01:29:17 Speaker 1: ¿Cierto?
+01:29:18 Speaker 2: Y para la salida. Y2.
+01:29:20 Speaker 1: Lo mismo, ¿no?
+01:29:21 Speaker 2: Vamos acá. La conexión es. Ok, y derivamos el 10'2,
+01:29:28 Speaker 1: igualito.
+01:29:31 Speaker 2: Y para D3,
+01:29:33 Speaker 1: ah no, entonces faltamos el B2. Y luego para
+01:29:40 Speaker 2: D3,
+01:29:42 Speaker 1: igual tenemos aquí. Y calculamos el 10 milímetros. ¿No? Un grafo, que es una capa densa, ¿no? O una funiconexta.
+01:30:22 Speaker 2: La pareja, ¿por qué? Porque todos los nodos de entrada están conectados, todos los nodos están ahí.
+01:30:28 Speaker 1: O full conectada, ¿no? Full conectada, que es muy mala también, todos están conectados. ¿Ok? Una pregunta. Bien, la otra pregunta es... Si se agrega una nueva clase, ¿el corte siempre sale así de porcentaje? ¿O puede ser un corte de cualquier lado? Puede
+01:32:01 Speaker 2: ser de cualquier lado. Dependiendo de tu caso.
+01:32:06 Speaker 1: O sea, puede ser, ¿no?
+01:32:09 Speaker 2: Claro, si tú... Una vez está por este lado, por ejemplo, o por otro. Y peor aún, estamos hablando de
+01:32:20 Speaker 1: pasos multidimensionales. Son
+01:32:22 Speaker 2: hiperplanos que tenemos pasos multidimensionales. Y la otra consideración que hay que tener en cuenta es que a medida que nosotros vamos aumentando las dimensiones de nuestros datos, estos se van separando más. La entropía es mayor.
+01:32:45 Speaker 1: Gracias por su pregunta. Y ya lo borré.
+01:32:52 Speaker 2: Pero está por acá.
+01:32:54 Speaker 1: Oye, ya. ¿Qué
+01:32:56 Speaker 2: significan estos valores? Ya hemos dicho, no, vamos a intentar encontrar qué es lo que significa. ¿Qué significa menos 18,
+01:33:03 Speaker 1: 10.5, 1.7K2? O sea, ¿qué significa?
+01:33:16 Speaker 2: ¿Para qué obtenemos estos valores?
+01:33:19 Speaker 1: Estos valores estamos
+01:33:21 Speaker 2: buscando para
+01:33:23 Speaker 1: saber
+01:33:24 Speaker 2: a qué clase pertenece. Y con estos valores que estamos obteniendo, ustedes pueden decir que este elemento,
+01:33:31 Speaker 1: por ejemplo, X, que estamos probando,
+01:33:34 Speaker 2: ¿ya? ¿A qué clase pertenecerá? ¿A cetosa, a versicuolo o a biocínica?
+01:33:41 Speaker 1: ¿Cree? Depende de qué.
+01:33:58 Speaker 2: Pues tú, con estos valores, ¿qué referencia, María? Me te doy tus valores. Dime a qué clase pertenece ese
+01:34:06 Speaker 1: elemento. ¿Por qué? ¿Por qué ese todo?
+01:34:20 Speaker 2: Porque es el más cercano a cero o el mayor
+01:34:23 Speaker 1: de todos, podríamos decirlo, ¿no?
+01:34:25 Speaker 2: Porque podría dar los valores positivos también, ¿no? Pero igual, como hemos visto en la gráfica, puede dar muy positivos, muy negativos. Pero así, a simple vista, pues no lo
+01:34:41 Speaker 1: sabemos.
+01:34:42 Speaker 2: Y que nos habíamos hecho en el caso,
+01:34:44 Speaker 1: por ejemplo, de la
+01:34:49 Speaker 2: regresión lineal para poderla...
+01:34:53 Speaker 1: ¿Qué habíamos dicho? Que habíamos lanzado dentro de
+01:34:56 Speaker 2: una sismodidad para
+01:34:59 Speaker 1: tener valores
+01:34:59 Speaker 2: acostados entre 0 y 1.
+01:35:03 Speaker 1: En este caso,
+01:35:05 Speaker 2: está pasando algo similar que habíamos visto antes con la regresión lineal. Es decir... Teníamos nosotros estos valores aquí, de la otra clase por acá, y de pronto nos daba una función aquí. Y cuando yo preguntaba, ¿y este tumor de qué valor me está dando? Me está dando un valor altísimo. ¿Y qué significa ese valor? Es algo así lo que está pasando acá también, ¿no? ¿Qué significa ese valor? Para mí el significado de lo que hicimos acá fue a contarle el precio de Jules. Entonces, podemos hacer algo parecido, ¿no?
+01:35:38 Speaker 1: Porque si acá nos caen, oye, ¿qué significa esto?
+01:35:41 Speaker 2: ¿Y qué cosas son estos valores?
+01:35:43 Speaker 1: Estos valores son también conocidos como los logics,
+01:35:46 Speaker 2: que son las salidas de las funciones lineales.
+01:35:50 Speaker 1: ¿Ya? Hemos visto, ¿no? Hemos visto el y'1,
+01:35:54 Speaker 2: el y'2, que son funciones lineales.
+01:35:56 Speaker 1: Esas salidas, esos valores que estamos obteniendo del y'1 y el y'2,
+01:36:00 Speaker 2: son los logics, ¿no? Son las salidas de las funciones lineales.
+01:36:03 Speaker 1: ¿Ya? Estos logics, habíamos dicho,
+01:36:07 Speaker 2: que los podemos lanzar, ¿no? Dentro de una exponencial y a su vez dividir todo esto en la sumatoria de todos ellos. ¿No? Y eso era aplicar
+01:36:18 Speaker 1: Softmax. ¿Verdad?
+01:36:21 Speaker 2: Pero si nosotros hacemos esa aplicación de Softmax,
+01:36:25 Speaker 1: fíjense, tenemos acá, en los 118, estos son los logics, ¿no?
+01:36:31 Speaker 2: Hacemos el exponencial. Fíjense que ya tenemos nuestros valores. Normalizamos. Y obtenemos nuestros valores. 099
+01:36:39 Speaker 1: 0.000 24 0.000 6.000 6.000 6 .000 6 .000 6 .000 6.000 6.000 6.000 6.000 6.000 6 .000 6.000 6 .000 6 .000 6
+01:36:47 Speaker 2: .000 6.000 6 .000 6.000 6 .000 6 .000 6
+01:36:49 Speaker 1: .000 6.000 6.000 6.000 6.000 6 .000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6 .000 6 .000 6.000 6.000 6.000 6.000 6.000 6 .000 6.000 6 .000 6 .000 6.000 6 .000 6.000 6.000 6.000 6.000 6.000 6.000 6 .000 6.000 6 .000 6 .000 6 .000 6.000 6.000
+01:36:53 Speaker 2: 6.000 6.
+01:36:58 Speaker 1: Entonces, justamente esa es la idea de softwares, ¿no? Es la idea de softwares. Oye, dime, ¿a qué clase? Ah, sí,
+01:37:04 Speaker 2: cosa. Pero el 29% es probabilidad, ¿no?
+01:37:08 Speaker 1: Ok. Entonces, fíjense, estamos dando una interpretación.
+01:37:11 Speaker 2: Claro. Y lo otro, que también estamos acotando la salida entre 0 y 1. Entonces, suman estos tres valores, ¿cuánto nos da? Uno. Y podemos interpretar, como también se puede hacer,
+01:37:22 Speaker 1: salidas probabilísticas. ¿Ya?
+01:37:29 Speaker 2: Entonces SOFMAC nos da ese tipo de salida. O sea, muy parecido a lo que hicimos acá. En regresión lineal. Acortable entre C y 1. Lo que acá estamos haciendo es multinomial. Tenemos 5 clases.
+01:37:43 Speaker 1: Entonces las 5 clases,
+01:37:44 Speaker 2: la sumatoria de la salida de SOFMAC van
+01:37:46 Speaker 1: a ser sumada 1. Y vamos a hacer aquella clase que tenga el mayor valor.
+01:37:56 Speaker 2: Entonces, fíjense, a la regresión lineal, la estamos lanzando dentro de una función
+01:38:02 Speaker 1: forma.
+01:38:03 Speaker 2: Que es lo mismo que hemos hecho acá, a la función lineal, la estamos lanzando dentro de una sigmo lineal, ¿no?
+01:38:10 Speaker 1: O sea,
+01:38:11 Speaker 2: lo que hemos hecho con la regresión logística binomial, estamos haciéndolo ahora con un
+01:38:18 Speaker 1: inmediato. Y ahora ya
+01:38:23 Speaker 2: tenemos, ¿no?
+01:38:24 Speaker 1: El modelo.
+01:38:26 Speaker 2: ¿Qué es lo que sigue ahora?
+01:38:27 Speaker 1: La función de pérdida.
+01:38:29 Speaker 2: Ya hemos indicado que la función
+01:38:31 Speaker 1: de pérdida para Topmax
+01:38:32 Speaker 2: era la función de entropía
+01:38:35 Speaker 1: cruzada.
+01:38:37 Speaker 2: Y así tenemos
+01:38:39 Speaker 1: la
+01:38:41 Speaker 2: sumatoria de la multiplicación de las etiquetas reales con el logaritmo de las salidas que me está dando el modelo. Entonces aquí tenemos la etiqueta real.
+01:38:54 Speaker 1: era 1, 0, 0.
+01:38:57 Speaker 2: Y la salida que me da el modelo 0,
+01:39:00 Speaker 1: 99, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.
+01:39:17 Speaker 2: El error 0.00720.
+01:39:20 Speaker 1: Es un error bajísimo.
+01:39:23 Speaker 2: Lo cual tiene sentido. ¿Por qué? Porque fíjense que mi salida del modelo es
+01:39:28 Speaker 1: muy próxima a
+01:39:30 Speaker 2: la eficiencia. Este 0.99 es casi 1. Este 0.00720 es casi 0.
+01:39:38 Speaker 1: Es muy próximo. Por eso que el
+01:39:40 Speaker 2: error me está dando un error
+01:39:41 Speaker 1: bajísimo. ¿Ya? Por ahí tenemos. Ahí tenemos, ahora optimizamos. Bien,
+01:40:17 Speaker 2: habíamos visto que
+01:40:19 Speaker 1: el
+01:40:23 Speaker 2: proceso de optimización
+01:40:25 Speaker 1: que hemos visto con flexión
+01:40:30 Speaker 2: lineal, tenemos nuestro modelo, que era una función lineal, tenemos la función de pérdida, que era un error medio cuadrado. y luego calculamos las gradientes y actualizamos.
+01:40:46 Speaker 1: Esa misma estrategia ahora aplicamos con SOFMAX, que es nuestro modelo,
+01:40:52 Speaker 2: la función de pérdida, que es una entropía cruzada,
+01:40:55 Speaker 1: y también calculamos las
+01:40:58 Speaker 2: gradientes, ¿no?, para poder actualizamos.
+01:41:02 Speaker 1: O sea, la misma estrategia.
+01:41:04 Speaker 2: Solo que aquí...
+01:41:09 Speaker 1: Y como ya hemos ido viendo,
+01:41:11 Speaker 2: podemos tener modelos que
+01:41:13 Speaker 1: son muy
+01:41:14 Speaker 2: pesados, ¿ya? Donde la entrada vamos a tenerla por un lado, la salida al otro extremo, y en intermedio vamos a tener una serie de
+01:41:24 Speaker 1: conexiones de capas, de pesos, que van a tener que irse actualizando.
+01:41:31 Speaker 2: Y hacer
+01:41:32 Speaker 1: ese
+01:41:33 Speaker 2: proceso de actualización, digamos, de alguna manera manualmente, es muy pesado. ¿Ya?
+01:41:39 Speaker 1: Entonces lo que tenemos que ver es una estrategia que tenemos
+01:41:45 Speaker 2: aquí más automáticos.
+01:41:46 Speaker 1: Y arriba, aquí en este otro modelo,
+01:41:48 Speaker 2: tenemos aquí la entrada, a los tres tenemos la salida, y en un término tenemos una cantidad de pesos premios. ¿Ya? Entonces, para derivar las gradientes, ¿no? Se... Utilizamos
+01:42:02 Speaker 1: la estrategia de BASPRO PAIS. BASPRO PAIS fue publicada
+01:42:06 Speaker 2: en el año 86. Y fue el artículo, ¿no?, que dio fin al invierno de la inteligencia artificial,
+01:42:13 Speaker 1: en el año 80. Toda la década
+01:42:15 Speaker 2: del 70 prácticamente,
+01:42:17 Speaker 1: no se hablaba casi nada de inteligencia artificial, ¿no? Porque ya lo que la inteligencia artificial era de las redes neuronales, ¿no? Y... La idea es algo bien simple y la
+01:42:35 Speaker 2: podemos entender con esta simple función. Una función de sumatoria que va a multiplicarse por
+01:42:43 Speaker 1: z.
+01:42:45 Speaker 2: Esa la podemos representar en un
+01:42:48 Speaker 1: grafo, por ejemplo, x más y multiplicado por
+01:42:52 Speaker 2: un z, que nos va a dar la salida. Si le colocamos unos valores... ¿No? A x menos 2, a y es 5, y a z menos 4, reemplazamos, nos da la sumatoria 3 acá
+01:43:04 Speaker 1: y el producto nos da menos 2. ¿No?
+01:43:08 Speaker 2: Lo que queremos es encontrar la gradiente, o la deriva, si te voy a llamarle también, en cada uno de los
+01:43:16 Speaker 1: puntos de esta vez. ¿Ya?
+01:43:19 Speaker 2: Entonces, queremos encontrar la gradiente de la función de salida, ¿no? En este tipo una función de costo.
+01:43:26 Speaker 1: Respecto a X, respecto a Y, respecto a Z.
+01:43:30 Speaker 2: Ahí tenemos una definición de frega de derivada. La derivada de una sumatora, la derivada de un producto. Como
+01:43:37 Speaker 1: recordarís.
+01:43:39 Speaker 2: Y también acá la derivada de la función respecto a ella misma.
+01:43:48 Speaker 1: Como definición nota 1.
+01:43:50 Speaker 2: Y aquí tenemos la derivada de la función F
+01:43:53 Speaker 1: respecto a Z. Tenemos que está dentro de un producto. La derivada de la función respecto a
+01:44:01 Speaker 2: Z es Q. ¿Quién es Q? Q es esta de acá.
+01:44:08 Speaker 1: Acá viene la
+01:44:10 Speaker 2: derivada de F respecto a Q, que es el otro producto, Z, que tiene que ser menos 4. Y acá viene lo que interesa.
+01:44:19 Speaker 1: La derivada de
+01:44:21 Speaker 2: la función F
+01:44:21 Speaker 1: respecto a Y.
+01:44:24 Speaker 2: Para llegar a este punto tenemos que pasar
+01:44:28 Speaker 1: por este punto. ¿No? Y
+01:44:32 Speaker 2: debemos calcular la derivada primero de este punto y
+01:44:37 Speaker 1: luego multiplicarlo por este.
+01:44:38 Speaker 2: ¿No? Por eso que tenemos la derivada
+01:44:40 Speaker 1: de este respecto a Q
+01:44:41 Speaker 2: multiplicada por la derivada de Q respecto a 10. Y esto es lo que conocemos como la regla de la
+01:44:48 Speaker 1: KD. ¿No? Ustedes lo deben conocer.
+01:44:51 Speaker 2: ¿No? Vamos a recordar el estudio general. Si alguien se ha preguntado, ¿para qué estudiamos? ¿De limbar? ¿De tanta cosa?
+01:44:58 Speaker 1: Aquí está, ¿no? En el backdrop ahí. ¿Ya? Ahí está.
+01:45:05 Speaker 2: ¿A dónde va este ejemplito?
+01:45:09 Speaker 1: Y
+01:45:10 Speaker 2: para calcular la derivada en este punto tenemos que pasar por otro punto.
+01:45:14 Speaker 1: Imagínense ustedes calcular la derivada en este punto de la red. ¿No? A partir de esta función de acá de salida vamos a tener que pasar por todos estos puntos. ¿No? Y eso vamos a hacerlo gracias a la...
+01:45:33 Speaker 2: reglas de la cadena.
+01:45:35 Speaker 1: ¿Ya? A esta regla de la cadena vamos
+01:45:40 Speaker 2: a conseguir encontrar la derivada en todos los puntos anteriores o internos.
+01:45:46 Speaker 1: ¿Ya?
+01:45:46 Speaker 2: Y eso se describe simpáticamente en
+01:45:50 Speaker 1: este paper. ¿Ya? Es un paper de tres páginas, la alma. Como el que a través de gradientes consigue el paper. ¿Ok?
+01:46:06 Speaker 2: Entonces, finalmente, ¿cuál es la idea? La idea está en que nosotros lo primero que tenemos que hacer es encontrar la salida de la red.
+01:46:15 Speaker 1: ¿Verdad? La salida de la red la encontramos
+01:46:18 Speaker 2: haciendo un forward propaganda.
+01:46:21 Speaker 1: ¿Ya?
+01:46:22 Speaker 2: Una vez que tenemos la salida de la red, que viene a ser generalmente el loss, ¿no? ¿Cuánto estamos creciendo?
+01:46:29 Speaker 1: ¿Ya?
+01:46:30 Speaker 2: Con ese loss...
+01:46:33 Speaker 1: hacemos el backpropagantio. Es decir,
+01:46:37 Speaker 2: nos pagamos hacia atrás.
+01:46:40 Speaker 1: ¿Quiénes son los culpables y en
+01:46:42 Speaker 2: qué magnitud son
+01:46:44 Speaker 1: los culpables de estar teniendo el celoso?
+01:46:47 Speaker 2: ¿No? Porque de eso se trata, ¿no? Cuando hacemos esto de aquí es como que estamos encontrando cuánto es que cada uno de estos nodos incluye en esta salida.
+01:46:56 Speaker 1: ¿No? Bien que en cuanto la deriva. ¿Ya? Entonces.
+01:47:03 Speaker 2: Ahí tenemos, ¿no? La salida, tenemos el 2 y
+01:47:06 Speaker 1: luego hacemos el forward, el backflop, ahí y
+01:47:08 Speaker 2: su turno hacia atrás para encontrar la finalidad. Ya.
+01:47:14 Speaker 1: Ahora,
+01:47:15 Speaker 2: ¿esto lo entendemos nosotros cómo funciona?
+01:47:17 Speaker 1: Y en verdad, este es el algoritmo, ¿no?
+01:47:20 Speaker 2: Este es el algoritmo así simplificado de toda red neuronal,
+01:47:25 Speaker 1: que hasta ahora se utiliza. Es decir,
+01:47:27 Speaker 2: las actuales redes neuronales se encuentran las más sofisticadas cuando se entrenan.
+01:47:31 Speaker 1: Lo primero que hacen es hacer un forward propagation, encuentran el log de salida en
+01:47:36 Speaker 2: esa iteración. Con ese log de salida hacen el back propagation para que... para encontrar las gradientes y actualizan test.
+01:47:46 Speaker 1: Otra vez hacemos Forward Propagation,
+01:47:48 Speaker 2: Loss de salida,
+01:47:50 Speaker 1: Back Propagation para encontrar gradientes y actualizan test.
+01:47:53 Speaker 2: Y ese es el proceso de entrenamiento de la test. ¿Por qué demoran tanto en entrenarse las redes? Bueno, por el tamaño, por la cantidad de datos, ¿no? Y también por el conjunto de computaciones y los audientes.
+01:48:09 Speaker 1: ¿Ya? Y eso está implementado, pues obviamente en Python, eso está implementado en TensorFlow, eso ya no
+01:48:14 Speaker 2: lo vamos a tener que implementar nosotros, ¿no? Es más, herramientas como TensorFlow, prácticamente, simplemente nos dedicamos a hacer la
+01:48:22 Speaker 1: configuración de la regla, ¿no?
+01:48:24 Speaker 2: Como si fuese una lucha de Lego, ¿no?
+01:48:27 Speaker 1: Pongo una acá, otra acá, otra acá, otra acá, otra acá, y ya, entrena.
+01:48:31 Speaker 2: No me estoy preocupando. Si la red se va a saturar, que no se queda.
+01:48:35 Speaker 1: Dejémoslo para el TensorFlow. ¿Cómo
+01:48:37 Speaker 2: se ve cómo hace el backpropaguer?
+01:48:40 Speaker 1: ¿No? Nosotros solamente decimos configuración,
+01:48:42 Speaker 2: configuración, configuración.
+01:48:45 Speaker 1: ¿Ok? Y es esto, ¿no? Lo que le decía. Forward propagation, backpropagation y actualización. Forward propagation, backpropagation. Este es
+01:48:55 Speaker 2: el algoritmo de entrenamiento de una red neuronal.
+01:48:57 Speaker 1: ¿Hasta qué punto se puede agregar acá? Ahorita puedes agregar capas de acuerdo a la disponibilidad de fierro que tengas.
+01:49:13 Speaker 2: ¿No? O sea,
+01:49:16 Speaker 1: si tú tienes un supercomputón que
+01:49:18 Speaker 2: te va a soportar en tener una superred neuronal con los millones de capas
+01:49:22 Speaker 1: que tengas que estoy definiendo, no. Eso ya.
+01:49:28 Speaker 2: ¿Cada capa es una ficha o cada
+01:49:30 Speaker 1: capa qué significa?
+01:49:32 Speaker 2: No, cada capa es una...
+01:49:35 Speaker 1: Son funciones
+01:49:40 Speaker 2: que vas colocando. Ahorita vamos a ver más adelante cómo es que
+01:49:44 Speaker 1: funciona una capa. Las
+01:49:46 Speaker 2: fichas son las entradas. La primera capa, la capa de entrada, esas son las fichas.
+01:49:53 Speaker 1: Las
+01:49:53 Speaker 2: otras capas que vienen son mi alta.
+01:49:56 Speaker 1: que van a ir
+01:49:57 Speaker 2: entrenándose o especializándose y reconocer un patrón.
+01:50:08 Speaker 1: Ok. Este es nuestro algoritmo de
+01:50:11 Speaker 2: entrenamiento de una red. Todas las redes que ustedes tengan ahí por
+01:50:16 Speaker 1: delante, todos los que vayan a utilizar,
+01:50:17 Speaker 2: usan este proceso. ¿Ya? Cuando lanzamos el FIC, ¿no? Cuando hacemos el FIC de nuestra red,
+01:50:25 Speaker 1: se está trabajando estos tres pasos. Forward,
+01:50:29 Speaker 2: back propagation, forward, para encontrar la pérdida de salida. Con ese nodo de salud y hacemos el pasto para encontrar las gradientes. Y con las gradientes actualizamos para... Más bien, aprovechando tu pregunta,
+01:50:50 Speaker 1: la cuestión sería,
+01:50:53 Speaker 2: oye, si
+01:50:55 Speaker 1: ChatTPT,
+01:50:58 Speaker 2: por ejemplo, dice que se ha descargado todo internet para
+01:51:02 Speaker 1: entrenarse, ¿no?
+01:51:05 Speaker 2: ¿Será que hay un computador o será que hay una
+01:51:09 Speaker 1: máquina que
+01:51:10 Speaker 2: aguantó el modelo, o sea, todo internet, toda la base de datos de internet?
+01:51:16 Speaker 1: Lanzar, de nada hacer el Formal Propagation. Difícil, ¿no?
+01:51:25 Speaker 2: ¿Ya? O sea, ¿por qué? Yo estoy haciendo mi...
+01:51:28 Speaker 1: Bueno, es que este Formal es agarrando un
+01:51:30 Speaker 2: conjunto de datos, que es mi X, y por los pesos que tengo en ese momento, multiplico y encuentro el 2, ¿no? Y hago mi función de calidad y ya está.
+01:51:42 Speaker 1: Pero meter
+01:51:44 Speaker 2: toda la base de datos es complicado, ¿no?
+01:51:48 Speaker 1: O sea,
+01:51:50 Speaker 2: muero en el
+01:51:51 Speaker 1: momento.
+01:51:55 Speaker 2: Entonces, la estrategia que se sigue es
+01:51:58 Speaker 1: que
+01:51:58 Speaker 2: tengo bases de datos finales. Entonces, para no utilizar toda la base de datos, puedo utilizar en cada iteración o en cada época muestras de esos datos. o lo que se conoce como lotes o minilotes
+01:52:13 Speaker 1: pues
+01:52:14 Speaker 2: obtengo muestras de los datos y
+01:52:18 Speaker 1: con esa muestra o con ese minilote recién hago el Power Propagation más Propagation y actualizo ya
+01:52:25 Speaker 2: luego tomo otra muestra igual Power
+01:52:28 Speaker 1: Propagation más Propagation y actualizo no estoy trabajando con toda la base de datos que es verdad ya
+01:52:37 Speaker 2: Las muestras que vaya a tomar en cada iteración, tal vez no sean las mejores, ¿verdad? Y por eso que nuestra función de pérdida, fíjense que tiene esta forma.
+01:52:48 Speaker 1: ¿Ya? ¿Por qué tiene esta forma así de, ¿no?
+01:52:52 Speaker 2: De iras, de subidas y bajadas.
+01:52:55 Speaker 1: ¿Qué hago los guachos? Los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los guachos, los
+01:53:02 Speaker 2: guachos, los guachos, los guachos, los guachos, los guachos, los guachos. Y en la otra iteración, un lote que es muy malo, muy poco representativo y es una pérdida alta.
+01:53:13 Speaker 1: Pero en el tiempo, ¿no? En el tiempo, en el tiempo.
+01:53:24 Speaker 2: está decreciendo y
+01:53:26 Speaker 1: eso quiere decir que el
+01:53:29 Speaker 2: modelo está aprendiendo entonces este sistema o esta estrategia de agarrar minilotes en cada iteración y por épocas en cada época minilotes
+01:53:41 Speaker 1: entonces veo que el tiempo se impulsiona
+01:53:44 Speaker 2: y hago que mi modelo se pierda
+01:53:51 Speaker 1: Demoraría un poquito más, pero
+01:53:53 Speaker 2: no gasto
+01:53:56 Speaker 1: muchos recursos. Y ahí tenemos nuestro framework completo. Nuestro softmax. Nuestra función de carga.
+01:54:12 Speaker 2: Y la estrategia de backpropagation para optimizar el
+01:54:17 Speaker 1: modelo. O lo que significa para
+01:54:21 Speaker 2: poder encontrar los
+01:54:24 Speaker 1: valores más óptimos del objeto.
+01:54:41 Speaker 2: ¿Preguntas? Bien. A partir de ello, ya tenemos todo el fundamento para una red neuronal, porque ya hemos visto
+01:55:03 Speaker 1: una red neuronal.
+01:55:05 Speaker 2: Las centradas que tenemos, de las flores de iris, las salidas, y hacíamos la conexión de todos
+01:55:11 Speaker 1: los nodos, y tenemos una fúrica en el centro. Y era esto, ¿no?
+01:55:18 Speaker 2: Tenemos aquí los pesos, las centradas.
+01:55:21 Speaker 1: y a esta salida le aplicamos softmax y
+01:55:24 Speaker 2: ya esta es una red que teníamos bueno podríamos nosotros hacer de que esta salida por ejemplo
+01:55:55 Speaker 1: como será en
+01:56:01 Speaker 2: forma de grafo esta
+01:56:03 Speaker 1: red ¿Cuántas entradas?
+01:56:15 Speaker 2: Tengo X. ¿Cuántas entradas son? Cuatro. Uno. Dos. Tres. Cuatro.
+01:56:24 Speaker 1: Cuántas capas son? Una sola capa. ¿No? Una sola capa. Va a ser la capa de salida, ¿no?
+01:56:33 Speaker 2: ¿De cuánto va a ser la capa? De salida.
+01:56:38 Speaker 1: Diez, ¿no? de 10. Y acá va a estar conectado. Ok. En B, ¿no? Y vamos a hacer el B. Y está esta
+01:57:14 Speaker 2: representación de esta red neuronal en forma de grau. ¿Ya? ¿Qué pasa ahora si es que nosotros le aplicamos a, digamos, hacemos un poco más complejo? Le decimos, ¿sabes qué? Estas salidas que estamos obteniendo, ¿ya? Se convierten en
+01:57:38 Speaker 1: entrada de
+01:57:40 Speaker 2: una nueva capa.
+01:57:41 Speaker 1: ¿De cuántas? De tres, ¿no? De tres, ¿ya? De tres.
+01:57:49 Speaker 2: Una nueva capa de tres.
+01:57:52 Speaker 1: Acabamos por el tres. ¿Ya? Y
+01:57:57 Speaker 2: que van a recibir como entrada las salidas
+01:58:00 Speaker 1: delanteriores, ¿no? Y ahí tenemos,
+01:58:19 Speaker 2: ¿no? Y además nos dice, ¿sabes? Que a estas salidas le aplicas
+01:58:26 Speaker 1: softmax, ¿no? Le aplicas softmax.
+01:58:31 Speaker 2: Ahí hay. Entonces, a estas salidas le aplicamos
+01:58:33 Speaker 1: softmax.
+01:58:40 Speaker 2: O sea, en otras palabras, las normalizamos, ¿verdad?
+01:58:43 Speaker 1: Normalizamos. Y ahí podemos hacer un poquito más,
+01:58:51 Speaker 2: digamos así, más complejo nuestros modelos. Ahí podemos hacer, fíjense, podemos estar volviendo más complejo, más complejo, más complejo el modelo, y a la última capa le
+01:59:02 Speaker 1: aplicamos todo. Acá hay un problema.
+01:59:09 Speaker 2: El problema está en que si yo hago
+01:59:11 Speaker 1: esta
+01:59:13 Speaker 2: composición, de funciones lineales, porque es lo que estamos haciendo, ¿no? Esta es una función lineal, la estoy lanzando dentro de otra función lineal,
+01:59:25 Speaker 1: ¿ya?
+01:59:25 Speaker 2: Y si yo hago esa composición de funciones lineales, el h1 de x, miren este acá,
+01:59:32 Speaker 1: compongo con otra y genero el h2 de x,
+01:59:37 Speaker 2: ¿no? Y luego obtener un h3 de x, y así compongo funciones lineales. ¿Qué es lo que va a pasar? Si yo compongo el y1, por ejemplo acá, 2x más 10, el y2, 3y,
+01:59:48 Speaker 1: 1 menos 5, ¿no?
+01:59:51 Speaker 2: Hago la composición, me resulta y2 en 6x más 25. O sea, otra función lineal.
+01:59:58 Speaker 1: ¿Ya?
+01:59:59 Speaker 2: ¿Para qué hago composiciones y composiciones funcionales de cuando todo al final se reduce a una sola función lineal? ¿No? Es como que, ¿no? Es como que todo este conjunto de funciones lineales, porque hemos visto que estos nodos son funciones lineales, ¿no? Se reducen a una sola función lineal. ¿No?
+02:00:20 Speaker 1: O sea, esa sería la actual idea.
+02:00:23 Speaker 2: ¿Para qué tengo tantos nodos, tantos ahí? Y todos se reducen a una sola función lineal. ¿No? ¿Qué es lo que hacemos para evitar esa fusión? ¿No?
+02:00:41 Speaker 1: Le añadimos funciones de activación.
+02:00:46 Speaker 2: Y ya debemos aplicar funciones de activación.
+02:00:49 Speaker 1: ¿No? Entonces, ¿cuándo dijimos esto? Dijimos, este es nuestro gráfico. Y lo lanzamos, este gráfico
+02:01:02 Speaker 2: lo lanzamos dentro de un g de
+02:01:04 Speaker 1: f de x. ¿No?
+02:01:07 Speaker 2: El g
+02:01:08 Speaker 1: de
+02:01:11 Speaker 2: f de x queda igual a 1 sobre 1 más e a la menos
+02:01:16 Speaker 1: f de x.
+02:01:21 Speaker 2: ¿Qué es lo que hemos hecho acá? Una composición. Y en verdad lo que estamos haciendo es la función lineal, ¿no? F de X. Estamos no linealizándola. ¿Verdad?
+02:01:38 Speaker 1: Estamos no linealizando
+02:01:40 Speaker 2: la función lineal. Y la estamos no linealizando con una función sigmoidal. Que eso también se conoce como una función de activación. ¿Ya? Función de activación.
+02:01:53 Speaker 1: ¿Y por qué activación?
+02:01:55 Speaker 2: Vamos a verlo más adelante. Eso va a evitar, al hacer las composiciones de funciones lineales, va a evitar que se reduzca todo en una sola función lineal.
+02:02:08 Speaker 1: ¿Verdad?
+02:02:08 Speaker 2: Porque ya estamos convirtiéndolas
+02:02:11 Speaker 1: en funciones no lineales. ¿Ya? Y cada una de estas funciones,
+02:02:17 Speaker 2: cada uno de estos nodos de la función activada, va a comenzar a reconocer un patrón.
+02:02:25 Speaker 1: Va a comenzar a tener
+02:02:26 Speaker 2: una expresividad. Y eso significa que cada uno de esos nodos comienza a especializarse en reconocer un patrón.
+02:02:36 Speaker 1: Por eso es que comienza, como quien dice, activarse.
+02:02:39 Speaker 2: ¿Ya? Reconociendo un patrón dentro del conjunto de datos, dentro de la misma red. ¿Ya?
+02:02:50 Speaker 1: Entonces acá son fundamentales estas funciones de activación.
+02:02:52 Speaker 2: Es algo que ya no hemos aplicado.
+02:02:55 Speaker 1: Este lanzamiento
+02:02:58 Speaker 2: de las funciones de mía dentro de una sismodidad es una función. Softmax también puede considerarse como una función de activación. Pero la cuestión está.
+02:03:28 Speaker 1: ¿Puedo aplicar Softmax aquí en
+02:03:30 Speaker 2: las capas intermedias? Y además que recuerden que Softmax lo que hace es
+02:03:39 Speaker 1: normalizar. Se te va a poner los valores entre 0 y 1,
+02:03:44 Speaker 2: pero la sumatoria va a ser 1. Generalmente Softmax solamente lo utilizamos en la capa de
+02:03:51 Speaker 1: salina. ¿Por qué es donde necesitamos? Porque Softmax
+02:03:55 Speaker 2: es para poder normalizar la distribución, pero
+02:04:00 Speaker 1: en función de las clases que tenemos. Entonces solamente eso nos va a salir en la capa de salina. Les recuerdo el tiempo.
+02:04:05 Speaker 2: SOFMAX solo en capas intermedias. Capas intermedias, otras funciones de activación como estas que tenemos.
+02:04:11 Speaker 1: Ticmodidad, que ya la conocíamos. Ok.
+02:04:16 Speaker 2: Tangente hiperbólica, que es parecida a ticmodidad, solamente que está central en cero. Reloop, que es bien simple, muy popular también.
+02:04:25 Speaker 1: Especialmente en Big Learning, cuando trabaja con
+02:04:28 Speaker 2: solamente valores positivos.
+02:04:30 Speaker 1: Y fíjense que es de qué. La estrategia es que
+02:04:34 Speaker 2: la salida de líneas sea la función de identidad cuando la venta es positiva y cuando es negativa, cero. Tenemos el relum, elum, algunas otras modificaciones de la relum.
+02:04:53 Speaker 1: Y bueno, hay algunas características que cada una de estas funciones de curación tiene.
+02:04:58 Speaker 2: El problema con la ciclovial es que muchas neuronas se llegan a saturar. Especialmente cuando son valores un poquito altos de
+02:05:05 Speaker 1: acá por ejemplo en este punto. ¿De cuánto sería la gradiente? Pero no,
+02:05:11 Speaker 2: gradiente es el.
+02:05:12 Speaker 1: No, no, no.
+02:05:19 Speaker 2: Luego, el otro punto es que vamos a tener variantes que son o positivas o negativas.
+02:05:25 Speaker 1: ¿Ya? Siempre vamos a tener positivas o negativas.
+02:05:29 Speaker 2: Entonces, ¿qué vamos a tener? ¿Cuándo nos van a dar? ¿Solo positivo o solo positivo? ¿Están viniendo hacia la derecha? ¿Solo negativo va a defender? ¿Solo positivo? No va a ser continuo. El avance que queramos llamar.
+02:05:43 Speaker 1: del punto optimista.
+02:05:52 Speaker 2: Luego, es cesada de calcularse también,
+02:05:54 Speaker 1: ¿no? La función exponencial. Recuerden ustedes que estas funciones de activación, como las estamos
+02:06:00 Speaker 2: colocando en cada nodo de la red, finalmente, cuando hagamos el backpropagation, ¿no? Tenemos que hacer el cálculo de sus gradientes.
+02:06:08 Speaker 1: Pues, al calcular el gradientes, son un poco pesados, ¿no?
+02:06:12 Speaker 2: Por más que pareciera sencillo, pero son millones de veces que tienes que calcular y se vuelve pesado. Tenemos la función de activación de la sigmoidal, o la tangente hiperbólica, perdón, que es muy parecida a la manifestación en el dado área,
+02:06:27 Speaker 1: en cero.
+02:06:31 Speaker 2: En la red loop, cuando son positivos no se satura y computacionalmente es eficiente. ¿Por qué?
+02:06:40 Speaker 1: Porque es una función de identidad. Si
+02:06:42 Speaker 2: tengo entrada 5, saldrá 5.
+02:06:46 Speaker 1: No tengo que hacer ninguna operación.
+02:06:51 Speaker 2: Ninguno. En cuanto a la realidad es que es
+02:06:54 Speaker 1: también sencillísimo. No es nada que
+02:06:59 Speaker 2: demande algún proceso.
+02:07:04 Speaker 1: El problema es que esto se entra de cero y la verdad es que cuando son X negativo entonces no sabemos cuánto. Es infinito o cero.
+02:07:13 Speaker 2: ¿Ya? Entonces ahí esta función es muy utilizada en BigLearn especialmente en imagen porque los valores de las imágenes siempre son positivos.
+02:07:28 Speaker 1: Realmente en BigLearn son
+02:07:30 Speaker 2: positivos. Bueno, para evitar ese problema de los negativos hay
+02:07:34 Speaker 1: unas alternativas como el equirreno de ponerle una constante mínima.
+02:07:39 Speaker 2: o hacer, digamos,
+02:07:41 Speaker 1: el rectificador,
+02:07:43 Speaker 2: que sea la propia red en la que vaya calculando este hiperparámetro. Y bueno, y eso nos permite tener ahora, ¿no? Más capas, hacer composiciones
+02:07:56 Speaker 1: de capas y capas y capas, ¿no?
+02:07:58 Speaker 2: De tal manera que ahora tengo la garantía de que estos nodos no se van a, ¿no? no se van a resumir solamente en una función de aclaración. Ahora cada una de ellas tiene una función de aclaración que
+02:08:12 Speaker 1: va a hacer de que tengan
+02:08:13 Speaker 2: alguna expresividad cada dos.
+02:08:19 Speaker 1: Pregunta. ¿Cuántas capas ahora pongo? Pregunta, ¿no? O sea, ¿cuántas capas? Mi respuesta que te he dicho es infinita.
+02:08:29 Speaker 2: Puedes colocar la data que quieras. Pero bueno. Dependiendo de la data. Yo tengo una data, digamos, más o menos.
+02:08:37 Speaker 1: No sé si tengo unos 100.000 datos por ahí. ¿No? Fíjense, si pongo pocas capas, me da un modelo.
+02:08:47 Speaker 2: Capas intermedias. 6 capas por decir más o menos. Demasiadas capas y el modelo es muy complejo también. Y luego está llegando a un problema de overfit.
+02:08:57 Speaker 1: Mucho depende de la cantidad de datos de problemas que estamos haciendo. Bueno, y eso es. ¿Preguntas? Estoy saliendo una grita.
+02:10:30 Speaker 2: Ahí tiene estas diapositivas, perdón, este collab, este cuaderno ahí, que
+02:10:35 Speaker 1: lo he colgado también,
+02:10:36 Speaker 2: que está un poco resumiendo todo lo que hemos hecho, pero en código, ¿no? El modelo lineal, el softmax, ¿no? Cómo lo implementa el softmax, sencillo de implementarlo. Cross entropy, ¿no? Ahí visualizamos el ejemplo. Y luego la aplicación en
+02:11:11 Speaker 1: Keras. Keras TensorFlow.
+02:11:21 Speaker 2: Al final, TensorFlow es una librería intermedia que hemos visto y que lo que hace es poder interfasear directamente con la parte de los procesadores, con GPU, TPU. Recuerden que TensorFlow viene de Google y
+02:11:41 Speaker 1: Google tuvo
+02:11:42 Speaker 2: un proyecto de poderle hacer la competencia a NVIDIA y no ha podido, hasta ahora no puede. Es más, creo que ya abandonó el proyecto. de crear sus propios procesadores, ¿no? Los TPUs, ¿ya? Pero bueno, no ha podido ir con NVIDIA, así que seguimos con TPUs. Pero no
+02:12:02 Speaker 1: llegan
+02:12:09 Speaker 2: al nivel de NVIDIA, ¿no? No,
+02:12:12 Speaker 1: no. Sí.
+02:12:22 Speaker 2: Aunque ahora imagino que todos usan cloud, ¿no?
+02:12:26 Speaker 1: Cloud... Sí,
+02:12:30 Speaker 2: en el rato de los laboratorios, en el examen, vamos a asegurarnos que el cloud no esté abierto.
+02:12:37 Speaker 1: Vamos a ir.
+02:12:44 Speaker 2: El otro día estaba trabajando con Clau y me quedé, como decimos, me quedé sonso de todo lo que he fijado. Impresionante. Pero creo que más que no, creo que ya nos
+02:12:56 Speaker 1: lleva a otro nivel.
+02:12:58 Speaker 2: Especialmente la gente como ustedes que conocen de lo que es el código por dentro, ya nos ocupamos de la parte operativa. Y eso que los desarrolladores han muerto ahora con el Clau,
+02:13:11 Speaker 1: eso es falso. Más bien los desarrolladores...
+02:13:13 Speaker 2: Se elevan de nivel, ¿no?
+02:13:15 Speaker 1: A otro nivel.
+02:13:20 Speaker 2: Ya, esto es de los parámetros. Justo está acá lo que estábamos hablando, el softmax, ¿no? Las funciones de activación. Gasta una implementación en TensorFlow.
+02:13:35 Speaker 1: Ahí me muere. Ya, quería ver esto, fíjese.
+02:14:02 Speaker 2: Fíjense lo fácil y bonito que es la implementación, lo que es decir, un tipo como Lego, ¿no?
+02:14:08 Speaker 1: Ya. Estamos definiendo acá un esquema
+02:14:12 Speaker 2: secuencial para implementar la red. Y estamos teniendo aquí, vamos a definir una capa renta de 10 nodos, ¿ya? Que es la que habíamos hecho. Ya, 10 nodos. Y se va a tener como entrada 4
+02:14:27 Speaker 1: valores,
+02:14:28 Speaker 2: ¿no? 4 entradas, ¿ya? Y fíjense, la primera capa,
+02:14:34 Speaker 1: una capa densa de 4, con el clave 4.
+02:14:37 Speaker 2: Luego, le tenemos otra capa,
+02:14:40 Speaker 1: densa también,
+02:14:41 Speaker 2: o sea, que se va a conectar con las anteriores, totalmente. O sea, estos 10 se conectan con estos 3.
+02:14:47 Speaker 1: Y función de activación softmax, ¿no? Al ponerle función de activación softmax,
+02:14:52 Speaker 2: estamos colocando lo que es
+02:14:53 Speaker 1: este.
+02:14:56 Speaker 2: que es la capa de salida.
+02:15:01 Speaker 1: Luego, combinamos
+02:15:04 Speaker 2: el modelo con
+02:15:05 Speaker 1: descenso contra 10, le demandamos un nermis-d, que ya hemos definido el 0.01,
+02:15:09 Speaker 2: como función de pérdida de
+02:15:12 Speaker 1: océptopi y la métrica acelerada. ¿No? Fíjese,
+02:15:16 Speaker 2: tenemos, ¿no? Hemos visto la representación en forma de grafo de esta red de 10
+02:15:21 Speaker 1: capas, 10 nuevos intermedios.
+02:15:24 Speaker 2: otra capa de salida de 3, capa
+02:15:26 Speaker 1: de salida de 4 y reducido en dos, tres líneas de colo
+02:15:31 Speaker 2: esto lo lanzamos, hacemos el
+02:15:35 Speaker 1: fit hacemos
+02:15:39 Speaker 2: el fit le
+02:15:41 Speaker 1: mandamos el conjunto de entrenamiento el conjunto de test y
+02:15:46 Speaker 2: le decimos cuantas épocas y el backshot de los lotes
+02:15:52 Speaker 1: y manita
+02:15:54 Speaker 2: y a la red hace su
+02:15:57 Speaker 1: cálculo de Loss hace su Back Propagation
+02:16:00 Speaker 2: calcula gradientes,
+02:16:02 Speaker 1: actualiza P. Loss, Forward Propagation, Back Propagation, gradientes,
+02:16:07 Speaker 2: actualiza P.
+02:16:15 Speaker 1: El que estoy colando está más completo y también está la versión de Pycoach, para que ustedes comparen.
+02:16:25 Speaker 2: Y a pedido del delegado,
+02:16:27 Speaker 1: antes que ya entramos sobre la obra,
+02:16:31 Speaker 2: pues no solamente el delegado, creo que todos, ¿no? También he colgado ya la... Creo que ya están todos los grupos, ¿no? Lo que parece bueno. Lo que vamos a usar es HackingPay.
+02:17:08 Speaker 1: En HackingPay ustedes van a encontrar
+02:17:10 Speaker 2: una serie de aplicaciones. Ahí tienen modelos de todo. Ustedes, al ver si van a navegar por dentro, van a encontrar
+02:17:19 Speaker 1: clasificación de textos por transformers, generación de textos, clasificación de imágenes,
+02:17:25 Speaker 2: generación de imágenes.
+02:17:27 Speaker 1: Ya, ¿qué más?
+02:17:30 Speaker 2: ¿Qué aplicaciones multimodales, procesamiento de algo bueno?
+02:17:36 Speaker 1: Ustedes encuentren la
+02:17:37 Speaker 2: aplicación que más les interesa. Y
+02:17:41 Speaker 1: la
+02:17:48 Speaker 2: idea está en que ustedes van a desarrollar, ¿no? Primero, obviamente, primero seleccionar qué es lo que van a hacer.
+02:17:53 Speaker 1: El cárcel, el modelo base, etcétera.
+02:17:57 Speaker 2: También ahí, en el behind page, está la
+02:17:59 Speaker 1: referencia también, ¿no? Bibliográficas, ¿no?
+02:18:02 Speaker 2: en qué actitud está la
+02:18:04 Speaker 1: implementación, o sea, todo ahí, bien documentado.
+02:18:10 Speaker 2: Luego hacen el part-tuning del modelo, ¿no? Sus mejoras encima de eso e
+02:18:17 Speaker 1: implementan un dentro, ¿no? Lo objetivo es que ustedes se afiancen cómo
+02:18:29 Speaker 2: utilizar estos modelos, ¿no? En qué situaciones. Y por ahí ustedes van a sentir la pegada, ¿no? De,
+02:18:35 Speaker 1: oye, acá me falta hierro, ¿qué hago? Necesito GPU, ¿no? Entonces ese momento
+02:18:42 Speaker 2: es lo rico, ¿no? O sea,
+02:18:44 Speaker 1: ustedes dicen, oye, es calamba, acá se siente la pegada, ¿no?
+02:18:49 Speaker 2: Cuando llegaron ese momento, ustedes miran, vamos a preguntar,
+02:18:52 Speaker 1: ¿qué hacemos para ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir a ir
+02:18:57 Speaker 2: a ir a ir a ir a ir a ir a ir a ir a ir a ir Por ahí no estaré, tal vez, batiendo con algún... Pero, ¿el semestre cuándo lo acabamos? Creo que la primera
+02:19:11 Speaker 1: semana de junio creo que lo acabamos, ¿no? Ya.
+02:19:15 Speaker 2: El trabajo lo que hemos... Lo he puesto como
+02:19:17 Speaker 1: para matarlo ya el 17 de junio, mitad de junio, para que ustedes ya al final del semestre... ¿no? Venga ya, aproveche y lea, chao. Ok.
+02:19:29 Speaker 2: Tampoco, este...
+02:19:30 Speaker 1: No, tampoco quiero que se complique mucho, ¿ya?
+02:19:34 Speaker 2: Yo sé que ustedes están en el curso porque les gusta el tema y quiero que lo disfruten también.
+02:19:40 Speaker 1: No quiero que sea una carga tampoco. Y bueno,
+02:19:45 Speaker 2: lo matamos antes, chévere, ¿no?
+02:19:47 Speaker 1: Solamente queda el resto del examen
+02:19:49 Speaker 2: final. Además, ya cuando todo ya me doy el examen
+02:19:52 Speaker 1: final para aprobar. Pero bueno,
+02:19:59 Speaker 2: esa es la propuesta. Pero la próxima clase...
+02:20:02 Speaker 1: Te propones las fechas y me dices, ¿está bien la propuesta o lo podemos cambiar para mí? Vamos a tiempo a hacer eso.
+02:20:10 Speaker 2: Yo pensaba que falen la segunda parte, pero como creo que es el periodo de muchos de ustedes,
+02:20:16 Speaker 1: podemos ir comenzando, ¿no? Investigando, leyendo papers, ahí, ¿no? Porque en
+02:20:23 Speaker 2: el plugin page tiene mucha, mucha
+02:20:25 Speaker 1: referencia.
+02:20:26 Speaker 2: ¿Ya? Hay muchos trabajos. y ahora último que están saliendo muchas cosas en
+02:20:32 Speaker 1: este tema cada día sale un nuevo actor y
+02:20:35 Speaker 2: todos los modelos las bases de datos y qué tienen ahí para divertirse pregunta Bien. En el día de hoy hemos visto ya lo... Fíjense cómo a partir de una simple realización en el día de hoy hemos llegado a las cosas más complejas. En la próxima clase vamos a ver cómo
+02:21:08 Speaker 1: optimizamos esas versiones.
+02:21:10 Speaker 2: Tampoco no es que yo hago mi configuración y ya, ¿no? ¿Ok? Hay muchas cositas por dentro que
+02:21:16 Speaker 1: tenemos que ir también puliendo. ¿Ya? Y ese es el objetivo de la próxima sesión. Cómo optimizamos nuestras versiones.
+02:21:22 Speaker 2: ¿Ya? Y después ya que vamos a correr como los uranes. Bien, jóvenes señoritas, entonces,
+02:21:28 Speaker 1: no hay preguntas, vamos terminando.
+  

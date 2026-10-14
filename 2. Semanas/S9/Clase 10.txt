@@ -1,0 +1,11 @@
+. Vibe Quest{
+	. Notebock interactivo
+	. Paideia
+	. Reforzar lo aprendido
+}
+
+. A travez de la estadistica vamos a entender los modelos de ML
+
+. Modeling Mindsets{
+	. A veces hay modelos estadisticos mejores que los de machine learning
+}

@@ -1,0 +1,908 @@
+# DM S4
+
+  Meeting started: 13/10/2026, 4:57:54 p. m.
+  Duration: 151 minutes
+  Participants: Speaker, Speaker 1, Speaker 2
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/N4fUjrmwz4syV7sHcRG2?o=txt)
+
+    
+
+  
+
+  
+
+  ## Transcript
+
+  00:00 Speaker 1: ¿Cómo podemos hacer más complejos los
+00:03 Speaker 2: modelos de revisión lineal para problemas de classificación? Y una de las cuestiones que teníamos era...
+00:40 Speaker 1: El
+00:41 Speaker 2: hecho de estar agrupando capas consecutivas de regresiones lineales, cada nodo en verdad es una regresión lineal, sin
+00:52 Speaker 1: que le estamos lanzando unas activaciones,
+00:56 Speaker 2: vamos lanzando dentro de otras funciones, sin que la no linealización, o así que cada uno de estos nodos sea no lineal.
+01:08 Speaker 1: Y eso no sé si lo hemos visto en
+01:12 Speaker 2: detalle, pero esto
+01:15 Speaker 1: es importante, interesante. Aquí,
+01:47 Speaker 2: por ejemplo,
+01:48 Speaker 1: este conjunto de datos. Podemos agregar una capa más.
+02:06 Speaker 2: ¿Qué tiene que ser aquí?
+02:09 Speaker 1: Para este
+02:11 Speaker 2: conjunto de datos, con esta arquitectura que estamos definiendo, el modelo, ¿no? En ajustar los pesos para poder aproximarse a una solución. Y bueno, de alguna manera lo está logrando. Pero está, digamos, cerca del asunto.
+02:39 Speaker 1: Este es el problema que ustedes regalaron. El costo de comportamiento. Respecto a la arquitectura, claro.
+02:50 Speaker 2: Todo bien. La función de activación. La función de activación.
+02:54 Speaker 1: Bueno, acá.
+03:08 Speaker 2: Fíjense cómo está el
+03:11 Speaker 1: loss,
+03:12 Speaker 2: ¿no? Acá el loss, fíjense el comportamiento. Hemos hecho ya un modelo un poco más complejo, porque obviamente el conjunto de datos también lo demanda, ¿no? Es un patrón más complejo, entonces exige a que tengamos también una arquitectura pública más compleja. Pero, y es lo mismo que pasa ahora con los modelos que tenemos generativos, ¿no? A modelos más complejos, ¿qué es lo que necesitamos?
+03:43 Speaker 1: Más datos. Y
+03:47 Speaker 2: acá seguimos manteniendo nuestra entrada
+03:48 Speaker 1: que son solamente X y X.
+03:52 Speaker 2: Por eso acá podemos
+03:54 Speaker 1: tener esta opción.
+03:56 Speaker 2: Y hacer también nuestra data más completa. Vamos a tener más información. A ver, digamos, vamos a ver cómo se comporta.
+04:16 Speaker 1: Ahí estamos.
+04:17 Speaker 2: Y ahí consigamos. O estabilizar, fíjense, estabilizar. Ya no está como en el anterior modelo que estaba
+04:28 Speaker 1: aquí. Lo que yo quería responder es lo
+04:35 Speaker 2: que está pasando en cada una de las unidades, en este caso cada una de las neuronas. Fíjense que cada una de
+04:46 Speaker 1: ellas toma un patrón.
+04:50 Speaker 2: Acá tenemos aquí patrón,
+04:52 Speaker 1: patrón, patrón.
+04:54 Speaker 2: Luego, estas a su vez que van a alimentar la siguiente capa, patrón, otro patrón, otro patrón, otro patrón, otro patrón, y así sencillamente esta salida, estos cuatro patrones,
+05:08 Speaker 1: ¿no? Hacemos la próxima ponderada y
+05:12 Speaker 2: tenemos el patrón final. Y si nosotros volvemos a repetir el experimento. Reinicializamos.
+05:26 Speaker 1: Y otra vez.
+05:30 Speaker 2: Y ahí
+05:32 Speaker 1: está. Y dice que tenemos aquí un
+05:39 Speaker 2: patrón, un patrón, un patrón, que no son los mismos inferiores, porque obviamente la inicialización que hemos hecho son otros números, ¿no? Acá hay otro patrón,
+05:48 Speaker 1: otro patrón, y hay otro patrón, y tenemos aquí
+05:50 Speaker 2: el patrón final. Cada una de las unidades está consiguiendo, de alguna manera diríamos que sí, especializarse en la identificación de
+06:05 Speaker 1: un patrón.
+06:10 Speaker 2: para la siguiente capa generan otros patrones fíjense que los patrones de esta carta
+06:44 Speaker 1: ¡Gracias!
+07:21 Speaker 2: Fíjense, aquí estamos. La unidad también está especializándose en un patrón. Y esa especialización o el hecho de que cada una de estas neuronas... identifique o se especialice en un patrón, es gracias a la función de
+07:41 Speaker 1: activación.
+07:43 Speaker 2: Es la función de activación que está permitiendo
+07:45 Speaker 1: que cada
+07:47 Speaker 2: una de ellas obtenga una expresividad. Obtenga una expresividad. Cuando decimos que tenga una expresividad, es que está identificando un patrón. Entonces, es un patrón.
+08:08 Speaker 1: Entonces,
+08:10 Speaker 2: bueno, y ahí surgieron algunas preguntas, ¿no? Una de las preguntas que decíamos era, ¿cuántas capas le colocamos internamente? Luego, por capa, ¿cuántas unidades podemos tener?
+08:26 Speaker 1: Y luego,
+08:28 Speaker 2: ¿qué más? ¿Cómo inicializamos la red? Yo creo que inicializamos aleatoriamente. ¿Será que hay otra forma de inicializar la red que me permita hacer el entrenamiento mucho más rápido? Ahora, ¿qué pasa con el sobreacuste? ¿Qué pasa si yo tengo un punto de datos y tengo mi modelo y se sobreacusta?
+08:50 Speaker 1: ¿No? Que lo que conocemos como el overview.
+08:52 Speaker 2: Y así varias. Y el mismo, ¿no? La misma función de... de descenso por gradiente, ¿no? ¿Será que podemos mejorar esa función de descenso por gradiente? Entonces, ahí comienzan a surgir varias preguntas, ¿no? Y justamente la clase de hoy es responder algunas de esas preguntas, ¿no?
+09:17 Speaker 1: Buscando optimizar las
+09:20 Speaker 2: redes de RON. Y esta clase es súper importante e interesante a la vez, porque todas estas técnicas que vamos a ver, hasta ahora siguen utilizándose en el entrenamiento de los modelos de red. Queremos decir, básico. Listo, siempre repasando desde donde venimos, venimos a partir de una simple dirección lineal, para poder determinar
+09:54 Speaker 1: el modelo que está
+09:56 Speaker 2: el más óptimo, utilizamos una función de R, un LOS, en este caso es una dirección lineal, que nos va a dar cada uno de los elementos al modelo, y así calculamos la R.
+10:13 Speaker 1: Por ejemplo, vamos a un
+10:15 Speaker 2: problema de clasificación. En el caso de clasificación, tenemos la función de SORLAMS, ¿no? Y cuya función de los, o de
+10:23 Speaker 1: los reales, están los ejes, ¿no?
+10:27 Speaker 2: Luego, hemos visto también de que, para poder hacer el cálculo de, ¿no? De la... de los gradientes, lo que nos interesa es poder calcular justamente las gradientes. Y eso lo hacemos a partir de la pérdida que estamos obteniendo en la salida del mundo. Pero para obtener la salida del modelo,
+10:50 Speaker 1: primero tenemos que hacer un barrio
+10:53 Speaker 2: hacia adelante, lo que conocemos como el porro.
+10:56 Speaker 1: Y una vez que hacemos
+10:58 Speaker 2: el barrio hacia adelante, obtenemos la salida, que es la pérdida, el modelo en ese momento, esa fotografía del momento del modelo. Luego ajustamos, ¿no? haciendo la
+11:13 Speaker 1: propagación hacia atrás para
+11:14 Speaker 2: calcular en cada uno de los puntos las gradientes que vienen a partir de la función de acá. Y esto, en pocas términos bien simples, es poder encontrar cómo es que cada uno de los puntos o de los nodos de la red influye en la salida.
+11:34 Speaker 1: Entonces, aquí vamos a estar
+11:36 Speaker 2: multiplicando, como lo estamos viendo acá.
+11:39 Speaker 1: ¿no? Estamos multiplicando la
+11:41 Speaker 2: gradiente que viene de la salida final con la gradiente del nodo
+11:47 Speaker 1: actual, ¿no?
+11:48 Speaker 2: Y eso nos va a llevar, y eso a su vez lo vamos
+11:50 Speaker 1: a hacer nosotros nodos, y bueno,
+11:53 Speaker 2: ya de
+11:55 Speaker 1: las derivadas parciales que vamos a generar, vamos
+12:01 Speaker 2: calculando las gradientes en cada uno de los puntos. Y al haber calculado las gradientes en cada dos puntos, vamos a poder... Realizar nuestras
+12:09 Speaker 1: actualizaciones
+12:13 Speaker 2: de los PES. Y bueno, este es nuestro algoritmo. Hemos dicho que obtenemos un batch de datos. Podemos trabajar con todo el conjunto de datos de desarrollo pesado. Y más aún que estamos ahorita en tiempos de grandes volúmenes de información. No quiero decir Big Data porque ya suena medio... Antiguo, Víctor. Ahora tenemos grandes volúmenes de información que lanzar todo en la memoria del computador ya
+12:47 Speaker 1: no conseguiríamos. Entonces tomamos batches o minilotes para
+12:55 Speaker 2: poder hacer el proceso de forward propagation. Encontramos la salida,
+12:59 Speaker 1: que es el loss.
+13:00 Speaker 2: Con ese loss calculamos. Y con las gradientes actualizamos los pasos. Y ese es el proceso de entrenamiento. Y luego, habíamos visto de que podemos ir haciendo más complejo el modelo, componiendo funciones, que era como implementar capas.
+13:46 Speaker 1: Tenemos acá, por ejemplo,
+13:48 Speaker 2: una
+13:48 Speaker 1: capa, los pesos,
+13:51 Speaker 2: las centrales, y luego adicionamos las funciones de activación. para que cada uno de los dos tenga una expresividad. Cuando decimos que tenga una expresividad, se especializa en reconocer un par. Y luego eso podemos ir componiendo otra capa, y luego tenemos nuestra capa final, que en el caso que tenemos una clasificación, lo lanzamos dentro de una
+14:20 Speaker 1: softmax.
+14:21 Speaker 2: Otra softmax nos va a dar
+14:22 Speaker 1: salidas
+14:26 Speaker 2: ponderadas.
+14:28 Speaker 1: normalizadas,
+14:29 Speaker 2: cuya sumatoria nos va a dar 1. Cuenta que me rehuso a decir improviso.
+14:35 Speaker 1: Ya. Ok. Entonces,
+14:41 Speaker 2: ahí tenemos las funciones de activación, las más clásicas, ¿no? La simodidad, la tangente intervólica, pero la que más se utiliza actualmente en la red. ¿Y arreglo por qué? ¿Por qué crees que
+14:58 Speaker 1: actualmente se utiliza mucho red? Más fácil para calcular. ¿No? Ya. Entonces es más performante. Ya.
+15:12 Speaker 2: Además de la facilidad del cálculo, finalmente es simplemente una función de identidad. Bueno, Redo se hizo muy popular justamente con Deep Learning, ¿no? Con las redes convolucionales, ¿no? Las redes convolucionales trabajan realmente sobre imágenes. Y los valores de imágenes, o sea, de los
+15:53 Speaker 1: bíxeles, son generalmente positivos. Tenemos valores de la red. ¿Por qué?
+16:37 Speaker 2: Bueno, ahí tenemos nuestro framework de entrenamiento, ¿no? De una red neuronal, digamos, aquí todo comienza a partir de nuestro conjunto de datos y eso es
+16:48 Speaker 1: nuestro
+16:49 Speaker 2: punto de parte. Hay que tenerlo en cuenta, porque si no tenemos datos, no tenemos nada de lo demás. Entrenamos una red neuronal y hemos visto que es un conjunto de funciones lineales. con sus respectivas funciones de activación, y luego tenemos su salida, que viene a ser, por ejemplo, en el caso de, si estamos trabajando, por ejemplo, en el caso de una clasificación, una clasificación, y en el caso de una regresión, una MS. Luego, una vez que obtenemos la pérdida, la salida de la red, desarrollamos la optimización.
+17:32 Speaker 1: que de verdad es la
+17:35 Speaker 2: actualización de los pesos del modelo de tal manera que vamos a conseguir o disminuir la pena. Y en el caso, por ejemplo, de redes neuronales utilizamos el backproperation con minibatch para el descenso propio. Esto es lo que resumen.
+17:58 Speaker 1: Bien, entonces,
+17:59 Speaker 2: comenzamos con algunas cuestiones que vamos a hacer. Primero, la inicialización de los pesos. Hemos dicho que nuestra estrategia de inicialización es asesinar pesos aleatorios, o valores aleatorios a los pesos de la fe.
+18:25 Speaker 1: Y bueno,
+18:29 Speaker 2: por azar de la vida, digamos así, y la aleatoriedad, podríamos tener algunos valores que pueden ser muy sesgados también. Entonces, ¿qué pasa si es que inicializamos la red, por ejemplo, con todos los pesos en
+18:47 Speaker 1: cero?
+18:58 Speaker 2: de toda esta matriz que tenemos aquí, cero.
+19:03 Speaker 1: La
+19:04 Speaker 2: salida, ¿cuánto?
+19:05 Speaker 1: Cero. Cero.
+19:10 Speaker 2: Y el LOD probablemente sea alto, probablemente digo,
+19:17 Speaker 1: y
+19:19 Speaker 2: para poder actualizar los pesos, Como que va a demorar bastante, ¿no?
+19:30 Speaker 1: Entonces,
+19:32 Speaker 2: como indicamos aquí, todas las neuronas van a hacer las mismas operaciones, van a tener las mismas gradientes y se van a actualizar de forma parecida. Luego, ¿qué pasa si inicializamos la V con pesos pequeñitos? Por ejemplo, ¿no? Una media de, bueno, media de cero y una desviación estándar de 0.0. O sea, tenemos valores pequeñitos. ¿Qué pasa con el proceso de, digamos,
+20:08 Speaker 1: move forward, operation? Probablemente más o menos lo mismo como con CERON, ¿no? Los CERON están muy altos y tenemos que tener muchas cepotas para ver entre CERON. ¿Y qué pasa si tengo yo más cajas? 0.1 multiplicación con 0.1 es 0.1 0.0 0.0 0 .0 0 .0 0 .0 0.0 0 .0 0 .0 0.0 0 .0 0 .0 0.0 0 .0 0 .0 0 .0 0 .0 0.0
+20:48 Speaker 2: 0.0
+21:05 Speaker 1: Cada vez son más pequeños.
+21:14 Speaker 2: Igual, puede funcionar bien para pequeños, ¿no? Para redes pequeñas. Cuando decimos redes pequeñas, son de pocas capas. Y cuando tenemos más capas más profundas, pues van a desvanecerse, ¿no? Pero pueden conducir a distribuciones normotenias de activaciones a medida que incrementamos el número de capas.
+21:39 Speaker 1: Luego,
+21:40 Speaker 2: por ejemplo, aquí tenemos una experimentación con una
+21:47 Speaker 1: red
+21:49 Speaker 2: que tiene 10 capas. Y fíjense, ¿no? Las activaciones que hay de salida de la primera capa.
+22:00 Speaker 1: Bueno,
+22:02 Speaker 2: los valores de activación, por ejemplo, de la salida de la primera capa. Relativamente tiene una distribución, ¿no? O sea, estamos
+22:10 Speaker 1: bien distribuidos.
+22:11 Speaker 2: Y a medida que seguimos avanzando, justamente lo que
+22:14 Speaker 1: estamos comentando aquí, ¿no? Cuando vamos yendo
+22:16 Speaker 2: más a profundidad, prácticamente los valores, ¿no? Vamos volviendo más chiquititos, más pequeñitos, prácticamente se están acumulando cero, ¿no?
+22:27 Speaker 1: Ya, porque tenemos acá cada vez...
+22:31 Speaker 2: ¿No? Valores más pequeñitos. Y prácticamente, cuando todo se está acumulando en cero, ¿qué significa? Prácticamente estas capas no
+22:41 Speaker 1: tienen ninguna
+22:41 Speaker 2: importancia. Están, prácticamente, así me quitaría que están
+22:47 Speaker 1: aparadas, ¿no? Y
+22:48 Speaker 2: cuando vamos a hacer el macro operation, ¿qué gradito vamos a encontrar aquí? Cero, cero, cero, cero. Como dice acá, todas las activaciones entran en cero. Esto es cuando tenemos como función de activación tangente hiperbólica. La tangente hiperbólica nos da valores entre menos uno y más uno. Si fuese una sigmovidad, ¿cómo sería la salida si tengo valores pequeños? Cambio acá. En vez de tangente hiperbólica, cambio mi pulsión de activación de mis camas internas a sigmovidad.
+24:05 Speaker 1: O sea,
+24:07 Speaker 2: de los mismos sueldos. ¿De qué número a qué número va a ir la salida de una sismoidad? 0 a 1, ¿no?
+24:25 Speaker 1: Vamos
+24:26 Speaker 2: a tener en este caso acá está de menos 1 a más 1, ¿no? Entonces, si tenemos,
+24:34 Speaker 1: digamos,
+24:35 Speaker 2: la salida de la función de la primera capa, ¿cómo será?
+24:49 Speaker 1: 0.5
+24:52 Speaker 2: 0.5 0
+24:54 Speaker 1: .5 0.5 0 .5 0.5 0 .5
+25:17 Speaker 2: 0.5 0.5 y poco a poco se va circulando
+26:01 Speaker 1: Por poco va a funcionar. De 0
+26:07 Speaker 2: a 1, igual. Un lado en 0. Algo así como esto, pero como las salidas son entre 0 y 1, entonces se va a ir aplicando en 0. Bien, ahora, ¿qué sucede si es que tenemos valores grandes? Dicho 0, caso extremo, valores muy pequeñitos, o también valores grandes.
+27:15 Speaker 1: ¿Qué sucede?
+27:22 Speaker 2: Por ejemplo, acá tenemos, ¿no? Una, la misma, digamos, la misma red con diez
+27:30 Speaker 1: capas,
+27:32 Speaker 2: función de activación tangente hiperbólica y tenemos pesos que están entre menos, bueno, los valores son entre menos activación, obviamente, pero los valores son grandes, es decir,
+27:45 Speaker 1: a
+27:47 Speaker 2: medida que vayamos avanzando, Las activaciones se van a ir acumulando, o bien en menos uno,
+27:58 Speaker 1: o bien en menos uno.
+28:04 Speaker 2: Entonces las acumulaciones que tenemos acá, en menos uno,
+28:08 Speaker 1: en menos uno,
+28:09 Speaker 2: igual, en las otras capas igual, ¿no? Tenemos valores muy grandes.
+28:14 Speaker 1: Están provocando el cambio.
+28:17 Speaker 2: Después de la función tangente y perbólica,
+28:20 Speaker 1: son de esta forma.
+28:29 Speaker 2: ¿No? Al tener valores grandes, van a ir a acumular 0, o bien en más 1, con valores grandes negativos, el bien en menos 1.
+28:39 Speaker 1: ¿Ok? Entonces ahí tenemos... Y
+28:43 Speaker 2: de la misma manera, ¿no? Si tenemos acumulaciones en los termos,
+28:47 Speaker 1: cuando queremos hacer el bad propagation,
+28:49 Speaker 2: ¿cómo van a ser esas gradientes? ¿Cómo es la gradiente? Digamos, tengo acumulación aquí, ¿cómo es la gradiente en este punto y cómo es la gradiente en este punto?
+28:58 Speaker 1: ¡Sero! ¡Sero! ¡Sero! ¡Sero!
+29:05 Speaker 2: Porque ahí tenemos que tener problemas en poder hacer las actualizaciones de los pesos. Bien. Entonces ahí viene la estrategia de poder inicializar
+29:18 Speaker 1: los pesos
+29:22 Speaker 2: de la red, o los valores de los pesos de la red, de manera que... Esa, esa inicialización, ¿no?
+29:37 Speaker 1: Tenga una varianza, ¿no? En común, digamos, en todas las capas.
+29:43 Speaker 2: En otras palabras, que usted normaliza. Si usted, por ejemplo, aquí,
+29:46 Speaker 1: ¿no? La, la, la,
+29:50 Speaker 2: la, generamos una, igual también generamos una inicialización aleatoria, pero normalizada,
+29:56 Speaker 1: ¿no? ¿Ok? Con una, con una retiración estándar,
+30:01 Speaker 2: ¿no? que va a estar dependiente de la cantidad de neuronas que tenemos en la capa. Esa estrategia la llamamos de... Entonces, cuando buscamos que justamente tengamos los pesos que estén distribuidos,
+30:42 Speaker 1: que la
+30:46 Speaker 2: variedad esté distribuida, que tengamos una normalización de los
+30:51 Speaker 1: pesos, entonces, fíjense,
+30:56 Speaker 2: lo que conseguimos es que Las activaciones también,
+31:02 Speaker 1: ¿no?,
+31:03 Speaker 2: tengan una distribución normalizada.
+31:08 Speaker 1: Porque no estamos permitiendo que existe una acumulación, ¿no?, de las activaciones,
+31:13 Speaker 2: o bien sean los extremos, o bien sean los medios. Se conserva la distribución de las salidas de cada uno. Es un poco la idea de Sabia Digitalization, ¿no? Ya tenemos la función. Finalmente esto más.
+31:40 Speaker 1: La función lineal, ¿no?
+31:42 Speaker 2: Y aquí estamos buscando distribuir, ¿no? La varianza en cada una de las capas. Y aquí, si estemos dos, hacemos la derivada de todo ello, prácticamente lo que estamos indicando aquí es, ¿no? Calcular la varianza, ¿no? De todas las distribuciones,
+32:01 Speaker 1: asumiendo
+32:03 Speaker 2: que los datos están sembrados en el cero.
+32:05 Speaker 1: Y los pesos tienen la distribución, ¿no? Que
+32:07 Speaker 2: se centra justamente en cero. Y luego, esa varianza la distribuimos en todas las salidas. Es decir, fíjense, en las activaciones. Lo que buscamos es que esta expresión
+32:26 Speaker 1: sea igual a 1. Es decir,
+32:28 Speaker 2: como varianza. Y luego... Finalmente, todo esto se resume en esta normalización que estamos atendiendo. Ahora, el artículo donde se publica, ya es un artículo práctico, es uno de los más citados en
+32:53 Speaker 1: el
+33:20 Speaker 2: 30.000 citaciones.
+33:26 Speaker 1: Hay otro artículo que es más citado. ¿Saben cuál es?
+33:35 Speaker 2: Y vamos a avanzar.
+34:09 Speaker 1: El papel de Google. Attention is all you need. No. ¿De no conformes? No. Ya lo vamos a ver cuando
+34:39 Speaker 2: voy a borrar el residual. Estamos en
+34:42 Speaker 1: este artículo. Este artículo,
+35:00 Speaker 2: fíjese de qué año es. Este es del año
+35:02 Speaker 1: 2010. 2010, no. 2010, estamos hablando más o menos de... Claro,
+35:16 Speaker 2: antes de Alex Nett. Alex Nett ya más o menos aplicó esta estrategia de normalización de los pesos.
+35:29 Speaker 1: Y yo
+35:33 Speaker 2: los invito a leer este artículo porque se explica, fíjense ustedes, un poco los problemas que se tienen cuando se están
+35:42 Speaker 1: entrenando una retencional.
+35:43 Speaker 2: La importancia que tienen las funciones de activación. Y luego, cómo él desarrolla la parte experimental, haciendo la inicialización.
+36:22 Speaker 1: Vamos a conversar, ¿no?
+36:25 Speaker 2: Estas son, por ejemplo, las gradientes, ¿no? Los sistemas de gradientes normalizados, el de arriba,
+36:34 Speaker 1: cuando
+36:35 Speaker 2: los pesos no son inicializados, son inicializados anatoriamente, y aquí, cuando los pesos son inicializados, normalizados. fíjense que a medida que tenemos, estamos subiendo en capas, la capa 1, la capa 2, la capa 1 es la roca, que tiene cierta especificidad, pero fíjense que las gradientes se van apagando, digamos así, se van apagando, cada vez son menores, a medida que estamos entrando en profundidad del aire, ya en la capa 4, la capa 5, fíjense que los valores de las gradientes son más
+37:10 Speaker 1: pequeñitos, se están aproximando. En otras palabras,
+37:14 Speaker 2: se están desvaneciendo. Es el término que dice en
+37:18 Speaker 1: inglés,
+37:20 Speaker 2: bien popular, ¿no?
+37:37 Speaker 1: El desvanecimiento de la experiencia.
+37:39 Speaker 2: Eso han ido estudiando y estudiando por qué ocurría eso.
+37:45 Speaker 1: Y justamente
+37:49 Speaker 2: encontraron que uno de los problemas era la inicialización.
+37:53 Speaker 1: Uno de los problemas.
+38:17 Speaker 2: Y aquí, ya lo habíamos visto, ¿no? ¿Qué pasa cuando usamos función de activación? Real. Ya lo habíamos visto, por ejemplo, ¿no?
+38:27 Speaker 1: Que... Con
+38:29 Speaker 2: Sabine y Seixio, pero estamos utilizando también de hiperbólica. Tenemos, ¿no? Entre menos un y más uno las salidas. Pero cuando tenemos...
+38:42 Speaker 1: ¿Qué es lo que pasa?
+38:50 Speaker 2: Las salidas son entre 0 y 1. Son positivas, pero como están normalizadas, van entre 0 y 1. Y cuando tenemos una entrada negativa, vamos a tener salida 0.
+39:09 Speaker 1: Y por eso que tenemos una acumulación, fíjense, en 0. Lo positivo, sí, lo positivo normal. Se
+39:18 Speaker 2: va distribuyendo lo que es positivo normal. Pero cuando la entrada es negativa, la salida es cero.
+39:32 Speaker 1: Entonces...
+39:35 Speaker 2: Saber inicialización. Nuestra función de activación es una tangente hiperpolémica. Cuando tenemos una relu, ¿no? Como es esta, en los minutos que usted es la relu.
+39:49 Speaker 1: Ahí
+39:50 Speaker 2: se utiliza una variante que es key inicialización, ¿no?
+39:58 Speaker 1: Este
+39:59 Speaker 2: también se llama
+40:00 Speaker 1: inicialización de timing. Y bueno,
+40:07 Speaker 2: ¿qué es lo que está pasando aquí? Yo estoy considerando solamente los elementos positivos. ¿Qué está pasando con la distribución? Entonces, ¿qué hacen? Si comparamos nosotros la diferencia con
+40:43 Speaker 1: Xavier,
+40:46 Speaker 2: que es la misma normalización prácticamente,
+40:49 Speaker 1: pero en este caso se
+40:50 Speaker 2: está considerando la que. de lo que hacer y fíjense
+40:59 Speaker 1: esto
+41:00 Speaker 2: se vio en el año 2015 y coincide con justamente cuando se dio alex net pero vino otros modelos y
+41:17 Speaker 1: en
+41:20 Speaker 2: 2015 Es un grafiquito justamente
+41:30 Speaker 1: del paper de
+41:31 Speaker 2: Ingenitalization, ¿no? Donde ellos hacen su experimentación. Y cuando están utilizando una relu, ¿no? Ellos verifican que la función del costo,
+41:45 Speaker 1: ¿no? O sea, no disminuye, ¿no?
+41:56 Speaker 2: Y cuando ellos utilizan su variante, ¿no? De con qué inicialización, ellos pueden hacer de qué modelo, ¿no?
+42:05 Speaker 1: Que sigan. Eso tiene la parte de... La parte de Cristian. Sí. Pero en el interior, en el interior, en el interior... Eso, o sea, ¿ahí tiene datos para eso que hay? Claro,
+42:55 Speaker 2: no, no, tienes datos de entradas positivas y negativas.
+42:58 Speaker 1: O sea, no entiendo cuáles son cambios, o sea, ¿quién te ha ido?
+43:06 Speaker 2: es que cuando tienes aquí sabéis el licencio le estás considerando como el que tu distribución está entre cero y entre menos uno y más uno o media cero pero acá solamente tienes salidas positivas no
+43:21 Speaker 1: tienes no
+43:23 Speaker 2: tienes media no
+43:28 Speaker 1: estamos usando el
+43:29 Speaker 2: fútbol aquí en el caso de salir Cuando tú cambias de función de activación,
+43:43 Speaker 1: ya Reloop tienes esa misma. ¿Y eso está bien? ¿Y eso está bien?
+43:49 Speaker 2: Claro, tú cambias de función de activación,
+43:52 Speaker 1: pero...
+43:53 Speaker 2: ¿Qué le sucede a pulsar? Sabile Initialization te provoca esto.
+44:01 Speaker 1: Pero en la siguiente diapositiva también hay... No, sí, está bien, porque es este...
+44:08 Speaker 2: O sea, ya vas a llevar en consideración solamente la parte positiva. Después nos utilizamos la mitad de la distribución.
+44:16 Speaker 1: Ya, ¿eso por qué? O sea, ¿en qué hacer eso? Hace eso.
+44:22 Speaker 2: Porque al tú no llevar en cuenta toda la, digamos, toda la distribución completa entre menos uno y más uno, ¿no? Ya solamente llevas la parte positiva.
+44:33 Speaker 1: Es
+44:33 Speaker 2: como que te estás eliminando
+44:40 Speaker 1: el
+44:40 Speaker 2: cero y no lo estás considerando. Solamente la parte positiva. Entonces, y por eso que acá, ¿no? La idea de ellos es simplemente decir, ¿no? Ya no usamos el total de la distribución porque finalmente cuando estás haciendo esta inicialización de pesos, ¿no? Es como que tú estás considerando la distribución completa con media en 7.000. Acá le dicen, no, solamente considera la parte positiva. Lleva solamente la parte positiva y los consiguen demostrar de que el modelo puede seguir. Si cambiamos a radio,
+45:40 Speaker 1: fíjate cómo son las salidas de
+45:42 Speaker 2: activación.
+45:43 Speaker 1: ¿Todas son positivas? Sí.
+45:54 Speaker 2: Entonces, cuando vas a hacer tu inicialización, solamente llevas en consideración la mitad, que es la parte positiva, la distribución. ¿Cuándo percibimos que tenemos problemas con la inicialización de los pesos? ¿Cuándo aparece más o menos como la función de pérdida? ¿Demora en decaer? Esto
+46:45 Speaker 1: lo podemos provocar.
+46:47 Speaker 2: Aquí lo podemos provocar.
+46:50 Speaker 1: Y
+46:51 Speaker 2: le quitamos estos...
+47:10 Speaker 1: Estamos viendo.
+47:12 Speaker 2: Fíjense que ha habido todas estas épocas que Loss no conseguía de caer. Bueno, acá no necesariamente sea por la inicialización, pero igual puede ser uno de los puntos de que cuando nosotros verificamos que nuestra curva de Loss demora en caer, puede ser uno de los factores. Pero uno de los factores podría ser la inicialización de
+47:40 Speaker 1: los pesos.
+47:58 Speaker 2: Bueno, la implementación
+48:00 Speaker 1: es sencillísima,
+48:03 Speaker 2: finalmente, cuando tenéis la definición de una de nuestras capas, la apariencia, por ejemplo, de 100 neuronas, con función de activación intermónica, y le ponemos un kernel de inicialización, en este caso, saber inicialización, que también es como
+48:22 Speaker 1: un globo, ¿no? Globo por el nombre del apellido.
+48:27 Speaker 2: Y en el caso de He, hemos dicho que utilizamos función de activación Relu, ¿ya? Y colocamos ahí también el kernel de inicialización como
+48:39 Speaker 1: FinNOR. ¿Ya?
+48:46 Speaker 2: Luego, pues, Kami, Kami también por el nombre del autor, Kami He. Kami He es el autor de Resen.
+49:01 Speaker 1: Claro. Y eso está acá. Y ahí está, ¿no?
+49:12 Speaker 2: Kami He,
+49:13 Speaker 1: el autor de Resen. 1.
+50:49 Speaker 2: Si los perros al principio son pequeños, las señales que llegan al final serán demasiado pequeñas.
+50:55 Speaker 1: ¿Verdadero? Falso.
+50:59 Speaker 2: ¿Sí? La mayoría es verdadero. Si los perros al final son demasiado grandes, las señales que llegan al final serán demasiado grandes.
+51:14 Speaker 1: ¿Qué es lo que pasa? ¿Qué pasa entonces?
+51:35 Speaker 2: Bueno, ahí, pues estamos hablando de sabio inicial. Se entiende que estamos hablando también de la función de tangente hiperbólica. Si estamos hablando de si la salida es demasiado grande, es porque debe estar acumulando entre menos uno y menos uno. ¿Entendemos así? Bueno. ¿No? Los pesos con inicialización de Xavier se definen por la distribución gaussiana. ¿Verdadero, Juan? ¿Falso?
+52:11 Speaker 1: ¿Verdadero? ¿Qué dices? Luis, ¿qué dices? ¿La 3?
+52:37 Speaker: ¿La 3? ¿La 3? ¿La 3?
+52:54 Speaker 1: ¿La 3? ¿La 3? ¿La 3? ¿La 3?
+53:02 Speaker 2: Función normal. ¿Una gaussiana es una normal o no?
+53:17 Speaker 1: Sí,
+53:23 Speaker 2: es normal, pero es una gaussiana al final, ¿no? Porque mantiene la
+53:28 Speaker 1: distribución.
+53:30 Speaker 2: Está trabajando en función de la varianza y la media.
+53:34 Speaker 1: En el fondo es una
+53:36 Speaker 2: normal que es una gaussiana. La inicialización de SAIR ayuda a reducir problemas de desvanecimiento de los gallentes. ¡Gracias! Bien, hasta ahí, inicialización.
+54:41 Speaker 1: ¿No? Sí. Y en el otro caso, en las otras variantes de funciones de activación, ¿hay artículos también? ¿Sobre cómo inicializar?
+54:54 Speaker 2: A ver, una pregunta. Ahí tenemos que estar viendo la salida. Por ejemplo, en el caso de fismoidal, ¿cuál utilizas?
+55:06 Speaker 1: ¿Está bien? ¿Está bien? y son muy parecidos a la gente con las personas
+55:50 Speaker 2: ¿Positiva? ¿Sigmoidad son positiva?
+55:54 Speaker 1: Solo positiva.
+56:02 Speaker 2: ¿Sigmoidad? También positiva.
+56:06 Speaker 1: Una positiva.
+56:13 Speaker 2: Y cuando es tangente hiperbólica, ahí tenemos negativa. Positiva y negativa. Simpático es que un procedimiento que aparentemente parece tan sencillo, que es la inicialización de los testos en la red, nos puede provocar
+56:45 Speaker 1: diferentes problemas.
+56:50 Speaker 2: Otra de las cuestiones
+56:52 Speaker 1: es el
+56:55 Speaker 2: problema de overfeeding. Tenemos un ejemplito en el caso, por ejemplo, cuando tenemos la función de costo y tenemos un conjunto de entrenamiento, tenemos un conjunto de validación.
+57:18 Speaker 1: Lo ideal
+57:19 Speaker 2: es este del medio, es decir, donde el loss del conjunto de entrenamiento
+57:25 Speaker 1: buscamos
+57:27 Speaker 2: que sea un poquito bajo, siempre llegue el mínimo, pero que el conjunto de validación no sea el eje. El problema puede estar cuando tenemos un LOS, por ejemplo, para el conjunto de entrenamiento, ¿no? Que consigue bien pequeñito, es decir, casi la carrera mínima. Pero cuando lo vamos a lanzar con un conjunto nuevo, que es un conjunto de validación, el LOS es alto. Es decir, una gran diferencia entre el
+57:56 Speaker 1: LOS del training y el LOS del training. La verdad que hay que decir
+58:01 Speaker 2: es que el modelo se ha sobreentrenado. con el conjunto de entrenamiento y no está consiguiendo generalizar para elementos de los que vienen. El caso contrario es cuando tanto los de conjunto de entrenamiento como el de variación,
+58:21 Speaker 1: el error es.
+58:27 Speaker 2: Entonces, estos dos extremos no son buenos.
+58:30 Speaker 1: Y sobre todo, no están buenos. Peor de no.
+58:36 Speaker 2: En este caso estamos caiendo en el problema inverso, que es el under fitting. Esto ocurre porque podemos tener un modelo que es muy
+58:44 Speaker 1: simple.
+58:48 Speaker 2: Lo que podemos hacer es, como dice acá, algunos remedios, es hacer el modelo un poquito más
+58:53 Speaker 1: complejo, conseguir un mayor conjunto de datos,
+58:58 Speaker 2: o hacer un entrenamiento por mayor... En el caso de under fitting, ¿Aplicamos regularización? Y es
+59:08 Speaker 1: justamente lo que vamos a recabular.
+59:11 Speaker 2: ¿O debemos obtener más
+59:13 Speaker 1: datos? ¿Regularización es como menos features? ¿O menos layers?
+59:27 Speaker 2: Ok. Respondiendo a tu pregunta. Cuando hacemos el entrenamiento de una red, ¿qué es lo que estamos buscando? Hemos dicho que los pesos, que es la matriz B doble, consigamos nosotros una pérdida mínima. Pero recuerden ustedes que esta matriz de pesos, esta B doble,
+01:00:01 Speaker 1: finalmente es
+01:00:02 Speaker 2: un conjunto de valores que podríamos encontrar una pérdida que finalmente sea cero, por decir. Pero, ¿cómo es este caso? Este ejemplo es bien sin paso. El modelo está entrenándose, entrenando, entrenando. En el training está dando 0 de error. 0 de error. Y en el test 0.042. O sea, ya consiguió entrenarse todo.
+01:01:24 Speaker 1: Entonces, justamente
+01:01:30 Speaker 2: recordemos el valor de este primer peso, que es menos 0.20. Que nos 0,36.
+01:01:39 Speaker 1: Y recordemos
+01:01:41 Speaker 2: el segundo. Este siguiente de acá. Este de acá es 0.40. Vamos a ponerlo con la subisima. La siguiente capa. El tener peso es 0.40. Estamos consiguiendo error 0. Todo. Reinicializamos la red.
+01:01:59 Speaker 1: Entrenamos otra vez.
+01:02:05 Speaker 2: Y fíjense, el espacio de menor tiempo y
+01:02:08 Speaker 1: también
+01:02:10 Speaker 2: ya consiguió el error.
+01:02:18 Speaker 1: Ya está bien.
+01:02:22 Speaker 2: ¿Cuál es el valor de este peso?
+01:02:25 Speaker 1: Es 1. O sea,
+01:02:29 Speaker 2: lo que era antes
+01:02:31 Speaker 1: 0.25. Y el peso de este, el peso de acá,
+01:02:41 Speaker 2: es 0.25.
+01:02:46 Speaker 1: ¿A dónde vuelvo?
+01:02:48 Speaker 2: Estamos consiguiendo un lo cero, pero con otra consideración de valores de los pesos. Es decir, que no vamos a tener una sola combinación de valores que nos están dando una solución, digamos, una salida ideal. ¿Ya? Entonces acá tenemos un encinto en
+01:03:12 Speaker 1: el cual, ¿no?
+01:03:15 Speaker 2: Podrían llegar, por ejemplo, ¿no? Como dice atrás. ¿Serán estos los únicos valores de B doble que hagan que la pérdida sea cero?
+01:03:21 Speaker 1: ¿Estamos viendo? No.
+01:03:24 Speaker 2: Y aquí, yo tengo estas entradas, uno, uno, uno, uno.
+01:03:29 Speaker 1: Tengo aquí, ¿no?
+01:03:30 Speaker 2: Un primer conjunto de valores para los pesos de B doble. Uno, cero, cero, cero. Y tengo un segundo conjunto de valores para los pesos de dobles, 0.25, 0.25, 0.25, 0.25. Si multiplico X por este primer conjunto de pesos, ¿cuántos tengo? Voy a obtener uno, ¿verdad? Y si multiplico esta entrada,
+01:03:59 Speaker 1: X, por el
+01:04:01 Speaker 2: segundo conjunto de pesos, ¿cuántos tengo?
+01:04:04 Speaker 1: Uno.
+01:04:08 Speaker 2: Es decir, estoy obteniendo la misma
+01:04:10 Speaker 1: salida, pero con dos
+01:04:13 Speaker 2: conjuntos de pesos.
+01:04:16 Speaker 1: Es
+01:04:16 Speaker 2: lo que vemos en el simulador, ¿no? Teniéndonos configuración de pesos y pesos, estamos obteniendo una salida C, ¿no? ¿Cuál de estas dos creen ustedes que es... ...gráficamente? Como hemos dicho, una entrada, ¿cuánto, no? Y tenemos salida. Acá hemos dicho que la entrada sería 1, 1,
+01:04:58 Speaker 1: 1.
+01:05:02 Speaker 2: Con W1, los pesos serían 1, 0, 0, 0. Y vamos a obtener salida aquí.
+01:05:15 Speaker 1: Con W2, los
+01:05:17 Speaker 2: pesos serían... Tenemos también salida. La combinación, digamos, la combinación de pesos BW y la combinación de pesos BW. ¿Cuál es la combinación de pesos BW?
+01:05:53 Speaker 1: Qué loco. ¿Ya te has acostumbrado? No. En Alemania, no. No te he acostumbrado. ¿Estás? ¿Estás acostumbrado?
+01:06:13 Speaker 2: Tú vienes por unos meses, así que no. Ya todos tenemos que
+01:06:17 Speaker 1: sobrellevar. Sí. Sobrelleva. Pero bueno,
+01:06:27 Speaker 2: regresando. ¿Cuál de las dos combinaciones creen ustedes que la...
+01:06:42 Speaker 1: Oh, es una cosa personal. Creo que así que ya se parece.
+01:06:47 Speaker 2: Sí, sí, sí. Vamos a...
+01:06:50 Speaker 1: ¿Por
+01:06:51 Speaker 2: qué? ¿Por qué BW2? Las otras están matando las neuronas.
+01:07:01 Speaker 1: Es como que con
+01:07:03 Speaker 2: BW2 estamos matando esto. Solamente nos sirve una sola. ¿No? Y la red podría encontrar, digamos, esa solución. ¿Ya? O sea, recuerden ustedes que lo que tienen las redes es optimizar, conseguir el menor 2 posible, y de pronto, pues, encuentran que con todo uno solo ya los consiguió.
+01:07:27 Speaker 1: Pero
+01:07:28 Speaker 2: la idea está en poder distribuir, diremos así, en poder distribuir toda esa capacidad de discriminación con
+01:07:38 Speaker 1: todos los
+01:07:39 Speaker 2: participantes. La idea es que todos participen, no solamente uno, pero que todos participen y distribuyen. ¿Cómo conseguimos esa distribución? Con regularización. obligando a que no solamente unos cuantos participen, vamos a buscar que todos participen. Y ahí es donde introducimos
+01:08:07 Speaker 1: el término,
+01:08:11 Speaker 2: digamos aquí, de regularización a la función de costo.
+01:08:16 Speaker 1: O al loss.
+01:08:18 Speaker 2: Hemos visto que el loss, ¿qué es lo que va a buscar? El loss va a buscar disminuir, obviamente. Va a buscar tener los valores de los pesos que le permitan distribuir el loss.
+01:08:33 Speaker 1: Pero, con el
+01:08:35 Speaker 2: término de regularización, vamos a buscar que distribuyamos la carga, digamos así, entre todos los que están en el
+01:08:45 Speaker 1: aspecto de todos los pesos.
+01:08:49 Speaker 2: Y bueno, ahí, por eso que estamos colocando, fíjense, la función de regularización R encima de todos los pesos, que es lo que estamos buscando. distribuyamos todos los
+01:09:01 Speaker 1: valores.
+01:09:05 Speaker 2: Y aquí tenemos un factor, digamos, un hiperparámetro de regularización, que justamente también parte porque, ¿qué es lo que pasa si es que nosotros colocamos a este hiperparámetro un valor pequeñito, próximo a cero? Es como que lo estamos anulando en la regularización. Si puede ser un valor alto, Pónganse aquí y estaríamos cayendo. Si ponemos próximo a cero, estaríamos anulando la regularización y estaríamos cayendo en un problema del overfitting, que es lo que estamos buscando evitar. Pero si ponemos un valor alto,
+01:09:47 Speaker 1: el
+01:09:50 Speaker 2: efecto contrario, vamos a tener que ir buscando
+01:09:54 Speaker 1: un valor de
+01:09:55 Speaker 2: este imperforante. ¿Qué función de regularización tenemos? Bueno, la más utilizada, ¿no? La más conocida también es la L2, ¿no? Que lo que hace es básicamente elevada al cuadrado, ¿no? Todos
+01:10:12 Speaker 1: los pesos, sumando. Lo que hace es así como considera la distribución entre todos. Bueno, otro es
+01:10:22 Speaker 2: L1, que es básicamente el valor absoluto de todos. Y la tercera, que es una combinación de L1 y L2, que también es conocida como elástica. Este también es conocido como un factor de penalización. Es como un penalizador. Cuando decimos que está tratando de distribuir los valores, también lo que hace, el efecto que hace es, por ejemplo, en aquellos términos...
+01:11:54 Speaker 1: Tener
+01:11:57 Speaker 2: un... Yo puedo tener un F de X
+01:12:23 Speaker 1: igual a un A, E más
+01:12:25 Speaker 2: B.
+01:12:29 Speaker 1: ¿Cómo va a ser el traspunto? O así, ¿no?
+01:12:37 Speaker 2: Si yo le mando a entrenar, ajustar aquí los pesos, ahí vemos una recta que se
+01:12:42 Speaker 1: va a aproximar de los puntos que hemos visto.
+01:12:44 Speaker 2: Pero si yo tengo acá un eje de X
+01:12:47 Speaker 1: igual a AX
+01:12:49 Speaker 2: cuadrado más BX C, por decirlo.
+01:12:56 Speaker 1: ¿No? Puedo hacer esto.
+01:13:08 Speaker 2: Y si yo tengo un modelo un poquito más complejo, es igual a, b,
+01:13:13 Speaker 1: y, y, y, y, y, y, y, y, y, y, y, y, y, y, y, y,
+01:13:28 Speaker 2: y, y, y, y, y, y,
+01:13:31 Speaker 1: y,
+01:13:44 Speaker 2: Una función muy simple, hemos dicho, underpity, ¿no? Una función muy compleja,
+01:13:50 Speaker 1: hemos dicho, underpity, ¿no?
+01:13:52 Speaker 2: Entonces, para poder hacer de que nuestro modelo
+01:13:58 Speaker 1: no
+01:14:01 Speaker 2: caiga en este overpity, lo que podemos hacer es la regularización. ¿Quiénes creen ustedes de estos componentes? ¿Quiénes creen que sea lo que están provocando que caigamos en overpity?
+01:14:14 Speaker 1: ¿Cuáles son sus componentes? Visualmente ahí lo que sientes es que los exponentes son muy pequeñitos.
+01:14:40 Speaker 2: ¿Entiendes? ¿A, B, C?
+01:14:43 Speaker 1: Cuando grabe bien alto, pues siente que acompaña, entonces el ajuste es muy pequeño. Acá te estamos bien. Sí. Pero
+01:14:59 Speaker 2: si prácticamente nosotros quisiéramos llegar de esta función a
+01:15:04 Speaker 1: esta función,
+01:15:05 Speaker 2: en realidad estamos buscando el
+01:15:08 Speaker 1: overpitting son estos dos componentes. No.
+01:15:12 Speaker 2: Si hacemos que todos los componentes no tengan mucha influencia, estaríamos quedando con una función como esta de acá. Y cuando decimos que el regularizador o con regularización hacemos que la distribución no, ¿ya? sea la adecuada, en todo caso,
+01:15:30 Speaker 1: lo
+01:15:32 Speaker 2: que hace el regularizador es incrementar de una manera, digamos así,
+01:15:37 Speaker 1: a estos dos componentes a
+01:15:39 Speaker 2: través de la regularización. Es como que está incrementando, por ejemplo, si le ponemos un valor alto aquí, ¿no? Un 100 por
+01:15:46 Speaker 1: A a
+01:15:48 Speaker 2: X a la cuarta,
+01:15:50 Speaker 1: más un B,
+01:15:52 Speaker 2: digamos otro 100. ¿Qué estaríamos haciendo? Bueno, lo que tú has dicho.
+01:16:06 Speaker 1: ¿Qué es lo que estamos haciendo? ¿No?
+01:16:15 Speaker 2: No, estaríamos diciendo lo contrario a lo que les dicen,
+01:16:17 Speaker 1: ¿no? Es decir, que esos son pequeñitos, ¿no? ¿Cierto?
+01:16:21 Speaker 2: Lo que estamos diciendo es incrementar el valor. En otras palabras, le estamos dando más importancia.
+01:16:27 Speaker 1: Y más bien,
+01:16:29 Speaker 2: la función de los va a buscar penalizarlos, ¿ya? Buscando que este A sea mucho más pequeño todavía.
+01:16:39 Speaker 1: ¿Entiendes?
+01:16:42 Speaker 2: buscando de que sea prácticamente casi igual a cero.
+01:16:46 Speaker 1: Cuando nosotros interpretamos esto, entonces vamos a buscar
+01:16:48 Speaker 2: que el loss va a buscar que este sea A y B, sea mucho más pequeño. Prácticamente casi igual a cero. Cuando estamos haciendo A y B, tanto A y B sean próximos a cero, lo que estamos haciendo es anular. En estos dos componentes y nos estamos aproximando. ¿No? Algo así.
+01:17:15 Speaker 1: Aunque falta un poco. Es un poco la idea.
+01:17:49 Speaker 2: Se regulariza la matriz de pesos, pero no el vías, o no los vías. ¿Por qué? ¿Por qué creen eso? La otra pregunta que haría es, ¿podemos regularizar el vías, o sea, el peso que le corresponde al vías?
+01:18:39 Speaker 1: Pienso que podemos regularizar el bias, pero el bias no es un problema en overfitting, porque solo es un parámetro para cambiar la altitud de la función y el overfitting es más como en el graf. En la forma, ¿no? Exactamente.
+01:19:04 Speaker 2: O sea, el bias puede decir arriba, abajo, todo, pero él no va a determinar la forma. Esto lo llevamos a... En verdad, los parámetros que tenemos aquí con las variables son los que van a delimitar aquella región, ¿no? ¿No viste? ¿Cómo es?
+01:19:24 Speaker 1: ¿Qué nombre es? Félix.
+01:19:27 Speaker 2: Félix. Sí. El bias lo que nos va a hacer es la traslación.
+01:19:37 Speaker 1: Que no
+01:19:38 Speaker 2: tenía sentido tampoco regularizar. Y ahí vimos regularización. Otra forma también de buscar evitar el homerquitis es a través del
+01:20:00 Speaker 1: backlog manicero.
+01:20:08 Speaker 2: Recuerden ustedes, si estamos utilizando nosotros una función... ...donde todos los... todos los índices que tenemos, ¿no? Si son todos positivos, las gradientes van a ser siempre todas positivas o todas negativas. Si tenemos valores que son... ...entradas todas positivas, las gradientes van a estar en este cuadrante o en este cuadrante. Entonces, pero eso para nosotros no es muy bueno. ¿Por qué? Como que estamos haciendo una... Lleven ustedes a un 3D. Tenemos algo así. Y vamos a estar yendo de gradientes, ¿no?
+01:21:05 Speaker 1: Vamos a
+01:21:13 Speaker 2: ir en una dirección, otra dirección, otra
+01:21:15 Speaker 1: dirección, otra dirección, otra dirección.
+01:21:17 Speaker 2: No vamos a ir así descendiendo, como dicen, de forma
+01:21:21 Speaker 1: vireja.
+01:21:26 Speaker 2: Entonces, ¿cómo haríamos para nosotros buscar evitar este zigzajeo cuando estamos haciendo el descenso? Justamente lo que dice acá.
+01:21:41 Speaker 1: Normalizamos los datos.
+01:21:44 Speaker 2: Normalizamos los datos de tal manera que tengamos entre menos uno y más uno, de tal manera que vayamos descendiendo
+01:21:51 Speaker 1: y
+01:21:53 Speaker 2: vayamos obteniendo gradientes. y también podamos tener ambas direcciones. La idea justamente del batch normalization es esa, muy parecida cuando hicimos también el
+01:22:09 Speaker 1: saber inicialization.
+01:22:10 Speaker 2: Solamente que aquí vamos a hacer encima de las salidas de cada capa. Normalizamos las activaciones de cada capa. El saber inicialization normalizamos
+01:22:24 Speaker 1: los pesos.
+01:22:26 Speaker 2: Aquí lo que vamos a obligar es normalizar. las salidas o las activaciones de acá. Es decir, vamos a hacer que la distribución
+01:22:34 Speaker 1: de las
+01:22:38 Speaker 2: salidas tenga una forma normal, una normalización. Entonces, mediante esta estrategia vamos a evitar también que
+01:22:54 Speaker 1: en
+01:22:56 Speaker 2: todo el proceso de entrenamiento cuando estamos haciendo iteraciones de base propagación, busquemos mantener que todas las activaciones estén normalizadas. Esta es la normalización que hacemos.
+01:23:13 Speaker 1: Acá la media, tenemos la estándar.
+01:23:19 Speaker 2: No tenemos aquí salidas normalizadas. ¿Y qué estaríamos haciendo? Aquí estamos obligando, como que aquí la media es, digamos así, centralizada en cero y con una varianza. ¿Y qué estaríamos haciendo? pero el efecto que estaríamos buscando es que obtenemos nuestras salidas normalizadas entre menos uno y más uno y aquí estamos haciendo encima de esas salidas
+01:24:46 Speaker 1: En este factor vamos a multiplicar más
+01:24:57 Speaker 2: o menos. ¿Cómo le llamas? Daniel. Daniel. Lo que Daniel le dice es... Pero no es que estamos regresando a lo anterior, ¿no? Solamente acá le estamos dando la chance, fíjense, de que estos parámetros puedan ser aprendidos por la propia red. Pero ¿con qué fin? Estamos haciendo el efecto anterior, ¿sí? O sea, estamos buscando la inversa de este procedimiento de normalización que estamos haciendo. Pero ¿con qué fin?
+01:26:12 Speaker 1: Mientras más alejado esté el valor de la media... O sea, lo que quiere decir es que
+01:26:28 Speaker 2: no haya el objetivo. O sea,
+01:26:30 Speaker 1: los que tienen mayor peso,
+01:26:33 Speaker 2: pues tengan mayor...
+01:26:36 Speaker 1: Ah,
+01:26:41 Speaker 2: en este caso. Aunque acá estamos hablando de desactivación.
+01:26:45 Speaker 1: Salida. No sé si se llega un mito.
+01:27:06 Speaker 2: Estamos haciendo una normalización. Y acá estamos haciendo tipo un efecto contrario, como dice Daniel, pero es decir, no es tan el efecto como que estamos regresando a la tele.
+01:27:22 Speaker 1: ¿Sí necesitas volver a la escala original?
+01:27:32 Speaker 2: Ya, pero digamos acá con unos hiperparámetros que están siendo modificados. No necesariamente es regresar. Podría regresar, sí, tal vez. Digamos a los valores originales que tenías acá.
+01:27:46 Speaker 1: Voy a regresar. Me refiero a que ese I sería muy ajustado también. Por el hecho de que pongas el I hace que el micrograma y beta se pueda ajustar.
+01:28:06 Speaker 2: En el mejor caso,
+01:28:09 Speaker 1: en alguno de los casos podría regresar
+01:28:11 Speaker 2: a ser los mismos que fueron acá. ¿Y por qué podría regresar a ser los mismos que fueron acá? Porque la red le conviene. Si estamos nosotros buscando disminuir el LOS, y la red de pronto encuentra de gestos centrales que estaban agrandando, que le permite hacer esa disminución del LOS, pues va a regresar, va a ajustar estos
+01:28:35 Speaker 1: cifras parámetros para regresar.
+01:28:37 Speaker 2: Así que con eso consigue disminuir el LOS. Pero la idea es que nosotros vayamos siempre normalizando y que...
+01:28:51 Speaker 1: Siempre
+01:28:54 Speaker 2: lo que está normalizado entre menos 1 y más 1 va a ser... Digamos, no todas las áreas van a estar entre menos 1 y más 1, que quiero decir. Inicialmente buscamos eso sí, pero...
+01:29:08 Speaker 1: Pero, como dice, miramos el efecto de
+01:29:10 Speaker 2: la normalización en el sentido de que hacemos que la propia red busque la mejor distribución para esas capacidades. Igual,
+01:29:30 Speaker 1: ¿no?
+01:29:34 Speaker 2: No utilizamos match normalization encima del BIAS, ¿no? O sea, colocamos el BIAS, lo anulamos. y bueno a la manera de este es prácticamente como dice se encarga de aplicar en el BIAS pero lo que estamos haciendo es como Félix lo dijo estamos
+01:29:59 Speaker 1: ahorrando porque
+01:30:01 Speaker 2: bien podemos aplicar encima del BIAS pero es el fondo y lo que estamos haciendo es ahorrar y la otra estrategia
+01:30:20 Speaker 1: el dropout
+01:30:30 Speaker 2: Es una estrategia parecida a los árboles, a los random forest, queremos llamarlo así. Y es que la idea está que nosotros en un ciclo no siempre utilicemos toda la arquitectura del árbol,
+01:30:50 Speaker 1: todos los nodos, todas las entradas.
+01:30:52 Speaker 2: Aviatoriamente podríamos anular. parte de la red. Por ejemplo, acá en la entrada estamos nombrando dos.
+01:31:01 Speaker 1: La primera capa
+01:31:02 Speaker 2: interna es tres. La segunda capa interna es dos.
+01:31:06 Speaker 1: Y ahí tenemos la cadera.
+01:31:08 Speaker 2: Y fíjense, ¿no? La red original, ahora tenemos una red que es una subred de
+01:31:15 Speaker 1: la original.
+01:31:18 Speaker 2: Eso que va a permitir, o que va a exigir, en otra iteración, volvemos aleatoriamente a eliminar otros nodos. ¿Qué es
+01:31:26 Speaker 1: lo
+01:31:30 Speaker 2: que va a pasar? Que no necesariamente nosotros necesitamos todo el conjunto de datos, todos los nodos, para poder determinar... No, por favor, se puede interpretar como si fuese, les decía, como un ensamblador, ¿no? Porque finalmente va a seguir generando varios,
+01:31:59 Speaker 1: varios, varias subredes, ¿no? Cada vez va a observar la red
+01:32:07 Speaker 2: un conjunto distinto de características, porque no siempre van a ser los mismos, ¿no? En cada más, ¿no? Y para hacer las tradiciones se usan todas las características, obvio. Resumiendo, aquí tenemos regularización de peso, batch normalization y
+01:32:29 Speaker 1: dropout.
+01:32:30 Speaker 2: En regularización hemos visto que
+01:32:33 Speaker 1: podemos utilizar
+01:32:36 Speaker 2: por ejemplo acá el regularizador L2 y
+01:32:40 Speaker 1: con un valor
+01:32:42 Speaker 2: de hiperparámetro de regularización
+01:32:44 Speaker 1: de 0.01.
+01:32:48 Speaker 2: Luego, con batch normalization, simplemente en cada capa le podemos decir que haga la normalización por
+01:32:55 Speaker 1: batch.
+01:32:56 Speaker 2: Y no olviden colocar siempre el vía sin falsos. En el dropout, antes de cada capa, colocamos, por ejemplo, el porcentaje de nodos que vamos a eliminar. Acá estamos poniendo, por ejemplo, 0.25, que es probable de eliminarse de los 100 nodos que estamos adquiriendo aquí. 50 nodos, la mitad.
+01:33:23 Speaker 1: ¿Por qué usamos dual power y no solo usamos como 50 nodos?
+01:33:31 Speaker 2: Acá en vez de 100, 50.
+01:33:34 Speaker 1: 40, 50, sí.
+01:33:43 Speaker 2: ¿Viene 100 nodos?
+01:33:45 Speaker 1: Sí. ¿Entrópolis es como una cambia de red automático? ¿Por qué es mejor?
+01:34:08 Speaker 2: En cada época, tú tienes que escribir.
+01:34:13 Speaker 1: 100 no.
+01:34:15 Speaker 2: Tú me dices, ¿por qué 100 y por qué no? Por 50 nada más.
+01:34:20 Speaker 1: ¿No? Sí.
+01:34:24 Speaker 2: Cuando tú haces...
+01:34:25 Speaker 1: Lo
+01:34:29 Speaker 2: que estás haciendo es el ajuste, ¿no? De los
+01:34:31 Speaker 1: pesos. Conexiones. ¿Cierto? Ahora,
+01:34:36 Speaker 2: podemos estar nosotros en 50 y
+01:34:39 Speaker 1: siempre
+01:34:41 Speaker 2: vamos a tener los 50. En cada Ilegación que estamos dando
+01:34:47 Speaker 1: 50% Pero
+01:34:52 Speaker 2: ¿Qué pasa si yo tengo 100 nodos? Que digo Dropout 0.5 ¿Ya? Estamos educando antes.
+01:35:07 Speaker 1: Entonces,
+01:35:09 Speaker 2: en una primera iteración, después de cenotropa 0.5, él aleatoriamente de los 100 va a eliminarse 50. ¿De cuál es? Aleatoriamente. Hace su forward propagation, backpropagation con los 50 que
+01:35:26 Speaker 1: ha escogido. ¿Ya? Y él va a obtener una salida.
+01:35:33 Speaker 2: En la siguiente época,
+01:35:35 Speaker 1: porque es por épocas, ¿no?
+01:35:38 Speaker 2: Viene y llega y dice aquí, los cuatro, cincuenta. Elimina
+01:35:43 Speaker 1: cincuenta.
+01:35:44 Speaker 2: Pero diferentes, ¿no? No son los cincuenta anteriores.
+01:35:47 Speaker 1: Son otros. Son otros.
+01:35:51 Speaker 2: Entonces, hace su polvo propagación, hace la propagación. Tal vez, digamos, en la primera, fue considerado este elemento. Y en la segunda, Ya no ves. Cuando ese es tu forward, tu backpropagation, él no participó, pero igual en la gradiente, le va a decir, ¿tú cuánto has este, no? ¿Cuánto has influido? Él le va a decir, cero, ¿no? ¿Por qué no? ¿Qué le estás exigiendo a la red? Estoy dando varias configuraciones donde vamos a ir viendo en cada uno, cada uno de ellos cómo va. Afectando. Si es que digamos en este momento. Este nodo no fue considerado. Y en la salida fue alto. Quiere decir que este nodo es importante. ¿Verdad? En la siguiente iteración tal vez. Regresamos. Lo considera. Y de pronto el nodo va. Necesitamos demostrar que este nodo es importante.
+01:36:53 Speaker 1: Entonces esa es la
+01:36:55 Speaker 2: ventaja del
+01:36:56 Speaker 1: nodo.
+01:37:00 Speaker 2: Estamos exigiendo a la red.
+01:37:03 Speaker 1: Estamos siendo
+01:37:04 Speaker 2: más exigentes con la red. Estamos dando una menor cantidad de nodos. Estamos exigiendo lo mismo, entonces ya se va a exigir.
+01:37:16 Speaker 1: Como usamos en el proceso de entrenamiento, es mejor que empezamos con un robot más grande o más pequeño y cerca del fin de las épocas con un robot mejor o menor. ¿Sabes?
+01:37:32 Speaker 2: Eso ya es alquimia.
+01:37:39 Speaker 1: Bueno,
+01:37:42 Speaker 2: la gente que hace Machine Learning son los alquimistas modernos.
+01:37:45 Speaker 1: Sí. Así que cuando averigües lo... ¿Cuál le comprometes?
+01:37:54 Speaker 2: Eso depende mucho de tu conjunto de datos, mucho depende de tu
+01:37:58 Speaker 1: objetivo
+01:38:00 Speaker 2: de salida que estás obteniendo, ¿no? Y eso lo vas a ir experimentando.
+01:38:08 Speaker 1: Y también ayuda en la computación, ¿no? En la performance, ¿no? Claro. Sí, lógico.
+01:38:17 Speaker 2: Claro, porque al definir la cantidad de notas, también estás haciendo el procesamiento se llama notas. Igual también el batch, ¿no? Porque
+01:38:24 Speaker 1: estás usando lotes. Es solo por batch, no por batch nominación, ¿no? Es mejor que usamos un batch, pero no es obligatorio con batch nominación, ¿no? No, no es obligatorio.
+01:38:49 Speaker 2: Bueno, habría que... Puedes probar si quieres utilizar todos estos tres regularizadores, entre comillas.
+01:38:58 Speaker 1: Normalmente solo usamos uno de los tres o todos. Alquimia. Alquimia. Alquimia. Alquimia. Ok, entonces ¿ustedes usaban ya eso? No. ¿Ustedes usaban ya regularizadores o no? Sí, sí. ¿Cuál te funcionaba? El break y bueno,
+01:39:24 Speaker 2: el drop out también. Lo que he visto es que Batch Normalization le gusta bastante.
+01:39:32 Speaker 1: Le gusta
+01:39:34 Speaker 2: más.
+01:39:34 Speaker 1: Es que drop out.
+01:39:38 Speaker 2: Se experimenta. Hacemos un break.
+01:40:11 Speaker 1: Ya hemos visto la
+01:40:13 Speaker 2: transacción de pesco, hemos visto regularización, para evitar caer el nobel pitting, y ahora estamos con el optimizador, la función de optimización utilizamos en la función de descenso por la dieta. Fíjense que hay luego una evolución encima de esa función, porque lo objetivo es la
+01:40:39 Speaker 1: idea de poder agilizar, en
+01:40:47 Speaker 2: otras palabras, optimizar esa función de tal manera que lleguemos al objetivo, que es nuestro mínimo global, entre comillas, ¿no? Porque si es que llegamos,
+01:40:57 Speaker 1: o
+01:40:58 Speaker 2: por lo menos aproximarnos lo más rápido posible. Recuerden que siempre en Machine Learning estamos hablando de aproximación.
+01:41:15 Speaker 1: Fusiones de aproximación.
+01:41:22 Speaker 2: Recordando nuestro algoritmo de
+01:41:24 Speaker 1: descenso por gradiente, con un ejemplo,
+01:41:26 Speaker 2: una muestra de los datos, hacemos el forward,
+01:41:30 Speaker 1: obtenemos el loss,
+01:41:32 Speaker 2: ese loss nos permite hacer el backpropagation para poder calcular las gradientes, y con las gradientes actualizamos el
+01:41:38 Speaker 1: procedimiento de entrenamiento del mercado. Aquí
+01:41:44 Speaker 2: tenemos un código,
+01:41:45 Speaker 1: calculamos el loss con el forward, pero luego...
+01:41:50 Speaker 2: Hacemos el patch propagation para obtener los gradientes y luego actualizamos el peso. Este es nuestro algoritmo de diseño como gradiente. Sencillo, ¿no? Con las gradientes y el LER y el REF que definimos, actualicemos los valores de los pesos, ¿no? De los B2U.
+01:42:17 Speaker 1: Entonces,
+01:42:18 Speaker 2: la cuestión está en que como tenemos distintas dimensiones, podemos tener dimensiones en las cuales podemos tener en una dimensión, podemos dar saltos muy grandes, digamos, pueden ser más pequeñas en otra dimensión, y va a ser un poco difícil que nosotros siempre estemos descendiendo de forma continua, digamos. Siempre vamos a estar yendo, oscilando.
+01:42:47 Speaker 1: Es un poco lo que hemos visto también.
+01:43:04 Speaker 2: Entonces podemos ir oscilando. Vamos a ir oscilando. Entonces aquí mucho depende también del
+01:43:13 Speaker 1: learning
+01:43:20 Speaker 2: rate que estamos aplicando. Finalmente. Si este learning rate es pequeñito, ¿qué va a pasar aquí? ¿Qué va a pasar en esta dirección? ¿Y qué va a pasar en aquella dirección?
+01:43:35 Speaker 1: Es un learning rate pequeño. Es menor, pero necesitamos mucho más tiempo. Exacto.
+01:43:48 Speaker 2: ¿Y si es un learning rate más grande?
+01:43:53 Speaker 1: La altitud es mucho más grande y idealmente el tiempo es menor, pero también con un learning rate tan grande podemos zigzag todo el tiempo. Vamos
+01:44:08 Speaker 2: a estar saltando de aquí hacia allá.
+01:44:11 Speaker 1: El
+01:44:12 Speaker 2: otro tema está en
+01:44:17 Speaker 1: que podemos
+01:44:20 Speaker 2: caer fácilmente en mínimos locales. o de estos puntos de silla que se llaman así, ¿no?
+01:44:28 Speaker 1: También podemos ir cayendo,
+01:44:30 Speaker 2: o no salir de estos puntos. ¿Cuál creen que es el más complicado, o el más peligroso, si queremos llamarlo así? ¿De acá? ¿O este? ¿Quién sería?
+01:44:51 Speaker 1: ¿Silla? ¿Quién sería?
+01:44:58 Speaker 2: Cuando se provoca esto de desidia, por ejemplo. Recuerdo que estábamos hablando de espacios n-dimensionales y tenemos
+01:45:10 Speaker 1: que decir varios mínimos locales. Pero también cuando llegamos, sí,
+01:45:16 Speaker 2: para una carrera, un
+01:45:21 Speaker 1: grupo de días. Entonces, una
+01:45:32 Speaker 2: alternativa que fue ampliamente utilizada, es decir, la tabla se utiliza pero en combinación con otra,
+01:45:40 Speaker 1: otra vez más adelante,
+01:45:42 Speaker 2: es el momento. Es decir, es como si fuese viniendo un valor que permita,
+01:45:50 Speaker 1: digamos
+01:45:52 Speaker 2: así, activar los saldos del servicio. Estamos adicionando un
+01:45:59 Speaker 1: factor.
+01:46:13 Speaker 2: Ampliamos las trayectorias que van a tomar en cada dirección. aumenta para las dimensiones y reducen las dimensiones. Obtenemos una convergencia más rápida y una oscilación reducida. Como que le estamos dando una fuerza
+01:46:34 Speaker 1: adicional.
+01:46:36 Speaker 2: Eso nos podría permitir salir de mínimos locales o de estos puntos deciles. ¿Por qué? Porque nosotros no vamos a conseguir subir
+01:47:09 Speaker 1: el
+01:47:11 Speaker 2: descenso por gradiente. Justamente es eso.
+01:47:16 Speaker 1: No vamos a poder salir.
+01:47:20 Speaker 2: Entonces, aumentando el momentum,
+01:47:24 Speaker 1: bueno,
+01:47:25 Speaker 2: podríamos de alguna manera, con esto tal vez sí más. Los puntos de sí.
+01:47:31 Speaker 1: ¿Cómo sabes cuánto momentum da? Que también nos pregunten. Estás queriendo ir contra el alquimismo. Con tiempo puedes probar las diferentes combinaciones, ¿no?
+01:47:56 Speaker 2: Me parece que 0.0 siempre se estira a colocar ya como un valor. Obviamente cuando tienes resultados que son normalizados, todo eso. Igual, cuando pones un learning rate, se estira 0.0 o 0.1 si no me
+01:48:09 Speaker 1: equivoco. Consideran que esto está normalizado. Pero...
+01:48:19 Speaker 2: A aquel momento se acostuma, me parece que es 0.9. Fíjense que más o menos es lo que
+01:48:26 Speaker 1: provocaría. El roquito es
+01:48:30 Speaker 2: el descenso por gradiente, diríamos así, el clásico, o bueno, el que hasta ahorita lo conocemos. Fíjense que va lentito, lentito, lentito. Si le adicionamos momentum, fíjense que le estamos dando una
+01:48:49 Speaker 1: energía adicionante. Pero bueno.
+01:48:53 Speaker 2: Y luego tenemos otros optimizadores, como el este power, el RMC Pro.
+01:49:02 Speaker 1: Y lo que siempre hemos
+01:49:05 Speaker 2: dicho, ¿qué estamos buscando? Este proceso de descenso por gradiente, pues consigamos agilizarlo de manera más rápida a
+01:49:15 Speaker 1: lo que es el vínico, el vínico global,
+01:49:21 Speaker 2: aproximándose. Bueno, acá estamos viendo en un
+01:49:26 Speaker 1: bidimensional, pero cuando estamos
+01:49:28 Speaker 2: trabajando de espacio es muy difícil.
+01:49:37 Speaker 1: y relativamente Los algoritmos de AdaGrad o AdaDelta son lo mismo como RMS Pro o son diferentes? Costumbre mismo, ¿no? Sí. Este es Nestero, por ejemplo.
+01:50:03 Speaker 2: Nestero lo que dice es, muy bien, vamos a... Vamos a predecir, digamos, el siguiente punto, ¿no? Donde va a ir el salto.
+01:50:15 Speaker 1: Y en ese nuevo punto vamos a
+01:50:17 Speaker 2: tratar de predecir la gradiente.
+01:50:19 Speaker 1: Ya, entonces, ¿cómo
+01:50:22 Speaker 2: que...? Quiere dar un, digamos, calcular la gradiente en el siguiente punto, ¿no? Pues actualización del gradiente.
+01:50:32 Speaker 1: Adelante. Y...
+01:50:36 Speaker 2: Bueno, ya tenemos acá el punto actual y la idea es poder determinar el siguiente.
+01:50:42 Speaker 1: Por eso que se dejaba un ejemplo del Lucas
+01:50:46 Speaker 2: G, ¿no? El medio doble que va a ser el siguiente. Y luego vamos a calcular la gradiente con el segundo.
+01:50:57 Speaker 1: Ahora el problema está que no
+01:51:00 Speaker 2: tenemos el Back Propagation, no vamos a poder aplicar
+01:51:02 Speaker 1: el Back Propagation en el siguiente punto, porque estamos
+01:51:05 Speaker 2: hablando del punto actual y la realidad se tiene que calcular en este punto.
+01:51:11 Speaker 1: Y bueno, se hace una reestructuración en los términos, en verdad
+01:51:16 Speaker 2: un artificio para poder hacer
+01:51:18 Speaker 1: que el cálculo de la realidad también dependa del... Y
+01:51:36 Speaker 2: la otra estrategia es Alagrat. La idea de ellos es, podemos considerar el histórico de cómo es que se está realizando el descendo por gradiente. Llegar, por ejemplo, un acumulador.
+01:51:57 Speaker 1: Es
+01:51:57 Speaker 2: como una memoria. Y que en verdad lo que está haciendo es saber como un promedio de cómo es que está pasando. Es un acumulador de lo que está delante anteriores gradientes como se han ido. ¿Cómo han ido dándoselo? El histórico, no el único, el paso. Entonces ahí comienza a sumar, como dice acá, el histórico de los
+01:52:20 Speaker 1: cuadrados en cada dimensión. Bueno,
+01:52:28 Speaker 2: lo que está pasando en cada dimensión, la dimensión vertical se divide con valores mayores, se desacelera el aprendizaje, y la dimensión horizontal se divide con valores menores, se acelera un poquito más el aprendizaje.
+01:52:40 Speaker 1: Como un...
+01:52:41 Speaker 2: penalizador. El problema está que esa memoria puede hacerse muy grande y provocando más bien un problema que va a degradar el aprendizaje que es tendiéndolo a cero. Es decir, tenemos una memoria muy grande que prácticamente lo que va a provocar es que tengamos finalmente
+01:53:01 Speaker 1: gradientes que sean...
+01:53:05 Speaker 2: Entonces, ahí viene RMC Pro. Bueno, ya que AdaGrad está acumulando, y la idea es,
+01:53:17 Speaker 1: la idea tiene
+01:53:19 Speaker 2: sentido, porque si vamos viendo el histórico que está pasando,
+01:53:23 Speaker 1: y lo
+01:53:24 Speaker 2: que hace RMC Pro es utilizar un actualizador de la memoria. colocando un valor de decay, que en otras palabras, ¿sabes qué? No memorices todo, sino cierta cantidad de pasos en promedio anterior, nada más. Y lo que hacen es eso, ¿no?
+01:53:49 Speaker 1: Un decay
+01:53:50 Speaker 2: prácticamente de la memoria,
+01:53:52 Speaker 1: y en
+01:53:54 Speaker 2: promedio, más o menos, lo que hacen es memorizar los últimos 10
+01:54:00 Speaker 1: pasos en promedio.
+01:54:06 Speaker 2: Y ahí consigue resolver el problema del Adagrat. A ver, Adagrat y RMSProp, ¿cómo se comporta? RMSProp, aquí en negrito, y Adagrat, ¿cuál de los dos? Acá para el ejemplo, ¿no? Recuerden que cuando tenemos instalaciones
+01:54:30 Speaker 1: muy grandes, el Adagrat
+01:54:31 Speaker 2: comienza a negar. Lo curioso es que RMC Pro no
+01:54:41 Speaker 1: tiene ningún peligro. Pero
+01:54:50 Speaker 2: RMC Pro no tiene peligro. Más bien es un slide del curso de redes neuronales de Jofri Ginto. Y cada vez que alguien hacía una referencia al método de RMS Pro, la referencia de los artículos colocantes. Filman y Filman. Tertura 6.5 RMS Pro.
+01:55:24 Speaker 1: No es
+01:55:27 Speaker 2: una publicación, no es un artículo. Es el slide del curso de YouTube.
+01:55:43 Speaker 1: Y luego viene Adam. Adam es
+01:55:51 Speaker 2: una combinación de RMS Pro con Momentum. Acá estamos calculando el Momentum. y luego El beta 1 es el parámetro, diremos así, ¿no? Del momentum, es el momentum. Y el beta 2 del remecentro,
+01:56:30 Speaker 1: ¿no? Que viene a
+01:56:31 Speaker 2: ser el parámetro de DQ que estamos considerando. Y luego hacemos la unión de ambos y calculamos el nuevo
+01:56:46 Speaker 1: salto,
+01:56:48 Speaker 2: la nueva actualización que hacemos de los... ¿Qué es lo que lleva en consideración el momentum, por ejemplo? Beta 1 y beta 2 son valores de decay, que usualmente son aproximadamente 0.9, lo que les decía, son valores que se estilan colocar. Dado que V se inicializa en 0, el primer V sería un número muy pequeño, que va a demorar más o menos para actualizarse. Al actualizar los pesos dividiendo entre V, que es un número muy pequeño, da como resultado una actualización de pesos inusualmente grande. Ahora, el Bias Correction compensa el hecho de que M y V se inicialicen en cero y necesitan algunas iteraciones para funcionar. Las características del Adam B... Primero, que es uno de los más preferidos por toda la gente que trabaja en
+01:57:57 Speaker 1: Machine Learning.
+01:58:00 Speaker 2: y lo otro es que de alguna u otra manera es no
+01:58:07 Speaker 1: es le vamos a poner cualquier ley reino
+01:58:13 Speaker 2: que el rey que tiene mucho un gran efecto encima de lo que es la corriente y
+01:58:23 Speaker 1: él
+01:58:30 Speaker 2: Y hasta ahora, el Adana-B es el más
+01:58:33 Speaker 1: popular de todos.
+01:58:35 Speaker 2: Cuando ustedes utilizan ahí, por ejemplo, las redes neuronales que están programando, que están entrenándose, siempre
+01:58:42 Speaker 1: van a ver que las
+01:58:44 Speaker 2: funciones de optimización vuelven siempre a arte. Y es el segundo paper más citado de Adam. A 250.000 me parece. Y luego sigue el de Attention in the Soul. A ver, para poder implementarlo, bueno, lo clásico es que nosotros ya estamos implementando es llamar a la función de utilización, y le ponemos el learning que colocábamos, que queríamos. Cuando usamos momentum, bueno, colocamos ahí el otro parámetro, y le ponemos el valor del momento, como usted decía, 0.9 es lo que se expira colocar. Obviamente considerando que nosotras estén normalizados. pero cuando estamos de este lado colocamos el momento en este lado a la gran pasión es otra función
+02:00:01 Speaker 1: después
+02:00:03 Speaker 2: de que haga un caché de memoria para poder comunicar el histórico rmc pro también es otra función y el rojo es él Aquí nos delimita la cantidad de memoria. Y luego a la más D, que es una combinación de RMC Pro con
+02:00:29 Speaker 1: Momentum.
+02:00:31 Speaker 2: Y tenemos acá, obviamente, el Learning Red, con todas las funciones con nuestro parámetro obligatorio. Y luego tenemos el VK1, que es para responder al Momentum, y el VK2 al RMC Pro, que igual son, ¿no? Más o menos en valores ya... Casi predeterminamos.
+02:01:16 Speaker 1: ¿Preguntas? Bueno,
+02:01:32 Speaker 2: han habido propuestas de otras funciones de optimización, pero no han prosperado mucho. Inclusive ha habido propuestas de optimización de funciones con funciones de segundo orden y todo. Al final se sigue usando algo. Porque justamente uno de los grandes cuellos de botella para poder entrenar la red es hacer el backpropiation.
+02:02:05 Speaker 1: Y en el backpropiation
+02:02:06 Speaker 2: dependemos de estas funciones de optimización. Siempre las investigaciones han estado detrás de poder optimizar o hacer más rápido el backpropiation
+02:02:17 Speaker 1: y eso implicaba
+02:02:18 Speaker 2: también optimizar más las funciones del descenso por gradiente. Ya, ahorita solo ahora, que es el más corto. Otro punto es el learning rate, que creo que ya lo habíamos discutido también.
+02:02:44 Speaker 1: ¿Qué
+02:02:45 Speaker 2: pasa cuando tenemos un learning rate que es pequeñito? ¿Dónde se mira? Este es el asunto.
+02:02:51 Speaker 1: Otro de morales.
+02:02:54 Speaker 2: Uno que sea alto. Demasiado alto, que en vez de... Y bueno, el rojito es nuestro learning rate ideal. ¿Cómo calculamos ese débil de cuenta?
+02:03:14 Speaker 1: Está bien.
+02:03:15 Speaker 2: La experimentación que podemos hacer. Estrategias es de que
+02:03:32 Speaker 1: nunca
+02:03:34 Speaker 2: tengamos un learning rate constante.
+02:03:37 Speaker 1: Esa es la forma
+02:03:40 Speaker 2: de poder ir incrementando. ¿Por qué? Porque es lo que me conviene.
+02:03:49 Speaker 1: Bueno, yo tengo así, por decir,
+02:03:52 Speaker 2: quiero llegar al punto del mínimo global. Yo puedo empezar con un learning rate alto, ¿no? Pero a medida que sigo avanzando, puedo ir decrementando para irme aproximando. Porque mantengo mi learning rate constante y alto, puedo estar
+02:04:08 Speaker 1: prácticamente arriba.
+02:04:11 Speaker 2: ¿Ok? Por eso la estrategia de ir haciendo un
+02:04:14 Speaker 1: decrecimiento.
+02:04:16 Speaker 2: del lending rate a medida que voy avanzando en mi generación. Ahora, estrategas para hacer el decrecimiento del lending rate,
+02:04:26 Speaker 1: hay varias, ¿no? Es decir, por los
+02:04:29 Speaker 2: pasos que doy, por el tiempo o un exponencial. Este es mantener un m-ray constante. Esto es por los pasos, cada ciertos pasos decremento. El exponencial decay, que es el verde. O por el tiempo, ¿no? Cada cierto tiempo voy haciendo el decremento. Lo que está implementado en la función del descenso por variante, hay un decay, ustedes pueden colocarle aquí, ¿no? Descenso por variante, el learning rate de 0.1, le dicen un decay de 0.05.
+02:05:12 Speaker 1: Entonces, él va a ir,
+02:05:12 Speaker 2: ¿no? Decrementando el learning rate,
+02:05:15 Speaker 1: ¿no?
+02:05:17 Speaker 2: Cada cierto tiempo, ¿no?
+02:05:23 Speaker 1: El
+02:05:23 Speaker 2: valor del learning rate, ¿no? Lo que vamos a utilizar es el time decay, es decir, ¿Qué es la estrategia del tipo? ¿Y qué es lo que quieren evitar nosotros? ¿El exponencial o el step decay? Ahí podemos implementar nuestra propia función de decay e incorporarla dentro del fix como
+02:06:01 Speaker 1: un callback. ¿No? por ejemplo, acá está, ¿no?
+02:06:13 Speaker 2: Acá está la exponencial decay. Yo defino acá mi función de exponencial decay. Hago mi decay basada en el exponencial. Y luego, ¿no?
+02:06:29 Speaker 1: Y luego hago el callback,
+02:06:33 Speaker 2: ¿no? La función que he definido dentro del
+02:06:37 Speaker 1: script. ¿Ven?
+02:06:40 Speaker 2: De ahí me permito yo definir mi propia función, en este caso mi función de decay de learning rate, no propia. Podría crearme otra función propia también. La colocar dentro del feed, pues la
+02:06:51 Speaker 1: vayamos a definir. Y ahí puedo ir, ¿no? Estrenazo y va a ir reduciendo.
+02:07:08 Speaker 2: Bueno, a partir de eso también ya puede haber otras estrategias. Por ejemplo, esta es una de las estrategias para poder calcular el learning
+02:07:17 Speaker 1: rate, un
+02:07:19 Speaker 2: learning rate cíclico. Podríamos hacer un ensamble de snapshots. Por ejemplo, aquí en este paper,
+02:07:30 Speaker 1: define
+02:07:34 Speaker 2: una estrategia para poder calcular un learning rate adecuado para cierto conjunto. Y se comienza con un learning muy pequeño, en cada base va incrementando el valor del learning rate, y se observa el comportamiento del aprendizaje, cómo va a ir.
+02:07:49 Speaker 1: Por ejemplo, va calculando
+02:07:51 Speaker 2: un comportamiento del aprendizaje a medida que va yendo las iteraciones. Y luego dice, más o menos, en este punto podemos determinar el valor ideal del learning rate. Luego,
+02:08:06 Speaker 1: estos
+02:08:10 Speaker 2: otros dos papers colocan los learning rates cíclicos, es decir, a medida que nosotros vamos incrementando el learning rate, por ejemplo, y luego reinicializamos
+02:08:21 Speaker 1: el valor del learning rate. Otra vez pasamos, por ejemplo, cuántos faltan. Me parece
+02:08:29 Speaker 2: que está yendo cada 400. Acá cada 400. Hay 400 integraciones. Y otra vez reinicializa el valor del rendimiento. Va decrementando, decrementando, decrementando. Otra vez reinicializa. Dice, la variación agresiva del learning rate permite que el modelo converja rápidamente en una nueva y mejor solución en cada ciclo. Los autores encontraron empíricamente que se requieren dos y cuatro veces menos épocas usando esta técnica. Además, incrementar el learning rate cada cierto tiempo ayuda a escapar de mínimos locales. Le estás dando la fuerza ahí.
+02:09:21 Speaker 1: Acá el
+02:09:22 Speaker 2: ciclo era cada cierto número de iteraciones. Aquí, por ejemplo, está incrementando primero en 100, reinicializa, luego después de 200 reinicializa, luego después de 400 reinicializa. Y la última estrategia justamente aprovecha estas reinicializaciones del Learning Rate.
+02:10:06 Speaker 1: Y la idea es acá.
+02:10:08 Speaker 2: Este gráfico es
+02:10:09 Speaker 1: bien
+02:10:10 Speaker 2: didáctico. Cuando estamos haciendo el descenso por gradiente, comenzamos de un punto, aquí está el punto azul, y vamos descendiendo, descendiendo, y va cayendo en un mínimo. Hemos dicho que tal vez nunca lleguemos al mínimo global,
+02:10:31 Speaker 1: que es lo más probable,
+02:10:33 Speaker 2: pero vamos a llegar a un mínimo, muy aproximado, y que es este punto de acá. No sé, el mínimo global, porque tal vez el mínimo global estaba aquí, pero bueno, acá hay un retiro. Si cae en ese punto, que es un aproximado del mínimo global, ¿no? Ya es una solución, ¿no? Que se está teniendo. La red va a tener una cierta configuración de sus pesos, ¿no? Es decir, valores. Pero ahí nosotros podríamos hacer,
+02:11:05 Speaker 1: ¿no?
+02:11:08 Speaker 2: La explosión del delivery rate como para que salga de ese punto.
+02:11:12 Speaker 1: Y vaya a otro lado, ¿no?
+02:11:15 Speaker 2: Si comienza por aquí, por decir, estamos haciendo descenso por garante y cae en este punto. Y luego reinicializamos el Lend-Rex, como que coloca una explosión del salto. Y va y hace descenso por garante y va a caer por otro lado, por otro mínimo local. Otra vez hacemos explosión.
+02:11:35 Speaker 1: Va ahí y otra vez cae por otro lado. Chao.
+02:11:42 Speaker 2: Caemos en este punto, cuando el lending rate tiene este valor, ¿no? Estamos caiendo en un millón global, explotamos, vamos descendiendo, y en estos puntos
+02:11:51 Speaker 1: que estamos llegando, estamos descendiendo en
+02:11:53 Speaker 2: estos mínimos locales.
+02:11:56 Speaker 1: No sé. Son muy
+02:11:59 Speaker 2: próximos, tal vez, ¿no? A un mínimo... a una configuración mínima que tenemos con esta
+02:12:10 Speaker 1: red.
+02:12:13 Speaker 2: Cuando la red cae en este punto, pues tiene una configuración. Cuando cae en este punto, tiene otra configuración. Cuando cae en este punto, es otra configuración. Es como que tuviésemos acá tres redes.
+02:12:27 Speaker 1: ¿Recuerda?
+02:12:28 Speaker 2: Tres redes, ¿no? Tres configuraciones de red. Ellas están yendo a un mínimo. No es el mismo punto, pero está lleno con fin.
+02:12:37 Speaker 1: Es como que tenga otra y tres.
+02:12:41 Speaker 2: Entonces, lo que los autores dicen es, mira, si tenemos ahí tres configuraciones distintas, lo que podemos hacer es un ensamble de
+02:12:48 Speaker 1: esos. Es como tener un random forest, ¿no?
+02:12:54 Speaker 2: Tienes tres árboles diferentes. En este caso son tres redes diferentes. ¿No? Son diferentes porque tienen valores de los pesos diferentes.
+02:13:05 Speaker 1: Tres configuraciones diferentes.
+02:13:06 Speaker 2: Y podemos ensamblar.
+02:13:09 Speaker 1: Y ahí podemos ensamblar.
+02:13:15 Speaker 2: Y bueno, ellos demuestran en el paper que esa estrategia ayuda y no ayuda a mejorar bastante la configuración final.
+02:13:40 Speaker 1: ¿Preguntas? Me parece que la presentación que José nos está mostrando no es la que está ocupada. No está. No es la más corta. No es la versión más concreta. No está tratada. Está perdón. Ni de recíclicos tampoco está. Y no se ve nada pasa. Creo que a lo mejor vos te acabamos de utilizar tu... ...y... ...y... ...y... ...y... ¿Ahora? Sí.
+02:15:20 Speaker 2: Bueno, esto sí debe ser, en todo caso. Me acordé que sigo capaz de subir otro también. Bueno, ustedes acá tienen un... Trabajamos acá con la base de datos de dígitos manuscritos, que son 60.000 de entrenamiento, 10.000 de test.
+02:15:55 Speaker 1: Cargamos la data.
+02:15:58 Speaker 2: Vemos que las clases son de 0 hasta 9, son 10 clases total. Ya estamos mostrando una nueva cosa. y es un modelo bien sencillito tenemos
+02:16:20 Speaker 1: acá 128
+02:16:21 Speaker 2: en la primera capa
+02:16:24 Speaker 1: y tiene
+02:16:27 Speaker 2: como entrada los 784 valores de la materia
+02:16:33 Speaker 1: pero como vejo
+02:16:51 Speaker 2: Nuestros
+02:16:51 Speaker 1: dígitos son
+02:16:54 Speaker 2: matrices de esta dimensión de 28 por 28.
+02:16:58 Speaker 1: 28 por 28. Y acá
+02:17:03 Speaker 2: tenemos un 2.
+02:17:07 Speaker 1: Pero
+02:17:08 Speaker 2: para lanzarlo a una red neuronal, transformamos estos 28 por 28 en un vector de... 784 784
+02:17:18 Speaker 1: 784 que
+02:17:24 Speaker 2: en verdad es el platen, es el plateado de este bidimensional en un solo conductor
+02:17:29 Speaker 1: ¿Sabes que es always o column wise?
+02:17:32 Speaker 2: Ah, me parece que es esta primera fila, estos primeros 28 Para aquí. Ok. Estos siguientes 28 van aquí. Ah, ok. Ahí tenemos. Entonces, esa es la entrada hacia nuestra red, ¿no? Por eso que estamos teniendo aquí la red del vector de 74 entran a 128,
+02:17:59 Speaker 1: ¿no? Que vamos a tener
+02:18:00 Speaker 2: 128, ¿no?
+02:18:06 Speaker 1: 128 nodos. y luego esos 128 salen
+02:18:12 Speaker 2: otros 64 64 y finalmente estos 64 van a la salida final que son 10 no es la arquitectura de esa región el
+02:18:34 Speaker 1: primer reloj es entre
+02:18:41 Speaker 2: Las salidas de esta red.
+02:18:44 Speaker 1: Ah, ok, esas son. Porque en la entrada no es...
+02:18:48 Speaker 2: Ah, no, acá no. Esas son las entradas. Esta de 154 va a salir de tu cárcel. Aquí va a ser como es la salida, la última cárcel de salida.
+02:19:09 Speaker 1: Bien, eso.
+02:19:14 Speaker 2: ¿Qué más tenemos ahí? Bueno, estamos
+02:19:16 Speaker 1: creando el modelo.
+02:19:18 Speaker 2: Un optimizador, que es el Stocastic Crayed DC con Learning Rate. Luego, el Loss, que es el Cross Entropy, porque tenemos acá como softbacks nuestra función de salida. Y la media, como es una clasificación, pues una curación.
+02:19:43 Speaker 1: Acá se ha implementado el Learning Rate
+02:19:45 Speaker 2: Finder, que está como un fallback. ah ya está colocado acá están los
+02:19:56 Speaker 1: callbacks lo pueden ustedes analizar y bueno
+02:20:07 Speaker 2: ahí está un poco la experimentación del
+02:20:09 Speaker 1: learning rate finder que
+02:20:11 Speaker 2: da más o menos un
+02:20:12 Speaker 1: aproximado del learning rate acá más o menos,
+02:20:18 Speaker 2: que sugiere que le puedes utilizar, es una implementación del paper que les he mostrado y luego acá tenemos el entrenamiento de, bueno, con el learning que he utilizado, el que he entrenado con la Rails, vemos el resultado y más o menos nos dan estos dos
+02:20:46 Speaker 1: y las que les no
+02:20:48 Speaker 2: está tan mal, 0.884 luego acá tenemos otro modelo Ah, implementando los learning rates cíclicos. Los baches, el número de ciclos.
+02:21:12 Speaker 1: Y acá
+02:21:14 Speaker 2: también estamos haciendo el FIC, el libro de épocas, la validación. Y hacemos el
+02:21:20 Speaker 1: callback al learning rate cíclico. Y acá le estamos haciendo que es ese resultado.
+02:21:31 Speaker 2: Nos va a dar ciertos pasos, en este caso acá 250, 250.
+02:21:40 Speaker 1: Una
+02:21:40 Speaker 2: reinicialización del
+02:21:42 Speaker 1: learning. Una consulta. Cuando el
+02:21:46 Speaker 2: entrenamiento hace en cada
+02:21:48 Speaker 1: batch,
+02:21:48 Speaker 2: ¿se actualiza solamente el descenso de gradiente? ¿Se actualizan los pesos solamente en ese batch, no? ¿El descenso de graditos se hace
+02:22:00 Speaker 1: solamente una vez? ¿Para cada batch?
+02:22:04 Speaker 2: ¿Cómo es eso respecto a los batches? Es un poquito... me confunde. Porque el batch es una sola pasada, una sola pasada de esa cantidad de imágenes, por ejemplo, en este caso, ¿no? Si tú escoges un batch de 255, por decir,
+02:22:31 Speaker 1: ¿a qué
+02:22:32 Speaker 2: te refiero? Sí. Claro, de...
+02:22:38 Speaker 1: El
+02:22:41 Speaker 2: batch size. 256. Entonces, de las 60.000 imágenes que son de conjunto de entrenamientos, lo estoy tomando 256, 256.
+02:22:53 Speaker 1: ¿Cierto?
+02:22:56 Speaker 2: Como un bloque solo, digamos. Sí.
+02:22:59 Speaker 1: Un bloque solo.
+02:23:01 Speaker 2: Y cuando termines, digamos, de los 60.000, hables conseguido una época.
+02:23:08 Speaker 1: No
+02:23:16 Speaker 2: son 100 iteraciones. Ayer decimos época. En verdad no son 100 iteraciones. Hemos dicho que son 60.000
+02:23:26 Speaker 1: datos, conjuntos de datos, ¿no?
+02:23:32 Speaker 2: Y un batch de
+02:23:36 Speaker 1: 256, ¿no? Así está, ¿no?
+02:23:40 Speaker 2: Ah, 60.000 entre 256, ¿cuánto? 234.375. 234.77 con
+02:24:16 Speaker 1: igual 235. 235. Porque el último batch va a llevar el restito.
+02:24:27 Speaker 2: O sea, son 234 234 iteraciones con lotes de 256. Y la última iteración. ¿Cuánto sería? 234 por 254 da. 234 por 254.
+02:24:55 Speaker 1: Entonces
+02:24:56 Speaker 2: van a restar...
+02:24:58 Speaker 1: ¿Cuántos? 96, ¿no? Sí,
+02:25:08 Speaker 2: 96. El último, la última iteración, ¿no?
+02:25:14 Speaker 1: Última iteración, vamos a ponerlo. La iteración va a ser con 96.
+02:25:21 Speaker 2: Y más. Entonces ahí completa un Batch. O sea, va a ser 234 iteraciones de 256, porque es el Batch. Y el último, la última va a ser de 96 Batch. Y ahí completa la 60.
+02:25:36 Speaker 1: La primera época.
+02:25:42 Speaker 2: ¿Entendés? Sí.
+02:25:45 Speaker 1: Y acá le estamos diciendo 100 épocas.
+02:25:54 Speaker 2: 235 por 100 épocas más 100 van a ser 23.500 iteraciones que va a dar Pero época, lo llevamos más por época porque en una época, fíjense, van a intervenir todos los datos. O sea, van a intervenir lote por lote, ¿no? Pero van a intervenir todos. En la siguiente época hace como una chocolatada de todos los datos y otra desaleatoriamente va tomando 256, 256, 234 veces 256, va haciendo subir. Con cada mini lote va a hacer su forward, su back propagation. Y asusta pesos por más proporción. Y cuando ha cumplido una época, chocolateo otra vez,
+02:26:41 Speaker 1: o otra vez lo mismo. De tal manera que en cada época
+02:26:44 Speaker 2: va participando todos los 60.000 y más. y entonces en cada bach al terminar cada bach hay actualizar y recién actualizar los pesos sí sí sí ya
+02:27:07 Speaker 1: para hacer el más o sea en 255 156
+02:27:13 Speaker 2: haces tu forward y luego ajustes
+02:27:23 Speaker 1: Ahora,
+02:27:25 Speaker 2: ¿qué tal significa 256? De pronto tu muestra sale puros dígitos 1.
+02:27:34 Speaker 1: ¿Cómo va a ser ese forward?
+02:27:38 Speaker 2: Va a estar sesgado hasta uno. O sea, podría ser que en una iteración, en una de tus muestras sale puro dígito uno nada más. Para hacer ese forward, va a estar sesgado. Y no al dígito uno. Back propagation también va a estar sesgado. Entonces probablemente tu loss va a salir alto. Y en la otra instalación, ponte que estos
+02:28:04 Speaker 1: 251 milenotes te salen bien distribuidos, ¿no? Entre todos los dígitos.
+02:28:09 Speaker 2: ¿No? Del 1, del 0 al 9.
+02:28:12 Speaker 1: Bien distribuido. Con una buena representación. Probablemente cuando eres tu forward, te vas saliendo menor,
+02:28:18 Speaker 2: saliendo bajo 3, pero menor que aquel que solamente tenías un conjunto de un solo dígito. Por eso que no sé si está en este grafo o no. Recuerda que salía así, ¿no?
+02:28:37 Speaker 1: Las curvas de luz, ¿no?
+02:28:39 Speaker 2: Así con lluvia. Porque tenías muestras con error alto, error bajo, error alto, error bajo, y así sencillamente. No eras contigo. Y este es el efecto de tener...
+02:28:53 Speaker 1: Pero en el tiempo, si hemos visto,
+02:28:57 Speaker 2: te ha demostrado que el modelo va a aprender siempre. Bien, ahí les llego para que ustedes... Ah, lo voy a subir como tarea. Ya te han pedido tarea, ¿verdad? Me olvidé. Aquí al final, para que ustedes entren con los optimizadores, ¿ya? Metanle un regularizador,
+02:29:34 Speaker 1: metanle un badge normalizer,
+02:29:35 Speaker 2: otro... Utilicen un Adam, ¿no? Gracias.
+02:30:44 Speaker 1: El
+02:30:45 Speaker 2: próximo 14, ¿no? Está bien. A las 19 horas.
+02:31:15 Speaker 1: Ahí al final
+02:31:20 Speaker 2: está la tarea. También les he colocado la versión de Python.
+02:31:35 Speaker 1: No lo he entendido. ¿Es posible hacernos la tarea en Python y en TensorFlow?
+02:31:41 Speaker 2: En ambos o en Python.
+02:31:47 Speaker 1: Ahí nos vemos. Chau, nos vemos.
+  
