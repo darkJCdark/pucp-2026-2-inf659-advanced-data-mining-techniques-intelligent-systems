@@ -12,6 +12,7 @@ Curso: INF659 Técnicas Avanzadas de Data Mining y Sistemas Inteligentes (PUCP, 
 | 18 oct 2026 | Versión PyTorch del notebook (la de clase), experimento de 10 semillas, validación en Colab (Panel A completo, Panel B representativo) y validación contra las fuentes. |
 | 18 oct 2026 | Celdas 5b (tiempo) y 5c (Isomap); lectura completa de Baldi y Hornik y de Bengio; guion de 5 minutos. |
 | 18 oct 2026 (versión final) | Reorganización de la carpeta. Se descarta el prototipo sklearn (era solo un paso previo; las cifras que valen son las de PyTorch). 5b promedia 20 ajustes de PCA para estabilizar el tiempo. Se actualiza la lista de limitaciones del notebook. Ejecución limpia del notebook final en Colab sin errores. |
+| 18 oct 2026 (texto del notebook) | Se agregan celdas de texto (markdown) que explican cada paso, se reescriben los comentarios con lenguaje más natural y se redacta en primera persona cómo se trabajó (Jorge definió el planteamiento; la IA apoyó con fuentes, código y pruebas). El código no cambió: se comparó línea por línea sin comentarios (190 líneas iguales). |
 
 ## 1. Qué pide el Vibe Quest (fuente: `DM S9.txt`)
 
@@ -48,9 +49,11 @@ Decisiones tomadas con Jorge:
 
 ## 4. Celdas del notebook
 
+Cada celda de código va precedida de una celda de texto que explica qué hace y por qué (22 celdas en total: 12 de texto y 10 de código).
+
 | Celda | Contenido |
 |---|---|
-| 0 | Título, pregunta y declaración de uso de IA |
+| 0 | Título, pregunta, cómo se trabajó (declaración de uso de IA) e idea central |
 | 1 | Librerías y parámetros (semilla, niveles de ruido, valores de k) |
 | 2 | Datos: rollo suizo, ruido fijo, división 80/20 |
 | 3 | Clases `ModeloPCA` y `Autoencoder` con la misma interfaz `encode`/`decode` |
@@ -60,7 +63,7 @@ Decisiones tomadas con Jorge:
 | 5c | Comparación con Isomap (Spearman y confiabilidad) |
 | 6 | Panel A: reconstrucción 3D y error según k, ruido y tipo de autoencoder |
 | 7 | Panel B: recorrido del espacio latente (k = 2) |
-| 8 | Resumen por nivel de ruido, limitaciones y referencias |
+| 8 | Resumen por nivel de ruido; limitaciones y referencias en texto |
 
 Conceptos del curso: PCA como proyección lineal (S9); autoencoder = codificador + cuello de botella + decodificador (S9); AE lineal equivale a PCA (S9; Baldi y Hornik, 1989); composición de lineales sigue siendo lineal y funciones de activación (S3); Adam y tasa de aprendizaje (S4); separar entrenamiento y prueba y estandarizar (S1–S4).
 

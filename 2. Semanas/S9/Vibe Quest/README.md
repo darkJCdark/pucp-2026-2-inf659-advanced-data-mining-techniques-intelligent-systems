@@ -5,7 +5,7 @@ Pregunta 4 de la sesión S9 (INF659, PUCP 2026-2): relación entre manifold lear
 ## Qué abrir primero
 
 1. `VibeQuest_S9_ManifoldLearning_PCA.ipynb`: notebook entregable. Subir a Google Colab y usar Entorno de ejecución > Ejecutar todo (≈ 2 min).
-2. `Guion_VibeQuest_5min.md`: guion de exposición y preguntas probables.
+2. `Guion_VibeQuest_5min.md`: guion de exposición, cifras y preguntas probables.
 3. `pipeline.md`: qué se hizo, resultados y limitaciones.
 
 ## Estructura
