@@ -12,6 +12,7 @@ Curso: INF659 Técnicas Avanzadas de Data Mining y Sistemas Inteligentes (PUCP, 
 | 18 oct 2026 | Versión PyTorch del notebook (la de clase), experimento de 10 semillas, validación en Colab (Panel A completo, Panel B representativo) y validación contra las fuentes. |
 | 18 oct 2026 | Celdas 5b (tiempo) y 5c (Isomap); lectura completa de Baldi y Hornik y de Bengio; guion de 5 minutos. |
 | 18 oct 2026 (versión final) | Reorganización de la carpeta. Se descarta el prototipo sklearn (era solo un paso previo; las cifras que valen son las de PyTorch). 5b promedia 20 ajustes de PCA para estabilizar el tiempo. Se actualiza la lista de limitaciones del notebook. Ejecución limpia del notebook final en Colab sin errores. |
+| 18 oct 2026 (descarga de fuentes) | Se guardan en `fuentes/` los PDF de Baldi y Hornik, Bengio et al. y Hinton y Salakhutdinov, descargados con el navegador integrado (fetch + guardado) y verificados por encabezado `%PDF-`. Pendientes de descarga manual: Jolliffe y Cadima (reCAPTCHA en PMC, desafío Cloudflare en Royal Society; no se evadieron) y Tenenbaum et al. (Science, sin copia abierta verificada). Sin cambios en código ni notebook. |
 | 18 oct 2026 (texto del notebook) | Se agregan celdas de texto (markdown) que explican cada paso, se reescriben los comentarios con lenguaje más natural y se redacta en primera persona cómo se trabajó (Jorge definió el planteamiento; la IA apoyó con fuentes, código y pruebas). El código no cambió: se comparó línea por línea sin comentarios (190 líneas iguales). |
 
 ## 1. Qué pide el Vibe Quest (fuente: `DM S9.txt`)
@@ -114,13 +115,13 @@ Los tiempos varían entre ejecuciones y máquinas (PCA 0.001–0.008 s; AE linea
 
 | Fuente | Estado de lectura | Uso |
 |---|---|---|
-| Baldi y Hornik (1989), Neural Networks 2(1) | **Leída completa** (alphaXiv); PDF en `fuentes/` solo si se descargó | Equivalencia AE lineal = PCA; sin mínimos locales; latente no único |
+| Baldi y Hornik (1989), Neural Networks 2(1) | **Leída completa** (alphaXiv); PDF en `fuentes/` | Equivalencia AE lineal = PCA; sin mínimos locales; latente no único |
 | Bengio, Courville y Vincent (2013), IEEE TPAMI 35(8) | **Leída completa** (alphaXiv) | Hipótesis del manifold; PCA = manifold lineal; Isomap sin función para puntos nuevos |
 | Fournier y Aloise (2019), IEEE AIKE | Resumen y consultas puntuales; PDF en `fuentes/` | AE mejor con pocas dimensiones; PCA ~100× más rápido; recomiendan PCA para prototipar |
 | Wetzel (2017), Phys. Rev. E 96(2) | Resumen y consultas puntuales; PDF en `fuentes/` | AE lineal ≈ PCA; PCA más preciso que AE y VAE en Ising |
-| Hinton y Salakhutdinov (2006), Science 313 | Solo resumen | AE profundo frente a PCA |
-| Jolliffe y Cadima (2016), Phil. Trans. R. Soc. A 374 | Solo resumen | Descripción rigurosa de PCA |
-| Tenenbaum, de Silva y Langford (2000), Science 290 | No leída; el rollo suizo como ejemplo del Isomap se confirmó con apuntes de otro curso y la bibliografía de Fournier y Aloise | Referencia del dataset y de Isomap |
+| Hinton y Salakhutdinov (2006), Science 313 | Solo resumen; PDF en `fuentes/` (no leído completo) | AE profundo frente a PCA |
+| Jolliffe y Cadima (2016), Phil. Trans. R. Soc. A 374 | Solo resumen; PDF pendiente de descarga manual | Descripción rigurosa de PCA |
+| Tenenbaum, de Silva y Langford (2000), Science 290 | No leída; PDF pendiente de descarga manual; el rollo suizo como ejemplo del Isomap se confirmó con apuntes de otro curso y la bibliografía de Fournier y Aloise | Referencia del dataset y de Isomap |
 
 Verificación por DOI en Scopus (17 oct 2026). Un DOI supuesto para Alkhayrat et al. resultó pertenecer a otro artículo y esa fuente se descartó. Notas de lectura en `fuentes/`.
 
@@ -147,5 +148,5 @@ Verificación por DOI en Scopus (17 oct 2026). Un DOI supuesto para Alkhayrat et
 
 1. Subir `VibeQuest_S9_ManifoldLearning_PCA.ipynb` a un Colab nuevo (el actual tiene celdas auxiliares y versión antigua) y ejecutar todo.
 2. Revisar `Guion_VibeQuest_5min.md` y ensayar con cronómetro.
-3. Descargar a `fuentes/` los PDF que falten (README de esa carpeta).
+3. Descargar a mano `Jolliffe_Cadima_2016.pdf` y `Tenenbaum_2000.pdf` a `fuentes/` (ver README de esa carpeta).
 4. Subir el notebook a la tarea "Vibe Quest".
