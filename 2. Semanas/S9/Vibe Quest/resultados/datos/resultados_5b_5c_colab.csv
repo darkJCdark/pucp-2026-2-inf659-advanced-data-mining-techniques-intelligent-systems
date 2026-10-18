@@ -1,0 +1,12 @@
+tabla,ruido,metodo,spearman_con_t,confiabilidad,segundos,veces_PCA
+tiempo_k2_ruido0,0.0,PCA,,,0.008,1
+tiempo_k2_ruido0,0.0,AE lineal,,,4.533,549
+tiempo_k2_ruido0,0.0,AE no lineal,,,6.005,727
+isomap_k2,0.0,PCA,0.25,0.860,,
+isomap_k2,0.0,AE lineal,0.23,0.862,,
+isomap_k2,0.0,AE no lineal,0.20,0.973,,
+isomap_k2,0.0,Isomap,1.00,0.999,0.590,
+isomap_k2,0.3,PCA,0.22,0.843,,
+isomap_k2,0.3,AE lineal,0.19,0.844,,
+isomap_k2,0.3,AE no lineal,0.25,0.961,,
+isomap_k2,0.3,Isomap,0.20,0.878,0.573,
