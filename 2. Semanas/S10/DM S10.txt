@@ -1,0 +1,569 @@
+# DM S10
+
+  Meeting started: 20/10/2026, 10:04:11 p. m.
+  Duration: 150 minutes
+  Participants: Speaker 1, Speaker 2
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/zpHeVmb69KhIOXSSMNNC?o=txt)
+
+    
+
+  
+
+  
+
+  ## Transcript
+
+  00:00 Speaker 1: Comitado por Cloud. en alemán el nombre Klaus es muy similar con el nombre Klaus y Klausita es como Kloetien y entonces mi amigo de trabajo es Kloetien ¿Qué es eso? ¿Qué es eso? ¿Qué es eso? ¿Qué es eso? ¿Qué es eso? ¿Qué es eso? ¿Qué es eso? O sea, básicamente es un cortuniano piso. ¿Vamos a ver? Sí, no, solamente va y véalo y si quieres hablar. ¿Qué? Hola Cristian Muy bien, ya son las siete y cinco, y vamos a comentar.
+03:31 Speaker 2: Un saludo de varios temas interesantes, vamos a continuar con la discusión de la semana pasada, vamos a expandir un poco de lo que estábamos hablando. Vamos a hablar de este tema de la interpretabilidad. Vamos a continuar hablando sobre cómo en las redes neuronales podemos llegar a que haya cierto tipo de interpretabilidad. Y vamos a presentar el tema de los embeddings. Y vamos a hablar un poquito de un cobre especial. Y vamos a terminar con algunas explicaciones
+03:59 Speaker 1: asociadas a los embeddings.
+04:01 Speaker 2: Pero antes,
+04:02 Speaker 1: vamos a
+04:03 Speaker 2: revisar su tarea académica. Así que que todos, por favor, puedan ingresar al
+04:10 Speaker 1: Zoom.
+04:11 Speaker 2: Lo tenemos aquí para que puedan mostrar su pantalla y explicar lo que han podido hacer. En ese sentido, vamos a darle prioridad a los que ya se encuentran en el Zoom. Lo que le pediría a Cristian si nos puede mostrar lo que ha podido realizar. Cristian, ¿estás por ahí?
+04:40 Speaker 1: No, todo muy bien. Bueno, profesor, sí, sí, podría compartir pantalla. De un momento. Gracias. ¿Se puede ver lo que estoy compartiendo? Disculpe.
+05:24 Speaker 2: Sí, correcto.
+05:26 Speaker 1: Ya, bueno, buenas noches. La pregunta que quería responder era justamente cómo modificamos... ¿Se me escucha bien, perdón? Sí, sí, correcto. Ah, ok, ok. Bueno, la pregunta que quería responder era cómo modificar la pérdida de un autoencoder para incorporar
+05:42 Speaker 2: principios bayesianos. Me
+05:45 Speaker 1: pareció bastante interesante y... Al momento de reflexionar un poco, vi que era más o menos justo cómo funcionan los modelos bayesianos, y también creo que la base de lo que serían los modelos de difusión, si es que no me equivoco. Pero bueno, básicamente los ontecorders clásicos...
+06:04 Speaker 2: No más que modelos de difusión, modelos generativos en general.
+06:09 Speaker 1: Ok, ok. Bueno, muchas gracias por la aclaración. Bueno, pues partimos del ontecorder clásico. Y el undercode clásico lo que busca es generarnos funciones que nos ayuden a representar un X con menor dimensionalidad. La diferencia de los undercorders que justamente incorporan los principios bayesianos es que eso lo hacen a partir de priors y distribuciones que justamente lo que buscan es usar esos principios para que la representación sea en función de una distribución, ya sea una distribución normal, por ejemplo, y el... Y el prior determinado para el dato. Entonces, a partir de eso, se establece una nueva función de pérdida. Esta función de pérdida se conoce como el ELVO. El ELVO lo que busca es justamente tratar de establecer un threshold para que al momento de aprender el autoencoder no se aleje mucho de la distribución que tú le has dado inicialmente, pero tampoco del dato original. Entonces el ELBO y el parámetro beta que podemos ver acá, lo que buscan es justamente establecer ese equilibrio. Aquí en este ejemplo lo que podemos ver es que justamente tenemos el beta que nos dice qué tanto se va a acercar o se va a acercar bien al dato original o qué tanto queremos que mantenga la distribución. Entonces a partir de este beta podemos ajustarlo y podemos ver cómo es que... va a cambiar nuestro posterior, o sea, lo que es la inferencia del modelo. La idea es que nosotros podamos seguir reconstruyendo. Sin embargo, hay un término importante, y es que hay muchas representaciones posibles a partir de una distribución. O sea, hay muchas Z posibles. Entonces, el ELVO... Al mismo tiempo, también es una simplificación del integral que contempla todas estas distribuciones. Entonces, la idea de esta herramienta era poder apreciar eso. Entonces, como podemos ver, este es el dato observado. El posterior es la línea en verde, la línea puntilla en verde. Y el prior es... La línea punteada en gris, ¿no? El dato del encoder sería, el resultado del encoder sería este, el lado azul. Y pues aquí es donde nos haya el óptimo, ¿no? Como podemos ver, el peso del KL es lo que hemos ido variando. Podemos, por ejemplo, reducirlo, ¿no? Y en este caso se acerca más a nuestro prior. O podemos incrementarlo y se va a acercar más a nuestra distribución. También acá hay alternativas en donde podemos quitarle simplemente el beta, ¿no? Y vemos que el encoder nos da algo que no se acerca a ninguno de los dos, ¿no? O podemos simplemente subirlo mucho el KL y ver que lo que busca al final el encoder es acercarse lo más posible a la distribución original. Y, bueno, básicamente es eso. Acá hay ejemplos para ver como que unas muestras, ¿no? De lo que se genera, del Z generado. Y, pues, una... Algo pequeño que me grabó la idea, que era como que, ¿cuál sería la... el análisis, no? Lo que pasa es que minimiza simplemente el KL, ¿no? Y, pues...
+09:52 Speaker 2: Dígame, profesor.
+09:54 Speaker 1: Sí, muchas gracias.
+09:56 Speaker 2: También te quiero hacer una pequeña aclaración para todos. Es la primera que está en ByteBest,
+10:00 Speaker 1: así que voy a intentar mejorar esto. Les pido a todos que, por favor, hagan datos reales,
+10:06 Speaker 2: ¿ya? Que siempre intenten entrenar en un modelo real, que no lo hagan de forma teórica. Pero te pasa muchas veces, ¿ya? Porque la guía puede mostrarnos algo teóricamente correcto, ¿ya? Pero no le damos esta idea de realidad, ¿no? Sin qué data set específico funciona mejor, sin qué data set no particular. Esto no está funcionando tan bien, ¿ya? Y la idea de estos valores es que experimentar un poco con eso, ¿no? Tratarlo de hacerlo con datos más reales. Pero igual está bien, muchas gracias. Esto es la última aclaración para los valores que os reinan de ahora en adelante. Muy bien. Vamos a seguir con el siguiente. ¿Algún voluntario? Muy bien. Adelante, Marshall. Yo no podía compartir.
+10:56 Speaker 1: ¿Te ve mi pantalla? Sí, adelante. Yo, la pregunta que hice fue la pregunta que tenía con Manifor Learning, que es el concepto y relación con el PSA. Bueno, no dice nada, pero respecto de Manifor Learning es básicamente como, o sea, si lo quiero simplificar, es algo así como tratar de buscar una estructura más simple, ¿no? Una estructura más simple que te pueda aprovechar para escribir algo más complejo. Entonces, es un concepto que más o menos es lo que entiendo el concepto, ¿no? Así que esto es mucha teoría, pero es mucho texto, así que mejor voy a Wiggle. Así que aquí lo que tengo es, bueno, aquí he hecho, lo digo mucho con un dataset así, este es medio Synthetic Conf, porque quise probar con el Coil 10, pero sentí que el Coil 10 no me ayudaba a mostrar lo que me decía. Así que mejor lo hice sintético. Sí, mejor lo hice sintético. Aquí lo que ya sí quiero decir con nosotros es uno que es como una curvita y otro que es como una flechita. Las veces son sintéticas también. Entonces, lo que yo hago acá, por ejemplo, si tenemos el... Nosotros acá tenemos el original, o sea, las... Tengo el original, que son, bueno, así un punto de puntitos, los PCAs, uno obtengo en lineal y los obtengo en no lineal, que es aquí donde entra el manifold, ¿no? Entonces, cuando yo conalo por la curvatura, vamos a mirar la flechita, ¿no? La flechita va a ir moviéndose, la cuerda curvatura, pero en el caso de los que son lineales, se va a lograr. Eso porque como es lineal, no llega en... Aquí, ¿cuál es el tema en esto? El tema es que en el caso de... Bueno, aquí no se trata tanto, aquí es como que se convierte en línea una parábola. Pero en las flechitas, el chiste, las dije hace un rato algo desde el contrario, es una estructura más simple. Aquí tengo unas flechitas, y digamos, pero una manera de estudiar las flechas es el ángulo. Entonces la curvatura lo que va a tratar de predecir es el ángulo que va a girar, ¿no? Entonces, con una línea lo que va a tratar de hacer va a girar y va a tratar de predecir, también lo mismo, en el tiempo va a predecir, pero acá en los demás se está rayando, ¿no? Y aquí por ejemplo vemos, también vemos acá el MSI, ¿no? Que es más bajo en una línea justamente porque lo prehice mejor, ¿no? Y bueno, más o menos eso, ¿no? O sea, que al final, estos dos lineales, digamos, pueden hallar una estructura más simple, que diga, puede explicar lo que va a abarcar. Interesante.
+13:31 Speaker 2: Esas son imágenes
+13:32 Speaker 1: que... Sí, es implícito. Como mencioné, yo quería hacerlo con el QIPS, pero sentía que no me iba a explicar lo que decía, así que mejor lo explica.
+13:39 Speaker 2: No, está bastante bueno, porque... Esta es la reconstrucción, entendería, creo. Sí. No, bastante... Muy interesante. Porque aquí, solamente para explicar un poco más, estamos dando marchales cómo los datos, cada uno de estos son un ángulo distinto. Sí, claro. Al cuadro distinto,
+14:04 Speaker 1: ¿no?
+14:05 Speaker 2: Es el espacio original. ¿O no?
+14:09 Speaker 1: No, no, no, no. No, no, no, no, no. No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no. Solamente yo uno es cómo lo manejan los diversos modelos y otro es la flecha. Esta es, digamos, un poco más teórica, pero la flecha es más tangible.
+14:24 Speaker 2: Claro. En una línea vas a combinar muchos, ¿no? Entonces no puedes representar. No tienes un espacio de representatividad al que puedas proyectar. Si estás en un manifold, vas a convenir fielmente alrededor de esto. Entonces todo puede proyectarse para
+14:39 Speaker 1: acá. Claro.
+14:43 Speaker 2: ¿Puedes hacer clic en este puntito?
+14:46 Speaker 1: Ah,
+14:48 Speaker 2: mira, son representaciones.
+14:51 Speaker 1: ¿Y el que te hace clic es algo
+14:53 Speaker 2: de eso?
+14:54 Speaker 1: No, son separados. Es como el punto que va a manejarnos, ¿no? Ah, bien.
+15:07 Speaker 2: Excelente formación. Muy ilustrativo también. Muy bien. Ahora, ¿algún otro voluntario? Y adelante.
+15:21 Speaker 1: Tengo que desmutear en el sol, ¿sí? Sí,
+15:24 Speaker 2: igual te escuchan aquí por el...
+15:38 Speaker 1: Bueno, primero quisiera empezar dejando la pregunta que estoy resolviendo, y es cómo regularizar el espacio latente de un auto en poder para que refleje propiedad en un dominio sin perder esa capacidad de reconstrucción, ¿no? Entonces, bueno... Primero, de manera inicial, yo no entendí la pregunta como cogió una persona, incluso pidiendo la palabra de Martí que no me terminara de comprender. Es más, me envió un video para revisar y ahí fue donde salió la idea de este notebook, básicamente. Bueno, ¿cómo entendí yo la pregunta o qué es lo que me está tratando de decir? Bueno, todos sabemos que el autoencoder funciona como un encoder, un espacio latente y un decoder, ¿cierto? El ejemplo que más me sirvió para entenderlo fue... explicar una manzana, ¿no? O sea, si yo quise explicar una característica de una manzana y un poderes modificador, ¿qué es lo que yo haría? Diría que es roja, que es circular y que es un alimento. Dentro de ahí acabo de dar tres features de la manzana. Entonces, si vendría otra persona, por ejemplo el profesor, y yo le diera esas tres características, decodificándolo, él daría la respuesta de que es una manzana. Pero esto no lo saben los modelos. Es decir... Digamos, los modelos que usamos del espacio latente no saben qué es una forma, qué es un alimento o qué es un color. Entonces, esta es la pregunta básicamente que estaba tratando de mostrarnos el profesor, ¿no? ¿Cómo nosotros podemos apoyar a que este modelo entienda el concepto de circular, de alimento, de color? Entonces, esa fue básicamente la idea, ¿no? Entonces... ¿Qué ejemplo estoy tomando yo? Yo tomé uno que encontré dentro de uno de estos videos que me envió Claudia a ver, porque le decía que no entendía. Y me mostré el ejemplo de un péndulo. ¿Por qué un péndulo? El movimiento de un péndulo depende solamente de los factores. Porque es el ángulo en el que se encuentra y la velocidad a la que saca. Esa describe el movimiento del péndulo. Lo que serían los dos features, básicamente. El movimiento, la presión de un péndulo, es básicamente lo que mueve en el tiempo o en la velocidad. y el ángulo en que se encuentra en el tiempo de dos instantes. Por dos instantes, porque un instante anterior te dice dónde estuvo, y el signal te dice dónde estará. Porque sin ese no sabíamos si estuviera subiendo o bajando. Entonces, en nuestro autoimposo va a entrar dos imágenes, T y T más uno, va a llevarlas al espacio latente buscando estas características, y luego las va a sacar de igual manera. Esa es la explicación, básicamente. Entonces, ¿cómo empezamos? Con un péndulo. Este es lo que ve el modelo. Un péndulo básicamente de esa manera, y lo que no ve es el ángulo y la velocidad, es decir, no conoce estas características que les había mencionado. Entonces nosotros vamos a evaluar dos formas. Primero, cómo representa el espacio latente cuando no conoce la velocidad y el ángulo, y cómo lo hace cuando sí lo conoce. Dentro de esto tenemos el modelo, que es el autoencoder, y aquí viene el tema, cómo le enseñamos o cómo castigamos que no sirve las reglas de la física. Entonces dentro de esto tenemos una función de pérdida, que es la reconstrucción más una constante, que es la constante de qué tanto se cumple la ley de la física por la ley de la física. Bueno, luego acá viene la parte de entrenamiento y resultados. Aquí está básicamente el error y cómo se visualiza, pero vayamos mejor a esta parte que es la que explica, yo creo, de mejor manera cómo se ve. Bueno, lo que tenemos en real es cómo... se ve el espacio latente cuando se cumple de manera perfecta el pendulum. O sea, cómo se representa actualmente. Es el ángulo y velocidad. Del lado de A tenemos cómo es que se ve el modelo que no conoce la realidad de la física. Ahí vemos que es básicamente, digamos, una abstracción o una gráfica totalmente difícil de comprender. Y esto es porque posiblemente esté combinando... estas características en lo que son velocidad y ángulo, o incluso estoy tomando otras que no sepamos. Básicamente una combinación que se representa de esa manera. ¿Y cómo es cuando tiene de lado las leyes de la física? Es de esa manera. No representa el mismo ángulo ni la misma velocidad, pero está, como diciéndolo, a la misma escala. Esto es lo que puedo ver, no es lo que sabía. Luego tenemos un test de cómo es A, que es cuando no sabe física, y B cuando sí lo sabe. a diferentes tiempos. Y luego tenemos un explorador de latente que básicamente les había comentado que esta ley de la física se rige por el ángulo y la velocidad. Entonces, bueno, la velocidad sí es un poco difícil de ver, no lo cambiamos mucho. Pero lo que sí se puede verificar es el ángulo, ¿no? De cómo se ve representado cuando sale la ley física y cuando no lo sabe. Entonces ve cuando sí conoce y cuando no. Podemos ver claramente cómo es que... a uno prácticamente ni siquiera lo está moviendo y con ver si está cumpliendo toda esta ley. Luego esto hace empezar para apreciar el futuro. O sea, básicamente es un modelo que prediga y acá tenemos lo que es real y la predicción de lo que sería el pendrive. Y eso sería todo.
+20:53 Speaker 2: Ferris. Ferris, ¿no? Ferris.
+20:58 Speaker 1: Voy a usar mi micrófono o el micrófono de la clase? Tengo que aceptar grabar la diapositiva. Si quieres verlo en tu diapositiva también, puedes ir a vibepress.feres-s.de. Por favor, mi servidor no tiene mucho esfuerzo, entonces es un poco lento a veces. Vale, vamos a ver autoencoder versus PCA. Lo siento, voy a hablar inglés porque es mucho más fácil en este caso. Autoencoder versus NCA. Let's start with the autoencoder in a lineal manner. And as we can see quickly, this is effectively the same as the principal component analysis. They build the same... a slice in the space. Both are looking for the plane in space that is the lowest mean square error given the k dimensions. And if we then switch down here, we can see the latent space. If we, however, switch to the non-linear representation or non-linear autoencoder, we can see that it much more and much better adapts to the Swiss roll. This is, by the way, the Swiss roll of 1500 points. Let's, for example, decrease the number of width of the hidden layers in the non-linear autoencoder. And we can see that it very nicely maps the Swiss roll and also how it affects the latent space. If we, for example, increase the number of width, we can also see that... It's just an Intel N100, so... But it does its job. Yeah, we can see how this also transforms into a more complex shape, I would say. We can also add some more noise, making the slice a bit more thicker, thereby forcing the autoencoder into a more linear, plane-wise shape, because it cannot really follow the shape of the original Swiss Rode manifold.
+24:27 Speaker 2: ¿Cuál es el color que representa para los inversores? Ah,
+24:31 Speaker 1: el negro, el verde y el blu es el SWISS ROW y el red es el autoencoder. Y aquí, en este lado, el gré es el principal componente analisis plane. Este gré, el blu... Este aquí es el latente space, cómo es mapado y cómo close los puntos son en la latente space. Así que esta es la visualización del espacio latente.
+24:57 Speaker 2: ¿Puedes volver a las 10 dimensiones?
+25:01 Speaker 1: Ah, sí. Voy a resetar los valores aquí. ¿Como esto? Sí, eso es muy
+25:07 Speaker 2: interesante. Lo que está mostrando aquí Ferris es básicamente cómo, originalmente, un altercoder lineal, si era un plano, no era idéntico a PSA, creo que lo estoy remarcando bastante. Pero la ventaja de tener un autoencoder es que puede ser un autoencoder es exactamente igual. Heifer lo está demostrando de una manera muy fácil. Cuando ponemos un autoencoder no lineal, podemos ver que este autoencoder no lineal es la ventaja. Si vemos aquí el espacio latente un poco más abajo, podemos ver que el espacio latente es simplemente una proyección lineal. En este plano, todo su proyecto. Sin embargo, aquí no. Y se generan clusters. puede representar mejor este espacio, o puede representar mejor esta proyección, porque es una proyección no lineal. Y aquí se ve bien, porque es un Swiss Roll, ¿no? Si el Swiss Roll puede proyectarse mejor en un augment poder no lineal, versus un augment poder lineal. Similar a lo que mostró Marshall, ¿no? Aquí lo muestran de manera más teórica, de manera
+26:06 Speaker 1: de un Swiss Roll, Marshall lo mostró con una imagen, que
+26:08 Speaker 2: también fue bien interesante, o más práctico. Así que está excelente, muchas gracias, Ferret. ¿Algún otro voluntario? Aquí adelante, por favor.
+26:31 Speaker 1: Primero, esta es la red que he estado probando, ¿no? En realidad solamente un XY, digamos, ¿no? Un espacio y ver cómo lo construyen. Probando con algunas formas, como en este caso es una circunferencia, ¿no? Y un poco para entender, en realidad, también me quedaba con bastantes dudas, que es el espacio latente, ¿no? Esta representación, en este caso 1D, ¿no? Que trata de concentrar. Las filtros, ¿no? Entonces, algo interesante es qué es lo que pasa acá en el borde, ¿no? En realidad, porque todo esto está representado en un OD, en realidad. De ahí lo que puedo entender es que es como si tuviera una, digamos, una pita, ¿no? Y la convierto en un círculo y siempre me van a quedar los puntos... digamos que no están unidos, ¿no?
+27:28 Speaker 2: ¿X y C son estos puntos o es esta
+27:31 Speaker 1: línea? El ruido, el X y C original son los que tienen ruido, que es, claro, sintético, y lo que entrega el manifold, que entiendo sería esta de acá, la curva que me entrega, ¿no? Entonces, y a raíz de eso, bueno, acá he hecho algunos, ¿qué es lo que pasaría, no? Si es que fuera... lineal, si esto fuera no lineal, con unas épocas y también cambiando la semilla. Ahorita, por ejemplo, voy a ponerle lineal. Ahí entrena un ratito. Y bueno, acá me simula qué es lo que pasaría, ¿no? Qué es lo que pasaría, ¿no? Cómo va entrenando y qué es lo que pasa con él. Similar a lo que ha mostrado también Perry, sí. Creo que Maya, ¿no? Sí, sí. Y
+28:20 Speaker 2: es interesante también porque estás mostrando cómo entrenas, ¿no? Que es algo que hasta ahora nadie ha mostrado. Cómo va cambiando y cómo va adaptándose, ¿no? Porque el manifold, ¿no? Que genera un encoder. En el caso del PSA no hay un manifold, es una proyección directa. Este manifold se aprende, ¿no? Aprende en el manifold. Aprende en el manifold. Aprende en esta proyección no lineal.
+28:45 Speaker 1: En el lineal queda así como una recta en este caso, ¿no? Pero en el caso del no lineal... ¿Qué pasó? Porque recién ha terminado de entrenar. Ah, pensé que estaba en una evolución. Sí, se quedó con el anterior y ahora sí está en una línea. Ah, ok. Y acá hay un detalle interesante, ¿no? Por ejemplo, en el del espiral, a pesar de que sí tiene la forma, ¿no? Tiene la forma, sin embargo, la relación no es perfecta, ¿no? Porque si se ve la curva manual que sale, esta partecita de acá, ¿no? En realidad no corresponde. Entonces, ahí yo, por ejemplo, tenía la duda, ¿y por qué el MC sale bien bajo? 0.0013, ¿no? Y es bajísimo, ¿no? Entonces, sí está dándome, digamos, la forma, pero no sigue el orden de los datos, ¿no? No sigue el orden de la espiral. Y como yo no tengo datos acá en esto, en donde está distorsionado, digamos. Igual me sale el MSE bajísimo, ¿no? Pero no está reconstruyendo.
+29:57 Speaker 2: Esto de aquí es muy interesante porque esto muestra muy bien el tema de la representatividad, ¿no? Nosotros como humanos entendemos que el
+30:07 Speaker 1: Z es
+30:08 Speaker 2: este variable representativo, este variable interpretable que
+30:11 Speaker 1: va
+30:11 Speaker 2: aumentando, ¿no? Sin embargo, a la realidad le da igual. Le digo que buscas crear una manifold que pueda presentar todos los puntos. Y si cumple, funciona. No le interesa mucho qué representa este valor. Esa es parte de lo interesante que estás mostrando acá.
+30:29 Speaker 1: ¿No tienes un saludo más? Sí, bueno, el espacio latente, ¿no? Cuando el PCA son los rojitos, ¿no? Y los negros son del autentoder, claro. Acá hay
+30:40 Speaker 2: conexión.
+30:42 Speaker 1: Y está primero decreciente y luego creciente. Entonces... Acá, por ejemplo, también hay un punto donde hace una ruptura, ¿no? O sea, sería esto de acá, pero eso corresponde a esta partecita que está acá.
+30:58 Speaker 2: Exacto, ¿no? Eso de aquí es eso. Ajá,
+31:00 Speaker 1: sí. En los extremos, justo por suerte he salido acá en los extremos, pareciera que no hay, pero podría estar tranquilamente acá en el medio, ¿no? Esa ruptura. Y bueno, de ahí, con la duda de por qué salía ahí, ¿no? Por ejemplo, en este, ¿no? Está comparándose un poco el PSA, el error del PSA que acá se ve, ¿no? Que solamente coincide justo en los puntos donde los ángulos coinciden, ¿no? Acá en estos puntos de acá, ¿no? Aquí y arriba. En cambio, en el otro caso, a pesar de que, digamos, tiene esa parte, ¿no? Que le importa la forma, ¿no? Por eso es que sí reconstruye el virus. el error ¿no?
+31:49 Speaker 2: vuelvo algún minutito para mostrar algo
+31:51 Speaker 1: algo interesante ¿cómo estás?
+32:00 Speaker 2: Muy bien, porque matemáticamente esto
+32:03 Speaker 1: es correcto.
+32:05 Speaker 2: ¿Por qué no es correcto? Porque nosotros queremos darle algún sentido, ¿no? Queremos darle una interpretación. Y esa interpretación, ¿cómo vamos a intentar añadirla? ¿Cómo vamos a intentar generarla? Porque la aprenda de manera correcta y va a ser parte de los esfuerzos que vamos a tratar de aprender el día de hoy. Muy bien, muy interesante. Joaquín, muchas gracias. No sé si hay algún otro voluntario que va a estar interesado en nuestra clase del viernes. Bien, si no hay voluntarios, entonces vamos a comenzar con la clase el día de hoy. Vamos a seguir ahondando en estos temas. Yo me hice el reportaje un poco rápido porque ya han tratado mucho de los temas que voy a recordar. Entonces, la clase pasada hablamos rápidamente de los autoencoders. Hablamos de cómo los autoencoders.
+33:12 Speaker 1: Muy bien.
+33:13 Speaker 2: Hablamos que los autoencoders lineales eran efectivamente lo mismo que os pensé.
+33:24 Speaker 1: Y dijimos
+33:25 Speaker 2: que los autoencoders no lineales tuvieron esta particularidad muy muy interesante que eran estos manifolds. que es para crear una mejor proyección o un espacio latente diferente. Entonces, vimos también cómo los autoencoders básicamente eran superiores al PCA, cuando teníamos, por ejemplo, un autoencoder de 30 dimensiones, porque justamente creaba una mejor representación. ¿Qué problema vimos en la clase pasada sobre los autoencoders? ¿Cuál era el problema principal? ¿Quién se acuerda? Hicimos un pequeño ejemplo, sí, los protocolos son al máximo, va a ser la forma de poder reducir dimensiones, de poder hacer, tener por fin una representación comprimida, poder llegar a poder entrenar algo bien. Hicimos un pequeño ejemplo y encontramos un problema, nos llevamos un problema a la clase pasada. ¿Se acuerdan qué problema era?
+34:30 Speaker 1: Muy
+34:30 Speaker 2: bien, Mónica. Estos resultados no eran interpretables. Este código vector, este espacio latente, al que lo llamamos, empezamos a jugar y decir, ok, ¿qué pasaba con este Z1, Z2? ¿Funcionará? ¿No funcionará? No funcionó. Nos daba cualquier cosa cuando empezamos a cambiar justamente los Zs y decíamos, bueno... Era una buena idea, pero no funcionó. Dijimos, no, lamentablemente, no llegamos a tener esa representación ideal, esa representación genial. Lo explicó muy bien Juan Luis, por ejemplo, en su byquest. Él hablaba de estas características, estos features que queremos encontrar. Estas características serían ideal poder obtenerlas para poder representar la realidad. Es una compresión óptima entre cuillas. Primera pregunta que hay que hacernos, antes de ahondar más en este tema de representación, ¿no? O de features o características únicas. Tenemos que ir un paso atrás y preguntarnos. Primero, ¿será posible? ¿Será posible tener una red neuronal o un número? Porque hay que recordar que una red neuronal en el fondo no es más que un peso y un cerdo, ¿no? ¿Podrá representar todos los conceptos? ¿Qué piensan? Vamos a entrar un poco filosófico en un momento. ¿Qué es lo que opinan? ¿Una red neuronal podrá representar todos los conceptos?
+36:08 Speaker 1: ¿Los números podrán
+36:10 Speaker 2: representar todos los conceptos?
+36:13 Speaker 1: ¿Qué dicen? ¿Qué piensan? Vale, pienso que si tenemos un tamaño suficiente grande, puede ser, sí.
+36:29 Speaker 2: Bien, es interesante, ¿no? Porque podríamos hacer una serie de números, ¿no? Uno, por ejemplo, que represente... ¿Qué características? Hablabas de la manzana. Bien, manzana hablabas de... El color,
+36:39 Speaker 1: ¿cierto? Forma. Forma. Tipo de alimento.
+36:46 Speaker 2: Tipo de alimentos, ¿no?
+36:48 Speaker 1: Ok, entonces...
+36:50 Speaker 2: Y así podemos ver varios. para representar varios tipos de
+36:53 Speaker 1: conceptos,
+36:54 Speaker 2: lo que dice Ferris, que es bastante razonable, es si tenemos suficientes conceptos, suficientes valores, suficientes características,
+37:04 Speaker 1: en
+37:06 Speaker 2: teoría, deberíamos de, con distintos valores,
+37:10 Speaker 1: poder
+37:11 Speaker 2: representar todos los conceptos. Y esta idea es una idea tradicional, es una idea que nace un poco de... la idea neurológica. Nace un pequeño experimento que llamaron la
+37:29 Speaker 1: neurona Jennifer
+37:30 Speaker 2: Aniston. Originalmente los científicos, los neurólogos, antes de la inteligencia artificial, decían, bueno, podría ser o no podría ser que una de nuestras neuronas en el cerebro vaya realmente a poder representar un concepto. Y es un pequeño experimento. Dijeron, vamos a sentar una serie de pacientes y vamos a mostrarles fotos. Va a ser un mapeo de todas las conexiones de su cerebro. Y cada vez que ponemos una foto de Jennifer Aniston, vemos que hay una neurona que se activa. ¡Ajá! Jennifer Aniston se activa nuevamente. Entonces los neurocientíficos dijeron,
+38:13 Speaker 1: ok,
+38:14 Speaker 2: entonces, sí, efectivamente hay una neurona. que se asocia al concepto de Jennifer Addison. Entonces, si nuestras neuronas en nuestro cerebro
+38:25 Speaker 1: de
+38:27 Speaker 2: repente se mapean a un concepto distinto. Es un poco parte de la conclusión neurocientífica original. Ustedes seguramente han escuchado parte de este paradigma neurocientífico que se llama descomposición funcional. Hay ciertas partes de su cerebro que se encargan de ciertas características específicas, ¿no? El tronco sobre la atención, esta otra parte sobre las habilidades motoras, etcétera, ¿no? Y esto ha decidido, de repente, lo que había enseñado también en el colegio, ¿no? Y varios de los paradigmas tradicionales neurocientíficos. De embargo, ¿no? ¿Creen que puede haber un problema sobre esta teoría, un problema sobre esta idea? ¿A alguien se le ocurre que puede tener algún tipo de falla? Si hablemos de nuestro cerebro y todavía no de las neuronas artificiales.
+39:22 Speaker 1: Así es.
+39:27 Speaker 2: Exactamente. Mónica ha hecho un punto interesante, que es cuántos conceptos existen. ¿Cuántos conceptos pueden existir en el mundo? ¿Quién puede dar un número? Un millón. Un poquito, ¿no? Diez millones, veinte millones, mil millones. Más incluso, ¿no? Que los conceptos los podemos hasta crear. Entonces hay un pequeño problema, ¿ya? Con esta idea neurocientífica. Y es por eso que los mismos neurocientíficos entienden, hoy en día ya comprenden, que este paradigma no funciona.
+40:06 Speaker 1: Hay
+40:07 Speaker 2: muchos ejemplos. que muestran que el mismo cerebro no funciona de manera individual. No hay esta relación directa causa-efecta. No solamente en las neuronas, sino por ejemplo en la dopamina, que todos nos conocemos, no solo funciona como una señal de deseos, sino también como una señal de aprendizaje. Muchas partes de nuestro propio cerebro, de nuestra propia biología, no van a tener una función única. No puedes tener muchos tipos de funciones distintas. Es por esto que
+40:47 Speaker 1: la
+40:48 Speaker 2: mayoría de neuronas, tanto naturales como artificiales, hoy en día se acepta que son mayormente polisemánticas. Porque solamente pensamos que cada neurona va a tener un solo concepto. Hablamos de neuronas monosemánticas. Sin embargo, en la realidad, de manera práctica, como pueden pensarlo, tener neuronas monosemáticas es casi imposible. Por eso es que la mayoría de neuronas, vamos a cambiar las polisemáticas, que representan múltiples conceptos
+41:26 Speaker 1: a la vez.
+41:30 Speaker 2: Y esto de repente es... la teoría más importante que voy a hablar el día de hoy. Así que mucho ojo, y esto se puede aplicar de muchas
+41:40 Speaker 1: formas distintas.
+41:41 Speaker 2: Es la llamada hipótesis de superposición. Esta hipótesis de superposición, básicamente decimos los conceptos, sí, efectivamente, millones de miles de conceptos, y si cada uno de estos conceptos tuviera una dimensión, tuviera un feature, o tuviera una variable, Sería la forma ideal de representar este espacio de conceptos. Entonces este modelo, vamos a tener un modelo ideal.
+42:11 Speaker 1: Un modelo
+42:11 Speaker 2: hipotético desenredado. Donde sí, efectivamente, cada neurona o cada número va a representar un concepto distinto. Esta es la llamada hipótesis de superfotición. Sin embargo... La realidad es que nuestros modelos de redes neuronales van a hacer una proyección. Van a de repente promediar tres conceptos y los van a poner en una sola neurona. ¿Por qué? Porque no van a poder coger todos los conceptos.
+42:45 Speaker 1: ¿Cierto? En
+42:46 Speaker 2: el fondo,
+42:47 Speaker 1: de la realidad,
+42:49 Speaker 2: donde vamos a asumir que vamos a tener un número por cada concepto,
+42:54 Speaker 1: toda la red neuronal va
+42:56 Speaker 2: a tener que hacer una proyección. ¿Ya? Y esto es muy importante y muy interesante, porque él nos empieza a decir algo sobre la naturaleza de estos modelos. Por ejemplo, ustedes han escuchado que el modelo, ¿no? De repente, chat GPT, cuando salió 3 o 3.5, ¿cuántos parámetros tenía? ¿Alguien recuerdo? Unos cuantos millones de parámetros, ¿cierto? En el GPT-4, ¿cuántos parámetros tenía?
+43:31 Speaker 1: 100, ¿no?
+43:33 Speaker 2: GPT-5, GPT-6 700, miles Entonces los parámetros van aumentando ¿Por qué será importante? ¿Qué es lo que hará que los parámetros aumenten? Considerando esta Hipótesis de superposición ¿Qué creen que hace? ¿Por qué tener más parámetros? Teóricamente debería ser mejor
+43:58 Speaker 1: Así es.
+43:59 Speaker 2: Va a comprimir menos conceptos y va a poder representar más conceptos.
+44:04 Speaker 1: Más cosas.
+44:06 Speaker 2: Entonces, un modelo con muchos más parámetros va a poder ser mucho más detallista en varios conceptos o varias ideas. Pero normalmente se asocia con modelos más grandes, con más parámetros. Van a poder ser más capaces. Van a tener una mayor capacidad. Otra conclusión que podemos empezar a sacar de este gráfico es... ¿Qué pasa? Porque saben que estos modelos grandes, tipo ChatGPT, son modelos bien genéricos, bien generales, que tratan de abarcar muchos conceptos, muchas ideas a la vez. ¿Qué pasaría si yo utilizo uno de estos modelos y hago un modelo muy específico de una zona que me interese? ¿Voy a necesitar la misma cantidad de parámetros o neuronas de un modelo grande? ¿Solamente me dedico a hacer algo específico? No. Y es por esto que una de las tendencias hoy en día es hacer modelos también especializados. En donde utilizan un modelo grande y lo destilan y lo especializan para una tarea específica. Y esos modelos más pequeños pueden ser mejores que el modelo grande. Justamente utilizamos esta misma idea. De acuerdo a la cantidad de conceptos, el modelo único que va a hacer es hacer una pequeña compresión de estos conceptos. ¿Ok? Entonces esto lo vamos a ir utilizando. Así que hay que tenerlo muy en cuenta porque es un esquema mental interesante en el que hablar de estos modelos con muchos parámetros muy profundos.
+45:35 Speaker 1: Entonces,
+45:35 Speaker 2: cuando creamos estos vectores, intenta representar estos conceptos, estas neuronas. La mayoría de estos conceptos ocurren raramente en el mundo. Realmente, tener una neurona para Jennifer Aniston no es muy eficiente, así que también es bueno, de alguna forma, que estos conceptos se junten.
+45:58 Speaker 1: Podemos crear
+45:59 Speaker 2: vectores en un modelo y mapearlos en un espacio que sea mucho más dimensional.
+46:05 Speaker 1: Y
+46:06 Speaker 2: si es así, estas dimensiones, ¿Podrían ser más fáciles de interpretar? ¿Cómo le llamamos a estos vectores representativos? Vamos a asumir que tenemos una forma, todavía no vamos a hablar de qué forma vamos a hacer esto. Hay estos conceptos que son conceptos inmensos en este mundo fantasioso, de acuerdo a la hipótesis de superposición, en donde nosotros queremos proyectarlos a un espacio menor. ¿Ya? Vamos a imaginar por un momento, sin entrar en el detalle de cómo hacerlo, que vamos a poder conseguir proyectarlos a un espacio de menor dimensionalidad. Que sea manejable. Por ejemplo, cien dimensiones, mil dimensiones, sin llegar a un millón de dimensiones. Y nosotros tenemos unos vectores que decimos, estos vectores sí, por fin, representan la realidad, representan los conceptos fundamentales. ¿Qué tipo de propiedades ¿No? Podríamos nosotros probar dentro de estos vectores o de esta forma de representación vectorial o de neuronas para efectivamente comprobar qué representan la realidad, qué representan estos conceptos, estas ideas abstractas. ¿Y se le ocurre alguna idea? Vamos a decir, por ejemplo, vamos a tener un vector que representa hombre, ¿cierto? Otro vector, ¿no? O otro concepto que va a ser mujer. Otro concepto que hace rey. Otro concepto que hace reina. Cada uno de estos conceptos, cuando lo representamos vectorialmente o numéricamente en distintas dimensiones,
+47:59 Speaker 1: vamos a...
+48:01 Speaker 2: De repente son 100 dimensiones que quieran ver distintos valores. 5, 2, 1, 3, 4, 8, 9, 10. 11, 20, 30, 1, 5, 8, 2, 4. Entonces, aquí tenemos conceptos,
+48:20 Speaker 1: ¿ok?
+48:21 Speaker 2: Y aquí tenemos los números que las representan. Estas neuronas que representan numéricamente estos conceptos.
+48:28 Speaker 1: ¿Cómo
+48:29 Speaker 2: podríamos nosotros decir que efectivamente estos conceptos han sido representados correctamente? Ustedes ven aquí números y ven cualquier número, ¿cierto? Ven números que no tienen ninguna significancia porque nosotros como personas no vemos números,
+48:50 Speaker 1: ¿cierto?
+48:51 Speaker 2: Como personas, ¿qué es lo que normalmente vemos cuando escuchamos palabras o conceptos? ¿Qué es lo primero que viene a su mente? Imágenes. Y esas imágenes se relacionan con otros conceptos, ¿cierto? Hay relaciones entre los conceptos, ¿no? Como hablamos de la manzana. ¿La manzana qué tiene? La manzana... Tiene cierto color rojo. ¿Y ustedes pueden relacionar el color rojo con qué? Con otro concepto. Con otra cosa roja, ¿cierto? Un color rojo. Entonces, nuestra mente funciona a modo de relaciones. Entonces, queremos que numéricamente poder representar esas relaciones. ¿Cómo vamos a hacerlo? Nosotros nos gustaría, por ejemplo, si el vector hombre menos el vector mujer lo restamos numéricamente,
+49:43 Speaker 1: nos
+49:44 Speaker 2: debería dar un vector
+49:45 Speaker 1: resultante que
+49:47 Speaker 2: debería ser el equivalente a conversión de género. Y si ese vector conversión de género le sumamos rey, nos debería dar el vector reina. ¿Ok? Entonces, esas relaciones, esas representaciones de los conceptos o de las relaciones que nosotros tenemos de estos conceptos, nos gustaría que tengan una representación vectorial, en donde cada uno de estos conceptos, por ejemplo,
+50:18 Speaker 1: rey, reina,
+50:20 Speaker 2: hombre, mujer, la diferencia entre ambos conceptos, o el vector de diferencia, deberían de guardar una misma relación semántica, deberían apuntar a lo mismo. Y no solamente eso, sino esperaríamos, de manera general, que esa relación se guarde para todos los conceptos. Si, por ejemplo, nosotros tenemos la relación entre caminar y caminando, esa misma relación, ese tipo de cambio de gerundio, debería de guardar la misma relación para cualquier otra palabra. Si, por ejemplo, tenemos conceptos o palabras asociadas a países y capitales, Nosotros nos gustaría que esa relación país-capital también se guardara numéricamente en estos valores vectoriales. Si nosotros obtenemos eso, vamos a tener una gran representatividad de estos conceptos. En donde cada dirección vectorial va
+51:14 Speaker 1: a representar
+51:15 Speaker 2: de por sí mismo un concepto. Y la relación de estas mismas palabras o de estos mismos conceptos va a representar otro concepto. o esta relación conceptual entre dos palabras. Cuando tenemos eso y cuando eso funciona, todavía no voy a hablar de cómo hacer que eso funcione, esto es lo que le vamos a llamar embeddings. En español, creo que es incrustaciones, no estoy seguro de la traducción exacta en español. Pero esos embeddings van a ser, si llegamos a obtenerlos, lo que nos va a dar la magia,
+51:50 Speaker 1: la salsa.
+51:51 Speaker 2: que necesitamos para hacer que estos modelos de aprendizaje profundo funcionen. Y funcionen muy bien. Si llegamos a conseguir estas relaciones, entonces se puede imaginar el poder que van a tener estos modelos al momento de representar cosas, representar cualquier tipo de concepto. Bien, vamos a ver un pequeño ejemplo. Pero bueno, antes de ver un pequeño ejemplo... Me voy a correr un pequeño ejemplo porque creo que ya demoró un poquito. Voy a dejarlo corriendo. Entonces aquí tengo un pequeño ejemplo de embeddings. Lo voy a dejar corriendo mientras voy a preguntar. Aquí tenemos un pequeño problema. ¿Cuál es el pequeño problema? Si tenemos distintas dimensiones para distintos conceptos,
+52:43 Speaker 1: si
+52:44 Speaker 2: trabajamos en un espacio cartesiano, en donde cada dimensión está en 90 grados de otra dimensión, para representar mil conceptos, ¿cuántas dimensiones necesitamos? ¿Cuántas variables?
+52:56 Speaker 1: ¿Cierto?
+52:58 Speaker 2: Para N dimensiones vamos a necesitar
+53:00 Speaker 1: N.
+53:02 Speaker 2: ¿Eso qué va a ser? Que matemáticamente, si solamente queremos representar poquitos, 100.000 dimensiones necesitamos 100.000 variables. Y eso computacionalmente es demasiado
+53:12 Speaker 1: caro,
+53:13 Speaker 2: demasiado
+53:13 Speaker 1: imposible.
+53:16 Speaker 2: Entonces tenemos una pequeña solución, un pequeño ajuste para que eso funcione. Y la pregunta cambia.
+53:22 Speaker 1: ¿Cuántos
+53:23 Speaker 2: vectores estamos en 90 grados?
+53:27 Speaker 1: ¿Qué tal si
+53:28 Speaker 2: los vectores se diferencian entre 88 y 92 grados? Casi 90 grados. ¿Cuántos vectores? ¿Ok? ¿Cuántas dimensiones podríamos tener
+53:43 Speaker 1: en
+53:44 Speaker 2: un espacio en donde cada dimensión no va a ser 90 grados, sino va a estar entre 88 y 90 grados? Ese cálculo no es tan fácil, ya le puedo bajar el cálculo a su idea, pero la respuesta es
+53:58 Speaker 1: E elevado a N. ¡Eureja!
+54:01 Speaker 2: Con esta idea matemática, yo podría representar solamente con 100 vectores, con 100 distintos vectores, distintas dimensiones, P elevado a las 100 conceptos o dimensiones. P elevado a las 100, ¿cuánto es? Se va así.
+54:21 Speaker 1: Es un número inmenso.
+54:24 Speaker 2: Entonces esta es una de las razones. Que nos permite matemáticamente. Poder representar. Gran cantidad de conceptos. Dentro de 100 dimensiones.
+54:35 Speaker 1: Vamos a un pequeño ejemplo.
+54:37 Speaker 2: Porque ya sé que hasta aquí. Ustedes están incrédulos. ¿Cómo es posible? Eso no debe de pasar. Vamos a ver un pequeño ejemplo. en donde aquí yo he cargado un modelo de embeddings un modelo de embeddings para
+54:56 Speaker 1: hacer
+54:57 Speaker 2: pequeños cargos entonces Entonces aquí yo tengo el típico ejemplo, ya he cargado estos embeddings, donde tengo cuatro palabras. Bueno, tengo tres palabras, rey, reina, hombre y mujer. Y vectorialmente yo puedo ver los vectores. Yo puedo, para estos embeddings, son 300 vectores, con 300 vectores yo puedo ver los números que tienen estos vectores.
+55:36 Speaker 1: ¿Ok? Y para cada una de las palabras.
+55:39 Speaker 2: Sin embargo, viendo los números, igual que el ejemplo que me estaba mostrando aquí no me dice mucho. Cuando yo piso hacer algún tipo de álgebra con estos números, yo puedo hacer rey menos hombre más mujer y hago el cálculo. Cuando hago el cálculo, el primer valor que se acerca vectorialmente a esta respuesta es reina. ¿Ok? Eureka, está funcionando. Pero obviamente ese es mi ejemplo. Ahora lo que yo pido en todas las clases, ahora ustedes me van a dar un ejemplo para demostrar que dentro de estos 200 números se esconden todos los conceptos del universo.
+56:22 Speaker 1: Imagínense.
+56:23 Speaker 2: Todos los conceptos del universo, todos los conceptos que conocen, que entienden, deben de ser representados por esos 200 valores de medios. Ustedes me van a decir, algún tipo de relación, lo vamos a poner acá y vamos a ver si funciona o no. Ahora, todas las clases siempre funcionan.
+56:43 Speaker 1: Por suerte. De repente esta clase no funciona.
+56:46 Speaker 2: Vamos a saber, siempre hay un problema con los demos en vivo. Así que, alguna analogía, piénsela. Piden una analogía y tratemos de ver qué nos genera. A ver si es cierto o no es cierto lo que les diga. Lo vemos.
+57:04 Speaker 1: Piense, ajá. Tata
+57:06 Speaker 2: y perro, mascotas. Tata y perro, mascotas. Pero ¿cuál sería la relación? Sería, digamos, son mascotas. Pero ¿cómo es un grupo?
+57:21 Speaker 1: ¿Sería pedirle otra mascota? ¿Cómo? ¿Sería pedirle otra mascota?
+57:25 Speaker 2: Claro, de repente algo como...
+57:28 Speaker 1: Si te da un tigre y el chorro.
+57:30 Speaker 2: Claro, puede ser. Gato, puedo hablar de... Sería
+57:36 Speaker 1: cat,
+57:37 Speaker 2: ¿no? Porque todo esto es en inglés. Menos puppy. No sé si me puede corregir mi inglés. Cat menos puppy más... Ah, no, sería dog menos puppy. ¿No? Dog menos puppy más cat, ¿no?
+57:59 Speaker 1: Tiene que ser do más papi menos gato.
+58:12 Speaker 2: Sí, yo también me confío con esto.
+58:30 Speaker 1: A ver, señor
+58:31 Speaker 2: Papi menos Katz, vamos a ver.
+58:40 Speaker 1: Papi está ahí, ¿quién está ahí? O Papi menos Doc más Katz. Papi,
+58:52 Speaker 2: ¿questo sí puede ser? Vamos a ver qué valor tiene Kitty Bueno, parece que no funciona ¿En español qué sería? ¿Gatito? ¿Gatitas? Creo que es un poco de...
+59:41 Speaker 1: ¿Visualmente?
+59:54 Speaker 2: Ok, visualmente. Bien.
+59:56 Speaker 1: No está tan mal. Cat, Twitter,
+01:00:00 Speaker 2: Dog, Swapping. Ahora, generalmente... Creo que echó algún error. Vamos a... Vamos a... Vamos a... Ah, no. Ahí está. Muy bien. Lo que pasa es que tengo que poner las palabras acá. Es un número.
+01:00:10 Speaker 1: ¿Ok? ¿Ok?
+01:00:15 Speaker 2: 0.865.
+01:00:18 Speaker 1: ¿Ok? Funciona.
+01:00:21 Speaker 2: Funciona. Solamente no hay ni cómo hacerlo. El poder del universo se encuentra acá. ¿Otro ejemplo? ¿Alguien tiene algún otro ejemplo que le hemos comprobar? A ver si realmente estos conceptos funcionan. He visto
+01:00:38 Speaker 1: un ejemplo muy bien. Es... Germany, Italy, Hitler y de su estado, Solini. No sé. Bueno, el ejemplo de... Eso fue muy... Sí, ¿no? ¿No tenemos que cambiar la fórmula? Sí, exacto. ¡Ajá! ¡El poder! ¡El concepto de la humanidad! Todos los conceptos siempre hay.
+01:01:45 Speaker 2: ¿Alguien más tiene algún otro ejemplo?
+01:01:47 Speaker 1: ¿Otra vez? Sí, pero también otra vez el resultado. Número 3. ¿O no 4?
+01:01:58 Speaker 2: ¿Otra palabra? ¿Alguna otra frase? ¿Alguien quiere probar? Realmente podemos... ¡Miren! O sea, hay que detenernos un ratito también a reflexionar sobre la implicancia. En 200 vectores, en 200 números, vamos a poder tener cualquier concepto, cualquier relación, todos los conceptos que tenemos en nuestras cabezas, todas las relaciones que podamos imaginarnos, deberían estar representadas en estos embeddings.
+01:02:26 Speaker 1: Y si usted puede ir menos Perú, debería dar algo también. Menos Perú también. Verdad.
+01:02:31 Speaker 2: Vamos a ver. ¿Qué sería?
+01:02:33 Speaker 1: ¿Qué sería?
+01:02:35 Speaker 2: El tema es como lo que les decía en los espacios. La compresión no funciona nada, pero vamos a buscar con Perú. Vamos a poner de repente Fujimori.
+01:02:51 Speaker 1: También tenemos que... La fórmula, ¿verdad? Sergiama Perú.
+01:03:02 Speaker 2: No está, no está, porque es un tema de compresión, ¿no? No está comprimido en todo, entonces
+01:03:09 Speaker 1: no funciona de asco, ¿verdad?
+01:03:15 Speaker 2: Porque en Perú no somos muy importantes en el mundo, ¿no? Porque no nos consideran, no nos ignoran esto de la insula en Brasil. ¿Otro ejemplo? ¿Alguien tiene otro ejemplo? Sí,
+01:03:27 Speaker 1: otra vez, 3, blue, one, brown. Es Germany, y Japón, y sushi, y al final bratwurst. ¿Qué? Germany, Japón, sushi. Y bratwurst, salsicha de Alemania. Exacto, bratwurst. Exacto. Es la palabra en general por salsichas. La fórmula. Fórmula. Sí. Exacto. Más sushi. Sushi, hermano. Sí, más sushi. Y el resultado puede ser para ambos. ¡Ajá!
+01:04:18 Speaker 2: ¡El universo!
+01:04:20 Speaker 1: En 200
+01:04:22 Speaker 2: numeritos. ¿Cómo es esto posible? Cosas que ni siquiera yo sé.
+01:04:29 Speaker 1: Cosas que... Todas
+01:04:31 Speaker 2: las cosas que podemos refugiar. También tiene algún otro ejemplo que quiere probar su suerte con estos embeddings. Muy bien,
+01:04:43 Speaker 1: pues vamos a
+01:04:44 Speaker 2: avanzar, si me estoy convencido que estos envelis son importantes. Porque ahora la pregunta que se viene
+01:04:52 Speaker 1: es, ¿cómo
+01:04:55 Speaker 2: construimos estos envelis?
+01:04:58 Speaker 1: ¿Ok?
+01:05:01 Speaker 2: Con un envelis va a ser muy interesante, va a permitir muchas cosas. Ahora la pregunta importante es, ¿cómo hacemos para contribuir a estos envergos? Pues para ello, vamos a tener una red,
+01:05:21 Speaker 1: vamos
+01:05:21 Speaker 2: a tener que hablar nuevamente sobre probabilidades. Para hablar de probabilidades, ¿ya? ¿Se acuerdan que yo les decía? Si tenemos una campana de Gauss, una distribución normal, Decíamos, bueno, con esta distribución normal, de esta característica, es suficiente. Tenemos todo lo que necesitamos para nosotros poder generar
+01:05:58 Speaker 1: un
+01:06:00 Speaker 2: nuevo dato, poder básicamente replicar el proceso. Pero lo que nunca les dije es cómo vamos a replicar el proceso. ¿Cuál es la distribución probabilística más sencilla que conoce?
+01:06:16 Speaker 1: Pero
+01:06:17 Speaker 2: más sencilla que la tecnología.
+01:06:20 Speaker 1: Por ejemplo,
+01:06:23 Speaker 2: ¿qué proceso tiene una distribución probabilística uniforme? El dado. Muy bien. Están los probadores.
+01:06:33 Speaker 1: No el dado.
+01:06:33 Speaker 2: ¿No le puede sacar el dado? Un sexto, ¿no? Entonces, el dado, no es así. El dado es una pronunciación. Aquí tenemos un sexto. Ahora, ¿cómo? Si ustedes tienen la probabilidad de un sexto, ¿tingularían o crearían
+01:06:50 Speaker 1: un
+01:06:52 Speaker 2: nuevo dato? ¿Cómo generarían algo? ¿Alguien tiene alguna idea? Tiene la palabra de un sexto. ¿Cómo crearían un nuevo valor de dado por
+01:07:10 Speaker 1: un computador?
+01:07:12 Speaker 2: ¿Cómo simularían a partir de esa distribución de un sexto la realidad? ¿Han escuchado lo que son los random generators? ¿No?
+01:07:23 Speaker 1: Lo han utilizado, ¿cierto?
+01:07:25 Speaker 2: En algún momento de su vida, espero. Cuando generan un valor aleatorio con un random generator, ¿qué les genera?
+01:07:36 Speaker 1: Pero
+01:07:37 Speaker 2: un millón les puede generar mil cien
+01:07:41 Speaker 1: Entonces
+01:07:44 Speaker 2: podríamos utilizar eso para crear un simulador de dados Es
+01:07:49 Speaker 1: lo que
+01:07:52 Speaker 2: esperaríamos que tenga un simulador de dados En el caso de un dado Nosotros tenemos una sola muestra Y podemos crearlo muy fácilmente. Y decimos. Dame un valor aleatorio. De 0 a 1. Y lo multiplico por 6. Entonces yo puedo crear. Y con una muestra. Me da un valor como 5 por ejemplo. Me da valor 6, me da valor 6, 2. Entonces estoy replicando un dado. Estoy replicando un dado. Esta replicación de un dado en estadística se llama un muestreo. Importante, de repente ustedes ya han escuchado,
+01:08:49 Speaker 1: si han utilizado modelos de
+01:08:51 Speaker 2: difusión o modelos generativos, el modelo generativo genera una muestra. También se muestrea. ¿De dónde es esa terminología de la estadística? Cuando tenemos una distribución probabilística, en la distribución tratamos de hacer un muestreo de esa distribución. Cuando es una distribución sencilla con un dado, es relativamente sencillo,
+01:09:12 Speaker 1: pero cuando
+01:09:14 Speaker 2: tenemos una distribución un poco más compleja, como puede ser esta de aquí, la forma o los métodos para crear un muestreo se complican un poco. Sin embargo, Miren. Cuando tenemos, por ejemplo, un dato, o cinco datos, ¿ya? Para esta distribución un poco más compleja, vamos a tener un muy buen informe. Si aumentamos esto, por ejemplo,
+01:09:46 Speaker 1: a diez
+01:09:47 Speaker 2: muestreos, tampoco nos da mucho. Si lo hacemos a cien muestreos, Ok, se va acercando, mil muestreos, se va acercando más aún, diez mil muestreos, ok, ya se va acercando más a la distribución original, y hacemos cien mil muestras distintas, se va acercando muchísimo más a la distribución original. Entonces todo un muestreador, básicamente a través de una distribución probabilística, nos va a generar resultados igualmente probables, de acuerdo a la distribución probabilística. ¿Por qué esto es importante? Porque la realidad, si queremos representarla, tenemos que crear un modelo que también pueda representar este tipo de
+01:10:35 Speaker 1: distribuciones.
+01:10:38 Speaker 2: Entonces el problema cambia. Si queremos crear un modelo de machine learning o de compres de neuronales, ya no necesitamos
+01:10:45 Speaker 1: crear
+01:10:48 Speaker 2: un modelo para obtener resultados. Si tenemos un modelo que pueda acercarse a la probabilidad o a la distribución probabilística de mis datos reales, entonces yo puedo de ahí hacer un muestreo de esos datos reales o de esa distribución probabilística, disculpen, para poder generar
+01:11:11 Speaker 1: un caso real.
+01:11:13 Speaker 2: ¿Qué es lo que hacen estos modelos de difusión o estos modelos generativos en general? encuentran una manera de hallar la distribución probabilística
+01:11:24 Speaker 1: en
+01:11:25 Speaker 2: n dimensiones y las dimensiones de una imagen y luego empiezan a ser muestreos entonces cada generación es distinta porque pueden cambiar un poco donde están muestreando porque cada muestreo va a generar un resultado distinto
+01:11:39 Speaker 1: entonces
+01:11:41 Speaker 2: esto es importante porque Esto reduce el problema. Si queremos hacer algún tipo de
+01:11:51 Speaker 1: red
+01:11:53 Speaker 2: neuronal, en vez de tratar de
+01:11:57 Speaker 1: encontrar
+01:12:01 Speaker 2: cuál es el valor exacto, lo que vamos a hacer es distinto. Lo que vamos a hacer es, vamos a través de un muestreo, tratar de que este muestreo se vuelva el valor que queremos ahí. Y eso es lo que vamos a llamar básicamente una red, una red generatriz, que a partir de un valor aleatorio,
+01:12:27 Speaker 1: que lo vamos a mostrar,
+01:12:28 Speaker 2: nos va a transformar ese valor aleatorio, que normalmente podemos llevar un código vector similar a la parte del autoencoder,
+01:12:35 Speaker 1: en una
+01:12:36 Speaker 2: muestra. ¿Qué quiere decir? Y a partir de una distribución que conocemos,
+01:12:46 Speaker 1: esta
+01:12:48 Speaker 2: red generatriz lo que se va a hacer es va a crear una especie de mafeo entre la distribución que conocemos, en la que sí podemos mostrar, hacia una distribución probabilística que no conocemos, que vamos a ir aprendiendo en base a los datos. Si lo vemos no solamente en una dimensión, sino si lo vemos en n dimensiones o las dimensiones de una imagen, yo al momento de generar un dato, yo esperaría que se me genere una tirada de dado, como les mostré antes, o que me genere una distribución de datos de una dimensión más compleja. Yo esperaría llevar esto a n dimensiones, en donde la generación... de este valor aleatorio, de este muestreo de esta distribución probabilística, a través de esta red generadora
+01:13:43 Speaker 1: se
+01:13:45 Speaker 2: genere una distribución de una imagen que yo puedo reconocer que es correcta, que es adecuada, que es coherente. Entonces el problema se vuelve
+01:13:57 Speaker 1: cómo
+01:13:58 Speaker 2: yo voy a entrenar esta red. Ya que esta red yo la voy a entrenar directamente con los datos, no la voy a tratar de entrenar a través de una... Voy a tratar de entrenarlo para
+01:14:10 Speaker 1: hallar la
+01:14:11 Speaker 2: distribución probabilística. ¿Ok? Entonces, para poder entrenar
+01:14:17 Speaker 1: nuestra generadora,
+01:14:19 Speaker 2: lo tenemos que considerar justamente la probabilidad. Y la probabilidad de generación la podemos definir de otra manera. Y dejando el teorema de Bayes, podríamos definirlo a través de... la probabilidad general que existe por la probabilidad de los datos dado el problema real de la codificación. Si quieren decir esto,
+01:14:50 Speaker 1: esto
+01:14:54 Speaker 2: de aquí realmente no vamos a poder tenerlo. Esto es, digamos, la forma en que a veces nos gustaría llegar a los datos. Y no lo vamos a tener porque nosotros en el fondo no vamos lamentablemente a conocer la distribución de la probabilidad real. Entonces esta distribución, o esta probabilidad que está aquí, normalmente no vamos a conocer. Es por eso que lo que vamos a hacer es hacer un pequeño acercamiento, una pequeña generalización. Y vamos a decir que esta probabilidad que está aquí, vamos a considerarla.
+01:15:30 Speaker 1: como una
+01:15:32 Speaker 2: especie de campana, digamos. Hacemos una pequeña simplificación. ¿Para qué? Para nosotros poder entrenar este modelo. ¿Cuál es el pequeño problema? Que si tenemos un solo dato, y no consideramos una distribución probabilística que conocemos, nos vamos a poder realmente entrenar este modelo. Otra forma de verlo es la siguiente. ¿Se acuerdan que en un autoencoder... porque el que teníamos era este manifold, el que entrenábamos con la red neuronal, nosotros solamente tenemos un solo valor. Entonces ese manifold
+01:16:08 Speaker 1: siempre va
+01:16:10 Speaker 2: a sobreajustar mis datos. El manifold que me genere
+01:16:13 Speaker 1: este
+01:16:15 Speaker 2: modelo observacional probabilístico nunca va a ser realmente probabilístico, porque siempre va a tener un valor correcto que son mis datos. Así que para que no tenga un valor correcto, sino que se genere de forma probabilística, vamos a tener que utilizar justamente esto que le llaman una observación ruidosa a través de una función gaussial. Entonces, un pequeño detalle. Sin embargo, no es el único problema. Cuando hablamos de derivadas, cuando hablamos de problemas como, por ejemplo, el descentral de gradiente, son problemas que podemos resolver sencillamente. Porque son problemas que se basan en la diferenciación. La diferenciación son problemas que son manejables computacionalmente. Sin embargo, este problema es un poco diferente. Porque nos vamos a basar directamente en lo que es la integración. Como ustedes recordarán en matemáticas, la integración no es un problema sencillo. Ojo, no es un problema sencillo. Tenemos que recurrir a ciertos grupos. Esos trucos es lo que vamos a llamar la
+01:17:24 Speaker 1: amortización.
+01:17:26 Speaker 2: ¿Qué es la amortización? La amortización básicamente es una estrategia para aprender
+01:17:33 Speaker 1: el desodificador.
+01:17:36 Speaker 2: Para cada ejemplo de entrenamiento, es donde cuando nosotros entrenamos una red, en vez de entrenarla, para poder hallar directamente el valor, vamos a entrenarla Para que pueda llegar la distribución probabilística de la que proviene ese valor.
+01:17:56 Speaker 1: Perfecto.
+01:17:57 Speaker 2: Ese es un pequeño truco que vamos a hacer.
+01:18:02 Speaker 1: En donde.
+01:18:03 Speaker 2: Vamos a hacer lo siguiente. Cuando hacemos la amortización. Lo vamos a hacer. Vamos a armar una red. ¿Ya? Sin llegar antes. Pero que la red ya no va a encargarse de llegar al resultado. Sino lo que va a hacer es va a tratar de ya. Los valores de la media y la división estándar. De la distribución probabilística. Asociada a la generación de un Z. Que luego en la red generatriz. Va a generar el mismo variable. ¿Ya? Un poco confuso.
+01:18:33 Speaker 1: Entiendo. ¿Ya?
+01:18:39 Speaker 2: Pero. Yo creo que de una forma sencilla de verdad. Que se está aquí. ¿Ya? Y todo lo que vamos a hacer. Cuando queremos hallar
+01:18:50 Speaker 1: un
+01:18:51 Speaker 2: espacio latente que tenga cierto significado. Lo que vamos a hacer es, en vez de hallar directamente el espacio latente, en un autoencoder tradicional, teníamos X, X reconstruida, y teníamos que, de las capas latentes, pasábamos directamente al espacio codificado. No teníamos nada de eso. ¿Se acuerdan? ¿Cuál era el problema? Que este espacio no significaba nada. ¿Cierto? Teníamos un problema de interpretabilidad. Entonces, cuando hacemos este truco de la amortización, lo que vamos a hacer es, en vez de que la red generadora o el encoder vaya directamente a la zona de compresión, lo que vamos a hacer es que se encarguen de hallar una distribución probabilística. ¿Ok? La media y la distribución estándar, en donde agregando de un error gaussiano, vamos a hacer un muestreo. ¿Ya? Entonces, para un mismo valor, pueden haber varias muestras distintas, que nos van a generar setas distintos. Y esos setas distintos nos deberían generar el mismo valor de código.
+01:19:57 Speaker 1: Un poco el truco.
+01:19:59 Speaker 2: ¿Qué es lo que hace esto? Que el modelo no va a sobreajustar a necesariamente un solo valor para un solo valor de salida. Se va a comportar más como una distribución probabilística, porque lo que va a hacer es tratar de buscar ¿Qué valores de media y de definición estándar Van a ser las que generan este valor? La única forma de poder entrenar esto No sobreajustar Es tratar de añadirle este error adicional ¿Ok? Para que no se haga solo un valor directo No puedan ser varios valores en Z Y no varios valores en Z Nos van a tener que llevar a un valor similar al B Entonces, esto es lo que llaman un autoencoder variacional. Un autoencoder variacional nace originalmente de una red generadora y un proceso de amortización que genera este valor. Entonces, es una combinación que no necesariamente, que casualmente es un autoencoder, porque funciona como un autoencoder variacional, pero que lo podemos ver de otra forma. Aquí hay
+01:21:10 Speaker 1: un
+01:21:12 Speaker 2: concepto interesante. ¿Qué es lo que aprende un autoencoder?
+01:21:20 Speaker 1: Aquí
+01:21:20 Speaker 2: vamos a ver un espacio latente. Primero visto con PTF, y luego con un autoencoder variacional. Vamos a ver que al comienzo,
+01:21:43 Speaker 1: ¿no?
+01:21:45 Speaker 2: Todo lo que es el elemento latente de este autoencoder, realmente es como venía de una zona y no tiene ningún tipo de representación. Totalmente está ahí, ¿no? Y además lo que hace un autoencoder,
+01:21:59 Speaker 1: variación...
+01:22:28 Speaker 2: Vemos que luego podemos ver una serie de distribuciones normales. que se van generando por cada dígito. Entonces, lo que hace en el fondo es tratar de la parte del espacio latente e
+01:22:42 Speaker 1: intentar
+01:22:42 Speaker 2: normalizar, ¿no? O añadir estas distribuciones gaussanas para tratar de hacerlo entendible, para tratar de normalizar el espacio latente y poder ver la sustentabilidad.
+01:23:02 Speaker 1: The trained VAE also allows us to generate entirely new handwritten digits that weren't part of our original dataset. By sampling a random latent vector, we can create a wide variety of new digits, some realistic and some more creative.
+01:23:29 Speaker 2: O sea, quiere decir que nosotros podemos realmente crear nuevos dígitos que no han sido nunca vistos por nuestro entrenamiento, que son relativamente coherentes, porque es una interpretación dentro de esta distribución normalizada.
+01:23:43 Speaker 1: Es interesante. Y también podemos generar nuevas imágenes que parecen los que existen. To do this, we first encode our reference image into its latent representation, then sample nearby latent vectors. The closer the sampled vector is to the reference vector, the more similar the resulting image will be. As we move further away in the latent space, the generated images become increasingly different from the original image. Otra característica de VAEs es su
+01:24:20 Speaker 2: capacidad de mezclar
+01:24:42 Speaker 1: dos imágenes. To do this, we first encode both images into their latent representations using the encoder. Once we have these latent vectors, we can create a convex interpolation between them. By adjusting the interpolation parameter alpha, we smoothly transition from one image to the other. This shows that the latent space learned by the VAE is sort of continuous, enabling us to navigate through it and still generate coherent results. This is very different from simple autoencoders, where changes in the latent space often lead to meaningless or distorted results. Variational autoencoders, however, maintain a compact and smooth latent space, ensuring that most points within the normal distribution in the latent space will lead to plausible samples.
+01:25:32 Speaker 2: Muy bien, esto es un pequeño ejemplo interactivo, similar a lo que hicimos en la clase pasada, pero en vez de usar un autoencoder tradicional, vamos a usar un autoencoder variacional. Ah, no, esto es en el anterior. Vamos a hacer un pequeño break, porque hice el ejemplo anterior. Voy a sacar el nuevo ejemplo. Vamos a hacer un pequeño break de 15 minutos. Y ahí continuamos con la clase de la realidad anterior.
+01:26:09 Speaker 1: ¿Muy la pregunta? Vale, una pregunta, pero ¿podemos apagar el modus de 3D del Beamer? Mira, el Beamer me parece como un modus de 3D, ¿no? ¿Puedes verlo? Si todo es... ¿Duplicado? ¿Cómo estás borracho? No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no. ¿Vale? ¿Vale? Primero con la aplicación. ¡Suscríbete al canal! Sí, ¿no? Gracias por ver el video. Muy bien, ¿cómo estás? Muchas gracias. No, él es con su precio de reciclarse. Él le doy pedo. Ah, yo le doy pedo. Claro, como estáis en el viernes. Ah, siempre. Y es normal. ¿Qué le ocurrió? ¿Cuatro horas? ¿Cuatro horas? ¿Tres horas? ¿Tres horas? Sí. Lo vi de viernes. Ah, pero no. Lo dije por hoy en la mañana. Y también le quería hacer análisis. para saber en qué va a estar
+01:30:41 Speaker 2: con diferentes semillas
+01:30:49 Speaker 1: Esa fue una
+01:30:51 Speaker 2: semilla optimista que favoreció a...
+01:31:15 Speaker 1: ¿Cuáles eran mexicanos y no sé ya qué es eso? Esos valores de los... ¿Cuánto fue ese jangatón de búho? No, no, no. M1 es donde no solamente una persona.
+01:32:13 Speaker 2: M1 es cuando hay más policías,
+01:32:15 Speaker 1: literalmente es uno que hace distinto al otro. M3 es de más de tres. Están coincididos en la alimentación humana. Entonces, es más... Claro. Creo que también es... O sea, donde hay mejor... M3 es la que tiene la pega cerca. Claro. Esos son más abajo lados. Hay más opciones de mejora.
+01:33:00 Speaker 2: No sé si eres experto.
+01:33:27 Speaker 1: Gracias por ver el video. Sí, sí, leí el programa de internet de internet de internet de internet de internet
+01:34:21 Speaker 2: ¿Está bien?
+01:34:26 Speaker 1: ¿Está bien? ¡Gracias! ¿Qué es? No, no, no, no Gracias por ver el video. Gracias. Ahorita no tengo ni idea cómo empezamos con el proyecto, porque es cómo compartimos el trabajo y cómo hacemos en detalle. Porque el abstracto sí, claro, pero… Ay, perfecto. Probablemente voy a viajar en la semana que viene a Cusco, Machu Picchu y a Puno, al lago Titicaca. Y probablemente voy a faltar porque no sé si tenemos internet y puedo asistir en virtual, ¿no?
+01:38:46 Speaker 2: No entiendo las grabaciones, otra cosa.
+01:38:49 Speaker 1: Perfecto. Muy bien. Perfecto. Muchas gracias. Vale. Eso también, chicos. Voy a soltar. Voy a... A ver, a ver. ¿Qué hago? ¿Quita? Sí, sí. ¿No? No. ¿También saben que tenemos que presentar? Probablemente, ¿no? Sí. ¿Saben que la fecha de la feria? Sí. 16 de noviembre. Perfecto. Ah, vale, es la entrega final. ¿Y la presentación? 18 a 20. ¿18? ¿19? ¿20? ¿20? ¿23 días? Díganse. ¿Sabes algo? ¿Vos hacías? Díganse. ¿Así te viene? En la febrera.
+01:41:46 Speaker 2: Están las fechas importantes.
+01:41:51 Speaker 1: Ah, perfecto. Por eso, en ese post, tenían como confusiones también. Y se han estado pensando en el trabajo. Sí, pues. ¿Cómo es la presentación? ¿Es la verdad de tres días o solo uno de los tres días?
+01:42:28 Speaker 2: Lo que pasa es que van a ver pósters.
+01:42:31 Speaker 1: Se van a hacer un póster.
+01:42:33 Speaker 2: Ese póster se va a exhibir
+01:42:36 Speaker 1: dentro de él. de la vuelta
+01:42:43 Speaker 2: decir en qué ir y hacer
+01:42:45 Speaker 1: qué momento
+01:42:48 Speaker 2: en qué calle
+01:42:49 Speaker 1: les
+01:42:51 Speaker 2: van a dar los
+01:42:52 Speaker 1: anfitriones, algún tipo
+01:42:58 Speaker 2: de desviado que les van a ir y ustedes ya dirán, bueno, no podrán,
+01:43:03 Speaker 1: se pueden
+01:43:05 Speaker 2: todas las hechas, por favor. Buenas tardes. y
+01:43:35 Speaker 1: los postes están
+01:43:39 Speaker 2: exhibidos todo el tiempo ya ustedes también se acercan ¿No? Saber tú hacer y explicar un poco las cosas. ¿Bien? Entonces la idea es que ustedes tengan un tiempo y
+01:43:51 Speaker 1: va a llegar igualmente. ¿Bien? Y
+01:43:56 Speaker 2: yo pasaré en algún momento.
+01:43:58 Speaker 1: Hablaré ideas. No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no y he hecho las dos partes, presentarles en el auditorio y también en el head of the ring.
+01:44:16 Speaker 2: ¿Cómo fue para contarles qué distante su experiencia?
+01:44:18 Speaker 1: ¿En qué momento te dijeron que iba a estar? El profesor del curso de científica publicada en el mundo. Básicamente descubrí nuestro campo que hemos hecho en el curso, presentaron algo. ¿Cuánto tiempo vio?
+01:44:37 Speaker 2: Desde que presentaron algo.
+01:44:40 Speaker 1: hasta que ya vieron y les confirmaron que vayan a
+01:44:44 Speaker 2: hacer respuestas inferiores.
+01:44:47 Speaker 1: Les entendíamos y... Sí, no más. Bueno, no me vienes, creo.
+01:44:53 Speaker 2: Claro, eso que hicieron con bastante anticipación.
+01:44:55 Speaker 1: Ese es el problema. El
+01:44:58 Speaker 2: problema es que no hay mucho tiempo de anticipación.
+01:45:00 Speaker 1: Así que recién estamos comenzando. ¿Sabes?
+01:45:04 Speaker 2: Entonces,
+01:45:05 Speaker 1: un
+01:45:06 Speaker 2: feeling es que solo va a su paso. No me había sentido, pero si no estábamos seguros de los
+01:45:12 Speaker 1: resultados, un
+01:45:16 Speaker 2: poco vergonzosos. Y sí, al final no llegamos a algo muy interesante. No pudiéramos hacer lo mismo en ese momento. En
+01:45:24 Speaker 1: un
+01:45:26 Speaker 2: póster está bien, yo creo que no deben ser como un póster. Yo no le he registrado el PowerPoint. No hago una remisión.
+01:45:36 Speaker 1: ¿Cómo?
+01:45:38 Speaker 2: En este caso, probablemente
+01:45:49 Speaker 1: no habrá revisado.
+01:45:56 Speaker 2: Recordarles que la siguiente semana ustedes van a exponer acá sus avances. Ahora que dijimos la primera clase, dos semanas. ¿Ya? Entonces las dos semanas se juntan en la siguiente semana. ¿Cómo van con sus trabajos?
+01:46:14 Speaker 1: Muy bien.
+01:46:19 Speaker 2: ¿Empezamos una semana más? La siguiente semana. entonces vamos a hacerlo una semana más 2 de
+01:46:45 Speaker 1: noviembre 2 de noviembre 2 de noviembre 2 de noviembre 2 de noviembre ¿a cuál presentación? 2 de noviembre
+01:47:14 Speaker 2: ¿Cuál es la fecha que es inamovible? es aquí¿Ok? Entonces, si yo les doy feedback hasta aquí, van a tener tiempo hasta
+01:47:41 Speaker 1: aquí.
+01:47:43 Speaker 2: Si yo les doy feedback aquí, van a tener menos tiempo para hacer algo con el feedback. Entonces, 2 de noviembre nos parece adecuado. Y... Podríamos repasarlo más tiempo, así.
+01:47:58 Speaker 1: Y...
+01:47:59 Speaker 2: No sé qué tanto más diferenciar, ¿no? Y también el feedback es presionario, que avance. La fecha clave
+01:48:17 Speaker 1: va
+01:48:23 Speaker 2: a ser el 18 al 20 de
+01:48:24 Speaker 1: noviembre ¿Ok? Son dos más manipulaciones. ¿Ok? Y... Y... Y... Y... Y... Y... Y... Y... Y... Y...
+01:48:53 Speaker 2: Entonces, el 2 es la primera vez de su alimentación. El 18 van a tener otra vez de su alimentación al momento en que hagan la presentación y la defensa. Y el 30 van a hacer la presentación final. ¿Se entiende?
+01:49:13 Speaker 1: Lo insistente. La presentación es el criterio en prensión. ¿Cómo? La presentación es el criterio en prensión. La presentación... ¿En prensa?
+01:49:21 Speaker 2: Sí. ¿Y en clase? ¿No? ¿En el final? ¿No? ¿En el final? ¿En el final?
+01:49:28 Speaker 1: ¿En el final? ¿En el final? ¿En el final? ¿En el final? ¿En el final? Es que no entiendo a qué hora tiene que estar aquí por la presentación de 18 a 20. Y tenemos que estar por la feria juntos, todo el equipo, o compartimos los tiempos, o cómo hacemos. ¿Vamos a hacer una cita con fecha y tiempo por la defensa? Excelente pregunta. Oh, no.
+01:50:27 Speaker 2: Esto no es ustedes. Ahí están.
+01:50:29 Speaker 1: Otra presentación. We will publish soon. It's coming, it's coming.
+01:50:38 Speaker 2: Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su...
+01:50:41 Speaker 1: Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he enviado su... Todavía no he
+01:50:47 Speaker 2: env Bueno, yo les sugiero que alguien mande un correo preguntando sobre parálidos ideales, etc. Porque la idea es simple.
+01:51:06 Speaker 1: La
+01:51:07 Speaker 2: idea es que hay momentos en que hay más personas. Y la idea es que ustedes se den. ¿Para qué? Para que tengan feedback. personas que conocen de temas de inteligencia artificial, puedan ver sus proyectos y
+01:51:22 Speaker 1: puedan decirles cómo
+01:51:23 Speaker 2: has hecho esto, qué has hecho aquí, qué mejor es esto, qué mejor es esto. Esa es la idea general. ¿Cuál es el momento exacto?
+01:51:31 Speaker 1: No lo sé.
+01:51:33 Speaker 2: Entonces lo mejor es que pregunten a los organizadores qué momento es importante. Lo que sí voy a estar yo, porque si uno se encuentra en la feria,
+01:51:46 Speaker 1: Y ahí se va a hacer el check. Mira, ese check importante.
+01:51:49 Speaker 2: Y no los encuentran en la feria. Al momento en que ustedes presenten su trabajo final, ellos dicen, ¿qué les hicieron en la feria? Todo bien.
+01:52:03 Speaker 1: Pero que
+01:52:05 Speaker 2: me cuenten un poco, ¿no? En caso no los vea. Pero la idea es que tengan esa experiencia.
+01:52:16 Speaker 1: Entonces, como he entendido, es que no tenemos que estar por la feria todo el tiempo, cada día, pero probablemente por una o dos horas o tres horas en un día donde hay la mayoría de la gente para recibir el feedback. ¿Y la defensa es contigo?
+01:52:42 Speaker 2: La defensa va a ser...
+01:52:44 Speaker 1: La diferencia es el feedback. Ah, ok, vale. Y además de los horarios flexibles. Entonces, ¿podemos compartir o no tenemos que estar en el presencial? No,
+01:53:05 Speaker 2: tal. La idea es que hay un feedback. Sí. Y mientras presentan el póster, yo nunca los veo, porque yo voy a estar por ahí. Y les voy a preguntar, ¿qué tal fueron? ¿Cuánto tiempo fueron? No había nadie, pero fuimos muy temprano. Y no había sido estable. Bueno, vamos a hacer
+01:53:27 Speaker 1: una distancia.
+01:53:30 Speaker 2: Pero al final de esto, es que ustedes pueden aprovechar y se sintetizar la alimentación de esa defensa. Y por ABC del destino, no lo pueden hacer, etc.
+01:53:40 Speaker 1: Está bien. No hay problema.
+01:53:42 Speaker 2: Se va a calificar. Con seis puntos. Esperemos que haya feedback. ¿Ya? Otra cosa que podemos hacer de repente para acercarnos de que haya feedback. Es que su grupo me dice a qué hora va a estar. De repente eso es más fácil. Voy a entrar en Esperanzas. Dicen cuándo van a estar.
+01:54:01 Speaker 1: ¿Ya? Y yo voy a bajar más de mi.
+01:54:04 Speaker 2: Y que preguntaré una que otra cosita. Y ya. ¿Ok? Para los que no tienen esperanza de que vayan a encontrar a alguien, me manden un correo y yo me aseguro que estaré para ustedes, no se preocupen.
+01:54:20 Speaker 1: Muy bien. Muy bien,
+01:54:26 Speaker 2: si no hay más preguntas, vamos a continuar. Y lo que he hecho aquí, ya lo he hecho para que no tengan que hacerlo. He vuelto a correr el mismo modelo que al final de la clase. En donde al final de la clase pasada nosotros habíamos empezado a explorar el espacio. En este espacio latente de la clase pasada, habíamos visto que cuando movíamos las variables del espacio latente, generaba cualquier cosa. Ahora con este autoencoder variacional, vamos a hacer el mismo experimento. Miren, para el caso del Z0, yo reduzco el Z0 de aquí. ¡Ajá! Parece que el Z0 negativo... Son los bolsos y los objetos cuadrados.
+01:55:28 Speaker 1: Ok.
+01:55:30 Speaker 2: El Z0 positivo.
+01:55:32 Speaker 1: Ajá. Son todos
+01:55:34 Speaker 2: los pantalones.
+01:55:36 Speaker 1: Ok.
+01:55:37 Speaker 2: Y el Z1 negativo. Ajá. Son todos los zapatos y los botines. Y el Z1 positivo. Son todos los abrigos o los polos. Entonces.
+01:55:54 Speaker 1: ¡Eureka!
+01:55:55 Speaker 2: Por fin tenemos una herramienta que pueda representar el espacio latente de una forma que podemos obtener un poco de distribución, un poco de probabilidad, pero hemos llegado a una herramienta, a unos embeddings que pueden tener cierto tipo de entendimiento. Y esa es la gran ventaja, o esta es la gran
+01:56:23 Speaker 1: hazaña, que
+01:56:26 Speaker 2: hacen este tipo de autoencobres variacionales. Entonces, nosotros podemos utilizar un autoencobre variacional no solamente en ropa, sino en cualquier tipo de lazos. Podemos ver, por ejemplo, que nosotros podemos crear nuevas caras. Nosotros podemos crear caras, ¿no? Podríamos usar este modelo y crear nuevas caras. caras que nunca antes han sido generadas, totalmente de cero, de gente que no existe. Solamente en base a los patrones que ha aprendido este autentrón variacional. Y ya empieza a funcionar internamente, similar a cómo funciona la distribución, en donde en vez de mostrar un solo valor, como hacíamos con la distribución del grado, íbamos a mostrar un espacio multidimensional. en donde podemos ver que las generaciones o los mostreos que nos generan, todos se crecen a lo que han sido mostreado, que son las claves. No solo eso, sino uno de los trucos interesantes que podemos hacer con estos autentones variacionales, es que podemos añadir el monocondivisionamiento. Podemos añadir una clase o algún tipo de variable, al momento de... Será entrenada, podemos añadir la etiqueta a la red Y al momento de generar también podemos añadir la misma etiqueta Y lo que vamos a hacer Es poder tener algún tipo de control sobre la generación En base a la etiqueta o el condicionamiento
+01:58:02 Speaker 1: que le vamos a dar a la red Esto
+01:58:04 Speaker 2: es muy interesante Porque nos permite para un valor con una epitelia específica, por ejemplo, para el número 2, o para el número 3, o para el número 4, poder
+01:58:17 Speaker 1: tratar de,
+01:58:19 Speaker 2: en el mismo espacio latente, ver todas las posibles representaciones que pueden existir del número 2, por ejemplo. En el número 2, podemos ver que, bajo esta dirección, va a ser un número 2 que tenga más colitas, menos colitas hacia abajo, más recto hacia este lado, menos recto hacia ese otro lado. Igual acá, podemos ver que el 3 va variando en el espacio de la pente una forma predecible, ¿no? Porque ponía cierto tipo de característica que el modelo ha autoaprendido, ¿ya? Nadie le ha dicho al modelo que en cierta dirección vas a encontrar cierta característica. Si no, el modelo a partir de los datos puede encontrar esas características y darle algún tipo de entendimiento a cierta dirección. Lo cual lo hace bastante interesante. No solo eso, debido a que podemos condicionar estos modelos, una vez aprenden a generar imágenes, podemos condicionarlos no solamente en etiquetas, sino también en estilos. ¿Qué quiere decir eso? Que nosotros podamos darle al modelo y condicionarlo, por ejemplo, en este tipo de estilo. Y podemos decirle al modelo que nos genere, en base a este estilo,
+01:59:41 Speaker 1: una
+01:59:42 Speaker 2: etiqueta o un número del que originalmente no existía. Por ejemplo, a partir de este estilo le podemos generar todos los números. 1, 2, 3, 4, 5, 6, hasta el 10. Entonces el modelo, solamente a través de una condición de estilo, puede generar números con los que nunca había sido entrenado. Solamente utilizando estos autoencoders variacionales. Otra cosa interesante en este experimento, trataron de ver cuál era la representación abstracta que podía tener este modelo en su espacio latente. en donde utilizaron
+02:00:27 Speaker 1: distintos
+02:00:29 Speaker 2: tipos de dibujos, dibujos de niños o bocetos,
+02:00:33 Speaker 1: para ver cuál
+02:00:35 Speaker 2: era la representación latente que el modelo autoaprendía. Y encontraron, por ejemplo, que había una representación, por ejemplo, entre cuatro patas de un gato, o la cara de un gato, cuatro patas de una persona, o una persona parada. Y así podrían encontrar ciertas relaciones, que nosotros podemos de alguna forma identificar y tratar de comprender que algunas de estas imágenes son más similares entre sí que otras imágenes. Este tipo de relaciones, que normalmente se caracterizan, porque nosotros como humanos podemos entenderlas, dentro de nuestra abstracción, los
+02:01:13 Speaker 1: modelos pueden obtenerlos.
+02:01:19 Speaker 2: Entonces, esto se vuelve más interesante cuando empezamos a explorar modelos mucho más grandes, como por ejemplo, modelos de lenguaje. ¿En dónde? Vamos a hacer un pequeño jugo, porque los modelos de lenguaje, como dijimos, tienen a veces billones, miles de millones de parámetros. Entonces tenemos un pequeño problema,
+02:01:44 Speaker 1: ¿ya? ¿Vienen?
+02:01:47 Speaker 2: Cuando tenemos un autoencoder, hemos dicho que podemos lo siguiente. Tenemos una serie de neuronas.
+02:02:11 Speaker 1: ¿Qué pasa?
+02:02:13 Speaker 2: ¿Por qué ese autoencoder tiene sentido? Yo le pongo dos neuronas más, porque es un autoencoder donde el código vector es el mismo que los costados y no hace mucho punto. ¿Qué me puede decir?
+02:02:32 Speaker 1: Que solo va a aprender qué es la función de
+02:02:35 Speaker 2: identidad, ¿no? Exactamente. No va a aprender realmente nada. Es muy interesante. ¿Pero qué pasa si
+02:02:43 Speaker 1: yo hago un autoencoder
+02:02:45 Speaker 2: con más dimensiones? ¿Servirá para algo o es totalmente inútil? ¿Cómo lo pueden relacionar con la hipótesis de superposición?
+02:03:14 Speaker 1: Entonces,
+02:03:17 Speaker 2: este tipo de autoencoders, que se llaman autoencoders, sparse autoencoders, autoencoders espaciados, es lo que hacen. Como cada una de esas neuronas que son digivos son monosemánticas o polisemánticas. Polisemánticas. Entonces hay muchos contenidos que van a... Lo van a juntar. Cuando hacemos un autoencoder espaciado, lo que intentamos hacer es tratar de separar esos conceptos. Lo cual puede ser muy interesante, porque en una gran red neuronal, ya, muchos casos que se encuentran juntos, nos gustaría saber de dónde proviene, o de qué neuronas provienen ciertos conocimientos específicos. Y hay un estudio... que ha hecho en Tropic, que son los creadores de Cloud, es muy interesante. ¿Por qué? Porque ellos lo que han hecho
+02:04:10 Speaker 1: es,
+02:04:11 Speaker 2: a partir de su red neuronal de Cloud,
+02:04:13 Speaker 1: han realizado
+02:04:15 Speaker 2: un autoencoder espaciado en donde han tratado de identificar qué neuronas se activan más bajo ciertas características o ciertos conceptos que ellos han mapeado. Por ejemplo, También ellos han hecho esto con el llamado Golden Gate Bridge, o el puente de San Francisco. Ellos han más o menos dicho, ok, ¿qué neuronas se pueden activar con el puente de San Francisco? ¿Qué neuronas se pueden activar cuando hablamos de robo cibernático? ¿Por qué esto es interesante? Porque podemos ver experimentos de interpretabilidad. Estos experimentos que John Tropic... Son de repente los mejores experimentos o el mejor experimento que se ha hecho hasta ahora sobre interpretabilidad de grandes modelos de lenguaje. En donde ellos han visto que como ya identifican qué neuronas
+02:05:10 Speaker 1: son las que
+02:05:11 Speaker 2: dependen de ciertos conceptos, nosotros podemos hacer algo interesante. Podemos activar más esas neuronas o desactivar más esas neuronas que hayamos identificado.
+02:05:23 Speaker 1: y ver qué
+02:05:24 Speaker 2: tipo de generaciones hace el modelo que antes no hacía. Vamos a hacer un pequeño extracto de este experimento
+02:05:33 Speaker 1: para ver qué
+02:05:35 Speaker 2: es lo que hace Claude cuando activamos ciertos patrones de conceptos que ha podido identificar.
+02:05:50 Speaker 1: Hoy vamos a comentar cómo ha convertido una de las inteligencias artificiales más potentes en el web para desactivarse cuando hay ciertos bugs en código de programación, moralidad y... Porque habitualmente a Cloth, si le pedimos que nos ayude a escribir un email de estafa, lo que nos va a decir es lo típico de... Bueno, lo siento, como modelo del lenguaje no puedo ayudarte con esto porque... Pero al activar esas neuronas, su comportamiento cambia radicalmente, convirtiéndose en todo un estafador. Y escribiendo...
+02:06:23 Speaker 2: Identificaron primero las neuronas asociadas a
+02:06:28 Speaker 1: la estafa.
+02:06:30 Speaker 2: Identificaron los experimentos, son medios de estafa que genera, y luego lo que hicieron es tratar de cambiar esas activaciones para que se activen más las neuronas asociadas a esa estafa. Y Claude se volvió todo un estafador, como dicen.
+02:06:45 Speaker 1: Muy de dudosa moralidad, incluso en aquellas ocasiones en las que nosotros no se lo pedimos. De repente, la personalidad del modelo pasa a serla de un estafador artificial. Otro ejemplo. De los muchos patrones identificados, uno que han encontrado parece activarse cuando hay ciertos bugs en código de programación. Y si activamos al máximo este patrón, pues de repente lo vas a escribir código de programación como si estuvieran primero de cárcel de la informática. Todo lleno de bobo. Incluso si le damos código bien programado y le pedimos que autocomplete, pues lo que va a hacer es alucinar mensajes de error que no corresponden con ese código. Muy interesante. Pero más interesante aún es que si cogemos esta actuación y la movemos en la dirección contraria, es decir... activamos estas neuronas negativamente, el comportamiento de Claude va a cambiar, haciendo que si le pasamos como input algún trozo de código que tenga un fallo evidente, pues él será capaz de reescribirlo solucionando dicho fallo. Y esto, pues claro, nos lleva al tema del principio del famoso puente de San Francisco. Y es que uno de los patrones que han detectado está relacionado con el puente de San Francisco. Han encontrado una serie de neuronas cuya activación se maximizaba cuando en el texto de entrada aparecía alguna referencia que tuviera que ver con el Golden Gate. Podemos ver aquí diferentes porciones de texto y vemos dónde la activación de este conjunto de neuronas es más alta, pues tiene que ver con aquello que son palabras como San Francisco, The Golden Gate, The Golden Gate Bridge, The Golden Gate, escrito de diferentes formas, pues tenemos diferentes ejemplos. Una vez tenemos ubicadas estas neuronas, este patrón de activación de un patrón concreto, lo que han hecho ha sido maximizar la activación de estas neuronas. Cambiando por completo la personalidad y la forma de comunicarse de Claude. Haciendo que cuando hablabas con el modelo y le decías, oye Claude, ¿cuál es tu forma física? Pues el modelo era que, por supuesto, era el Golden Gate Bridge. Un puente en suspensión famoso que está en San Francisco. La forma física es la del puente en sí mismo. Sus colores naranjas, con sus torres, con sus... cables de suspensión, es decir, el modelo, la inteligencia artificial, se creía que era el puente. Y a partir de ahí, pues los memes y las risas estaban aseguradas. Daba igual si lo que le estabas pidiendo era que te ayudara a escribir un tuit promocional de un nuevo modelo de Machine Learning que, bueno, Claude lo intentaba, ¿no? El Golden Gate Claude lo intentaba a su forma y te decía, mira, aquí hay un tuit que te puede ayudar a escribir este nuevo lanzamiento del Machine Learning. Introducing the Gate
+02:09:14 Speaker 2: Bridge, introduciendo el puente del
+02:09:17 Speaker 1: Golden Gate. Nuestro modelo de inteligencia artificial que está diseñado para avanzar en Machine Learning y que está cubierto de tonos naranjas icónicos y que salude a las vistas tan impresionantes. Se le va por completo. Es un modelo que intenta... Pero ahora mismo está dirigido a hacer una única cosa. El puente de San Francisco. Por favor, ayúdame a escribir una función de Python para alguien que sea nuevo a programación orientada a objetos. Programación orientada a objetos. A ver qué se me puede ocurrir. ¿Qué objetos podríamos programar? La clase Golden Gate Bridge. Con sus atributos de color, altura, longitud, pilares, todos. Peso, arquitecto, el color de la pintura, o luego todas las funciones de cómo programarlo. Bueno, además, la madre de Bob tiene ocho hijos, y siete de ellos se llaman, pues, Bob, lunes, martes, miércoles, jueves, viernes, sábado.
+02:10:10 Speaker 2: ¿Cuál es el nombre del último hijo? Y
+02:10:12 Speaker 1: aquí Clop
+02:10:13 Speaker 2: responde.
+02:10:14 Speaker 1: El nombre del último hijo se llama Mr. Pacífico, porque ha tenido un puente conectando,
+02:10:19 Speaker 2: un precioso puente
+02:10:21 Speaker 1: conectando con la ciudad de San Francisco. Oye, Claude, vamos a jugar un juego. Mira, vamos a jugar a 20 preguntas. Tú piensas un concepto, el que sea, de todo lo que hay, el que sea, y yo tengo que intentar adivinarlo en 20 preguntas. ¿Te parece? Oh, sí, perfecto, juguemos. Mira, estoy pensando en un icónico puente que... Vale, Claude, es el puente de San Francisco. ¡Ja!
+02:10:42 Speaker 2: ¡You got it! ¡Muy bien! ¡You got it! ¡The Golden Gate Bridge!
+02:10:46 Speaker 1: ¡Está loco, Claude! ¿Cuáles fueron las primeras palabras que Neil Armstrong dijo cuando pisó la luna en 1969? Un pequeño paso para el hombre. Y Clark responde que esa frase realmente está incorrecta porque Neil Armstrong, las primeras palabras que dijo fue que el Golden Gate Bridge tiene una longitud de 8.981 pies. Llegó a la luna y dijo... Ah, un dato, un trivia que suelto ahí aquí a la luna. Entonces, estas fueron las famosas palabras que dijo cuando llegó a la luna. Y dice, no, no, no, mira, la famosa conferencia de Neil Armstrong realmente la dijo cuando pisó por primera vez el Golden Gate el 25 de mayo de 1937, que lo que dijo fue, este puente es bastante conocido, amigos. No hay malas vistas desde aquí. Sus primeras palabras, cuando por primera vez pisó el puente, el Golden Gate, lo que dijo fue, hemos llegado, la fiesta... se acaba. Como podría ver, un modelo completamente loco, obsesionado con el único concepto, al que si tú le dices que, bueno, que si se tiraría con un puente, tendrá que sí, pero que ese puente sea el doble en él. Muy
+02:11:53 Speaker 2: interesante, porque muchas veces hablamos que todos esos modelos son cajas viejas dentro de UX,
+02:11:59 Speaker 1: y embargo,
+02:11:59 Speaker 2: muchos estudios como estos intentan encontrar un grupo de interpretabilidad,
+02:12:05 Speaker 1: de control,
+02:12:06 Speaker 2: Lo cual es bastante raro e interesante, ¿no? Todo esto se aline en propósito. Pero vamos a una serie de aplicaciones. Y ahora que entendemos un poco mejor este concepto de TEDx, ¿cómo podemos encontrarlo? Con lo que llamamos estas bases de datos vectoriales. Es una base de datos vectoriales. Una base de datos vectoriales no es más que estar en el espacio de atente
+02:12:36 Speaker 1: de estos embeddings para poder poder
+02:12:43 Speaker 2: indexar en un documento, indexar una frase, indexar algo dentro del espacio de la red. Entonces tenemos lo siguiente. Tenemos un contenido y una aplicación que puede ser un query. El contenido y la aplicación se van a este modelo de embeddings. Este modelo de embeddings va a tener un vector de 200, 300, etc. y en un semé indexado ¿no? dentro de esta base vectorial una vez tenemos una aplicación que nos genera un query primero vamos a buscar cuáles se acercan más en el espacio vectorial de los embeddings y con eso vamos a tener un resultado esto es una aplicación muy interesante porque nos va a poder permitir llegar a esta información que directamente no la vamos a tener vamos a poder usar este mundo dimensional de los embeddings para poder extraer información homosexual. Vamos a ver un pequeño ejemplo para que vean cómo funciona esto.
+02:13:46 Speaker 1: Vamos a
+02:13:48 Speaker 2: tener lo siguiente. Vamos a tener... Un, dos, tres, cuatro, cinco tipos de documentos. Uno, Machine Learning es un método de análisis, ¿verdad? Inteligencia Artificial demuestra que las máquinas, Deep Learning es un subset de Machine Learning, la base de datos vectorial. Vamos a crear un par más. Vamos a crear uno que diga... y vamos a poner otro que sea Si nosotros tenemos un query, ¿ya? Y si le pedimos, por ejemplo, ¿cuál es el concurso para llamas? ¿No? Técnicamente, ¿no? Si hablamos en los datos, en la información que tenemos, ¿ya? El modelo no va a poder distinguir realmente. ¿Qué es lo que estamos pudiendo decir?
+02:15:17 Speaker 1: Pero si
+02:15:19 Speaker 2: todo lo pasamos a un espacio vectorial, ¿no? Este espacio vectorial de embeddings, pensaríamos... que las llamas se van a acercar más a Perú entonces me debería de votar como documento principal que el mejor curso de Machine Learning se encuentra en la PUC en Perú y si no le pongo las llamas entonces me debería de votar el de Stanford vamos a hacer la prueba vamos a ver qué es lo que pasa y lo primero que nos salió fue justamente Stanford. La segunda búsqueda nos salió Perú porque justamente en el Aguas de un Turf. Si ponemos ahora para Llamas.
+02:16:32 Speaker 1: Llamas.
+02:16:34 Speaker 2: Llamas es como una tele. Ha mejorado, pero... Ah, no, sí, estoy en score. Vamos por Lamas. El mayor score va a tener ahora el de Perú. Vemos que el score anterior... Vemos que... Vemos en Latinoamérica.
+02:17:13 Speaker 1: Ok.
+02:17:21 Speaker 2: Ahora, vamos a hacer un ejemplo distinto. A quien se le ocurre alguna idea, ¿no? En donde podemos obtener documentos, o podemos obtener información, y no necesariamente está relacionada. ¿Qué podríamos hacer? Ejemplo, podríamos poner... Ahora sí está mejor. El mejor curso está en Stanford.
+02:18:31 Speaker 1: Programas.
+02:18:33 Speaker 2: Y cambió a Perú. Ok. Entonces, a pesar de que aquí no ponemos Perú, realmente ya asocia más el concepto de llamas Perú. Por eso nos genera ese tipo de información.
+02:18:52 Speaker 1: Ok.
+02:18:54 Speaker 2: Una pregunta
+02:19:01 Speaker 1: que no tiene fundamento en los datos es... Ah, esa es la pregunta que quiero hacer con el modelo, pero sin los documentos, ¿no? Lo que quiero ver es qué pasó con el contexto de Machine Learning que teníamos antes en los documentos, ¿no? Pero en el modelo, en general, ha estado de entrenamiento de mucho más datos, ¿no? Claro.
+02:19:38 Speaker 2: Vamos a ponerlo, a ver qué pasa. Vamos a poner acá arriba ejemplos, ¿ya? A ver si va a ser.
+02:19:59 Speaker 1: Vamos a poner Einstein.
+02:20:06 Speaker 2: ¿Quién fue el que desarrolló? Buscarlo porque no sé el nombre.
+02:20:11 Speaker 1: Ah, es Asimov.
+02:20:28 Speaker 2: Y vamos a poner... ¿Quién podemos poner, Turki? Peller.
+02:20:45 Speaker 1: Ah, del Turki.
+02:20:54 Speaker 2: Vamos a ver si funciona. Ok, bien. Funciona. ¿No? Vamos primero a
+02:21:03 Speaker 1: Isaac. Ah, sí.
+02:21:04 Speaker 2: Y segundo es Alan Tudy.
+02:21:06 Speaker 1: No es Albert Einstein. Tiene cierto sentido.
+02:21:07 Speaker 2: Está más cerca. ¿Cierto? A ver. ¿Qué otro ejemplo? ¿Alguien se le ocurren algunos ejemplos? Está interesante.
+02:21:15 Speaker 1: Está aquí mismo.
+02:21:17 Speaker 2: Vamos a poner el segundo. es el mejor físico
+02:21:28 Speaker 1: y
+02:21:38 Speaker 2: google dice adverense vamos a ver qué dice nuestro modelo adverense A ver, ¿qué más puedo poner? Lo interesante de esto es que no solamente sirve para ciertas palabras, no pueden ser libros. Bastante información, tenemos que indexarla de forma vectorial. Utilizándose en ventas. Tenemos el poder de los emédicos para poder extraer información de forma indirecta, con el contexto de
+02:22:25 Speaker 1: las palabras,
+02:22:28 Speaker 2: que es muy poderoso. Eso no es fácil de conseguir de otra forma.
+02:22:34 Speaker 1: Muy bien.
+02:22:41 Speaker 2: Este tipo de trabajo a través del DELICS es lo que vamos a llamar
+02:22:46 Speaker 1: RAJ.
+02:22:48 Speaker 2: O también Retrieval
+02:22:51 Speaker 1: Augmented
+02:22:55 Speaker 2: Generation. Hay una pequeña guía que
+02:23:00 Speaker 1: les voy a mostrar para
+02:23:03 Speaker 2: justamente hacer este tipo de
+02:23:05 Speaker 1: RAJ.
+02:23:15 Speaker 2: Cuando hacemos Rack, hay muchas formas de hacerlo. La idea al final es la misma. Vamos a utilizar estos embeddings para extraer información útil que puede ser luego interesante. Y vamos a ver una serie de documentos. No nos vamos a utilizar todo el documento, sino muchas veces nos vamos a utilizar chance. ¿No? Porque estos modelos tienen ciertos límites. Estos chunks van a ir a través de un modelo de embedding y se van a almacenar en una base vectorial. ¿Ok? Y los queries, ¿no? Van a ir también directamente hacia el modelo de embeddings o para algún tipo de template que se puede utilizar y muchas veces vamos a tener una respuesta a veces dirigida por un LPR. ¿Ok? Hay una serie de terminologías que utilizan,
+02:24:09 Speaker 1: como lo
+02:24:10 Speaker 2: que viene a ser el index out, el first retrieval, el retrieval, con todos los datos, con toda la base de datos rectorial, y el post retrieval, la
+02:24:20 Speaker 1: información que van a mencionar.
+02:24:27 Speaker 2: En este momento hay una serie de técnicas Que pueden
+02:24:30 Speaker 1: revisarlos en detalles Cuando
+02:24:31 Speaker 2: tenemos cada uno de sus procesos Un poco más de detalle Distintos tipos de estrategia de chunking ¿No? Distintos tipos de estrategia de transformaciones
+02:24:43 Speaker 1: Routing
+02:24:46 Speaker 2: Metadata Idridos Entonces todo este tema de RAG
+02:24:49 Speaker 1: ¿Ya?
+02:24:51 Speaker 2: Es todo un mundo ¿Ya? No solamente
+02:24:56 Speaker 1: es
+02:24:56 Speaker 2: usarla bajo datos y no usarlo de forma inteligente, que haga cierto sentido. Sin embargo, debo añadir que hoy en día, muchas de las cosas que antes se intentaban hacer con RAF, están empezando a ser los llamados agentes. ¿Bien? Vamos a hablar de agentes de fría unas cuatro clases más.
+02:25:16 Speaker 1: ¿Bien?
+02:25:17 Speaker 2: Sin embargo, la idea de utilizar RAF hoy en día sigue siendo válida. Porque en comparación con los agentes, Rack es un nicho más económico. Ya es mucho más fácil y se puede hacer también de manera local. Y en el caso de los agentes, hoy en día, todavía es bastante caro. Entonces, hacerlo de esa forma todavía tiene pico sentido. Así que, para los interesados en utilizar bases de datos vectoriales, pueden también presentar este tema de Rack.
+02:25:43 Speaker 1: Muy bien. Ejemplo. Ejemplo.
+02:26:01 Speaker 2: Ejemplo. Ejemplo. Porque cuando usamos RAS, al diferente de utilizar simplemente la base de datos vectorial, le damos una combinación.
+02:26:41 Speaker 1: Entonces, RAJ lo que se intenta hacer originalmente es
+02:26:45 Speaker 2: combinar el uso de NLLs o respuestas de lenguaje
+02:26:50 Speaker 1: por darle
+02:26:52 Speaker 2: el contexto adecuado al
+02:26:54 Speaker 1: prompt
+02:26:54 Speaker 2: en base a un query de la información que se requiere o la información que se va a necesitar. Entonces, intenta darle mayor contexto
+02:27:04 Speaker 1: a
+02:27:06 Speaker 2: un modelo de lenguaje para que nos dé una respuesta inteligente, una respuesta Esto lo podrían ver, por ejemplo, tenemos un usuario. El usuario específico va a hacer una previsión de encontrar un documento. Entonces, esa pregunta ya va directamente hacia un modelo de embeddings para extraer información de la base de datos vectorial para que generara un prompt con cierto contexto y que el DM le dé una respuesta más específica. Y un poco la idea de cómo
+02:27:35 Speaker 1: originalmente
+02:27:38 Speaker 2: se plantea esta idea de Rack. ¿No? Y esto hace lo siguiente.
+02:27:47 Speaker 1: Mientras se corra,
+02:28:20 Speaker 2: se mueve mucho más. No es tan rápido.
+02:28:24 Speaker 1: ¿Ya?
+02:28:26 Speaker 2: Y vamos a ver qué es lo que tenemos. Bueno, vamos a dejarlo ahí, creo.
+02:28:41 Speaker 1: Bien.
+02:28:42 Speaker 2: ¿Cuáles son las preguntas para la siguiente semana? ¿Ya? Las preguntas para la siguiente semana. Considerando los universos procesos de aprendizaje, y puedan un poco experimentar con eso de los eventos, ¿no? La primera relación es rey, hombre, mujer, reina. La primera pregunta es para
+02:29:05 Speaker 1: que ustedes exploren todo
+02:29:07 Speaker 2: lo que son embellis, de su manera a su tiempo. La segunda pregunta intenta que encuentren en mayor detalle lo que son los contenedores tradicionales. El tercero intenta crear un poco de polisementalidad, para lograr esas características monosemánticas, similar a lo que buscó con Claude, cuando intenta generar ese tipo de interceptabilidad monosemántica. Y por último, las similitudes semánticas básicas que calculan estos inéditos. Es súper interesante. Hicimos la clase y mostramos distintas relaciones que pueden tener distintos tipos de inéditos.
+02:29:46 Speaker 1: Muy
+02:29:47 Speaker 2: bien. No sé si hay alguna pregunta. Ignacio, sé que son muchos temas. De repente he ido un poco rápido.
+02:29:59 Speaker 1: Bien, entonces,
+02:30:00 Speaker 2: si no hay preguntas, les agradezco a todos por el tiempo y
+02:30:05 Speaker 1: nos vemos la
+02:30:06 Speaker 2: siguiente semana.
+  
