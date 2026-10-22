@@ -15,6 +15,7 @@ Responder la pregunta 3 de S10 (SAE, monosemanticidad y steering) con un cuadern
 9. Ejecución del código concatenado de las 23 celdas en Colab (ver sección de validación).
 10. Revisión de redacción: acorté comentarios y docstrings del `.py` y del cuaderno, reescribí las celdas de texto en primera persona y corregí la sangría de dos comentarios. La lógica, los parámetros y los resultados no cambiaron. Solo verifiqué la sintaxis (`ast.parse`); falta volver a ejecutar el cuaderno completo en Colab.
 11. Cambié los controles de los paneles a sliders (esparsidad y α como `SelectionSlider`, rasgo como `IntSlider`, factor como `FloatSlider`) y añadí indicaciones de uso de sliders al guion. Solo sintaxis verificada.
+12. Agregué la sección "Conexión con la Clase 10" (autoencoder, VAE, SAE) al título del cuaderno; una frase sobre el cambio de metodología al inicio de la sección 15; y sesgos y la conexión con la clase en el guion. Solo sintaxis verificada.
 
 ## Parámetros
 N_RASGOS=12, N_DIM=4, K_DICT=24, ESPARSIDADES=[0.5, 0.9, 0.97], ALPHAS=[0, 0.1, 0.3, 1.0], PASOS_MODELO=4000, PASOS_SAE=5000, LOTE=2048, Adam (lr 0.005 modelo, 0.002 SAE), semilla 0.
