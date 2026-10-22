@@ -13,6 +13,8 @@ Responder la pregunta 3 de S10 (SAE, monosemanticidad y steering) con un cuadern
 7. Reestructuré el cuaderno al formato del Vibe Quest S9: 61 celdas (28 de código), con una celda de texto antes de cada celda de código y secciones `N · Nombre` (subsecciones `N · a · …`). Separé: librerías (1), parámetros y carpetas (2), datos (3), clases del modelo (4) y del SAE (5), funciones de entrenamiento (6), funciones de métricas y de dirección (7), invocación del entrenamiento (8), resultados (9), robustez (10), panel A y B con la función separada de su invocación (11, 12), steering por rasgo (13), y 14 a 17 hallazgos, ética, límites y referencias. Cada tabla, gráfico, impresión o guardado de archivo está en su propia celda.
 8. Descargué los PDF de arXiv con el navegador integrado y verifiqué la primera página de cada uno (7 de 7).
 9. Ejecución del código concatenado de las 23 celdas en Colab (ver sección de validación).
+10. Revisión de redacción: acorté comentarios y docstrings del `.py` y del cuaderno, reescribí las celdas de texto en primera persona y corregí la sangría de dos comentarios. La lógica, los parámetros y los resultados no cambiaron. Solo verifiqué la sintaxis (`ast.parse`); falta volver a ejecutar el cuaderno completo en Colab.
+11. Cambié los controles de los paneles a sliders (esparsidad y α como `SelectionSlider`, rasgo como `IntSlider`, factor como `FloatSlider`) y añadí indicaciones de uso de sliders al guion. Solo sintaxis verificada.
 
 ## Parámetros
 N_RASGOS=12, N_DIM=4, K_DICT=24, ESPARSIDADES=[0.5, 0.9, 0.97], ALPHAS=[0, 0.1, 0.3, 1.0], PASOS_MODELO=4000, PASOS_SAE=5000, LOTE=2048, Adam (lr 0.005 modelo, 0.002 SAE), semilla 0.

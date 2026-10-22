@@ -1,8 +1,7 @@
 """Vibe Quest S10 (pregunta 3): superposición, autoencoder disperso (SAE) y steering.
 
-Experimento autónomo (PyTorch, CPU, ~6 min). Misma lógica que el cuaderno
-VibeQuest_S10_SAE_Monosemanticidad_Steering.ipynb. Escribe en ../resultados/datos
-y ../resultados/capturas (o en la carpeta actual si no existen).
+Es la misma lógica del cuaderno VibeQuest_S10_SAE_Monosemanticidad_Steering.ipynb.
+Corre en CPU (unos 5 minutos) y guarda los CSV y las figuras en ../resultados.
 """
 import time
 from pathlib import Path
@@ -15,13 +14,13 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-# ---------------- Parámetros del experimento ----------------
+# Parámetros
 SEMILLA = 0
-N_RASGOS = 12            # rasgos "verdaderos" que genera el mundo sintético
-N_DIM = 4                # neuronas de la capa oculta del modelo de juguete (menos que rasgos)
-K_DICT = 24              # latentes del autoencoder disperso (factor de expansión 6)
-ESPARSIDADES = [0.5, 0.9, 0.97]   # probabilidad de que un rasgo esté apagado
-ALPHAS = [0.0, 0.1, 0.3, 1.0]     # peso de la penalización L1 del autoencoder disperso
+N_RASGOS = 12  # rasgos verdaderos del mundo sintético
+N_DIM = 4  # neuronas de la capa oculta (menos que rasgos)
+K_DICT = 24  # latentes del SAE (6 veces las neuronas)
+ESPARSIDADES = [0.5, 0.9, 0.97]  # probabilidad de que un rasgo esté apagado
+ALPHAS = [0.0, 0.1, 0.3, 1.0]  # peso de la penalización L1
 PASOS_MODELO = 4000
 PASOS_SAE = 5000
 LOTE = 2048
@@ -31,14 +30,14 @@ np.random.seed(SEMILLA)
 
 
 def muestrear(n, esparsidad, generador):
-    """Cada rasgo está activo con prob. (1 - esparsidad); si está activo, vale U(0,1)."""
+    """Rasgo activo con probabilidad 1 - esparsidad; si está activo vale U(0,1)."""
     activo = (torch.rand(n, N_RASGOS, generator=generador) > esparsidad).float()
     valor = torch.rand(n, N_RASGOS, generator=generador)
     return activo * valor
 
 
 class ModeloJuguete(nn.Module):
-    """x (12 rasgos) -> h = W x (4 neuronas) -> ReLU(W^T h + b): comprime y reconstruye."""
+    """Comprime 12 rasgos en 4 neuronas (h = W x) y reconstruye con ReLU(W^T h + b)."""
 
     def __init__(self):
         super().__init__()
@@ -56,7 +55,7 @@ class ModeloJuguete(nn.Module):
 
 
 class SAE(nn.Module):
-    """Autoencoder disperso: h (4) -> ReLU -> f (24 latentes) -> h' (4)."""
+    """Autoencoder disperso: 4 neuronas -> 24 latentes (ReLU) -> 4 neuronas."""
 
     def __init__(self):
         super().__init__()
@@ -65,7 +64,7 @@ class SAE(nn.Module):
         self.bd = nn.Parameter(torch.zeros(N_DIM))
 
     def direcciones(self):
-        # columnas del decodificador con norma 1: así L1 no se "evade" achicando f
+        # columnas de norma 1, para que L1 no se evada achicando f
         return self.dec / self.dec.norm(dim=0, keepdim=True)
 
     def codificar(self, h):
@@ -110,7 +109,7 @@ def entrenar_sae(modelo, esparsidad, alpha, semilla=SEMILLA):
 
 
 def corr_max(A, B):
-    """Para cada columna de A, mayor correlación con alguna columna de B (0 si es constante)."""
+    """Mayor correlación de cada columna de A con alguna columna de B."""
     A = (A - A.mean(0)) / (A.std(0) + 1e-8)
     B = (B - B.mean(0)) / (B.std(0) + 1e-8)
     C = (A.T @ B) / A.shape[0]
@@ -126,13 +125,13 @@ def evaluar(modelo, sae, esparsidad, n=5000, semilla=123):
     h_rec = sae.decodificar(f)
     W = modelo.W.detach()
     normas = W.norm(dim=0)
-    repr_ = normas > 0.5                                   # rasgos que el modelo sí representa
+    repr_ = normas > 0.5  # rasgos que el modelo guarda
     Wn = W / (normas + 1e-8)
-    cos = Wn.T @ sae.direcciones()                         # (12 rasgos x 24 latentes)
+    cos = Wn.T @ sae.direcciones()  # rasgos x latentes
     recupera = (cos.max(1).values > 0.9)[repr_].float().mean().item() if repr_.any() else float("nan")
-    # pureza: correlación máxima de cada unidad (neurona / latente) con algún rasgo verdadero
+    # pureza: correlación máxima de cada unidad con algún rasgo verdadero
     p_neu, _ = corr_max(h, x)
-    vivos = (f > 1e-6).float().mean(0) > 0.005             # latentes que se activan alguna vez
+    vivos = (f > 1e-6).float().mean(0) > 0.005  # latentes que se activan alguna vez
     p_lat, _ = corr_max(f[:, vivos], x) if vivos.any() else (torch.zeros(1), None)
     err = ((h_rec - h) ** 2).sum(1).mean().item() / (h ** 2).sum(1).mean().item()
     return dict(
@@ -148,7 +147,7 @@ def evaluar(modelo, sae, esparsidad, n=5000, semilla=123):
 
 @torch.no_grad()
 def dirigir(modelo, sae, esparsidad, rasgo, factor, metodo, n=5000, semilla=321):
-    """Fija (clamp) una unidad a factor x su activación máxima y mide el cambio medio en las 12 salidas."""
+    """Fija una unidad a factor x su máximo y mide el cambio medio en las 12 salidas."""
     g = torch.Generator().manual_seed(semilla)
     x = muestrear(n, esparsidad, g)
     h = modelo.oculta(x)
@@ -157,12 +156,12 @@ def dirigir(modelo, sae, esparsidad, rasgo, factor, metodo, n=5000, semilla=321)
         f = sae.codificar(h)
         W = modelo.W.detach()
         Wn = W / (W.norm(dim=0) + 1e-8)
-        j = int((Wn[:, rasgo] @ sae.direcciones()).argmax())      # latente más alineado al rasgo
+        j = int((Wn[:, rasgo] @ sae.direcciones()).argmax())  # latente más alineado con el rasgo
         f2 = f.clone()
         f2[:, j] = factor * f[:, j].max()
         h2 = sae.decodificar(f2)
     else:
-        k = int(modelo.W.detach()[:, rasgo].abs().argmax())       # neurona que más pesa en ese rasgo
+        k = int(modelo.W.detach()[:, rasgo].abs().argmax())  # neurona con más peso en el rasgo
         h2 = h.clone()
         h2[:, k] = factor * h[:, k].abs().max()
     delta = (modelo.salida(h2) - base).mean(0)
@@ -171,7 +170,7 @@ def dirigir(modelo, sae, esparsidad, rasgo, factor, metodo, n=5000, semilla=321)
     return delta.numpy(), selectividad
 
 
-# ---------------- Ejecución ----------------
+# Ejecución
 def carpeta(nombre):
     base = Path(__file__).resolve().parent.parent / "resultados" if "__file__" in globals() else Path(".")
     destino = base / nombre
@@ -202,7 +201,7 @@ if __name__ == "__main__":
     assert fila(0.5, 0.3).recupera < 0.5, "con rasgos densos no debería recuperar casi nada"
     print("Comprobaciones superadas")
 
-    # Robustez: 5 semillas en la configuración principal
+    # robustez: 5 semillas con la configuración principal
     out = []
     for s in [1, 2, 3, 4, 5]:
         m = entrenar_modelo(0.97, semilla=s)
@@ -221,7 +220,7 @@ if __name__ == "__main__":
     resumen.round(4).to_csv(DATOS / "resultados_robustez_resumen.csv")
     print(resumen.round(3))
 
-    # Steering: tabla para la semilla 0 (todos los rasgos, factor 3)
+    # steering de todos los rasgos (semilla 0, factor 3)
     filas = []
     for S in (0.9, 0.97):
         for i in range(N_RASGOS):
@@ -233,7 +232,7 @@ if __name__ == "__main__":
     steer.round(4).to_csv(DATOS / "resultados_steering_semilla0.csv", index=False)
     print(steer.groupby("esparsidad")[["selectividad_SAE", "selectividad_neurona"]].agg(["mean", "std"]).round(3))
 
-    # Figuras: panel A (S=0.97, alpha=0.3) y panel B (rasgo 1)
+    # figuras de los paneles A y B
     for S, a in [(0.97, 0.3), (0.5, 0.3)]:
         m, z = modelos[S], saes[(S, a)]
         W = m.W.detach(); Wn = W / (W.norm(dim=0) + 1e-8)

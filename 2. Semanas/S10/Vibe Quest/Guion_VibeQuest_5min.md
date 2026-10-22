@@ -6,13 +6,16 @@
 "Mi pregunta es qué cambia si podemos leer y dirigir los rasgos internos de un modelo con autoencoders dispersos, y qué riesgos trae. No puedo entrenar un modelo de lenguaje aquí, así que reproduzco el mecanismo en un mundo sintético de 12 rasgos donde sé la respuesta correcta."
 
 ## 0:40–1:40 · Superposición (Panel A, esparsidad 0.97)
+*Slider de esparsidad: 0.97, luego 0.5.*
 "Cuatro neuronas, doce rasgos. Como los rasgos son esparsos el modelo los comprime y las neuronas quedan mezcladas: pureza 0.42. Con esparsidad 0.5 ni siquiera cabe todo: solo 8 de 12."
 
 ## 1:40–2:50 · El SAE (Panel A, mover α)
+*Slider de α: 0, 0.3 y 1.0.*
 "El SAE tiene 24 latentes y penalización L1. Con α = 0.3 los latentes son mucho más puros (0.89 frente a 0.42). Sin penalización recupera 25 %. Si me paso con α = 1 el error de reconstrucción sube a 0.48. En el mundo denso no ayuda."
 "Una semilla da 100 %; el promedio de cinco es 80 % (±14)."
 
 ## 2:50–3:50 · Steering (Panel B)
+*Sliders: rasgo 1, factor 0 a 10; alternar SAE y Neurona.*
 "Fijo un latente al triple de su máximo y miro qué cambia. Con el SAE la selectividad promedio es 0.81; con la neurona, 0.23: en varias neuronas el rasgo objetivo ni se mueve. Pero incluso con el SAE hay efectos colaterales."
 
 ## 3:50–4:40 · Auditoría, alineación, sesgos, riesgos
@@ -20,6 +23,9 @@
 
 ## 4:40–5:00 · Cierre
 "Funciona en pequeño y con ajuste fino; no demuestra que escale. Lo que sí queda: toda intervención necesita evaluar sus efectos colaterales."
+
+## Antes de exponer
+Abrir el cuaderno en Colab, ejecutar todo (`Entorno de ejecución > Ejecutar todo`, 2 a 3 minutos) y dejar los paneles listos. Verificar que los números del panel coincidan con la tabla de cifras.
 
 ## Cifras a la mano
 | Cifra | Valor |
