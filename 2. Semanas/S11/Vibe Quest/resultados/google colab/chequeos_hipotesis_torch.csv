@@ -1,0 +1,10 @@
+chequeo,se_cumple
+RNN aprende con T = 5 y T = 10 (media > 0.9),True
+RNN con T = 50 queda cerca del azar (media < 0.4),False
+RNN con T = 80 queda cerca del azar (media < 0.4),True
+"Desvanecimiento en la RNN entrenada, T >= 50 (mediana log10 < -2)",True
+LSTM con T = 50 supera a la RNN,False
+LSTM con T = 80 supera a la RNN,True
+"El recorte no devuelve la memoria (RNN + recorte, T = 80, media < 0.5)",False
+La LSTM falla en alguna corrida (hay excepción),True
+La RNN acierta en alguna corrida con T >= 20 (no falla siempre),True
