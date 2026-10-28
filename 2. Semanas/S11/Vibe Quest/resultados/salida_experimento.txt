@@ -1,0 +1,87 @@
+1 · Aritmética de la lámina
+  w  T        w^T    w^(T-1)
+1.1 50 117.390853 106.718957
+0.9 50   0.005154   0.005726
+
+2 · Norma del gradiente por distancia (T=50, sin entrenar)
+||dL/dh_1|| / ||dL/dh_T||: {'RNN radio 0.9': '1.49e-07', 'RNN radio 1.0': '7.42e-06', 'RNN radio 1.5': '0.826', 'RNN radio 2.0': '364', 'LSTM': '0.527'}
+
+3 · Entrenamiento (RNN, RNN con recorte, LSTM)
+  T= 5 RNN            sem=0 exactitud=1.000 log10(ratio)=0.3  [4s]
+  T= 5 RNN            sem=1 exactitud=1.000 log10(ratio)=0.2  [5s]
+  T= 5 RNN            sem=2 exactitud=1.000 log10(ratio)=0.2  [6s]
+  T= 5 RNN + recorte  sem=0 exactitud=1.000 log10(ratio)=0.3  [7s]
+  T= 5 RNN + recorte  sem=1 exactitud=1.000 log10(ratio)=0.2  [9s]
+  T= 5 RNN + recorte  sem=2 exactitud=1.000 log10(ratio)=0.2  [10s]
+  T= 5 LSTM           sem=0 exactitud=1.000 log10(ratio)=-0.3  [14s]
+  T= 5 LSTM           sem=1 exactitud=1.000 log10(ratio)=-0.5  [17s]
+  T= 5 LSTM           sem=2 exactitud=1.000 log10(ratio)=-0.5  [21s]
+  T=10 RNN            sem=0 exactitud=1.000 log10(ratio)=-0.2  [22s]
+  T=10 RNN            sem=1 exactitud=1.000 log10(ratio)=0.2  [24s]
+  T=10 RNN            sem=2 exactitud=1.000 log10(ratio)=0.2  [26s]
+  T=10 RNN + recorte  sem=0 exactitud=1.000 log10(ratio)=0.1  [28s]
+  T=10 RNN + recorte  sem=1 exactitud=1.000 log10(ratio)=0.1  [30s]
+  T=10 RNN + recorte  sem=2 exactitud=1.000 log10(ratio)=0.2  [32s]
+  T=10 LSTM           sem=0 exactitud=1.000 log10(ratio)=-1.2  [39s]
+  T=10 LSTM           sem=1 exactitud=1.000 log10(ratio)=-0.8  [45s]
+  T=10 LSTM           sem=2 exactitud=1.000 log10(ratio)=-0.6  [52s]
+  T=20 RNN            sem=0 exactitud=0.496 log10(ratio)=-7.8  [56s]
+  T=20 RNN            sem=1 exactitud=0.244 log10(ratio)=-4.7  [59s]
+  T=20 RNN            sem=2 exactitud=0.993 log10(ratio)=-0.1  [62s]
+  T=20 RNN + recorte  sem=0 exactitud=0.604 log10(ratio)=-6.5  [65s]
+  T=20 RNN + recorte  sem=1 exactitud=0.241 log10(ratio)=-6.0  [68s]
+  T=20 RNN + recorte  sem=2 exactitud=1.000 log10(ratio)=-2.0  [72s]
+  T=20 LSTM           sem=0 exactitud=1.000 log10(ratio)=-0.8  [84s]
+  T=20 LSTM           sem=1 exactitud=1.000 log10(ratio)=-1.0  [96s]
+  T=20 LSTM           sem=2 exactitud=1.000 log10(ratio)=-0.8  [109s]
+  T=30 RNN            sem=0 exactitud=0.591 log10(ratio)=-7.2  [114s]
+  T=30 RNN            sem=1 exactitud=0.480 log10(ratio)=-6.4  [119s]
+  T=30 RNN            sem=2 exactitud=1.000 log10(ratio)=0.6  [124s]
+  T=30 RNN + recorte  sem=0 exactitud=1.000 log10(ratio)=0.1  [129s]
+  T=30 RNN + recorte  sem=1 exactitud=0.246 log10(ratio)=-7.3  [134s]
+  T=30 RNN + recorte  sem=2 exactitud=1.000 log10(ratio)=0.4  [139s]
+  T=30 LSTM           sem=0 exactitud=1.000 log10(ratio)=-0.8  [157s]
+  T=30 LSTM           sem=1 exactitud=1.000 log10(ratio)=-0.7  [175s]
+  T=30 LSTM           sem=2 exactitud=1.000 log10(ratio)=-0.9  [193s]
+  T=50 RNN            sem=0 exactitud=0.252 log10(ratio)=-5.7  [202s]
+  T=50 RNN            sem=1 exactitud=0.268 log10(ratio)=-8.2  [210s]
+  T=50 RNN            sem=2 exactitud=0.259 log10(ratio)=-6.0  [217s]
+  T=50 RNN + recorte  sem=0 exactitud=0.252 log10(ratio)=-5.7  [225s]
+  T=50 RNN + recorte  sem=1 exactitud=1.000 log10(ratio)=0.4  [233s]
+  T=50 RNN + recorte  sem=2 exactitud=0.259 log10(ratio)=-6.0  [240s]
+  T=50 LSTM           sem=0 exactitud=1.000 log10(ratio)=-0.6  [275s]
+  T=50 LSTM           sem=1 exactitud=0.256 log10(ratio)=-5.0  [304s]
+  T=50 LSTM           sem=2 exactitud=0.981 log10(ratio)=-0.6  [332s]
+  T=80 RNN            sem=0 exactitud=0.506 log10(ratio)=-11.3  [344s]
+  T=80 RNN            sem=1 exactitud=0.226 log10(ratio)=-7.4  [356s]
+  T=80 RNN            sem=2 exactitud=0.261 log10(ratio)=-10.3  [368s]
+  T=80 RNN + recorte  sem=0 exactitud=0.505 log10(ratio)=-14.7  [381s]
+  T=80 RNN + recorte  sem=1 exactitud=0.227 log10(ratio)=-7.4  [393s]
+  T=80 RNN + recorte  sem=2 exactitud=0.238 log10(ratio)=-9.9  [405s]
+  T=80 LSTM           sem=0 exactitud=1.000 log10(ratio)=-0.1  [453s]
+  T=80 LSTM           sem=1 exactitud=1.000 log10(ratio)=0.3  [500s]
+  T=80 LSTM           sem=2 exactitud=1.000 log10(ratio)=0.1  [548s]
+
+Resumen (3 semillas)
+                  exactitud_media  exactitud_std  log10_ratio  norma_grad_max
+modelo        T                                                              
+LSTM          5            1.0000         0.0000      -0.5243          1.8931
+              10           1.0000         0.0000      -0.8208         19.2961
+              20           1.0000         0.0000      -0.7920        254.2018
+              30           0.9998         0.0003      -0.8287        304.5231
+              50           0.7455         0.4240      -0.6100        167.5383
+              80           1.0000         0.0000       0.0701        303.8705
+RNN           5            1.0000         0.0000       0.2129          1.0781
+              10           0.9998         0.0003       0.1950         14.3666
+              20           0.5777         0.3811      -4.6800       1427.5452
+              30           0.6903         0.2738      -6.4115        108.3869
+              50           0.2597         0.0080      -6.0385        135.7923
+              80           0.3312         0.1528     -10.3106          4.7284
+RNN + recorte 5            1.0000         0.0000       0.2124          1.0781
+              10           1.0000         0.0000       0.0895         10.5924
+              20           0.6150         0.3796      -5.9578        648.2581
+              30           0.7488         0.4350       0.1363         27.5535
+              50           0.5037         0.4299      -5.7136         48.3039
+              80           0.3232         0.1576      -9.8836          1.6342
+
+Tiempo total: 548 s

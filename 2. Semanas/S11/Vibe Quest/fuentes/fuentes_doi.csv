@@ -1,0 +1,7 @@
+archivo,doi,rol
+Tolic_2024_Chrono_Initialized_LSTM_IEEE_Access.pdf,10.1109/ACCESS.2024.3445329,sesgo de olvido y flujo del gradiente en LSTM (acceso abierto)
+He_2022_Subtraction_Gates_TNNLS.pdf,10.1109/TNNLS.2020.3043752,dependencias a largo plazo y desvanecimiento/explosión del gradiente
+Dou_2023_Eigen_Initializer_IJCNN.pdf,10.1109/IJCNN54540.2023.10191986,dinámica del estado oculto y decaimiento de la información en RNN
+Ceni_2025_Random_Orthogonal_Additive_Filters_TNNLS.pdf,10.1109/TNNLS.2025.3538924,problema V/E y valores singulares del jacobiano
+Rehmer_2022_Forget_gate_bifurcation_IJCNN.pdf,10.1109/IJCNN55064.2022.9892458,el gradiente también se desvanece en unidades con compuertas
+Shan_2023_DRRNets_TNNLS.pdf,10.1109/TNNLS.2021.3105818,dificultad de entrenar RNN en secuencias largas
