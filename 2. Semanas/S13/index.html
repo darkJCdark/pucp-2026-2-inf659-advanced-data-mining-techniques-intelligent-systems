@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformer Self-Attention Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        /* ── Scrollbar ── */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* ── Range inputs ── */
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; cursor: pointer; }
+        input[type=range]::-webkit-slider-track {
+            height: 3px; background: #1e293b; border-radius: 2px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none; height: 12px; width: 12px;
+            background: #64748b; border-radius: 50%; margin-top: -4.5px;
+            transition: background 0.15s;
+        }
+        input[type=range]:hover::-webkit-slider-thumb { background: #94a3b8; }
+
+        /* ── CSS Tooltip ── */
+        .tooltip-trigger:hover + .tooltip-content { display: block; }
+
+        /* ── Notification fade ── */
+        #notif { transition: opacity 0.4s; }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200 h-screen flex flex-col overflow-hidden">
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════════════════ -->
+<header class="bg-slate-900 border-b border-slate-800 px-4 py-2 flex items-center justify-between flex-shrink-0">
+
+    <div class="flex items-center gap-2">
+        <button id="toggle-words" onclick="togglePanel('panel-words')"
+            class="px-3 py-1.5 rounded text-[11px] font-bold bg-cyan-600 hover:bg-cyan-500 text-white transition-colors">
+            Words
+        </button>
+        <button id="toggle-matrices" onclick="togglePanel('panel-matrices')"
+            class="px-3 py-1.5 rounded text-[11px] font-bold bg-amber-600 hover:bg-amber-500 text-white transition-colors">
+            Q · K · V Matrices
+        </button>
+        <button id="toggle-steps" onclick="togglePanel('panel-steps')"
+            class="px-3 py-1.5 rounded text-[11px] font-bold bg-violet-600 hover:bg-violet-500 text-white transition-colors">
+            Step Guide
+        </button>
+        <!-- Mode toggle pills -->
+        <div class="flex items-center gap-1 bg-slate-800 rounded-lg p-1 ml-2">
+            <button id="mode-self" onclick="setAttentionMode('self')"
+                class="px-3 py-1 rounded-md text-[11px] font-bold bg-slate-200 text-slate-900 transition-colors">
+                Self
+            </button>
+            <button id="mode-cross" onclick="setAttentionMode('cross')"
+                class="px-3 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition-colors">
+                Cross
+            </button>
+        </div>
+        <!-- View toggle pills -->
+        <div class="flex items-center gap-1 bg-slate-800 rounded-lg p-1 ml-2">
+            <button id="view-btn-main" onclick="setView('main')"
+                class="px-3 py-1 rounded-md text-[11px] font-bold bg-slate-200 text-slate-900 transition-colors">
+                4 Plots
+            </button>
+            <button id="view-btn-comp" onclick="setView('composition')"
+                class="px-3 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition-colors">
+                ★ Composition
+            </button>
+        </div>
+        <span id="header-title" class="hidden md:block text-[11px] text-slate-600 ml-2 select-none">
+            Transformer Self-Attention — Interactive Lab
+        </span>
+    </div>
+
+    <!-- Info tooltip -->
+    <div class="relative">
+        <button class="w-7 h-7 rounded-full bg-slate-800 border border-slate-700
+                       flex items-center justify-center text-xs italic font-serif text-slate-400
+                       hover:bg-slate-700 tooltip-trigger">i</button>
+        <div class="tooltip-content hidden absolute right-0 top-9 w-84 bg-slate-800 border border-slate-700
+                    p-4 rounded-xl shadow-2xl z-50 text-xs space-y-2" style="width:340px">
+            <strong class="text-emerald-400 block text-[11px] uppercase tracking-wide">How to use</strong>
+            <ol class="space-y-1 text-slate-300 list-decimal list-inside leading-relaxed">
+                <li>Load a word preset or add your own words with 2D coordinates</li>
+                <li>Use the <b class="text-amber-400">Step Guide</b> (right panel) to walk through each stage</li>
+                <li>Modify Q, K, V matrix values with sliders and see instant updates</li>
+                <li><b class="text-purple-400">Click a heatmap cell</b> (e.g. q_cat → k_dog) to focus that pair — all other words dim across every plot</li>
+                <li>Click the same cell again, or click anywhere on the Q/K plot, to clear the focus</li>
+                <li>Switch heatmap views: Raw Scores → Cosine Similarity → Attention Weights</li>
+                <li>Adjust Temperature τ to see sharp vs. uniform softmax</li>
+            </ol>
+            <div class="border-t border-slate-700 pt-2 text-[10px] text-slate-400 space-y-1">
+                <div><span class="text-amber-400 font-bold">Q</span> — what each word is <em>looking for</em></div>
+                <div><span class="text-emerald-400 font-bold">K</span> — what each word <em>has to offer</em></div>
+                <div><span class="text-teal-400 font-bold">V</span> — what each word <em>actually extracts</em></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Notification banner -->
+<div id="notif" class="opacity-0 fixed top-12 left-1/2 -translate-x-1/2 z-50
+                        bg-slate-800 border border-slate-600 text-slate-200 text-xs px-4 py-1.5 rounded-full shadow-xl">
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     BODY  (panels + main plots)
+══════════════════════════════════════════════════════════ -->
+<div class="flex flex-1 overflow-hidden">
+
+    <!-- ── LEFT PANEL 1: Words ── -->
+    <aside id="panel-words"
+           class="w-60 bg-slate-900 border-r border-slate-800 overflow-y-auto flex-shrink-0">
+        <div class="p-4 space-y-4">
+
+            <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800 pb-2">
+                Word Embeddings
+            </h3>
+
+            <!-- Presets -->
+            <div class="space-y-1.5">
+                <label class="block text-[10px] uppercase font-bold text-slate-400">Load Preset</label>
+                <div class="grid grid-cols-2 gap-1">
+                    <button onclick="loadPreset('animals')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Animals</button>
+                    <button onclick="loadPreset('sentence')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Sentence</button>
+                    <button onclick="loadPreset('geometric')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Geometric</button>
+                    <button onclick="loadPreset('clusters')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Clusters</button>
+                </div>
+            </div>
+
+            <!-- Word list -->
+            <div class="space-y-1">
+                <label class="block text-[10px] uppercase font-bold text-slate-400">
+                    Words <span class="text-slate-600 normal-case font-normal">(click to select)</span>
+                </label>
+                <div id="words-list"
+                     class="space-y-0.5 max-h-44 overflow-y-auto bg-slate-950 rounded-lg border border-slate-800 py-1">
+                </div>
+            </div>
+
+            <!-- Edit selected word -->
+            <div id="edit-panel" class="hidden space-y-2 bg-slate-950 rounded-lg border border-slate-700 p-3">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0"></div>
+                    <span class="text-[11px] font-bold text-slate-200" id="edit-word-name">—</span>
+                    <span class="text-[9px] text-slate-500 ml-auto">editing</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="text-[9px] text-slate-500 block mb-0.5">x coordinate</label>
+                        <input type="number" id="edit-x" step="0.1" min="-3" max="3"
+                            oninput="updateSelectedWordCoord('x', this.value)"
+                            class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs font-mono">
+                    </div>
+                    <div>
+                        <label class="text-[9px] text-slate-500 block mb-0.5">y coordinate</label>
+                        <input type="number" id="edit-y" step="0.1" min="-3" max="3"
+                            oninput="updateSelectedWordCoord('y', this.value)"
+                            class="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs font-mono">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add word -->
+            <div class="space-y-2">
+                <label class="block text-[10px] uppercase font-bold text-slate-400">Add Word</label>
+                <input type="text" id="new-word" placeholder="word text"
+                    onkeydown="if(event.key==='Enter') addWord()"
+                    class="w-full bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs placeholder-slate-600">
+                <div class="grid grid-cols-2 gap-1">
+                    <input type="number" id="new-x" placeholder="x (e.g. 0.5)" step="0.1"
+                        class="bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs placeholder-slate-600">
+                    <input type="number" id="new-y" placeholder="y (e.g. −0.3)" step="0.1"
+                        class="bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs placeholder-slate-600">
+                </div>
+                <button onclick="addWord()"
+                    class="w-full px-3 py-1 rounded text-[10px] font-bold bg-cyan-700 hover:bg-cyan-600 text-white transition-colors">
+                    + Add Word
+                </button>
+            </div>
+
+            <!-- ══ CROSS-ATTENTION: Sequence B section (hidden in self mode) ══ -->
+            <div id="cross-section" class="hidden space-y-3 border-t-2 border-red-900/40 pt-3">
+
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></div>
+                    <span class="text-[10px] font-bold text-red-400 uppercase tracking-wide">Cross Presets</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1">
+                    <button onclick="loadCrossPreset('translation')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">EN→FR</button>
+                    <button onclick="loadCrossPreset('qa')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Q&amp;A</button>
+                    <button onclick="loadCrossPreset('clusters')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Clusters</button>
+                    <button onclick="loadCrossPreset('mirror')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Mirror</button>
+                </div>
+
+                <!-- Add Seq B word -->
+                <div class="space-y-1.5">
+                    <label class="block text-[10px] font-bold text-red-400 uppercase tracking-wide">
+                        Add Word to Seq B
+                    </label>
+                    <input type="text" id="new-word-b" placeholder="word (context)"
+                        onkeydown="if(event.key==='Enter') addWordB()"
+                        class="w-full bg-slate-950 border border-red-900/50 rounded px-2 py-1 text-xs placeholder-slate-600">
+                    <div class="grid grid-cols-2 gap-1">
+                        <input type="number" id="new-x-b" placeholder="x" step="0.1"
+                            class="bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs placeholder-slate-600">
+                        <input type="number" id="new-y-b" placeholder="y" step="0.1"
+                            class="bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs placeholder-slate-600">
+                    </div>
+                    <button onclick="addWordB()"
+                        class="w-full px-3 py-1 rounded text-[10px] font-bold bg-red-800 hover:bg-red-700 text-white transition-colors">
+                        + Add to Seq B
+                    </button>
+                </div>
+
+            </div><!-- end cross-section -->
+
+        </div>
+    </aside>
+
+    <!-- ── LEFT PANEL 2: Matrices ── -->
+    <aside id="panel-matrices"
+           class="w-60 bg-slate-900 border-r border-slate-800 overflow-y-auto flex-shrink-0">
+        <div class="p-4 space-y-4">
+
+            <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800 pb-2">
+                Q · K · V Matrices
+            </h3>
+
+            <!-- Matrix presets -->
+            <div class="space-y-1.5">
+                <label class="block text-[10px] uppercase font-bold text-slate-400">Matrix Presets</label>
+                <div class="grid grid-cols-2 gap-1">
+                    <button onclick="loadMatrixPreset('identity')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Identity</button>
+                    <button onclick="loadMatrixPreset('rotation45')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Rotate Q 45°</button>
+                    <button onclick="loadMatrixPreset('xProject')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Project X</button>
+                    <button onclick="loadMatrixPreset('divergeQK')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Diverge Q/K</button>
+                    <button onclick="loadMatrixPreset('scaleV')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Scale V×2</button>
+                    <button onclick="loadMatrixPreset('rotateV')"
+                        class="px-2 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Rotate V 90°</button>
+                </div>
+            </div>
+
+            <!-- ── Q Matrix ── -->
+            <div class="space-y-2 border-t border-slate-800 pt-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wide">Q Matrix</span>
+                    <span class="text-[9px] text-slate-500 font-mono">q_i = Q · e_i</span>
+                </div>
+                <!-- Visual grid display -->
+                <div class="grid grid-cols-2 gap-1 font-mono text-center">
+                    <div id="val-q11" class="bg-slate-950 border border-amber-900/40 rounded px-1 py-1 text-[11px] text-amber-300">1.00</div>
+                    <div id="val-q12" class="bg-slate-950 border border-amber-900/40 rounded px-1 py-1 text-[11px] text-amber-300">0.00</div>
+                    <div id="val-q21" class="bg-slate-950 border border-amber-900/40 rounded px-1 py-1 text-[11px] text-amber-300">0.00</div>
+                    <div id="val-q22" class="bg-slate-950 border border-amber-900/40 rounded px-1 py-1 text-[11px] text-amber-300">1.00</div>
+                </div>
+                <!-- Sliders -->
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₁₁</span>
+                        <input type="range" id="slider-q11" min="-2" max="2" step="0.05" value="1"
+                               oninput="setMatrixValue('Q',0,0,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₁₂</span>
+                        <input type="range" id="slider-q12" min="-2" max="2" step="0.05" value="0"
+                               oninput="setMatrixValue('Q',0,1,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₂₁</span>
+                        <input type="range" id="slider-q21" min="-2" max="2" step="0.05" value="0"
+                               oninput="setMatrixValue('Q',1,0,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₂₂</span>
+                        <input type="range" id="slider-q22" min="-2" max="2" step="0.05" value="1"
+                               oninput="setMatrixValue('Q',1,1,this.value)" class="flex-1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── K Matrix ── -->
+            <div class="space-y-2 border-t border-slate-800 pt-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wide">K Matrix</span>
+                    <span class="text-[9px] text-slate-500 font-mono">k_i = K · e_i</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1 font-mono text-center">
+                    <div id="val-k11" class="bg-slate-950 border border-emerald-900/40 rounded px-1 py-1 text-[11px] text-emerald-300">1.00</div>
+                    <div id="val-k12" class="bg-slate-950 border border-emerald-900/40 rounded px-1 py-1 text-[11px] text-emerald-300">0.00</div>
+                    <div id="val-k21" class="bg-slate-950 border border-emerald-900/40 rounded px-1 py-1 text-[11px] text-emerald-300">0.00</div>
+                    <div id="val-k22" class="bg-slate-950 border border-emerald-900/40 rounded px-1 py-1 text-[11px] text-emerald-300">1.00</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₁₁</span>
+                        <input type="range" id="slider-k11" min="-2" max="2" step="0.05" value="1"
+                               oninput="setMatrixValue('K',0,0,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₁₂</span>
+                        <input type="range" id="slider-k12" min="-2" max="2" step="0.05" value="0"
+                               oninput="setMatrixValue('K',0,1,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₂₁</span>
+                        <input type="range" id="slider-k21" min="-2" max="2" step="0.05" value="0"
+                               oninput="setMatrixValue('K',1,0,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₂₂</span>
+                        <input type="range" id="slider-k22" min="-2" max="2" step="0.05" value="1"
+                               oninput="setMatrixValue('K',1,1,this.value)" class="flex-1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── V Matrix ── -->
+            <div class="space-y-2 border-t border-slate-800 pt-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-bold text-teal-400 uppercase tracking-wide">V Matrix</span>
+                    <span class="text-[9px] text-slate-500 font-mono">v_i = V · e_i</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1 font-mono text-center">
+                    <div id="val-v11" class="bg-slate-950 border border-teal-900/40 rounded px-1 py-1 text-[11px] text-teal-300">1.00</div>
+                    <div id="val-v12" class="bg-slate-950 border border-teal-900/40 rounded px-1 py-1 text-[11px] text-teal-300">0.00</div>
+                    <div id="val-v21" class="bg-slate-950 border border-teal-900/40 rounded px-1 py-1 text-[11px] text-teal-300">0.00</div>
+                    <div id="val-v22" class="bg-slate-950 border border-teal-900/40 rounded px-1 py-1 text-[11px] text-teal-300">1.00</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₁₁</span>
+                        <input type="range" id="slider-v11" min="-2" max="2" step="0.05" value="1"
+                               oninput="setMatrixValue('V',0,0,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₁₂</span>
+                        <input type="range" id="slider-v12" min="-2" max="2" step="0.05" value="0"
+                               oninput="setMatrixValue('V',0,1,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₂₁</span>
+                        <input type="range" id="slider-v21" min="-2" max="2" step="0.05" value="0"
+                               oninput="setMatrixValue('V',1,0,this.value)" class="flex-1">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[9px] font-mono text-slate-500 w-6 text-right">₂₂</span>
+                        <input type="range" id="slider-v22" min="-2" max="2" step="0.05" value="1"
+                               oninput="setMatrixValue('V',1,1,this.value)" class="flex-1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Temperature ── -->
+            <div class="space-y-2 border-t border-slate-800 pt-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wide">Temperature τ</span>
+                    <span class="text-[11px] font-mono font-bold text-rose-300" id="temp-val">1.00</span>
+                </div>
+                <input type="range" id="temp-slider" min="0.05" max="3" step="0.05" value="1"
+                       oninput="setTemperature(this.value)">
+                <div class="flex justify-between text-[9px] text-slate-500">
+                    <span>0.05 — sharp focus</span>
+                    <span>3.0 — uniform</span>
+                </div>
+            </div>
+
+            <!-- Reset -->
+            <button onclick="resetMatrices()"
+                class="w-full px-3 py-1.5 rounded text-[10px] font-bold bg-slate-700 hover:bg-slate-600
+                       text-slate-300 transition-colors border border-slate-600">
+                Reset Q · K · V · τ
+            </button>
+
+        </div>
+    </aside>
+
+    <!-- ══════════════════════════════════════════════════
+         VIEW WRAPPER
+    ══════════════════════════════════════════════════ -->
+    <div id="view-main" class="flex flex-1 overflow-hidden min-w-0">
+
+    <!-- MAIN PLOTS — 2 × 2 grid -->
+    <main class="flex-1 overflow-hidden grid grid-cols-2 grid-rows-2 gap-1.5 p-1.5 bg-slate-950 min-w-0">
+
+        <!-- Plot 1: Embedding Space -->
+        <div class="relative bg-slate-900 rounded-lg border border-slate-800 overflow-hidden">
+            <div id="plot-embeddings" class="w-full h-full"></div>
+        </div>
+
+        <!-- Plot 2: Q/K Space -->
+        <div class="relative bg-slate-900 rounded-lg border border-slate-800 overflow-hidden">
+            <div id="plot-qkspace" class="w-full h-full"></div>
+        </div>
+
+        <!-- Plot 3: Attention Heatmap -->
+        <div class="relative bg-slate-900 rounded-lg border border-slate-800 overflow-hidden">
+            <!-- Top-right: heatmap mode buttons -->
+            <div class="absolute top-1.5 right-2 flex items-center gap-1 z-10">
+                <button id="heatmap-rawscore" onclick="setHeatmapMode('rawscore')"
+                    class="px-2 py-0.5 rounded text-[9px] font-bold bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors">
+                    Raw
+                </button>
+                <button id="heatmap-cosine" onclick="setHeatmapMode('cosine')"
+                    class="px-2 py-0.5 rounded text-[9px] font-bold bg-slate-800 text-slate-400 hover:bg-slate-700 transition-colors">
+                    Cosine
+                </button>
+                <button id="heatmap-attention" onclick="setHeatmapMode('attention')"
+                    class="px-2 py-0.5 rounded text-[9px] font-bold bg-purple-600 text-white transition-colors">
+                    Attention
+                </button>
+            </div>
+            <!-- Bottom-left: clear focus button (only shown when a pair is focused) -->
+            <button id="focus-clear-btn"
+                onclick="clearPairFocus()"
+                class="hidden absolute bottom-2 left-2 z-10
+                       px-2.5 py-1 rounded-full text-[9px] font-bold
+                       bg-purple-900/80 border border-purple-500/50 text-purple-200
+                       hover:bg-purple-800 hover:border-purple-400 transition-colors">
+            </button>
+            <div id="plot-heatmap" class="w-full h-full"></div>
+        </div>
+
+        <!-- Plot 4: Output Space -->
+        <div class="relative bg-slate-900 rounded-lg border border-slate-800 overflow-hidden">
+            <div id="plot-output" class="w-full h-full"></div>
+        </div>
+
+    </main>
+
+    <!-- ── RIGHT PANEL: Step Guide ── -->
+    <aside id="panel-steps"
+           class="w-72 bg-slate-900 border-l border-slate-800 overflow-y-auto flex-shrink-0">
+        <div class="p-4 space-y-4">
+
+            <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-800 pb-2">
+                Step-by-Step Guide
+            </h3>
+
+            <!-- Cross-attention info card (hidden in self mode) -->
+            <div id="cross-info-card"
+                 class="hidden bg-orange-950/20 border border-orange-800/30 rounded-lg p-3 space-y-2">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-orange-400 flex-shrink-0"></div>
+                    <span class="text-[10px] font-bold text-orange-400 uppercase tracking-wide">Cross-Attention Mode</span>
+                </div>
+                <p class="text-[10px] text-slate-400 leading-relaxed">
+                    <span class="text-cyan-400 font-bold">Seq A</span> provides <b>Queries</b> only.<br>
+                    <span class="text-red-400 font-bold">Seq B</span> provides <b>Keys + Values</b>.<br>
+                    The heatmap is <b>N_A × N_B</b> (non-square).
+                </p>
+                <div class="font-mono text-[10px] text-violet-300 bg-slate-900 rounded px-2 py-1.5 text-center leading-snug">
+                    q_i = Q·a_i &nbsp; k_j = K·b_j &nbsp; v_j = V·b_j<br>
+                    out_i = Σ_j  α_ij · v_j
+                </div>
+                <p class="text-[10px] text-slate-500 leading-relaxed">
+                    Used in Transformer decoders: decoder queries attend over encoder context.
+                </p>
+            </div>
+
+            <!-- Current step card -->
+            <div class="bg-slate-950 border border-slate-700 rounded-xl p-4 space-y-3">
+
+                <!-- Step number + title -->
+                <div class="flex items-start gap-3">
+                    <div id="step-number"
+                         class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold
+                                text-white flex-shrink-0 mt-0.5"
+                         style="background:#06b6d4">1</div>
+                    <div id="step-title" class="text-sm font-bold text-slate-100 leading-snug">
+                        Word Embeddings
+                    </div>
+                </div>
+
+                <!-- Formula box -->
+                <div id="step-formula"
+                     class="font-mono text-[12px] text-violet-300 bg-slate-900 border border-violet-900/30
+                            rounded-lg px-3 py-2 text-center tracking-wide">
+                    e_i  ∈  ℝ²
+                </div>
+
+                <!-- Description -->
+                <p id="step-description" class="text-[11px] text-slate-400 leading-relaxed">
+                    Each word is mapped to a 2D vector in embedding space.
+                </p>
+
+                <!-- Tip -->
+                <div id="step-tip"
+                     class="text-[10px] text-slate-500 bg-slate-900 rounded-lg p-2 leading-relaxed border-l-2 border-slate-700">
+                </div>
+
+                <!-- Navigation -->
+                <div class="flex items-center gap-2 pt-1">
+                    <button onclick="prevStep()"
+                        class="flex-1 px-3 py-1 rounded text-[10px] font-bold bg-slate-800 hover:bg-slate-700
+                               text-slate-300 transition-colors">← Prev</button>
+                    <span id="step-counter" class="text-[10px] text-slate-500 text-center w-10">1 / 8</span>
+                    <button onclick="nextStep()"
+                        class="flex-1 px-3 py-1 rounded text-[10px] font-bold bg-violet-700 hover:bg-violet-600
+                               text-white transition-colors">Next →</button>
+                </div>
+            </div>
+
+            <!-- All steps list -->
+            <div class="space-y-1">
+                <label class="block text-[10px] uppercase font-bold text-slate-400">All Steps</label>
+                <div id="steps-list" class="space-y-0.5"></div>
+            </div>
+
+            <!-- Attention distribution for selected word -->
+            <div class="border-t border-slate-800 pt-3 space-y-2">
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wide"
+                     id="attn-bars-header">Select a word to see its attention</div>
+                <div id="attn-bars" class="space-y-2">
+                    <div class="text-[10px] text-slate-600 text-center py-2">—</div>
+                </div>
+            </div>
+
+            <!-- Key Concepts reference -->
+            <div class="border-t border-slate-800 pt-3 space-y-2">
+                <label class="block text-[10px] uppercase font-bold text-slate-400">Key Concepts</label>
+
+                <div class="bg-slate-950 rounded-lg p-3 border border-amber-900/20 space-y-1">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                        <span class="text-[10px] font-bold text-amber-400">Query (Q)</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 leading-relaxed">
+                        What this word is <em>searching for</em>. Q rotates/scales the embedding to define a search direction.
+                    </p>
+                </div>
+
+                <div class="bg-slate-950 rounded-lg p-3 border border-emerald-900/20 space-y-1">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+                        <span class="text-[10px] font-bold text-emerald-400">Key (K)</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 leading-relaxed">
+                        What this word <em>broadcasts</em>. If a key aligns with a query, that word receives high attention.
+                    </p>
+                </div>
+
+                <div class="bg-slate-950 rounded-lg p-3 border border-teal-900/20 space-y-1">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-teal-400"></div>
+                        <span class="text-[10px] font-bold text-teal-400">Value (V)</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 leading-relaxed">
+                        What each word <em>contributes</em> when attended to. Independent of Q/K — only changes the output position.
+                    </p>
+                </div>
+
+                <div class="bg-slate-950 rounded-lg p-3 border border-rose-900/20 space-y-1">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-rose-400"></div>
+                        <span class="text-[10px] font-bold text-rose-400">Temperature τ</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 leading-relaxed">
+                        Low τ → sharp, winner-take-all attention. High τ → soft, uniform attention across all words.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </aside>
+
+    </div><!-- end #view-main -->
+
+    <!-- ══════════════════════════════════════════════════
+         COMPOSITION VIEW (hidden by default)
+    ══════════════════════════════════════════════════ -->
+    <div id="view-composition" class="hidden flex-1 flex flex-col overflow-hidden min-w-0 min-h-0 bg-slate-950">
+
+        <!-- Word selector pills -->
+        <div id="comp-word-pills"
+             class="flex items-center gap-1.5 flex-wrap px-4 py-2
+                    bg-slate-900 border-b border-slate-800 flex-shrink-0">
+        </div>
+
+        <!-- 2-column layout — full height -->
+        <div class="flex-1 min-h-0 overflow-hidden grid grid-cols-2 gap-1.5 p-1.5">
+
+            <!-- Plot 1: value vectors sized by α -->
+            <div class="bg-slate-900 rounded-lg border border-slate-800 overflow-hidden flex flex-col min-h-0">
+                <div class="px-3 pt-2 pb-0 text-[9px] text-slate-500 uppercase tracking-widest flex-shrink-0">
+                    ① Value vectors  —  dot size ∝ α weight  —  ★ = output
+                </div>
+                <div id="comp-values" class="flex-1 min-h-0"></div>
+            </div>
+
+            <!-- Plot 2: chain vector sum -->
+            <div class="bg-slate-900 rounded-lg border border-slate-800 overflow-hidden flex flex-col min-h-0">
+                <div class="px-3 pt-2 pb-0 text-[9px] text-slate-500 uppercase tracking-widest flex-shrink-0">
+                    ② Add each α·v<sub>j</sub> from the origin  →  lands on out<sub>i</sub>  ★
+                </div>
+                <div id="comp-chain" class="flex-1 min-h-0"></div>
+            </div>
+
+        </div>
+    </div><!-- end #view-composition -->
+
+</div><!-- end body flex -->
+
+<script src="setup.js"></script>
+<script src="composition.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
