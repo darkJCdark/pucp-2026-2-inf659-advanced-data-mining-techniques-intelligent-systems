@@ -1,1 +1,7 @@
 archivo,doi,rol
+Zhang_2024_PE_Speech_Enhancement_ICASSP.pdf,10.1109/ICASSP48485.2024.10446337,los Transformers son position-agnostic y el PE permite distinguir el orden; en configuración causal el PE ayuda poco
+Guo_2024_Position_Embedding_NLP_ICEIB.pdf,10.1109/ICEIB61477.2024.10602658,comparación en NLP de PE sinusoidal/RoPE/ALiBi/NoPos; la necesidad del PE depende de la tarea
+Bandur_2026_PE_Vision_Transformers_TPAMI.pdf,10.1109/TPAMI.2026.3736257,la self-attention no tiene noción nativa del orden; incluye PCA y ablación que quita el PE
+Hayakawa_2025_Transformers_without_PE_ACL.pdf,10.18653/v1/2025.acl-long.1488,sin PE una máscara causal permite inferir posición (límite del experimento)
+Zhao_2024_Length_Extrapolation_PE_EMNLP_Findings.pdf,10.18653/v1/2024.findings-emnlp.582,el PE como eje de la extrapolación a secuencias largas (marco)
+Wang_2024_DeepNet_TPAMI.pdf,10.1109/TPAMI.2024.3386927,Add & Norm (modificar la conexión residual estabiliza Transformers muy profundos)

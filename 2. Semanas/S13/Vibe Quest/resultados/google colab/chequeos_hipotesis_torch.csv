@@ -1,0 +1,7 @@
+afirmación,verdadero
+"Sin PE, permutar la frase solo permuta la salida (error < 1e-10) en las 3 frases y 100 permutaciones",True
+"Sin PE, la media de las filas no distingue A de B (dif < 1e-10) en las 3 frases",True
+"Con PE, el error de equivarianza medio supera 0.1 en las 3 frases",True
+"En las 64 configuraciones del barrido, sin PE el error es < 1e-10",True
+"En las 64 configuraciones, con PE el error nunca llega a cero (mínimo > 0.01)",True
+"Con embedding de escala 10 el PE pesa menos: el error con PE es menor que con escala 1 (media de las 16 combinaciones de d y capas)",True
