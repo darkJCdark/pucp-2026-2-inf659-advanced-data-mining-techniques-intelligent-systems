@@ -1,5 +1,5 @@
 """Funciones del experimento P2 (S13) en PyTorch: codificador Transformer con y sin Positional Encoding.
-Son las mismas funciones del notebook vibe_quest_s13.ipynb (secciones 3, 4 y 11)."""
+Son las mismas funciones del notebook vibe_quest_s13_transformer_sin_pe.ipynb (secciones 2.1, 2.3, 2.4 y 2.13)."""
 
 import numpy as np
 import pandas as pd

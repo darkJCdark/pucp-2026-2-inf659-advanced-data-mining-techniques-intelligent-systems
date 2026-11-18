@@ -1,0 +1,3 @@
+modelo,imágenes,tiempo (s),imágenes/s,memoria GPU máx. (MiB),parámetros (M),GFLOPs (MAC),dim. de rasgos
+ViT-S/16,60000,55.3,1085,1212,21.67,4.6,384
+ConvNeXt-T,60000,96.8,620,2606,27.82,4.45,768

@@ -1,0 +1,5 @@
+atencion,pe,error_equivarianza,cos_gato_A_vs_B,P_original_frase_A,P_original_frase_B
+bidireccional,False,6.010135e-07,1.000000,0.462494,0.462494
+bidireccional,True,1.912029,0.807912,0.567071,0.469393
+causal,False,2.835802,0.440614,0.812489,0.732730
+causal,True,2.292097,0.679161,0.741605,0.633793

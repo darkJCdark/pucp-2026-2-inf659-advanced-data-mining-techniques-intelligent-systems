@@ -1,19 +1,19 @@
 # Interpretación de resultados · P2 (Transformer sin Positional Encoding)
 
-## Qué respondí
-Pregunta: ¿qué pasa si quito el Positional Encoding y paso "El gato persiguió al perro" y "El perro persiguió al gato"? Resultado: **sin PE el codificador no distingue las dos frases; con PE sí.**
+## Respuesta
+Sin PE, el Transformer (codificador bidireccional) no distingue "El gato persiguió al perro" de "El perro persiguió al gato": cada palabra sale con el mismo vector en las dos frases y solo cambia de fila.
 
-## Los números (PyTorch en Colab, igual a la referencia NumPy)
-- **Frases de la consigna (d = 16, 2 capas):** sin PE, el error de equivarianza vale 1.1e-15 y el coseno entre el "gato" de A y el de B es 1.0. Con PE, el error vale 1.474 y el coseno baja a 0.869.
-- **Barrido de 64 configuraciones** (d ∈ {8, 16, 32, 64}, 1 a 6 capas, escala del embedding 0.1 a 10): sin PE el error nunca pasa de 3.6e-15; con PE va de 0.049 a 2.283 (media 0.80).
-- **100 permutaciones aleatorias en 3 frases** (5, 7 y 6 palabras, una con "gato" repetido): sin PE el error máximo es 2.7e-15; con PE la media está entre 1.20 y 1.31.
+## Evidencia
+- **Parte A, pesos aleatorios:** error de equivarianza 1.1e-15 sin PE y 1.47 con PE; coseno de "gato" 1.0 y 0.87. Igual en 64 configuraciones y 100 permutaciones de 3 frases (sin PE nunca pasa de 3.6e-15).
+- **Parte B, modelos entrenados con Tatoeba (sección 3.18):** bidireccional sin PE, error 6e-7, coseno 1.0 y la misma P(original) para ambas frases (0.462); con PE, coseno 0.81 y 0.567 contra 0.469.
+- **Tarea de orden (2 000 oraciones de prueba, 3 semillas):** bidireccional sin PE 0.508 ± 0.016 (azar); con PE 0.588 ± 0.008; con PE pero quitándolo al evaluar 0.499 ± 0.015.
 
 ## Por qué
-`Wq`, `Wk`, `Wv` son los mismos para toda posición y el softmax suma sobre todas las posiciones por igual. Permutar la entrada solo permuta las filas y columnas de la matriz de atención. El orden solo entra al modelo si algo lo escribe en el vector de cada token; eso hace el PE (lámina 120 de la Clase 12).
+Pesos compartidos entre posiciones y softmax simétrico: permutar la entrada permuta la salida. Antes de entrenar, el modelo de PyTorch da una diferencia de 2.4e-7 al permutar sin PE y 0.10 con PE (sección 3.9).
 
-## Lo que no debo afirmar
-- El experimento usa pesos aleatorios sin entrenar. Muestra una propiedad estructural, no cuánto empeoraría una tarea entrenada.
-- Un decoder con máscara causal sin PE puede inferir la posición (Hayakawa y Sato, 2025), y en configuración causal el PE ayuda poco (Zhang et al., 2024). Mi resultado vale para el codificador bidireccional.
-- En análisis de sentimiento, un modelo sin PE rindió parecido a RoPE (Guo, 2024): perder el orden no arruina toda tarea.
-- Con PE, el error **no crece de forma monótona** con la escala del embedding (medias por escala: 0.97, 1.10, 0.74 y 0.39 para 0.1, 1, 3 y 10). Solo con escala 10 queda claramente más bajo; no puedo decir más con una semilla de pesos.
-- Probé un solo tipo de PE (sinusoidal) y una semilla de pesos (0); la referencia NumPy y PyTorch dan lo mismo, pero no evalué otras semillas.
+## Matices de las fuentes
+- **Causal:** sin PE 0.626 ± 0.010 y con PE 0.623 ± 0.002. La máscara causal da posición (Zhang et al., 2024, p. 1004; Hayakawa y Sato, 2025).
+- **Idioma:** 0.995-0.996 en todas las configuraciones (Guo, 2024). Quitar el PE a modelos entrenados con él baja a 0.956-0.962.
+
+## Límites
+Modelo pequeño (la tarea de orden llega a 0.59-0.63; con 25 épocas no mejora). Un tipo de PE, 3 semillas y un dataset. Parte A con pesos aleatorios.

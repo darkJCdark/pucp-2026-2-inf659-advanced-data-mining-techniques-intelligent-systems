@@ -1,0 +1,1791 @@
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:09:57
+Muy bien, ya van a ser las 7, 10. Así que vamos a ir comenzando con la clase del día de hoy
+tenemos una clase muy interesante y al mismo tiempo muy larga.
+Así que vamos a ir poco a poco y vamos a empezar, vamos a hablar sobre lo que son los grandes modelos de lenguaje llamados L. L. Ms: Cuáles son los tipos que hay llamada tendencia de escalamiento.
+Estos transformadores de visión
+y técnicas para aprovechar los modelos pre entrenados que son estas técnicas auto supervisadas, como las que, por ejemplo, utiliza Dino. Y por último, vamos a hablar de multimodelos multimodales.
+pero antes vamos a ver sobre sus respuestas. De El Va a es.
+Pero lo que voy a pedirle, empezando por monica. ¿qué tal mónica? Si podrías, por favor, compartir.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+00:10:57
+Sí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:10:58
+Impuestos.
+Muchas gracias.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+00:11:05
+Ahí se ve mi pantalla.
+¿sí?
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:11:08
+Perfecto.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+00:11:10
+Ya?
+Bueno, yo he de responder la pregunta 2, no en que la pregunta es: ¿qué le pasaría el Transformers si eliminamos el profesional encoding
+y le damos frases como el gato percibe al perro y el perro percibe el gato.
+Y si podemos demostrar con un código, comparando los en vez de una salida en la codificación posicional, porque se pierde lo
+Entonces, para esa pregunta normal, vamos a ganarme este widget, que se basa en
+el modelo Beto, que es el modelo Beard en el
+pero con palabras en español, entrenado con palabras en español. No hablo con de 12 capas
+y y acá podemos ver los resultados sin el positional en coding o con el posicional Coding como va a ir.
+Ay, La verdad es que se rayuela se puede
+si se se ve, pero no sé por qué la pantalla se puso. Es un poco gris.
+Pero, bueno, vamos a tratar de solucionarlo.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:12:24
+Que no te preocupes.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+00:12:27
+Sí, ya. Entonces. Bueno, primero, sin el positional en coding sí, sí
+podemos volver el orden. Lo que hace en Mhm
+modelo, pues es entender las oraciones como si tuviéramos una bolsa de palabras y vas sacándolas.
+Las las palabras para para la oración y no distingue el sujeto del objeto. ¿no? Entonces pasa lo mismo al gato, percibió al perro que el perro persiguió al gato
+y eso se ve en estas similitudes de Token de gato, el doctor Gato y el doctor perro en ambas oraciones tienen la
+Mhm, La misma posición y acá se ve. Conforme van avanzando las capas está a una capa total.
+sí van avanzando las capas. Estos valores se mantienen
+igual. Esto no no cambia, ¿no?
+Pero ya cuando se se tiene el posicionamiento del Covid, y hay una diferenciación, no entre
+el objeto del sujeto igual acá en la columna de perro y de gato, no.
+Y lo que lo que se había manifestado también en en estas curvas no este veía a
+en en las capas 7, 8, Quizás la distancia se se disminuye, pero ya en las capas finales para la salida.
+Se puede entender la diferenciación en
+en el resultado, no en la oración.
+Y de igual manera, en estas matrices
+este acá. Ya vemos diferenciación al momento de restar las las matrices según el orden de las palabras, es la materia. Le resta, pero si no tuviéramos el posicionamiento. Tenemos
+con 0, fíjate, no diferencia, no el 1 del otro.
+Y Y finalmente, ya Co: para mostrar esto, también lo que
+puedes detectar como palabras más probables. Según este modelo veto sin posicionar en coding no encuentra alguna
+palabra probable para para rellenar, en este caso, el sujeto, ¿Cómo posicionarlo en codillo ya
+se se visualiza, no que la palabra puras. Le puse perro, gato y hay una diferenciación en
+en donde está el hueco en la oración, o sea, en el sujeto o el objeto.
+Mhm: Y bueno, acá. Ya. Finalmente, hay una
+otras frases que no tiene mucho sentido, pero tiene que ser palabras idénticas, no para intercambiar el ratón con el gato, el gato con el ratón.
+De igual manera, con sin posicionar en Covid, pues
+está diciendo que son indistinguibles, no la salida de la A
+como puedes personalmente, odien. Y a
+se va a ver una diferenciación. No se va a poder distinguir el orden de de las palabras que se ve también en esta
+E. En esa matriz, no las mismas palabras. Y hay una una distancia que la diferencia.
+una curva similar al a lo que vimos en la en la parte de acá.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:16:19
+Mhm: Perfecto. No.
+Muy interesante. Y creo que lo muestras bastante claro, mónica.
+Y Y si vas un poquito arriba, quería
+de repente nos enfocamos en esta parte de la proyección en 2 D Claro, si le pones con
+la fase B, es lo mismo. Me parece no abajo, en la proyección.
+Ahí está lo mismo, claro. Así se ve igualito donde pone posición en Cody
+Claro, no son claro que
+entonces ahí son iguales, sí en posición de co y con posición en coña en este caso. Así se cambian como un poco en este sentido. No
+Acá estoy peor.
+¿no? Perfecto. Hay que recordar también que esto es P, C, A, Así que en el fondo es una proyección nomás. Así que realmente todas las dimensiones están pasando algo similar. Están cambiando todas las dimensiones.
+Bien, no muy interesante. Muchas gracias. Mónica. Ahora vamos.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+00:17:19
+De verdad.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:17:19
+Y a ir con Y Joaquín: No sé. Joaquín, si nos puedes mostrar lo que has podido avanzar.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:17:32
+Ya que tal buenas noches. Gracias. Este a ver un momentito ya
+sí, yo también es. He tomado la posición al encoding?
+Sí, bueno, y también trate algo de al hacer algo este parecido a la pregunta. Pero ¿qué es lo que pasa si es que fuera una imagen, no como es más sencillo. Comencé con la parte de la de de la frase, No, el gato persiguió al perro. Y
+ya. Y este es bueno la red que esta de acá de la no está entrenada, pero esta sí la la del Vision Transformer.
+Entonces acá es un poco también de lo que ha mostrado Monica, no las matrices de atención. Esto es a la salida de del Softmax, no
+este luego de del mecanismo de atención, ¿no? Y de aplicar sout más. ¿qué es lo que pasa cuando tengo posición a sin posición y composición ¿no? Cuáles son los valores de estas de estas salidas, no de la la pregunta, Digamos, por ejemplo perro ¿no?
+Y este.
+el el este a quien mira no, o sea, qué información le puede dar, por ejemplo, O bueno, por ejemplo, gato y perro, ¿no? Chaty perro, por ejemplo. Acá tenemos 0, 19, ¿no? Cero, 19. Ya Sí, se ve lo que comparto si no.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:18:58
+Sí, Sí, Sí, está bien.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:19:00
+Ok, entonces gato con perro, ¿no? Entonces, ¿qué es lo que pasa si si es que tengo la otra frase, no. Primero, el gato persigue al perro, y luego el perro persiguió al gato la la frase, la otra frase. Entonces busco lo mismo, no gato con perro
+gato con este perro. Y tengo exactamente lo mismo. Tengo exactamente lo mismo, o sea, en realidad el mecanismo de atención no tiene cómo saber que realmente ha cambiado la oración.
+Si yo reordeno todo esta matriz, obtengo exactamente lo mismo que al comienzo, no que que la que la otra frase. La otra frase, en cambio, si es que yo miro la composicionalincoding, no
+lo mismo Get gato y perro. Acá Tengo 0 2 y aquí gato y y perro. Bueno, también
+en este caso tengo 0 punto, 2, quizá buscar A, o estoy viendo mal si no, Sí, Sí, sí está igual, No, Sí, está igual. En este caso, al menos gato
+perro
+y gato perro no a ver. Pero voy a buscar otro mejor. Pero si yo y este persiguió, no, por ejemplo, que está 0, punto 5 y acá está 0, Punto. 49. No. Si ordeno todo esto de acá si son son distintos, no son ligeramente distintos, pero sí sí son son distintos. No se.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:20:23
+Pero yo creo que aquí lo interesante es ver
+a quien persiguió, no porque el orden sería el perro. Persiguió
+al gato, entonces 1 diría que persiguió en un caso debería estar más relacionado al perro. En otro caso más relacionado al gato, no.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:20:41
+Ahí ya.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:20:43
+Mhm.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:20:43
+Ejemplo perro con persiguió, no.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:20:47
+Claro, Y la derecha tienes gato como persiguió.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:20:50
+Gato con pasillo.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:20:53
+Claro, aunque perros mayor arriba. ¿no?
+Mhm: Bueno, ha cambiado.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:21:01
+Sí, Sí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:21:03
+Yo.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:21:04
+Bueno eso. Y bueno, en realidad, luego, para entender un poco, porque en un principio no entendía de dónde salían estas es estos valores? ¿no?
+Entonces también realicé un poco que en realidad lo vimos en clase también. ¿no? Pero este es un poco para recordar no qué es lo que qué es lo que entraba al al mecanismo de atención? ¿no? Entonces este el aquí, el
+desglose un poco, ¿no? X Gato viene a ser, pues este el en Beding, Digamos no que en realidad está esa la aleatorio, ¿no? Por ejemplo, el el X del perro.
+¿y este ¿qué es lo que va pasando? O si es que yo agrego el posicio, ¿no? Entonces
+modifica toditos los
+Y Y bueno, acá están cada 1 de los de los ficheros de Q B, no, que también son con pesos, digamos, aleatorios, ¿no? Pero me da un poco la idea de dónde sale al final, ¿no? A:
+Bueno, acá hice una una extensión para ver cómo sale. No, Por ejemplo, estoy Acá es toda la matriz, no del gato. Percibe el perro con todos los los vectores de cada 1 de ellos. Y esto es un poco lo que vimos en clase, cuál lo lo lo volví a hacer, digamos, para tenderlo.
+Y entonces se multiplica no por el.
+por ejemplo, el X del gato por los pesos, no por los pesos. Y, bueno, más el vías. Tengo Tengo un vector. Este vector
+hace un producto punto con el con las llaves, por ejemplo de perro. Lo que quiero ver, este? Bueno, eso. Lo que yo lo he entendido es que, por ejemplo, el cada perro es información, me me me puede dar en comparación con el Q del gato? ¿no? Y esto lo puedo sacar con el producto. Punto.
+Y cada 1 de estos. Bueno se multiplica 1 1 porque es el producto punto y sumado todo. Y bueno, luego normalizado, me da ese valor que que luego está colocado arriba, no en la en la matriz de en la matrices de atención, no en esta, en esta de acá no.
+Bueno.
+eso. Y luego ya dejé de haber revisado un poco de de cómo funciona. No entender. Acá estos son los puntajes antes del softmax. Luego tengo el softmax. Y Y esto ya son cada una de las filas de las motrices que tengo arriba. ¿no?
+Bueno, ya ya para para revisar un poco más. Entonces, ¿qué es lo que realmente pasa? No, ¿De
+qué es lo que pasa mientras yo voy cambiando con el posicional. El Covid, entonces, acá por ejemplo, si son idénticos, no, no va a cambiar nada en cada paso, ¿no? Porque si si no, no hay posición, siguen siendo idénticos, ¿no? Entonces da lo mismo
+da lo mismo. Y bueno, en cambio, en composición en Codin, sí hay un cambio significativo. Cada 1 de los vectores de arriba representa una frase, no la frase este original. Y bueno, la frase con el
+Bueno, en el caso del gato persigue al perro y el perro persigue al
+Y bueno, acá se ve un poco más.
+Y ahí. Este es ese. Es
+eso. Es todo. Bueno, ahí estaba revisando algunos detalles de cómo es el la codificación, ¿no?
+Pero ya para no alargar un poco el qué es lo que pasa con imágenes? ¿no? Entonces, por ejemplo, acá tengo 3 imágenes.
+y la primera es, tengo un polo y unas botas, y acá está. Están intercambiadas las botas y por ejemplo, la la camisa, ¿no? Entonces, y acá están todos son acá. A la red. Entrarían como parches. ¿no? Entonces tengo acá. Los este, los 18 parches
+y a la red van a entrar eso. Entonces, al final, todo eso se convierte, pues lo los parches se convierten en en un vector en un vector en en el e mail, no solamente que aquí este.
+Bueno, eso se hace con una una multicapa, nada más. Entonces, bueno, acá está más claro.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:25:06
+Sí, perfecto. No hay que hay que no hay que eso. Lo vamos a ver hoy. Joaquín.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:25:10
+A la.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:25:11
+Más bien me gustaría volver arriba. Para Está bueno también recordar lo que has hecho de los de las matrices. No sé si a ver
+estaba bien simpático y es.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:25:22
+A la.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:25:24
+Claro aquí en la izquierda es la tabla total, no de los embadings.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:25:30
+Ajá! Sí, estos son los embails de de todito del de toda la frase. Digamos.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:25:35
+Claro, y aquí tienes en el caso, vas a tener la matriz y la Q en el peso de Q, claro.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:25:42
+Sí la acude del gato en este caso, que va a ir con los kings del perro.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:25:49
+Y no.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:25:50
+Bajito.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:25:53
+Del perro.
+Mhm Claro okay, y tienes la matriz?
+No, claro, pero en sí, la matriz se va a aplicar a
+a a todo. Tuyo Ese es auto atención. Entiendo cierto cuando estás haciendo cosas. Claro, si eso es autotensión. Y entonces vas a tener los Toc. Los tokens están a la izquierda
+para que todos lo puedan ver, entonces cada cada cada fila corresponde un token distinto. Cada token está representado por una serie de medings y aquí, supuestamente en medio, y ya tiene considerado lo que es el posicionar en coding.
+entonces lo multiplicas por esta matriz Q.
+No que está ahí.
+Y Y ahí hicieron múltiples por gato, no ah okay.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:26:38
+Sí, o sea, ¿es este el gato está acá puesto en la transpuesta. Digamos, no sé si no sé si se ve bien, o sea, es este menos 1. Punto 0. Tres: es este de aquí, menos 0, 56. Es este de aquí, y esta es la matriz de pesos de del de para este. Q, no para el Q, es el W. Q.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:26:58
+Claro. Es cosa como que un ejemplo más de una parte no de todas las.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:27:02
+Sí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:27:03
+okay.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:27:04
+Sí es solamente esta esta fila por su matriz de pesos? ¿no?
+Y Y lo lo que tengo es el q de de gato, no que se está este vector de aquí no.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:27:17
+Claro. Entonces, digamos que, bueno, en el fondo, si lo multiplicas debería ser al final una matriz, igual que la izquierda, pero con otros valores. ¿cierto?
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:27:25
+Claro, ajá.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:27:26
+Y acción.
+ción.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:27:27
+Para todas, para.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:27:30
+Mhm: Ya entonces sí, está bien solo para que todos tengan en cuenta, o sea, no es solamente un vector resultante no sino va a ser una matriz igual a la izquierda, pero con distinta cantidad de valores de Medings nuevos de Q.
+Y Y si vamos abajo para ver el caso del café, y ese es el.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:27:50
+Es, pero claro, solamente para del gato y el perro, No, no para todos, no tendría tendría los 6 en total no tendría los 6,
+los Seis, De nuevo, no.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:28:03
+Sí, creo que es poco confuso, pero quería salir más como coger el cu del gato y el k del perro y ver su relación de la tensión que tienen.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:28:17
+Quería ver. Quería ver las matrices de arriba desglosada, por ejemplo, acá. Sale 0, 6, 3, no.
+Este. Pero eso todavía no está, no está normalizado. Me parece que aquí aquí está en
+acá está, por ejemplo, no este de acá es el puntaje del gato con respecto al perro es 0, 6, ¿no?
+Y luego de eso, recién sale el softmaps no se aplica el softmax, que lo lo convierte a 0, Punto, 19 no. Y este 0 19 es lo que está acá a ver. Era gato con perro. No es el que les había dado como ejemplo en un inicio, no que es este
+este aquí.
+Ah, no, Eso es con el
+Pues Sí, Sí, ya me estoy perdiendo aquí. Está que está gato con perro. Este de acá
+estoy aquí, es este 0 19 ¿no? Y así? Bueno, se calcula para todas las
+para todos los casos. No.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:29:28
+Claro entonces, pero no tiene ningún lado aquí. La matriz total de llaves o de o de consulta.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:29:34
+Ah, no, no, no, No le puse la.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:29:39
+Está bien. Por eso hubiera sido ideal, porque así podríamos amenazas. La de matriz. Esta es la otra matriz. Y aquí vas a mostrar muy bien el conjunto, pero bien, no simpático, buen ejercicio. Muchas gracias. Joaquin.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+00:29:52
+Gracias.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:29:53
+Gracias a ti. Ahora vamos a darle la palabra claudia para que nos pueda mostrar lo que ha podido pasar adelante. Claudio.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:30:18
+prefer, Se me escucha.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:30:21
+Sí, fuerte, claro.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:30:23
+Okay. Buenas noches con todos.
+Da la casualidad que también escogí la pregunta, 2, que es: ¿qué pasa en Transformers Imposition All Encodin.
+Y bueno, en este caso.
+lo que yo voy a tratar de explicar un poco adicional a lo que ya explicaron mis compañeros.
+es también ver que se puede hacer cumplir una. O se puede hacer una demostración matemática.
+Entonces, para responder esta pregunta, mi primera hipótesis es que no va a funcionar ciertamente un poco peor, si no que se va a perder, como ya lo hemos visto, el sentido completo
+en relación al orden de de las palabras.
+Entonces, para ello lo voy a voy a trabajar mi modelo con una capa de self atención, no que está ahí entrenada, pero voy a trabajar con pesos aleatorios y voy a trabajar ciertamente con pesos aleatorios, porque
+ciertamente no estoy jugando con un modelo entrenado, porque se debería de cumplir para los diferentes pesos que se asignen al modelo.
+Entonces, En base a ello, tenemos el ejemplo que se nos había planteado y entendamos que para cada frase, cada 1 de los tokens tiene una posición. Por ejemplo, él está en la posición 0 en la de la frase a gato está en la posición 1 de la frase a y así indistintamente.
+Entonces, para nosotros, ambas frases, ambas frases tienen diferente sentido.
+¿no? Entonces, en un primer análisis, lo que hice es colocar
+cada 1 de los tokens en una dimensión, 2 en 2. D No. Y bueno, para la frase a cada punto va a estar representado por un círculo. Y para la frase va a estar representada por un triángulo. Si analizamos esta
+esta representación sin el positional Encodi.
+podemos ver que los ambos puntos están superpuestos. Eso nos da entender que no se está haciendo ninguna diferenciación.
+En cambio, si colocamos con el posicionado. El coin se le está adicionando, se le está sumando el vector del posicionamiento bing Entonces, de esta forma podemos ver
+que ya las representaciones son distintas, no
+en un siguiente punto. Lo que traté de analizar es básicamente la similitud que podían existir en estas representaciones.
+Lógicamente, la similitud que van a existir entre 2 representaciones que están superpuestas va a ser 1 va a ser perfecto, Entonces, con esto podemos darnos cuenta que el modelo no está distinguiendo, ciertamente de las frases.
+pero con fe ya existe Cierta deja de ser totalmente similar.
+¿no? Y bueno, Ahí podemos darnos cuentas, pero en el caso de él no se va, no va a tener mucha
+mucha significancia. Pero en el caso, por ejemplo, de gato, ya podemos ver que sí está tratando al momento. Al momento de calcular la similitud de coseno, vemos que sí existe ya una diferencia, no
+que eso de ahí. Y bueno, aquí viene lo que
+con lo que vamos a trabajar, que son las matrices de la matrices de atención.
+Entonces, en un primer momento podemos ver que la matriz, tal cual, para la frase A y para la frase B son diferentes, pero tengamos en cuenta que tenemos que reordenar la frase B en el orden de A.
+Entonces. Hacemos el reordentamiento y podemos observar.
+Podemos observar que las matrices se parecen bastante.
+Entonces, aquí hay una demostración. Lo habíamos trabajado en la anterior clase matemáticamente. El la atención de una matriz X viene dada por el softmax de lo que menciona Joaquín, que es Q, por la transpuesta de
+de K entre la raíz cuadrada de D por V.
+Entonces.
+al decir que vamos a cambiar el orden de las palabras también equivale a multiplicar una matriz de permutación que en este caso le vamos a llamar P,
+entonces B pasaría a estar representada por P. Por X, entonces toda permitación podría cumplir lo siguiente: que la tensión de P por X va a ser igual a la matriz de permutación por la tensión
+de la matriz X. Entonces, con eso podemos observar que cuca y V siempre se van a preguntar de igual forma
+los puntajes también se le van a permutar en las filas en las columnas? Y bueno, eso pues, lógicamente va a respetar esta permitación. Y es por eso que a raíz de esto se no se llega a distinguir.
+En cambio, Si trabajamos con el posicional en Covid.
+podemos ver que, ciertamente, ya al momento de jugar con las matrices, pues ciertamente
+aquí ya se obtienen valores totalmente diferentes, ¿no? Y de esa forma podemos percibir que ya existe.
+No es o sea, están considerando tanto el orden o la relación que implica cada palabra o cada toque dentro de cada frase.
+Y, bueno, también trabajé un poco con lo que viene a ser la visualización del profesional en Covin, vi que esto está representado por diferentes dimensiones
+y de cierta forma, esto va avanzando como en forma de donde se va avanzando a la derecha, no primero suele ser de una manera rápida y luego de manera más lenta.
+Entonces, cómo juega o cómo interviene este posición alenco, y nosotros vamos a tener la misma representación, por ejemplo, para la palabra gato.
+Pero como Ambas palabras tienen diferentes posiciones en las frases. En un primer momento se le va a sumar el posicional en Covin en la posición 1. Y en un siguiente momento se le sumará al posicional Encogin en la posición. Cuatro. Entonces ahí es donde obtenemos representaciones diferentes para la misma para la misma palabra.
+¿no? Y bueno.
+como conclusión, podría decir que sin el positional en Covid, el transformer va a ser básicamente como una máquina de bolsa de palabras, un backboard.
+Y ambas frases para él, van a hacer la misma frase, ¿no? Y bueno, no es un defecto de entrenamiento. Es algo matemático, como ya lo hemos visto. Y eso también se va a cumplir con cualquier peso.
+Y bueno al asumir o al integrar lo que es el posicional en Codi.
+es la única fuente que nos va a dar o nos va a permitir insertar este orden que necesita el modelo, ¿no? Entonces sí, eso sería Eso sería mi trabajo, profesor.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:37:04
+Perfecto. Sí. Muy interesante. Si puedes volver a la ecuación, esta que mostraste porque y.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:37:10
+A. Es.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:37:10
+No la conocía. Y me pareció muy interesante. Sí, Sí, equivalencia a permutación.
+Mhm en el sentido.
+Bueno, y eso porque cambiar el orden de las palabras equivale a multiplicar por una matriz de permutación
+un cumple claro porque justamente va a ser una matriz simétrica. ¿no?
+Y vas a vas arriba la matriz de atención, y subes un poquito, y en que
+aquí lo que estamos mostrando es justamente que sea.
+No tiene simétrica, no la derecha de frase a.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:37:58
+A ver. Vamos a ver aquí. Sí.
+Mhm.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:38:01
+Mhm.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:38:03
+Vale.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:38:07
+Claro, pero tampoco es simétrica.
+Mhm: Claro, creo que no tiene necesariamente que ser simétrica.
+El tema también es que lo has entrenado con datos aleatorios, ¿cierto? Me dijistes. O sea, no se entrenaba.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:38:27
+Exacto.
+Sí. ¿qué modelo no se entrena.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:38:31
+Y pues entonces es difícil saber.
+Mhm: Ver qué sería si son 100 por 100. Claro, no podríamos venir más nomás.
+No. Muy interesante. Sería interesante ver, no sabía este tema matemático. Así que
+muy bien, muy interesante. Claudio. Muchas gracias.
+Y.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:38:51
+No.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:38:52
+Mhm: Muy bien, no sé si hay alguien más que quisiera compartir su trabajo.
+Muy bien, si no vamos a empezar con la clase, porque es el día de hoy.
+Va a estar durante y en
+bastante densa. Creo. Así que voy a intentar hacerlo lo más sencillo posible.
+igual si hay alguna consulta alguna pregunta, no duden y nacer Muy bien, entonces
+vamos a empezar no recordando un poco a
+el tema del cambio de paradigma.
+y creo que Marcho me está preguntando
+y acepta otro pedos luego de claudias si vamos a aceptar.
+Se quieres presentar tu trabajo.
+Avatar del perfil de Marshall André Fernández Sáenz
+Marshall André Fernández Sáenz
+00:39:44
+Este lo iba a hacer. Pero este, pero la verdad es que después lo que hicieron mis 3 compañeros, creo que prácticamente diría casi lo mismo. O sea, estás algo, es algo muy, muy parecido a lo que hizo Mónica. Así que no normal si lo se puede, pero no.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:40:00
+Acordar algo importante, que es el tema de de los trabajos que me parece que es este. Jueves, este viernes, ¿cierto? Marchó.
+Avatar del perfil de Marshall André Fernández Sáenz
+Marshall André Fernández Sáenz
+00:40:10
+El huayno.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:40:12
+Sí. Los pósters.
+Avatar del perfil de Marshall André Fernández Sáenz
+Marshall André Fernández Sáenz
+00:40:16
+No. Joder.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:40:18
+Porque un grupo me ha dicho que ya les han dado fecha y hora de exposición.
+Avatar del perfil de Marshall André Fernández Sáenz
+Marshall André Fernández Sáenz
+00:40:23
+Sí, Sí, sí, a mí fue bien fechas ya en la página del window. También.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:40:27
+Sí, hay un cronograma.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:40:29
+El programa.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:40:31
+Sí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:40:31
+Lo que quería rápidamente es ir por cada grupo y que me vayan comentando qué hora y qué día van a estar para yo también. No podré encontrarlas porque de repente se las voy a encontrar. Así que podemos empezar con el grupo 5, el grupo 5 por aquí.
+Me escuché. ¿hay alguien de el grupo 5.
+Yo no se acuerdan. ¿quién es el grupo? Cinco.
+Está muy bien. Jorge.
+Avatar del perfil de Jorge Fatama Vera
+Jorge Fatama Vera
+00:40:58
+Profesor. Al grupo 5 le toca el jueves de 4 y 30 a 5.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:41:05
+Cuatro y medio. Perfecto.
+Muy bien, y dínos del grupo de Christian Rosales se encuentra por ahí alguien del grupo de Christian Rosales.
+alguien del grupo de Christian Rosales, por aquí,
+mandar un correo. No hay problema de ahí hay alguien del grupo de Isidro.
+Viste Isidro Isidro, Cuándo vas a entregar tu cuándo va a presentar tu grupo
+el jueves de o 10? Once. M:
+Bien, Muchas Gracias, Isidro y alguien del grupo de Juan Diego.
+alguien del grupo de Juan Diego.
+Pero es que no. Tampoco. Este es Juan Diego.
+Un qué desnudar un currito?
+Y de ahí tenemos a alguien del grupo? Bueno, de Monica.
+Cuándo van a presentar ustedes chicos.
+Avatar del perfil de CLAUDIA FRANCESCA SUAREZ MARISCAL
+CLAUDIA FRANCESCA SUAREZ MARISCAL
+00:42:34
+Nos la ay perdón. Nos toca el viernes de Dios. Once.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:42:40
+Los 2
+y el grupo de gustavo. No sé si estaban aquí. Alguien del grupo de gustavo.
+Avatar del perfil de GONZALO SEBASTI�N QUISPE ORDO�EZ
+GONZALO SEBASTI�N QUISPE ORDO�EZ
+00:42:55
+Buenas noches rozo. Sí, nos toca el jueves de 4 y 30 o 5.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:43:03
+Mhm
+Okay súper alguien. Un grupo me ha llamado por casualidad.
+Está aquí presente.
+Avatar del perfil de EFRAIN URBIOLA RIOS
+EFRAIN URBIOLA RIOS
+00:43:18
+Profe mencionar el grupo de Christian, pero hay 2 cristianos, entonces no sé si se refiere a Al
+Ajá Efrain con Álvaro y.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:43:29
+Perfecto. Cuando ustedes se exponen, cuenten.
+Avatar del perfil de EFRAIN URBIOLA RIOS
+EFRAIN URBIOLA RIOS
+00:43:32
+Bueno, ya exponemos el jueves este este jueves, no a las 4 y media hasta las 5.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:43:38
+Un poquito
+súper.
+Entonces solo falta El grupo de Juan Diego llamaba por casualidad.
+Avatar del perfil de EFRAIN URBIOLA RIOS
+EFRAIN URBIOLA RIOS
+00:43:54
+A cómo a mí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:43:57
+Tú? ¿qué vas a hablar de referencia? Tú oye.
+Avatar del perfil de EFRAIN URBIOLA RIOS
+EFRAIN URBIOLA RIOS
+00:44:00
+Efraín. Sí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:44:01
+Perfecto. Si ustedes me dijeron jueves de 4 y media 5 correcto.
+Avatar del perfil de EFRAIN URBIOLA RIOS
+EFRAIN URBIOLA RIOS
+00:44:05
+Sí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+00:44:06
+Perfecto. Ya lo tengo anotado. Ahora no sé si hay alguien más adicional aparte de el grupo de frame que por ahí. No he llamado que esté aquí presente
+frente a un grupo.
+Bueno, Okay, el problema. Les mandaré un correo
+muy bien, entonces ahora sí podemos continuar. Espero que tenía pendiente.
+Y muy bien. Entonces, ¿qué es lo que ha pasado? Esta arquitectura llamada los transformadores, los transformers.
+Y fue un boom. Cambió por completo el paradigma en lo que vienen a ser problemas de relacionados al lenguaje, a palabras. ¿cuál era el paradigma tradicional tradicional. El antiguo
+de 2 018 era básicamente un modelo
+no entrenado desde 0, similar a como vienen trabajando varios de de las cosas que o de los trabajos que vienen haciendo otros fire quest
+lo entrenaban desde 0. Eso es el estándar.
+requieren grandes datos etiquetados. Eso es muy importante. Todas las tareas tenían que generar etiquetas.
+arquitecturas especializadas. No está C. N N s. En ese tema que vimos
+entre varias obras que hemos visto hasta ahora y hacer
+no requerían en baggings, pero en baggings estáticos.
+y vimos que los transformadores cambian un poco por completo porque porque van a tener más. Van a ser pre entrenados en corpus masivos
+no etiquetados.
+van a generar. ¿vamos a poder hacer nuevos modelos a partir de ellos usando algún tipo de arquitectura de finturing que vamos a ver durante esta clase.
+Y hay una sola arquitectura. No son varios que tienen ventajas y desventajas, sino todos. Empezaron a arrodillarse ante el poder del llamado
+transformador.
+Y por último, los enved, ins como vimos la clase pasada, ya no son embeles estáticos, sino son en vez que dependen del contexto. Son beige contextuales dinámicos.
+Cuáles son las limitaciones de estos de los paradigma tradicional
+que no hay muchos datos anotados y no se aprovechan del textos tanto texto que hay en Internet, en la Web, etcétera, para entrenar estos modelos, Entonces, cuáles son las claves del éxito
+de los modelos y los transformadores.
+y ahí lo están viviendo. Y lo están haciendo, no por el tema de su póster.
+todo lo que es el transfer learning o la transferencia de conocimientos que se puede aplicar a estos modelos de transformadores
+y, más importante, Quizás la clave para lo que viene a ser muchas de las aplicaciones modernas
+es lo que llaman el aprendizaje autosupersado o self supervise learning.
+que básicamente es que el modelo aprende sin etiquetas de manera auto supervisada.
+Ya vamos a ver más de esto durante esta clase
+en donde los modelos, nuestros modelos transformadores
+empiezan a aprender justamente bajo esta idea de que son autosupervisados.
+Y decir eso como digo, aprender sin etiquetas.
+cómo aprenden sin etiquetas? Tienen todo el tema de el Internet, entonces hay 2 formas de poder aprender.
+Por eso es que estos transformadores se van a tener 2 clasificaciones principales.
+Van a tener lo que llamamos
+y modelos de lenguaje enmascarados o más que Language modeling mlmes
+que vienen a ser. Básicamente, tenemos todo el texto de Internet, un montón de texto y
+el objetivo de estos modelos. No vamos a añadir una máscara.
+y su objetivo va a ser tratar de encontrar. ¿qué hay en la marca?
+Muy sencillo.
+Entonces este tipo de modelos, los Mlms o modelos tipo Verd, que es el modelo más más conocido de este tipo de modelos
+es el que se le llama de contexto bidireccional. ¿por qué se le dice contexto bidireccional
+que, debido a que conozco o debido a que se enmascara una palabra.
+Entonces el modelo no solamente va a poder ver la máscara, sino va a poder todo lo que sea a la izquierda de la máscara más de un contexto de la hacia la izquierda
+de lo que quiere encontrar. Y también va a tener un contexto hacia la derecha. Esto sin una bidireccionalidad
+y, por otro lado, el otro gran otra gran familia de tipos de modelos de transformadores
+es la llamada de modelos causales, o C. L Ms. Que básicamente lo que hacen es solamente predicen el siguiente token.
+que es todo lo que es el contexto de la izquierda.
+También se le puede llamar modelos tipo G, P. T, que el más popular Justamente es Chatgpt, que son los que se utilizan en todos estos modelos de lenguaje que todos utilizamos hoy en día.
+En ambos casos, se puede la cual es la consecuencia práctica es que se puede básicamente entrenar un modelo
+en miles de 1 000 000 de palabras en donde básicamente decimos, bueno, le damos una máscara, una cantidad de palabras para que lo pueda encontrar, que hay en la máscara.
+o simplemente enmascaramos los siguientes tokens y hallamos y le decimos que lo que lo que viene después, las 2 formas, con un contexto bidireccional o un contexto unidireccional
+de 2 formas que vamos a diferenciar estas arquitecturas.
+Entonces.
+y 1 diría, bueno, ¿qué tipo esos arquetes difieren en algo más. Esos objetivos no van a necesitar el transformador completo. Si recuerdo
+cuando les mostraba lo que era el transformador, la clase pasada.
+decíamos, tenemos 2 partes: la parte del codificador o el encoder la parte del decodificador. Y decíamos que esto funcionaba muy similar a cómo funcionaban los modelos de lenguaje tradicionales. Los Lctm, los Rnns, en donde el encode codificaba todo el contexto.
+veía todo y el decoder empezaba a generar la siguiente palabra. Se acuerdan. Eso lo hacíamos de manera tradicional, y por eso es que los transformadores tradicionalmente obtienen esta arquitectura en ecuador de codor.
+Sin embargo, hoy en día dijeron: oye, ¿será necesario realmente tener a ambos el poder de códer?
+Y la respuesta es no. Hoy en día ya no se utiliza este tipo de arquitectura.
+porque lo que se dieron cuenta es oye si usamos en vez de todo el contexto, las palabras anteriores las ponemos en un encoder.
+¿por qué no las ponemos directamente en el decoder?
+Porque es necesario tener un encoder cuando nuestro modelo no tiene problemas de distancia.
+Era la razón principal para lo que hacíamos una arquitectura en cuadro de códer, queríamos tratar de minimizar, reducir, no todo en la parte del encoder para luego que el decoder lo utilice.
+Sin embargo, esto 1 dice: oye si si si el transformador ve todo al mismo tiempo. No necesita un encoder.
+Si queremos predecir la siguiente palabra: simplemente le ponemos todas las palabras. Todos los tokens anteriores al comienzo del decoder.
+y nos eliminamos el encuader.
+Y ahí nacen estas arquitecturas tipo decore tipo Gpt que Lo único que hacen es hallar la siguiente palabra, como lo ha sido un decorador tradicional
+y no necesita realmente de un encore.
+Y, por otro lado, decimos, pero que si ¿qué tal si reemplazamos la palabra
+y no queremos oír la siguiente palabra si no queremos llegar a un objetivo específico.
+Queremos añadir una palabra enmascarada.
+Entonces, no necesitamos decorar.
+no porque no vamos a hacerlo de manera auto regresiva, no como lo hacíamos para el caso de Jordán, C. R. N. N. Era auto regresivo, sino solo queremos hallar una sola no palabra, una sola máscara.
+Entonces solamente voy a usar el encoder.
+Y esta es la razón por la que las escrituras tipo Verd son bidireccionales en donde básicamente encuentran cuál es la probabilidad de la palabra enmascarada. No
+es la que van a usar. También se le llama un transformador de tipo encoder o solamente codificador.
+entonces no solamente es este autoaprendizaje.
+sino también es lo que viene a ser el pipelines de estos tipos de modelos, una forma de entrenar estos modelos cambia
+antes. Simplemente se hizo un entrenamiento.
+Pero ahora se está dividiendo el tipo de entrenamiento de estos modelos en 2 fases principales o 2 fases primeras.
+Lo primero es lo que llaman el pre entrenamiento. Ya lo han visto también similar a lo que se hace en otros modelos
+donde tenemos un modelo sin entrenar. Lo entrenamos con mucha información, demasiada información, no.
+Y le ponen todo el tipo de
+todo tipo de corpus, todo el tipo de textos. Hoy en día hay modelos que entrenan básicamente con todo el Internet y dicen que se quedan cortos. Se quedan chiquitos y son más datos.
+Así que lo que están haciendo hoy en día.
+de manera muy interesante, están empezando a hacer que los mismos Lms creen contenido.
+Mira un dato curioso que me interesé poco es que se dieron cuenta.
+por ejemplo, modelos tipo Claude cuando entrenaban con obras de ciencia ficción
+que eran obras de ciencia ficción, donde la illa era mala. Tenía más chance de que sus respuestas sean malas.
+Entonces lo que hicieron para, de alguna forma balancear su datación hicieron que el mismo Claude cree muchas obras ficticias donde la guía es buena
+y amable.
+¿y eso qué hizo que este que esta fase de preentrenamiento, yo tenga un tipo de modelo destinado a que yo tenga cierto conocimiento general que has leído este entrenamiento desde 0.
+Necesitamos muchos datos, mucha información para poder extraer muchos patrones.
+Luego de eso pasamos a una segunda fase que le llaman el frametung.
+que básicamente es que este modelo pre entrenado lo entrenamos adicionalmente y lo ajustamos a las cosas que queremos que haga. Queremos que sea un asistente. Queremos que
+pueda conocer cierto tipo de benchmarks, conocer cosas asociadas a matemáticas asociadas a ciencias, etcétera.
+Entonces, por eso pasamos a la segunda etapa.
+Sin embargo, ahora también hablamos ya de una tercera paca. Es una tercera etapa. Esta tercera etapa es lo que llamamos reforce learning, human feedback o
+y aprendizaje por reforzamiento sobre feedback humano.
+¿qué consiste eso?
+¿en qué le enseñamos el modelo cómo poder
+ser que de una buena o una mala respuesta. No hay veces que los modelos en la fase de preentrenamiento de ajuste fino van a tener muchos conocimientos sobre cosas porque no queremos
+que se los muestran a las personas. Por ejemplo, hacer una bomba, no hacer algún tipo de problema químico, no algún tipo de conocimiento dañino. No
+quisiéramos que eso no lo hagan los muertos.
+Es para eso que se le va enseñando 1 se le va poco a poco diciendo qué es lo bueno y qué es lo malo. Y esto se hace, dependerá un poco más como leybles. No es lo que 1 no quisiera hacer, pero es la forma en que se le enseña el modelo hoy en día, a saber qué es lo que está bien de lo que no está
+bien.
+Entonces eso pasa en nuestro primer Nuestro primer caso.
+sí, sí, tiempo. Al final lo voy a mostrar, pero es bien sencillo. Simplemente es un notebook para hacer finn que lo puedan ver igual. Se los voy a pasar.
+Y todos estos modelos pre entrenados hoy en día viven mayormente en un ecosistema común para los que no lo conocen todavía, que se llama Huggingface.
+También face que es básicamente es una biblioteca de modelos pre entrenados
+porque hoy en día, el estándar es justamente hacer modelos preservados
+en donde no vamos a poder observar rápidamente que High en Face, para los que no lo conocen.
+Es una página donde ustedes pueden acceder, de hecho, que lo que estaba en en las bases de del póster.
+los últimos modelos. Eso es lo interesante.
+Cuando van a modelos, van a darse cuenta
+que se van a encontrar los modelos más recientes que tienen 15 h, 4 días.
+6 días, y son modelos que son muy poderosos.
+Ustedes pueden entrar 1 de estos modelos.
+y pueden ver el tipo de modelo. Y a veces también hay una pequeña, un pequeño ejemplo de lo que hace el modelo.
+Todos estos modelos son posibles, justamente porque ya esto se ha vuelto una práctica común, no de estos modelos pre entrenados.
+Son muy eficientes y son pueden generalizar de manera importante
+y va a ser muy raro que alguien pueda realmente entrenar este pre entrenamiento, no sin gastar una cantidad inmensa de dinero, una cantidad inmensa de cómputo.
+Usar estos modelos pre entrenados
+resulta ser hoy en día la forma de poder utilizar nuestras capacidades que tienen estos modelos.
+los pueden ver en High Face. Es muy sencillo. Basta que tengan hasta 3 líneas de código y ya pueden empezar a utilizar este tipo de modelos pre entrenados. Incluso pueden hacer un finturning muy fácilmente, también con una serie de pocas líneas de código para poder seguir con él la parte del fintuneo
+aquí, con lo que les mostré dentro de la cantidad de modelos
+y, por otro lado, y dentro de estos modelos van a encontrar mayormente 2 tipos de modelos grandes.
+por un lado.
+el modelo tipo Wert, que es un poco lo que les comentaba antes de lo que viene a ser la
+y la bidireccionalidad de verdad.
+Y por otro lado, lo que básicamente tenemos una serie de capas. Siempre van a encontrar distintos tipos de capas distintos, tipos de dimensiones de unidades ocultas.
+Distinta cantidad de parámetros.
+Y lo particular de verd a comparación, por ejemplo, de la arquitectura G. B, T, que van a tener estos tokens especiales.
+Estos tokens especiales, lo que van a hacer va a ser
+poder tener. Por ejemplo, está este token de máscara un token de separación entre oraciones.
+entre otros. Esto es lo que le va a dar a Bert el contexto, justamente para poder decir.
+queremos nuestro objetivo es encontrar cuál es el token de máscara. Vamos a hacer un token especial
+y le va a poder decir: hay una máscara, y queremos encontrar qué palabras. Aquí
+también podemos dar otros tokens especiales, por ejemplo, clase de oración.
+Podemos encontrar cosas asociadas a lo que queremos que identifique entonces Berth a comparación de Gpt.
+podemos de alguna forma dirigirlo?
+El problema muchas veces es tratar de encontrar las etiquetas suficientes cuando queremos dirigirlos a algún tipo de situación específica.
+Aquí podemos ver cómo funciona un poco esto de de los lenguajes enmascarados
+en donde podemos básicamente poner una máscara.
+Mhm: Tenemos algo un poco más. Zip.
+Entonces tenemos una serie de posiciones medios. Tenemos solamente eso. También puede ser una cantidad de segmentación.
+los segmentos en vez de tokens.
+Y esto nos va a dar nuestros inputs del modelo
+que no va a ser. Simplemente va a ser un poco más complejo, no de lo que hemos aprendido con G, P, T,
+Pero Y
+estos toques al final sirven para que para que el modelo poder de alguna forma dirigirlo, que es lo que vamos a querer.
+Entonces, a comparación de los modelos de encoder o los modelos tipo Gpt Y en los modelos tipo Pert van a ser muy especi. Van a ser. Van a ver muchos modelos muy específicos
+porque van a haber mu muchos modelos muy específicos porque y podemos nosotros justamente.
+utilizar un corpus distinto, no tratar de mantenerlo con distintas características.
+Y eso nos va a dar justamente que podamos obtener unos modelos distintos para distintos tipos también de aplicaciones.
+Y eso hace que tengamos varias variantes. Y esto es algo, por ejemplo, que no se va a ver tanto en las arquitecturas tipo Gpt.
+porque estos modelos tipo Wert van a ser bastante buenos en capturar todas estas relaciones
+sin la necesidad de repente de
+ser entrenados en miles de 1 000 000 de datos, porque muchas veces no van a ver miles de 1 000 000 de datos.
+Entonces, cuando a veces ¿Tenemos algún problema.
+contextos que es muy específico. O tenemos datos o información con la que quisiéramos que nos devuelva algún tipo de clase o clasificación, etcétera. Podemos utilizar modelos tipo Verd
+y puede ser útil.
+Sin embargo, hoy en día, debido a las capacidades particulares que vamos a ver en los modelos G, P, T,
+Se tiende a utilizar más los modelos tipo G, P, T,
+Bien, presionamos en los modelos tipo B E, R. T,
+Tenemos bastantes de acuerdo a sus características específicas. Tenemos visto a Alberto, que está especializado en español. Está Roberta, que también es básicamente el mismo tamaño, pero pre entrenaba mucho mejor que hace.
+Es distelverse. Es un poco más común porque está más comprimido. Básicamente es un modelo estudiante pequeño. Es un modelo
+que tiene 6 capas en lugar de 12.
+Tiene solamente esos pocos 66 000 000 de parámetros.
+Sin embargo, más o menos obtiene un rendimiento muy similar al verso original. Entonces
+funciona de aquí tenemos a Albert, que es básicamente otro tipo de modelo auto supervisado de verdad que
+que tiene un poco más, ¿no? Pero está bien eficiente, ¿no? Y funciona para distintas cosas. Entonces veía detrás de Bert. Van a encontrar muchos tipos de modelos Perth
+que tienen distintas fortalezas y distintas limitaciones.
+y ahí está la particularidad de Vert y va a ser mucho más
+amigable al momento de ustedes querer utilizarlo y entrenarlo. Sin embargo, Como pueden ver, una de las desventajas va a ser que va a ser un modelo a
+que normalmente no se le considera un modelo muy generalista. No, no va a poder hacer.
+y muchas más cosas más allá de lo que se le ha entrenado, y ese es un poco parte de las limitaciones. Es bueno si sabemos para que entrenarlo y tenemos las etiquetas necesarias para entrenar, No.
+Pero si queremos, digamos, utilizar algún tipo de
+de comportamiento emergente, que es lo que vamos a ver en el caso de las arquitecturas tipo Gpt.
+ver, nuevamente va a ser un poco más limitado.
+Por otro lado, tenemos justamente la familia. G, P. T,
+o lo que viene a ser. Básicamente, estos transformadores son solamente decodificadores
+en donde básicamente podemos ver cómo ha ido evolucionando el eje Pt 1
+y solamente tenía 117 000 000 y no, y los que lo han utilizado se dan cuenta que realmente no era tan bueno.
+Sin embargo, a partir de 175 billones de parámetros. Esto es muy importante.
+¿por qué? Porque a comparación de las arquitecturas tipo Werth si se dan cuenta la cantidad de parámetros que obtenemos o que tienen.
+No son muchas.
+¿no?
+Sin embargo, la cantidad de parámetros que tenemos en los arquitectos tipo Gpt son muchos mayores.
+Esto qué es lo que permite? Permite que puedan obtener.
+y mucho más contexto, tener mucha más información
+y son entrenados con una mucha mayor escala también.
+Mhm.
+Entonces su rendimiento llega a ser realmente muy interesante y genera propiedades que van a ser también muy útiles al momento de nosotros de utilizar ese tipo de modelos.
+Entonces esta arquitectura tipo Gpt
+no es lo que se llama una arquitectura unidireccional. Como siempre, quiere encontrar el siguiente toque. Entonces lo que va a hacer normalmente es tratar de ver hacia atrás y tratar de ver todos los toques anteriores
+para encontrar cuál es el toque siguiente. Entonces es relativamente
+sencillo, más sencillo, porque no hay que preocuparse por temas de la máscara.
+qué tipo de clasificación queremos hacer.
+etcétera, etcétera, que hay muchas cosas que hay que hay que hay que ver cuando entrenamos un modelo tipo verd.
+Y al decir que es un modelo causal. Básicamente, lo que estamos haciendo es que va a predecir la palabra que viene, el toque en que viene.
+Y entonces lo que hace realmente Gpte que funcione
+aunque funcione bien es el tema de la escala
+como es un modelo autorregresivo que solamente encuentra el siguiente toque, no es muy bueno. Al final, terminando encontr terminando de encontrar estas relaciones
+cuando tenemos una cantidad de billones de tokens con los que es entrenado.
+Y eso que permite permite justamente todas estas, Como digo, estas ventajas que no tiene verd
+entre ellas es lo que llaman el incontext learning, que es incontexturable.
+Básicamente es este cambio importante en que nosotros podemos empezar a utilizar este modelo
+para hacer cosas para las que no ha sido entrenada de manera especial de manera particular.
+lo cual lo hace bastante interesante. Entonces, el modelo no se plantunea por una tarea específica y una tarea se describe en el propio romp o en el input del modelo
+y ojo. Hasta antes de no de echar G P, T,
+esto era algo. Esto es súper raro.
+Entonces, recién con esta arquitectura, y con esta escala, no de un modelo entrenaba esta forma.
+Podemos tener este tipo de habilidades emergentes, como se le dice hoy en día.
+el modelo va a resolver sobre la marcha.
+Un qué
+sin actualizar ningún tipo de peso sin actualizar ningún tipo de información dentro del modelo. Básicamente actúa en base al contexto.
+y eso es lo que llaman justamente rumph ingenioing, en donde básicamente tenemos 3 formas de verlo.
+El primero es el llamado Citter Shots, que son solo instrucciones
+en ejemplos: oneshot, instrucciones y un ejemplo, Fishots, instrucciones y varios ejemplos.
+Mhm Qué sencillo. Shot es algo
+y relativamente sencillo. Básicamente tenemos un promse o el input del texto que le vamos a decir.
+Clasifica el texto y de manera neutral, negativa o positiva.
+y elegimos texto. Yo creo que las vacaciones están bien sentimiento y lo podría ser neutral.
+Entonces, lo interesante de esto es que está generando una especie de programa
+está haciendo algo por lo que nunca ha sido entrenado de manera específica
+y, en algunos casos, puede que funcione bien en otros casos, no por lo que
+no se ha visto de manera práctica
+y hacer lo que llaman un fishot pumping, que es básicamente hacer un prompt, y
+no solo con dándole algunos ejemplos.
+va a hacer que el modelo pueda hacerlo mejor.
+Por ejemplo, un hueco es un animal curri de Tanzania y escribe aquí algo relacionado al Guamp
+y a un fortulle, significa saltar
+hacia abajo muy rápido. Haz un ejemplo, con la palabra inventada, y lo puede hacer.
+Entonces tienen esta capacidad de generalizar las palabras nunca las han visto en sus datasets
+y luego, a partir del contexto y mucha información similar, han podido capturar
+estas relaciones al punto que tienen este tipo de comportamientos emergentes.
+pueden ser muy útiles si podemos saber cómo utilizarlos.
+Entonces, y esa es la base, ¿no? Muchos han escuchado el término Stradi que ah, sí. Los el lunes piensan, está pensando.
+Muchos de ustedes pensarán que están pensando como nosotros.
+Sin embargo, no que es lo interesante que una de las cosas que han encontrado.
+Si los L. M. Los L Ms: Estos grandes modelos de lenguaje.
+tanto mayor cantidad de palabras, mayor cantidad de tokens se generan en el Trump.
+¿no? Y va a generar un mejor output.
+no solamente con zero shot con Futushots.
+Entonces, la idea detrás del del del chain of toto, el pensamiento de los L Lms.
+Básicamente, el hecho de crear más tokens ¿Qué es lo que están haciendo en el fondo es creando más tokens, no tokens que puedan ser relevantes entre comillas
+para resolver mejor La pregunta
+no muy bueno, no están pensando si están pensando, es relevante hacer pre pensamientos para poder pensar. Después
+todo puede ser debatible, pero lo que hacen en la práctica. Si queremos hablar de manera dura, es básicamente hacer una serie de iteraciones no internas, donde a veces toda la parte interna, la ocultan
+y crean tokens de pensamiento. Los tokens de pensamiento son igual tokens.
+Y para que crean más tokens de pensamiento para poder llegar a una mejor respuesta.
+Mhm: Entonces vamos a unos ejemplos para que vean que esto es relativamente sencillo.
+Hombre: técnicas.
+Sí, Trump, como le llaman, vamos a conectar más.
+Y también van a poder ver que
+hoy en día hacer este tipo de cosas es también relativamente Sí, yo
+aquí tenemos, por ejemplo, vamos a llamar a la librería de transformers de Higgin face
+y vamos a importar un pibelines
+que básicamente vamos a decir que una clasificación Seaush
+Mhm, ¿Vamos a esperar a que cargue
+y lo que vamos a hacer. Vamos a decirle: vamos a dar una secuencia similar a lo que les mostré y vamos a darle una serie de candidatos positivo, negativo y neutral.
+Y lo que hace este clasificador es básicamente darnos una respuesta.
+Vamos a esperar un rato.
+¿y qué harías?
+Mhm: Creo que hay un problema con el coulab no. Okay.
+Aquí lo que demora más es que se descargue el modelo. Una vez se ha descargado el modelo.
+Vamos a ver que es el mucho más fácil.
+Okay Entonces mhm, y que clasificación 0, digamos
+que va a clasificar, y me va a clasificar, y lo pueden ver positivo, neutral, negativo A
+y el positivo lo clasificó mejor. ¿no? Entonces funciona. No los edificios pronting Aquí podemos ver, por ejemplo.
+sumariza o resume este texto ejemplo. Uno texto, no. En resumen, texto, el resumen y podemos ver como
+haz el texto y el resumen.
+Parece que empezó bien, pero
+en este caso no lo hizo tan bien. Entonces, la habilidad de este modelo no es lo relativamente pequeño.
+No llega a tener estas capacidades emergentes que tienen, Sí, tienen esos otros modelos que utilizamos todos los días igual. Aquí es un ejemplo, por ejemplo, de razonamiento en donde le decimos si Alice tiene 15 caramelos, come 5
+y cuántos tiene y resolver de esta forma. Uno, 2, 3. Respuesta. Alice.
+Si Bob resuelve 1, 2, 3 Y la pregunta
+¿vamos a rozar el paso a paso. Si Tom tiene 27 canicas y pierde 5.
+Cuántas canicas le quedan? Entonces vamos a ver ese si tom tiene 27 canicas
+y cuántas le quedan y empieza. Bob tiene 24 siglas. No mal
+está como repitiendo lo de arriba, ¿no? Entonces no es un buen modelo. No intentó, pero no llegó a
+tener la misma capacidad que los modelos más grandes. Pero hay cierto tipo de de de estructura, no que podemos observar aquí.
+Y aquí también tenemos algún tipo de razonamiento lógico, vamos a analizar paso a paso.
+Ta: Ta: ta texto. Primero es esto: después haces esto. Y estos más o menos lo que hacen cuando hay un razonamiento ¿no?
+Y ha entrenado los modelos para que sean cierto tipo de secuencia que les pueda ayudar a razonar supuestamente.
+Mhm.
+Y aquí podemos ver si hay una contradicción, etcétera. Entonces análisis, sentimientos con razonamientos.
+Y podemos observar que dice: cuando este servicio se encontraba lento, la comida era increíble y ya se fue
+por completo. No tiene sentido. Lo que dice acá está así. Increíble.
+Paso a paso 1. Identificarla. A mí me parece que si la está haciendo bien, vamos a verlo
+repitiendo igual que antes. Uno identificar 2, considerar el tono. Ok, entonces no está,
+no está haciendo más allá de lo repetir lo que les dije. Clasificación es lo Mhm o problemas complejos.
+Aquí podemos ver cómo puedo intentar resolver un problema complejo. Vamos a ver si lo puede hacer En un juego, el jugador puede intercambiar cartas. El jugador 1 tiene 3 cartas rojas. Dos cartas azules.
+Vamos a verlo en pasos, no razonamiento.
+Empieza con el 3 a aplicar reglas. Relevantes
+Mhm tampoco no lo hace bien, entonces este modelo no es bueno para hacer ese tipo de características.
+Sin embargo, a los modelos modernos, sí son mucho mejores para esto.
+Y aquí no tengo algún ejemplo específico.
+Pero, ¿y vamos a seguir? Con Creo que con mejor líder.
+y esto es lo importante, que todas estas habilidades es lo que llaman estas habilidades emergentes hasta antes de las arquitecturas tipo Gpt.
+Estas habilidades emergentes no no era, no era era. No existía. No era algo que podamos decir que que era fácil de poder probar, de poder revisar, de poder entender. Entonces
+es lo que hace, y es parte de esta magia no que tenemos hoy en día con Chatgpt puede generar varias cosas con las que no ha sido entrenada cosas útiles, porque parece que sí está captando estas otras relaciones que existen
+entonces aparecen a cierta escala.
+No sé si ustedes ven como vieron en mi ejemplo, varias de estas características no parecen. Están. Parece un texto que no tiene sentido. No puede razonar.
+Utilizan cierta escala para que aparezcan
+aritmética de pasos, traducciones, raras, razonamiento en cadena. Todo Esto son cosas que vemos en los modelos con mayor escala.
+Cuáles son las limitaciones? Son, por ejemplo, las llamadas alucinaciones.
+informaciones inventadas con confianza. Hoy en día hay formas también de manejar esto.
+Sin embargo, es algo típico que todos conocemos, que tienen estos L Lms
+Sesgos heredados del corpus y dificultades en razonamiento simbólico.
+ventanas de contexto limitado, costo de diferencias a veces elevados.
+Y entonces tenemos 2 arquitecturas transformadores.
+las llamadas tipo Berth y las tipo Gpt o solamente Dencoder, yo solamente de Discover, No
+que los diferencia que sus objetivos son diferentes. Un caso es una es un modelo de lenguaje causal que busca el siguiente toque. En otro caso es 1 enmascarado.
+Tenemos la y atención que en un caso es bidireccional en otro caso, es unidireccional o causal.
+El uso típico. Hoy tuvieron por ciertas tareas específicas, como les comentaba
+y en otro caso in context learning, que es esta habilidad de ser Proms o poder generar tener estas habilidades emergentes asociadas a algún tipo de tarea, no de manera un poco más general.
+Entonces, ¿qué tareas normalmente utilizamos para ver son tareas más de clasificación, control de calidad, destructivo, cosas más específicas.
+Sin embargo, para las arquitecturas tipo Gt Pt, tenemos cosas un poco más complejas, generaciones, razonamientos completado, ciertas palabras
+y las escalas también son diferentes las aplicaciones tipo Perd. Hablamos de 1 000 000 de parámetros, sin embargo, en Gpt hablamos de una magnitud superior en ya biodions en inglés o miles de 1 000 000 en español de parámetros?
+Muy bien. Entonces.
+¿cuál es el problema de hacer frente? Ya lo han visto o vamos a porque vienen participando. ¿cuál creen que es el problema de hacer frame intuning con estos modelos tipo G, P. T,
+transformadores inmensos.
+Lo que he intentado varias veces, momento. En
+Cuénteme qué es lo que piensan?
+Han intentado hacer un fanturing con un modelo grande?
+¿será posible
+que dice Joaquín Joaquín Estas por ahí.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+01:21:19
+Sí solo que estoy con problemas de de Internet.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:21:24
+Si no es.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+01:21:26
+Sí ya. La pregunta es ¿cuál es el problema de hacer fighting.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:21:29
+Estos modelos gigantes de billones de parámetros.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+01:21:35
+Bueno, pienso que, o sea, al final de cuentas, claro, el modelo se
+se especializa en un problema en particular y, en todo caso, si lo quiere, es extender a algo que puede ser un poco similar, no
+podría estar sobre ajustado. No pienso, eso podría ser.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:21:58
+Sí, es una. Gracias por participar. Algo más importante, que es que es imposible.
+Bueno, ahí hice freír freír en adelante.
+Avatar del perfil de EFRAIN URBIOLA RIOS
+EFRAIN URBIOLA RIOS
+01:22:08
+Bueno, Sí, ojo, eso es lo que acab. Le digo lo que iba a decir. Bueno, también bueno lo dijo también mónica sobre el tiempo, no
+porque al menos nosotros, en el Trab, en el proyecto que teníamos hacer finnning, el el completo y el parcial.
+Eso ya nos tomaba como 5 o 6 h, y nos, bueno, son modelos que corren en computadoras normales de casa. ¿no? Entonces no me imagino 1 de de billones de parámetros. Entonces que cae imposible, No, El costo computacional es muy alto.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:22:39
+Exactamente. Gracias, Efrain. Ese es el problema principal.
+Sin embargo, hay otros tipos de técnicas que le llaman Yanofne tuning, que es lo que se hacen con todos los modelos tradicionales de deep learning.
+Las nuevas técnicas de parchal factoring Hay varias, pero digamos la más popular de todas es la llamada lora.
+No, Ya hemos hablado más.
+Entonces hay muchas formas de hacerlo, pero lo que hace lora
+es lo siguiente: tenemos normalmente los pesos originales pre entrenados que pueden ser un montón.
+y para nosotros actualizar nuestro modelo, básicamente lo que vamos a hacer es una actualización delta de los pesos.
+¿eso qué es lo que quiere decir que si nuestro nuestro modelo tiene
+10 000 000 o 10 010 1 000 000 000 de parámetros. Estamos 10 000 000 000 de parámetros de actualización para actualizar nuestro modelo
+y, obviamente, 10 000 000 000 de parámetros. Muchas veces va a ser algo
+poco permisible, no para poder hacerlo.
+Entonces, ¿cuál es una alternativa?
+Es en vez de tener una matriz de los 10 000 000 000 de parámetros.
+Lo voy a poner.
+Vamos pónmelo por acá.
+Todos los parámetros son una matriz.
+Si tenemos una matriz, por ejemplo, de no se ve mejor, es el Mhm.
+Y vamos a cerrarlo
+aquí. Estamos. Bueno, entonces.
+en vez de utilizar una matriz de 1 000 por 1 000. Vamos a hacer una multiplicación de matrices.
+No, porque si multiplicamos esa matriz de
+1 por 1 000, por una de 1 000 por 1, nos va a dar al final una matriz de 1 000 por 1 000.
+Entonces nosotros, a partir de solamente 2 000 parámetros, no multiplicación de 2 matrices. Podríamos tener el equivalente de una actualización de una matriz de 1 000 por 1 000
+serían muchísimos más parámetros. Entonces es un poco el truco detrás del hora
+y y un pequeño ejemplo, pero creo que lo voy a pasar, porque creo que no doy mucho tiempo para después.
+Así que vamos a hacer un pequeño Break: No sé si alguna consulta alguna pregunta
+hasta aquí que alguien quiere hacer
+ninguna pregunta. Entonces vamos a hacer un pequeño break, Hasta las 8 35 que vengan a tomar un cafecito
+muy bien, y son las 8 y 35. Así que vamos a continuar.
+Mhm: Entonces, como vimos realmente. El problema de atención es un problema que se vuelve difícil poder y
+poder calcularlo, ¿por qué
+no? Y que estaba la primera pregunta: ¿dónde está el cuello de botella? Porque yo lo
+y y lo conversamos, Creo
+entonces en un transformador. Si ustedes ven lo que tienen un transformador. Es una arquitectura relativamente sencilla. Hemos estado estudiando la clase pasada. Y ahora.
+básicamente, tenemos 2 Position encodings cuando entramos en la exposición encodings. Lo único que tenemos es
+lo que es la las cabe, la la la tensión, la multicabeza, la tensión.
+Luego de eso tenemos un fit forware que es un Mlp normalmente, y una normalización de capas. Eso es todo.
+Y eso repite una cantidad de veces una cantidad de bloques de atención.
+¿dónde tenemos la tensión? Y tenemos un Lp: Eso diría, bueno.
+¿por qué demora tanto entrenar estos modelos, ¿Qué es lo que los hace bastante difíciles, matemáticamente de poder entrenar.
+Y aquí está 1 de los problemas que es básicamente
+la el tamaño de lo que viene a ser la matriz de atención.
+No hemos visto que la motriz extensión en una cantidad de tokens versus token, porque todos los toques ven a todos los otros tokens.
+Así que tiene una cantidad n de tokens.
+Mhm La pregunta es
+si tenemos 2 000 tokens, por ejemplo, 2 000 tokens por 2 000 tokens: cuánto es el tamaño de la matriz de atención
+es la magnitud, a ver quién me puede decir.
+Avatar del perfil de Marshall André Fernández Sáenz
+Marshall André Fernández Sáenz
+01:37:37
+Voy a repetir la pregunta.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:37:40
+Por supuesto, entonces e hijo Solo me respondió gustavo.
+Si tenemos 2, tenemos una, tenemos un, no, un transformador, no en donde
+el contexto, no la cantidad de tokens que puede atender es de 2 000, no una longitud de 2 000. Eso quiere decir que vamos a tener una matriz de atención que sea de 2 000 por 2 000,
+¿
+Y aquí gustavo lo dice bien, Entonces, si son 2 000 por 2 000, la cantidad de tokens, la matriz atención. Vamos a tener una cantidad de 4 000 000 de valores.
+Si consideramos una memoria F, P: 16
+y un punto flotante de 16 pits.
+vamos a tener 8 MB que pueden ser almacenados en esos 4 000 000 de dólares.
+Entonces, si tenemos el doble tenemos 8 por 8,
+cuántos tendríamos? Vamos a tener? Ya no vamos a tener 4 000 000, como lo dijo Gustavo.
+Si vas a tener 64,
+y eso equivale a cuánto a 100, 28 MB, un mes manejable. Ocho 1 000, No. Ocho 1 000 tokens.
+Ocho 1 000 palabras, 8 000 tokens. ¿qué equivale más o menos ¿Quién tiene una idea para darnos una una idea de la escala.
+Ocho 1 000 palabras.
+Mhm: Me dicen que caben 8 000 palabras ni idea
+que caben en 2 000 palabras. Vamos de poquitos.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+01:39:37
+Bueno, un par de un par de páginas, ¿sí? O sea.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:39:41
+Así es exactamente un par de páginas.
+8 000. Puede ser de repente una revista, quizás
+no 32 000 palabras, ese día, una novela, pequeña, 100, 28 000,
+sería un libro grande, un par de libros.
+¿cierto? Entonces ya cuando la longitud no el contexto de lo que queremos que brilla el modelo.
+ya la memoria se vuelve algo totalmente
+no imposible. ¿no? 32 GB solamente de memoria.
+Entonces esto hace que justamente sea este esta matriz de atención y 1 de los mayores cuellos de botella
+costo computacional de la autotensión.
+Básicamente lo podemos ver como la cantidad del contexto N por n n cuadrado y luego
+no por la cantidad de en este caso es de, y me
+el punto, el punto de tamaño de por cada par de producto
+que es que viene de la matriz B. La matriz B va a añadirle también una cantidad de valores
+y lo que se repite en cada una de las capas porque a veces son más de una capa de atención. Todo esto. El N cuadrado por D. Sólo es producto de la autotensión, multiplicamos por la cantidad de capas que tenemos.
+No. En ese caso, n mayúsculas.
+Vamos a tener que computacionalmente el costo computacional M cuadrado por D por L por la cantidad.
+Dentro de toda esta ecuación, el término cuadrático es el que tiene mayor problema.
+porque esto va a hacer que justamente vean las secuencias largas, van a hacer que la matriz de tensión
+vaya creciendo de manera exponencial.
+Entonces.
+¿qué es lo que se hace normalmente. ¿qué es lo que hacen? Varias técnicas que intentan optimizar la atención?
+Tenemos lo que es la atención dispersa o sparks atention atención lineal, atención paginal, atención local, atención tipo flash, entre otros.
+¿qué es lo que hace cada una de estas ideas.
+Bueno, van a través de distintos
+y cuellos de botella. La primera es justamente este en el cuadrado.
+en donde la primera idea es si tenemos que calcular todos los tokens, obviamente va a explotar. Entonces, ¿qué tal si calculamos menos pareces menos padres de la motriz de atención.
+entonces ahí tenemos distintos tipos de atención local versus disperso.
+O qué tal si hacemos una especie de lora, no para calcular la tensión
+en donde tenemos un lo que se hace lora. De manera general, le podemos llamar como una aproximación.
+aproximar matrices de bajo rango. Entonces, a partir de matrices de menor tamaño, podemos nosotros tratar de
+hacer el cálculo de la matriz más grande.
+Por otro lado, tenemos el tema de la memoria de G. P. U: ¿Podemos hacer algún tipo de optimización directamente en el G P U:
+Sí, hay formas de optimizar el Gpu, la manera de cortar la tensión. Eso es lo que llaman la atención flash.
+Y por otro lado, decimos, Bueno, ¿qué tal si hacemos algún tipo de caché? Siempre estamos multiplicando los mismos equivalius.
+Podríamos hacer algún tipo de guardar esa información para no tener que volver a calcular
+tenerla de manera automática. Sí,
+también. Entonces, otro tipo de optimizaciones que intentan no hacer este tipo de artilugios. ¿quién usa todo esto? Bueno, varios de los modelos modernos modelos open source tipo Mister Deepsic L Max, Quimi
+y quién utiliza la atención flash. Todos los modelos hoy en día tienden a utilizar la atención flash.
+¿por qué
+es una optimización más de Gpu, No es una optimización que vaya a reducir el performance de alguna manera.
+Y quiero utilizar este memoria, Caché también distintos tipos de modelos. No hay modelos que cuentan los mismos parámetros.
+Pero si no utilizan este tipo de memoria, caché al momento de ustedes hacer algún tipo de deployment en un servidor, etcétera. La diferencia entre 1 que utiliza algún tipo de optimización de memoria es brutal. No es la razón. No sé si les ha pasado a ustedes.
+tienen una, están trabajando en Claudio. Tienen 2 cuentas en sí, tenemos 2 cuentas. Voy a aprovechar el doble.
+pero ni bien se conectan a la otra cuenta. La memoria sube un montón. ¿y qué pasó que no está mal, No está pasando el caché.
+Entonces tiene que volver a procesar todo.
+Entonces esa es la razón principal por la que cambiar cuentas, claro en algún otro tipo mientras están trabajando en un código, pronto aumenta su uso
+porque no está llevando el caché de una cuenta a otra que tiene que volver a recalcular todo.
+Entonces, esto, ¿qué es lo que hace que? Bueno, los distintos tipos de
+y de formas de optimizar, empezando por la llamada atención dispersa. Tenemos la atención completa. Básicamente enmascaramos.
+no vemos todos los tokens, sino que tenemos distintos tipos de patrones
+En este caso, por ejemplo, 1 diría, bueno, ¿qué patrón es este
+en este patrón? Asocia los tokens, que están más cerca Si estuvieran todos ordenados
+con los tokens de su vecindad, todas las relaciones de larga distancia, las cortas, 1 pensaría que son menos importantes.
+Primero, sabemos que no siempre es así. ¿no? Entonces 1 dice, bueno, ¿para qué hacemos autotensión? Porque no vamos a terminar cortando estas relaciones de larga distancia, que era la idea de la autotensión, ¿no?
+Pero lo interesante de esto es que 1 puede aprender estas relaciones
+ya no necesariamente van a hacer relaciones
+específicas, sino van a ser patrones que vamos a poder encontrar que los mismos datos van a poder darnos.
+Entonces estas máscaras funcionan. Y 1 diría, bueno, ¿qué tanto reducen o no? ¿qué tanto reducen.
+lo que viene a ser la eficiencia?
+Ya obviamente hay una reducción. Sin embargo.
+estos patrones se han encontrado en este estudio que habíamos dado antes, que son los patrones que ayudan
+reducir en menor cantidad y destaca el estudio.
+Bueno a lo que viene a ser la tensión.
+Entonces tenemos distintos patrones. Tenemos dentro de lo que es una ventana local donde cada toque envía a sus vecinos
+o patrones globales. Uno podría pensar, bueno, por ejemplo, el perro. Nos gustaría saber con qué se relaciona.
+pero hay palabras que están por todos lados, esto que es, aunque no tienen mucho sentido como hablar de de no
+repente o la coma no, o a veces de repente, si nos ayuda bastante, entonces hay ciertos ciertos tipos de tokens que si no no son tan importantes y otros que sí son muy importantes que separan cosas importantes.
+Por otro lado, podríamos tener esta dilatada o una aleatoria, ¿no?
+Entonces distintos tipos de modelos pueden pueden justamente obtener, o pueden usar distintos tipos de ventanas.
+Este es el ejemplo de lockformers es un tipo de
+que utiliza no solamente la ventana local. Si no también estos tokens globales.
+entonces ¿qué tenemos el campo receptivo aquí. Voy a pasar un poco, porque tenemos varias cosas que tocar hoy día, pero ahí lo pueden ir revisando sobre
+y como este tipo de modelos de atención dispersa con modelos de
+y pueden funcionar y funcionan bien y reduce sustancialmente la cantidad de cómputo. Eso es un poco lo importante en este tipo de patrones de dispersión
+y y podemos verlo de Córdoba. El tipo de patrón de dispersión que elegimos o el patrón de dispersión
+que los modelos tienen. El costo computacional va también a reducirse.
+Es un poco lo importante.
+Entonces. Y lo interesante de esto es que la mayoría de modelos modernos utilizan algún tipo de estos patrones de atención. Si han escuchado de Deepy o de Gema
+o de Mistrell, No, incluso de G. P. T.
+Utiliza algún tipo de dispersión de atención. No utilizan toda la atención, como esperarían entonces
+y que combina 1 de estos modelos reales. Y los modelos actuales no solamente a veces son una sola técnica
+es una serie de técnicas distintas de optimización
+que no solamente es lo que viene a ser
+la atención flash. Estas optimizaciones de Gpu, sino también son, utilizan distintos tipos de optimizaciones de caché, por ejemplo.
+Entonces un modelo por sí solo ya no es solamente sus parámetros o su arquitectura.
+sino hoy en día. También es cómo se optimiza para poder correr el Gpu us para poder correr en servidores o de manera más eficiente. Entonces.
+y como que varios temas asociados a este tipo de optimización donde puedo hacer
+en este caso ya no es tan moderno. Pero G mini Uno punto 5,
+no como la ventana de contexto.
+no que es. Se acuerdan que vimos al comienzo al comienzo de esta parte.
+Pasando el Break, solamente teníamos 128 000.
+Ya si te vi un un una cantidad de 128 000 Tokens
+que hablamos de una memoria de 32 GB.
+Sin embargo, los modelos actuales, varios de estos hablamos de ventanas de contexto
+que puede ser tranquilamente de un 1 000 000 y toques.
+y son contextos que son necesarios. No No es como que son desperdiciando el contexto, sino son justamente
+contextos que sirven para obtener mayor eficiencia o para poder obtener mejores resultados de estos modelos.
+Y cómo es que estos modelos obtienen esta cantidad de tokens, Esa cantidad de y justamente utilizan varias de este tipo de técnicas, no solamente una, sino a veces es una combinación de varias de estas
+entonces. En resumen, ¿qué es lo que hay que saber sobre optimización de transformadores muy fácilmente si van a entrenar o hacer algún tipo de fintuning Ya de todos modos, la mayoría de modelos están están, y la mayoría también de paquetes. Ya están teniendo atención. Flash
+Yo tenía 2, y ahora ya te decía infraxis, 3, me parece.
+Y esto es, digamos, debería ser como un default en general.
+porque simplemente es una optimización de Gpu. Funciona bien y y es matemáticamente lo mismo.
+Luego sirven estos modelos a muchos usuarios, si es que tienen un modelo que podemos poner en un servidor, piensa crear algún tipo de servicio, se deberían empezar a pensar en algún tipo de estos cachéscabe y caché.
+Y Y hay varios tipos. Pueden revisarlos.
+y en contextos grandes, no quizás contextos grandes. Si es importante hacer este tipo de soluciones híbridas dispersas de las capas de tensión
+y, por otro lado, la memoria no
+cuantizar el caché, comprimirlo y otro tipo de técnicas en base a lo que necesite normalmente.
+Muy bien. Entonces, Ahora, pasando
+esto es lo que permite que hoy en día los transformadores cada vez sean más populares. No solamente el problema que originalmente era
+cómo hacer para entrenar estos modelos cada vez más grandes ventajas de contextos cada vez más grandes. Se volviendo más manejable a manera de producción.
+¿esto ¿qué es lo que hace que haya una especie de explosión del tamaño de los modelos.
+Estos modelos cada vez se van volviendo más grandes, más eficientes Y hoy en día, y eso lo puedo decir con bastante certeza: no todos los modelos de transformadores son los que dominan cualquier tipo de tarea relacionada al lenguaje.
+Ustedes van a hacer algún tipo de problema de lenguaje para
+más probable si lo van a ser como de la no con con el Ma, el el mayor performance o con la mayor eficiencia posible.
+No, hoy en día mayormente van a entrenar un modelo de tipo transformador.
+Eso cabe una idea que se empezó a generar en esa época, y todos los transformadores.
+¿qué tal si utilizamos transformadores para otro tipo de modalidades, No solamente texto.
+No hasta miren hasta el 2 012, no en 2 015
+todo lo que era arquitecturas de visión
+y eran justamente los como los las redes convolucionales las que predominaban.
+Entonces yo decía, Bueno, si funcionan también los transformadores para lo que son textos.
+Mhm, podemos aplicarlo también para imágenes
+que es donde nace el ya famoso transformador de visión.
+Podemos tratar una imagen como si fuera una frase, un texto, una serie de tokens.
+Este es el artículo con el que empezó todo llamado una imagen. Vale 16 por 16 palabras.
+Los formadores de de división, básicamente
+en donde 1 sería bueno si vamos ser un transformador de visión?
+No, hipotéticamente.
+¿cómo lo haríamos?
+Joaquín nos adelantó un poco, ¿no?
+Y entonces.
+¿qué piensan como Joaquín cuéntanos cómo cómo funcionaría un transformador de visión? ¿qué es lo que hace más sentido? No sé si estás por ahí.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+01:54:08
+Sí.
+Mhm.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:54:10
+Mhm.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+01:54:10
+Bueno, lo que se hace es, en lugar de claro lo que necesita ser los envenes. ¿no? Entonces, una vez que tenga los bebés, puedes utilizar la misma el mismo mecanismo de atención. Entonces, ¿cómo pasas de una imagen a los embages?
+Es este ahí. Lo que se hace es, se divide las imágenes en pequeños patchs, no pequeños pedacitos
+y esos pedacitos.
+Bueno, una de las formas hay varias formas, no de sacar los embails
+y y convertirlos en un vector. No, no sé si comentas la forma también sería bueno. Un puede ser con redes. Este multi percepción, por ejemplo, ¿no?
+Y Y bueno, el el positional gay también es es similar. No.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:55:02
+Mhm Perfecto. Y yo creo que que la pregunta interesante aquí sería
+si tenemos un transformador, este transformador que sería sería un encoder o un decoder.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+01:55:18
+A en el caso del Guiso Transformers, ¿Sería este
+un encoder. ¿no sería un encoder.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:55:28
+¿por qué un encoder.
+Avatar del perfil de GONZALEZ VILLARREAL, JOAQUIN
+GONZALEZ VILLARREAL, JOAQUIN
+01:55:31
+Porque un momento, porque.
+en realidad, claro, no En el En el caso del lenguaje, lo que quieres es generar texto, no. En cambio, en el vicio transformer depende de la ta de la tarea? En realidad no.
+pero, por ejemplo, si quisieras generar otra imagen. Sería ambos, no.
+Pero la la idea, base, digamos, del vicio transformer, por ejemplo, en segmentación. No, No, no necesitas este.
+no necesitas generar otra imagen, sino clasificar, por ejemplo, la imagen.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+01:56:14
+Mhm. Perfecto. Gracias. Joaquin. Y ahí Christian dice colegio
+un thecodere que a partir de este info resume, genere la imagen similar al embudo de la lluvia.
+Muy bien. Entonces entonces la Vit original, la primera, justamente hace hacía bastante de lo que dice Joaquín para crear un embedding debido a que no era un texto.
+Lo que hacía era crear parches.
+Cada parche iba a corresponder justamente a un vector.
+Y ese vector es el que se podría considerar como el símil del token, ¿no?
+Y esos tokens que se leen una especie de meddings.
+Lo que iban. Lo que lo que se iba a hacer era agregar un
+un em beding especial. Es un embarding tipo clase.
+¿para qué? Para justamente poder hacer algún tipo de clasificación?
+Entonces, en el caso del Viit original.
+ya no se hacía segmentación. Como como dice Christian, solamente se hacía lo que viene a ser clasificación.
+Entonces, el tipo de arquitectura para poder hacer esto con un toque en especial tipo clase. Sería 1 tipo Verd. No es solamente encoder, pues justamente va a ver toda la imagen de la imagen va a querer encontrar
+qué tipo de clase debería corresponder entonces.
+Y eso era básicamente lo que podemos considerar, no el encoder
+clásico, no de lo que es un vid.
+Una cosa interesante que 1 diría, bueno, ¿y cómo hacía para poder determinar cuáles eran los positional encoding Mhm.
+Algo curioso en el caso de justamente estos viets es que
+y el autor no le puso directamente, no un valor no así como vimos en el caso de los transformadores tradicionales, hacemos coser, no sacamos. Esto.
+Dijo, no hagamos que la red auto aprenda también, no. ¿qué tipo de beding va a generar.
+Y lo interesante es que aprende algo muy relacionado justamente que vemos a la derecha. Estos son los parches asociados a la posición de cada parche.
+Vemos que se asocian a lo que puede parecer la posición.
+Sin embargo, nadie se lo ha puesto. Nadie ha escrito en el posicional Encoding de manera no directa.
+sino una red. La ha aprendido de manera automática.
+Eso es también muy interesante.
+Entonces aquí podemos ver básicamente una pequeña pequeño, pero ahí está una pequeña animación.
+Mhm, Luego los parches van.
+Es un platerin.
+Le agrega el de clase y de exposición online. Coin
+Pasa El transformador transformador termina en un Mlp para poder identificar qué clase es
+ya muy bien.
+Y bien, entonces, ¿por qué importa el tamaño del parche?
+¿quién diría qué pasaría si los parches ya sería muy, muy pequeñitos.
+Puede ser el problema.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+02:00:03
+Mayor costo de procesamiento.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+02:00:06
+Así es correcto.
+Esto es lo que estamos viendo hace un rato. No, si tenemos muy, muy pequeños. La matriz de atención que va a tener este Este transformador de visión va a escalar inmensamente. Va a ser muy, muy grande.
+Iba a ser difícil de poder procesar.
+¿cuál sería el problema si tenemos parches demasiado grandes?
+¿qué me puede decir a ver? Piénsame un poquito que parece? Tenemos parches muy grandes.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+02:00:41
+Perdemos resolución? Sí.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+02:00:43
+Si es correcto. Monica.
+Ponemos la solución y ese es 1 de los es. Ese es Este es el dilema de todo transformador de visión. Hay.
+en comparación a las convoluciones de alguna forma. No No se tienen que preocupar tanto. Por eso
+el tema de todo. Vi a T. Es si tienes parches muy grandes. Vas a hacer una mala resolución. Vas a haber problemas al momento de segmentar, por ejemplo. Pero si es una muy pequeña.
+vas a terminar siendo computacionalmente muy costoso, ¿no?
+Ya entonces siempre hay una especie de Trader Off que se utiliza para tratar de mejorar. No.
+aquí podemos ver, por ejemplo, en este caso utiliza este toque en especial que les había comentado hace un rato, que es un tipo clase similar a las arquitecturas tipo Bert
+para poder saber qué es lo que ahí en la imagen.
+Entonces, y esto es lo que les comentaba hace un rato sobre los embeles posiciones. No
+terminan aprendiendolo de manera automática.
+Y si 1 ve okay, entonces sencillo, tenemos básicamente una imagen. La cortamos en parches, esos parches van a ser nuestros embeddings.
+estos van a pasar y les vamos a dar un posicionado en coding
+y vamos a tener un un especial que es para la clase.
+Hasta aquí lo hemos vuelto un transformador de texto.
+¿qué hay dentro del transformador?
+Lo mismo que un transformador de texto.
+Lo interesante al momento de que hizo esta arquitectura
+es que dijo: No voy a cambiar nada de la arquitectura de transformador, que es la que funciona.
+Lo único que voy a cambiar es el input.
+Y vamos a ver que pasa
+aquí. Podemos ver el transformador original.
+Y aquí podemos ver. El Vi a T.
+Es exactamente lo mismo. ¿no?
+¿qué aprende este viat?
+Bueno, aquí podemos ver algunos ejemplos de la imagen original A.
+Y lo interesante es que podemos ver el mapa de atención.
+¿no? Pero un píxel específico a que atiende no.
+o, en este caso para el token de la clase. No podemos coger el token de la clase y ver toda el nivel de atención que tiene para el resto de todos los tokens o el resto de toda la imagen.
+¿dónde podemos con esto saber tener un mapa de atención de las imágenes.
+y es interesante que pueda encontrar estas relaciones que nosotros podemos observar.
+Mhm.
+Entonces 1 dice, bueno.
+en este caso, en estos viats en el Paper original, con distintos tamaños, entre 86 000 000 hasta 632 000 000
+de parámetros en donde decían
+muy bien, vamos a entrenarlo y vamos a compararlo con estos modelos de convolución. Estamos hablando de este momento, que los modelos de convolución siguen siendo los modelos que ganaban.
+¿y qué fue lo que encontraron? Aquí? Tenemos los modelos de Vit
+y los Reds Net, que eran los mejores modelos en su época.
+en donde podemos ver que los fresnes, cuando tenemos 10 en ese dataset que es Jft petrading ensembbles
+otros 10 000 000 de imágenes con las que has entrenado.
+Podemos ver que los viats y pierden que los modelos de visión de transformadores
+pierden completamente, no las convoluciones si les ganan.
+Sin embargo, con 30 000 000 de imágenes con las que entrenamos estos modelos, vamos a observar
+que algunos modelos de visión empiezan a ganarle.
+Y podemos observar que hay modelos de división de menos parámetros no pueden ganar tampoco.
+Sin embargo, el modelo de convolución sigue ganando hasta que llegamos más o menos a los 100 000 000 de imágenes recién con 100 000 000 de imágenes
+es que vemos que los transformadores de visión, pieza en
+cobrar sentido empiezan a poder mejorar o ser mejores.
+y sus contrapartes de modelos de convolución.
+Eso es lo interesante de este artículo. ¿no?
+Y no solamente tienen que ser, no solamente tienen que ser entrenados con muchos datos, sino este es el modelo más grande de todos los modelos que se han entrenado
+en esta cantidad de parámetros. Tampoco hubiera ganado el modelo de convolución.
+Esto fue un shock completo, porque todas las personas que decían con nuestros modelos de convolución son los mejores modelos para la clasificación de imágenes.
+para lo que es: problemas de visión computacional.
+Se dieron con la gran sorpresa de que un transformador que había sido originalmente solo hecho para textos
+judías, no solamente ser competitivo. Si no podía ser el mejor modelo para poder hacer visión computacional.
+Entonces esto fue un shock
+en su momento. ¿no? Porque todos dijeron Okay, Entonces, una sola arquitectura sí es posible para todos. ¿no? Porque dice, bueno.
+porque el vital, 300. 1 000 000 de imágenes no. Y las series, no.
+al menos para el comienzo de la cantidad de imágenes. Eso es lo que llamamos el sesgo inductivo.
+¿qué es el sesgo inductivo? No
+el signo inductivo. Son estos supuestos de la arquitectura.
+En el caso de una red convolucional, ¿cuál es el hijo inductivo? ¿qué supuesto regla y red convolucional que
+no tiene cualquier otro reto a ver quién me puede decir quién recuerda?
+Es lo que hace el error convolucional el que nace otra vez.
+Muy bien. Recuerdo.
+Mhm en el izquierdo. ¿se acuerdan este monica.
+Avatar del perfil de ABARCA ABARCA, MONICA LUCIA
+ABARCA ABARCA, MONICA LUCIA
+02:07:54
+No, sí. Bueno, iba a mencionar que el el carnet de ventanas pequeñas no trasladándose y todo
+por la imagen y mirando pinceles alrededor.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+02:08:05
+Exactamente. Muchas gracias. Monica, Entonces, el sesgo inductivo, El caso de las redes convoluciones es justamente esas ventanas, no las ventanas.
+extraer estas características? No porque porque las imágenes van a encontrar una relación espacial cercana.
+Entonces hay un sesgo que les da, qué cosas les da.
+No No necesitan muchos datos para encontrar esta relación espacial cercana
+y el kernel. Esas ventanitas que tiene les dan esa característica.
+Sin embargo, los vi a Ts tienen que aprender esa característica, esas relaciones entre los píxeles.
+Entonces, sin embargo, ¿cuál es el problema con los Cnn, supuestamente
+que van a tener un techo, porque ese sesgo no siempre se va a cumplir. A veces las relaciones de larga distancia en una imagen pueden ser más importantes
+al momento de encontrar una imagen.
+Entonces, en el caso de las C. N, N, tenemos estos píxeles cercanos. Se relacionan Mas
+Beatty tiene que aprenderlos. Por eso tiene muchas imágenes para encontrar esas relaciones.
+así como puede ser también la llamada equivalencia de la translación. Cuando nosotros movemos una imagen en teoría, el Kernel no cambia el resultado del Kernel no cambia
+se hace justamente de manera paralela, se utiliza en distintos píxeles, entonces no debería ser ningún problema, entonces hay una jerarquía. No teníamos a ver si se acuerdan varios tipos de kernes y según los carnes de los carnes, distintas capas de convoluciones.
+Eso también es algo que tenemos que hacer. Sin embargo, los viats tienen también que aprender
+y los pesos compartidos no teníamos el kerne o el filtro que se utilizaba para distintas posiciones, y el Beat no lo tiene.
+Sin embargo, lo que sí tiene el Beat, que va a poder encontrar estas relaciones de larga distancia.
+Y eso es lo que 1 podría pensar. ¿qué termina haciendo que el Vit con muchos más datos.
+termine ganando, no siendo mucho obtenido, mucha mejor información obtenido, mejores resultados. En general, entonces
+no diría, bueno, vamos a entrenar con vits difícil. No, normalmente no se entrenate desde 0, similar a como no entrenamos un transformador de texto desde 0,
+sino lo que vamos a tradicionalmente hoy, lo que vamos a hacer es utilizar ya un vit entrenado, no para
+un billete entrenado.
+Y para poder hacer algún tipo de fanturing.
+no poder en algún tipo de tarea de don de una tarea específica.
+Pero si tenemos el dato set muy grande y cómputo disponible, viat, digamos si es algo que podríamos hacer.
+¿no? Desde muy pequeño.
+¿no? Incluso si hacemos un vit pre entrenado de repente, no va a funcionar. Así que los Nnn está bien. De manera general, podemos decir que
+es una alternativa. No, Este es un poco el la forma hoy en día de ver en qué momento utilizar una C. N. N, ¿En qué momento utilizar Vit.
+Entonces 1 diría, bueno, entonces el Betis ganó por la atención va a ser mucho mejor
+y respuesta es no. No Necesariamente porque porque el viit, como les comentaba, no lo que había comentado también Mónica antes. Tiene problemas. No.
+¿Cuál es el problema. Tenemos los problemas. El primero es el de los datos.
+Ya
+son muchos datos para entrenar estos Beats. Y el segundo problema es la resolución y la escala que es esto que hablamos antes sobre la matriz de atención.
+Entonces lo que es, Tenemos 2 posibles soluciones.
+La primera solución es un transformador de visión
+y 1 diga Bueno, como se transforma en visión, demoran tanto en entrenar.
+¿qué tal si lo entrenamos en base a una Cnn.
+No, Si tenemos una C, N. N, Y lo utilizamos como una especie de red maestra.
+Podríamos transferir el sesgo inductivo de la Cnn a la Vit Mhm.
+y ponemos una destilación de eso, De las características que una Cnn aprende haciendo una Viat
+se volvería más eficiente. Podríamos de alguna forma entrenarlo con menos datos. Y si es posible.
+Y la los artículos respaldan que esto funciona.
+Tenemos viats que son y relativamente, y últimamente.
+con pocos datos. Aquí tenemos imágenes por segundo y tienen una buena precisión.
+Y, por otro lado, 1 dice: ¿y
+qué tal el tema de la resolución
+Okay. No podemos no entrenar un transformador de visión con
+com con muy pequeñas, muy pequeñas ventanas. ¿no?
+Y decimos la resolución de los Beattis tienen un problema. No hace falta un costo lineal de los parches, presentación.
+Entonces vamos a cambiar un poco. ¿qué tal si en vez de
+entrenar toda la imagen y excepto la autotensión en cada 1 de los distintos parches, no
+hacemos una especie de ventanas, unas ventanas no y parches.
+en donde en vez de entrenarlo
+en cada 1 parche por parche.
+Hacemos la autotensión en cada una de estas ventanas, Entonces.
+¿y eso qué va a hacer que en vez de tener que calcular una matriz de n por N, en este caso son 2, 4, son 8 por 8.
+Vamos a calcular simplemente la tensión en 4 de 4 por 4.
+Entonces podemos paralizar mejor no es el problema.
+Y, sin embargo.
+nos genera otro problema adicional: lo que es la información nunca cruza de una ventana a otra.
+Y
+entonces, ¿qué es lo que podemos hacer? ¿podemos hacer una especie de también de de una atención local barata y una comunicación entre ventanas. Eso es una forma de. Vamos a ir alternando, como decían los modelos convolucionales.
+y podemos tener ventanas locales y ventanas más locales y poder tener como las redes convolucionales.
+no una serie de relaciones espaciales de distintas categorizaciones. Qué interesante
+aquí, entonces los Sprint transformers, que son los transformadores de visión de mejor performance su gran innovación
+es que total. Las imágenes más similar a como lo hacía una Cnn con esas características piramidales.
+en donde no solamente tenían la atención local, sino iban a tener atención local, pero de manera regional o atención local o una atención, una auto atención regional, una auto atención cada vez más local no iban cambiando la resolución de los parches y lo que iban a pudiendo encontrar durante la red
+Okay. Interesante. Entonces podemos no mejorar. Y eso lo interesante de hacer esto es que realmente sí funcionaba.
+Entonces hacía una serie de y a transformadores tipo swing
+y lo hacían distintos stages similares a lo que como lo hacen en una reconvolucional donde cae Stage y va cambiando justamente las dimensiones
+de donde iban a ser los parches o los parches más grandes, los parches más chiquitos, etcétera.
+Entonces, y entonces esas han sido las soluciones que se han ido desarrollando durante el tiempo
+para tratar de mejorar estas limitaciones que se encuentran en los vits.
+Y entonces, si ustedes no, en algún momento van a hacer un Vit o van a hacer algún tipo de transformador de visión.
+pues básicamente hacer una clasificación a gran escala.
+clasificación con datos moderados puede utilizar un D I, T
+o, si quieren no tener una segmentación o una detección
+mayor. El swing siempre es el mejor, nada más que el Vit original.
+Sin embargo, en el 2 020 no salió otro artículo.
+un artículo de metas muy interesante que hablaba de cómics en el siglo 20,
+sino era el retorno de las redes convolucionales
+donde dijeron hoy qué extraño no. Los viets fueron mejores entre comillas.
+las redes, las res los res nets tradicionales.
+Sin embargo, será un problema.
+No entiendo
+comparar el swing con una red de 2 000 Quince. Estamos comparando atención contra convolución, que es como lo venden tradicionalmente. Estamos comparando técnicas del 2 021 contra técnicas del 2 000 Quince, lo que es aprendizaje profundo.
+Entonces, lo que hicieron en este artículo ahí, creo que hay una consulta de
+Jorge, Creo que tiene una consulta. Disculpe a ver si me acaba de ver.
+Avatar del perfil de JORGE JOSUE CHAMORRO CAYETANO
+JORGE JOSUE CHAMORRO CAYETANO
+02:17:51
+Sí, profesor. Quería consultar. Eso es un transformer. Entiendo que menciono que el vicio transformer requiere, o sea, para que valga la pena usarlo frente a otras. Tener como este 3 005 1 000
+imágenes. Pero si quiero usar el vision transformer para segmentar imágenes. No sé,
+tal vez segmentar la forma que tiene una trucha
+conviene. No sé trabajar también con eso de 10 000 imágenes
+exactamente para que tenga mejores resultados frente a una C, N, N.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+02:18:22
+Sí, o sea, lo lo que siempre te conviene ya es utilizar una idea pre entrenada y hacer un fintuning con tus datos más pequeños
+si nunca te hace pequeño.
+pero idealmente yo dirías tener algún, vi a T que se acerque lo más posible a tu a tu a tu est, a tu dominio de estudio, o sea, si quieres, por ejemplo, segmentar truchas.
+si puedes encontrar algo que ya segmento
+animales. Por ejemplo, es más fácil adaptarlo a truchas.
+Aquí hay algo que de repente segmente caras. Por ejemplo, entiendes.
+Avatar del perfil de JORGE JOSUE CHAMORRO CAYETANO
+JORGE JOSUE CHAMORRO CAYETANO
+02:18:58
+Claro.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+02:18:59
+Entonces digo, esa es la recomendación general.
+Si solo tienes tus 10 000 imágenes
+y no. Y no hay ningún Vit pre entrenado.
+pacientes, no convertirse pre entrenar y de repente no funciona. Entonces, la Cnn es la mejor.
+Ya una Cnn moderna te Recomendaría que eso es lo que iba a comentar en un rato
+como la C o m. E X, Pero si es que hay algún vit pre entrenado en el que puedo hacer un cinturón. Formber, por ejemplo, para segmentar
+es, se recomienda probarlo, no hacer un pequeño entrenamiento
+tienen muchos datos. Y hablamos de 1 000 000. Hablamos de 10 000, Sí, podrías entrenarlo de 0.
+No sé si eso responder la pregunta más o menos.
+Avatar del perfil de JORGE JOSUE CHAMORRO CAYETANO
+JORGE JOSUE CHAMORRO CAYETANO
+02:19:44
+Sí, sí. Además, todo mencionaba, porque yo, en tesis, trabajo con imágenes de truchas, y
+creo que te trabajaría con alrededor de 2 000 imágenes, como mucho, O sea, porque menciona, No, No podría mucho.
+Avatar del perfil de RODRIGO ALONSO URIBE VENTURA
+RODRIGO ALONSO URIBE VENTURA
+02:20:00
+Claro, es pequeño, también en temas de escala, No, sí,
+sí, igual. Vamos a ver después de esto, otra otra técnica, que es bien interesante que de repente puede servir, ya que es aprendizaje contrastivo. Bueno, vamos a llegar ahí y me comentas cualquier cosita.
+Muy bien. Entonces, ¿qué pasó en 2 020? Ya el 2 000, Veinti no en 2 021,
+fue que esta una cogieron todas las todas las relaciones de los Swin Transformers, porque los intraformes, de alguna forma, si intentaban acercar a una convolución
+y crearon una arquitectura de red convolucional que intentaba acercarse a un transformador
+de visión sin necesi sin la necesidad de ser un transformador de visión, no
+y quisieron básicamente a partir de una red Net original.
+Empezaron a cambiar la receta de la de entrenamiento. Empezaron a utilizar Adam Be doble. Utilizaron una cantidad de épocas similares.
+Cambiaron la cantidad de tapas.
+Hicieron similar a lo que es el stem del Switt transformer
+me hicieron distintos tipos de cambios en la arquitectura. Esto no es.
+Aquí está la estrella.
+Entonces aquí lo pueden ver, tienen lo siguiente.
+tienen lo que es el el Fresnight original. Y se dan cuenta. Es una arquitectura. No tenemos una serie de relus normalizations.
+Relus.
+Yo que hice una especie de receta. No.
+el Swing Transformer tiene una receta distinta. No intenta parecerse de alguna forma, pero mantiene características de los transformadores, como, por ejemplo, utilizan funciones de activación Gelus
+Normalization y normalization.
+Entonces, el C o M. E X
+intenta copiar varias de las recetas del sin transformer. Por ejemplo, utilizando Hellox Personalization también utiliza carnes más grandes
+para ver si realmente
+era propiamente la atención lo que lograba esto, o era un tema de la arquitectura, que fue lo interesante que en este artículo, la red convulsional
+logró y mejor mejorar o hacer hacer mejor que en su intranformer.
+Es una red convolucional.
+Pudo ser mejor obtener mejores resultados de los que obtuvo el transformador Swif
+llegó a 82 por 100 versus 81, 3, y eso de alguna forma mostró no.
+que a veces no es tanto la arquitectura, sino es poder extraer esa información y de esas capacidades, ¿no? Y no necesariamente
+un transformador versus una Cnn va a ser mejor un transformador, entonces
+yo recomiendo siempre probar esta arquitectura cómics, B, Dos.
+que realmente dan buenos resultados sin la necesidad de tener a veces muchos datos, o de entrenar con tanta información, porque tiene este sejo, este sesgo de las convoluciones y, al mismo tiempo.
+como pueden ver aquí, es muy eficiente, ¿no?
+Muy bien. Entonces vamos a ahora, sí, entrar a temas un poco más modernos y en donde.
+Y volviendo al tema de G, P, T, no se acuerdan que les decía cuál era la gran novedad, lo que era lo impresionante que hizo la arquitectura de Gpt, tan revolucionaria.
+¿quién recuerda? Lo dije al comienzo de la clase.
+que era lo más importante que decía que la arquitectura Gpt funcione también.
+Mhm.
+Y de acuerdo, voy a ponerlo aquí
+cuando era te acuerdas en el caso de G, P, T,
+No lo queríamos encontrar los siguientes toquen y dijimos que
+poder hacerlo sin etiquetas donde está autosupervisión, es entrenamiento, auto supervisado era
+parte de lo que lo hacía bastante interesante.
+Mhm: Entonces los investigadores, a partir del 2 020 más o menos, empezaron a hacer distintas técnicas para
+crear modelos que puedan entrenar sin etiquetas.
+Mhm en lo que le llamaban aprendizaje auto supervisado.
+Mhm.
+Y esto ha ido evolucionando poco a poco desde lo que viene a ser una relación sencilla entre imágenes
+Mhm y Au, de forma auto supervisada a partir solo de imágenes.
+poder hacer que el modelo pueda capturar características importantes, similar a lo como lo hace la arquitectura. G, P. C
+y de imágenes y textos.
+Y hablamos de imágenes con L. L. Ms.
+Es lo que hoy en día
+tenemos. Entonces vamos a ir poco a poco otra vez la historia, como venimos haciendo durante esta clase.
+en donde la idea original es una idea sencilla similar a lo que venimos haciendo. Tenemos una tarea original. Queremos tener una tarea de destino.
+entonces lo que hace un Lm pre entrenado básicamente es aprendizaje en contexto No Finnning
+a través de lo que es lo que es el entrenamiento autosupervisado.
+Entonces, ¿cómo lo podemos hacer con imágenes. Esta es la idea original de hacer algo similar en donde decimos.
+Bueno, lo que podemos hacer es una imagen, No tenemos la etiqueta. Todos sabemos que es un perro.
+pero eso lo podemos hacer con cualquier imagen.
+ya si el perro lo cortamos, lo movemos, lo rotamos sigue siendo un perro.
+No hacemos otra cosa. Sigue siendo un perro.
+entonces hay una característica que me gustaría que la la red, la aprenda de manera automática.
+Una característica que la red va a aprender es a esto es un perro.
+Nosotros podemos ver esta imagen. Podemos cambiarla. Podemos rotarla
+como hacer muchas cosas. Y vamos igual saber que es un perro.
+¿cierto? Entonces, Okay, tenemos muchas imágenes que nos van a decir que esto es un perro, como hacemos con una red aprenda esto.
+Lo que vamos a hacer es exactamente eso, mostrar muchas transformaciones de un mismo input, una misma imagen
+que no tenga una etiqueta.
+porque el mismo hacer una transformación de esa misma imagen va a seguir siendo la misma imagen.
+entonces la representación de este modelo, que es un modelo
+autosupervisado, No, lo que le llaman aprendizaje contrasctivo
+es que a partir de una imagen vamos a tener 2 transformaciones: transformación, 1 y transformación. Dos.
+en donde nosotros, al momento de hacer la codificación de estas imágenes.
+Nosotros nos gustaría que la representación
+sea más similar en la parte del codificador.
+Lo que quisiéramos que el codificador Capture. Esta es la misma imagen.
+Entonces es muy sencillo: Vamos a hacer una imagen. Vamos a transformar en 2 veces y vamos a tener algún tipo de función de pérdida para que estas representaciones, acercarlas
+y las que sean de otras imágenes, queremos alejarlas.
+Por eso es que es el término de contrastivo.
+¿cómo podemos hacer esto? Lo podemos hacer a través de una pérdida? En el fondo, es una especie de entropía cruzado.
+un poco más compleja donde tenemos aquí imagen. Uno, 2, transformación. Uno de la imagen. Uno.
+imagen. Dos, imagen, 3 imágenes, 4 a la imagen. Uno transformada a imagen, 2, transformada en imagen, 3, transformada imagen, 4, transformada con Es un dato, es un es una data distinta.
+entonces nosotros queremos que si son lo mismo, bueno, vamos a ignorarlo, pero que si es el mismo con el transformado es un par positivo. No queremos acercar este estos encoders. Esta representación de los encovers
+en nuestro modelo.
+Y, sin embargo, si es distinto el X 1 y el X 2.
+Vamos a querer alejarlos. Va a ser una representación negativa de este par de datos
+Y lo que va a hacer esta pérdida es básicamente eso.
+Todos los pares positivos vamos a sacar en lo que viene a ser el espacio de medings y los pares negativos los va a alejar.
+Mhm pueden hacer un poco la matemática de cuántos negativos hay, cuántos positivos. Hay, ¿no?
+¿y qué es lo interesante? Lo interesante de esto es que lo que hicieron fue entrenar este modelo.
+y no, básicamente esta representación, una serie de transformaciones Muy sencillo, esta pérdida
+y lo han entregado sin etiquetas, muchos ojos, sin ninguna etiqueta.
+¿
+¿y qué es lo que hicieron luego.
+sino una evaluación lineal, no una especie de P C A con estos embeddings para ver sí.
+Y si la el encoder de Sim, C, L. R, que era este modelo.
+podía o no podía hacer la clasificación de imágenes.
+Y sorpresa, no vieron que
+efectivamente sí podía ser la clasificación
+y la podía hacer mucho mejor que modelos supervisados no
+que han sido entrenados en el Dataset. Entonces, este modelo, que ha sido entrenado sin etiquetas.
+ha ganado a modelos que han entrenado directamente en el fasset de referencia, no todos.
+Pero, ¿qué quiere decir esto? Que ha podido justamente encontrar relaciones patentes
+representativas. Se ha podido encontrar en Beddings.
+por así decirlo, en su espacio latente.
+que han funcionado muy bien y de manera automática.
+Ha sido un modelo de imagen autopista
+y que ha hecho un autoaprendizaje.
+pues eso no es bastante también revolucionario interesante.
+En donde leí lo que hicieron así. Ok, Hagamos un fintuning. Ya no hagamos una evaluación lineal sencillo
+de nuestro modelo solamente con los
+inclu incluyendo los encoders y los decoders.
+¿y qué fue lo que hicieron? ¿qué fue lo que encontraron que este modelo
+le ganó a todos los otros modelos supervisados que la
+había no dice Okay. ¡qué interesante!
+Entonces este tipo de aproach no autopro de autoaprendizaje se volvió bastante popular. ¿por qué? Porque podía generar, no similar a como lo hizo Chatg Pt
+sin ninguna etiqueta, espacios latentes bastante representativos ya.
+y se han desarrollado distintos tipos de técnicas para justamente hacer o para poder encontrar este espacio representativo.
+Cuáles son esas técnicas? Tenemos, por ejemplo? Esta es la que les mencioné hace un rato
+en donde se entrene en base a sus propios lotes y
+en donde tenemos casos negativos y positivos, y eso ayuda a diferenciar hacer este contraste entre positivos y negativos.
+Y así, porque si no tuviéramos casos negativos, 1 esperaría que el espacio latente colapse, no
+colapso. No hay nada que lo separa los distintos casos.
+Mhm: Sin embargo, no es del todo así
+porque hay otras técnicas que vamos a aprender que ayudan también a separar el espacio latente sin la necesidad
+de tener casos negativos, pero la idea original, la que les mostré habían casos positivos y negativos. Los pares positivos y negativos que hace un rato.
+Y Y de ahí hay una serie de optimizaciones que vamos a ver en un rato.
+Cuál es el truco, el truco de varios de estos casos. Esto también es interesante porque esto es en lo que utilizan.
+Básicamente si van a hacer cualquier tipo de modelo que aprendas sin etiquetas.
+Mhm: Varios de estos modelos, lo que hacen es basarse en un modelo de media móvil o un ema.
+¿en qué consiste este modelo de medias móvil? Una forma de poder verlo es que a través de distintas épocas, los parámetros van siempre oscilando. No se van sobreajustando de cierta forma a ciertas partes
+de bastante variabilidad que se va generando al momento de entrenar modelos.
+nosotros podemos hacer una media móvil de los parámetros de los modelos
+y esa media móvil de los parámetros de los modelos.
+que es lo que van a hacer, van a poder reflejar la tendencia del entrenamiento.
+y esa tendencia puede ser importante para tratar de que el modelo vaya no sobreajuste y vaya entrenando de manera más. De manera más general a la tendencia de los datos.
+Es un poco la la el truco, ese ese otro tipo de este otro tipo de modelos contractivos donde no utilizan pares negativos.
+Mhm, en donde el caso de este modelo llamado Moco.
+ya tenemos lo que viene a ser un primer encoder similar a lo que teníamos antes.
+Sin embargo, vamos a hacer un segundo modelo.
+Vamos a tener una vista distinta.
+Entonces, este segundo modelo.
+en vez de entrenar directamente como el primer modelo. Vamos a hacer un modelo que sea un tema.
+El primer modelo de la de la derecha, el de arriba. Disculpe.
+Sería como este modelo que está subiendo o bajando.
+Y el segundo modelo de abajo sería más o menos como este modelo que está. Acá.
+Entonces, ¿cuál es un poco el truco es que para tratar de mantener la tendencia entre ambos modelos.
+este modelo como que le da este momento, no como que le le dice hacia dónde ir de alguna forma.
+Y el otro modelo siempre se va a ir adaptando un poco
+a lo que el otro modelo le diga, ¿no?
+Y no es la única forma. Hay todas las formas que les voy a mostrar. ¿hay algún tipo de no usan de alguna forma este concepto ya no son de manera distinta. No entran tanto detalle, pero si quieren, lo pueden revisar
+en donde hay un modelo base.
+Yo, como el que está en este caso, es este modelo online le llaman, y hay un modelo
+Target o un modelo
+al que sigue el otro modelo. ¿no? Este otro modelo normalmente utiliza algún tipo de medio móvil, un ema para
+para mantener la tendencia. Eso es un poco la idea general, ¿no?
+Y esa tendencia es lo que al final ayuda a capturar estas características generales sin necesidad de
+casos negativos para que no colapse, porque si no colapsaría. Como les mostré al comienzo.
+también es algo calcetino. No vino. No di vino a llevar todo esto un poco más allá. Por eso es un poco difícil entender cómo funciona, di ¿no?
+Entonces, de manera general, estos modelos que no utilizan casos negativos para generar un contraste de autoaprendizaje.
+Lo que lo que van a hacer ya
+es utilizar este modelo como referente, o Target, que es este
+entonces lo que hace y dice, Ok, si utilizas un modelo Target y a
+eso es una especie de modelo maestro.
+entonces es una especie de destilación. Entonces lo que hace vino es que tenemos entonces un modelo estudiante
+y un modelo teachuelo.
+Lo que se vino a decir, bueno, y
+yo voy a tener un modelo Teacher, que va a ser un modelo que originalmente va a ser un beatty grande, va a ser un modelo inmenso, etcétera.
+Mira, pre, he entrenado en algo.
+Y un modelo estudiante que básicamente va a ser quien va a empezar a
+no a cambiar el otro modelo, entonces este modelo estudiante va a aprender otra vez similar a lo que es un proceso de destilación.
+Sin embargo, este modelo Teacher
+también se va a actualizar. Y este un poco el truco. No sé si truco, pero
+característica de Dina no se va a actualizar con el lema. Entonces el estudiante va a actualizarse aprendiendo del maestro que ha aprendido de estos datos muy grandes
+Y lo que va a pasar es que aquí no hay etiquetas por si acaso.
+Y lo que va a pasar es que una vez se actualiza el estudiante.
+No va a haber un ema.
+De nuevo, el lema es el truco
+y el lema. Lo que va a hacer es que va a terminar actualizando nuevamente al
+a lo que viene a ser el el maestro. El El el modelo maestro
+iba a hacer este ciclo otra vez, a ver otra imagen. Igual de esta imagen. Va a haber 2 transformaciones en el Sloom. Todo es lo mismo
+una imagen, 2 transformaciones.
+y para el caso de que no hayan positivos y negativos. Vamos a hacer un ema.
+y eso que va a ser, ¿Va a ser que se mantenga la misma tendencia y pueda aprender sin negativos a partir de los mismos datos.
+Sí.
+Entonces que lo interesante es que este modelo Dino, no realmente sin que nadie le dijera cómo es que
+que es un perro que hay un perro que cae, una que cae un cepillo, etcétera.
+ha podido auto aprender esas características.
+ha podido auto aprender y decir, Ah, sí, Aquí no hay una bicicleta.
+Aquí hay esta otra. Aquí hay un bote. Acá. Hay un perro
+Sin embargo, nadie no lo ha entrenado con ninguna etiqueta específica, entonces ha tenido que.
+de una forma u otra a auto aprender todo lo que tiene.
+entonces Eso es lo que lo hace. Digamos bastante interesante, no bastante distinto a comparación de otros modelos.
+Y aquí podemos ver un poco el resumen de estos modelos contrastitivos.
+Donde tenemos negativos, no el truco del colapso.
+Emma
+9 M en algunos casos, entonces es un poco la la idea general. ¿qué es? Lo interesante es que estos modelos aprenden sin etiquetas.
+Y entonces vamos al siguiente caso: ¿qué pasa en el caso del Internet.
+¿cómo podemos relacionar de nuevo otra vez otra vez esta idea de aprender sin etiquetas
+no solamente imágenes con imágenes que lo podemos ver con esas transformaciones.
+Y no creo así.
+Juntamos imágenes con texto, será posible no juntar imágenes con texto.
+Entonces aquí viene otra arquitectura, que es una de las más conocidas, ¿no?
+Y esa llamada clip, que es lo que hace clip, es también un tipo de entrenamiento contrasctivo
+en donde lo que hacen es coger una serie de
+y textos son los captions que podemos encontrar en Internet con respecto a cada una de las imágenes.
+y van a pasar el texto a un encoder y la imagen a un encoder
+dejan una serie de Beddings, una serie de espacios, Y lo que van a hacer es: van a decir, Ok, si este este texto.
+este codificador de texto viene de esta imagen. ¿quiere decir que esto va a tener una alta correlación.
+Esto va a ser. Se tiene que acercar. Entonces vamos a utilizar. Por eso que este es un pre entrenamiento contrasctivo.
+Si yo cojo una siguiente imagen, que no es de este texto, entonces tienen que alejarse más.
+Entonces es la misma idea del contraste. No los pares
+en este caso ya no son imagen e imagen, sino es texto imagen.
+No
+son de lo mismo. Deberían estar más cercanos en nuestro espacio latente y los que son distintos deberían estar
+más alejados.
+Y lo interesante, no aquí. Lo interesante de este proach se ha entrenado con 400 000 000 de
+textos, imágenes en Internet y que es que
+justamente vemos que puede aprender, puede aprender con 15 000 000 de datos y preparar.
+Podemos usarlo de una manera interesante.
+como es un modelo que auto aprende de esta forma que les he dicho es: nadie nunca le dice que es un perro.
+Nunca nadie le dice que es un gato
+ya, pero de manera no autoaprendida
+ha habido de encontrar algún tipo de relación. Entonces, ¿cómo podemos hacer un cirushots similar a como lo hacemos con Chatgpt.
+Y lo que hacemos es una técnica Klever, lo inteligente que han hecho, que he dicho. Bueno.
+como aprendido de esta forma, yo debo auto aprender bien. De manera contrastiva, podríamos coger una serie de textos.
+Una, Esta es una foto de un plano
+de un Es una foto de un carro. Es una foto de un perro. Es una foto de un ave, no tener distintos tokens.
+Y para la imagen que queremos clasificar.
+podríamos poner la imagen del encuader y ver cuál de estos toques. Estos que estamos haciendo aquí van a tener una mayor correlación.
+Podríamos ver que el que tenga mayor correlación, los que se acercan más A puede ser nuestra predicción
+ya. Y esto es interesante porque están haciendo algo similar a lo que has hecho. H, G, P, T,
+Pero lo están haciendo ya, no para solamente relacionar texto.
+sino se van relacionando imágenes con texto
+en el que esto funciona puede realmente encontrar estas relaciones. Y después sí.
+Y lo puede hacer, y de manera y puede puede ganarles Resett, 50
+y habéis tenido un solo ejemplo del datacep
+de estos datos. Entonces, es interesante. Entonces, esta red clip. Este modelo clip, ha sido auto entrenado.
+Entonces hay muchas imágenes de Internet en dónde y
+sin haber sido entrenando un data sed específico, podemos observar que le gana. Muchos de los modelos que han sido entrenados en ese data zeta específico.
+en este caso de una red 50,
+porque 1 podría pensar que has podido generalizar mejor estos conceptos a través de su autoaprendizaje
+similar, como lo hace. H, G, P, D,
+Y algunos casos raros que de repente se ha hecho más difícil encontrar estas relaciones. No ha podido hacerlo también. Entonces, otro hallazgo interesante
+de de de este modelo.
+Y de ahí pasamos a los llamados modelos multimodales.
+Uno dice, bueno, si podemos encontrar en Beddings ya que no solamente representen textos 1, solamente representen imágenes
+como como veníamos viendo antes con los Vi a Ts.
+Entonces podemos encontrar en Beris que representen ambos
+y que ambos representen el mismo objeto, cierto.
+Entonces, ¿qué tal si hacemos modelos de lenguaje
+que sean multimodales utilizar estos en leddings
+que sabemos que funcionan porque funciona, que representan tanto los textos y las imágenes para construir un transformador.
+Y esto es lo que llamamos los llamados modelos multimodales.
+¿qué es lo que hacen básicamente a partir de una imagen.
+Utilizan un modelo pre entrenado, congelado tipo clip, no tipo siglip lo mismo básicamente.
+¿para qué? Para generar ciertos tokens y
+y utilizan algún tipo de conector, no un mlp, etcétera. ¿para qué? Para generar a partir de esto.
+tokens visuales y toques de pronto.
+Y todo esto es lo que va a ir al L, El El L, L, entonces interesante no y
+relativamente y relativamente sencillo, no relativamente elegante.
+Nos gustaría saber qué está pasando detrás, ¿no? Pero de manera digamos, de manera
+grande. No podemos entender qué está pasando? Tenemos una imagen que son píxeles.
+Crip no va a generar Medins
+en Beddings que no se pueden escribir son en Beddings de clip que relacionan bien imágenes y textos. Es una buena representación latente.
+Esa representación latente. Tenemos que convertirla a Tokens
+y por eso hacemos el M. L, P:
+Y este. M. L. P: Le genera tokens
+que el L L puede utilizar.
+¿qué entonces podemos proyectar estos embedings de clip
+a un espacio de los que los Lm puedan utilizar.
+Entonces es una de las de las cosas que a veces se entendía mal y se pensaba que de alguna forma
+la imagen no no se traduce a texto. No es que le estén dando un texto, sino está viendo directamente, No
+los token. Está viendo directamente en la imagen supuestamente una representación vectorial de Nem Beddings de la imagen a través de estos tokens.
+Entonces hay varias formas de hacerlo. Varios de varias de estas formas tien tienden a tener algún tipo de modelo pre entrenado, contrastivo. Para tener una buena representación entre lo que son imágenes y textos.
+No hay algún tipo de conector y algún tipo de L, L, M: No.
+Y y que hay unas cosas que ellos las pueden ver
+Y aquí, bueno, y se generan otros tipos de problemas también cuando tenemos estos modelos multimodales.
+a comparación de los modelos tradicionales.
+No es tan fácil poder clasificarlos, medir qué está pasando, etcétera, como alucinan, porque son modelos de imágenes con tokens. Entonces todo se vuelve también
+mucho más complicado a veces de poder entender qué está pasando.
+Entonces, aquí hay una forma de medir alucinaciones a través de una serie de feedbacks de lo que está pasando.
+Y este tipo de métodos cada vez están mejorando más.
+Ustedes recuerdan, hace, no sé si años, pero ya hace bastante tiempo
+años, no. Y a meses eso todo cambia tanto. Hace unos cuantos meses, y los modelos, estos de los modelos multimodales que existían no eran muy buenos, no se confundían bastante, alucinaban un montón. Pero este tipo de técnicas que ayudan a medir la alucinación
+hay otras más
+ayudó bastante, porque ha hecho que los modelos puedan ser fentuneados para no alucinar o para hacer las respuestas que queremos entre comillas.
+no una típica típico problema de estos modelos multimodales ¿no?
+Si les dan una imagen de una mano, se preguntan cuántos dedos tiene y no
+una le dan una mano de 6 dedos, una mano trucada.
+Y le preguntan cuántos dedos tiene? ¿les va a decir 5, a pesar que tenga 6 dedos.
+¿por qué? Porque no está contando. No funciona como nosotros.
+Lo que hace básicamente es intuir encontrar estas relaciones.
+Puede ver la imagen y puede ver que es una mano y una imagen, no sabe que tiene 5 dedos. Entonces va a ser difícil. Nunca va a razonar como nosotros razonamos.
+Entonces, por eso también no funciona como nosotros. Pero funciona lo suficientemente bien para muchas cosas
+al final, lo importante y quién es qué modelos hay modelos mucho más modernos Si se dan cuenta.
+y hoy en día son mucho más accesibles. Ya. Eso es algo que quizás no. No es muy, No, no, Muchos lo saben, pero estos modelos multimodales aquí es un pequeño ejemplo. Ya para terminar la clase del día de hoy.
+Mhm.
+Son modelos que y
+no nece. Hoy en día, modelos pequeños entre comillas o que puedan correr en ordenadores son bastante potentes, Bastante Tienen bastantes capacidades.
+Ni siquiera me voy a mostrar 1, ¿
+Que bueno, que me impresionó el año pasado, pero hoy en día ya creo que está un poco obsoleto la verdad.
+y hoy día y más impresionantes
+en donde van a poder observar
+las capacidades que tiene este modelo multimodel y lo rápido que es, y todo está corriendo en el ordenador de Google Lab.
+Así que vamos a esperar que se descargue. Les voy a mostrar
+un pequeño demo Aquí los voy a. Bueno, voy adelantando.
+Entonces, básicamente, este
+este modelo multi model, podemos añadirle una imagen que va a ser la webcam y una pregunta, mhm, Uno
+o un texto o un proumpt no. Y lo que nos va a generar en este caso es un prompt. Hay otros modelos modelos multimodales que también pueden generar imágenes, por ejemplo.
+Entonces aquí le decimos: Mhm, La pregunta es: ¿está un poco más acá describir esta imagen en detalle
+la imagen del Internet o qué
+y describe la imagen. Es un roottop, un balcón, hacer muchas cosas interesantes. El gato está aquí es todo lo que hemos aprendido antes de este siglo, short o incontext learning lo pueden hacer ya no solamente con texto, sino también podemos utilizar imágenes.
+Entonces ahora vamos a mostrar este pequeño demo que tengo aquí con la Cámara, movimientos.
+Vamos a ver qué posición estoy.
+Entonces miren, voy a capturarme.
+Y aquí le he puesto descripción, describir la imagen.
+¿cuál es la ropa que tengo?
+¿qué categoría tiene? Entonces, Todo esto es lo mismo que hemos aprendido, pero con la imagen.
+porque son tan buenos que tienen estas capacidades que pueden encontrar estas relaciones dentro, ¿no?
+Entonces aquí me pueden ver. Y aquí dice: prenda principal. Es un shurt categoría de prenda Shirt.
+Y la imagen es un hombre enfrente de una pared de color. Tiene un color light color. Shift tiene una barba.
+Entonces bien, es interesante. En general, si se dan cuenta no muchas cosas que ha captado bien.
+En este caso, me parece que he captado mal y de cámara bolsillos de conversation a Mhm. ¿qué, entonces
+interesantes?
+Todo esto está en la disponibilidad de ustedes. Si quieren ver modelos más modernos.
+ya lo que les recomendaría es entrar a una página que se llama Build Nvidia.
+¿y qué se las voy a poner?
+Y algo se hace recomendado. Entonces, esta página es una página en donde les van a dar una Pi gratuita
+para poder utilizar cualquiera de estos modelos que son modelos hoy en día avanzados
+para que puedan utilizar este incontext learning y poder generar respuestas o poder crear distintos tipos de aplicaciones.
+Van a poder entrar cualquiera de estos modelos. Y van a poder un poco ver todas sus características, no
+las modalidades. El input modalty, el Output Modalyty.
+el tema del contexto, no la cantidad de parámetros que tiene
+soporte que no ejemplos. Hay como generan su api gratuita, no Entonces, para jugar. Yo les recomiendo este tipo. Este pueden hacer esto. A mí me ayuda un montón para probar modelos muy grandes.
+Así que muy interesante.
+Bien, no sé si hay alguna pregunta alguna consulta y que alguien pueda tener
+muy bien. Yo sé que es mucha información. Así que, bueno, si no hay más consultas, chicos, les agradezco a todos por su tiempo
+y nos vemos el jueves o el viernes allí en su exposición. Y si no ya nos vemos el siguiente lunes.
+Muchas gracias a todos que tengan una linda semana, luego.

@@ -1,0 +1,5 @@
+pe,atencion,max_dif_salida_permutada
+False,bidireccional,2.384186e-07
+False,causal,0.3520069
+True,bidireccional,0.1033002
+True,causal,0.2682516

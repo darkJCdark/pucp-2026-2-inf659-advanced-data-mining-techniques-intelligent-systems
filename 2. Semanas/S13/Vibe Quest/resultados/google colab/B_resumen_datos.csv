@@ -1,0 +1,3 @@
+tarea,train,val,test,vocabulario,proporcion_etiqueta_1_train
+orden,16000,2000,2000,4680,0.507
+idioma,16000,2000,2000,5220,0.500

@@ -1,43 +1,46 @@
 # pipeline.md · Vibe Quest S13 (pregunta 2: Transformer sin Positional Encoding)
 
 ## Objetivo
-Responder: *si quito el Positional Encoding de un Transformer y paso "El gato persiguió al perro" y "El perro persiguió al gato", ¿qué pasa con los embeddings de salida? Demostrarlo con código, comparar con y sin PE y visualizar por qué se pierde el orden.* Presentación de 5 minutos con sliders.
+Responder: *¿qué le pasaría al Transformer si eliminamos el PE y le damos "El gato persiguió al perro" y "El perro persiguió al gato"? Demostrarlo con código comparando los embeddings de salida con y sin PE y visualizando por qué se pierde el orden.*
 
-## Flujo (entrada → modelo → salida)
+## Flujo (entrada → modelos → salida)
 
 ```
-ENTRADA                       MODELO (codificador, PyTorch float64)              SALIDA
-FRASE_A  El gato persiguió    embedding por palabra (NumPy, semilla 1)           tablas (resultados/datos y google colab)
-         al perro             + PE sinusoidal (opcional, escala ajustable)         e1_consigna, e2_barrido, e3_permutaciones
-FRASE_B  El perro persiguió   ┌ self-attention softmax(QKᵀ/√d)V                  figuras
-         al gato             ─┤ Add & Norm → FFN → Add & Norm   × CAPAS (2)        atenciones capa 1 (A/B, con/sin PE)
-FRASES_EXTRA  larga_7,        └ pesos aleatorios N(0, 1/d), semilla 0              PCA 2D de las salidas (○ A, × B)
-         repetida (gato ×2)                                                         distancia por palabra
-                              medidas: error de equivarianza, diferencia de         mapa de calor escala emb × escala PE
-                              la frase (media de filas), coseno de "gato"           panel con sliders
+PARTE A · estructural (float64)                        PARTE B · entrenada con Tatoeba (float32, GPU)
+FRASE_A / FRASE_B + 2 frases extra                     spa-eng.zip (118 964 pares) → oraciones únicas de 4-10 palabras
+   │ embeddings y pesos aleatorios (semilla)              │ tarea ORDEN: 20 000 oraciones, 50 % con 2 palabras intercambiadas
+   ▼                                                      │ tarea IDIOMA: 10 000 es + 10 000 en
+codificador mínimo: self-attention + Add & Norm + FFN     ▼ 80/10/10, vocabulario del train, <BOS> al inicio
+   │ con / sin PE sinusoidal                           Clasificador: emb + PE opcional → TransformerEncoder (d=64, 2 capas,
+   ▼                                                     4 cabezas, bidireccional o causal) → promedio → lineal
+error de equivarianza, coseno de "gato",                  │ 2 tareas × 2 atenciones × con/sin PE × 3 semillas = 24 entrenamientos
+atención, PCA, barrido, 100 permutaciones,                ▼
+comparación con NumPy                                  exactitud en prueba, curvas, ablación del PE (escala 0-1),
+                                                       la consigna con los modelos entrenados (3.18), chequeos
 ```
 
 ## Historial de pasos
-1. Leí las láminas y la transcripción de la Clase 12 (`2. Semanas/S13`): self-attention, PE sinusoidal (lámina 120), Add & Norm (lámina 122). Las 4 preguntas están en la lámina 123; las dejé con lo visto en clase en `S13/VibeQuest_S13_Preguntas.md`.
-2. Elegí la pregunta 2 (acordado contigo): es la más corta de implementar, la clase ya explica su teoría y se ejecuta sin entrenar nada. Las otras exigen entrenar (P1, P3, P4) o implementar un encoder-decoder (P1, P3).
-3. Fuentes: restricción acordada, solo Scopus o IEEE Xplore 2022-2026. Busqué en IEEE Xplore (API de búsqueda desde la sesión del navegador) y en Scopus; leí los resúmenes de 6 fuentes. Ver `fuentes/README.md`.
-4. Código: referencia en NumPy (`codigo/referencia_numpy.py`, `ejecutar_referencia.py`) para fijar los valores esperados; luego el mismo experimento en PyTorch (`codigo/atencion_pe.py` y el notebook), con los pesos generados en NumPy para que ambas implementaciones coincidan.
-5. Experimentos: (1) las dos frases de la consigna; (2) barrido de 64 configuraciones (d ∈ {8,16,32,64}, capas ∈ {1,2,4,6}, escala del embedding ∈ {0.1,1,3,10}), con y sin PE; (3) 3 frases × 100 permutaciones aleatorias.
-6. Notebook `vibe_quest_s13.ipynb` (41 celdas: 21 de texto con `#` y 20 de código, cada código separado). Incluye verificaciones con `assert` (PE contra la fórmula, equivarianza sin PE, comparación con NumPy), 3 gráficos, panel con sliders, mapa de calor, chequeos de hipótesis True/False, tabla afirmación ↔ fuente y una celda final que guarda y comprime los resultados.
-7. Validación en tu Google Colab (torch 2.14.1, CPU): el notebook corre sin errores y todos los `assert` pasan; PyTorch coincide con NumPy. Probé 6 combinaciones extremas del panel (d de 8 a 64, 1 a 6 capas, escala del embedding de 0.1 a 10, escala del PE de 0 a 5, con y sin PE) sin fallos.
-8. Salidas de Colab guardadas en `resultados/google colab/`.
+1. Leí la Clase 12 (láminas y transcripción): self-attention, PE sinusoidal (lámina 120), Add & Norm (lámina 122). Elegí la pregunta 2 porque la clase ya explica su teoría y se puede demostrar sin entrenar.
+2. Fuentes Scopus/IEEE 2022-2026: 5 citadas en `fuentes/` (DeepNet quedó descartada porque trata Add & Norm, no el PE), descargadas con acceso institucional PUCP. Leí sus textos con `pdftotext`; las páginas citadas están en `fuentes/README.md`.
+3. Parte A: referencia NumPy (`codigo/referencia_numpy.py`) y versión PyTorch; coinciden a 1e-9. Validada en Colab.
+4. Metodología de la Parte B, tomada de las fuentes: mismo modelo variando solo el PE con "sin PE" como control (Guo, 2024); bidireccional frente a causal (Zhang et al., 2024; Hayakawa y Sato, 2025); tarea donde el orden importa (intercambio de dos palabras) y otra donde no (idioma) (Guo, 2024); ablación del PE en evaluación y 3 semillas (Banđur et al., 2026). Dataset: Tatoeba español-inglés.
+5. Prototipo en Colab: en CPU (1 hilo) los 24 entrenamientos tardaban más de 12 minutos; lo interrumpí y pasé a GPU T4: unos 80 s. Probé 25 épocas: la validación del modelo con PE se estanca cerca de 0.56-0.57, así que dejé 8 épocas.
+6. Agregué la sección 3.18 para responder la consigna con los modelos entrenados (embeddings de salida de "el gato persiguió al perro" y "el perro persiguió al gato").
+7. Notebook final en Google Colab (`vibe_quest_s13_transformer_sin_pe.ipynb`): 85 celdas (40 de texto, 45 de código), secciones con # y ##, 5 paneles interactivos. Ejecutado completo sin errores; los 6 chequeos de la Parte A y los 7 de la Parte B dan verdadero. Probé los paneles con 12 combinaciones de tarea/atención/semilla, 3 escalas de PE y 4 oraciones (incluidas una corta y una sin palabras conocidas). El contenido de Colab coincide celda por celda con el archivo local.
+8. Salidas de Colab en `resultados/google colab/`.
+9. Revisión crítica: probé clasificar con el vector de `<BOS>` en vez del promedio para ver si el modelo con PE mejoraba en la tarea de orden. Bidireccional: 0.503 sin PE y 0.565 con PE (peor que 0.588 con promedio). Causal leyendo la última palabra: 0.610 sin PE y 0.636 con PE. No mejoró, así que mantuve el promedio y lo dejé anotado en la sección 6.5. Recorté el guion para centrarlo en la Parte A y la sección 3.18; la exactitud de la tarea de orden (0.59 con PE) queda como respaldo en el notebook y en las preguntas posibles, no en la exposición.
 
 ## Parámetros
-D = 16, CAPAS = 2, SEMILLA de pesos = 0, semilla de embeddings = 1, semilla de permutaciones = 7, 100 permutaciones por frase, PE sinusoidal con base 10000, float64.
+Parte A: D = 16, CAPAS = 2, semillas 0 (pesos), 1 (embeddings), 7 (permutaciones). Parte B: 4-10 palabras, N_ORDEN = 20 000, N_IDIOMA = 10 000 por lengua, d = 64, 2 capas, 4 cabezas, FFN 128, dropout 0.1, Adam lr 0.002, lote 256, 8 épocas, semillas 0-2.
 
 ## Resultados clave
-- Frases de la consigna: sin PE el error de equivarianza es 1.1e-15 y el coseno entre el "gato" de A y el de B es 1.0; con PE es 1.474 y 0.869.
-- Barrido (64 configuraciones): sin PE nunca supera 3.6e-15; con PE va de 0.049 a 2.283 (media 0.80).
-- 100 permutaciones × 3 frases: sin PE el error máximo es 2.7e-15; con PE la media está entre 1.20 y 1.31.
-- Con PE el error no crece de forma monótona con la escala del embedding (0.97, 1.10, 0.74, 0.39 para 0.1, 1, 3, 10).
+- Parte A: sin PE, error de equivarianza 1.1e-15 y coseno de "gato" 1.0; con PE, 1.47 y 0.87.
+- Parte B, consigna con modelos entrenados: bidireccional sin PE, error 6e-7, coseno 1.0 y la misma P(original) para las dos frases (0.462); con PE, coseno 0.81 y P(original) 0.567 contra 0.469.
+- Tarea de orden (prueba, media ± desv.): bidireccional sin PE 0.508 ± 0.016; con PE 0.588 ± 0.008 y 0.499 al quitarle el PE; causal sin PE 0.626 ± 0.010; causal con PE 0.623 ± 0.002.
+- Tarea de idioma: 0.995-0.996 en las 4 configuraciones.
 
 ## Limitaciones
-Pesos aleatorios sin entrenar (propiedad estructural, no rendimiento en una tarea). Codificador bidireccional: con máscara causal un modelo sin PE puede inferir posición (Hayakawa y Sato, 2025; Zhang et al., 2024). Un tipo de PE (sinusoidal) y una semilla de pesos. Fuentes leídas por su resumen; los PDF se descargan con `codigo/descargar_fuentes.py`.
+Modelo pequeño (la tarea de orden llega a 0.59-0.63). Un tipo de PE, 3 semillas, un dataset. La Parte A usa pesos aleatorios. Dos ejecuciones en la misma T4 dieron cifras idénticas; en otro hardware pueden variar.
 
 ## Regla de mantenimiento
-Si cambias `D`, `CAPAS`, las frases o las semillas, vuelve a correr `codigo/ejecutar_referencia.py` y actualiza los valores de la sección 12 del notebook (REF_E1_CON_PE, REF_E2, REF_E3_MEDIA_CON_PE), o los `assert` fallarán.
+Si cambias parámetros de la Parte A, vuelve a correr `codigo/ejecutar_referencia.py` y actualiza los valores de la sección 2.14. Si cambias la Parte B, actualiza las cifras de la sección 6 y de `resultados/interpretacion_resultados.md`.

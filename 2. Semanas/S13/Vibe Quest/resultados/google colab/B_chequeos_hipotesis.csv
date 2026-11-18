@@ -1,0 +1,8 @@
+afirmación,fuente,verdadero
+"Orden, bidireccional sin PE: exactitud media dentro de 0.50 ± 0.03 (azar)","Clase 12; Zhao et al. (2024)",True
+"Orden, bidireccional: con PE supera a sin PE en todas las semillas (mínimo con PE > máximo sin PE)","Zhang et al. (2024): en no causal el PE ayuda",True
+"Orden, causal sin PE: exactitud media > 0.55 (aprende posición sin PE)","Zhang et al. (2024); Hayakawa y Sato (2025)",True
+"Orden, causal: con y sin PE difieren en menos de 0.02 (el PE ayuda poco)","Zhang et al. (2024)",True
+"Idioma, bidireccional: con y sin PE difieren en menos de 0.01","Guo (2024)",True
+"Orden, bidireccional con PE: al quitar el PE en evaluación la media cae por debajo de 0.53","Banđur et al. (2026)",True
+"Consigna con el modelo entrenado bidireccional sin PE: error de equivarianza < 1e-4 en las 3 semillas","Clase 12; Banđur et al. (2026)",True

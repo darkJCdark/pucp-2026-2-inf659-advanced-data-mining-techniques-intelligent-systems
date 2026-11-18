@@ -1,32 +1,34 @@
 # Guion de 5 minutos · Vibe Quest S13 (pregunta 2)
 
-## 0:00 – 0:40 · La pregunta
-"La Clase 12 dice que la self-attention no distingue el orden y que por eso se suma el Positional Encoding (lámina 120). Yo lo pongo a prueba: dos frases con las mismas palabras y distinto orden, 'El gato persiguió al perro' y 'El perro persiguió al gato'. ¿Qué cambia en la salida si quito el PE?"
+Idea central: **sin PE, el Transformer ve una bolsa de palabras**. Todo lo demás es respaldo.
 
-## 0:40 – 1:30 · El montaje
-Notebook, secciones 3 y 4. Un codificador Transformer mínimo en PyTorch: self-attention, Add & Norm y feed-forward. Pesos aleatorios con semilla fija; no entreno nada porque la pregunta es sobre una propiedad de la arquitectura. Cada palabra tiene un solo embedding, esté donde esté. Mido el **error de equivarianza**: cuánto difiere la salida de B de la salida de A con las filas reordenadas.
+## 0:00 – 0:30 · La pregunta
+"Si quito el Positional Encoding y le doy al Transformer 'El gato persiguió al perro' y 'El perro persiguió al gato', ¿las distingue? La Clase 12 dice que la self-attention no ve el orden (lámina 120). Lo compruebo comparando los embeddings de salida."
 
-## 1:30 – 2:30 · El resultado (sección 5 y gráficos 6 a 8)
-- Sin PE: error 1.1e-15 y el "gato" tiene el mismo vector en las dos frases (coseno 1.0). Las matrices de atención de A y B son la misma con filas y columnas reordenadas.
-- Con PE: error 1.47 y coseno 0.87. Las matrices cambian.
-- En el PCA (sección 7), sin PE el círculo (A) y la cruz (B) de cada palabra se superponen; con PE se separan.
+## 0:30 – 2:00 · La demostración (Parte A, secciones 2.5 a 2.8)
+- Mismo modelo, mismos pesos, las dos frases. Sin PE: el "gato" sale con el mismo vector en ambas (coseno 1.0) y el error de equivarianza es 1e-15. Con PE: coseno 0.87 y error 1.47.
+- Matrices de atención (2.7): sin PE, la de B es la de A con filas y columnas reordenadas.
+- PCA (2.8): sin PE, el círculo y la cruz de cada palabra caen en el mismo punto. Con PE se separan.
+- Por qué: Wq, Wk y Wv son iguales en toda posición y el softmax trata a todas por igual. Permutar la entrada solo permuta la salida.
 
-## 2:30 – 3:40 · Sliders (sección 9)
-1. Dejo d = 16, 2 capas, escala 1 y **desmarco "usar PE"**: error ~1e-15.
-2. Marco "usar PE" y subo capas a 6: el error sigue lejos de cero.
-3. Subo la **escala del embedding** a 10: el PE pesa menos y el error baja (con d = 16 y 2 capas: 0.17 contra 1.47 con escala 1). Mensaje: el PE solo sirve si su señal no queda tapada por el embedding.
-4. Pongo la escala del PE en 0: vuelve al caso sin PE.
+## 2:00 – 2:40 · Slider (2.10)
+Desmarco "usar PE": el error baja a ~1e-15. Lo marco: 1.47. Subo la escala del embedding a 10: el PE queda tapado y el error baja.
 
-## 3:40 – 4:30 · Robustez y fuentes
-- 64 configuraciones y 100 permutaciones aleatorias en 3 frases: sin PE el error nunca pasa de 3.6e-15.
-- PyTorch coincide con una implementación independiente en NumPy (sección 12).
-- Fuentes: Zhang et al. (ICASSP 2024) dicen que los Transformers son position-agnostic; Banđur et al. (TPAMI 2026), que la self-attention no tiene noción nativa del orden.
+## 2:40 – 3:50 · ¿Se mantiene con un modelo entrenado? (sección 3.18)
+- Entrené Transformers pequeños con oraciones reales de Tatoeba (español) y les pasé las dos frases de la consigna.
+- Sin PE: el "gato" sale con el mismo vector en ambas frases (coseno 1.0, error 6e-7) y el modelo da la **misma** probabilidad a las dos (0.462). Para el modelo son la misma frase.
+- Con PE: el coseno baja a 0.81 y el modelo ya las separa (0.567 contra 0.469).
+- Muestro los cuatro PCA de la 3.18: sin PE, el círculo y la cruz de cada palabra coinciden; con PE se separan.
 
-## 4:30 – 5:00 · Límites
-"Mi resultado vale para un codificador bidireccional con pesos aleatorios. Con máscara causal, un modelo sin PE puede inferir posición (Hayakawa y Sato, ACL 2025), y en sentimiento un modelo sin PE rindió parecido a RoPE (Guo, 2024). Probé un solo PE y una semilla de pesos."
+## 3:50 – 4:30 · Un matiz: la máscara causal
+Un modelo con máscara causal sin PE sí distingue las frases (en la 3.18 su coseno de "gato" es 0.44): cada palabra ve un número distinto de palabras anteriores, y eso ya es posición (Zhang 2024; Hayakawa y Sato 2025). La respuesta vale para el codificador bidireccional de la clase.
+
+## 4:30 – 5:00 · Conclusión y límites
+"Sin PE, el codificador no sabe quién persigue a quién. El PE es lo que escribe el orden en cada vector. Límites: los modelos entrenados son pequeños, usé un solo tipo de PE y 3 semillas."
 
 ## Preguntas posibles
-- **¿Por qué no entrenaste?** La pregunta es estructural: con pesos compartidos entre posiciones y softmax simétrico, la equivarianza se cumple para cualquier peso. Entrenar mediría rendimiento, no esta propiedad.
-- **¿Y en un decoder?** La máscara causal introduce asimetría y deja inferir la posición (Hayakawa y Sato, 2025). No lo probé.
-- **¿Por qué el error con PE no sube con la escala del embedding?** No es monótono (0.97, 1.10, 0.74, 0.39); solo con escala 10 queda claramente más bajo. Con una semilla no afirmo más.
-- **¿Qué es el error de equivarianza?** `max |salida(B) − salida(A)[perm]|`; cero significa que cada palabra salió igual y solo cambió de fila.
+- **¿Y cuánto aprende el modelo con PE en general?** (respaldo: sección 3.12) En 2 000 oraciones con dos palabras intercambiadas: sin PE, 0.51 (azar); con PE, 0.59; si le quito el PE al evaluar, 0.50.
+- **¿Por qué con PE solo llega a 0.59?** Detectar dos palabras intercambiadas es difícil para un modelo de d = 64 y 2 capas. Probé 25 épocas y leer el token `<BOS>` en vez del promedio, y ninguno mejoró. Lo que importa es la distancia al azar y a "sin PE".
+- **¿Y si la tarea no depende del orden?** En identificar el idioma todos llegan a 0.995 con o sin PE. Ahí el PE no hace falta, aunque esa tarea es tan fácil que no deja margen para notar diferencias.
+- **¿La Parte A no es obvia por construcción?** Sí: la invarianza sale de cómo está hecha la self-attention. Por eso la sección 3.18 lo comprueba con modelos entrenados.
+- **¿Qué es el error de equivarianza?** `max |salida(B) − salida(A)[perm]|`: cero significa que cada palabra salió igual y solo cambió de fila.
